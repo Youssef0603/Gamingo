@@ -1,101 +1,145 @@
-import React, { useMemo, useState } from 'react';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import PhraseCard from '../components/PhraseCard';
-import ScreenContainer from '../components/ScreenContainer';
-import SearchBar from '../components/SearchBar';
+import { useAppState } from '../context/AppStateContext';
+import { categoryMetadata } from '../data/categories';
 import { phrases } from '../data/phrases';
+import { languageLabels } from '../types/language';
+import { Badge, GameButton, GameCard, Screen } from '../components/ui';
+import { theme } from '../theme/theme';
 
-type FavoritesScreenProps = {
-  favoriteIds: string[];
-  onOpenPhrase: (phraseId: string) => void;
-  onToggleFavorite: (phraseId: string) => void;
-};
+import type { FavoritesScreenProps } from '../types/navigation';
 
-function FavoritesScreen({
-  favoriteIds,
-  onOpenPhrase,
-  onToggleFavorite,
-}: FavoritesScreenProps) {
-  const [query, setQuery] = useState('');
-
-  const filteredFavorites = useMemo(() => {
-    const favoriteItems = phrases.filter(item => favoriteIds.includes(item.id));
-    const normalizedQuery = query.trim().toLowerCase();
-
-    if (!normalizedQuery) {
-      return favoriteItems;
-    }
-
-    return favoriteItems.filter(item => {
-      return (
-        item.phrase.toLowerCase().includes(normalizedQuery) ||
-        item.meaning.toLowerCase().includes(normalizedQuery)
-      );
-    });
-  }, [favoriteIds, query]);
+function FavoritesScreen({ navigation }: FavoritesScreenProps) {
+  const { favoriteIds, selectedLanguage, toggleFavorite } = useAppState();
+  const savedPhrases = phrases.filter(item => favoriteIds.includes(item.id));
 
   return (
-    <ScreenContainer>
-      <Text style={styles.title}>Favorites</Text>
-      <Text style={styles.subtitle}>
-        Your saved phrases stay in local app state for this session.
-      </Text>
-
-      <SearchBar value={query} onChangeText={setQuery} />
-
-      {filteredFavorites.length ? (
-        filteredFavorites.map(item => (
-          <PhraseCard
-            key={item.id}
-            isFavorite
-            item={item}
-            onPress={() => onOpenPhrase(item.id)}
-            onToggleFavorite={() => onToggleFavorite(item.id)}
-          />
-        ))
-      ) : (
-        <View style={styles.emptyState}>
-          <Text style={styles.emptyTitle}>No saved phrases yet</Text>
-          <Text style={styles.emptyText}>
-            Save phrases from any list, then review them here.
-          </Text>
+    <Screen scrollable>
+      <GameCard glow="secondary" style={styles.heroCard}>
+        <View style={styles.heroBadgeRow}>
+          <Badge label="Favorites" tone="secondary" />
+          <Badge label={languageLabels[selectedLanguage]} tone="primary" />
+          <Badge label={`${savedPhrases.length} Saved`} tone="accent" />
         </View>
+
+        <Text style={styles.title}>Favorites Loadout</Text>
+        <Text style={styles.subtitle}>
+          Keep a short list of phrases you want to drill again under pressure.
+        </Text>
+      </GameCard>
+
+      {savedPhrases.length ? (
+        savedPhrases.map(item => {
+          const translation = item.translations[selectedLanguage];
+          const english = item.translations.en;
+          const metadata = categoryMetadata[item.category];
+
+          return (
+            <GameCard
+              key={item.id}
+              glow={item.isToxic ? 'secondary' : 'primary'}
+              style={styles.phraseCard}
+              subtitle={english.text}
+              title={translation.text}
+            >
+              <View style={styles.cardBadgeRow}>
+                <Badge label={metadata.title} tone="primary" />
+                {item.isToxic ? <Badge label="Toxic" tone="danger" /> : null}
+                <Badge label={languageLabels[selectedLanguage]} tone="neutral" />
+              </View>
+
+              <Text style={styles.meaning}>{translation.meaning}</Text>
+
+              <View style={styles.actionRow}>
+                <View style={styles.actionCell}>
+                  <GameButton
+                    fullWidth
+                    onPress={() =>
+                      navigation.navigate('PracticeTab', { phraseId: item.id })
+                    }
+                    title="Practice"
+                  />
+                </View>
+                <View style={styles.actionCell}>
+                  <GameButton
+                    fullWidth
+                    onPress={() => toggleFavorite(item.id)}
+                    title="Remove"
+                    variant="danger"
+                  />
+                </View>
+              </View>
+            </GameCard>
+          );
+        })
+      ) : (
+        <GameCard glow="secondary" title="No Saved Phrases">
+          <Text style={styles.emptyText}>
+            Save lines from any phrase pack, then come back here to build a
+            compact practice routine.
+          </Text>
+          <View style={styles.emptyAction}>
+            <GameButton
+              onPress={() =>
+                navigation.navigate('HomeTab', {
+                  screen: 'Home',
+                })
+              }
+              title="Browse Categories"
+            />
+          </View>
+        </GameCard>
       )}
-    </ScreenContainer>
+    </Screen>
   );
 }
 
 const styles = StyleSheet.create({
+  heroCard: {
+    marginBottom: theme.spacing.xl,
+  },
+  heroBadgeRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: theme.spacing.sm,
+    marginBottom: theme.spacing.md,
+  },
   title: {
-    color: '#f8fafc',
-    fontSize: 28,
-    fontWeight: '800',
-    marginBottom: 8,
+    ...theme.typography.title,
+    fontSize: 24,
+    marginBottom: theme.spacing.xs,
   },
   subtitle: {
-    color: '#94a3b8',
-    fontSize: 15,
-    lineHeight: 22,
-    marginBottom: 20,
+    ...theme.typography.body,
+    color: theme.colors.textSecondary,
   },
-  emptyState: {
-    backgroundColor: '#141b34',
-    borderColor: '#24304f',
-    borderRadius: 20,
-    borderWidth: 1,
-    padding: 18,
+  phraseCard: {
+    marginBottom: theme.spacing.lg,
   },
-  emptyTitle: {
-    color: '#f8fafc',
-    fontSize: 18,
-    fontWeight: '700',
-    marginBottom: 8,
+  cardBadgeRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: theme.spacing.sm,
+    marginBottom: theme.spacing.md,
+  },
+  meaning: {
+    ...theme.typography.body,
+  },
+  actionRow: {
+    flexDirection: 'row',
+    gap: theme.spacing.md,
+    marginTop: theme.spacing.lg,
+  },
+  actionCell: {
+    flex: 1,
   },
   emptyText: {
-    color: '#94a3b8',
-    fontSize: 14,
-    lineHeight: 20,
+    ...theme.typography.body,
+    color: theme.colors.textSecondary,
+  },
+  emptyAction: {
+    marginTop: theme.spacing.lg,
   },
 });
 

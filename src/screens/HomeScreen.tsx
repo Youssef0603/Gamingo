@@ -1,94 +1,160 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 
-import CategoryCard from '../components/CategoryCard';
-import ScreenContainer from '../components/ScreenContainer';
-import { categoryDescriptions } from '../data/phrases';
+import { useAppState } from '../context/AppStateContext';
+import { categoryMetadata } from '../data/categories';
+import { phrases } from '../data/phrases';
+import { GameButton, GameCard, Screen, Badge } from '../components/ui';
+import { theme } from '../theme/theme';
 
+import type { RootTabParamList, HomeScreenProps } from '../types/navigation';
 import type { PhraseCategory } from '../types/phrase';
 
-type HomeScreenProps = {
-  onOpenCategory: (category: PhraseCategory) => void;
-  onOpenFavorites: () => void;
-};
+function HomeScreen({ navigation }: HomeScreenProps) {
+  const { favoriteIds, selectedLanguage } = useAppState();
+  const tabNavigation = navigation.getParent<BottomTabNavigationProp<RootTabParamList>>();
 
-function HomeScreen({ onOpenCategory, onOpenFavorites }: HomeScreenProps) {
+  const categories = (Object.keys(categoryMetadata) as PhraseCategory[]).map(
+    category => ({
+      category,
+      metadata: categoryMetadata[category],
+      phraseCount: phrases.filter(item => item.category === category).length,
+    }),
+  );
+
   return (
-    <ScreenContainer>
-      <Text style={styles.title}>PlayCall</Text>
-      <Text style={styles.subtitle}>Learn team communication for games</Text>
+    <Screen scrollable>
+      <GameCard glow="primary" style={styles.heroCard}>
+        <View style={styles.heroBadgeRow}>
+          <Badge label="Gaming Phrase Lab" tone="primary" />
+          <Badge label={`${favoriteIds.length} Saved`} tone="accent" />
+        </View>
 
-      <View style={styles.hero}>
-        <Text style={styles.heroEyebrow}>Quick practice</Text>
-        <Text style={styles.heroTitle}>Short callouts. Better teamwork.</Text>
-        <Text style={styles.heroText}>
-          Browse a small set of phrases used in competitive matches and learn
-          when to say them.
+        <Text style={styles.title}>PlayCall</Text>
+        <Text style={styles.subtitle}>
+          Build sharp multiplayer comms with short callouts, strategy lines, and
+          practice drills across 10 languages.
+        </Text>
+
+        <View style={styles.heroActionRow}>
+          <View style={styles.heroAction}>
+            <GameButton
+              fullWidth
+              onPress={() => tabNavigation?.navigate('PracticeTab')}
+              title="Start Practice"
+            />
+          </View>
+          <View style={styles.heroAction}>
+            <GameButton
+              fullWidth
+              onPress={() => tabNavigation?.navigate('SettingsTab')}
+              title={selectedLanguage.toUpperCase()}
+              variant="secondary"
+            />
+          </View>
+        </View>
+      </GameCard>
+
+      <View style={styles.sectionHeader}>
+        <Text style={styles.sectionTitle}>Category Grid</Text>
+        <Text style={styles.sectionSubtitle}>
+          Open a phrase pack or scout upcoming content drops.
         </Text>
       </View>
 
-      <CategoryCard
-        title="Basic Phrases"
-        description={categoryDescriptions.basic}
-        onPress={() => onOpenCategory('basic')}
-      />
-      <CategoryCard
-        title="Objectives"
-        description={categoryDescriptions.objectives}
-        onPress={() => onOpenCategory('objectives')}
-      />
-      <CategoryCard
-        title="Toxic Phrases"
-        description={categoryDescriptions.toxic}
-        onPress={() => onOpenCategory('toxic')}
-      />
-      <CategoryCard
-        title="Favorites"
-        description="Review the phrases you saved for quick practice."
-        onPress={onOpenFavorites}
-      />
-    </ScreenContainer>
+      <View style={styles.grid}>
+        {categories.map(({ category, metadata, phraseCount }, index) => {
+          const isAvailable = phraseCount > 0;
+
+          return (
+            <View key={category} style={styles.gridCell}>
+              <GameCard
+                disabled={!isAvailable}
+                glow={index % 2 === 0 ? 'primary' : 'secondary'}
+                onPress={() =>
+                  isAvailable
+                    ? navigation.navigate('PhraseList', { category })
+                    : undefined
+                }
+                style={styles.categoryCard}
+                subtitle={metadata.description}
+                title={metadata.title}
+              >
+                <View style={styles.categoryTopRow}>
+                  <Text style={styles.categoryIcon}>{metadata.icon}</Text>
+                  <Badge
+                    label={
+                      isAvailable ? `${phraseCount} Phrases` : 'Coming Soon'
+                    }
+                    tone={isAvailable ? 'accent' : 'neutral'}
+                  />
+                </View>
+              </GameCard>
+            </View>
+          );
+        })}
+      </View>
+    </Screen>
   );
 }
 
 const styles = StyleSheet.create({
+  heroCard: {
+    marginBottom: theme.spacing.xl,
+  },
+  heroBadgeRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: theme.spacing.sm,
+    marginBottom: theme.spacing.lg,
+  },
   title: {
-    color: '#f8fafc',
-    fontSize: 34,
-    fontWeight: '800',
-    marginBottom: 6,
+    ...theme.typography.title,
+    marginBottom: theme.spacing.sm,
   },
   subtitle: {
-    color: '#94a3b8',
-    fontSize: 16,
-    marginBottom: 24,
+    ...theme.typography.body,
+    color: theme.colors.textSecondary,
+    marginBottom: theme.spacing.xl,
   },
-  hero: {
-    backgroundColor: '#111a33',
-    borderColor: '#24304f',
-    borderRadius: 28,
-    borderWidth: 1,
-    marginBottom: 24,
-    padding: 20,
+  heroActionRow: {
+    flexDirection: 'row',
+    gap: theme.spacing.md,
   },
-  heroEyebrow: {
-    color: '#7dd3fc',
-    fontSize: 12,
-    fontWeight: '700',
-    letterSpacing: 1,
-    marginBottom: 10,
-    textTransform: 'uppercase',
+  heroAction: {
+    flex: 1,
   },
-  heroTitle: {
-    color: '#f8fafc',
-    fontSize: 24,
-    fontWeight: '800',
-    marginBottom: 10,
+  sectionHeader: {
+    marginBottom: theme.spacing.lg,
   },
-  heroText: {
-    color: '#cbd5e1',
-    fontSize: 15,
-    lineHeight: 22,
+  sectionTitle: {
+    ...theme.typography.sectionTitle,
+    marginBottom: theme.spacing.xs,
+  },
+  sectionSubtitle: {
+    ...theme.typography.caption,
+  },
+  grid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  gridCell: {
+    marginBottom: theme.spacing.lg,
+    width: '48%',
+  },
+  categoryCard: {
+    minHeight: 196,
+  },
+  categoryTopRow: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  categoryIcon: {
+    color: theme.colors.textPrimary,
+    fontSize: 30,
   },
 });
 

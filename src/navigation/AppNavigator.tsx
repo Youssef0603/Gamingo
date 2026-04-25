@@ -1,133 +1,172 @@
-import React, { useMemo, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import {
+  NavigationContainer,
+  DarkTheme as NavigationDarkTheme,
+} from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import BottomTabBar from '../components/BottomTabBar';
-import { phrases } from '../data/phrases';
+import { AppStateProvider } from '../context/AppStateContext';
+import { categoryMetadata } from '../data/categories';
 import {
   FavoritesScreen,
   HomeScreen,
-  PhraseDetailScreen,
   PhraseListScreen,
+  PracticeScreen,
+  SettingsScreen,
 } from '../screens';
+import { theme, withAlpha } from '../theme/theme';
 
-import type { AppRoute, TabName } from '../types/navigation';
-import type { PhraseCategory } from '../types/phrase';
+import type {
+  HomeStackParamList,
+  PracticeStackScreenProps,
+  PracticeTabScreenProps,
+  RootTabParamList,
+} from '../types/navigation';
 
-const homeRoot: AppRoute = { name: 'Home' };
-const favoritesRoot: AppRoute = { name: 'Favorites' };
+const Tab = createBottomTabNavigator<RootTabParamList>();
+const Stack = createNativeStackNavigator<HomeStackParamList>();
+
+const tabLabels: Record<keyof RootTabParamList, { icon: string; label: string }> = {
+  HomeTab: { icon: '🎮', label: 'Home' },
+  PracticeTab: { icon: '🎤', label: 'Practice' },
+  FavoritesTab: { icon: '★', label: 'Favorites' },
+  SettingsTab: { icon: '⚙️', label: 'Settings' },
+};
+
+const navigationTheme = {
+  ...NavigationDarkTheme,
+  colors: {
+    ...NavigationDarkTheme.colors,
+    primary: theme.colors.primary,
+    background: theme.colors.background,
+    card: theme.colors.surface,
+    text: theme.colors.textPrimary,
+    border: withAlpha(theme.colors.primary, 0.18),
+    notification: theme.colors.accent,
+  },
+};
+
+function PracticeStackRoute(props: PracticeStackScreenProps) {
+  return <PracticeScreen {...props} variant="stack" />;
+}
+
+function PracticeTabRoute(props: PracticeTabScreenProps) {
+  return <PracticeScreen {...props} variant="tab" />;
+}
+
+function HomeStackNavigator() {
+  return (
+    <Stack.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        animation: 'slide_from_right',
+        contentStyle: { backgroundColor: theme.colors.background },
+        headerBackButtonDisplayMode: 'minimal',
+        headerShadowVisible: false,
+        headerStyle: {
+          backgroundColor: theme.colors.background,
+        },
+        headerTintColor: theme.colors.textPrimary,
+        headerTitleStyle: {
+          color: theme.colors.textPrimary,
+          fontSize: 16,
+          fontWeight: '800',
+        },
+      }}
+    >
+      <Stack.Screen
+        component={HomeScreen}
+        name="Home"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        component={PhraseListScreen}
+        name="PhraseList"
+        options={({ route }) => ({
+          title: categoryMetadata[route.params.category].title.toUpperCase(),
+        })}
+      />
+      <Stack.Screen
+        component={PracticeStackRoute}
+        name="Practice"
+        options={{ title: 'PRACTICE' }}
+      />
+    </Stack.Navigator>
+  );
+}
 
 function AppNavigator() {
-  const [activeTab, setActiveTab] = useState<TabName>('Home');
-  const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
-  const [homeStack, setHomeStack] = useState<AppRoute[]>([homeRoot]);
-  const [favoritesStack, setFavoritesStack] = useState<AppRoute[]>([
-    favoritesRoot,
-  ]);
-
-  const currentStack = activeTab === 'Home' ? homeStack : favoritesStack;
-  const currentRoute = currentStack[currentStack.length - 1];
-
-  const favoriteSet = useMemo(() => new Set(favoriteIds), [favoriteIds]);
-
-  const pushRoute = (route: AppRoute) => {
-    if (activeTab === 'Home') {
-      setHomeStack(current => [...current, route]);
-      return;
-    }
-
-    setFavoritesStack(current => [...current, route]);
-  };
-
-  const handleBack = () => {
-    if (activeTab === 'Home') {
-      setHomeStack(current => (current.length > 1 ? current.slice(0, -1) : current));
-      return;
-    }
-
-    setFavoritesStack(current =>
-      current.length > 1 ? current.slice(0, -1) : current,
-    );
-  };
-
-  const openCategory = (category: PhraseCategory) => {
-    pushRoute({ name: 'PhraseList', category });
-  };
-
-  const openPhrase = (phraseId: string) => {
-    pushRoute({ name: 'PhraseDetail', phraseId });
-  };
-
-  const toggleFavorite = (phraseId: string) => {
-    setFavoriteIds(current =>
-      current.includes(phraseId)
-        ? current.filter(id => id !== phraseId)
-        : [...current, phraseId],
-    );
-  };
-
-  const handleChangeTab = (tab: TabName) => {
-    setActiveTab(tab);
-  };
-
-  const openFavoritesTab = () => {
-    setActiveTab('Favorites');
-  };
-
-  const detailPhrase =
-    currentRoute.name === 'PhraseDetail'
-      ? phrases.find(item => item.id === currentRoute.phraseId)
-      : undefined;
-
   return (
-    <View style={styles.container}>
-      <View style={styles.screen}>
-        {currentRoute.name === 'Home' ? (
-          <HomeScreen
-            onOpenCategory={openCategory}
-            onOpenFavorites={openFavoritesTab}
-          />
-        ) : null}
+    <AppStateProvider>
+      <NavigationContainer theme={navigationTheme}>
+        <Tab.Navigator
+          initialRouteName="HomeTab"
+          screenOptions={({ route }) => {
+            const tabMeta = tabLabels[route.name as keyof RootTabParamList];
 
-        {currentRoute.name === 'Favorites' ? (
-          <FavoritesScreen
-            favoriteIds={favoriteIds}
-            onOpenPhrase={openPhrase}
-            onToggleFavorite={toggleFavorite}
+            return {
+              animation: 'fade',
+              headerShown: false,
+              sceneStyle: styles.scene,
+              tabBarActiveTintColor: theme.colors.primary,
+              tabBarInactiveTintColor: theme.colors.textSecondary,
+              tabBarItemStyle: styles.tabBarItem,
+              tabBarLabelStyle: styles.tabBarLabel,
+              tabBarStyle: styles.tabBar,
+              tabBarLabel: `${tabMeta.icon} ${tabMeta.label}`,
+            };
+          }}
+        >
+          <Tab.Screen
+            component={HomeStackNavigator}
+            name="HomeTab"
+            options={{ tabBarLabel: tabLabels.HomeTab.label }}
           />
-        ) : null}
-
-        {currentRoute.name === 'PhraseList' ? (
-          <PhraseListScreen
-            category={currentRoute.category}
-            favoriteIds={favoriteIds}
-            onBack={handleBack}
-            onOpenPhrase={openPhrase}
-            onToggleFavorite={toggleFavorite}
+          <Tab.Screen
+            component={PracticeTabRoute}
+            name="PracticeTab"
+            options={{ tabBarLabel: 'Practice' }}
           />
-        ) : null}
-
-        {currentRoute.name === 'PhraseDetail' && detailPhrase ? (
-          <PhraseDetailScreen
-            isFavorite={favoriteSet.has(detailPhrase.id)}
-            onBack={handleBack}
-            onToggleFavorite={() => toggleFavorite(detailPhrase.id)}
-            phrase={detailPhrase}
+          <Tab.Screen
+            component={FavoritesScreen}
+            name="FavoritesTab"
+            options={{ tabBarLabel: 'Favorites' }}
           />
-        ) : null}
-      </View>
-
-      <BottomTabBar activeTab={activeTab} onChangeTab={handleChangeTab} />
-    </View>
+          <Tab.Screen
+            component={SettingsScreen}
+            name="SettingsTab"
+            options={{ tabBarLabel: 'Settings' }}
+          />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </AppStateProvider>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#0b1020',
+  scene: {
+    backgroundColor: theme.colors.background,
   },
-  screen: {
-    flex: 1,
+  tabBar: {
+    backgroundColor: theme.colors.surface,
+    borderTopColor: withAlpha(theme.colors.primary, 0.18),
+    borderTopWidth: 1,
+    height: 84,
+    paddingBottom: 8,
+    paddingTop: 8,
+  },
+  tabBarItem: {
+    paddingVertical: 4,
+  },
+  tabBarLabel: {
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 1,
+    marginBottom: 10,
   },
 });
 

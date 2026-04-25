@@ -1,10 +1,28 @@
-export type PhraseCategory = 'basic' | 'objectives' | 'toxic';
+import type { LanguageCode } from './language';
 
-export type PhraseItem = {
-  id: string;
-  phrase: string;
+export type PhraseCategory =
+  | 'callouts'
+  | 'instructions'
+  | 'strategy'
+  | 'objective'
+  | 'danger'
+  | 'economy'
+  | 'teamwork'
+  | 'slang'
+  | 'toxic'
+  | 'antiToxic';
+
+export interface PhraseTranslation {
+  text: string;
   meaning: string;
-  whenToUse: string;
+  pronunciation?: string;
+}
+
+export interface Phrase {
+  id: string;
   category: PhraseCategory;
-  betterResponse?: string;
-};
+  translations: Record<LanguageCode, PhraseTranslation>;
+  tags?: string[];
+  isToxic?: boolean;
+  saferAlternative?: string;
+}

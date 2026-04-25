@@ -1,10 +1,10 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import type { PhraseItem } from '../types/phrase';
+import type { Phrase } from '../types/phrase';
 
 type PhraseCardProps = {
-  item: PhraseItem;
+  item: Phrase;
   isFavorite: boolean;
   onPress: () => void;
   onToggleFavorite: () => void;
@@ -16,10 +16,12 @@ function PhraseCard({
   onPress,
   onToggleFavorite,
 }: PhraseCardProps) {
+  const english = item.translations.en;
+
   return (
     <Pressable onPress={onPress} style={styles.card}>
       <View style={styles.topRow}>
-        <Text style={styles.phrase}>{item.phrase}</Text>
+        <Text style={styles.phrase}>{english.text}</Text>
         <Pressable
           hitSlop={10}
           onPress={event => {
@@ -31,11 +33,19 @@ function PhraseCard({
           <Text style={styles.favoriteText}>{isFavorite ? 'Saved' : '+ Fav'}</Text>
         </Pressable>
       </View>
-      <Text style={styles.meaning}>{item.meaning}</Text>
-      {item.betterResponse ? (
+
+      {item.tags?.length ? (
+        <Text style={styles.tags}>{item.tags.join(' • ')}</Text>
+      ) : null}
+
+      <Text style={styles.meaning}>{english.meaning}</Text>
+
+      {item.saferAlternative ? (
         <View style={styles.responseBox}>
-          <Text style={styles.responseLabel}>Better response</Text>
-          <Text style={styles.responseText}>{item.betterResponse}</Text>
+          <Text style={styles.responseLabel}>
+            {item.isToxic ? 'Safer alternative' : 'Alternative'}
+          </Text>
+          <Text style={styles.responseText}>{item.saferAlternative}</Text>
         </View>
       ) : null}
     </Pressable>
@@ -83,6 +93,13 @@ const styles = StyleSheet.create({
     color: '#cbd5e1',
     fontSize: 14,
     lineHeight: 20,
+  },
+  tags: {
+    color: '#7dd3fc',
+    fontSize: 12,
+    fontWeight: '600',
+    marginBottom: 10,
+    textTransform: 'uppercase',
   },
   responseBox: {
     backgroundColor: '#0f172a',

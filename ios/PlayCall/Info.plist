@@ -35,6 +35,10 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>PlayCall uses the microphone so you can practice speaking gaming phrases aloud.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>PlayCall uses speech recognition to compare your spoken phrase with the target callout.</string>
 	<key>RCTNewArchEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

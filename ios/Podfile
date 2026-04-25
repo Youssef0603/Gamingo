@@ -4,6 +4,25 @@ require Pod::Executable.execute_command('node', ['-p',
     "react-native/scripts/react_native_pods.rb",
     {paths: [process.argv[1]]},
   )', __dir__]).strip
+require 'pathname'
+require 'uri'
+
+# RN 0.85 prebuilt pod helpers can fail to build file:// URIs for absolute local
+# tarball paths when the workspace path contains spaces.
+module LocalFileUriBuildFallback
+  def build(args)
+    super
+  rescue URI::InvalidComponentError => error
+    path = args.is_a?(Hash) ? args[:path] : nil
+    raise error unless path.is_a?(String) && Pathname.new(path).absolute?
+
+    URI.parse(URI::DEFAULT_PARSER.escape("file://#{Pathname.new(path).expand_path}"))
+  end
+end
+
+unless URI::File.singleton_class.ancestors.include?(LocalFileUriBuildFallback)
+  URI::File.singleton_class.prepend(LocalFileUriBuildFallback)
+end
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
