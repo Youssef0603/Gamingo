@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { createDefaultPracticeDependencies } from './practiceServices';
 import {
@@ -139,7 +139,7 @@ export function usePractice({
     ? 'playing'
     : mapRecognitionStateToStatus(recognitionState);
 
-  const handleAttemptComplete = (
+  const handleAttemptComplete = useCallback((
     label: PracticeFeedbackLabel,
     feedbackOverride?: PracticeFeedback,
   ) => {
@@ -155,9 +155,9 @@ export function usePractice({
       });
 
     onAttemptCompleteRef.current?.(nextFeedback);
-  };
+  }, [phrase]);
 
-  const applyPracticeError = (nextError: unknown) => {
+  const applyPracticeError = useCallback((nextError: unknown) => {
     const errorMessage = getPracticeErrorMessage(nextError);
     const evaluation = evaluatePracticeAttempt(phrase, '');
     const errorCode = getRecognitionErrorCode(nextError);
@@ -186,9 +186,9 @@ export function usePractice({
     if (shouldRecordFailedAttempt(errorCode)) {
       handleAttemptComplete(nextFeedback.label, nextFeedback);
     }
-  };
+  }, [handleAttemptComplete, phrase]);
 
-  async function playPhrase() {
+  const playPhrase = useCallback(async () => {
     setError(null);
     setIsPlaying(true);
 
@@ -201,9 +201,9 @@ export function usePractice({
     } finally {
       setIsPlaying(false);
     }
-  }
+  }, [locale, phrase]);
 
-  async function speakPhrase() {
+  const speakPhrase = useCallback(async () => {
     setError(null);
     setFeedback(null);
     setHeardText('');
@@ -256,7 +256,7 @@ export function usePractice({
 
       speechRecognitionRef.current.start(locale).catch(finalizeError);
     });
-  }
+  }, [applyPracticeError, handleAttemptComplete, locale, phrase]);
 
   useEffect(() => {
     const speechRecognition = speechRecognitionRef.current;

@@ -1,10 +1,15 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { categoryMetadata } from '../data/categories';
+import { theme, withAlpha } from '../theme/theme';
+
+import type { LanguageCode } from '../types/language';
 import type { Phrase } from '../types/phrase';
 
 type PhraseCardProps = {
   item: Phrase;
+  language: LanguageCode;
   isFavorite: boolean;
   onPress: () => void;
   onToggleFavorite: () => void;
@@ -12,112 +17,126 @@ type PhraseCardProps = {
 
 function PhraseCard({
   item,
+  language,
   isFavorite,
   onPress,
   onToggleFavorite,
 }: PhraseCardProps) {
+  const translation = item.translations[language];
   const english = item.translations.en;
+  const category = categoryMetadata[item.category];
 
   return (
-    <Pressable onPress={onPress} style={styles.card}>
+    <Pressable onPress={onPress} style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}>
       <View style={styles.topRow}>
-        <Text style={styles.phrase}>{english.text}</Text>
+        <View style={styles.textWrap}>
+          <Text style={styles.phrase}>{translation.text}</Text>
+          <Text style={styles.translation}>English: {english.text}</Text>
+        </View>
         <Pressable
           hitSlop={10}
           onPress={event => {
             event.stopPropagation();
             onToggleFavorite();
           }}
-          style={[styles.favoriteButton, isFavorite && styles.favoriteButtonOn]}
+          style={({ pressed }) => [
+            styles.favoriteButton,
+            isFavorite && styles.favoriteButtonOn,
+            pressed && styles.favoriteButtonPressed,
+          ]}
         >
-          <Text style={styles.favoriteText}>{isFavorite ? 'Saved' : '+ Fav'}</Text>
+          <Text
+            style={[
+              styles.favoriteText,
+              isFavorite && styles.favoriteTextOn,
+            ]}
+          >
+            {isFavorite ? 'Saved' : 'Save'}
+          </Text>
         </Pressable>
       </View>
 
-      {item.tags?.length ? (
-        <Text style={styles.tags}>{item.tags.join(' • ')}</Text>
-      ) : null}
-
-      <Text style={styles.meaning}>{english.meaning}</Text>
-
-      {item.saferAlternative ? (
-        <View style={styles.responseBox}>
-          <Text style={styles.responseLabel}>
-            {item.isToxic ? 'Safer alternative' : 'Alternative'}
+      <View style={styles.bottomRow}>
+        <View style={styles.badge}>
+          <Text style={styles.badgeText}>
+            {category.icon} {category.title}
           </Text>
-          <Text style={styles.responseText}>{item.saferAlternative}</Text>
         </View>
-      ) : null}
+      </View>
     </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#141b34',
-    borderColor: '#24304f',
-    borderRadius: 20,
+    backgroundColor: theme.colors.card,
+    borderColor: theme.colors.border,
+    borderRadius: theme.radius.lg,
     borderWidth: 1,
-    marginBottom: 14,
-    padding: 16,
+    marginBottom: theme.spacing.md,
+    padding: theme.spacing.lg,
+    ...theme.shadows.card,
+  },
+  cardPressed: {
+    backgroundColor: withAlpha(theme.colors.primary, 0.03),
   },
   topRow: {
     alignItems: 'flex-start',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 10,
+    gap: theme.spacing.md,
+    marginBottom: theme.spacing.md,
+  },
+  textWrap: {
+    flex: 1,
   },
   phrase: {
-    color: '#f8fafc',
-    flex: 1,
     fontSize: 18,
     fontWeight: '700',
-    marginRight: 12,
-    textTransform: 'capitalize',
+    color: theme.colors.text,
+    marginBottom: theme.spacing.xs,
+  },
+  translation: {
+    ...theme.typography.caption,
+    color: theme.colors.mutedText,
   },
   favoriteButton: {
-    backgroundColor: '#1d2746',
-    borderRadius: 999,
+    backgroundColor: withAlpha(theme.colors.primary, 0.08),
+    borderColor: withAlpha(theme.colors.primary, 0.18),
+    borderRadius: theme.radius.pill,
+    borderWidth: 1,
     paddingHorizontal: 12,
-    paddingVertical: 8,
+    paddingVertical: 7,
   },
   favoriteButtonOn: {
-    backgroundColor: '#0f766e',
+    backgroundColor: withAlpha(theme.colors.accent, 0.12),
+    borderColor: withAlpha(theme.colors.accent, 0.24),
+  },
+  favoriteButtonPressed: {
+    opacity: 0.85,
   },
   favoriteText: {
-    color: '#dbeafe',
-    fontSize: 12,
-    fontWeight: '700',
-  },
-  meaning: {
-    color: '#cbd5e1',
-    fontSize: 14,
-    lineHeight: 20,
-  },
-  tags: {
-    color: '#7dd3fc',
+    color: theme.colors.primary,
     fontSize: 12,
     fontWeight: '600',
-    marginBottom: 10,
-    textTransform: 'uppercase',
   },
-  responseBox: {
-    backgroundColor: '#0f172a',
-    borderRadius: 14,
-    marginTop: 14,
-    padding: 12,
+  favoriteTextOn: {
+    color: theme.colors.accent,
   },
-  responseLabel: {
-    color: '#7dd3fc',
+  bottomRow: {
+    alignItems: 'flex-start',
+    flexDirection: 'row',
+  },
+  badge: {
+    backgroundColor: withAlpha(theme.colors.primary, 0.08),
+    borderRadius: theme.radius.pill,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+  },
+  badgeText: {
+    color: theme.colors.primary,
     fontSize: 12,
-    fontWeight: '700',
-    marginBottom: 6,
-    textTransform: 'uppercase',
-  },
-  responseText: {
-    color: '#e2e8f0',
-    fontSize: 13,
-    lineHeight: 19,
+    fontWeight: '600',
   },
 });
 

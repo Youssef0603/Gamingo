@@ -1,33 +1,103 @@
-import React, { useEffect, useMemo, useRef } from 'react';
-import { Animated, StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from 'react';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { Badge, GameButton, GameCard } from '../../components/ui';
 import { theme, withAlpha } from '../../theme/theme';
 import { usePractice } from './usePractice';
 
-import type { PracticeDependencies } from './practiceServices';
-import type { PracticeFeedback } from './usePractice';
+import type { SpeechRecognitionPermissionStatus } from '../../services';
+import type { PracticeFeedback, PracticeStatus } from './usePractice';
 
 type SpeakingCardProps = {
-  dependencies?: Partial<PracticeDependencies>;
+  englishText: string;
+  isFavorite: boolean;
   locale?: string;
-  meaning: string;
-  onAttemptComplete?: (feedback: PracticeFeedback) => void;
+  onClose: () => void;
+  onToggleFavorite: () => void;
   phrase: string;
   pronunciation?: string;
 };
 
+function getStatusMeta(
+  status: PracticeStatus,
+  permissionStatus: SpeechRecognitionPermissionStatus,
+  feedback: PracticeFeedback | null,
+) {
+  if (status === 'requesting-permission') {
+    return { color: theme.colors.primary, label: 'Preparing mic' };
+  }
+
+  if (status === 'playing') {
+    return { color: theme.colors.primary, label: 'Playing audio' };
+  }
+
+  if (status === 'listening') {
+    return { color: theme.colors.accent, label: 'Listening' };
+  }
+
+  if (feedback?.label === 'Perfect') {
+    return { color: theme.colors.accent, label: 'Success' };
+  }
+
+  if (feedback?.label === 'Close') {
+    return { color: theme.colors.primary, label: 'Close match' };
+  }
+
+  if (feedback?.label === 'Try again') {
+    return { color: theme.colors.danger, label: 'Failed' };
+  }
+
+  if (permissionStatus === 'blocked') {
+    return { color: theme.colors.danger, label: 'Mic blocked' };
+  }
+
+  if (permissionStatus === 'denied') {
+    return { color: theme.colors.danger, label: 'Mic denied' };
+  }
+
+  if (permissionStatus === 'unavailable') {
+    return { color: theme.colors.danger, label: 'Mic unavailable' };
+  }
+
+  return { color: theme.colors.mutedText, label: 'Ready' };
+}
+
+function getSupportMessage(permissionStatus: SpeechRecognitionPermissionStatus) {
+  if (permissionStatus === 'blocked') {
+    return 'Enable microphone access in system settings.';
+  }
+
+  if (permissionStatus === 'denied') {
+    return 'Allow microphone access to keep practicing.';
+  }
+
+  if (permissionStatus === 'unavailable') {
+    return 'Speech recognition is not available in this build.';
+  }
+
+  return null;
+}
+
+function getFeedbackColor(feedback: PracticeFeedback | null) {
+  if (feedback?.label === 'Perfect') {
+    return theme.colors.accent;
+  }
+
+  if (feedback?.label === 'Close') {
+    return theme.colors.primary;
+  }
+
+  return theme.colors.danger;
+}
+
 function SpeakingCard({
-  dependencies,
+  englishText,
+  isFavorite,
   locale,
-  meaning,
-  onAttemptComplete,
+  onClose,
+  onToggleFavorite,
   phrase,
   pronunciation,
 }: SpeakingCardProps) {
-  const successGlow = useRef(new Animated.Value(0)).current;
-  const failureFlash = useRef(new Animated.Value(0)).current;
-  const shakeX = useRef(new Animated.Value(0)).current;
   const {
     error,
     feedback,
@@ -38,392 +108,329 @@ function SpeakingCard({
     permissionStatus,
     playPhrase,
     speakPhrase,
+    status,
   } = usePractice({
-    autoPlay: true,
-    dependencies,
+    autoPlay: false,
     locale,
-    onAttemptComplete,
     phrase,
   });
 
-  const feedbackTone =
-    feedback?.label === 'Perfect'
-      ? 'accent'
-      : feedback?.label === 'Close'
-        ? 'secondary'
-        : 'danger';
-  const supportTone =
-    permissionStatus === 'granted'
-      ? 'accent'
-      : permissionStatus === 'denied' || permissionStatus === 'blocked'
-        ? 'danger'
-        : permissionStatus === 'unavailable'
-          ? 'neutral'
-          : 'secondary';
-  const supportLabel =
-    permissionStatus === 'granted'
-      ? 'Mic Ready'
-      : permissionStatus === 'denied'
-        ? 'Mic Denied'
-        : permissionStatus === 'blocked'
-          ? 'Mic Blocked'
-          : permissionStatus === 'unavailable'
-            ? 'Mic Unsupported'
-            : 'Mic Pending';
-  const supportMessage =
-    permissionStatus === 'blocked'
-      ? 'Enable microphone and speech access in system settings to use live practice.'
-      : permissionStatus === 'denied'
-        ? 'Microphone access was denied. Tap Speak again after granting permission.'
-        : permissionStatus === 'unavailable'
-          ? 'This build has audio playback, but live speech recognition needs a native recognizer module.'
-          : null;
-  const cardTranslateStyle = useMemo(
-    () => ({
-      transform: [{ translateX: shakeX }],
-    }),
-    [shakeX],
-  );
-  const successScale = successGlow.interpolate({
-    inputRange: [0, 1],
-    outputRange: [1, 1.02],
-  });
-
   useEffect(() => {
-    if (!feedback) {
-      return;
-    }
+    let cancelled = false;
 
-    if (feedback.label === 'Try again') {
-      successGlow.stopAnimation();
-      successGlow.setValue(0);
-      failureFlash.stopAnimation();
-      failureFlash.setValue(0);
-      shakeX.stopAnimation();
-      shakeX.setValue(0);
+    (async () => {
+      await playPhrase();
 
-      Animated.parallel([
-        Animated.sequence([
-          Animated.timing(failureFlash, {
-            duration: 120,
-            toValue: 1,
-            useNativeDriver: true,
-          }),
-          Animated.timing(failureFlash, {
-            duration: 220,
-            toValue: 0,
-            useNativeDriver: true,
-          }),
-        ]),
-        Animated.sequence([
-          Animated.timing(shakeX, {
-            duration: 40,
-            toValue: -10,
-            useNativeDriver: true,
-          }),
-          Animated.timing(shakeX, {
-            duration: 40,
-            toValue: 10,
-            useNativeDriver: true,
-          }),
-          Animated.timing(shakeX, {
-            duration: 40,
-            toValue: -8,
-            useNativeDriver: true,
-          }),
-          Animated.timing(shakeX, {
-            duration: 40,
-            toValue: 8,
-            useNativeDriver: true,
-          }),
-          Animated.timing(shakeX, {
-            duration: 40,
-            toValue: 0,
-            useNativeDriver: true,
-          }),
-        ]),
-      ]).start();
+      if (!cancelled) {
+        await speakPhrase().catch(() => undefined);
+      }
+    })().catch(() => undefined);
 
-      return;
-    }
+    return () => {
+      cancelled = true;
+    };
+  }, [playPhrase, speakPhrase]);
 
-    failureFlash.stopAnimation();
-    failureFlash.setValue(0);
-    shakeX.stopAnimation();
-    shakeX.setValue(0);
-    successGlow.stopAnimation();
-    successGlow.setValue(0);
-
-    Animated.sequence([
-      Animated.timing(successGlow, {
-        duration: 150,
-        toValue: 1,
-        useNativeDriver: true,
-      }),
-      Animated.timing(successGlow, {
-        duration: 380,
-        toValue: 0,
-        useNativeDriver: true,
-      }),
-    ]).start();
-  }, [failureFlash, feedback, shakeX, successGlow]);
+  const statusMeta = getStatusMeta(status, permissionStatus, feedback);
+  const supportMessage = getSupportMessage(permissionStatus);
+  const feedbackColor = getFeedbackColor(feedback);
+  const isBusy = isPlaying || isListening || isRequestingPermission;
 
   return (
-    <Animated.View style={[styles.cardShell, cardTranslateStyle]}>
-      <GameCard glow="primary" style={styles.card}>
-        <Animated.View
-          pointerEvents="none"
+    <View style={styles.card}>
+      <View style={styles.headerRow}>
+        <Pressable
+          onPress={onClose}
+          style={({ pressed }) => [
+            styles.secondaryButton,
+            pressed && styles.buttonPressed,
+          ]}
+        >
+          <Text style={styles.secondaryButtonText}>Close</Text>
+        </Pressable>
+
+        <Pressable
+          onPress={onToggleFavorite}
+          style={({ pressed }) => [
+            styles.favoriteButton,
+            isFavorite && styles.favoriteButtonSaved,
+            pressed && styles.buttonPressed,
+          ]}
+        >
+          <Text
+            style={[
+              styles.favoriteButtonText,
+              isFavorite && styles.favoriteButtonTextSaved,
+            ]}
+          >
+            {isFavorite ? 'Saved' : 'Save'}
+          </Text>
+        </Pressable>
+      </View>
+
+      <View
+        style={[
+          styles.statusBadge,
+          {
+            backgroundColor: withAlpha(statusMeta.color, 0.12),
+            borderColor: withAlpha(statusMeta.color, 0.22),
+          },
+        ]}
+      >
+        {(isBusy || feedback) ? (
+          <View
+            style={[styles.statusDot, { backgroundColor: statusMeta.color }]}
+          />
+        ) : null}
+        <Text style={[styles.statusText, { color: statusMeta.color }]}>
+          {statusMeta.label}
+        </Text>
+      </View>
+
+      <Text style={styles.phrase}>{phrase}</Text>
+      <Text style={styles.translation}>{englishText}</Text>
+
+      <View style={styles.infoCard}>
+        <Text style={styles.infoLabel}>Pronunciation</Text>
+        <Text style={styles.infoValue}>{pronunciation ?? 'Not available'}</Text>
+      </View>
+
+      {supportMessage ? (
+        <Text style={styles.supportText}>{supportMessage}</Text>
+      ) : null}
+
+      {feedback ? (
+        <View
           style={[
-            styles.overlay,
-            styles.successOverlay,
+            styles.feedbackCard,
             {
-              opacity: successGlow,
-              transform: [{ scale: successScale }],
+              backgroundColor: withAlpha(feedbackColor, 0.08),
+              borderColor: withAlpha(feedbackColor, 0.2),
             },
           ]}
-        />
-        <Animated.View
-          pointerEvents="none"
-          style={[
-            styles.overlay,
-            styles.failureOverlay,
-            {
-              opacity: failureFlash,
-            },
-          ]}
-        />
-
-        <View style={styles.content}>
-          <View style={styles.badgeRow}>
-            <Badge label="Speaking Drill" tone="primary" />
-            <Badge
-              label={
-                isRequestingPermission
-                  ? 'Authorizing Mic'
-                  : isListening
-                    ? 'Listening'
-                    : isPlaying
-                      ? 'Playing'
-                      : 'Ready'
-              }
-              tone={
-                isRequestingPermission
-                  ? 'secondary'
-                  : isListening
-                    ? 'danger'
-                    : isPlaying
-                      ? 'secondary'
-                      : 'neutral'
-              }
-            />
-            <Badge label={supportLabel} tone={supportTone} />
-          </View>
-
-          <Text style={styles.phrase}>{phrase}</Text>
-
-          <View style={styles.section}>
-            <Text style={styles.sectionLabel}>Pronunciation Hint</Text>
-            <Text style={styles.sectionText}>
-              {pronunciation ?? 'Read it as shown and focus on clean pacing.'}
-            </Text>
-          </View>
-
-          <View style={styles.section}>
-            <Text style={styles.sectionLabel}>Meaning</Text>
-            <Text style={styles.sectionText}>{meaning}</Text>
-          </View>
-
-          <View style={styles.actionRow}>
-            <View style={styles.actionCell}>
-              <GameButton
-                fullWidth
-                disabled={isListening || isPlaying || isRequestingPermission}
-                onPress={() => {
-                  playPhrase().catch(() => undefined);
-                }}
-                title={isPlaying ? 'Playing...' : 'Listen'}
-                variant="secondary"
-              />
-            </View>
-            <View style={styles.actionCell}>
-              <GameButton
-                fullWidth
-                disabled={isListening || isPlaying || isRequestingPermission}
-                onPress={() => {
-                  speakPhrase().catch(() => undefined);
-                }}
-                title={
-                  isRequestingPermission
-                    ? 'Authorizing...'
-                    : isListening
-                      ? 'Listening...'
-                      : 'Speak'
-                }
-              />
-            </View>
-          </View>
-
-          {supportMessage ? (
-            <View style={styles.supportBox}>
-              <Text style={styles.supportText}>{supportMessage}</Text>
-            </View>
-          ) : null}
-
-          {feedback ? (
-            <View
-              style={[
-                styles.feedbackBox,
-                {
-                  backgroundColor: withAlpha(
-                    feedbackTone === 'accent'
-                      ? theme.colors.accent
-                      : feedbackTone === 'secondary'
-                        ? theme.colors.secondary
-                        : theme.colors.danger,
-                    0.12,
-                  ),
-                  borderColor: withAlpha(
-                    feedbackTone === 'accent'
-                      ? theme.colors.accent
-                      : feedbackTone === 'secondary'
-                        ? theme.colors.secondary
-                        : theme.colors.danger,
-                    0.32,
-                  ),
-                },
-              ]}
-            >
-              <View style={styles.feedbackHeader}>
-                <Badge label={feedback.label} tone={feedbackTone} />
-                <Text style={styles.feedbackScore}>
-                  Match: {Math.round(feedback.score * 100)}%
-                </Text>
-              </View>
-
-              <Text style={styles.feedbackText}>{feedback.message}</Text>
-
-              {heardText ? (
-                <Text style={styles.heardText}>Heard: {heardText}</Text>
-              ) : null}
-            </View>
-          ) : null}
-
-          {error && !feedback ? (
-            <Text style={styles.errorText}>{error}</Text>
+        >
+          <Text style={[styles.feedbackTitle, { color: feedbackColor }]}>
+            {feedback.label}
+          </Text>
+          <Text style={styles.feedbackText}>{feedback.message}</Text>
+          {heardText ? (
+            <Text style={styles.heardText}>Heard: {heardText}</Text>
           ) : null}
         </View>
-      </GameCard>
-    </Animated.View>
+      ) : null}
+
+      {error && !feedback ? <Text style={styles.errorText}>{error}</Text> : null}
+
+      <View style={styles.actionRow}>
+        <Pressable
+          disabled={isBusy}
+          onPress={() => {
+            playPhrase().catch(() => undefined);
+          }}
+          style={({ pressed }) => [
+            styles.secondaryAction,
+            isBusy && styles.buttonDisabled,
+            pressed && styles.buttonPressed,
+          ]}
+        >
+          <Text style={styles.secondaryActionText}>Play again</Text>
+        </Pressable>
+
+        <Pressable
+          disabled={isBusy}
+          onPress={() => {
+            speakPhrase().catch(() => undefined);
+          }}
+          style={({ pressed }) => [
+            styles.primaryAction,
+            isBusy && styles.buttonDisabled,
+            pressed && styles.buttonPressed,
+          ]}
+        >
+          <Text style={styles.primaryActionText}>Try again</Text>
+        </Pressable>
+      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  cardShell: {
-    marginBottom: theme.spacing.lg,
-  },
   card: {
-    padding: 0,
-  },
-  content: {
-    padding: theme.spacing.lg,
-  },
-  overlay: {
-    bottom: 0,
+    backgroundColor: theme.colors.card,
+    borderColor: theme.colors.border,
     borderRadius: theme.radius.lg,
-    borderWidth: 1.5,
-    left: 0,
-    position: 'absolute',
-    right: 0,
-    top: 0,
+    borderWidth: 1,
+    padding: theme.spacing.lg,
+    ...theme.shadows.card,
   },
-  successOverlay: {
-    backgroundColor: withAlpha(theme.colors.accent, 0.08),
-    borderColor: withAlpha(theme.colors.accent, 0.45),
-    shadowColor: theme.colors.accent,
-    shadowOpacity: 0.4,
-    shadowRadius: 18,
-  },
-  failureOverlay: {
-    backgroundColor: withAlpha(theme.colors.danger, 0.08),
-    borderColor: withAlpha(theme.colors.danger, 0.4),
-  },
-  badgeRow: {
+  headerRow: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
     gap: theme.spacing.sm,
+    justifyContent: 'space-between',
+    marginBottom: theme.spacing.md,
+  },
+  secondaryButton: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.background,
+    borderColor: theme.colors.border,
+    borderRadius: theme.radius.pill,
+    borderWidth: 1,
+    justifyContent: 'center',
+    minWidth: 88,
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+  },
+  secondaryButtonText: {
+    color: theme.colors.text,
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  favoriteButton: {
+    alignItems: 'center',
+    backgroundColor: withAlpha(theme.colors.primary, 0.08),
+    borderColor: withAlpha(theme.colors.primary, 0.2),
+    borderRadius: theme.radius.pill,
+    borderWidth: 1,
+    justifyContent: 'center',
+    minWidth: 88,
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+  },
+  favoriteButtonSaved: {
+    backgroundColor: withAlpha(theme.colors.accent, 0.12),
+    borderColor: withAlpha(theme.colors.accent, 0.2),
+  },
+  favoriteButtonText: {
+    color: theme.colors.primary,
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  favoriteButtonTextSaved: {
+    color: theme.colors.accent,
+  },
+  buttonPressed: {
+    opacity: 0.85,
+  },
+  buttonDisabled: {
+    opacity: 0.55,
+  },
+  statusBadge: {
+    alignItems: 'center',
+    alignSelf: 'center',
+    borderRadius: theme.radius.pill,
+    borderWidth: 1,
+    flexDirection: 'row',
     marginBottom: theme.spacing.lg,
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+  },
+  statusDot: {
+    borderRadius: 4,
+    height: 8,
+    marginRight: 8,
+    width: 8,
+  },
+  statusText: {
+    fontSize: 12,
+    fontWeight: '600',
   },
   phrase: {
-    ...theme.typography.title,
-    fontSize: 30,
-    lineHeight: 36,
-    marginBottom: theme.spacing.lg,
+    color: theme.colors.text,
+    fontSize: 32,
+    fontWeight: '700',
+    lineHeight: 38,
+    marginBottom: theme.spacing.sm,
+    textAlign: 'center',
   },
-  section: {
-    backgroundColor: withAlpha(theme.colors.textPrimary, 0.03),
-    borderColor: withAlpha(theme.colors.textPrimary, 0.08),
+  translation: {
+    ...theme.typography.body,
+    color: theme.colors.mutedText,
+    marginBottom: theme.spacing.lg,
+    textAlign: 'center',
+  },
+  infoCard: {
+    backgroundColor: theme.colors.background,
+    borderColor: theme.colors.border,
     borderRadius: theme.radius.md,
     borderWidth: 1,
     marginBottom: theme.spacing.md,
     padding: theme.spacing.md,
   },
-  sectionLabel: {
-    ...theme.typography.badgeLabel,
-    color: theme.colors.primary,
+  infoLabel: {
+    color: theme.colors.mutedText,
+    fontSize: 12,
+    fontWeight: '600',
     marginBottom: theme.spacing.xs,
   },
-  sectionText: {
+  infoValue: {
     ...theme.typography.body,
-    color: theme.colors.textSecondary,
-  },
-  actionRow: {
-    flexDirection: 'row',
-    gap: theme.spacing.md,
-    marginTop: theme.spacing.sm,
-  },
-  actionCell: {
-    flex: 1,
-  },
-  supportBox: {
-    backgroundColor: withAlpha(theme.colors.textPrimary, 0.03),
-    borderColor: withAlpha(theme.colors.textPrimary, 0.08),
-    borderRadius: theme.radius.md,
-    borderWidth: 1,
-    marginTop: theme.spacing.md,
-    padding: theme.spacing.md,
+    color: theme.colors.text,
   },
   supportText: {
     ...theme.typography.caption,
-    color: theme.colors.textSecondary,
+    color: theme.colors.mutedText,
+    marginBottom: theme.spacing.md,
+    textAlign: 'center',
   },
-  feedbackBox: {
+  feedbackCard: {
     borderRadius: theme.radius.md,
     borderWidth: 1,
-    marginTop: theme.spacing.lg,
+    marginBottom: theme.spacing.md,
     padding: theme.spacing.md,
   },
-  feedbackHeader: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: theme.spacing.sm,
-  },
-  feedbackScore: {
-    ...theme.typography.caption,
-    color: theme.colors.textPrimary,
+  feedbackTitle: {
+    fontSize: 14,
+    fontWeight: '700',
+    marginBottom: theme.spacing.xs,
   },
   feedbackText: {
     ...theme.typography.body,
+    color: theme.colors.text,
   },
   heardText: {
     ...theme.typography.caption,
-    color: theme.colors.textSecondary,
+    color: theme.colors.mutedText,
     marginTop: theme.spacing.sm,
   },
   errorText: {
     ...theme.typography.caption,
     color: theme.colors.danger,
-    marginTop: theme.spacing.md,
+    marginBottom: theme.spacing.md,
+    textAlign: 'center',
+  },
+  actionRow: {
+    flexDirection: 'row',
+    gap: theme.spacing.md,
+  },
+  secondaryAction: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.background,
+    borderColor: theme.colors.border,
+    borderRadius: theme.radius.md,
+    borderWidth: 1,
+    flex: 1,
+    justifyContent: 'center',
+    paddingVertical: 12,
+  },
+  secondaryActionText: {
+    color: theme.colors.text,
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  primaryAction: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.primary,
+    borderColor: theme.colors.primary,
+    borderRadius: theme.radius.md,
+    borderWidth: 1,
+    flex: 1,
+    justifyContent: 'center',
+    paddingVertical: 12,
+  },
+  primaryActionText: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '600',
   },
 });
 

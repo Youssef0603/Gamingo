@@ -1,14 +1,22 @@
 import type { TextStyle, ViewStyle } from 'react-native';
 
+const palette = {
+  background: '#F7F8FC',
+  card: '#FFFFFF',
+  primary: '#5865F2',
+  accent: '#22C55E',
+  danger: '#EF4444',
+  text: '#111827',
+  mutedText: '#6B7280',
+  border: '#E5E7EB',
+} as const;
+
 const colors = {
-  background: '#0A0A0F',
-  surface: '#12121A',
-  primary: '#00F0FF',
-  secondary: '#9B5CFF',
-  accent: '#39FF14',
-  danger: '#FF3B3B',
-  textPrimary: '#FFFFFF',
-  textSecondary: '#A0A0B0',
+  ...palette,
+  surface: palette.card,
+  secondary: '#818CF8',
+  textPrimary: palette.text,
+  textSecondary: palette.mutedText,
 } as const;
 
 const spacing = {
@@ -21,78 +29,54 @@ const spacing = {
 } as const;
 
 const radius = {
-  sm: 8,
-  md: 12,
-  lg: 16,
+  sm: 10,
+  md: 14,
+  lg: 18,
   pill: 999,
 } as const;
 
-const createGlow = (
-  color: string,
-  opacity: number,
-  glowRadius: number,
-  elevation: number,
-): ViewStyle => ({
-  shadowColor: color,
-  shadowOffset: { width: 0, height: 0 },
-  shadowOpacity: opacity,
-  shadowRadius: glowRadius,
-  elevation,
-});
-
-const createSurfaceShadow = (): ViewStyle => ({
-  shadowColor: '#000000',
-  shadowOffset: { width: 0, height: 12 },
-  shadowOpacity: 0.3,
-  shadowRadius: 24,
-  elevation: 10,
+const createCardShadow = (): ViewStyle => ({
+  shadowColor: '#111827',
+  shadowOffset: { width: 0, height: 6 },
+  shadowOpacity: 0.06,
+  shadowRadius: 16,
+  elevation: 3,
 });
 
 const typography = {
   title: {
     fontSize: 28,
-    fontWeight: '900',
-    textTransform: 'uppercase',
-    letterSpacing: 2.2,
+    fontWeight: '700',
     color: colors.textPrimary,
   } as TextStyle,
   sectionTitle: {
     fontSize: 20,
-    fontWeight: '800',
-    textTransform: 'uppercase',
-    letterSpacing: 1.6,
+    fontWeight: '700',
     color: colors.textPrimary,
   } as TextStyle,
   cardTitle: {
     fontSize: 18,
-    fontWeight: '800',
-    textTransform: 'uppercase',
-    letterSpacing: 1.2,
+    fontWeight: '700',
     color: colors.textPrimary,
   } as TextStyle,
   buttonLabel: {
     fontSize: 15,
-    fontWeight: '800',
-    textTransform: 'uppercase',
-    letterSpacing: 1.4,
+    fontWeight: '600',
     color: colors.textPrimary,
   } as TextStyle,
   badgeLabel: {
-    fontSize: 11,
-    fontWeight: '800',
-    textTransform: 'uppercase',
-    letterSpacing: 1.1,
+    fontSize: 12,
+    fontWeight: '600',
     color: colors.textPrimary,
   } as TextStyle,
   body: {
-    fontSize: 16,
-    lineHeight: 24,
+    fontSize: 15,
+    lineHeight: 22,
     color: colors.textPrimary,
   } as TextStyle,
   caption: {
     fontSize: 13,
     lineHeight: 18,
-    letterSpacing: 0.6,
     color: colors.textSecondary,
   } as TextStyle,
 } as const;
@@ -120,11 +104,12 @@ export const theme = {
   spacing,
   radius,
   shadows: {
-    surface: createSurfaceShadow(),
-    glowPrimary: createGlow(colors.primary, 0.38, 18, 12),
-    glowSecondary: createGlow(colors.secondary, 0.34, 18, 12),
-    glowAccent: createGlow(colors.accent, 0.3, 16, 10),
-    glowDanger: createGlow(colors.danger, 0.32, 16, 10),
+    card: createCardShadow(),
+    surface: createCardShadow(),
+    glowPrimary: createCardShadow(),
+    glowSecondary: createCardShadow(),
+    glowAccent: createCardShadow(),
+    glowDanger: createCardShadow(),
   },
   typography,
 } as const;

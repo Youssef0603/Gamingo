@@ -8,10 +8,7 @@ import { theme } from './src/theme/theme';
 function App() {
   return (
     <SafeAreaProvider>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor={theme.colors.background}
-      />
+      <StatusBar barStyle="dark-content" backgroundColor={theme.colors.background} />
       <AppNavigator />
     </SafeAreaProvider>
   );
