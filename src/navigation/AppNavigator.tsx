@@ -6,6 +6,8 @@ import {
 } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import BottomSheet from '../components/BottomSheet';
+import { Icon } from '../components/ui';
 import { AppStateProvider } from '../context/AppStateContext';
 import { FavoritesScreen, PracticeScreen } from '../screens';
 import { theme } from '../theme/theme';
@@ -27,30 +29,80 @@ const navigationTheme = {
   },
 };
 
+const tabIcons = {
+  Favourites: {
+    active: 'heart',
+    inactive: 'heart-outline',
+  },
+  Practice: {
+    active: 'game-controller',
+    inactive: 'game-controller-outline',
+  },
+} as const satisfies Record<
+  keyof RootTabParamList,
+  {
+    active: React.ComponentProps<typeof Icon>['name'];
+    inactive: React.ComponentProps<typeof Icon>['name'];
+  }
+>;
+
+function getTabBarIcon(
+  routeName: keyof RootTabParamList,
+  color: string,
+  focused: boolean,
+  size: number,
+) {
+  const icon = tabIcons[routeName];
+
+  return (
+    <Icon
+      color={color}
+      name={focused ? icon.active : icon.inactive}
+      size={size}
+    />
+  );
+}
+
+function getScreenOptions({
+  route,
+}: {
+  route: { name: keyof RootTabParamList };
+}) {
+  return {
+    headerShown: false,
+    sceneStyle: styles.scene,
+    tabBarActiveTintColor: theme.colors.primary,
+    tabBarIcon: ({
+      color,
+      focused,
+      size,
+    }: {
+      color: string;
+      focused: boolean;
+      size: number;
+    }) => getTabBarIcon(route.name, color, focused, size),
+    tabBarInactiveTintColor: theme.colors.mutedText,
+    tabBarItemStyle: styles.tabBarItem,
+    tabBarLabelStyle: styles.tabBarLabel,
+    tabBarStyle: styles.tabBar,
+  };
+}
+
 function AppNavigator() {
   return (
     <AppStateProvider>
-      <NavigationContainer theme={navigationTheme}>
-        <Tab.Navigator
-          initialRouteName="Practice"
-          screenOptions={{
-            animation: 'fade',
-            headerShown: false,
-            sceneStyle: styles.scene,
-            tabBarActiveTintColor: theme.colors.primary,
-            tabBarInactiveTintColor: theme.colors.mutedText,
-            tabBarItemStyle: styles.tabBarItem,
-            tabBarLabelStyle: styles.tabBarLabel,
-            tabBarStyle: styles.tabBar,
-          }}
-        >
-          <Tab.Screen component={PracticeScreen} name="Practice" />
-          <Tab.Screen
-            component={FavoritesScreen}
-            name="Favourites"
-          />
-        </Tab.Navigator>
-      </NavigationContainer>
+      <>
+        <NavigationContainer theme={navigationTheme}>
+          <Tab.Navigator
+            initialRouteName="Practice"
+            screenOptions={getScreenOptions}
+          >
+            <Tab.Screen component={PracticeScreen} name="Practice" />
+            <Tab.Screen component={FavoritesScreen} name="Favourites" />
+          </Tab.Navigator>
+        </NavigationContainer>
+        <BottomSheet />
+      </>
     </AppStateProvider>
   );
 }

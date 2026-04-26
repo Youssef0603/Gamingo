@@ -1,37 +1,6 @@
-import { AccessibilityInfo, NativeModules } from 'react-native';
+import Tts from 'react-native-tts';
 
-import type {
-  TextToSpeechAdapter,
-  TextToSpeechRequest,
-} from './textToSpeech';
-
-type ExpoSpeechModule = {
-  speak: (
-    text: string,
-    options?: {
-      language?: string;
-      onDone?: () => void;
-      onError?: () => void;
-      onStopped?: () => void;
-    },
-  ) => void;
-  stop: () => Promise<void> | void;
-};
-
-function getExpoSpeechModule(): ExpoSpeechModule | null {
-  const moduleCandidate = (NativeModules as { ExpoSpeech?: ExpoSpeechModule })
-    .ExpoSpeech;
-
-  if (
-    !moduleCandidate ||
-    typeof moduleCandidate.speak !== 'function' ||
-    typeof moduleCandidate.stop !== 'function'
-  ) {
-    return null;
-  }
-
-  return moduleCandidate;
-}
+import type { TextToSpeechAdapter, TextToSpeechRequest } from './textToSpeech';
 
 export function createPlatformTextToSpeechAdapter(): TextToSpeechAdapter {
   return {
@@ -39,25 +8,16 @@ export function createPlatformTextToSpeechAdapter(): TextToSpeechAdapter {
       return true;
     },
     async speak({ language, text }: TextToSpeechRequest) {
-      const expoSpeech = getExpoSpeechModule();
-
-      if (expoSpeech) {
-        await new Promise<void>(resolve => {
-          expoSpeech.speak(text, {
-            language,
-            onDone: () => resolve(),
-            onError: () => resolve(),
-            onStopped: () => resolve(),
-          });
-        });
-
-        return;
+      if (language) {
+        try {
+          await Tts.setDefaultLanguage(language);
+        } catch {
+          // Fall back to the system default voice when the requested locale is unavailable.
+        }
       }
 
-      AccessibilityInfo.announceForAccessibility(text);
+      Tts.speak(text);
     },
-    async stop() {
-      await getExpoSpeechModule()?.stop?.();
-    },
+    async stop() {},
   };
 }

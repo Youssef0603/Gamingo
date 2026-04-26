@@ -17,6 +17,11 @@ export const practiceLocaleMap: Record<LanguageCode, string> = {
   es: 'es-ES',
   de: 'de-DE',
   ar: 'ar-SA',
+  it: 'it-IT',
+  pt: 'pt-BR',
+  hi: 'hi-IN',
+  nl: 'nl-NL',
+  pl: 'pl-PL',
   tr: 'tr-TR',
   ru: 'ru-RU',
   ja: 'ja-JP',
@@ -52,7 +57,10 @@ function levenshteinDistance(source: string, target: string) {
     return source.length;
   }
 
-  const previous = Array.from({ length: target.length + 1 }, (_, index) => index);
+  const previous = Array.from(
+    { length: target.length + 1 },
+    (_, index) => index,
+  );
   const current = new Array<number>(target.length + 1).fill(0);
 
   for (let sourceIndex = 1; sourceIndex <= source.length; sourceIndex += 1) {
@@ -99,7 +107,10 @@ function tokenSimilarityScore(expected: string, spoken: string) {
   return overlap / expectedSet.size;
 }
 
-export function calculatePracticeSimilarity(expectedText: string, spokenText: string) {
+export function calculatePracticeSimilarity(
+  expectedText: string,
+  spokenText: string,
+) {
   const normalizedExpected = normalizePracticeText(expectedText);
   const normalizedSpoken = normalizePracticeText(spokenText);
 
@@ -107,9 +118,13 @@ export function calculatePracticeSimilarity(expectedText: string, spokenText: st
     return 0;
   }
 
-  const editDistance = levenshteinDistance(normalizedExpected, normalizedSpoken);
+  const editDistance = levenshteinDistance(
+    normalizedExpected,
+    normalizedSpoken,
+  );
   const charSimilarity =
-    1 - editDistance / Math.max(normalizedExpected.length, normalizedSpoken.length);
+    1 -
+    editDistance / Math.max(normalizedExpected.length, normalizedSpoken.length);
   const tokenSimilarity = tokenSimilarityScore(
     normalizedExpected,
     normalizedSpoken,

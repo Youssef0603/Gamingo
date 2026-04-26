@@ -28,8 +28,8 @@ function PracticeModal({
     return null;
   }
 
-  const translation = phrase.translations[language];
   const english = phrase.translations.en;
+  const translation = phrase.translations[language] ?? english;
 
   return (
     <Modal
@@ -49,7 +49,6 @@ function PracticeModal({
             onClose={onClose}
             onToggleFavorite={onToggleFavorite}
             phrase={translation.text}
-            pronunciation={translation.pronunciation}
           />
         </View>
       </View>

@@ -1,21 +1,20 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
-  FlatList,
   Pressable,
+  FlatList,
   ScrollView,
   StyleSheet,
   Text,
   View,
 } from 'react-native';
-
 import PhraseCard from '../components/PhraseCard';
-import Screen from '../components/ui/Screen';
+import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
 import { categoryMetadata } from '../data/categories';
 import { phrases } from '../data/phrases';
 import PracticeModal from '../features/practice/PracticeModal';
 import { theme, withAlpha } from '../theme/theme';
-import { languageLabels, supportedLanguageCodes } from '../types/language';
+import { languageMetadata } from '../types/language';
 
 import type { PhraseCategory } from '../types/phrase';
 
@@ -50,13 +49,10 @@ function FilterChip({ label, selected, onPress }: FilterChipProps) {
 }
 
 function PracticeScreen() {
-  const {
-    favoriteIds,
-    selectedLanguage,
-    setSelectedLanguage,
-    toggleFavorite,
-  } = useAppState();
-  const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>('all');
+  const { favoriteIds, openLanguagePicker, selectedLanguage, toggleFavorite } =
+    useAppState();
+  const [selectedCategory, setSelectedCategory] =
+    useState<CategoryFilter>('all');
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
 
   const filteredPhrases = useMemo(
@@ -81,8 +77,10 @@ function PracticeScreen() {
     }
   }, [activePhrase, selectedCategory]);
 
+  const selectedLanguageOption = languageMetadata[selectedLanguage];
+
   return (
-    <Screen padded={false}>
+    <Screen padded={false} edges={['top']}>
       <FlatList
         contentContainerStyle={styles.content}
         data={filteredPhrases}
@@ -97,25 +95,40 @@ function PracticeScreen() {
           <View style={styles.header}>
             <View style={styles.heading}>
               <Text style={styles.title}>Practice</Text>
-              <Text style={styles.subtitle}>Pick a language and a category.</Text>
+              <Text style={styles.subtitle}>
+                Pick a language and a category.
+              </Text>
             </View>
 
             <View style={styles.filterBlock}>
               <Text style={styles.filterLabel}>Language</Text>
-              <ScrollView
-                contentContainerStyle={styles.chipRow}
-                horizontal
-                showsHorizontalScrollIndicator={false}
+              <Pressable
+                onPress={openLanguagePicker}
+                style={({ pressed }) => [
+                  styles.languageTrigger,
+                  pressed && styles.languageTriggerPressed,
+                ]}
               >
-                {supportedLanguageCodes.map(language => (
-                  <FilterChip
-                    key={language}
-                    label={languageLabels[language]}
-                    onPress={() => setSelectedLanguage(language)}
-                    selected={language === selectedLanguage}
-                  />
-                ))}
-              </ScrollView>
+                <View style={styles.languageTriggerCopy}>
+                  <Text style={styles.languageFlag}>
+                    {selectedLanguageOption.flag}
+                  </Text>
+                  <View>
+                    <Text style={styles.languageTriggerLabel}>
+                      Selected language
+                    </Text>
+                    <Text style={styles.languageTriggerValue}>
+                      {selectedLanguageOption.label}
+                    </Text>
+                  </View>
+                </View>
+
+                <Icon
+                  color={theme.colors.mutedText}
+                  name="chevron-down"
+                  size={18}
+                />
+              </Pressable>
             </View>
 
             <View style={styles.filterBlock}>
@@ -141,7 +154,9 @@ function PracticeScreen() {
             </View>
 
             <View style={styles.countBadge}>
-              <Text style={styles.countText}>{filteredPhrases.length} phrases</Text>
+              <Text style={styles.countText}>
+                {filteredPhrases.length} phrases
+              </Text>
             </View>
           </View>
         }
@@ -158,7 +173,9 @@ function PracticeScreen() {
       />
 
       <PracticeModal
-        isFavorite={activePhrase ? favoriteIds.includes(activePhrase.id) : false}
+        isFavorite={
+          activePhrase ? favoriteIds.includes(activePhrase.id) : false
+        }
         language={selectedLanguage}
         onClose={() => setActivePhraseId(null)}
         onToggleFavorite={() => {
@@ -201,6 +218,39 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     marginBottom: theme.spacing.sm,
+  },
+  languageFlag: {
+    fontSize: 24,
+  },
+  languageTrigger: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.card,
+    borderColor: theme.colors.border,
+    borderRadius: theme.radius.md,
+    borderWidth: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: theme.spacing.md,
+    paddingVertical: 12,
+  },
+  languageTriggerCopy: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    gap: theme.spacing.sm,
+  },
+  languageTriggerLabel: {
+    color: theme.colors.mutedText,
+    fontSize: 12,
+    fontWeight: '500',
+    marginBottom: 2,
+  },
+  languageTriggerPressed: {
+    opacity: 0.9,
+  },
+  languageTriggerValue: {
+    color: theme.colors.text,
+    fontSize: 15,
+    fontWeight: '700',
   },
   chipRow: {
     gap: theme.spacing.sm,

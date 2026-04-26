@@ -7,11 +7,12 @@ import { useAppState } from '../context/AppStateContext';
 import { phrases } from '../data/phrases';
 import PracticeModal from '../features/practice/PracticeModal';
 import { theme, withAlpha } from '../theme/theme';
-import { languageLabels } from '../types/language';
+import { languageMetadata } from '../types/language';
 
 function FavoritesScreen() {
   const { favoriteIds, selectedLanguage, toggleFavorite } = useAppState();
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
+  const selectedLanguageOption = languageMetadata[selectedLanguage];
 
   const savedPhrases = useMemo(
     () => phrases.filter(item => favoriteIds.includes(item.id)),
@@ -49,7 +50,7 @@ function FavoritesScreen() {
 
             <View style={styles.languageBadge}>
               <Text style={styles.languageText}>
-                {languageLabels[selectedLanguage]}
+                {selectedLanguageOption.flag} {selectedLanguageOption.label}
               </Text>
             </View>
           </View>
@@ -67,7 +68,9 @@ function FavoritesScreen() {
       />
 
       <PracticeModal
-        isFavorite={activePhrase ? favoriteIds.includes(activePhrase.id) : false}
+        isFavorite={
+          activePhrase ? favoriteIds.includes(activePhrase.id) : false
+        }
         language={selectedLanguage}
         onClose={() => setActivePhraseId(null)}
         onToggleFavorite={() => {

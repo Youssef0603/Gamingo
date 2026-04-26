@@ -21,7 +21,9 @@ export interface PhraseTranslation {
 export interface Phrase {
   id: string;
   category: PhraseCategory;
-  translations: Record<LanguageCode, PhraseTranslation>;
+  translations: {
+    en: PhraseTranslation;
+  } & Partial<Record<LanguageCode, PhraseTranslation>>;
   tags?: string[];
   isToxic?: boolean;
   saferAlternative?: string;

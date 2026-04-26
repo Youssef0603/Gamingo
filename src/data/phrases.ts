@@ -12,8 +12,10 @@ const t = (
 });
 
 const tx = (
-  translations: Record<LanguageCode, PhraseTranslation>,
-): Record<LanguageCode, PhraseTranslation> => translations;
+  translations: {
+    en: PhraseTranslation;
+  } & Partial<Record<LanguageCode, PhraseTranslation>>,
+) => translations;
 
 export const phrases: Phrase[] = [
   {
@@ -67,10 +69,7 @@ export const phrases: Phrase[] = [
         'Francotirador en top mid.',
         'Un francotirador vigila medio desde arriba.',
       ),
-      de: t(
-        'Sniper oben Mitte.',
-        'Ein Sniper haelt die Mitte von oben.',
-      ),
+      de: t('Sniper oben Mitte.', 'Ein Sniper haelt die Mitte von oben.'),
       ar: t('قناص فوق الميد.', 'هناك قناص يراقب الميد من مكان مرتفع.'),
       tr: t(
         'Mid ustunde sniper var.',
@@ -84,10 +83,7 @@ export const phrases: Phrase[] = [
         'ミッド上にスナイパー。',
         '高所からミッドを見ているスナイパーがいる。',
       ),
-      ko: t(
-        '탑 미드에 스나이퍼.',
-        '고지대에서 미드를 보는 저격수가 있다.',
-      ),
+      ko: t('탑 미드에 스나이퍼.', '고지대에서 미드를 보는 저격수가 있다.'),
       zh: t('中路高点有狙。', '有狙击手在高点盯着中路。'),
     }),
   },
@@ -96,15 +92,15 @@ export const phrases: Phrase[] = [
     category: 'callouts',
     tags: ['damage-info', 'cleanup', 'urgency'],
     translations: tx({
-      en: t('One HP!', 'The enemy is extremely weak and can be finished quickly.'),
+      en: t(
+        'One HP!',
+        'The enemy is extremely weak and can be finished quickly.',
+      ),
       fr: t(
         'Il est a un HP !',
         'L ennemi est tres faible et peut etre termine vite.',
       ),
-      es: t(
-        'Esta a un HP!',
-        'El enemigo esta muy debil y cae con poco dano.',
-      ),
+      es: t('Esta a un HP!', 'El enemigo esta muy debil y cae con poco dano.'),
       de: t('Ein HP!', 'Der Gegner ist extrem schwach und schnell erledigt.'),
       ar: t('عدو دمّه واحد!', 'العدو ضعيف جدا ويمكن التخلص منه بسرعة.'),
       tr: t('Tek can!', 'Dusman cok zayif, hemen dusurulebilir.'),
@@ -120,10 +116,7 @@ export const phrases: Phrase[] = [
     tags: ['site-control', 'entry', 'objective'],
     translations: tx({
       en: t('Site clear.', 'The objective site looks safe to enter or plant.'),
-      fr: t(
-        'Site clean.',
-        'Le site semble assez sur pour entrer ou poser.',
-      ),
+      fr: t('Site clean.', 'Le site semble assez sur pour entrer ou poser.'),
       es: t(
         'Sitio limpio.',
         'La zona del objetivo parece segura para entrar o plantar.',
@@ -133,19 +126,13 @@ export const phrases: Phrase[] = [
         'Der Bereich wirkt sicher zum Betreten oder Pflanzen.',
       ),
       ar: t('السايت فاضي.', 'موقع الهدف يبدو آمنا للدخول او الزرع.'),
-      tr: t(
-        'Site temiz.',
-        'Bolge girip kurmak icin guvenli gorunuyor.',
-      ),
+      tr: t('Site temiz.', 'Bolge girip kurmak icin guvenli gorunuyor.'),
       ru: t(
         'Плент чист.',
         'Площадка выглядит безопасной для входа или установки.',
       ),
       ja: t('サイトクリア。', 'サイトは入るか設置するのに安全そうだ。'),
-      ko: t(
-        '사이트 클리어.',
-        '사이트가 진입하거나 설치하기에 안전해 보인다.',
-      ),
+      ko: t('사이트 클리어.', '사이트가 진입하거나 설치하기에 안전해 보인다.'),
       zh: t('点里干净。', '目标点看起来可以安全进入或下包。'),
     }),
   },
@@ -170,23 +157,14 @@ export const phrases: Phrase[] = [
         'Jetzt pushen!',
         'Startet den Execute sofort, bevor der Gegner sich neu stellt.',
       ),
-      ar: t(
-        'ادفعوا الآن!',
-        'ابدؤوا الهجمة فورا قبل ان يعيد العدو تمركزه.',
-      ),
-      tr: t(
-        'Simdi itin!',
-        'Rakip yeniden duzen almadan hucumu baslatin.',
-      ),
+      ar: t('ادفعوا الآن!', 'ابدؤوا الهجمة فورا قبل ان يعيد العدو تمركزه.'),
+      tr: t('Simdi itin!', 'Rakip yeniden duzen almadan hucumu baslatin.'),
       ru: t(
         'Пушим сейчас!',
         'Начинайте врыв сразу, пока враг не перестроился.',
       ),
       ja: t('今プッシュ!', '敵が立て直す前にすぐ仕掛ける。'),
-      ko: t(
-        '지금 밀어!',
-        '상대가 다시 정비하기 전에 바로 들어가자.',
-      ),
+      ko: t('지금 밀어!', '상대가 다시 정비하기 전에 바로 들어가자.'),
       zh: t('现在压!', '趁敌人还没重新站好位立刻开打。'),
     }),
   },
@@ -203,31 +181,16 @@ export const phrases: Phrase[] = [
         'Tenez l angle.',
         'Gardez le viseur sur une ligne et attendez le peek.',
       ),
-      es: t(
-        'Mantengan angulo.',
-        'Dejen la mira fija y esperen a que asomen.',
-      ),
+      es: t('Mantengan angulo.', 'Dejen la mira fija y esperen a que asomen.'),
       de: t(
         'Winkel halten.',
         'Behalte eine Linie im Fadenkreuz und warte auf den Peek.',
       ),
-      ar: t(
-        'امسك الزاوية.',
-        'ثبت التصويب على خط واحد وانتظر خروج الخصم.',
-      ),
-      tr: t(
-        'Acini tut.',
-        'Nisangahi tek bir hatta tut ve cikisi bekle.',
-      ),
-      ru: t(
-        'Держи угол.',
-        'Держи прицел на линии и жди выхода соперника.',
-      ),
+      ar: t('امسك الزاوية.', 'ثبت التصويب على خط واحد وانتظر خروج الخصم.'),
+      tr: t('Acini tut.', 'Nisangahi tek bir hatta tut ve cikisi bekle.'),
+      ru: t('Держи угол.', 'Держи прицел на линии и жди выхода соперника.'),
       ja: t('角を保持。', '一つの射線に照準を置いてピークを待つ。'),
-      ko: t(
-        '각 보고 있어.',
-        '한 각도에 에임을 두고 피킹을 기다려라.',
-      ),
+      ko: t('각 보고 있어.', '한 각도에 에임을 두고 피킹을 기다려라.'),
       zh: t('架住这个角。', '准星卡住这条线，等对面探头。'),
     }),
   },
@@ -241,28 +204,13 @@ export const phrases: Phrase[] = [
         'Rotate B.',
         'Deplacez les joueurs et les utilitaires vers le site B.',
       ),
-      es: t(
-        'Rota a B.',
-        'Muevan jugadores y utilidad hacia el sitio B.',
-      ),
-      de: t(
-        'Rotate B.',
-        'Verlagert Spieler und Utility zur B Site.',
-      ),
+      es: t('Rota a B.', 'Muevan jugadores y utilidad hacia el sitio B.'),
+      de: t('Rotate B.', 'Verlagert Spieler und Utility zur B Site.'),
       ar: t('لفوا على B.', 'حولوا اللاعبين والادوات نحو موقع B.'),
-      tr: t(
-        "B'ye don.",
-        'Oyunculari ve yetenekleri B tarafina kaydirin.',
-      ),
-      ru: t(
-        'Ротация на B.',
-        'Сместите игроков и ресурсы на точку B.',
-      ),
+      tr: t("B'ye don.", 'Oyunculari ve yetenekleri B tarafina kaydirin.'),
+      ru: t('Ротация на B.', 'Сместите игроков и ресурсы на точку B.'),
       ja: t('Bにローテート。', '人数とスキルをBサイトに寄せる。'),
-      ko: t(
-        'B로 로테이트.',
-        '인원과 스킬을 B 사이트 쪽으로 돌린다.',
-      ),
+      ko: t('B로 로테이트.', '인원과 스킬을 B 사이트 쪽으로 돌린다.'),
       zh: t('转B点。', '把人和技能往B点转过去。'),
     }),
   },
@@ -299,18 +247,9 @@ export const phrases: Phrase[] = [
         'Играем медленно.',
         'Берите контроль карты терпеливо и не форсите ранние драки.',
       ),
-      ja: t(
-        'ゆっくり行こう。',
-        '無理に早い戦闘をせず、丁寧にマップを取る。',
-      ),
-      ko: t(
-        '천천히 하자.',
-        '초반 교전을 억지로 열지 말고 차분히 맵을 먹자.',
-      ),
-      zh: t(
-        '慢打。',
-        '耐心拿地图控制，不要强行打前期架。',
-      ),
+      ja: t('ゆっくり行こう。', '無理に早い戦闘をせず、丁寧にマップを取る。'),
+      ko: t('천천히 하자.', '초반 교전을 억지로 열지 말고 차분히 맵을 먹자.'),
+      zh: t('慢打。', '耐心拿地图控制，不要强行打前期架。'),
     }),
   },
   {
@@ -318,14 +257,8 @@ export const phrases: Phrase[] = [
     category: 'strategy',
     tags: ['teamplay', 'spacing', 'entry'],
     translations: tx({
-      en: t(
-        'Trade me.',
-        'Stay close enough to punish anyone who kills me.',
-      ),
-      fr: t(
-        'Trade moi.',
-        'Reste assez proche pour punir celui qui me tue.',
-      ),
+      en: t('Trade me.', 'Stay close enough to punish anyone who kills me.'),
+      fr: t('Trade moi.', 'Reste assez proche pour punir celui qui me tue.'),
       es: t(
         'Tradeame.',
         'Quedate lo bastante cerca para matar al que me mate.',
@@ -343,14 +276,8 @@ export const phrases: Phrase[] = [
         'Размени меня.',
         'Будь рядом, чтобы сразу убить того, кто убьет меня.',
       ),
-      ja: t(
-        'トレードして。',
-        '自分が倒されたらすぐ取り返せる距離にいて。',
-      ),
-      ko: t(
-        '트레이드 봐줘.',
-        '내가 죽으면 바로 받아칠 수 있게 붙어 있어.',
-      ),
+      ja: t('トレードして。', '自分が倒されたらすぐ取り返せる距離にいて。'),
+      ko: t('트레이드 봐줘.', '내가 죽으면 바로 받아칠 수 있게 붙어 있어.'),
       zh: t('帮我补枪。', '跟近一点，我死了就立刻补掉他。'),
     }),
   },
@@ -386,14 +313,8 @@ export const phrases: Phrase[] = [
         'Хватит фидить.',
         'Игрок злится и требует перестать умирать без пользы.',
       ),
-      ja: t(
-        'フィードするな。',
-        '怒った味方が無駄死にをやめろと言っている。',
-      ),
-      ko: t(
-        '피딩 좀 그만해.',
-        '화난 팀원이 괜히 죽지 말라고 몰아붙이고 있다.',
-      ),
+      ja: t('フィードするな。', '怒った味方が無駄死にをやめろと言っている。'),
+      ko: t('피딩 좀 그만해.', '화난 팀원이 괜히 죽지 말라고 몰아붙이고 있다.'),
       zh: t('别再送了。', '说话的人正生气地让队友别再白给。'),
     }),
   },
@@ -404,11 +325,11 @@ export const phrases: Phrase[] = [
     isToxic: true,
     saferAlternative: "Let's focus on crosshair placement and spacing.",
     translations: tx({
-      en: t('Learn to aim.', 'The speaker is insulting a teammate s mechanics.'),
-      fr: t(
-        'Apprends a viser.',
-        'Le joueur insulte la visee d un coequipier.',
+      en: t(
+        'Learn to aim.',
+        'The speaker is insulting a teammate s mechanics.',
       ),
+      fr: t('Apprends a viser.', 'Le joueur insulte la visee d un coequipier.'),
       es: t(
         'Aprende a apuntar.',
         'El jugador esta insultando la punteria de un companero.',
@@ -422,18 +343,9 @@ export const phrases: Phrase[] = [
         'Aim ogren.',
         'Konusan kisi takim arkadasinin nisanciligina hakaret ediyor.',
       ),
-      ru: t(
-        'Научись стрелять.',
-        'Игрок оскорбляет стрельбу своего тиммейта.',
-      ),
-      ja: t(
-        'エイム練習して。',
-        '味方のエイムをばかにしている言い方だ。',
-      ),
-      ko: t(
-        '에임부터 배워.',
-        '팀원의 에임 실력을 비꼬며 모욕하는 말이다.',
-      ),
+      ru: t('Научись стрелять.', 'Игрок оскорбляет стрельбу своего тиммейта.'),
+      ja: t('エイム練習して。', '味方のエイムをばかにしている言い方だ。'),
+      ko: t('에임부터 배워.', '팀원의 에임 실력을 비꼬며 모욕하는 말이다.'),
       zh: t('先学会瞄准吧。', '这是在羞辱队友的枪法。'),
     }),
   },
@@ -465,14 +377,8 @@ export const phrases: Phrase[] = [
         'Ne yapiyorsun?',
         'Konusan kisi karisik bir oyun yuzunden takim arkadasini sucluyor.',
       ),
-      ru: t(
-        'Что ты делаешь?',
-        'Игрок обвиняет тиммейта за непонятный мув.',
-      ),
-      ja: t(
-        '何してるの?',
-        '味方の判断を責める言い方になっている。',
-      ),
+      ru: t('Что ты делаешь?', 'Игрок обвиняет тиммейта за непонятный мув.'),
+      ja: t('何してるの?', '味方の判断を責める言い方になっている。'),
       ko: t(
         '뭐 하는 거야?',
         '이해하기 어려운 플레이를 했다고 팀원을 탓하는 말이다.',
@@ -512,14 +418,8 @@ export const phrases: Phrase[] = [
         'Ты троллишь.',
         'Игрок обвиняет тиммейта в намеренном сливе раунда.',
       ),
-      ja: t(
-        'トロールしてるだろ。',
-        'わざとラウンドを壊していると責めている。',
-      ),
-      ko: t(
-        '트롤하냐?',
-        '일부러 판을 던진다고 몰아가는 표현이다.',
-      ),
+      ja: t('トロールしてるだろ。', 'わざとラウンドを壊していると責めている。'),
+      ko: t('트롤하냐?', '일부러 판을 던진다고 몰아가는 표현이다.'),
       zh: t('你在演吧。', '这是在指责队友故意送掉这一回合。'),
     }),
   },
@@ -551,15 +451,9 @@ export const phrases: Phrase[] = [
         'Sus.',
         'Konusan kisi sessizlik istiyor ama bunu sert sekilde soyluyor.',
       ),
-      ru: t(
-        'Заткнись.',
-        'Игрок хочет тишины, но говорит это грубо.',
-      ),
+      ru: t('Заткнись.', 'Игрок хочет тишины, но говорит это грубо.'),
       ja: t('黙って。', '静かにしてほしいが、言い方がきつい。'),
-      ko: t(
-        '닥쳐.',
-        '조용하길 원하지만 매우 공격적으로 말하고 있다.',
-      ),
+      ko: t('닥쳐.', '조용하길 원하지만 매우 공격적으로 말하고 있다.'),
       zh: t('闭嘴。', '说话的人想要安静，但表达方式很有攻击性。'),
     }),
   },

@@ -22,12 +22,15 @@ function PhraseCard({
   onPress,
   onToggleFavorite,
 }: PhraseCardProps) {
-  const translation = item.translations[language];
   const english = item.translations.en;
+  const translation = item.translations[language] ?? english;
   const category = categoryMetadata[item.category];
 
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}>
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}
+    >
       <View style={styles.topRow}>
         <View style={styles.textWrap}>
           <Text style={styles.phrase}>{translation.text}</Text>
@@ -46,10 +49,7 @@ function PhraseCard({
           ]}
         >
           <Text
-            style={[
-              styles.favoriteText,
-              isFavorite && styles.favoriteTextOn,
-            ]}
+            style={[styles.favoriteText, isFavorite && styles.favoriteTextOn]}
           >
             {isFavorite ? 'Saved' : 'Save'}
           </Text>
