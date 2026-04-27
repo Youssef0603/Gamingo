@@ -49,8 +49,13 @@ function FilterChip({ label, selected, onPress }: FilterChipProps) {
 }
 
 function PracticeScreen() {
-  const { favoriteIds, openLanguagePicker, selectedLanguage, toggleFavorite } =
-    useAppState();
+  const {
+    favoriteIds,
+    nativeLanguage,
+    openLanguagePicker,
+    selectedLanguage,
+    toggleFavorite,
+  } = useAppState();
   const [selectedCategory, setSelectedCategory] =
     useState<CategoryFilter>('all');
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
@@ -77,6 +82,7 @@ function PracticeScreen() {
     }
   }, [activePhrase, selectedCategory]);
 
+  const nativeLanguageOption = languageMetadata[nativeLanguage];
   const selectedLanguageOption = languageMetadata[selectedLanguage];
 
   return (
@@ -101,34 +107,72 @@ function PracticeScreen() {
             </View>
 
             <View style={styles.filterBlock}>
-              <Text style={styles.filterLabel}>Language</Text>
-              <Pressable
-                onPress={openLanguagePicker}
-                style={({ pressed }) => [
-                  styles.languageTrigger,
-                  pressed && styles.languageTriggerPressed,
-                ]}
-              >
-                <View style={styles.languageTriggerCopy}>
-                  <Text style={styles.languageFlag}>
-                    {selectedLanguageOption.flag}
-                  </Text>
-                  <View>
-                    <Text style={styles.languageTriggerLabel}>
-                      Selected language
+              <Text style={styles.filterLabel}>Languages</Text>
+              <View style={styles.languageRow}>
+                <Pressable
+                  onPress={() => openLanguagePicker('native')}
+                  style={({ pressed }) => [
+                    styles.languageTrigger,
+                    styles.languageTriggerHalf,
+                    pressed && styles.languageTriggerPressed,
+                  ]}
+                >
+                  <View style={styles.languageTriggerCopy}>
+                    <Text style={styles.languageFlag}>
+                      {nativeLanguageOption.flag}
                     </Text>
-                    <Text style={styles.languageTriggerValue}>
-                      {selectedLanguageOption.label}
-                    </Text>
+                    <View style={styles.languageTextWrap}>
+                      <Text style={styles.languageTriggerLabel}>
+                        Native Language
+                      </Text>
+                      <Text
+                        numberOfLines={1}
+                        style={styles.languageTriggerValue}
+                      >
+                        {nativeLanguageOption.label}
+                      </Text>
+                    </View>
                   </View>
-                </View>
 
-                <Icon
-                  color={theme.colors.mutedText}
-                  name="chevron-down"
-                  size={18}
-                />
-              </Pressable>
+                  <Icon
+                    color={theme.colors.mutedText}
+                    name="chevron-down"
+                    size={18}
+                  />
+                </Pressable>
+
+                <Pressable
+                  onPress={() => openLanguagePicker('learning')}
+                  style={({ pressed }) => [
+                    styles.languageTrigger,
+                    styles.languageTriggerHalf,
+                    pressed && styles.languageTriggerPressed,
+                  ]}
+                >
+                  <View style={styles.languageTriggerCopy}>
+                    <Text style={styles.languageFlag}>
+                      {selectedLanguageOption.flag}
+                    </Text>
+                    <View style={styles.languageTextWrap}>
+                      <Text style={styles.languageTriggerLabel}>
+                        Learning Language
+                      </Text>
+                      <Text
+                        numberOfLines={1}
+                        style={styles.languageTriggerValue}
+                      >
+                        {selectedLanguageOption.label}
+                      </Text>
+                    </View>
+                  </View>
+
+                  <Icon
+                    color={theme.colors.mutedText}
+                    name="chevron-down"
+                    size={18}
+                  />
+                </Pressable>
+              </View>
             </View>
 
             <View style={styles.filterBlock}>
@@ -222,6 +266,10 @@ const styles = StyleSheet.create({
   languageFlag: {
     fontSize: 24,
   },
+  languageRow: {
+    flexDirection: 'row',
+    gap: theme.spacing.sm,
+  },
   languageTrigger: {
     alignItems: 'center',
     backgroundColor: theme.colors.card,
@@ -235,8 +283,12 @@ const styles = StyleSheet.create({
   },
   languageTriggerCopy: {
     alignItems: 'center',
+    flex: 1,
     flexDirection: 'row',
     gap: theme.spacing.sm,
+  },
+  languageTriggerHalf: {
+    flex: 1,
   },
   languageTriggerLabel: {
     color: theme.colors.mutedText,
@@ -251,6 +303,9 @@ const styles = StyleSheet.create({
     color: theme.colors.text,
     fontSize: 15,
     fontWeight: '700',
+  },
+  languageTextWrap: {
+    flex: 1,
   },
   chipRow: {
     gap: theme.spacing.sm,

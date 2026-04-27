@@ -17,7 +17,9 @@ function BottomSheet() {
   const {
     bottomSheetContent,
     closeBottomSheet,
+    nativeLanguage,
     selectedLanguage,
+    setNativeLanguage,
     setSelectedLanguage,
   } = useAppState();
 
@@ -66,7 +68,9 @@ function BottomSheet() {
       snapPoints={[1]}
     >
       {bottomSheetContentSwitcher(bottomSheetContent, {
+        nativeLanguage,
         selectedLanguage,
+        setNativeLanguage,
         setSelectedLanguage,
       })}
     </BottomSheetModal>

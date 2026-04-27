@@ -18,12 +18,16 @@ import { languageMetadata, supportedLanguageCodes } from '../types/language';
 import type { LanguageCode } from '../types/language';
 
 type LanguagePickerSheetProps = {
+  subtitle: string;
   selectedLanguage: LanguageCode;
+  title: string;
   onSelect: (language: LanguageCode) => void;
 };
 
 function LanguagePickerSheet({
+  subtitle,
   selectedLanguage,
+  title,
   onSelect,
 }: LanguagePickerSheetProps) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -51,10 +55,8 @@ function LanguagePickerSheet({
   return (
     <BottomSheetView style={[styles.container, { height: contentHeight }]}>
       <View style={styles.header}>
-        <Text style={styles.title}>Choose language</Text>
-        <Text style={styles.subtitle}>
-          Pick the language you want to practice right now.
-        </Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.subtitle}>{subtitle}</Text>
       </View>
 
       <View style={styles.searchBar}>
