@@ -94,7 +94,7 @@ export function createPlatformSpeechRecognitionAdapter(): SpeechRecognitionAdapt
     async requestPermission(): Promise<SpeechRecognitionPermissionStatus> {
       return Recognition ? 'granted' : 'unavailable';
     },
-    async start({ emitError, emitResult, emitStateChange, language }) {
+    async start({ emitError, emitResult, emitStateChange, startOptions }) {
       if (!Recognition) {
         throw new SpeechRecognitionError(
           'unavailable',
@@ -114,6 +114,7 @@ export function createPlatformSpeechRecognitionAdapter(): SpeechRecognitionAdapt
         recognition.interimResults = false;
         recognition.maxAlternatives = 1;
 
+        const language = startOptions?.language;
         if (language) {
           recognition.lang = language;
         }

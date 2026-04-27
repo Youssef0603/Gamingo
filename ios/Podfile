@@ -4,6 +4,7 @@ require Pod::Executable.execute_command('node', ['-p',
     "react-native/scripts/react_native_pods.rb",
     {paths: [process.argv[1]]},
   )', __dir__]).strip
+require File.join(File.dirname(`node --print "require.resolve('expo/package.json')"`), "scripts/autolinking")
 require 'pathname'
 require 'uri'
 
@@ -34,6 +35,7 @@ if linkage != nil
 end
 
 target 'PlayCall' do
+  use_expo_modules!(exclude: ['expo'])
   config = use_native_modules!
 
   use_react_native!(
@@ -49,5 +51,15 @@ target 'PlayCall' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+
+    installer.pods_project.targets.each do |target|
+      next unless target.name == 'EXConstants'
+
+      target.shell_script_build_phases.each do |phase|
+        next unless phase.name == '[CP-User] Generate app.config for prebuilt Constants.manifest'
+
+        phase.shell_script = 'bash -l "$PODS_TARGET_SRCROOT/../scripts/get-app-config-ios.sh"'
+      end
+    end
   end
 end

@@ -1,4 +1,74 @@
 PODS:
+  - AsyncStorage (3.0.2):
+    - hermes-engine
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-Core-prebuilt
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - ReactNativeDependencies
+    - Yoga
+  - EXConstants (55.0.15):
+    - ExpoModulesCore
+  - ExpoAsset (55.0.16):
+    - ExpoModulesCore
+  - ExpoAudio (55.0.14):
+    - ExpoModulesCore
+  - ExpoDomWebView (55.0.5):
+    - ExpoModulesCore
+  - ExpoFileSystem (55.0.17):
+    - ExpoModulesCore
+  - ExpoFont (55.0.6):
+    - ExpoModulesCore
+  - ExpoKeepAwake (55.0.6):
+    - ExpoModulesCore
+  - ExpoLogBox (55.0.11):
+    - React-Core
+  - ExpoModulesCore (55.0.23):
+    - ExpoModulesJSI
+    - hermes-engine
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-Core-prebuilt
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-jsi
+    - React-jsinspector
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - ReactNativeDependencies
+    - RNWorklets
+    - Yoga
+  - ExpoModulesJSI (55.0.23):
+    - hermes-engine
+    - React-Core
+    - React-runtimescheduler
+    - ReactCommon
+  - ExpoSpeechRecognition (3.1.3):
+    - ExpoModulesCore
   - FBLazyVector (0.85.1)
   - hermes-engine (250829098.0.10):
     - hermes-engine/Pre-built (= 250829098.0.10)
@@ -1431,6 +1501,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
+  - react-native-vector-icons-ionicons (13.1.1)
   - React-NativeModulesApple (0.85.1):
     - hermes-engine
     - React-callinvoker
@@ -1816,6 +1887,102 @@ PODS:
     - React-utils (= 0.85.1)
     - ReactNativeDependencies
   - ReactNativeDependencies (0.85.1)
+  - RNGestureHandler (2.31.1):
+    - hermes-engine
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-Core-prebuilt
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - ReactNativeDependencies
+    - Yoga
+  - RNReanimated (4.3.0):
+    - hermes-engine
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-Core-prebuilt
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - ReactNativeDependencies
+    - RNReanimated/apple (= 4.3.0)
+    - RNReanimated/common (= 4.3.0)
+    - RNWorklets
+    - Yoga
+  - RNReanimated/apple (4.3.0):
+    - hermes-engine
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-Core-prebuilt
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - ReactNativeDependencies
+    - RNWorklets
+    - Yoga
+  - RNReanimated/common (4.3.0):
+    - hermes-engine
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-Core-prebuilt
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - ReactNativeDependencies
+    - RNWorklets
+    - Yoga
   - RNScreens (4.24.0):
     - hermes-engine
     - RCTRequired
@@ -1863,9 +2030,94 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
+  - RNWorklets (0.8.1):
+    - hermes-engine
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-Core-prebuilt
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - ReactNativeDependencies
+    - RNWorklets/apple (= 0.8.1)
+    - RNWorklets/common (= 0.8.1)
+    - Yoga
+  - RNWorklets/apple (0.8.1):
+    - hermes-engine
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-Core-prebuilt
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - ReactNativeDependencies
+    - Yoga
+  - RNWorklets/common (0.8.1):
+    - hermes-engine
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-Core-prebuilt
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - ReactNativeDependencies
+    - Yoga
+  - TextToSpeech (4.1.1):
+    - React-Core
   - Yoga (0.0.0)
 
 DEPENDENCIES:
+  - "AsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
+  - EXConstants (from `../node_modules/expo-constants/ios`)
+  - ExpoAsset (from `../node_modules/expo-asset/ios`)
+  - ExpoAudio (from `../node_modules/expo-audio/ios`)
+  - "ExpoDomWebView (from `../node_modules/expo/node_modules/@expo/log-box/node_modules/@expo/dom-webview/ios`)"
+  - ExpoFileSystem (from `../node_modules/expo/node_modules/expo-file-system/ios`)
+  - ExpoFont (from `../node_modules/expo/node_modules/expo-font/ios`)
+  - ExpoKeepAwake (from `../node_modules/expo/node_modules/expo-keep-awake/ios`)
+  - "ExpoLogBox (from `../node_modules/expo/node_modules/@expo/log-box`)"
+  - ExpoModulesCore (from `../node_modules/expo-modules-core`)
+  - ExpoModulesJSI (from `../node_modules/expo-modules-core`)
+  - ExpoSpeechRecognition (from `../node_modules/expo-speech-recognition/ios`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
   - RCTDeprecation (from `../node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation`)
@@ -1906,6 +2158,7 @@ DEPENDENCIES:
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
   - React-microtasksnativemodule (from `../node_modules/react-native/ReactCommon/react/nativemodule/microtasks`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - "react-native-vector-icons-ionicons (from `../node_modules/@react-native-vector-icons/ionicons`)"
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-networking (from `../node_modules/react-native/ReactCommon/react/networking`)
   - React-oscompat (from `../node_modules/react-native/ReactCommon/oscompat`)
@@ -1940,10 +2193,38 @@ DEPENDENCIES:
   - ReactCodegen (from `build/generated/ios/ReactCodegen`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactNativeDependencies (from `../node_modules/react-native/third-party-podspecs/ReactNativeDependencies.podspec`)
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNWorklets (from `../node_modules/react-native-worklets`)
+  - TextToSpeech (from `../node_modules/react-native-tts`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 EXTERNAL SOURCES:
+  AsyncStorage:
+    :path: "../node_modules/@react-native-async-storage/async-storage"
+  EXConstants:
+    :path: "../node_modules/expo-constants/ios"
+  ExpoAsset:
+    :path: "../node_modules/expo-asset/ios"
+  ExpoAudio:
+    :path: "../node_modules/expo-audio/ios"
+  ExpoDomWebView:
+    :path: "../node_modules/expo/node_modules/@expo/log-box/node_modules/@expo/dom-webview/ios"
+  ExpoFileSystem:
+    :path: "../node_modules/expo/node_modules/expo-file-system/ios"
+  ExpoFont:
+    :path: "../node_modules/expo/node_modules/expo-font/ios"
+  ExpoKeepAwake:
+    :path: "../node_modules/expo/node_modules/expo-keep-awake/ios"
+  ExpoLogBox:
+    :path: "../node_modules/expo/node_modules/@expo/log-box"
+  ExpoModulesCore:
+    :path: "../node_modules/expo-modules-core"
+  ExpoModulesJSI:
+    :path: "../node_modules/expo-modules-core"
+  ExpoSpeechRecognition:
+    :path: "../node_modules/expo-speech-recognition/ios"
   FBLazyVector:
     :path: "../node_modules/react-native/Libraries/FBLazyVector"
   hermes-engine:
@@ -2023,6 +2304,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/microtasks"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-vector-icons-ionicons:
+    :path: "../node_modules/@react-native-vector-icons/ionicons"
   React-NativeModulesApple:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios"
   React-networking:
@@ -2091,12 +2374,32 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   ReactNativeDependencies:
     :podspec: "../node_modules/react-native/third-party-podspecs/ReactNativeDependencies.podspec"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNWorklets:
+    :path: "../node_modules/react-native-worklets"
+  TextToSpeech:
+    :path: "../node_modules/react-native-tts"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  AsyncStorage: 857a13f3c66a30d6b02efa09babba3d457e8e8ca
+  EXConstants: 5caf448ff399f60be9d1053e77aed32e39411900
+  ExpoAsset: f56ed740b6a127da2bfd90832cf688ae309d4410
+  ExpoAudio: a826903abdeba843cde8602bd1c077d808b31f1d
+  ExpoDomWebView: 2b2fbd9a07de8790569257cbf9dfdaa31cf95c70
+  ExpoFileSystem: a0e4a5a09c9c4f84338289b273a172609452dec9
+  ExpoFont: cdd7a1d574a376fa003c713eff49e0a4df8672c7
+  ExpoKeepAwake: a1baf9810a2dee1905aa9bdd336852598f7220e9
+  ExpoLogBox: 617da77cbc083627692b2ea050a3666808aef2cd
+  ExpoModulesCore: b576945d36ceb2a4793cffee7b881c870f2e4156
+  ExpoModulesJSI: 24121c9a2f32d5f6b6ca2f7ff54925be716d5841
+  ExpoSpeechRecognition: 95a6287f24fb8764ded6e9d0dd667a1e9e633dab
   FBLazyVector: ed7eadee1965b0b918ca9d0f2c2328f7eb3fd095
   hermes-engine: 0dadb1d3e5debae0c0548944513ab376e4389f76
   RCTDeprecation: d69f6f20a20f669a0aa3115ab1109f28e98ae03e
@@ -2136,6 +2439,7 @@ SPEC CHECKSUMS:
   React-Mapbuffer: 820bc13d35de93c05aacefb3ab43f061b247c64e
   React-microtasksnativemodule: d8115c4d1035b8671c036a47d82fe75d1ca44e44
   react-native-safe-area-context: 6b4966397ada0f7dd481e4486a2ef936834861a1
+  react-native-vector-icons-ionicons: c416c2cdf94f4cd9957ec77fde502e3410e40d14
   React-NativeModulesApple: 647d3ab78e02b3a40fedffd856744215219ff0a6
   React-networking: 8d40769c4823a7e26ae98ca5cd691edc87828743
   React-oscompat: 934d246490699f24fb70bbc5ca0da7e6808ab80c
@@ -2170,9 +2474,13 @@ SPEC CHECKSUMS:
   ReactCodegen: aac672d7021359dc55fbd6d63f56192651664f09
   ReactCommon: 66763e5bd1b778828ff6cb82d771b7162a5215c2
   ReactNativeDependencies: dfa2bb4b6802c39138704b6b87947b30f8c89c93
+  RNGestureHandler: 187c5c7936abf427bc4d22d6c3b1ac80ad1f63c0
+  RNReanimated: c4e6659e58b793885ae6da476cb514fc913e7b85
   RNScreens: 01b065ded2dfe7987bcce770ff3a196be417ff41
+  RNWorklets: dd3b2cb0750090d78d85cd3b3ec0fdbeab5ce118
+  TextToSpeech: 89b239221ec378d213af422d14789a729705360b
   Yoga: b1085f68c014785350a2afdc95eaef0d49f23ccb
 
-PODFILE CHECKSUM: a5677f47d3c140db3fa42064f3b9eed77fc94565
+PODFILE CHECKSUM: 3ac424480e3513c91fd6853bfcdd1cfabe691b37
 
 COCOAPODS: 1.16.2

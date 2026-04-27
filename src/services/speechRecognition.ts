@@ -12,6 +12,12 @@ export type SpeechRecognitionState =
   | 'requesting-permission'
   | 'listening';
 
+export type SpeechRecognitionStartOptions = {
+  contextualStrings?: string[];
+  language?: string;
+  promptType?: 'default' | 'short-utterance';
+};
+
 export type SpeechRecognitionResult = {
   isFinal: boolean;
   transcript: string;
@@ -25,6 +31,8 @@ export type SpeechRecognitionErrorCode =
   | 'aborted'
   | 'audio-capture'
   | 'network'
+  | 'busy'
+  | 'language-not-supported'
   | 'unknown';
 
 export class SpeechRecognitionError extends Error {
@@ -40,13 +48,13 @@ export class SpeechRecognitionError extends Error {
 export interface SpeechRecognitionAdapter {
   isAvailable: () => boolean;
   requestPermission: (
-    language?: string,
+    options?: SpeechRecognitionStartOptions,
   ) => Promise<SpeechRecognitionPermissionStatus>;
   start: (options: {
     emitError: (error: SpeechRecognitionError) => void;
     emitResult: (result: SpeechRecognitionResult) => void;
     emitStateChange: (state: SpeechRecognitionState) => void;
-    language?: string;
+    startOptions?: SpeechRecognitionStartOptions;
   }) => Promise<void>;
   stop: () => Promise<void>;
 }
@@ -69,7 +77,7 @@ export interface SpeechRecognitionService {
   onStateChange: (
     listener: SpeechRecognitionListener<SpeechRecognitionState>,
   ) => () => void;
-  start: (language?: string) => Promise<void>;
+  start: (options?: SpeechRecognitionStartOptions) => Promise<void>;
   stop: () => Promise<void>;
 }
 
@@ -190,7 +198,7 @@ export function createSpeechRecognitionService(
     onStateChange(listener) {
       return addListener(stateListeners, listener);
     },
-    async start(language) {
+    async start(options) {
       if (!adapter.isAvailable()) {
         throw emitError(
           new SpeechRecognitionError(
@@ -206,7 +214,7 @@ export function createSpeechRecognitionService(
       let nextPermissionStatus: SpeechRecognitionPermissionStatus;
 
       try {
-        nextPermissionStatus = await adapter.requestPermission(language);
+        nextPermissionStatus = await adapter.requestPermission(options);
       } catch (error) {
         throw emitError(error);
       }
@@ -254,7 +262,7 @@ export function createSpeechRecognitionService(
             emitToListeners(resultListeners, result);
           },
           emitStateChange: setState,
-          language,
+          startOptions: options,
         });
 
         if (state === 'requesting-permission') {
@@ -273,8 +281,8 @@ export function createSpeechRecognitionService(
 
 export const speechRecognitionService = createSpeechRecognitionService();
 
-export async function start(language?: string) {
-  await speechRecognitionService.start(language);
+export async function start(options?: SpeechRecognitionStartOptions) {
+  await speechRecognitionService.start(options);
 }
 
 export async function stop() {

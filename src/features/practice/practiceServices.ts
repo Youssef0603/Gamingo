@@ -5,6 +5,7 @@ import {
 import { createTextToSpeechService } from '../../services/textToSpeech';
 
 import type {
+  SpeechRecognitionStartOptions,
   SpeechRecognitionService,
   TextToSpeechService,
 } from '../../services';
@@ -48,7 +49,7 @@ export function createUnavailableSpeechRecognitionService(
     onStateChange() {
       return () => undefined;
     },
-    async start() {
+    async start(_options?: SpeechRecognitionStartOptions) {
       throw new SpeechRecognitionError('unavailable', message);
     },
     async stop() {
@@ -117,7 +118,7 @@ export function createStaticSpeechRecognitionService(
         stateListeners.delete(listener);
       };
     },
-    async start() {
+    async start(_options?: SpeechRecognitionStartOptions) {
       emitState('listening');
       await emitResult();
     },

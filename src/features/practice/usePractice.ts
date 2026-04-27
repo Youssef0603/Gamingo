@@ -5,6 +5,7 @@ import {
   type PracticeFeedbackLabel,
   evaluatePracticeAttempt,
   getPracticeFeedbackMessage,
+  normalizePracticeText,
 } from './practiceUtils';
 
 import type {
@@ -14,6 +15,25 @@ import type {
 } from '../../services';
 import type { PracticeDependencies } from './practiceServices';
 import type { PracticeEvaluation } from './practiceUtils';
+
+const PRACTICE_DEBUG_PREFIX = '[practice]';
+const AUDIO_TRANSITION_DELAY_MS = 180;
+const EARLY_RESULT_COMMIT_DELAY_MS = 650;
+
+function logPractice(message: string, payload?: unknown) {
+  if (payload === undefined) {
+    console.log(`${PRACTICE_DEBUG_PREFIX} ${message}`);
+    return;
+  }
+
+  console.log(`${PRACTICE_DEBUG_PREFIX} ${message}`, payload);
+}
+
+function wait(durationMs: number) {
+  return new Promise<void>(resolve => {
+    setTimeout(resolve, durationMs);
+  });
+}
 
 export type PracticeFeedback = PracticeEvaluation & {
   message: string;
@@ -97,6 +117,38 @@ function shouldRecordFailedAttempt(code: SpeechRecognitionErrorCode | null) {
   return code === 'no-speech';
 }
 
+function getSpeechPromptType(phrase: string): 'default' | 'short-utterance' {
+  const normalizedPhrase = normalizePracticeText(phrase);
+
+  if (!normalizedPhrase) {
+    return 'default';
+  }
+
+  return normalizedPhrase.split(' ').length <= 1
+    ? 'short-utterance'
+    : 'default';
+}
+
+function shouldUseEarlyResultCommit(phrase: string) {
+  const normalizedPhrase = normalizePracticeText(phrase);
+
+  if (!normalizedPhrase) {
+    return false;
+  }
+
+  return normalizedPhrase.split(' ').length <= 4;
+}
+
+function countNormalizedTokens(value: string) {
+  const normalizedValue = normalizePracticeText(value);
+
+  if (!normalizedValue) {
+    return 0;
+  }
+
+  return normalizedValue.split(' ').filter(Boolean).length;
+}
+
 export function usePractice({
   autoPlay = true,
   dependencies,
@@ -173,6 +225,13 @@ export function usePractice({
       setPermissionStatus(nextPermissionStatus);
     }
 
+    logPractice('attempt:error', {
+      error: nextError,
+      errorCode,
+      errorMessage,
+      phrase,
+    });
+
     setHeardText('');
     setError(errorMessage);
     const nextFeedback = {
@@ -189,6 +248,7 @@ export function usePractice({
   }, [handleAttemptComplete, phrase]);
 
   const playPhrase = useCallback(async () => {
+    logPractice('play:start', { locale, phrase });
     setError(null);
     setIsPlaying(true);
 
@@ -196,7 +256,9 @@ export function usePractice({
       await speechRecognitionRef.current.stop();
       await textToSpeechRef.current.stop();
       await textToSpeechRef.current.speak({ language: locale, text: phrase });
+      logPractice('play:complete', { locale, phrase });
     } catch (nextError) {
+      logPractice('play:error', nextError);
       setError(getPracticeErrorMessage(nextError));
     } finally {
       setIsPlaying(false);
@@ -204,19 +266,66 @@ export function usePractice({
   }, [locale, phrase]);
 
   const speakPhrase = useCallback(async () => {
+    logPractice('attempt:start', { locale, phrase });
     setError(null);
     setFeedback(null);
     setHeardText('');
+    const promptType = getSpeechPromptType(phrase);
+    const shouldCommitEarly = shouldUseEarlyResultCommit(phrase);
+    const normalizedExpectedPhrase = normalizePracticeText(phrase);
+    const expectedTokenCount = countNormalizedTokens(phrase);
 
     await textToSpeechRef.current.stop();
     await speechRecognitionRef.current.stop();
+    await wait(AUDIO_TRANSITION_DELAY_MS);
 
     return new Promise<void>((resolve, reject) => {
       let settled = false;
+      let earlyCommitTimeout: ReturnType<typeof setTimeout> | null = null;
+      let latestTranscript = '';
+
+      const clearEarlyCommitTimeout = () => {
+        if (!earlyCommitTimeout) {
+          return;
+        }
+
+        clearTimeout(earlyCommitTimeout);
+        earlyCommitTimeout = null;
+      };
 
       const cleanup = () => {
+        clearEarlyCommitTimeout();
         unsubscribeError();
         unsubscribeResult();
+      };
+
+      const finalizeTranscript = (transcript: string) => {
+        if (settled) {
+          return;
+        }
+
+        settled = true;
+        cleanup();
+
+        speechRecognitionRef.current.stop().catch(() => undefined);
+
+        const evaluation = evaluatePracticeAttempt(phrase, transcript);
+
+        setPermissionStatus('granted');
+        setError(null);
+        setHeardText(transcript);
+        const nextFeedback = toFeedback(evaluation);
+
+        logPractice('attempt:evaluation', {
+          evaluation,
+          locale,
+          phrase,
+          transcript,
+        });
+
+        setFeedback(nextFeedback);
+        handleAttemptComplete(nextFeedback.label, nextFeedback);
+        resolve();
       };
 
       const finalizeError = (nextError: unknown) => {
@@ -234,27 +343,57 @@ export function usePractice({
         finalizeError(nextError);
       });
       const unsubscribeResult = speechRecognitionRef.current.onResult(result => {
-        if (!result.isFinal || settled) {
+        logPractice('attempt:result', result);
+        const transcript = result.transcript.trim();
+
+        if (!transcript || settled) {
           return;
         }
 
-        settled = true;
-        cleanup();
+        latestTranscript = transcript;
+        const normalizedTranscript = normalizePracticeText(transcript);
+        const transcriptTokenCount = countNormalizedTokens(transcript);
+        const isExactNormalizedMatch =
+          Boolean(normalizedExpectedPhrase) &&
+          normalizedTranscript === normalizedExpectedPhrase;
+        const shouldAcceptImmediately =
+          isExactNormalizedMatch ||
+          (promptType === 'short-utterance' && Boolean(transcript));
 
-        const transcript = result.transcript.trim();
-        const evaluation = evaluatePracticeAttempt(phrase, transcript);
+        if (result.isFinal || shouldAcceptImmediately) {
+          finalizeTranscript(transcript);
+          return;
+        }
 
-        setPermissionStatus('granted');
-        setError(null);
-        setHeardText(transcript);
-        const nextFeedback = toFeedback(evaluation);
+        if (
+          !shouldCommitEarly ||
+          transcriptTokenCount < expectedTokenCount
+        ) {
+          return;
+        }
 
-        setFeedback(nextFeedback);
-        handleAttemptComplete(nextFeedback.label, nextFeedback);
-        resolve();
+        clearEarlyCommitTimeout();
+        earlyCommitTimeout = setTimeout(() => {
+          if (!latestTranscript || settled) {
+            return;
+          }
+
+          logPractice('attempt:early-commit', {
+            latestTranscript,
+            locale,
+            phrase,
+          });
+          finalizeTranscript(latestTranscript);
+        }, EARLY_RESULT_COMMIT_DELAY_MS);
       });
 
-      speechRecognitionRef.current.start(locale).catch(finalizeError);
+      speechRecognitionRef.current
+        .start({
+          contextualStrings: [phrase],
+          language: locale,
+          promptType,
+        })
+        .catch(finalizeError);
     });
   }, [applyPracticeError, handleAttemptComplete, locale, phrase]);
 
@@ -262,10 +401,12 @@ export function usePractice({
     const speechRecognition = speechRecognitionRef.current;
 
     const unsubscribeState = speechRecognition.onStateChange(nextState => {
+      logPractice('recognition:state', nextState);
       setRecognitionState(nextState);
     });
     const unsubscribePermission = speechRecognition.onPermissionChange(
       nextPermissionStatus => {
+        logPractice('recognition:permission', nextPermissionStatus);
         setPermissionStatus(nextPermissionStatus);
       },
     );

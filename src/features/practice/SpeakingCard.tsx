@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { Icon } from '../../components/ui';
-import { stopSpeaking } from '../../services';
+import { playSuccessSound, stopSpeaking } from '../../services';
 import { theme, withAlpha } from '../../theme/theme';
 import { usePractice } from './usePractice';
 
@@ -17,16 +17,27 @@ type SpeakingCardProps = {
   phrase: string;
 };
 
-function getFeedbackColor(feedback: PracticeFeedback | null) {
-  if (feedback?.label === 'Perfect') {
-    return theme.colors.accent;
+type PracticeFlashState = {
+  kind: 'success' | 'failure';
+  message: string;
+};
+
+function getPracticeFlash(feedback: PracticeFeedback): PracticeFlashState {
+  const isCorrect =
+    Boolean(feedback.normalizedExpected) &&
+    feedback.normalizedExpected === feedback.normalizedSpoken;
+
+  if (isCorrect) {
+    return {
+      kind: 'success',
+      message: 'Correct. Nice rep.',
+    };
   }
 
-  if (feedback?.label === 'Close') {
-    return theme.colors.primary;
-  }
-
-  return theme.colors.danger;
+  return {
+    kind: 'failure',
+    message: 'Not quite. Listen and try again.',
+  };
 }
 
 function SpeakingCard({
@@ -37,9 +48,29 @@ function SpeakingCard({
   onToggleFavorite,
   phrase,
 }: SpeakingCardProps) {
-  const { error, feedback, heardText, isPlaying, playPhrase } = usePractice({
+  const [practiceFlash, setPracticeFlash] = useState<PracticeFlashState | null>(null);
+
+  const handleAttemptComplete = useCallback((nextFeedback: PracticeFeedback) => {
+    const nextPracticeFlash = getPracticeFlash(nextFeedback);
+
+    setPracticeFlash(nextPracticeFlash);
+
+    if (nextPracticeFlash.kind === 'success') {
+      playSuccessSound().catch(() => undefined);
+    }
+  }, []);
+
+  const {
+    error,
+    isListening,
+    isPlaying,
+    isRequestingPermission,
+    playPhrase,
+    speakPhrase,
+  } = usePractice({
     autoPlay: false,
     locale,
+    onAttemptComplete: handleAttemptComplete,
     phrase,
   });
 
@@ -47,8 +78,11 @@ function SpeakingCard({
     playPhrase().catch(() => undefined);
   }, [playPhrase]);
 
-  const feedbackColor = getFeedbackColor(feedback);
-  const isBusy = isPlaying;
+  const feedbackColor =
+    practiceFlash?.kind === 'success'
+      ? theme.colors.accent
+      : theme.colors.danger;
+  const isBusy = isPlaying || isListening || isRequestingPermission;
 
   return (
     <View style={styles.card}>
@@ -83,6 +117,7 @@ function SpeakingCard({
       </View>
 
       <Pressable
+        disabled={isBusy}
         onPress={() => {
           stopSpeaking()
             .catch(() => undefined)
@@ -92,6 +127,7 @@ function SpeakingCard({
         }}
         style={({ pressed }) => [
           styles.speakButton,
+          isBusy && styles.buttonDisabled,
           pressed && styles.buttonPressed,
         ]}
       >
@@ -100,7 +136,7 @@ function SpeakingCard({
       </Pressable>
       <Text style={styles.translation}>{englishText}</Text>
 
-      {feedback ? (
+      {practiceFlash ? (
         <View
           style={[
             styles.feedbackCard,
@@ -111,16 +147,13 @@ function SpeakingCard({
           ]}
         >
           <Text style={[styles.feedbackTitle, { color: feedbackColor }]}>
-            {feedback.label}
+            {practiceFlash.kind === 'success' ? 'Success' : 'Try again'}
           </Text>
-          <Text style={styles.feedbackText}>{feedback.message}</Text>
-          {heardText ? (
-            <Text style={styles.heardText}>Heard: {heardText}</Text>
-          ) : null}
+          <Text style={styles.feedbackText}>{practiceFlash.message}</Text>
         </View>
       ) : null}
 
-      {error && !feedback ? (
+      {error && !practiceFlash ? (
         <Text style={styles.errorText}>{error}</Text>
       ) : null}
 
@@ -128,6 +161,23 @@ function SpeakingCard({
         <Pressable
           disabled={isBusy}
           onPress={() => {
+            setPracticeFlash(null);
+            speakPhrase().catch(() => undefined);
+          }}
+          style={({ pressed }) => [
+            styles.primaryAction,
+            isBusy && styles.buttonDisabled,
+            pressed && styles.buttonPressed,
+          ]}
+        >
+          <Text style={styles.primaryActionText}>
+            {isListening || isRequestingPermission ? 'Listening...' : 'Practice'}
+          </Text>
+        </Pressable>
+        <Pressable
+          disabled={isBusy}
+          onPress={() => {
+            setPracticeFlash(null);
             playPhrase().catch(() => undefined);
           }}
           style={({ pressed }) => [
@@ -251,6 +301,23 @@ const styles = StyleSheet.create({
   },
   actionRow: {
     alignItems: 'center',
+    flexDirection: 'row',
+    gap: theme.spacing.sm,
+    justifyContent: 'center',
+  },
+  primaryAction: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.primary,
+    borderRadius: theme.radius.md,
+    justifyContent: 'center',
+    minWidth: 116,
+    paddingHorizontal: theme.spacing.lg,
+    paddingVertical: 12,
+  },
+  primaryActionText: {
+    color: theme.colors.surface,
+    fontSize: 14,
+    fontWeight: '700',
   },
   secondaryAction: {
     alignItems: 'center',
