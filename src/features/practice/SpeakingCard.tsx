@@ -22,6 +22,10 @@ type PracticeFlashState = {
   message: string;
 };
 
+function getPracticeMutedTone(kind: PracticeFlashState['kind']) {
+  return kind === 'success' ? '#4BBF7A' : '#E26A6A';
+}
+
 function getPracticeFlash(feedback: PracticeFeedback): PracticeFlashState {
   const isCorrect =
     Boolean(feedback.normalizedExpected) &&
@@ -78,14 +82,45 @@ function SpeakingCard({
     playPhrase().catch(() => undefined);
   }, [playPhrase]);
 
-  const feedbackColor =
-    practiceFlash?.kind === 'success'
-      ? theme.colors.accent
-      : theme.colors.danger;
+  const feedbackMutedColor = practiceFlash
+    ? getPracticeMutedTone(practiceFlash.kind)
+    : null;
   const isBusy = isPlaying || isListening || isRequestingPermission;
 
   return (
-    <View style={styles.card}>
+    <View
+      style={[
+        styles.card,
+        practiceFlash && [
+          styles.cardWithFeedback,
+          {
+            borderColor: withAlpha(feedbackMutedColor ?? theme.colors.border, 0.58),
+          },
+        ],
+      ]}
+    >
+      {practiceFlash ? (
+        <View
+          pointerEvents="none"
+          style={styles.feedbackBadge}
+        >
+          <View
+            style={[
+              styles.feedbackBadgeInner,
+              {
+                borderColor: withAlpha(feedbackMutedColor ?? theme.colors.border, 0.58),
+              },
+            ]}
+          >
+            <Icon
+              color={feedbackMutedColor ?? theme.colors.accent}
+              name={practiceFlash.kind === 'success' ? 'checkmark' : 'close'}
+              size={38}
+            />
+          </View>
+        </View>
+      ) : null}
+
       <View style={styles.headerRow}>
         <Pressable
           onPress={onClose}
@@ -137,19 +172,16 @@ function SpeakingCard({
       <Text style={styles.translation}>{englishText}</Text>
 
       {practiceFlash ? (
-        <View
-          style={[
-            styles.feedbackCard,
-            {
-              backgroundColor: `${feedbackColor}14`,
-              borderColor: `${feedbackColor}33`,
-            },
-          ]}
-        >
-          <Text style={[styles.feedbackTitle, { color: feedbackColor }]}>
+        <View style={styles.feedbackWrap}>
+          <Text
+            style={[
+              styles.feedbackTitle,
+              { color: feedbackMutedColor ?? theme.colors.accent },
+            ]}
+          >
             {practiceFlash.kind === 'success' ? 'Success' : 'Try again'}
           </Text>
-          <Text style={styles.feedbackText}>{practiceFlash.message}</Text>
+          {/* <Text style={styles.feedbackText}>{practiceFlash.message}</Text> */}
         </View>
       ) : null}
 
@@ -199,14 +231,39 @@ const styles = StyleSheet.create({
     borderColor: theme.colors.border,
     borderRadius: theme.radius.lg,
     borderWidth: 1,
+    overflow: 'visible',
     padding: theme.spacing.lg,
     ...theme.shadows.card,
+  },
+  cardWithFeedback: {
+    paddingTop: theme.spacing.xxl + theme.spacing.sm,
   },
   headerRow: {
     flexDirection: 'row',
     gap: theme.spacing.sm,
     justifyContent: 'space-between',
     marginBottom: theme.spacing.md,
+  },
+  feedbackBadge: {
+    alignItems: 'center',
+    height: 72,
+    justifyContent: 'center',
+    left: '50%',
+    marginLeft: -36,
+    position: 'absolute',
+    top: -36,
+    width: 72,
+    zIndex: 2,
+  },
+  feedbackBadgeInner: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.surface,
+    borderRadius: theme.radius.pill,
+    borderWidth: 2,
+    height: 52,
+    justifyContent: 'center',
+    width: 52,
+    ...theme.shadows.surface,
   },
   secondaryButton: {
     alignItems: 'center',
@@ -273,20 +330,21 @@ const styles = StyleSheet.create({
     marginBottom: theme.spacing.lg,
     textAlign: 'center',
   },
-  feedbackCard: {
-    borderRadius: theme.radius.md,
-    borderWidth: 1,
+  feedbackWrap: {
+    alignItems: 'center',
     marginBottom: theme.spacing.md,
-    padding: theme.spacing.md,
+    paddingHorizontal: theme.spacing.md,
   },
   feedbackTitle: {
-    fontSize: 14,
+    fontSize: 18,
     fontWeight: '700',
-    marginBottom: theme.spacing.xs,
+    marginBottom: theme.spacing.sm,
+    textAlign: 'center',
   },
   feedbackText: {
     ...theme.typography.body,
     color: theme.colors.text,
+    textAlign: 'center',
   },
   heardText: {
     ...theme.typography.caption,

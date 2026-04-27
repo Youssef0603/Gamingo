@@ -4,6 +4,8 @@ import { Ionicons } from '@react-native-vector-icons/ionicons/static';
 
 export type IconName =
   | 'checkmark-circle'
+  | 'checkmark'
+  | 'close'
   | 'chevron-down'
   | 'game-controller'
   | 'game-controller-outline'
