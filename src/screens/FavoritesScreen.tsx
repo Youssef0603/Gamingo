@@ -5,9 +5,13 @@ import PhraseCard from '../components/PhraseCard';
 import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
 import { phrases } from '../data/phrases';
+import InlineBannerAd from '../features/ads/InlineBannerAd';
+import { showInterstitialBefore } from '../features/ads/mobileAds';
 import PracticeModal from '../features/practice/PracticeModal';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
+
+const INLINE_AD_FREQUENCY = 3;
 
 function FavoritesScreen() {
   const {
@@ -41,8 +45,14 @@ function FavoritesScreen() {
     }
   }, [activePhraseId, favoriteIds]);
 
+  const openPhrase = (phraseId: string) => {
+    showInterstitialBefore(() => {
+      setActivePhraseId(phraseId);
+    });
+  };
+
   return (
-    <Screen padded={false}>
+    <Screen padded={false} edges={['top']}>
       <FlatList
         contentContainerStyle={styles.content}
         data={savedPhrases}
@@ -111,17 +121,23 @@ function FavoritesScreen() {
             </View>
           </View>
         }
-        renderItem={({ item }) => (
-          <PhraseCard
-            helperLanguage={nativeLanguage}
-            isFavorite={isFavorite(item.id, favoriteFilterLanguage)}
-            item={item}
-            language={favoriteFilterLanguage}
-            onPress={() => setActivePhraseId(item.id)}
-            onToggleFavorite={() =>
-              toggleFavorite(item.id, favoriteFilterLanguage)
-            }
-          />
+        renderItem={({ item, index }) => (
+          <View>
+            <PhraseCard
+              helperLanguage={nativeLanguage}
+              isFavorite={isFavorite(item.id, favoriteFilterLanguage)}
+              item={item}
+              language={favoriteFilterLanguage}
+              onPress={() => openPhrase(item.id)}
+              onToggleFavorite={() =>
+                toggleFavorite(item.id, favoriteFilterLanguage)
+              }
+            />
+            {(index + 1) % INLINE_AD_FREQUENCY === 0 &&
+            index < savedPhrases.length - 1 ? (
+              <InlineBannerAd />
+            ) : null}
+          </View>
         )}
         showsVerticalScrollIndicator={false}
       />
