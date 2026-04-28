@@ -250,12 +250,11 @@ const styles = StyleSheet.create({
   },
   feedbackBadge: {
     alignItems: 'center',
-    height: 72,
+    height: 50,
     justifyContent: 'center',
-    left: '50%',
-    marginLeft: -36,
+    left: '45%',
     position: 'absolute',
-    top: -36,
+    top: -20,
     width: 72,
     zIndex: 2,
   },
@@ -372,9 +371,9 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.primary,
     borderRadius: theme.radius.md,
     justifyContent: 'center',
-    minWidth: 116,
+     paddingVertical: theme.spacing.md,
     paddingHorizontal: theme.spacing.lg,
-    paddingVertical: 12,
+    flex:1
   },
   primaryActionText: {
     color: theme.colors.surface,
@@ -388,8 +387,9 @@ const styles = StyleSheet.create({
     borderRadius: theme.radius.md,
     borderWidth: 1,
     justifyContent: 'center',
-    minWidth: 180,
-    paddingVertical: 12,
+    paddingVertical: theme.spacing.md,
+    paddingHorizontal: theme.spacing.lg,
+    flex:1
   },
   secondaryActionText: {
     color: theme.colors.text,
