@@ -13,7 +13,9 @@ import { supportedLanguageCodes } from '../types/language';
 
 import type { LanguageCode } from '../types/language';
 
-export type LanguagePickerTarget = 'learning' | 'native';
+export type LanguagePickerTarget = 'favorites' | 'learning' | 'native';
+
+export type FavoriteIdsByLanguage = Partial<Record<LanguageCode, string[]>>;
 
 export type BottomSheetContent = {
   type: 'language-picker';
@@ -24,16 +26,23 @@ type AppStateContextValue = {
   bottomSheetContent: BottomSheetContent;
   closeBottomSheet: () => void;
   favoriteIds: string[];
+  favoriteFilterLanguage: LanguageCode;
+  favoriteLanguageOptions: LanguageCode[];
+  getFavoriteIdsForLanguage: (language: LanguageCode) => string[];
+  isFavorite: (phraseId: string, language?: LanguageCode) => boolean;
   nativeLanguage: LanguageCode;
   openLanguagePicker: (target: LanguagePickerTarget) => void;
   selectedLanguage: LanguageCode;
+  setFavoriteFilterLanguage: (language: LanguageCode) => void;
   setNativeLanguage: (language: LanguageCode) => void;
   setSelectedLanguage: (language: LanguageCode) => void;
-  toggleFavorite: (phraseId: string) => void;
+  toggleFavorite: (phraseId: string, language?: LanguageCode) => void;
 };
 
 type PersistedAppState = {
-  favoriteIds: string[];
+  favoriteFilterLanguage: LanguageCode;
+  favoriteIds?: string[];
+  favoriteIdsByLanguage: FavoriteIdsByLanguage;
   nativeLanguage: LanguageCode;
   selectedLanguage: LanguageCode;
 };
@@ -49,10 +58,56 @@ function isLanguageCode(value: unknown): value is LanguageCode {
   );
 }
 
+function sanitizeFavoriteIds(value: unknown): string[] {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  const uniqueIds = new Set<string>();
+
+  value.forEach(phraseId => {
+    if (typeof phraseId === 'string') {
+      uniqueIds.add(phraseId);
+    }
+  });
+
+  return Array.from(uniqueIds);
+}
+
+function sanitizeFavoriteIdsByLanguage(value: unknown): FavoriteIdsByLanguage {
+  if (!value || typeof value !== 'object') {
+    return {};
+  }
+
+  const candidate = value as Partial<Record<LanguageCode, unknown>>;
+  const nextValue: FavoriteIdsByLanguage = {};
+
+  supportedLanguageCodes.forEach(language => {
+    const favoriteIds = sanitizeFavoriteIds(candidate[language]);
+
+    if (favoriteIds.length > 0) {
+      nextValue[language] = favoriteIds;
+    }
+  });
+
+  return nextValue;
+}
+
+function getFavoriteLanguageOptions(
+  favoriteIdsByLanguage: FavoriteIdsByLanguage,
+): LanguageCode[] {
+  return supportedLanguageCodes.filter(
+    language => (favoriteIdsByLanguage[language]?.length ?? 0) > 0,
+  );
+}
+
 export function AppStateProvider({ children }: PropsWithChildren) {
   const [bottomSheetContent, setBottomSheetContent] =
     useState<BottomSheetContent>(null);
-  const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
+  const [favoriteIdsByLanguage, setFavoriteIdsByLanguage] =
+    useState<FavoriteIdsByLanguage>({});
+  const [favoriteFilterLanguage, setFavoriteFilterLanguage] =
+    useState<LanguageCode>('en');
   const [nativeLanguage, setNativeLanguage] = useState<LanguageCode>('en');
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>('en');
   const [isHydrated, setIsHydrated] = useState(false);
@@ -69,21 +124,32 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         }
 
         const parsedValue: Partial<PersistedAppState> = JSON.parse(storedValue);
+        const nextNativeLanguage = isLanguageCode(parsedValue.nativeLanguage)
+          ? parsedValue.nativeLanguage
+          : 'en';
+        const nextSelectedLanguage = isLanguageCode(parsedValue.selectedLanguage)
+          ? parsedValue.selectedLanguage
+          : 'en';
+        const nextFavoriteFilterLanguage = isLanguageCode(
+          parsedValue.favoriteFilterLanguage,
+        )
+          ? parsedValue.favoriteFilterLanguage
+          : nextSelectedLanguage;
+        const nextFavoriteIdsByLanguage = sanitizeFavoriteIdsByLanguage(
+          parsedValue.favoriteIdsByLanguage,
+        );
+        const migratedFavoriteIds = sanitizeFavoriteIds(parsedValue.favoriteIds);
 
-        if (Array.isArray(parsedValue.favoriteIds)) {
-          setFavoriteIds(
-            parsedValue.favoriteIds.filter(
-              (phraseId): phraseId is string => typeof phraseId === 'string',
-            ),
-          );
-        }
+        setNativeLanguage(nextNativeLanguage);
+        setSelectedLanguage(nextSelectedLanguage);
+        setFavoriteFilterLanguage(nextFavoriteFilterLanguage);
 
-        if (isLanguageCode(parsedValue.nativeLanguage)) {
-          setNativeLanguage(parsedValue.nativeLanguage);
-        }
-
-        if (isLanguageCode(parsedValue.selectedLanguage)) {
-          setSelectedLanguage(parsedValue.selectedLanguage);
+        if (Object.keys(nextFavoriteIdsByLanguage).length > 0) {
+          setFavoriteIdsByLanguage(nextFavoriteIdsByLanguage);
+        } else if (migratedFavoriteIds.length > 0) {
+          setFavoriteIdsByLanguage({
+            [nextSelectedLanguage]: migratedFavoriteIds,
+          });
         }
       } catch (error) {
         console.warn('Failed to load persisted app state.', error);
@@ -111,7 +177,8 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         await AsyncStorage.setItem(
           APP_STATE_STORAGE_KEY,
           JSON.stringify({
-            favoriteIds,
+            favoriteFilterLanguage,
+            favoriteIdsByLanguage,
             nativeLanguage,
             selectedLanguage,
           } satisfies PersistedAppState),
@@ -122,14 +189,66 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     };
 
     persistAppState();
-  }, [favoriteIds, isHydrated, nativeLanguage, selectedLanguage]);
+  }, [
+    favoriteFilterLanguage,
+    favoriteIdsByLanguage,
+    isHydrated,
+    nativeLanguage,
+    selectedLanguage,
+  ]);
 
-  const toggleFavorite = (phraseId: string) => {
-    setFavoriteIds(current =>
-      current.includes(phraseId)
-        ? current.filter(id => id !== phraseId)
-        : [...current, phraseId],
-    );
+  useEffect(() => {
+    const availableLanguages = getFavoriteLanguageOptions(favoriteIdsByLanguage);
+
+    if (availableLanguages.length === 0) {
+      if (favoriteFilterLanguage !== selectedLanguage) {
+        setFavoriteFilterLanguage(selectedLanguage);
+      }
+
+      return;
+    }
+
+    if (availableLanguages.includes(favoriteFilterLanguage)) {
+      return;
+    }
+
+    if (availableLanguages.includes(selectedLanguage)) {
+      setFavoriteFilterLanguage(selectedLanguage);
+      return;
+    }
+
+    setFavoriteFilterLanguage(availableLanguages[0]);
+  }, [favoriteFilterLanguage, favoriteIdsByLanguage, selectedLanguage]);
+
+  const favoriteIds = favoriteIdsByLanguage[selectedLanguage] ?? [];
+  const favoriteLanguageOptions = getFavoriteLanguageOptions(favoriteIdsByLanguage);
+
+  const getFavoriteIdsForLanguage = (language: LanguageCode) =>
+    favoriteIdsByLanguage[language] ?? [];
+
+  const isFavorite = (phraseId: string, language = selectedLanguage) =>
+    getFavoriteIdsForLanguage(language).includes(phraseId);
+
+  const toggleFavorite = (phraseId: string, language = selectedLanguage) => {
+    setFavoriteIdsByLanguage(current => {
+      const currentLanguageFavorites = current[language] ?? [];
+      const nextLanguageFavorites = currentLanguageFavorites.includes(phraseId)
+        ? currentLanguageFavorites.filter(id => id !== phraseId)
+        : [...currentLanguageFavorites, phraseId];
+
+      if (nextLanguageFavorites.length === 0) {
+        const rest = { ...current };
+
+        delete rest[language];
+
+        return rest;
+      }
+
+      return {
+        ...current,
+        [language]: nextLanguageFavorites,
+      };
+    });
   };
 
   const openLanguagePicker = (target: LanguagePickerTarget) => {
@@ -154,9 +273,14 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         bottomSheetContent,
         closeBottomSheet,
         favoriteIds,
+        favoriteFilterLanguage,
+        favoriteLanguageOptions,
+        getFavoriteIdsForLanguage,
+        isFavorite,
         nativeLanguage,
         openLanguagePicker,
         selectedLanguage,
+        setFavoriteFilterLanguage,
         setNativeLanguage,
         setSelectedLanguage,
         toggleFavorite,

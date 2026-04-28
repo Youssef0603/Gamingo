@@ -50,7 +50,7 @@ function FilterChip({ label, selected, onPress }: FilterChipProps) {
 
 function PracticeScreen() {
   const {
-    favoriteIds,
+    isFavorite,
     nativeLanguage,
     openLanguagePicker,
     selectedLanguage,
@@ -207,7 +207,7 @@ function PracticeScreen() {
         renderItem={({ item }) => (
           <PhraseCard
             helperLanguage={nativeLanguage}
-            isFavorite={favoriteIds.includes(item.id)}
+            isFavorite={isFavorite(item.id)}
             item={item}
             language={selectedLanguage}
             onPress={() => setActivePhraseId(item.id)}
@@ -218,9 +218,7 @@ function PracticeScreen() {
       />
 
       <PracticeModal
-        isFavorite={
-          activePhrase ? favoriteIds.includes(activePhrase.id) : false
-        }
+        isFavorite={activePhrase ? isFavorite(activePhrase.id) : false}
         helperLanguage={nativeLanguage}
         language={selectedLanguage}
         onClose={() => setActivePhraseId(null)}

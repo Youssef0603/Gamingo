@@ -17,8 +17,11 @@ function BottomSheet() {
   const {
     bottomSheetContent,
     closeBottomSheet,
+    favoriteFilterLanguage,
+    favoriteLanguageOptions,
     nativeLanguage,
     selectedLanguage,
+    setFavoriteFilterLanguage,
     setNativeLanguage,
     setSelectedLanguage,
   } = useAppState();
@@ -68,8 +71,11 @@ function BottomSheet() {
       snapPoints={[1]}
     >
       {bottomSheetContentSwitcher(bottomSheetContent, {
+        favoriteFilterLanguage,
+        favoriteLanguageOptions,
         nativeLanguage,
         selectedLanguage,
+        setFavoriteFilterLanguage,
         setNativeLanguage,
         setSelectedLanguage,
       })}

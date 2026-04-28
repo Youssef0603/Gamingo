@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import PhraseCard from '../components/PhraseCard';
-import Screen from '../components/ui/Screen';
+import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
 import { phrases } from '../data/phrases';
 import PracticeModal from '../features/practice/PracticeModal';
@@ -10,10 +10,21 @@ import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
 
 function FavoritesScreen() {
-  const { favoriteIds, nativeLanguage, selectedLanguage, toggleFavorite } =
-    useAppState();
+  const {
+    favoriteFilterLanguage,
+    favoriteLanguageOptions,
+    getFavoriteIdsForLanguage,
+    isFavorite,
+    nativeLanguage,
+    openLanguagePicker,
+    toggleFavorite,
+  } = useAppState();
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
-  const selectedLanguageOption = languageMetadata[selectedLanguage];
+  const hasSavedLanguages = favoriteLanguageOptions.length > 0;
+  const favoriteIds = getFavoriteIdsForLanguage(favoriteFilterLanguage);
+  const favoriteLanguageOption = hasSavedLanguages
+    ? languageMetadata[favoriteFilterLanguage]
+    : null;
 
   const savedPhrases = useMemo(
     () => phrases.filter(item => favoriteIds.includes(item.id)),
@@ -38,20 +49,64 @@ function FavoritesScreen() {
         keyExtractor={item => item.id}
         ListEmptyComponent={
           <View style={styles.emptyCard}>
-            <Text style={styles.emptyTitle}>No favourites yet</Text>
-            <Text style={styles.emptyText}>Save phrases from Practice.</Text>
+            <Text style={styles.emptyTitle}>
+              {hasSavedLanguages ? 'No favourites in this language' : 'No favourites yet'}
+            </Text>
+            <Text style={styles.emptyText}>
+              {hasSavedLanguages
+                ? 'Pick another saved language or save more phrases from Practice.'
+                : 'Save phrases from Practice to build this list.'}
+            </Text>
           </View>
         }
         ListHeaderComponent={
           <View style={styles.header}>
             <View style={styles.heading}>
               <Text style={styles.title}>Favourites</Text>
-              <Text style={styles.subtitle}>Saved phrases only.</Text>
+              <Text style={styles.subtitle}>
+                Saved phrases grouped by learning language.
+              </Text>
+            </View>
+
+            <View style={styles.filterBlock}>
+              <Text style={styles.filterLabel}>Saved language</Text>
+              <Pressable
+                disabled={!hasSavedLanguages}
+                onPress={() => openLanguagePicker('favorites')}
+                style={({ pressed }) => [
+                  styles.languageTrigger,
+                  !hasSavedLanguages && styles.languageTriggerDisabled,
+                  pressed && hasSavedLanguages && styles.languageTriggerPressed,
+                ]}
+              >
+                <View style={styles.languageTriggerCopy}>
+                  <Text style={styles.languageFlag}>
+                    {favoriteLanguageOption?.flag ?? '•'}
+                  </Text>
+                  <View style={styles.languageTextWrap}>
+                    <Text style={styles.languageTriggerLabel}>Filter by</Text>
+                    <Text
+                      numberOfLines={1}
+                      style={styles.languageTriggerValue}
+                    >
+                      {favoriteLanguageOption?.label ?? 'No saved languages yet'}
+                    </Text>
+                  </View>
+                </View>
+
+                {hasSavedLanguages ? (
+                  <Icon
+                    color={theme.colors.mutedText}
+                    name="chevron-down"
+                    size={18}
+                  />
+                ) : null}
+              </Pressable>
             </View>
 
             <View style={styles.languageBadge}>
               <Text style={styles.languageText}>
-                {selectedLanguageOption.flag} {selectedLanguageOption.label}
+                {savedPhrases.length} saved phrase{savedPhrases.length === 1 ? '' : 's'}
               </Text>
             </View>
           </View>
@@ -59,11 +114,13 @@ function FavoritesScreen() {
         renderItem={({ item }) => (
           <PhraseCard
             helperLanguage={nativeLanguage}
-            isFavorite
+            isFavorite={isFavorite(item.id, favoriteFilterLanguage)}
             item={item}
-            language={selectedLanguage}
+            language={favoriteFilterLanguage}
             onPress={() => setActivePhraseId(item.id)}
-            onToggleFavorite={() => toggleFavorite(item.id)}
+            onToggleFavorite={() =>
+              toggleFavorite(item.id, favoriteFilterLanguage)
+            }
           />
         )}
         showsVerticalScrollIndicator={false}
@@ -71,14 +128,16 @@ function FavoritesScreen() {
 
       <PracticeModal
         isFavorite={
-          activePhrase ? favoriteIds.includes(activePhrase.id) : false
+          activePhrase
+            ? isFavorite(activePhrase.id, favoriteFilterLanguage)
+            : false
         }
         helperLanguage={nativeLanguage}
-        language={selectedLanguage}
+        language={favoriteFilterLanguage}
         onClose={() => setActivePhraseId(null)}
         onToggleFavorite={() => {
           if (activePhrase) {
-            toggleFavorite(activePhrase.id);
+            toggleFavorite(activePhrase.id, favoriteFilterLanguage);
           }
         }}
         phrase={activePhrase}
@@ -108,6 +167,18 @@ const styles = StyleSheet.create({
     ...theme.typography.caption,
     color: theme.colors.mutedText,
   },
+  filterBlock: {
+    marginBottom: theme.spacing.md,
+  },
+  filterLabel: {
+    color: theme.colors.text,
+    fontSize: 14,
+    fontWeight: '600',
+    marginBottom: theme.spacing.sm,
+  },
+  languageFlag: {
+    fontSize: 24,
+  },
   languageBadge: {
     alignSelf: 'flex-start',
     backgroundColor: withAlpha(theme.colors.primary, 0.08),
@@ -115,10 +186,47 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 7,
   },
+  languageTextWrap: {
+    flex: 1,
+  },
   languageText: {
     color: theme.colors.primary,
     fontSize: 12,
     fontWeight: '600',
+  },
+  languageTrigger: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.card,
+    borderColor: theme.colors.border,
+    borderRadius: theme.radius.md,
+    borderWidth: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: theme.spacing.md,
+    paddingVertical: 12,
+  },
+  languageTriggerCopy: {
+    alignItems: 'center',
+    flex: 1,
+    flexDirection: 'row',
+    gap: theme.spacing.sm,
+  },
+  languageTriggerDisabled: {
+    opacity: 0.7,
+  },
+  languageTriggerLabel: {
+    color: theme.colors.mutedText,
+    fontSize: 12,
+    fontWeight: '500',
+    marginBottom: 2,
+  },
+  languageTriggerPressed: {
+    opacity: 0.9,
+  },
+  languageTriggerValue: {
+    color: theme.colors.text,
+    fontSize: 15,
+    fontWeight: '700',
   },
   emptyCard: {
     backgroundColor: theme.colors.card,

@@ -18,6 +18,8 @@ import { languageMetadata, supportedLanguageCodes } from '../types/language';
 import type { LanguageCode } from '../types/language';
 
 type LanguagePickerSheetProps = {
+  availableLanguages?: LanguageCode[];
+  emptyStateText?: string;
   subtitle: string;
   selectedLanguage: LanguageCode;
   title: string;
@@ -25,6 +27,8 @@ type LanguagePickerSheetProps = {
 };
 
 function LanguagePickerSheet({
+  availableLanguages = supportedLanguageCodes,
+  emptyStateText = 'Try a different name or language code.',
   subtitle,
   selectedLanguage,
   title,
@@ -37,10 +41,10 @@ function LanguagePickerSheet({
     const normalizedQuery = searchQuery.trim().toLowerCase();
 
     if (!normalizedQuery) {
-      return supportedLanguageCodes;
+      return availableLanguages;
     }
 
-    return supportedLanguageCodes.filter(language => {
+    return availableLanguages.filter(language => {
       const item = languageMetadata[language];
 
       return (
@@ -48,7 +52,7 @@ function LanguagePickerSheet({
         language.toLowerCase().includes(normalizedQuery)
       );
     });
-  }, [searchQuery]);
+  }, [availableLanguages, searchQuery]);
 
   const contentHeight = height * 0.8;
 
@@ -88,9 +92,7 @@ function LanguagePickerSheet({
                 <Icon color={theme.colors.mutedText} name="search" size={28} />
               </View>
               <Text style={styles.emptyTitle}>No language found</Text>
-              <Text style={styles.emptyText}>
-                Try a different name or language code.
-              </Text>
+              <Text style={styles.emptyText}>{emptyStateText}</Text>
             </View>
           }
           renderItem={({ item: language }: { item: LanguageCode }) => {

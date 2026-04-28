@@ -6,8 +6,11 @@ import type { BottomSheetContent } from '../context/AppStateContext';
 import type { LanguageCode } from '../types/language';
 
 type BottomSheetContentProps = {
+  favoriteFilterLanguage: LanguageCode;
+  favoriteLanguageOptions: LanguageCode[];
   nativeLanguage: LanguageCode;
   selectedLanguage: LanguageCode;
+  setFavoriteFilterLanguage: (language: LanguageCode) => void;
   setNativeLanguage: (language: LanguageCode) => void;
   setSelectedLanguage: (language: LanguageCode) => void;
 };
@@ -20,25 +23,43 @@ export function bottomSheetContentSwitcher(
     case 'language-picker':
       return (
         <LanguagePickerSheet
+          availableLanguages={
+            content.target === 'favorites'
+              ? props.favoriteLanguageOptions
+              : undefined
+          }
+          emptyStateText={
+            content.target === 'favorites'
+              ? 'Save phrases from Practice to build this list.'
+              : undefined
+          }
           onSelect={
             content.target === 'native'
               ? props.setNativeLanguage
-              : props.setSelectedLanguage
+              : content.target === 'favorites'
+                ? props.setFavoriteFilterLanguage
+                : props.setSelectedLanguage
           }
           selectedLanguage={
             content.target === 'native'
               ? props.nativeLanguage
-              : props.selectedLanguage
+              : content.target === 'favorites'
+                ? props.favoriteFilterLanguage
+                : props.selectedLanguage
           }
           subtitle={
             content.target === 'native'
               ? 'Pick the language the user speaks natively.'
-              : 'Pick the language the user wants to practice right now.'
+              : content.target === 'favorites'
+                ? 'Pick a saved learning language to filter favourites.'
+                : 'Pick the language the user wants to practice right now.'
           }
           title={
             content.target === 'native'
               ? 'Choose native language'
-              : 'Choose learning language'
+              : content.target === 'favorites'
+                ? 'Choose saved language'
+                : 'Choose learning language'
           }
         />
       );
