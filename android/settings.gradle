@@ -39,6 +39,6 @@ extensions.configure(com.facebook.react.ReactSettingsExtension) { ex ->
 }
 
 expoAutolinking.useExpoModules()
-rootProject.name = 'PlayCall'
+rootProject.name = 'Gamingo'
 include ':app'
 includeBuild(expoAutolinking.reactNativeGradlePlugin)
