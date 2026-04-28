@@ -9,7 +9,8 @@ import { usePractice } from './usePractice';
 import type { PracticeFeedback } from './usePractice';
 
 type SpeakingCardProps = {
-  englishText: string;
+  helperLabel: string;
+  helperText: string;
   isFavorite: boolean;
   locale?: string;
   onClose: () => void;
@@ -45,7 +46,8 @@ function getPracticeFlash(feedback: PracticeFeedback): PracticeFlashState {
 }
 
 function SpeakingCard({
-  englishText,
+  helperLabel,
+  helperText,
   isFavorite,
   locale,
   onClose,
@@ -169,7 +171,9 @@ function SpeakingCard({
         <Text style={styles.phrase}>{phrase}</Text>
         <Icon color={theme.colors.primary} name="volume-high" size={20} />
       </Pressable>
-      <Text style={styles.translation}>{englishText}</Text>
+      <Text style={styles.translation}>
+        {helperLabel}: {helperText}
+      </Text>
 
       {practiceFlash ? (
         <View style={styles.feedbackWrap}>

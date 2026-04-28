@@ -123,7 +123,7 @@ function PracticeScreen() {
                     </Text>
                     <View style={styles.languageTextWrap}>
                       <Text style={styles.languageTriggerLabel}>
-                        Native Language
+                        Native
                       </Text>
                       <Text
                         numberOfLines={1}
@@ -155,7 +155,7 @@ function PracticeScreen() {
                     </Text>
                     <View style={styles.languageTextWrap}>
                       <Text style={styles.languageTriggerLabel}>
-                        Learning Language
+                        Learning
                       </Text>
                       <Text
                         numberOfLines={1}
@@ -206,6 +206,7 @@ function PracticeScreen() {
         }
         renderItem={({ item }) => (
           <PhraseCard
+            helperLanguage={nativeLanguage}
             isFavorite={favoriteIds.includes(item.id)}
             item={item}
             language={selectedLanguage}
@@ -220,6 +221,7 @@ function PracticeScreen() {
         isFavorite={
           activePhrase ? favoriteIds.includes(activePhrase.id) : false
         }
+        helperLanguage={nativeLanguage}
         language={selectedLanguage}
         onClose={() => setActivePhraseId(null)}
         onToggleFavorite={() => {

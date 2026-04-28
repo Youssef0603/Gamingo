@@ -3,11 +3,13 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { categoryMetadata } from '../data/categories';
 import { theme, withAlpha } from '../theme/theme';
+import { languageMetadata } from '../types/language';
 
 import type { LanguageCode } from '../types/language';
 import type { Phrase } from '../types/phrase';
 
 type PhraseCardProps = {
+  helperLanguage: LanguageCode;
   item: Phrase;
   language: LanguageCode;
   isFavorite: boolean;
@@ -16,6 +18,7 @@ type PhraseCardProps = {
 };
 
 function PhraseCard({
+  helperLanguage,
   item,
   language,
   isFavorite,
@@ -23,6 +26,8 @@ function PhraseCard({
   onToggleFavorite,
 }: PhraseCardProps) {
   const english = item.translations.en;
+  const helperTranslation = item.translations[helperLanguage] ?? english;
+  const helperLanguageLabel = languageMetadata[helperLanguage].label;
   const translation = item.translations[language] ?? english;
   const category = categoryMetadata[item.category];
 
@@ -34,7 +39,9 @@ function PhraseCard({
       <View style={styles.topRow}>
         <View style={styles.textWrap}>
           <Text style={styles.phrase}>{translation.text}</Text>
-          <Text style={styles.translation}>English: {english.text}</Text>
+          <Text style={styles.translation}>
+            {helperLanguageLabel}: {helperTranslation.text}
+          </Text>
         </View>
         <Pressable
           hitSlop={10}

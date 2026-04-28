@@ -15,12 +15,10 @@ import type { LanguageCode } from '../types/language';
 
 export type LanguagePickerTarget = 'learning' | 'native';
 
-export type BottomSheetContent =
-  | {
-      type: 'language-picker';
-      target: LanguagePickerTarget;
-    }
-  | null;
+export type BottomSheetContent = {
+  type: 'language-picker';
+  target: LanguagePickerTarget;
+} | null;
 
 type AppStateContextValue = {
   bottomSheetContent: BottomSheetContent;

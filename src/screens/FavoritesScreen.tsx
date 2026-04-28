@@ -10,7 +10,8 @@ import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
 
 function FavoritesScreen() {
-  const { favoriteIds, selectedLanguage, toggleFavorite } = useAppState();
+  const { favoriteIds, nativeLanguage, selectedLanguage, toggleFavorite } =
+    useAppState();
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
   const selectedLanguageOption = languageMetadata[selectedLanguage];
 
@@ -57,6 +58,7 @@ function FavoritesScreen() {
         }
         renderItem={({ item }) => (
           <PhraseCard
+            helperLanguage={nativeLanguage}
             isFavorite
             item={item}
             language={selectedLanguage}
@@ -71,6 +73,7 @@ function FavoritesScreen() {
         isFavorite={
           activePhrase ? favoriteIds.includes(activePhrase.id) : false
         }
+        helperLanguage={nativeLanguage}
         language={selectedLanguage}
         onClose={() => setActivePhraseId(null)}
         onToggleFavorite={() => {

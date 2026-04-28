@@ -2,12 +2,14 @@ import React from 'react';
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
 
 import { theme, withAlpha } from '../../theme/theme';
+import { languageMetadata } from '../../types/language';
 import type { LanguageCode } from '../../types/language';
 import type { Phrase } from '../../types/phrase';
 import { resolvePracticeLocale } from './practiceUtils';
 import SpeakingCard from './SpeakingCard';
 
 type PracticeModalProps = {
+  helperLanguage: LanguageCode;
   visible: boolean;
   phrase: Phrase | null;
   language: LanguageCode;
@@ -17,6 +19,7 @@ type PracticeModalProps = {
 };
 
 function PracticeModal({
+  helperLanguage,
   visible,
   phrase,
   language,
@@ -29,6 +32,8 @@ function PracticeModal({
   }
 
   const english = phrase.translations.en;
+  const helperLabel = languageMetadata[helperLanguage].label;
+  const helperTranslation = phrase.translations[helperLanguage] ?? english;
   const translation = phrase.translations[language] ?? english;
 
   return (
@@ -43,7 +48,8 @@ function PracticeModal({
 
         <View style={styles.cardWrap}>
           <SpeakingCard
-            englishText={english.text}
+            helperLabel={helperLabel}
+            helperText={helperTranslation.text}
             isFavorite={isFavorite}
             locale={resolvePracticeLocale(language)}
             onClose={onClose}
