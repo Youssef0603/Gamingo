@@ -4,7 +4,6 @@ import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 import PhraseCard from '../components/PhraseCard';
 import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
-import { phrases } from '../data/phrases';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
 import AddPhraseModal from '../features/phrases/AddPhraseModal';
 import { showInterstitialBefore } from '../features/ads/mobileAds';
@@ -16,9 +15,12 @@ const INLINE_AD_FREQUENCY = 3;
 
 function FavoritesScreen() {
   const {
+    addPhraseToFavorites,
+    allPhrases,
     favoriteFilterLanguage,
     favoriteLanguageOptions,
     getFavoriteIdsForLanguage,
+    getPhraseById,
     isFavorite,
     nativeLanguage,
     openLanguagePicker,
@@ -33,12 +35,15 @@ function FavoritesScreen() {
     : null;
 
   const savedPhrases = useMemo(
-    () => phrases.filter(item => favoriteIds.includes(item.id)),
-    [favoriteIds],
+    () =>
+      favoriteIds
+        .map(phraseId => getPhraseById(phraseId))
+        .filter((phrase): phrase is NonNullable<typeof phrase> => Boolean(phrase)),
+    [favoriteIds, getPhraseById],
   );
   const activePhrase = useMemo(
-    () => phrases.find(item => item.id === activePhraseId) ?? null,
-    [activePhraseId],
+    () => (activePhraseId ? getPhraseById(activePhraseId) : null),
+    [activePhraseId, getPhraseById],
   );
 
   useEffect(() => {
@@ -179,9 +184,12 @@ function FavoritesScreen() {
         helperLanguage={nativeLanguage}
         isFavorite={isFavorite}
         language={favoriteFilterLanguage}
-        onAddPhrase={phraseId => toggleFavorite(phraseId, favoriteFilterLanguage)}
+        onAddPhrase={phrase =>
+          addPhraseToFavorites(phrase, favoriteFilterLanguage)
+        }
         onClose={() => setIsLookupModalVisible(false)}
         onOpenPhrase={openPhrase}
+        phrases={allPhrases}
         visible={isLookupModalVisible}
       />
     </Screen>

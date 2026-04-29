@@ -8,10 +8,12 @@ import React, {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
+import { phrases } from '../data/phrases';
 import { theme } from '../theme/theme';
 import { supportedLanguageCodes } from '../types/language';
 
 import type { LanguageCode } from '../types/language';
+import type { Phrase, PhraseTranslation } from '../types/phrase';
 
 export type LanguagePickerTarget = 'favorites' | 'learning' | 'native';
 
@@ -23,12 +25,15 @@ export type BottomSheetContent = {
 } | null;
 
 type AppStateContextValue = {
+  addPhraseToFavorites: (phrase: Phrase, language?: LanguageCode) => void;
+  allPhrases: Phrase[];
   bottomSheetContent: BottomSheetContent;
   closeBottomSheet: () => void;
   favoriteIds: string[];
   favoriteFilterLanguage: LanguageCode;
   favoriteLanguageOptions: LanguageCode[];
   getFavoriteIdsForLanguage: (language: LanguageCode) => string[];
+  getPhraseById: (phraseId: string) => Phrase | null;
   isFavorite: (phraseId: string, language?: LanguageCode) => boolean;
   nativeLanguage: LanguageCode;
   openLanguagePicker: (target: LanguagePickerTarget) => void;
@@ -40,6 +45,7 @@ type AppStateContextValue = {
 };
 
 type PersistedAppState = {
+  customPhrases?: Phrase[];
   favoriteFilterLanguage: LanguageCode;
   favoriteIds?: string[];
   favoriteIdsByLanguage: FavoriteIdsByLanguage;
@@ -93,6 +99,42 @@ function sanitizeFavoriteIdsByLanguage(value: unknown): FavoriteIdsByLanguage {
   return nextValue;
 }
 
+function isPhraseTranslation(value: unknown): value is PhraseTranslation {
+  return Boolean(
+    value &&
+      typeof value === 'object' &&
+      'text' in value &&
+      'meaning' in value &&
+      typeof value.text === 'string' &&
+      typeof value.meaning === 'string',
+  );
+}
+
+function sanitizeCustomPhrases(value: unknown): Record<string, Phrase> {
+  if (!Array.isArray(value)) {
+    return {};
+  }
+
+  return value.reduce<Record<string, Phrase>>((accumulator, item) => {
+    if (
+      !item ||
+      typeof item !== 'object' ||
+      typeof item.id !== 'string' ||
+      typeof item.category !== 'string' ||
+      !item.translations ||
+      typeof item.translations !== 'object' ||
+      !isPhraseTranslation((item.translations as Phrase['translations']).en)
+    ) {
+      return accumulator;
+    }
+
+    const phrase = item as Phrase;
+
+    accumulator[phrase.id] = phrase;
+    return accumulator;
+  }, {});
+}
+
 function getFavoriteLanguageOptions(
   favoriteIdsByLanguage: FavoriteIdsByLanguage,
 ): LanguageCode[] {
@@ -106,6 +148,8 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     useState<BottomSheetContent>(null);
   const [favoriteIdsByLanguage, setFavoriteIdsByLanguage] =
     useState<FavoriteIdsByLanguage>({});
+  const [customPhrasesById, setCustomPhrasesById] =
+    useState<Record<string, Phrase>>({});
   const [favoriteFilterLanguage, setFavoriteFilterLanguage] =
     useState<LanguageCode>('en');
   const [nativeLanguage, setNativeLanguage] = useState<LanguageCode>('en');
@@ -138,11 +182,15 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         const nextFavoriteIdsByLanguage = sanitizeFavoriteIdsByLanguage(
           parsedValue.favoriteIdsByLanguage,
         );
+        const nextCustomPhrasesById = sanitizeCustomPhrases(
+          parsedValue.customPhrases,
+        );
         const migratedFavoriteIds = sanitizeFavoriteIds(parsedValue.favoriteIds);
 
         setNativeLanguage(nextNativeLanguage);
         setSelectedLanguage(nextSelectedLanguage);
         setFavoriteFilterLanguage(nextFavoriteFilterLanguage);
+        setCustomPhrasesById(nextCustomPhrasesById);
 
         if (Object.keys(nextFavoriteIdsByLanguage).length > 0) {
           setFavoriteIdsByLanguage(nextFavoriteIdsByLanguage);
@@ -177,6 +225,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         await AsyncStorage.setItem(
           APP_STATE_STORAGE_KEY,
           JSON.stringify({
+            customPhrases: Object.values(customPhrasesById),
             favoriteFilterLanguage,
             favoriteIdsByLanguage,
             nativeLanguage,
@@ -190,6 +239,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
 
     persistAppState();
   }, [
+    customPhrasesById,
     favoriteFilterLanguage,
     favoriteIdsByLanguage,
     isHydrated,
@@ -222,9 +272,15 @@ export function AppStateProvider({ children }: PropsWithChildren) {
 
   const favoriteIds = favoriteIdsByLanguage[selectedLanguage] ?? [];
   const favoriteLanguageOptions = getFavoriteLanguageOptions(favoriteIdsByLanguage);
+  const allPhrases = [...phrases, ...Object.values(customPhrasesById)];
 
   const getFavoriteIdsForLanguage = (language: LanguageCode) =>
     favoriteIdsByLanguage[language] ?? [];
+
+  const getPhraseById = (phraseId: string) =>
+    customPhrasesById[phraseId] ??
+    phrases.find(phrase => phrase.id === phraseId) ??
+    null;
 
   const isFavorite = (phraseId: string, language = selectedLanguage) =>
     getFavoriteIdsForLanguage(language).includes(phraseId);
@@ -251,6 +307,30 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     });
   };
 
+  const addPhraseToFavorites = (phrase: Phrase, language = selectedLanguage) => {
+    const staticPhraseExists = phrases.some(item => item.id === phrase.id);
+
+    if (!staticPhraseExists) {
+      setCustomPhrasesById(current => ({
+        ...current,
+        [phrase.id]: phrase,
+      }));
+    }
+
+    setFavoriteIdsByLanguage(current => {
+      const currentLanguageFavorites = current[language] ?? [];
+
+      if (currentLanguageFavorites.includes(phrase.id)) {
+        return current;
+      }
+
+      return {
+        ...current,
+        [language]: [...currentLanguageFavorites, phrase.id],
+      };
+    });
+  };
+
   const openLanguagePicker = (target: LanguagePickerTarget) => {
     setBottomSheetContent({ type: 'language-picker', target });
   };
@@ -270,12 +350,15 @@ export function AppStateProvider({ children }: PropsWithChildren) {
   return (
     <AppStateContext.Provider
       value={{
+        addPhraseToFavorites,
+        allPhrases,
         bottomSheetContent,
         closeBottomSheet,
         favoriteIds,
         favoriteFilterLanguage,
         favoriteLanguageOptions,
         getFavoriteIdsForLanguage,
+        getPhraseById,
         isFavorite,
         nativeLanguage,
         openLanguagePicker,

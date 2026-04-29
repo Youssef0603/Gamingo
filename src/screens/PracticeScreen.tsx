@@ -11,7 +11,6 @@ import PhraseCard from '../components/PhraseCard';
 import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
 import { categoryMetadata } from '../data/categories';
-import { phrases } from '../data/phrases';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
 import { showInterstitialBefore } from '../features/ads/mobileAds';
 import AddPhraseModal from '../features/phrases/AddPhraseModal';
@@ -24,11 +23,6 @@ import type { PhraseCategory } from '../types/phrase';
 type CategoryFilter = PhraseCategory | 'all';
 
 const INLINE_AD_FREQUENCY = 3;
-
-const availableCategories = Array.from(
-  new Set(phrases.map(item => item.category)),
-) as PhraseCategory[];
-const categoryOptions: CategoryFilter[] = ['all', ...availableCategories];
 
 type FilterChipProps = {
   label: string;
@@ -55,6 +49,9 @@ function FilterChip({ label, selected, onPress }: FilterChipProps) {
 
 function PracticeScreen() {
   const {
+    addPhraseToFavorites,
+    allPhrases,
+    getPhraseById,
     isFavorite,
     nativeLanguage,
     openLanguagePicker,
@@ -69,13 +66,18 @@ function PracticeScreen() {
   const filteredPhrases = useMemo(
     () =>
       selectedCategory === 'all'
-        ? phrases
-        : phrases.filter(item => item.category === selectedCategory),
-    [selectedCategory],
+        ? allPhrases
+        : allPhrases.filter(item => item.category === selectedCategory),
+    [allPhrases, selectedCategory],
   );
   const activePhrase = useMemo(
-    () => phrases.find(item => item.id === activePhraseId) ?? null,
-    [activePhraseId],
+    () => (activePhraseId ? getPhraseById(activePhraseId) : null),
+    [activePhraseId, getPhraseById],
+  );
+  const categoryOptions = useMemo(
+    () =>
+      ['all', ...new Set(allPhrases.map(item => item.category))] as CategoryFilter[],
+    [allPhrases],
   );
 
   useEffect(() => {
@@ -265,9 +267,10 @@ function PracticeScreen() {
         helperLanguage={nativeLanguage}
         isFavorite={isFavorite}
         language={selectedLanguage}
-        onAddPhrase={phraseId => toggleFavorite(phraseId)}
+        onAddPhrase={phrase => addPhraseToFavorites(phrase)}
         onClose={() => setIsLookupModalVisible(false)}
         onOpenPhrase={openPhrase}
+        phrases={allPhrases}
         visible={isLookupModalVisible}
       />
     </Screen>

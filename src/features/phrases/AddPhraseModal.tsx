@@ -10,7 +10,7 @@ import {
 
 import PhraseCard from '../../components/PhraseCard';
 import { Icon } from '../../components/ui';
-import { phrases } from '../../data/phrases';
+import { buildTranslatedCustomPhrase } from '../../services';
 import { theme, withAlpha } from '../../theme/theme';
 import { languageMetadata } from '../../types/language';
 
@@ -22,9 +22,10 @@ type AddPhraseModalProps = {
   language: LanguageCode;
   helperLanguage: LanguageCode;
   isFavorite: (phraseId: string, language?: LanguageCode) => boolean;
-  onAddPhrase: (phraseId: string) => void;
+  onAddPhrase: (phrase: Phrase) => void;
   onClose: () => void;
   onOpenPhrase: (phraseId: string) => void;
+  phrases: Phrase[];
 };
 
 function normalizeLookupValue(value: string) {
@@ -37,7 +38,7 @@ function normalizeLookupValue(value: string) {
     .replace(/\s+/g, ' ');
 }
 
-function findPhraseByQuery(query: string) {
+function findPhraseByQuery(query: string, phrases: Phrase[]) {
   const normalizedQuery = normalizeLookupValue(query);
 
   if (!normalizedQuery) {
@@ -65,10 +66,13 @@ function AddPhraseModal({
   onAddPhrase,
   onClose,
   onOpenPhrase,
+  phrases,
 }: AddPhraseModalProps) {
   const [lookupQuery, setLookupQuery] = useState('');
   const [lookupResult, setLookupResult] = useState<Phrase | null>(null);
   const [lookupFeedback, setLookupFeedback] = useState<string | null>(null);
+  const [isLookingUp, setIsLookingUp] = useState(false);
+  const [lookupSource, setLookupSource] = useState<'api' | 'data' | null>(null);
 
   const isFoundPhraseSaved = useMemo(
     () => (lookupResult ? isFavorite(lookupResult.id, language) : false),
@@ -82,7 +86,7 @@ function AddPhraseModal({
     onClose();
   };
 
-  const handleLookup = () => {
+  const handleLookup = async () => {
     const trimmedQuery = lookupQuery.trim();
 
     if (!trimmedQuery) {
@@ -91,16 +95,37 @@ function AddPhraseModal({
       return;
     }
 
-    const phraseMatch = findPhraseByQuery(trimmedQuery);
+    const phraseMatch = findPhraseByQuery(trimmedQuery, phrases);
 
-    if (!phraseMatch) {
-      setLookupResult(null);
-      setLookupFeedback('No match found in the current phrase data.');
+    if (phraseMatch) {
+      setLookupResult(phraseMatch);
+      setLookupFeedback(null);
+      setLookupSource('data');
       return;
     }
 
-    setLookupResult(phraseMatch);
-    setLookupFeedback(null);
+    setIsLookingUp(true);
+
+    try {
+      const translatedPhrase = await buildTranslatedCustomPhrase({
+        destinationLanguage: language,
+        text: trimmedQuery,
+      });
+
+      setLookupResult(translatedPhrase);
+      setLookupFeedback(null);
+      setLookupSource('api');
+    } catch (error) {
+      setLookupResult(null);
+      setLookupSource(null);
+      setLookupFeedback(
+        error instanceof Error
+          ? error.message
+          : 'Could not translate that phrase right now.',
+      );
+    } finally {
+      setIsLookingUp(false);
+    }
   };
 
   const handleAddPhrase = () => {
@@ -108,7 +133,7 @@ function AddPhraseModal({
       return;
     }
 
-    onAddPhrase(lookupResult.id);
+    onAddPhrase(lookupResult);
     handleClose();
   };
 
@@ -148,6 +173,9 @@ function AddPhraseModal({
               if (lookupFeedback) {
                 setLookupFeedback(null);
               }
+              if (lookupSource) {
+                setLookupSource(null);
+              }
             }}
             onSubmitEditing={handleLookup}
             placeholder="Try: Behind you!"
@@ -163,7 +191,9 @@ function AddPhraseModal({
               pressed && styles.buttonPressed,
             ]}
           >
-            <Text style={styles.lookupActionText}>Find</Text>
+            <Text style={styles.lookupActionText}>
+              {isLookingUp ? 'Checking...' : 'Find'}
+            </Text>
           </Pressable>
 
           {lookupFeedback ? (
@@ -173,6 +203,9 @@ function AddPhraseModal({
           {lookupResult ? (
             <View style={styles.lookupResult}>
               <Text style={styles.lookupResultLabel}>Found in your data</Text>
+              {lookupSource === 'api' ? (
+                <Text style={styles.lookupApiLabel}>Translated with API</Text>
+              ) : null}
               <PhraseCard
                 helperLanguage={helperLanguage}
                 isFavorite={isFoundPhraseSaved}
@@ -181,7 +214,7 @@ function AddPhraseModal({
                 onPress={() => onOpenPhrase(lookupResult.id)}
                 onToggleFavorite={() => {
                   if (!isFoundPhraseSaved) {
-                    onAddPhrase(lookupResult.id);
+                    onAddPhrase(lookupResult);
                   }
                 }}
               />
@@ -293,6 +326,11 @@ const styles = StyleSheet.create({
     color: theme.colors.primary,
     fontSize: 13,
     fontWeight: '700',
+    marginBottom: theme.spacing.sm,
+  },
+  lookupApiLabel: {
+    color: theme.colors.mutedText,
+    fontSize: 12,
     marginBottom: theme.spacing.sm,
   },
   addResultButton: {
