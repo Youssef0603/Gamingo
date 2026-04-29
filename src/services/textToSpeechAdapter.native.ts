@@ -4,8 +4,12 @@ import Tts from 'react-native-tts';
 import type { TextToSpeechAdapter, TextToSpeechRequest } from './textToSpeech';
 
 const TTS_DEBUG_PREFIX = '[practice][tts]';
+const PRACTICE_TTS_RATE = 0.35;
 type TtsEventName = 'tts-cancel' | 'tts-error' | 'tts-finish';
 type TtsSubscription = { remove: () => void };
+type TtsSpeakOptions = {
+  rate?: number;
+};
 
 function logTts(message: string, payload?: unknown) {
   if (payload === undefined) {
@@ -168,7 +172,11 @@ export function createPlatformTextToSpeechAdapter(): TextToSpeechAdapter {
           addTtsListener('tts-error', handleError),
         ];
 
-        Promise.resolve(Tts.speak(text))
+        Promise.resolve(
+          Tts.speak(text, {
+            rate: PRACTICE_TTS_RATE,
+          } as TtsSpeakOptions as never),
+        )
           .then(utteranceId => {
             activeUtteranceId = utteranceId;
             logTts('speak:start', { language, text, utteranceId });

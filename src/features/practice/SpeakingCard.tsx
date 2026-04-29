@@ -28,14 +28,16 @@ function getPracticeMutedTone(kind: PracticeFlashState['kind']) {
 }
 
 function getPracticeFlash(feedback: PracticeFeedback): PracticeFlashState {
-  const isCorrect =
-    Boolean(feedback.normalizedExpected) &&
-    feedback.normalizedExpected === feedback.normalizedSpoken;
+  const isSuccessfulAttempt =
+    feedback.label === 'Perfect' || feedback.label === 'Close';
 
-  if (isCorrect) {
+  if (isSuccessfulAttempt) {
     return {
       kind: 'success',
-      message: 'Correct. Nice rep.',
+      message:
+        feedback.label === 'Perfect'
+          ? 'Correct. Nice rep.'
+          : 'Close enough. Count it.',
     };
   }
 

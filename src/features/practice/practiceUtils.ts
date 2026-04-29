@@ -138,7 +138,7 @@ export function getPracticeFeedbackLabel(score: number) {
     return 'Perfect';
   }
 
-  if (score >= 0.65) {
+  if (score >= 0.75) {
     return 'Close';
   }
 
@@ -172,7 +172,7 @@ export function getPracticeFeedbackMessage(label: PracticeFeedbackLabel) {
   }
 
   if (label === 'Close') {
-    return 'Close rep. Tighten the wording and run it once more.';
+    return 'Good rep. You were close enough for a pass.';
   }
 
   return 'Try again and match the key words more closely.';
