@@ -6,6 +6,11 @@ import {
 } from 'react-native-google-mobile-ads';
 import mobileAds from 'react-native-google-mobile-ads';
 
+// Flip this to true when you want to test ads during development.
+const SHOW_ADS_IN_DEVELOPMENT = false;
+
+export const ADS_ENABLED = !__DEV__ || SHOW_ADS_IN_DEVELOPMENT;
+
 const productionBannerUnitIds = {
   android: '',
   ios: '',
@@ -41,6 +46,10 @@ function getProductionInterstitialAdUnitId() {
 }
 
 export function getBannerAdUnitId() {
+  if (!ADS_ENABLED) {
+    return null;
+  }
+
   if (__DEV__) {
     return TestIds.ADAPTIVE_BANNER;
   }
@@ -49,6 +58,10 @@ export function getBannerAdUnitId() {
 }
 
 function getInterstitialAdUnitId() {
+  if (!ADS_ENABLED) {
+    return null;
+  }
+
   if (__DEV__) {
     return TestIds.INTERSTITIAL;
   }
@@ -128,6 +141,10 @@ export function showInterstitialBefore(action: () => void) {
 }
 
 export function initializeGoogleMobileAds() {
+  if (!ADS_ENABLED) {
+    return Promise.resolve(null);
+  }
+
   if (!initializationPromise) {
     initializationPromise = mobileAds()
       .setRequestConfiguration({
