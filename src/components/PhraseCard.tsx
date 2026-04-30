@@ -13,6 +13,7 @@ type PhraseCardProps = {
   item: Phrase;
   language: LanguageCode;
   isFavorite: boolean;
+  onDelete?: () => void;
   onPress: () => void;
   onToggleFavorite: () => void;
 };
@@ -22,6 +23,7 @@ function PhraseCard({
   item,
   language,
   isFavorite,
+  onDelete,
   onPress,
   onToggleFavorite,
 }: PhraseCardProps) {
@@ -43,24 +45,42 @@ function PhraseCard({
             {helperLanguageLabel}: {helperTranslation.text}
           </Text>
         </View>
-        <Pressable
-          hitSlop={10}
-          onPress={event => {
-            event.stopPropagation();
-            onToggleFavorite();
-          }}
-          style={({ pressed }) => [
-            styles.favoriteButton,
-            isFavorite && styles.favoriteButtonOn,
-            pressed && styles.favoriteButtonPressed,
-          ]}
-        >
-          <Text
-            style={[styles.favoriteText, isFavorite && styles.favoriteTextOn]}
+        <View style={styles.actionRow}>
+          {onDelete ? (
+            <Pressable
+              hitSlop={10}
+              onPress={event => {
+                event.stopPropagation();
+                onDelete();
+              }}
+              style={({ pressed }) => [
+                styles.deleteButton,
+                pressed && styles.favoriteButtonPressed,
+              ]}
+            >
+              <Text style={styles.deleteText}>Delete</Text>
+            </Pressable>
+          ) : null}
+
+          <Pressable
+            hitSlop={10}
+            onPress={event => {
+              event.stopPropagation();
+              onToggleFavorite();
+            }}
+            style={({ pressed }) => [
+              styles.favoriteButton,
+              isFavorite && styles.favoriteButtonOn,
+              pressed && styles.favoriteButtonPressed,
+            ]}
           >
-            {isFavorite ? 'Saved' : 'Save'}
-          </Text>
-        </Pressable>
+            <Text
+              style={[styles.favoriteText, isFavorite && styles.favoriteTextOn]}
+            >
+              {isFavorite ? 'Saved' : 'Save'}
+            </Text>
+          </Pressable>
+        </View>
       </View>
 
       <View style={styles.bottomRow}>
@@ -97,6 +117,11 @@ const styles = StyleSheet.create({
   textWrap: {
     flex: 1,
   },
+  actionRow: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    gap: theme.spacing.xs,
+  },
   phrase: {
     fontSize: 18,
     fontWeight: '700',
@@ -121,6 +146,19 @@ const styles = StyleSheet.create({
   },
   favoriteButtonPressed: {
     opacity: 0.85,
+  },
+  deleteButton: {
+    backgroundColor: withAlpha(theme.colors.danger ?? '#D14D4D', 0.08),
+    borderColor: withAlpha(theme.colors.danger ?? '#D14D4D', 0.2),
+    borderRadius: theme.radius.pill,
+    borderWidth: 1,
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+  },
+  deleteText: {
+    color: theme.colors.danger ?? '#D14D4D',
+    fontSize: 12,
+    fontWeight: '600',
   },
   favoriteText: {
     color: theme.colors.primary,

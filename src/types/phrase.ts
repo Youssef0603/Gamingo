@@ -10,7 +10,8 @@ export type PhraseCategory =
   | 'teamwork'
   | 'slang'
   | 'toxic'
-  | 'antiToxic';
+  | 'antiToxic'
+  | 'custom';
 
 export interface PhraseTranslation {
   text: string;
