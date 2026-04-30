@@ -57,6 +57,11 @@ export const categoryMetadata: Record<PhraseCategory, CategoryMetadata> = {
     description: 'Calmer alternatives that keep comms useful and respectful.',
     icon: '🛡️',
   },
+  custom: {
+    title: 'Custom',
+    description: 'Words you added yourself for the current language setup.',
+    icon: '✨',
+  },
 };
 
 export const featuredCategories: PhraseCategory[] = [

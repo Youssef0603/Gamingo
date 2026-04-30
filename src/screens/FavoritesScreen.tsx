@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Alert, FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import PhraseCard from '../components/PhraseCard';
 import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
-import AddPhraseModal from '../features/phrases/AddPhraseModal';
 import { showInterstitialBefore } from '../features/ads/mobileAds';
+import AddPhraseModal from '../features/phrases/AddPhraseModal';
 import PracticeModal from '../features/practice/PracticeModal';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
@@ -16,7 +16,7 @@ const INLINE_AD_FREQUENCY = 3;
 function FavoritesScreen() {
   const {
     addPhraseToFavorites,
-    allPhrases,
+    deleteCustomPhrase,
     favoriteFilterLanguage,
     favoriteLanguageOptions,
     getFavoriteIdsForLanguage,
@@ -24,6 +24,7 @@ function FavoritesScreen() {
     isFavorite,
     nativeLanguage,
     openLanguagePicker,
+    phrases,
     toggleFavorite,
   } = useAppState();
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
@@ -56,6 +57,22 @@ function FavoritesScreen() {
     showInterstitialBefore(() => {
       setActivePhraseId(phraseId);
     });
+  };
+
+  const confirmDeletePhrase = (phrase: (typeof savedPhrases)[number]) => {
+    const phraseLabel =
+      (phrase.translations[nativeLanguage] ?? phrase.translations.en).text;
+
+    Alert.alert('Delete custom word?', `Remove "${phraseLabel}" from Custom?`, [
+      { text: 'Cancel', style: 'cancel' },
+      {
+        text: 'Delete',
+        style: 'destructive',
+        onPress: () => {
+          deleteCustomPhrase(phrase.id);
+        },
+      },
+    ]);
   };
 
   return (
@@ -149,6 +166,11 @@ function FavoritesScreen() {
               isFavorite={isFavorite(item.id, favoriteFilterLanguage)}
               item={item}
               language={favoriteFilterLanguage}
+              onDelete={
+                item.category === 'custom'
+                  ? () => confirmDeletePhrase(item)
+                  : undefined
+              }
               onPress={() => openPhrase(item.id)}
               onToggleFavorite={() =>
                 toggleFavorite(item.id, favoriteFilterLanguage)
@@ -184,12 +206,13 @@ function FavoritesScreen() {
         helperLanguage={nativeLanguage}
         isFavorite={isFavorite}
         language={favoriteFilterLanguage}
+        mode="favorites"
         onAddPhrase={phrase =>
           addPhraseToFavorites(phrase, favoriteFilterLanguage)
         }
         onClose={() => setIsLookupModalVisible(false)}
         onOpenPhrase={openPhrase}
-        phrases={allPhrases}
+        phrases={phrases}
         visible={isLookupModalVisible}
       />
     </Screen>

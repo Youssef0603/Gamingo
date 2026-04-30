@@ -1,5 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
+  Alert,
   Pressable,
   FlatList,
   ScrollView,
@@ -18,7 +19,7 @@ import PracticeModal from '../features/practice/PracticeModal';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
 
-import type { PhraseCategory } from '../types/phrase';
+import type { Phrase, PhraseCategory } from '../types/phrase';
 
 type CategoryFilter = PhraseCategory | 'all';
 
@@ -49,12 +50,12 @@ function FilterChip({ label, selected, onPress }: FilterChipProps) {
 
 function PracticeScreen() {
   const {
-    addPhraseToFavorites,
-    allPhrases,
-    getPhraseById,
+    addCustomPhrase,
+    deleteCustomPhrase,
     isFavorite,
     nativeLanguage,
     openLanguagePicker,
+    phrases,
     selectedLanguage,
     toggleFavorite,
   } = useAppState();
@@ -62,22 +63,33 @@ function PracticeScreen() {
     useState<CategoryFilter>('all');
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
   const [isLookupModalVisible, setIsLookupModalVisible] = useState(false);
+  const [pendingScrollPhraseId, setPendingScrollPhraseId] = useState<
+    string | null
+  >(null);
+  const [pendingOpenPhraseId, setPendingOpenPhraseId] = useState<string | null>(
+    null,
+  );
+  const listRef = useRef<FlatList<Phrase>>(null);
+
+  const availableCategories = useMemo(
+    () => Array.from(new Set(phrases.map(item => item.category))),
+    [phrases],
+  ) as PhraseCategory[];
+  const categoryOptions = useMemo<CategoryFilter[]>(
+    () => ['all', ...availableCategories],
+    [availableCategories],
+  );
 
   const filteredPhrases = useMemo(
     () =>
       selectedCategory === 'all'
-        ? allPhrases
-        : allPhrases.filter(item => item.category === selectedCategory),
-    [allPhrases, selectedCategory],
+        ? phrases
+        : phrases.filter(item => item.category === selectedCategory),
+    [phrases, selectedCategory],
   );
   const activePhrase = useMemo(
-    () => (activePhraseId ? getPhraseById(activePhraseId) : null),
-    [activePhraseId, getPhraseById],
-  );
-  const categoryOptions = useMemo(
-    () =>
-      ['all', ...new Set(allPhrases.map(item => item.category))] as CategoryFilter[],
-    [allPhrases],
+    () => phrases.find(item => item.id === activePhraseId) ?? null,
+    [activePhraseId, phrases],
   );
 
   useEffect(() => {
@@ -90,6 +102,37 @@ function PracticeScreen() {
     }
   }, [activePhrase, selectedCategory]);
 
+  useEffect(() => {
+    if (!pendingScrollPhraseId) {
+      return;
+    }
+
+    const targetIndex = filteredPhrases.findIndex(
+      item => item.id === pendingScrollPhraseId,
+    );
+
+    if (targetIndex === -1) {
+      return;
+    }
+
+    const timeoutId = setTimeout(() => {
+      listRef.current?.scrollToIndex({
+        animated: true,
+        index: targetIndex,
+        viewPosition: 0.2,
+      });
+
+      if (pendingOpenPhraseId === pendingScrollPhraseId) {
+        openPhrase(pendingOpenPhraseId);
+        setPendingOpenPhraseId(null);
+      }
+
+      setPendingScrollPhraseId(null);
+    }, 80);
+
+    return () => clearTimeout(timeoutId);
+  }, [filteredPhrases, pendingOpenPhraseId, pendingScrollPhraseId]);
+
   const nativeLanguageOption = languageMetadata[nativeLanguage];
   const selectedLanguageOption = languageMetadata[selectedLanguage];
   const openPhrase = (phraseId: string) => {
@@ -98,9 +141,36 @@ function PracticeScreen() {
     });
   };
 
+  const showPhraseInList = (phrase: Phrase) => {
+    setSelectedCategory(phrase.category);
+    setPendingScrollPhraseId(phrase.id);
+    setPendingOpenPhraseId(phrase.id);
+  };
+
+  const confirmDeletePhrase = (phrase: Phrase) => {
+    const phraseLabel =
+      (phrase.translations[nativeLanguage] ?? phrase.translations.en).text;
+
+    Alert.alert(
+      'Delete custom word?',
+      `Remove "${phraseLabel}" from Custom?`,
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Delete',
+          style: 'destructive',
+          onPress: () => {
+            deleteCustomPhrase(phrase.id);
+          },
+        },
+      ],
+    );
+  };
+
   return (
     <Screen padded={false} edges={['top']}>
       <FlatList
+        ref={listRef}
         contentContainerStyle={styles.content}
         data={filteredPhrases}
         keyExtractor={item => item.id}
@@ -112,11 +182,24 @@ function PracticeScreen() {
         }
         ListHeaderComponent={
           <View style={styles.header}>
-            <View style={styles.heading}>
-              <Text style={styles.title}>Practice</Text>
-              <Text style={styles.subtitle}>
-                Pick a language and a category.
-              </Text>
+            <View style={styles.headingRow}>
+              <View style={styles.heading}>
+                <Text style={styles.title}>Practice</Text>
+                <Text style={styles.subtitle}>
+                  Pick a language and a category.
+                </Text>
+              </View>
+
+              <Pressable
+                onPress={() => setIsLookupModalVisible(true)}
+                style={({ pressed }) => [
+                  styles.lookupToggle,
+                  pressed && styles.lookupTogglePressed,
+                ]}
+              >
+                <Text style={styles.lookupPlus}>+</Text>
+                <Text style={styles.lookupToggleText}>Add</Text>
+              </Pressable>
             </View>
 
             <View style={styles.filterBlock}>
@@ -215,22 +298,22 @@ function PracticeScreen() {
                 {filteredPhrases.length} phrases
               </Text>
             </View>
-
-            <View style={styles.lookupHeader}>
-              <Text style={styles.filterLabel}>Add from your data</Text>
-              <Pressable
-                onPress={() => setIsLookupModalVisible(true)}
-                style={({ pressed }) => [
-                  styles.lookupToggle,
-                  pressed && styles.lookupTogglePressed,
-                ]}
-              >
-                <Text style={styles.lookupPlus}>+</Text>
-                <Text style={styles.lookupToggleText}>Add</Text>
-              </Pressable>
-            </View>
           </View>
         }
+        onScrollToIndexFailed={({ averageItemLength, index }) => {
+          listRef.current?.scrollToOffset({
+            animated: true,
+            offset: averageItemLength * index,
+          });
+
+          setTimeout(() => {
+            listRef.current?.scrollToIndex({
+              animated: true,
+              index,
+              viewPosition: 0.2,
+            });
+          }, 120);
+        }}
         renderItem={({ item, index }) => (
           <View>
             <PhraseCard
@@ -238,6 +321,11 @@ function PracticeScreen() {
               isFavorite={isFavorite(item.id)}
               item={item}
               language={selectedLanguage}
+              onDelete={
+                item.category === 'custom'
+                  ? () => confirmDeletePhrase(item)
+                  : undefined
+              }
               onPress={() => openPhrase(item.id)}
               onToggleFavorite={() => toggleFavorite(item.id)}
             />
@@ -264,13 +352,22 @@ function PracticeScreen() {
         visible={Boolean(activePhrase)}
       />
       <AddPhraseModal
-        helperLanguage={nativeLanguage}
-        isFavorite={isFavorite}
+        inputLanguage={nativeLanguage}
         language={selectedLanguage}
-        onAddPhrase={phrase => addPhraseToFavorites(phrase)}
+        mode="custom"
         onClose={() => setIsLookupModalVisible(false)}
-        onOpenPhrase={openPhrase}
-        phrases={allPhrases}
+        onCreatePhrase={(nativeText, learningText) =>
+          addCustomPhrase(
+            nativeText,
+            learningText,
+            nativeLanguage,
+            selectedLanguage,
+          )
+        }
+        onSeePhrase={phrase => {
+          showPhraseInList(phrase);
+        }}
+        phrases={phrases}
         visible={isLookupModalVisible}
       />
     </Screen>
@@ -286,8 +383,15 @@ const styles = StyleSheet.create({
   header: {
     marginBottom: theme.spacing.lg,
   },
-  heading: {
+  headingRow: {
+    alignItems: 'flex-start',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: theme.spacing.md,
     marginBottom: theme.spacing.lg,
+  },
+  heading: {
+    flex: 1,
   },
   title: {
     ...theme.typography.title,
@@ -383,12 +487,6 @@ const styles = StyleSheet.create({
     borderRadius: theme.radius.pill,
     paddingHorizontal: 12,
     paddingVertical: 7,
-  },
-  lookupHeader: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: theme.spacing.md,
   },
   lookupToggle: {
     alignItems: 'center',
