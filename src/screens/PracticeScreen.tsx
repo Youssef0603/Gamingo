@@ -208,9 +208,6 @@ function PracticeScreen() {
       <View style={styles.headingRow}>
         <View style={styles.heading}>
           <Text style={styles.title}>Practice</Text>
-          <Text style={styles.subtitle}>
-            Pick a language and a category.
-          </Text>
         </View>
 
         <Pressable
@@ -306,10 +303,6 @@ function PracticeScreen() {
             />
           ))}
         </ScrollView>
-      </View>
-
-      <View style={styles.countBadge}>
-        <Text style={styles.countText}>{filteredPhrases.length} phrases</Text>
       </View>
     </View>
   );
@@ -448,10 +441,6 @@ const styles = StyleSheet.create({
     ...theme.typography.title,
     marginBottom: theme.spacing.xs,
   },
-  subtitle: {
-    ...theme.typography.caption,
-    color: theme.colors.mutedText,
-  },
   filterBlock: {
     marginBottom: theme.spacing.md,
   },
@@ -462,7 +451,7 @@ const styles = StyleSheet.create({
     marginBottom: theme.spacing.sm,
   },
   languageFlag: {
-    fontSize: 24,
+    fontSize: 20,
   },
   languageRow: {
     flexDirection: 'row',
@@ -477,7 +466,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: theme.spacing.md,
-    paddingVertical: 12,
+    paddingVertical: 8,
   },
   languageTriggerCopy: {
     alignItems: 'center',
@@ -490,16 +479,16 @@ const styles = StyleSheet.create({
   },
   languageTriggerLabel: {
     color: theme.colors.mutedText,
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: '500',
-    marginBottom: 2,
+    marginBottom: 1,
   },
   languageTriggerPressed: {
     opacity: 0.9,
   },
   languageTriggerValue: {
     color: theme.colors.text,
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: '700',
   },
   languageTextWrap: {
@@ -532,13 +521,6 @@ const styles = StyleSheet.create({
   chipTextSelected: {
     color: '#FFFFFF',
   },
-  countBadge: {
-    alignSelf: 'flex-start',
-    backgroundColor: withAlpha(theme.colors.primary, 0.08),
-    borderRadius: theme.radius.pill,
-    paddingHorizontal: 12,
-    paddingVertical: 7,
-  },
   lookupToggle: {
     alignItems: 'center',
     backgroundColor: withAlpha(theme.colors.primary, 0.08),
@@ -563,11 +545,6 @@ const styles = StyleSheet.create({
     color: theme.colors.primary,
     fontSize: 13,
     fontWeight: '700',
-  },
-  countText: {
-    color: theme.colors.primary,
-    fontSize: 12,
-    fontWeight: '600',
   },
   sectionHeader: {
     paddingBottom: theme.spacing.sm,

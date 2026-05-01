@@ -102,9 +102,6 @@ function FavoritesScreen() {
           <View style={styles.header}>
             <View style={styles.heading}>
               <Text style={styles.title}>Favourites</Text>
-              <Text style={styles.subtitle}>
-                Saved phrases grouped by learning language.
-              </Text>
             </View>
 
             <View style={styles.filterBlock}>
@@ -239,10 +236,6 @@ const styles = StyleSheet.create({
   title: {
     ...theme.typography.title,
     marginBottom: theme.spacing.xs,
-  },
-  subtitle: {
-    ...theme.typography.caption,
-    color: theme.colors.mutedText,
   },
   filterBlock: {
     marginBottom: theme.spacing.md,
