@@ -3,6 +3,7 @@ import {
   Alert,
   Pressable,
   FlatList,
+  LayoutChangeEvent,
   SectionList,
   ScrollView,
   StyleSheet,
@@ -34,13 +35,15 @@ const INLINE_AD_FREQUENCY = 3;
 
 type FilterChipProps = {
   label: string;
+  onLayout?: (event: LayoutChangeEvent) => void;
   selected: boolean;
   onPress: () => void;
 };
 
-function FilterChip({ label, selected, onPress }: FilterChipProps) {
+function FilterChip({ label, onLayout, selected, onPress }: FilterChipProps) {
   return (
     <Pressable
+      onLayout={onLayout}
       onPress={onPress}
       style={({ pressed }) => [
         styles.chip,
@@ -70,6 +73,7 @@ function PracticeScreen() {
     useState<CategoryFilter>('all');
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
   const [isLookupModalVisible, setIsLookupModalVisible] = useState(false);
+  const [categoryViewportWidth, setCategoryViewportWidth] = useState(0);
   const [pendingScrollPhraseId, setPendingScrollPhraseId] = useState<
     string | null
   >(null);
@@ -77,6 +81,10 @@ function PracticeScreen() {
     null,
   );
   const listRef = useRef<FlatList<Phrase>>(null);
+  const categoryScrollRef = useRef<ScrollView>(null);
+  const chipLayoutsRef = useRef<
+    Partial<Record<CategoryFilter, { width: number; x: number }>>
+  >({});
 
   const availableCategories = useMemo(
     () => Array.from(new Set(phrases.map(item => item.category))),
@@ -158,8 +166,51 @@ function PracticeScreen() {
     return () => clearTimeout(timeoutId);
   }, [filteredPhrases, pendingOpenPhraseId, pendingScrollPhraseId]);
 
+  useEffect(() => {
+    const selectedChipLayout = chipLayoutsRef.current[selectedCategory];
+
+    if (!selectedChipLayout) {
+      return;
+    }
+
+    const viewportWidth = categoryViewportWidth;
+    const centeredOffset =
+      selectedChipLayout.x -
+      Math.max(0, (viewportWidth - selectedChipLayout.width) / 2);
+    const targetOffset =
+      selectedCategory === 'all' ? 0 : Math.max(0, centeredOffset);
+
+    const timeoutId = setTimeout(() => {
+      categoryScrollRef.current?.scrollTo({
+        animated: true,
+        x: targetOffset,
+        y: 0,
+      });
+    }, 0);
+
+    return () => clearTimeout(timeoutId);
+  }, [categoryViewportWidth, selectedCategory]);
+
   const nativeLanguageOption = languageMetadata[nativeLanguage];
   const selectedLanguageOption = languageMetadata[selectedLanguage];
+  const handleCategoryChipLayout =
+    (category: CategoryFilter) => (event: LayoutChangeEvent) => {
+      chipLayoutsRef.current[category] = event.nativeEvent.layout;
+
+      if (category !== selectedCategory) {
+        return;
+      }
+
+      const viewportWidth = categoryViewportWidth;
+      const { width, x } = event.nativeEvent.layout;
+      const centeredOffset = x - Math.max(0, (viewportWidth - width) / 2);
+
+      categoryScrollRef.current?.scrollTo({
+        animated: true,
+        x: category === 'all' ? 0 : Math.max(0, centeredOffset),
+        y: 0,
+      });
+    };
   const openPhrase = (phraseId: string) => {
     showInterstitialBefore(() => {
       setActivePhraseId(phraseId);
@@ -288,6 +339,10 @@ function PracticeScreen() {
       <View style={styles.filterBlock}>
         <Text style={styles.filterLabel}>Category</Text>
         <ScrollView
+          onLayout={event =>
+            setCategoryViewportWidth(event.nativeEvent.layout.width)
+          }
+          ref={categoryScrollRef}
           contentContainerStyle={styles.chipRow}
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -298,6 +353,7 @@ function PracticeScreen() {
               label={
                 category === 'all' ? 'All' : categoryMetadata[category].title
               }
+              onLayout={handleCategoryChipLayout(category)}
               onPress={() => setSelectedCategory(category)}
               selected={category === selectedCategory}
             />
