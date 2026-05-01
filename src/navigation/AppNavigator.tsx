@@ -117,7 +117,6 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     height: 74,
     paddingBottom: 10,
-    paddingTop: 10,
   },
   tabBarItem: {
     paddingVertical: 2,
