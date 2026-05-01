@@ -11,6 +11,7 @@ export type IconName =
   | 'game-controller-outline'
   | 'heart'
   | 'heart-outline'
+  | 'play-circle'
   | 'search'
   | 'volume-high';
 

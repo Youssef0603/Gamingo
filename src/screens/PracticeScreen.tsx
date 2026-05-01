@@ -18,10 +18,12 @@ import InlineBannerAd from '../features/ads/InlineBannerAd';
 import { showInterstitialBefore } from '../features/ads/mobileAds';
 import AddPhraseModal from '../features/phrases/AddPhraseModal';
 import PracticeModal from '../features/practice/PracticeModal';
+import RandomPracticeModal from '../features/practice/RandomPracticeModal';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
 import { getPhraseDisplayTranslations } from '../utils/phraseDisplay';
 
+import type { LanguageCode } from '../types/language';
 import type { Phrase, PhraseCategory } from '../types/phrase';
 
 type CategoryFilter = PhraseCategory | 'all';
@@ -32,6 +34,7 @@ type PhraseSection = {
 };
 
 const INLINE_AD_FREQUENCY = 3;
+const RANDOM_PRACTICE_COUNT = 10;
 
 type FilterChipProps = {
   label: string;
@@ -39,6 +42,41 @@ type FilterChipProps = {
   selected: boolean;
   onPress: () => void;
 };
+
+type RandomPracticeSession = {
+  id: number;
+  phrases: Phrase[];
+};
+
+function canUsePhraseInRandomPractice(
+  phrase: Phrase,
+  nativeLanguage: LanguageCode,
+  learningLanguage: LanguageCode,
+) {
+  if (phrase.category === 'custom') {
+    return (
+      phrase.customLanguages?.native === nativeLanguage &&
+      phrase.customLanguages.learning === learningLanguage &&
+      Boolean(phrase.translations[learningLanguage])
+    );
+  }
+
+  return Boolean(phrase.translations[learningLanguage]);
+}
+
+function getRandomPhraseSet(phraseList: Phrase[], count: number) {
+  const shuffledPhrases = [...phraseList];
+
+  for (let index = shuffledPhrases.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    const currentPhrase = shuffledPhrases[index];
+
+    shuffledPhrases[index] = shuffledPhrases[randomIndex];
+    shuffledPhrases[randomIndex] = currentPhrase;
+  }
+
+  return shuffledPhrases.slice(0, Math.min(count, shuffledPhrases.length));
+}
 
 function FilterChip({ label, onLayout, selected, onPress }: FilterChipProps) {
   return (
@@ -80,6 +118,8 @@ function PracticeScreen() {
   const [pendingOpenPhraseId, setPendingOpenPhraseId] = useState<string | null>(
     null,
   );
+  const [randomPracticeSession, setRandomPracticeSession] =
+    useState<RandomPracticeSession | null>(null);
   const listRef = useRef<FlatList<Phrase>>(null);
   const categoryScrollRef = useRef<ScrollView>(null);
   const chipLayoutsRef = useRef<
@@ -114,6 +154,17 @@ function PracticeScreen() {
   const activePhrase = useMemo(
     () => phrases.find(item => item.id === activePhraseId) ?? null,
     [activePhraseId, phrases],
+  );
+  const randomPracticePool = useMemo(
+    () =>
+      phrases.filter(phrase =>
+        canUsePhraseInRandomPractice(
+          phrase,
+          nativeLanguage,
+          selectedLanguage,
+        ),
+      ),
+    [nativeLanguage, phrases, selectedLanguage],
   );
 
   useEffect(() => {
@@ -221,6 +272,21 @@ function PracticeScreen() {
     setSelectedCategory(phrase.category);
     setPendingScrollPhraseId(phrase.id);
     setPendingOpenPhraseId(phrase.id);
+  };
+
+  const startRandomPracticeSession = () => {
+    if (randomPracticePool.length === 0) {
+      Alert.alert(
+        'No words ready yet',
+        'Switch languages or add custom words for this language pair first.',
+      );
+      return;
+    }
+
+    setRandomPracticeSession({
+      id: Date.now() + Math.random(),
+      phrases: getRandomPhraseSet(randomPracticePool, RANDOM_PRACTICE_COUNT),
+    });
   };
 
   const confirmDeletePhrase = (phrase: Phrase) => {
@@ -335,6 +401,19 @@ function PracticeScreen() {
           </Pressable>
         </View>
       </View>
+
+      <Pressable
+        onPress={startRandomPracticeSession}
+        style={({ pressed }) => [
+          styles.randomPracticeCard,
+          pressed && styles.randomPracticeCardPressed,
+        ]}
+      >
+        <View style={styles.randomPracticeIconWrap}>
+          <Icon color={theme.colors.primary} name="play-circle" size={18} />
+        </View>
+        <Text style={styles.randomPracticeText}>Practice random words</Text>
+      </Pressable>
 
       <View style={styles.filterBlock}>
         <Text style={styles.filterLabel}>Category</Text>
@@ -470,6 +549,17 @@ function PracticeScreen() {
         phrases={phrases}
         visible={isLookupModalVisible}
       />
+      <RandomPracticeModal
+        helperLanguage={nativeLanguage}
+        isFavorite={isFavorite}
+        language={selectedLanguage}
+        onClose={() => setRandomPracticeSession(null)}
+        onRestart={startRandomPracticeSession}
+        onToggleFavorite={phraseId => toggleFavorite(phraseId)}
+        phrases={randomPracticeSession?.phrases ?? []}
+        sessionId={randomPracticeSession?.id ?? 0}
+        visible={Boolean(randomPracticeSession)}
+      />
     </Screen>
   );
 }
@@ -499,6 +589,34 @@ const styles = StyleSheet.create({
   },
   filterBlock: {
     marginBottom: theme.spacing.md,
+  },
+  randomPracticeCard: {
+    alignItems: 'center',
+    backgroundColor: withAlpha(theme.colors.primary, 0.08),
+    borderColor: withAlpha(theme.colors.primary, 0.18),
+    borderRadius: theme.radius.md,
+    borderWidth: 1,
+    flexDirection: 'row',
+    gap: theme.spacing.sm,
+    marginBottom: theme.spacing.md,
+    paddingHorizontal: theme.spacing.md,
+    paddingVertical: 10,
+  },
+  randomPracticeCardPressed: {
+    opacity: 0.88,
+  },
+  randomPracticeIconWrap: {
+    alignItems: 'center',
+    backgroundColor: withAlpha(theme.colors.primary, 0.12),
+    borderRadius: theme.radius.pill,
+    height: 28,
+    justifyContent: 'center',
+    width: 28,
+  },
+  randomPracticeText: {
+    color: theme.colors.text,
+    fontSize: 14,
+    fontWeight: '700',
   },
   filterLabel: {
     color: theme.colors.text,

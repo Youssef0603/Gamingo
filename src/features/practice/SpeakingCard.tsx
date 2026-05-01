@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { Icon } from '../../components/ui';
@@ -9,11 +9,15 @@ import { usePractice } from './usePractice';
 import type { PracticeFeedback } from './usePractice';
 
 type SpeakingCardProps = {
+  autoPractice?: boolean;
+  closeLabel?: string;
+  embedded?: boolean;
   helperLabel: string;
   helperText: string;
   isFavorite: boolean;
   locale?: string;
   onClose: () => void;
+  onSuccessfulAttempt?: (feedback: PracticeFeedback) => void;
   onToggleFavorite: () => void;
   phrase: string;
 };
@@ -48,15 +52,20 @@ function getPracticeFlash(feedback: PracticeFeedback): PracticeFlashState {
 }
 
 function SpeakingCard({
+  autoPractice = false,
+  closeLabel = 'Close',
+  embedded = false,
   helperLabel,
   helperText,
   isFavorite,
   locale,
   onClose,
+  onSuccessfulAttempt,
   onToggleFavorite,
   phrase,
 }: SpeakingCardProps) {
   const [practiceFlash, setPracticeFlash] = useState<PracticeFlashState | null>(null);
+  const practiceFlowIdRef = useRef(0);
 
   const handleAttemptComplete = useCallback((nextFeedback: PracticeFeedback) => {
     const nextPracticeFlash = getPracticeFlash(nextFeedback);
@@ -65,8 +74,9 @@ function SpeakingCard({
 
     if (nextPracticeFlash.kind === 'success') {
       playSuccessSound().catch(() => undefined);
+      onSuccessfulAttempt?.(nextFeedback);
     }
-  }, []);
+  }, [onSuccessfulAttempt]);
 
   const {
     error,
@@ -82,9 +92,28 @@ function SpeakingCard({
     phrase,
   });
 
+  const startPracticeFlow = useCallback(async () => {
+    const flowId = practiceFlowIdRef.current + 1;
+
+    practiceFlowIdRef.current = flowId;
+    setPracticeFlash(null);
+
+    await playPhrase();
+
+    if (!autoPractice || flowId !== practiceFlowIdRef.current) {
+      return;
+    }
+
+    await speakPhrase();
+  }, [autoPractice, playPhrase, speakPhrase]);
+
   useEffect(() => {
-    playPhrase().catch(() => undefined);
-  }, [playPhrase]);
+    startPracticeFlow().catch(() => undefined);
+
+    return () => {
+      practiceFlowIdRef.current += 1;
+    };
+  }, [startPracticeFlow]);
 
   const feedbackMutedColor = practiceFlash
     ? getPracticeMutedTone(practiceFlash.kind)
@@ -95,12 +124,17 @@ function SpeakingCard({
     <View
       style={[
         styles.card,
+        embedded && styles.cardEmbedded,
         practiceFlash && [
           styles.cardWithFeedback,
           {
-            borderColor: withAlpha(feedbackMutedColor ?? theme.colors.border, 0.58),
+            borderColor: withAlpha(
+              feedbackMutedColor ?? theme.colors.border,
+              embedded ? 0 : 0.58,
+            ),
           },
         ],
+        practiceFlash && embedded && styles.cardEmbeddedWithFeedback,
       ]}
     >
       {practiceFlash ? (
@@ -133,7 +167,7 @@ function SpeakingCard({
             pressed && styles.buttonPressed,
           ]}
         >
-          <Text style={styles.secondaryButtonText}>Close</Text>
+          <Text style={styles.secondaryButtonText}>{closeLabel}</Text>
         </Pressable>
 
         <Pressable
@@ -215,8 +249,7 @@ function SpeakingCard({
         <Pressable
           disabled={isBusy}
           onPress={() => {
-            setPracticeFlash(null);
-            playPhrase().catch(() => undefined);
+            startPracticeFlow().catch(() => undefined);
           }}
           style={({ pressed }) => [
             styles.secondaryAction,
@@ -241,8 +274,23 @@ const styles = StyleSheet.create({
     padding: theme.spacing.lg,
     ...theme.shadows.card,
   },
+  cardEmbedded: {
+    backgroundColor: 'transparent',
+    borderColor: 'transparent',
+    borderWidth: 0,
+    borderRadius: 0,
+    padding: 0,
+    shadowColor: 'transparent',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0,
+    shadowRadius: 0,
+    elevation: 0,
+  },
   cardWithFeedback: {
     paddingTop: theme.spacing.xxl + theme.spacing.sm,
+  },
+  cardEmbeddedWithFeedback: {
+    paddingTop: theme.spacing.xl + theme.spacing.sm,
   },
   headerRow: {
     flexDirection: 'row',
@@ -372,10 +420,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: theme.colors.primary,
     borderRadius: theme.radius.md,
+    flex: 1,
     justifyContent: 'center',
-     paddingVertical: theme.spacing.md,
     paddingHorizontal: theme.spacing.lg,
-    flex:1
+    paddingVertical: theme.spacing.md,
   },
   primaryActionText: {
     color: theme.colors.surface,
@@ -388,10 +436,10 @@ const styles = StyleSheet.create({
     borderColor: theme.colors.border,
     borderRadius: theme.radius.md,
     borderWidth: 1,
+    flex: 1,
     justifyContent: 'center',
-    paddingVertical: theme.spacing.md,
     paddingHorizontal: theme.spacing.lg,
-    flex:1
+    paddingVertical: theme.spacing.md,
   },
   secondaryActionText: {
     color: theme.colors.text,
