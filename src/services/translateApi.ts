@@ -118,6 +118,25 @@ async function requestTranslation({
   return payload;
 }
 
+export async function translateTextWithDetectedSource({
+  destinationLanguage,
+  text,
+}: {
+  destinationLanguage: LanguageCode;
+  text: string;
+}) {
+  const translation = await requestTranslation({
+    destinationLanguage,
+    text,
+  });
+
+  return {
+    destinationText: translation['destination-text']!.trim(),
+    sourceLanguage: toAppLanguageCode(translation['source-language']),
+    sourceText: translation['source-text']!.trim(),
+  };
+}
+
 export async function buildTranslatedCustomPhrase({
   destinationLanguage,
   text,
@@ -125,10 +144,7 @@ export async function buildTranslatedCustomPhrase({
   destinationLanguage: LanguageCode;
   text: string;
 }): Promise<Phrase> {
-  const initialTranslation = await requestTranslation({
-    destinationLanguage,
-    text,
-  });
+  const initialTranslation = await requestTranslation({ destinationLanguage, text });
   const sourceText = initialTranslation['source-text']!.trim();
   const destinationText = initialTranslation['destination-text']!.trim();
   const sourceLanguageCode = initialTranslation['source-language'];

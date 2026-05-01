@@ -3,6 +3,7 @@ import {
   Alert,
   Pressable,
   FlatList,
+  SectionList,
   ScrollView,
   StyleSheet,
   Text,
@@ -18,10 +19,16 @@ import AddPhraseModal from '../features/phrases/AddPhraseModal';
 import PracticeModal from '../features/practice/PracticeModal';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
+import { getPhraseDisplayTranslations } from '../utils/phraseDisplay';
 
 import type { Phrase, PhraseCategory } from '../types/phrase';
 
 type CategoryFilter = PhraseCategory | 'all';
+type PhraseSection = {
+  data: Phrase[];
+  key: PhraseCategory;
+  title: string;
+};
 
 const INLINE_AD_FREQUENCY = 3;
 
@@ -87,6 +94,15 @@ function PracticeScreen() {
         : phrases.filter(item => item.category === selectedCategory),
     [phrases, selectedCategory],
   );
+  const phraseSections = useMemo<PhraseSection[]>(
+    () =>
+      availableCategories.map(category => ({
+        data: phrases.filter(item => item.category === category),
+        key: category,
+        title: categoryMetadata[category].title,
+      })),
+    [availableCategories, phrases],
+  );
   const activePhrase = useMemo(
     () => phrases.find(item => item.id === activePhraseId) ?? null,
     [activePhraseId, phrases],
@@ -101,6 +117,15 @@ function PracticeScreen() {
       setActivePhraseId(null);
     }
   }, [activePhrase, selectedCategory]);
+
+  useEffect(() => {
+    if (
+      selectedCategory !== 'all' &&
+      !availableCategories.includes(selectedCategory)
+    ) {
+      setSelectedCategory('all');
+    }
+  }, [availableCategories, selectedCategory]);
 
   useEffect(() => {
     if (!pendingScrollPhraseId) {
@@ -148,8 +173,12 @@ function PracticeScreen() {
   };
 
   const confirmDeletePhrase = (phrase: Phrase) => {
-    const phraseLabel =
-      (phrase.translations[nativeLanguage] ?? phrase.translations.en).text;
+    const { helperTranslation } = getPhraseDisplayTranslations(
+      phrase,
+      nativeLanguage,
+      selectedLanguage,
+    );
+    const phraseLabel = helperTranslation.text;
 
     Alert.alert(
       'Delete custom word?',
@@ -160,6 +189,13 @@ function PracticeScreen() {
           text: 'Delete',
           style: 'destructive',
           onPress: () => {
+            if (
+              selectedCategory === 'custom' &&
+              filteredPhrases.length === 1
+            ) {
+              setSelectedCategory('all');
+            }
+
             deleteCustomPhrase(phrase.id);
           },
         },
@@ -167,176 +203,191 @@ function PracticeScreen() {
     );
   };
 
-  return (
-    <Screen padded={false} edges={['top']}>
-      <FlatList
-        ref={listRef}
-        contentContainerStyle={styles.content}
-        data={filteredPhrases}
-        keyExtractor={item => item.id}
-        ListEmptyComponent={
-          <View style={styles.emptyCard}>
-            <Text style={styles.emptyTitle}>No phrases</Text>
-            <Text style={styles.emptyText}>Try another category.</Text>
-          </View>
-        }
-        ListHeaderComponent={
-          <View style={styles.header}>
-            <View style={styles.headingRow}>
-              <View style={styles.heading}>
-                <Text style={styles.title}>Practice</Text>
-                <Text style={styles.subtitle}>
-                  Pick a language and a category.
+  const renderListHeader = () => (
+    <View style={styles.header}>
+      <View style={styles.headingRow}>
+        <View style={styles.heading}>
+          <Text style={styles.title}>Practice</Text>
+          <Text style={styles.subtitle}>
+            Pick a language and a category.
+          </Text>
+        </View>
+
+        <Pressable
+          onPress={() => setIsLookupModalVisible(true)}
+          style={({ pressed }) => [
+            styles.lookupToggle,
+            pressed && styles.lookupTogglePressed,
+          ]}
+        >
+          <Text style={styles.lookupPlus}>+</Text>
+          <Text style={styles.lookupToggleText}>Add</Text>
+        </Pressable>
+      </View>
+
+      <View style={styles.filterBlock}>
+        <Text style={styles.filterLabel}>Languages</Text>
+        <View style={styles.languageRow}>
+          <Pressable
+            onPress={() => openLanguagePicker('native')}
+            style={({ pressed }) => [
+              styles.languageTrigger,
+              styles.languageTriggerHalf,
+              pressed && styles.languageTriggerPressed,
+            ]}
+          >
+            <View style={styles.languageTriggerCopy}>
+              <Text style={styles.languageFlag}>{nativeLanguageOption.flag}</Text>
+              <View style={styles.languageTextWrap}>
+                <Text style={styles.languageTriggerLabel}>Native</Text>
+                <Text
+                  numberOfLines={1}
+                  style={styles.languageTriggerValue}
+                >
+                  {nativeLanguageOption.label}
                 </Text>
               </View>
-
-              <Pressable
-                onPress={() => setIsLookupModalVisible(true)}
-                style={({ pressed }) => [
-                  styles.lookupToggle,
-                  pressed && styles.lookupTogglePressed,
-                ]}
-              >
-                <Text style={styles.lookupPlus}>+</Text>
-                <Text style={styles.lookupToggleText}>Add</Text>
-              </Pressable>
             </View>
 
-            <View style={styles.filterBlock}>
-              <Text style={styles.filterLabel}>Languages</Text>
-              <View style={styles.languageRow}>
-                <Pressable
-                  onPress={() => openLanguagePicker('native')}
-                  style={({ pressed }) => [
-                    styles.languageTrigger,
-                    styles.languageTriggerHalf,
-                    pressed && styles.languageTriggerPressed,
-                  ]}
+            <Icon
+              color={theme.colors.mutedText}
+              name="chevron-down"
+              size={18}
+            />
+          </Pressable>
+
+          <Pressable
+            onPress={() => openLanguagePicker('learning')}
+            style={({ pressed }) => [
+              styles.languageTrigger,
+              styles.languageTriggerHalf,
+              pressed && styles.languageTriggerPressed,
+            ]}
+          >
+            <View style={styles.languageTriggerCopy}>
+              <Text style={styles.languageFlag}>
+                {selectedLanguageOption.flag}
+              </Text>
+              <View style={styles.languageTextWrap}>
+                <Text style={styles.languageTriggerLabel}>Learning</Text>
+                <Text
+                  numberOfLines={1}
+                  style={styles.languageTriggerValue}
                 >
-                  <View style={styles.languageTriggerCopy}>
-                    <Text style={styles.languageFlag}>
-                      {nativeLanguageOption.flag}
-                    </Text>
-                    <View style={styles.languageTextWrap}>
-                      <Text style={styles.languageTriggerLabel}>
-                        Native
-                      </Text>
-                      <Text
-                        numberOfLines={1}
-                        style={styles.languageTriggerValue}
-                      >
-                        {nativeLanguageOption.label}
-                      </Text>
-                    </View>
-                  </View>
-
-                  <Icon
-                    color={theme.colors.mutedText}
-                    name="chevron-down"
-                    size={18}
-                  />
-                </Pressable>
-
-                <Pressable
-                  onPress={() => openLanguagePicker('learning')}
-                  style={({ pressed }) => [
-                    styles.languageTrigger,
-                    styles.languageTriggerHalf,
-                    pressed && styles.languageTriggerPressed,
-                  ]}
-                >
-                  <View style={styles.languageTriggerCopy}>
-                    <Text style={styles.languageFlag}>
-                      {selectedLanguageOption.flag}
-                    </Text>
-                    <View style={styles.languageTextWrap}>
-                      <Text style={styles.languageTriggerLabel}>
-                        Learning
-                      </Text>
-                      <Text
-                        numberOfLines={1}
-                        style={styles.languageTriggerValue}
-                      >
-                        {selectedLanguageOption.label}
-                      </Text>
-                    </View>
-                  </View>
-
-                  <Icon
-                    color={theme.colors.mutedText}
-                    name="chevron-down"
-                    size={18}
-                  />
-                </Pressable>
+                  {selectedLanguageOption.label}
+                </Text>
               </View>
             </View>
 
-            <View style={styles.filterBlock}>
-              <Text style={styles.filterLabel}>Category</Text>
-              <ScrollView
-                contentContainerStyle={styles.chipRow}
-                horizontal
-                showsHorizontalScrollIndicator={false}
-              >
-                {categoryOptions.map(category => (
-                  <FilterChip
-                    key={category}
-                    label={
-                      category === 'all'
-                        ? 'All'
-                        : categoryMetadata[category].title
-                    }
-                    onPress={() => setSelectedCategory(category)}
-                    selected={category === selectedCategory}
-                  />
-                ))}
-              </ScrollView>
-            </View>
-
-            <View style={styles.countBadge}>
-              <Text style={styles.countText}>
-                {filteredPhrases.length} phrases
-              </Text>
-            </View>
-          </View>
-        }
-        onScrollToIndexFailed={({ averageItemLength, index }) => {
-          listRef.current?.scrollToOffset({
-            animated: true,
-            offset: averageItemLength * index,
-          });
-
-          setTimeout(() => {
-            listRef.current?.scrollToIndex({
-              animated: true,
-              index,
-              viewPosition: 0.2,
-            });
-          }, 120);
-        }}
-        renderItem={({ item, index }) => (
-          <View>
-            <PhraseCard
-              helperLanguage={nativeLanguage}
-              isFavorite={isFavorite(item.id)}
-              item={item}
-              language={selectedLanguage}
-              onDelete={
-                item.category === 'custom'
-                  ? () => confirmDeletePhrase(item)
-                  : undefined
-              }
-              onPress={() => openPhrase(item.id)}
-              onToggleFavorite={() => toggleFavorite(item.id)}
+            <Icon
+              color={theme.colors.mutedText}
+              name="chevron-down"
+              size={18}
             />
-            {(index + 1) % INLINE_AD_FREQUENCY === 0 &&
-            index < filteredPhrases.length - 1 ? (
-              <InlineBannerAd />
-            ) : null}
-          </View>
-        )}
-        showsVerticalScrollIndicator={false}
+          </Pressable>
+        </View>
+      </View>
+
+      <View style={styles.filterBlock}>
+        <Text style={styles.filterLabel}>Category</Text>
+        <ScrollView
+          contentContainerStyle={styles.chipRow}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        >
+          {categoryOptions.map(category => (
+            <FilterChip
+              key={category}
+              label={
+                category === 'all' ? 'All' : categoryMetadata[category].title
+              }
+              onPress={() => setSelectedCategory(category)}
+              selected={category === selectedCategory}
+            />
+          ))}
+        </ScrollView>
+      </View>
+
+      <View style={styles.countBadge}>
+        <Text style={styles.countText}>{filteredPhrases.length} phrases</Text>
+      </View>
+    </View>
+  );
+
+  const renderEmptyState = () => (
+    <View style={styles.emptyCard}>
+      <Text style={styles.emptyTitle}>No phrases</Text>
+      <Text style={styles.emptyText}>Try another category.</Text>
+    </View>
+  );
+
+  const renderPhraseItem = (item: Phrase, index: number, totalCount: number) => (
+    <View>
+      <PhraseCard
+        helperLanguage={nativeLanguage}
+        isFavorite={isFavorite(item.id)}
+        item={item}
+        language={selectedLanguage}
+        onDelete={
+          item.category === 'custom' ? () => confirmDeletePhrase(item) : undefined
+        }
+        onPress={() => openPhrase(item.id)}
+        onToggleFavorite={() => toggleFavorite(item.id)}
       />
+      {(index + 1) % INLINE_AD_FREQUENCY === 0 && index < totalCount - 1 ? (
+        <InlineBannerAd />
+      ) : null}
+    </View>
+  );
+
+  return (
+    <Screen padded={false} edges={['top']}>
+      {selectedCategory === 'all' ? (
+        <SectionList
+          contentContainerStyle={styles.content}
+          keyExtractor={item => item.id}
+          ListEmptyComponent={renderEmptyState}
+          ListHeaderComponent={renderListHeader}
+          renderItem={({ item, index, section }) =>
+            renderPhraseItem(item, index, section.data.length)
+          }
+          renderSectionHeader={({ section }) => (
+            <View style={styles.sectionHeader}>
+              <Text style={styles.sectionHeaderText}>{section.title}</Text>
+            </View>
+          )}
+          sections={phraseSections}
+          showsVerticalScrollIndicator={false}
+          stickySectionHeadersEnabled={false}
+        />
+      ) : (
+        <FlatList
+          ref={listRef}
+          contentContainerStyle={styles.content}
+          data={filteredPhrases}
+          keyExtractor={item => item.id}
+          ListEmptyComponent={renderEmptyState}
+          ListHeaderComponent={renderListHeader}
+          onScrollToIndexFailed={({ averageItemLength, index }) => {
+            listRef.current?.scrollToOffset({
+              animated: true,
+              offset: averageItemLength * index,
+            });
+
+            setTimeout(() => {
+              listRef.current?.scrollToIndex({
+                animated: true,
+                index,
+                viewPosition: 0.2,
+              });
+            }, 120);
+          }}
+          renderItem={({ item, index }) =>
+            renderPhraseItem(item, index, filteredPhrases.length)
+          }
+          showsVerticalScrollIndicator={false}
+        />
+      )}
 
       <PracticeModal
         isFavorite={activePhrase ? isFavorite(activePhrase.id) : false}
@@ -517,6 +568,15 @@ const styles = StyleSheet.create({
     color: theme.colors.primary,
     fontSize: 12,
     fontWeight: '600',
+  },
+  sectionHeader: {
+    paddingBottom: theme.spacing.sm,
+    paddingTop: theme.spacing.sm,
+  },
+  sectionHeaderText: {
+    color: theme.colors.primary,
+    fontSize: 14,
+    fontWeight: '700',
   },
   emptyCard: {
     backgroundColor: theme.colors.card,

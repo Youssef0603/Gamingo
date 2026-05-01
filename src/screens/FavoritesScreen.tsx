@@ -10,6 +10,7 @@ import AddPhraseModal from '../features/phrases/AddPhraseModal';
 import PracticeModal from '../features/practice/PracticeModal';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
+import { getPhraseDisplayTranslations } from '../utils/phraseDisplay';
 
 const INLINE_AD_FREQUENCY = 3;
 
@@ -60,8 +61,12 @@ function FavoritesScreen() {
   };
 
   const confirmDeletePhrase = (phrase: (typeof savedPhrases)[number]) => {
-    const phraseLabel =
-      (phrase.translations[nativeLanguage] ?? phrase.translations.en).text;
+    const { helperTranslation } = getPhraseDisplayTranslations(
+      phrase,
+      nativeLanguage,
+      favoriteFilterLanguage,
+    );
+    const phraseLabel = helperTranslation.text;
 
     Alert.alert('Delete custom word?', `Remove "${phraseLabel}" from Custom?`, [
       { text: 'Cancel', style: 'cancel' },

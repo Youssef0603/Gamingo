@@ -11,9 +11,13 @@ import {
 import PhraseCard from '../../components/PhraseCard';
 import { Icon } from '../../components/ui';
 import { categoryMetadata } from '../../data/categories';
-import { buildTranslatedCustomPhrase } from '../../services';
+import {
+  buildTranslatedCustomPhrase,
+  translateTextWithDetectedSource,
+} from '../../services';
 import { theme, withAlpha } from '../../theme/theme';
 import { languageMetadata } from '../../types/language';
+import { getPhraseDisplayLanguages, getPhraseDisplayTranslations } from '../../utils/phraseDisplay';
 
 import type { LanguageCode } from '../../types/language';
 import type { Phrase } from '../../types/phrase';
@@ -74,7 +78,7 @@ function findPhraseByAnyTranslation(query: string, phrases: Phrase[]) {
   );
 }
 
-function findPhraseByQuery(
+function findPhrasesByQuery(
   phraseList: Phrase[],
   query: string,
   language: LanguageCode,
@@ -82,16 +86,57 @@ function findPhraseByQuery(
   const normalizedQuery = normalizeLookupValue(query);
 
   if (!normalizedQuery) {
+    return [];
+  }
+
+  return phraseList.filter(phrase => {
+    const translation = phrase.translations[language] ?? phrase.translations.en;
+
+    return normalizeLookupValue(translation.text) === normalizedQuery;
+  });
+}
+
+function findBlockingPhraseForCustomCreate(
+  phraseList: Phrase[],
+  query: string,
+  inputLanguage: LanguageCode,
+  learningLanguage: LanguageCode,
+) {
+  const phraseMatches = findPhrasesByQuery(phraseList, query, inputLanguage);
+
+  if (phraseMatches.length === 0) {
     return null;
   }
 
-  return (
-    phraseList.find(phrase => {
-      const translation = phrase.translations[language] ?? phrase.translations.en;
+  const nonCustomMatch =
+    phraseMatches.find(phrase => phrase.category !== 'custom') ?? null;
 
-      return normalizeLookupValue(translation.text) === normalizedQuery;
-    }) ?? null
-  );
+  if (nonCustomMatch) {
+    return nonCustomMatch;
+  }
+
+  const sameLanguageCustomMatch =
+    phraseMatches.find(
+      phrase =>
+        phrase.category === 'custom' &&
+        phrase.customLanguages?.native === inputLanguage &&
+        phrase.customLanguages.learning === learningLanguage,
+    ) ?? null;
+
+  if (sameLanguageCustomMatch) {
+    return sameLanguageCustomMatch;
+  }
+
+  const legacyCustomMatch =
+    phraseMatches.find(
+      phrase => phrase.category === 'custom' && !phrase.customLanguages,
+    ) ?? null;
+
+  if (legacyCustomMatch) {
+    return legacyCustomMatch;
+  }
+
+  return null;
 }
 
 function AddPhraseModal(props: AddPhraseModalProps) {
@@ -111,13 +156,16 @@ function AddPhraseModal(props: AddPhraseModalProps) {
     [isFavoritesMode, language, lookupResult, props],
   );
 
-  const existingPhraseTranslation = useMemo(
+  const existingPhraseDisplay = useMemo(
     () =>
       !isFavoritesMode && lookupResult
-        ? lookupResult.translations[props.inputLanguage] ??
-          lookupResult.translations.en
+        ? getPhraseDisplayTranslations(
+            lookupResult,
+            props.inputLanguage,
+            language,
+          )
         : null,
-    [isFavoritesMode, lookupResult, props],
+    [isFavoritesMode, language, lookupResult, props],
   );
 
   const resetState = () => {
@@ -186,10 +234,11 @@ function AddPhraseModal(props: AddPhraseModalProps) {
       return;
     }
 
-    const phraseMatch = findPhraseByQuery(
+    const phraseMatch = findBlockingPhraseForCustomCreate(
       phrases,
       trimmedQuery,
       props.inputLanguage,
+      language,
     );
 
     if (phraseMatch) {
@@ -205,16 +254,29 @@ function AddPhraseModal(props: AddPhraseModalProps) {
       setIsSubmitting(true);
       setLookupFeedback(`Translating into ${languageMetadata[language].label}...`);
 
-      const translatedPhrase = await buildTranslatedCustomPhrase({
+      const translationResult = await translateTextWithDetectedSource({
         destinationLanguage: language,
         text: trimmedQuery,
       });
-      const translatedText = (
-        translatedPhrase.translations[language] ?? translatedPhrase.translations.en
-      ).text.trim();
-      const createdPhrase = props.onCreatePhrase(trimmedQuery, translatedText);
+      const detectedSourceLanguage = translationResult.sourceLanguage;
 
-      setIsSubmitting(false);
+      if (
+        detectedSourceLanguage &&
+        detectedSourceLanguage !== props.inputLanguage
+      ) {
+        setLookupResult(null);
+        setLookupSource(null);
+        setLookupFeedback(
+          `This looks like ${languageMetadata[detectedSourceLanguage].label}, but your native language is set to ${languageMetadata[props.inputLanguage].label}. Switch your native language or enter the word in ${languageMetadata[props.inputLanguage].label}.`,
+        );
+        return;
+      }
+
+      const createdPhrase = props.onCreatePhrase(
+        trimmedQuery,
+        translationResult.destinationText,
+      );
+
       resetState();
       onClose();
       props.onSeePhrase(createdPhrase);
@@ -228,6 +290,7 @@ function AddPhraseModal(props: AddPhraseModalProps) {
             ? `Couldn't translate this word right now. ${error.message}`
             : "Couldn't translate this word right now.",
       );
+    } finally {
       setIsSubmitting(false);
     }
   };
@@ -369,21 +432,38 @@ function AddPhraseModal(props: AddPhraseModalProps) {
             </View>
           ) : null}
 
-          {!isFavoritesMode && lookupResult && existingPhraseTranslation ? (
+          {!isFavoritesMode && lookupResult && existingPhraseDisplay ? (
             <View style={styles.lookupResult}>
               <Text style={styles.lookupResultLabel}>Existing word</Text>
               <View style={styles.lookupResultCard}>
                 <Text style={styles.lookupResultWord}>
-                  {existingPhraseTranslation.text}
+                  {existingPhraseDisplay.helperTranslation.text}
                 </Text>
                 <Text style={styles.lookupResultCategory}>
                   {categoryMetadata[lookupResult.category].title}
                 </Text>
+                {lookupResult.category === 'custom' && lookupResult.customLanguages ? (
+                  <Text style={styles.lookupResultSavedLanguages}>
+                    {languageMetadata[
+                      getPhraseDisplayLanguages(
+                        lookupResult,
+                        props.inputLanguage,
+                        language,
+                      ).native
+                    ].label}{' '}
+                    {'->'}{' '}
+                    {languageMetadata[
+                      getPhraseDisplayLanguages(
+                        lookupResult,
+                        props.inputLanguage,
+                        language,
+                      ).learning
+                    ].label}
+                  </Text>
+                ) : null}
                 <Text style={styles.lookupResultHelper}>
-                  {languageMetadata[language].label}:{' '}
-                  {(lookupResult.translations[language] ??
-                    lookupResult.translations.en
-                  ).text}
+                  {languageMetadata[existingPhraseDisplay.learningLanguage].label}
+                  : {existingPhraseDisplay.translation.text}
                 </Text>
               </View>
 
@@ -518,6 +598,12 @@ const styles = StyleSheet.create({
     color: theme.colors.primary,
     fontSize: 13,
     fontWeight: '700',
+    marginBottom: theme.spacing.xs,
+  },
+  lookupResultSavedLanguages: {
+    color: theme.colors.primary,
+    fontSize: 12,
+    fontWeight: '600',
     marginBottom: theme.spacing.xs,
   },
   lookupResultHelper: {

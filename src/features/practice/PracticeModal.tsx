@@ -3,6 +3,7 @@ import { Modal, Pressable, StyleSheet, View } from 'react-native';
 
 import { theme, withAlpha } from '../../theme/theme';
 import { languageMetadata } from '../../types/language';
+import { getPhraseDisplayTranslations } from '../../utils/phraseDisplay';
 import type { LanguageCode } from '../../types/language';
 import type { Phrase } from '../../types/phrase';
 import { resolvePracticeLocale } from './practiceUtils';
@@ -31,10 +32,13 @@ function PracticeModal({
     return null;
   }
 
-  const english = phrase.translations.en;
-  const helperLabel = languageMetadata[helperLanguage].label;
-  const helperTranslation = phrase.translations[helperLanguage] ?? english;
-  const translation = phrase.translations[language] ?? english;
+  const {
+    helperLanguage: resolvedHelperLanguage,
+    helperTranslation,
+    learningLanguage,
+    translation,
+  } = getPhraseDisplayTranslations(phrase, helperLanguage, language);
+  const helperLabel = languageMetadata[resolvedHelperLanguage].label;
 
   return (
     <Modal
@@ -51,7 +55,7 @@ function PracticeModal({
             helperLabel={helperLabel}
             helperText={helperTranslation.text}
             isFavorite={isFavorite}
-            locale={resolvePracticeLocale(language)}
+            locale={resolvePracticeLocale(learningLanguage)}
             onClose={onClose}
             onToggleFavorite={onToggleFavorite}
             phrase={translation.text}

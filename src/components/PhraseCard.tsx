@@ -4,6 +4,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { categoryMetadata } from '../data/categories';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
+import { getPhraseDisplayLanguages, getPhraseDisplayTranslations } from '../utils/phraseDisplay';
 
 import type { LanguageCode } from '../types/language';
 import type { Phrase } from '../types/phrase';
@@ -27,11 +28,14 @@ function PhraseCard({
   onPress,
   onToggleFavorite,
 }: PhraseCardProps) {
-  const english = item.translations.en;
-  const helperTranslation = item.translations[helperLanguage] ?? english;
-  const helperLanguageLabel = languageMetadata[helperLanguage].label;
-  const translation = item.translations[language] ?? english;
+  const { helperLanguage: resolvedHelperLanguage, helperTranslation, translation } =
+    getPhraseDisplayTranslations(item, helperLanguage, language);
+  const { learning: savedLearningLanguage, native: savedNativeLanguage } =
+    getPhraseDisplayLanguages(item, helperLanguage, language);
+  const helperLanguageLabel = languageMetadata[resolvedHelperLanguage].label;
   const category = categoryMetadata[item.category];
+  const showCustomLanguages =
+    item.category === 'custom' && Boolean(item.customLanguages);
 
   return (
     <Pressable
@@ -41,6 +45,12 @@ function PhraseCard({
       <View style={styles.topRow}>
         <View style={styles.textWrap}>
           <Text style={styles.phrase}>{translation.text}</Text>
+          {showCustomLanguages ? (
+            <Text style={styles.languageSummary}>
+              {languageMetadata[savedNativeLanguage].label} {'->'}{' '}
+              {languageMetadata[savedLearningLanguage].label}
+            </Text>
+          ) : null}
           <Text style={styles.translation}>
             {helperLanguageLabel}: {helperTranslation.text}
           </Text>
@@ -131,6 +141,12 @@ const styles = StyleSheet.create({
   translation: {
     ...theme.typography.caption,
     color: theme.colors.mutedText,
+  },
+  languageSummary: {
+    color: theme.colors.primary,
+    fontSize: 12,
+    fontWeight: '600',
+    marginBottom: theme.spacing.xs,
   },
   favoriteButton: {
     backgroundColor: withAlpha(theme.colors.primary, 0.08),

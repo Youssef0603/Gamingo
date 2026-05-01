@@ -25,6 +25,10 @@ export interface Phrase {
   translations: {
     en: PhraseTranslation;
   } & Partial<Record<LanguageCode, PhraseTranslation>>;
+  customLanguages?: {
+    native: LanguageCode;
+    learning: LanguageCode;
+  };
   tags?: string[];
   isToxic?: boolean;
   saferAlternative?: string;

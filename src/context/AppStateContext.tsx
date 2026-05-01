@@ -143,6 +143,20 @@ function isPhraseTranslation(value: unknown): value is PhraseTranslation {
   );
 }
 
+function isCustomPhraseLanguages(
+  value: unknown,
+): value is NonNullable<Phrase['customLanguages']> {
+  if (!value || typeof value !== 'object') {
+    return false;
+  }
+
+  const candidate = value as Partial<NonNullable<Phrase['customLanguages']>>;
+
+  return (
+    isLanguageCode(candidate.native) && isLanguageCode(candidate.learning)
+  );
+}
+
 function sanitizePhrase(value: unknown): Phrase | null {
   if (!value || typeof value !== 'object') {
     return null;
@@ -175,6 +189,9 @@ function sanitizePhrase(value: unknown): Phrase | null {
   return {
     id: candidate.id,
     category: candidate.category,
+    customLanguages: isCustomPhraseLanguages(candidate.customLanguages)
+      ? candidate.customLanguages
+      : undefined,
     isToxic:
       typeof candidate.isToxic === 'boolean' ? candidate.isToxic : undefined,
     saferAlternative:
@@ -243,6 +260,10 @@ function createCustomPhrase(
       .toString(36)
       .slice(2, 8)}`,
     category: 'custom',
+    customLanguages: {
+      native: inputLanguage,
+      learning: learningLanguage,
+    },
     tags: ['custom'],
     translations,
   };
