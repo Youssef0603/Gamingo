@@ -28,6 +28,11 @@ export const phrases: Phrase[] = [
       es: t('Detras de ti!', 'Un enemigo esta justo detras de ti.'),
       de: t('Hinter dir!', 'Ein Gegner ist direkt hinter dir.'),
       ar: t('وراك!', 'هناك عدو خلفك مباشرة.'),
+      it: t('Dietro di te!', 'Un nemico è direttamente dietro di te.'),
+      pt: t('Atrás de você!', 'Um inimigo está diretamente atrás de você.'),
+      hi: t('तुम्हारे पीछे!', 'कोई शत्रु सीधे आपके पीछे है.'),
+      nl: t('Achter je!', 'Er staat een vijand direct achter je.'),
+      pl: t('Za tobą!', 'Wróg jest bezpośrednio za tobą.'),
       tr: t('Arkanda!', 'Bir dusman hemen arkanda.'),
       ru: t('Сзади!', 'Противник прямо у тебя за спиной.'),
       ja: t('後ろ!', '敵が真後ろにいる。'),
@@ -45,6 +50,11 @@ export const phrases: Phrase[] = [
       es: t('A la izquierda!', 'La presion enemiga viene por la izquierda.'),
       de: t('Links!', 'Der Gegnerdruck kommt von links.'),
       ar: t('على اليسار!', 'الضغط القادم من الجهة اليسرى.'),
+      it: t('Lato sinistro!', 'La pressione nemica arriva da sinistra.'),
+      pt: t('Lado esquerdo!', 'A pressão inimiga vem da esquerda.'),
+      hi: t('बाईं तरफ!', 'शत्रु का दबाव बाईं ओर से आ रहा है।'),
+      nl: t('Linkerkant!', 'De vijandelijke druk komt van links.'),
+      pl: t('Lewa strona!', 'Nacisk wroga nadchodzi z lewej strony.'),
       tr: t('Sol tarafta!', 'Dusman baskisi soldan geliyor.'),
       ru: t('Слева!', 'Давление противника идет слева.'),
       ja: t('左!', '敵の圧が左から来ている。'),
@@ -71,6 +81,23 @@ export const phrases: Phrase[] = [
       ),
       de: t('Sniper oben Mitte.', 'Ein Sniper haelt die Mitte von oben.'),
       ar: t('قناص فوق الميد.', 'هناك قناص يراقب الميد من مكان مرتفع.'),
+      it: t(
+        'Cecchino in alto a metà.',
+        "Un cecchino osserva la corsia centrale da un'altura.",
+      ),
+      pt: t(
+        'Atirador de elite no meio.',
+        'Um atirador está observando a faixa do meio de um terreno elevado.',
+      ),
+      hi: t('निशानची शीर्ष मध्य.', 'एक स्नाइपर ऊँची ज़मीन से मध्य लेन पर नज़र रख रहा है।'),
+      nl: t(
+        'Snipertop midden.',
+        'Een sluipschutter houdt de middelste baan vanaf hoge grond in de gaten.',
+      ),
+      pl: t(
+        'Górna część snajperska, środkowa.',
+        'Snajper obserwuje środkowy pas z dużej wysokości.',
+      ),
       tr: t(
         'Mid ustunde sniper var.',
         'Bir keskin nisanci yuksekten mide bakiyor.',
@@ -103,6 +130,23 @@ export const phrases: Phrase[] = [
       es: t('Esta a un HP!', 'El enemigo esta muy debil y cae con poco dano.'),
       de: t('Ein HP!', 'Der Gegner ist extrem schwach und schnell erledigt.'),
       ar: t('عدو دمّه واحد!', 'العدو ضعيف جدا ويمكن التخلص منه بسرعة.'),
+      it: t(
+        'Un HP!',
+        'Il nemico è estremamente debole e può essere sconfitto rapidamente.',
+      ),
+      pt: t(
+        'Um HP!',
+        'O inimigo é extremamente fraco e pode ser eliminado rapidamente.',
+      ),
+      hi: t('एक एचपी!', 'शत्रु अत्यंत कमजोर होता है और शीघ्र ही समाप्त हो सकता है।'),
+      nl: t(
+        'Eén PK!',
+        'De vijand is extreem zwak en kan snel worden uitgeschakeld.',
+      ),
+      pl: t(
+        'Jedno HP!',
+        'Wróg jest wyjątkowo słaby i można go szybko wykończyć.',
+      ),
       tr: t('Tek can!', 'Dusman cok zayif, hemen dusurulebilir.'),
       ru: t('Один хп!', 'Противник почти мертв и добивается быстро.'),
       ja: t('ワンHP!', '敵は瀕死で、すぐ倒せる。'),
@@ -126,6 +170,20 @@ export const phrases: Phrase[] = [
         'Der Bereich wirkt sicher zum Betreten oder Pflanzen.',
       ),
       ar: t('السايت فاضي.', 'موقع الهدف يبدو آمنا للدخول او الزرع.'),
+      it: t('Sito libero.', 'Il sito obiettivo sembra sicuro per entrare o piantare.'),
+      pt: t(
+        'Local limpo.',
+        'O local objetivo parece seguro para entrar ou plantar.',
+      ),
+      hi: t('साइट साफ़.', 'वस्तुनिष्ठ स्थल में प्रवेश करना या रोपण करना सुरक्षित लगता है।'),
+      nl: t(
+        'Site duidelijk.',
+        'De objectieve locatie lijkt veilig om te betreden of te planten.',
+      ),
+      pl: t(
+        'Strona czysta.',
+        'Obiektowe miejsce wygląda na bezpieczne, aby wejść lub zasadzić.',
+      ),
       tr: t('Site temiz.', 'Bolge girip kurmak icin guvenli gorunuyor.'),
       ru: t(
         'Плент чист.',
@@ -158,6 +216,23 @@ export const phrases: Phrase[] = [
         'Startet den Execute sofort, bevor der Gegner sich neu stellt.',
       ),
       ar: t('ادفعوا الآن!', 'ابدؤوا الهجمة فورا قبل ان يعيد العدو تمركزه.'),
+      it: t(
+        'Spingi adesso!',
+        "Inizia l'esecuzione immediatamente prima che il nemico si resetti.",
+      ),
+      pt: t(
+        'Empurre agora!',
+        'Inicie a execução imediatamente antes do inimigo reiniciar.',
+      ),
+      hi: t('अब धक्का दो!', 'दुश्मन के फिर से सक्रिय होने से पहले तुरंत निष्पादन शुरू करें।'),
+      nl: t(
+        'Duw nu!',
+        'Start de uitvoering onmiddellijk voordat de vijand zich reset.',
+      ),
+      pl: t(
+        'Naciśnij teraz!',
+        'Rozpocznij egzekucję bezpośrednio przed zresetowaniem się wroga.',
+      ),
       tr: t('Simdi itin!', 'Rakip yeniden duzen almadan hucumu baslatin.'),
       ru: t(
         'Пушим сейчас!',
@@ -187,6 +262,23 @@ export const phrases: Phrase[] = [
         'Behalte eine Linie im Fadenkreuz und warte auf den Peek.',
       ),
       ar: t('امسك الزاوية.', 'ثبت التصويب على خط واحد وانتظر خروج الخصم.'),
+      it: t(
+        "Mantieni l'angolo.",
+        'Mantieni il mirino su una riga e attendi una sbirciatina.',
+      ),
+      pt: t(
+        'Mantenha o ângulo.',
+        'Mantenha sua mira em uma linha e espere para dar uma espiada.',
+      ),
+      hi: t('कोण पकड़ें.', 'अपने क्रॉसहेयर को एक पंक्ति पर रखें और एक झलक पाने की प्रतीक्षा करें।'),
+      nl: t(
+        'Hoek vasthouden.',
+        'Houd uw draadkruis op één lijn en wacht op een kijkje.',
+      ),
+      pl: t(
+        'Trzymaj kąt.',
+        'Trzymaj celownik na jednej linii i poczekaj na zerknięcie.',
+      ),
       tr: t('Acini tut.', 'Nisangahi tek bir hatta tut ve cikisi bekle.'),
       ru: t('Держи угол.', 'Держи прицел на линии и жди выхода соперника.'),
       ja: t('角を保持。', '一つの射線に照準を置いてピークを待つ。'),
@@ -207,6 +299,11 @@ export const phrases: Phrase[] = [
       es: t('Rota a B.', 'Muevan jugadores y utilidad hacia el sitio B.'),
       de: t('Rotate B.', 'Verlagert Spieler und Utility zur B Site.'),
       ar: t('لفوا على B.', 'حولوا اللاعبين والادوات نحو موقع B.'),
+      it: t('Ruota B.', 'Spostare giocatori e utilità verso il sito B.'),
+      pt: t('Girar B.', 'Mude os jogadores e a utilidade para o site B.'),
+      hi: t('बी घुमाएँ', 'खिलाड़ियों और उपयोगिता को बी साइट की ओर शिफ्ट करें।'),
+      nl: t('Draai B.', 'Verplaats spelers en ga naar de B-site.'),
+      pl: t('Obróć B.', 'Przesuń graczy i narzędzia w stronę B.'),
       tr: t("B'ye don.", 'Oyunculari ve yetenekleri B tarafina kaydirin.'),
       ru: t('Ротация на B.', 'Сместите игроков и ресурсы на точку B.'),
       ja: t('Bにローテート。', '人数とスキルをBサイトに寄せる。'),
@@ -239,6 +336,23 @@ export const phrases: Phrase[] = [
         'العبوا ببطء.',
         'خذوا السيطرة على الخريطة بهدوء ولا تفرضوا قتالا مبكرا.',
       ),
+      it: t(
+        'Gioca lentamente.',
+        'Prendi il controllo della mappa con pazienza ed evita di forzare i primi combattimenti.',
+      ),
+      pt: t(
+        'Jogue devagar.',
+        'Assuma o controle do mapa com paciência e evite forçar lutas iniciais.',
+      ),
+      hi: t('धीरे खेलें.', 'मानचित्र पर धैर्यपूर्वक नियंत्रण रखें और शुरुआती झगड़ों से बचें।'),
+      nl: t(
+        'Speel langzaam.',
+        'Neem de kaartcontrole geduldig over en vermijd het forceren van vroege gevechten.',
+      ),
+      pl: t(
+        'Graj powoli.',
+        'Cierpliwie przejmij kontrolę nad mapą i unikaj wymuszania wczesnych walk.',
+      ),
       tr: t(
         'Yavas oyna.',
         'Harita kontrolunu sabirla al ve erken savas zorlama.',
@@ -268,6 +382,17 @@ export const phrases: Phrase[] = [
         'Bleib nah genug, um meinen Killer sofort zu bestrafen.',
       ),
       ar: t('بدّلني.', 'ابق قريبا بما يكفي لتقتل من يقتلني.'),
+      it: t('Scambiami.', 'Resta abbastanza vicino da punire chiunque mi uccida.'),
+      pt: t('Troque comigo.', 'Fique perto o suficiente para punir quem me matar.'),
+      hi: t('मुझे व्यापार करो।', 'जो कोई मुझे मारेगा उसे दण्ड देने के लिए पर्याप्त निकट रहो।'),
+      nl: t(
+        'Handel mij.',
+        'Blijf dichtbij genoeg om iedereen te straffen die mij vermoordt.',
+      ),
+      pl: t(
+        'Handluj mną.',
+        'Trzymaj się wystarczająco blisko, aby ukarać każdego, kto mnie zabije.',
+      ),
       tr: t(
         'Beni tradele.',
         'Beni oldureni hemen cezalandiracak kadar yakin kal.',
@@ -305,6 +430,23 @@ export const phrases: Phrase[] = [
         'Der Sprecher sagt wuetend, dass ein Mitspieler nicht mehr umsonst sterben soll.',
       ),
       ar: t('وقف تفيد.', 'المتكلم يقولها بغضب لزميل حتى يتوقف عن الموت مجانا.'),
+      it: t(
+        'Smetti di nutrirti.',
+        "L'oratore sta dicendo con rabbia a un compagno di squadra di smettere di morire gratuitamente.",
+      ),
+      pt: t(
+        'Pare de se alimentar.',
+        'O orador está dizendo com raiva a um colega de equipe para parar de morrer de graça.',
+      ),
+      hi: t('खिला बंद।', 'वक्ता गुस्से में टीम के एक साथी से कह रहा है कि मुफ्त में मरना बंद करो।'),
+      nl: t(
+        'Stop met voeden.',
+        'De spreker zegt boos tegen een teamgenoot dat hij moet stoppen met gratis sterven.',
+      ),
+      pl: t(
+        'Przestań karmić.',
+        'Mówca ze złością mówi koledze z drużyny, żeby przestał umierać za darmo.',
+      ),
       tr: t(
         'Feedlemeyi birak.',
         'Konusan kisi ofkeyle takim arkadasina bos yere olmemesini soyluyor.',
@@ -339,6 +481,23 @@ export const phrases: Phrase[] = [
         'Der Sprecher beleidigt die Aim-Faehigkeit eines Teamkollegen.',
       ),
       ar: t('تعلم تصويب.', 'المتكلم يهين مهارة التصويب عند زميله.'),
+      it: t(
+        'Impara a mirare.',
+        "L'oratore sta insultando i meccanici di un compagno di squadra.",
+      ),
+      pt: t(
+        'Aprenda a mirar.',
+        'O orador está insultando a mecânica de um colega de equipe.',
+      ),
+      hi: t('लक्ष्य बनाना सीखें.', 'स्पीकर टीम के साथी के मैकेनिकों का अपमान कर रहा है।'),
+      nl: t(
+        'Leer richten.',
+        'De spreker beledigt de monteurs van een teamgenoot.',
+      ),
+      pl: t(
+        'Naucz się celować.',
+        'Mówca obraża mechanikę kolegi z drużyny.',
+      ),
       tr: t(
         'Aim ogren.',
         'Konusan kisi takim arkadasinin nisanciligina hakaret ediyor.',
@@ -373,6 +532,23 @@ export const phrases: Phrase[] = [
         'Der Sprecher gibt einem Mitspieler die Schuld fuer einen fragwuerdigen Spielzug.',
       ),
       ar: t('شو عم تعمل؟', 'المتكلم يلوم زميلا على لقطة يراها غير مفهومة.'),
+      it: t(
+        'Cosa fai?',
+        "L'oratore incolpa un compagno di squadra per un gioco confuso.",
+      ),
+      pt: t(
+        'O que você está fazendo?',
+        'O palestrante está culpando um companheiro de equipe por uma jogada confusa.',
+      ),
+      hi: t('आप क्या कर रहे हो?', 'वक्ता भ्रमित करने वाले खेल के लिए टीम के एक साथी को दोषी ठहरा रहा है।'),
+      nl: t(
+        'Wat ben je aan het doen?',
+        'De spreker geeft een teamgenoot de schuld van een verwarrend spel.',
+      ),
+      pl: t(
+        'Co robisz?',
+        'Mówca obwinia kolegę z drużyny za chaotyczną grę.',
+      ),
       tr: t(
         'Ne yapiyorsun?',
         'Konusan kisi karisik bir oyun yuzunden takim arkadasini sucluyor.',
@@ -410,6 +586,23 @@ export const phrases: Phrase[] = [
         'Der Sprecher wirft einem Mitspieler vor, absichtlich zu griefen.',
       ),
       ar: t('أنت بتترول.', 'المتكلم يتهم زميلا بانه يخرب الجولة عمدا.'),
+      it: t(
+        'Stai trollando.',
+        "L'oratore accusa un compagno di squadra di aver lanciato di proposito.",
+      ),
+      pt: t(
+        'Você está trollando.',
+        'O palestrante está acusando um companheiro de equipe de arremesso de propósito.',
+      ),
+      hi: t('आप ट्रोल कर रहे हैं.', 'वक्ता टीम के एक साथी पर जानबूझकर गेंद फेंकने का आरोप लगा रहे हैं।'),
+      nl: t(
+        'Je bent aan het trollen.',
+        'De spreker beschuldigt een teamgenoot ervan expres te gooien.',
+      ),
+      pl: t(
+        'Trollujesz.',
+        'Mówca zarzuca koledze z drużyny celowe rzucanie.',
+      ),
       tr: t(
         'Trolluyorsun.',
         'Konusan kisi takim arkadasini kasti olarak roundu satmakla sucluyor.',
@@ -447,6 +640,23 @@ export const phrases: Phrase[] = [
         'Der Sprecher will Ruhe, sagt es aber feindselig.',
       ),
       ar: t('اسكت.', 'المتكلم يريد هدوءا لكنه يقولها بطريقة عدائية.'),
+      it: t(
+        'Stai zitto.',
+        'Chi parla vuole il silenzio ma lo dice in modo ostile.',
+      ),
+      pt: t(
+        'Cale-se.',
+        'O orador quer silêncio, mas diz isso de forma hostil.',
+      ),
+      hi: t('चुप रहो।', 'वक्ता मौन रहना चाहता है लेकिन इसे शत्रुतापूर्ण तरीके से कहता है।'),
+      nl: t(
+        'Stil.',
+        'De spreker wil stilte, maar zegt dat op een vijandige manier.',
+      ),
+      pl: t(
+        'Zamknąć się.',
+        'Osoba mówiąca chce ciszy, ale mówi to w wrogi sposób.',
+      ),
       tr: t(
         'Sus.',
         'Konusan kisi sessizlik istiyor ama bunu sert sekilde soyluyor.',
