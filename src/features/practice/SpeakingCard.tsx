@@ -125,26 +125,33 @@ function SpeakingCard({
       style={[
         styles.card,
         embedded && styles.cardEmbedded,
-        practiceFlash && [
-          styles.cardWithFeedback,
-          {
-            borderColor: withAlpha(
-              feedbackMutedColor ?? theme.colors.border,
-              embedded ? 0 : 0.58,
-            ),
-          },
-        ],
+        practiceFlash && styles.cardWithFeedback,
         practiceFlash && embedded && styles.cardEmbeddedWithFeedback,
+        practiceFlash && !embedded && styles.cardWithFeedbackState,
+        practiceFlash && embedded && styles.cardEmbeddedWithFeedbackState,
+        practiceFlash && {
+          backgroundColor: embedded
+            ? withAlpha(feedbackMutedColor ?? theme.colors.border, 0.045)
+            : theme.colors.card,
+          borderColor: withAlpha(
+            feedbackMutedColor ?? theme.colors.border,
+            embedded ? 0.42 : 0.58,
+          ),
+        },
       ]}
     >
       {practiceFlash ? (
         <View
           pointerEvents="none"
-          style={styles.feedbackBadge}
+          style={[
+            styles.feedbackBadge,
+            embedded && styles.feedbackBadgeEmbedded,
+          ]}
         >
           <View
             style={[
               styles.feedbackBadgeInner,
+              embedded && styles.feedbackBadgeInnerEmbedded,
               {
                 borderColor: withAlpha(feedbackMutedColor ?? theme.colors.border, 0.58),
               },
@@ -275,11 +282,11 @@ const styles = StyleSheet.create({
     ...theme.shadows.card,
   },
   cardEmbedded: {
-    backgroundColor: 'transparent',
-    borderColor: 'transparent',
-    borderWidth: 0,
-    borderRadius: 0,
-    padding: 0,
+    backgroundColor: withAlpha(theme.colors.primary, 0.025),
+    borderColor: withAlpha(theme.colors.primary, 0.16),
+    borderWidth: 1.5,
+    borderRadius: theme.radius.lg,
+    padding: theme.spacing.lg,
     shadowColor: 'transparent',
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0,
@@ -290,7 +297,13 @@ const styles = StyleSheet.create({
     paddingTop: theme.spacing.xxl + theme.spacing.sm,
   },
   cardEmbeddedWithFeedback: {
-    paddingTop: theme.spacing.xl + theme.spacing.sm,
+    paddingTop: theme.spacing.xxl + theme.spacing.md,
+  },
+  cardWithFeedbackState: {
+    borderWidth: 1,
+  },
+  cardEmbeddedWithFeedbackState: {
+    borderWidth: 2,
   },
   headerRow: {
     flexDirection: 'row',
@@ -300,13 +313,17 @@ const styles = StyleSheet.create({
   },
   feedbackBadge: {
     alignItems: 'center',
-    height: 50,
+    height: 52,
     justifyContent: 'center',
-    left: '45%',
+    left: 0,
     position: 'absolute',
+    right: 0,
     top: -20,
-    width: 72,
     zIndex: 2,
+  },
+  feedbackBadgeEmbedded: {
+    top: -28,
+    zIndex: 4,
   },
   feedbackBadgeInner: {
     alignItems: 'center',
@@ -317,6 +334,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: 52,
     ...theme.shadows.surface,
+  },
+  feedbackBadgeInnerEmbedded: {
+    borderWidth: 3,
+    height: 62,
+    width: 62,
   },
   secondaryButton: {
     alignItems: 'center',

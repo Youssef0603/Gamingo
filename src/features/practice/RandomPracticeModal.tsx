@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 
 import { Icon } from '../../components/ui';
+import { stop as stopSpeechRecognition, stopSpeaking } from '../../services';
 import { theme, withAlpha } from '../../theme/theme';
 import { languageMetadata } from '../../types/language';
 import { getPhraseDisplayTranslations } from '../../utils/phraseDisplay';
@@ -69,7 +70,13 @@ function RandomPracticeModal({
 
   const handleClose = useCallback(() => {
     clearAdvanceTimeout();
-    onClose();
+
+    Promise.allSettled([
+      stopSpeaking(),
+      stopSpeechRecognition(),
+    ]).finally(() => {
+      onClose();
+    });
   }, [clearAdvanceTimeout, onClose]);
 
   const handleSuccessfulAttempt = useCallback(() => {
@@ -245,11 +252,12 @@ const styles = StyleSheet.create({
     borderColor: withAlpha(theme.colors.primary, 0.18),
     borderRadius: theme.radius.lg,
     borderWidth: 1,
+    minHeight: 560,
     overflow: 'visible',
     ...theme.shadows.surface,
   },
   sessionChrome: {
-    padding: theme.spacing.md,
+    padding: theme.spacing.lg,
   },
   sessionDivider: {
     backgroundColor: withAlpha(theme.colors.border, 0.72),
@@ -257,7 +265,11 @@ const styles = StyleSheet.create({
     marginHorizontal: theme.spacing.md,
   },
   sessionBody: {
-    padding: theme.spacing.lg,
+    flex: 1,
+    justifyContent: 'center',
+    paddingBottom: theme.spacing.lg,
+    paddingHorizontal: theme.spacing.lg,
+    paddingTop: theme.spacing.lg,
   },
   sessionHeader: {
     alignItems: 'flex-start',
@@ -274,14 +286,14 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '700',
     letterSpacing: 0.4,
-    marginBottom: 2,
+    marginBottom: theme.spacing.sm,
     textTransform: 'uppercase',
   },
   sessionTitle: {
     color: theme.colors.text,
     fontSize: 20,
     fontWeight: '700',
-    marginBottom: 2,
+    marginBottom: theme.spacing.sm,
   },
   sessionSubtitle: {
     ...theme.typography.caption,
@@ -316,6 +328,8 @@ const styles = StyleSheet.create({
   },
   completeCard: {
     alignItems: 'center',
+    flex: 1,
+    justifyContent: 'center',
     paddingVertical: theme.spacing.lg,
   },
   completeIcon: {
