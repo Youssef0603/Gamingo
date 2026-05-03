@@ -5,6 +5,7 @@ import {
   DefaultTheme as NavigationDefaultTheme,
 } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import BootSplash from 'react-native-bootsplash';
 
 import BottomSheet from '../components/BottomSheet';
 import { Icon } from '../components/ui';
@@ -92,7 +93,12 @@ function AppNavigator() {
   return (
     <AppStateProvider>
       <>
-        <NavigationContainer theme={navigationTheme}>
+        <NavigationContainer
+          onReady={() => {
+            BootSplash.hide({ fade: true });
+          }}
+          theme={navigationTheme}
+        >
           <Tab.Navigator
             initialRouteName="Practice"
             screenOptions={getScreenOptions}
