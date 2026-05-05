@@ -1,6 +1,7 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { Icon } from './ui';
 import { categoryMetadata } from '../data/categories';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
@@ -84,11 +85,11 @@ function PhraseCard({
               pressed && styles.favoriteButtonPressed,
             ]}
           >
-            <Text
-              style={[styles.favoriteText, isFavorite && styles.favoriteTextOn]}
-            >
-              {isFavorite ? 'Saved' : 'Save'}
-            </Text>
+            <Icon
+              color={isFavorite ? theme.colors.accent : theme.colors.primary}
+              name={isFavorite ? 'heart' : 'heart-outline'}
+              size={18}
+            />
           </Pressable>
         </View>
       </View>
@@ -153,8 +154,10 @@ const styles = StyleSheet.create({
     borderColor: withAlpha(theme.colors.primary, 0.18),
     borderRadius: theme.radius.pill,
     borderWidth: 1,
-    paddingHorizontal: 12,
-    paddingVertical: 7,
+    alignItems: 'center',
+    height: 34,
+    justifyContent: 'center',
+    width: 34,
   },
   favoriteButtonOn: {
     backgroundColor: withAlpha(theme.colors.accent, 0.12),
@@ -175,14 +178,6 @@ const styles = StyleSheet.create({
     color: theme.colors.danger ?? '#D14D4D',
     fontSize: 12,
     fontWeight: '600',
-  },
-  favoriteText: {
-    color: theme.colors.primary,
-    fontSize: 12,
-    fontWeight: '600',
-  },
-  favoriteTextOn: {
-    color: theme.colors.accent,
   },
   bottomRow: {
     alignItems: 'flex-start',
