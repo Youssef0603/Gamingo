@@ -1,5 +1,14 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { Alert, FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import {
+  Alert,
+  Animated,
+  Easing,
+  FlatList,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 
 import PhraseCard from '../components/PhraseCard';
 import { Icon, Screen } from '../components/ui';
@@ -26,6 +35,7 @@ function FavoritesScreen() {
     toggleFavorite,
   } = useAppState();
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
+  const emptyStateAnimation = useRef(new Animated.Value(0)).current;
   const hasSavedLanguages = favoriteLanguageOptions.length > 0;
   const favoriteIds = getFavoriteIdsForLanguage(favoriteFilterLanguage);
   const favoriteLanguageOption = hasSavedLanguages
@@ -49,6 +59,31 @@ function FavoritesScreen() {
       setActivePhraseId(null);
     }
   }, [activePhraseId, favoriteIds]);
+
+  useEffect(() => {
+    const animation = Animated.loop(
+      Animated.sequence([
+        Animated.timing(emptyStateAnimation, {
+          duration: 1800,
+          easing: Easing.inOut(Easing.sin),
+          toValue: 1,
+          useNativeDriver: true,
+        }),
+        Animated.timing(emptyStateAnimation, {
+          duration: 1800,
+          easing: Easing.inOut(Easing.sin),
+          toValue: 0,
+          useNativeDriver: true,
+        }),
+      ]),
+    );
+
+    animation.start();
+
+    return () => {
+      animation.stop();
+    };
+  }, [emptyStateAnimation]);
 
   const openPhrase = (phraseId: string) => {
     showInterstitialBefore(() => {
@@ -76,24 +111,56 @@ function FavoritesScreen() {
     ]);
   };
 
+  const renderEmptyState = () => {
+    const badgeAnimationStyle = {
+      opacity: emptyStateAnimation.interpolate({
+        inputRange: [0, 1],
+        outputRange: [0.92, 1],
+      }),
+      transform: [
+        {
+          scale: emptyStateAnimation.interpolate({
+            inputRange: [0, 1],
+            outputRange: [1, 1.06],
+          }),
+        },
+        {
+          translateY: emptyStateAnimation.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0, -6],
+          }),
+        },
+      ],
+    };
+
+    return (
+      <View style={styles.emptyStateWrap}>
+        <View style={styles.emptyGlow} />
+        <Animated.View style={[styles.emptyBadge, badgeAnimationStyle]}>
+          <Icon color={theme.colors.primary} name="heart-outline" size={34} />
+        </Animated.View>
+        <Text style={styles.emptyTitle}>
+          {hasSavedLanguages ? 'No favourites in this language' : 'No favourites yet'}
+        </Text>
+        <Text style={styles.emptyText}>
+          {hasSavedLanguages
+            ? 'Pick another saved language or keep exploring Practice to fill this space.'
+            : 'Save phrases from Practice and they will show up here.'}
+        </Text>
+      </View>
+    );
+  };
+
   return (
     <Screen padded={false} edges={['top']}>
       <FlatList
-        contentContainerStyle={styles.content}
+        contentContainerStyle={[
+          styles.content,
+          savedPhrases.length === 0 && styles.emptyContent,
+        ]}
         data={savedPhrases}
         keyExtractor={item => item.id}
-        ListEmptyComponent={
-          <View style={styles.emptyCard}>
-            <Text style={styles.emptyTitle}>
-              {hasSavedLanguages ? 'No favourites in this language' : 'No favourites yet'}
-            </Text>
-            <Text style={styles.emptyText}>
-              {hasSavedLanguages
-                ? 'Pick another saved language or save more phrases from Practice.'
-                : 'Save phrases from Practice to build this list.'}
-            </Text>
-          </View>
-        }
+        ListEmptyComponent={renderEmptyState}
         ListHeaderComponent={
           <View style={styles.header}>
             <View style={styles.heading}>
@@ -196,6 +263,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: theme.spacing.lg,
     paddingTop: theme.spacing.lg,
   },
+  emptyContent: {
+    flexGrow: 1,
+  },
   header: {
     marginBottom: theme.spacing.lg,
   },
@@ -267,22 +337,49 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: '700',
   },
-  emptyCard: {
+  emptyStateWrap: {
+    alignItems: 'center',
     backgroundColor: theme.colors.card,
     borderColor: theme.colors.border,
     borderRadius: theme.radius.lg,
     borderWidth: 1,
-    padding: theme.spacing.lg,
+    flex: 1,
+    justifyContent: 'center',
+    marginBottom: theme.spacing.xl,
+    overflow: 'hidden',
+    paddingHorizontal: theme.spacing.xl,
+    paddingVertical: theme.spacing.xxl,
+    ...theme.shadows.card,
+  },
+  emptyGlow: {
+    borderRadius: theme.radius.pill,
+    height: 140,
+    marginBottom: -92,
+    width: 140,
+  },
+  emptyBadge: {
+    alignItems: 'center',
+    backgroundColor: withAlpha(theme.colors.primary, 0.1),
+    borderColor: withAlpha(theme.colors.primary, 0.18),
+    borderRadius: theme.radius.pill,
+    borderWidth: 1,
+    height: 88,
+    justifyContent: 'center',
+    marginBottom: theme.spacing.lg,
+    width: 88,
   },
   emptyTitle: {
     color: theme.colors.text,
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: '700',
-    marginBottom: theme.spacing.xs,
+    marginBottom: theme.spacing.sm,
+    textAlign: 'center',
   },
   emptyText: {
-    ...theme.typography.caption,
+    ...theme.typography.body,
     color: theme.colors.mutedText,
+    maxWidth: 260,
+    textAlign: 'center',
   },
 });
 
