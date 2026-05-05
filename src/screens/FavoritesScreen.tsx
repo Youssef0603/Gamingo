@@ -6,7 +6,6 @@ import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
 import { showInterstitialBefore } from '../features/ads/mobileAds';
-import AddPhraseModal from '../features/phrases/AddPhraseModal';
 import PracticeModal from '../features/practice/PracticeModal';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
@@ -16,7 +15,6 @@ const INLINE_AD_FREQUENCY = 3;
 
 function FavoritesScreen() {
   const {
-    addPhraseToFavorites,
     deleteCustomPhrase,
     favoriteFilterLanguage,
     favoriteLanguageOptions,
@@ -25,11 +23,9 @@ function FavoritesScreen() {
     isFavorite,
     nativeLanguage,
     openLanguagePicker,
-    phrases,
     toggleFavorite,
   } = useAppState();
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
-  const [isLookupModalVisible, setIsLookupModalVisible] = useState(false);
   const hasSavedLanguages = favoriteLanguageOptions.length > 0;
   const favoriteIds = getFavoriteIdsForLanguage(favoriteFilterLanguage);
   const favoriteLanguageOption = hasSavedLanguages
@@ -145,20 +141,6 @@ function FavoritesScreen() {
                 {savedPhrases.length} saved phrase{savedPhrases.length === 1 ? '' : 's'}
               </Text>
             </View>
-
-            <View style={styles.lookupHeader}>
-              <Text style={styles.filterLabel}>Add from your data</Text>
-              <Pressable
-                onPress={() => setIsLookupModalVisible(true)}
-                style={({ pressed }) => [
-                  styles.lookupToggle,
-                  pressed && styles.lookupTogglePressed,
-                ]}
-              >
-                <Text style={styles.lookupPlus}>+</Text>
-                <Text style={styles.lookupToggleText}>Add</Text>
-              </Pressable>
-            </View>
           </View>
         }
         renderItem={({ item, index }) => (
@@ -204,19 +186,6 @@ function FavoritesScreen() {
         phrase={activePhrase}
         visible={Boolean(activePhrase)}
       />
-      <AddPhraseModal
-        helperLanguage={nativeLanguage}
-        isFavorite={isFavorite}
-        language={favoriteFilterLanguage}
-        mode="favorites"
-        onAddPhrase={phrase =>
-          addPhraseToFavorites(phrase, favoriteFilterLanguage)
-        }
-        onClose={() => setIsLookupModalVisible(false)}
-        onOpenPhrase={openPhrase}
-        phrases={phrases}
-        visible={isLookupModalVisible}
-      />
     </Screen>
   );
 }
@@ -239,37 +208,6 @@ const styles = StyleSheet.create({
   },
   filterBlock: {
     marginBottom: theme.spacing.md,
-  },
-  lookupHeader: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: theme.spacing.md,
-  },
-  lookupToggle: {
-    alignItems: 'center',
-    backgroundColor: withAlpha(theme.colors.primary, 0.08),
-    borderColor: withAlpha(theme.colors.primary, 0.18),
-    borderRadius: theme.radius.pill,
-    borderWidth: 1,
-    flexDirection: 'row',
-    gap: theme.spacing.xs,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-  },
-  lookupTogglePressed: {
-    opacity: 0.85,
-  },
-  lookupToggleText: {
-    color: theme.colors.primary,
-    fontSize: 13,
-    fontWeight: '700',
-  },
-  lookupPlus: {
-    color: theme.colors.primary,
-    fontSize: 18,
-    fontWeight: '700',
-    lineHeight: 18,
   },
   filterLabel: {
     color: theme.colors.text,
