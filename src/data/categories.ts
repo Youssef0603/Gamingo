@@ -66,6 +66,6 @@ export const categoryMetadata: Record<PhraseCategory, CategoryMetadata> = {
 
 export const featuredCategories: PhraseCategory[] = [
   'callouts',
-  'strategy',
-  'toxic',
+  'danger',
+  'instructions',
 ];

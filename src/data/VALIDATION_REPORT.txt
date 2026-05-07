@@ -1,0 +1,7 @@
+entries=418
+language_suffixes=0
+IT_markers=0
+trailing_period_texts=0
+generic_fallback_terms=0
+non_latin_texts_with_english_words=0
+english_lines_with_foreign_script=0
