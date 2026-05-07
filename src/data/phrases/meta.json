@@ -1,0 +1,3262 @@
+[
+  {
+    "id": "callouts-gg",
+    "category": "callouts",
+    "tags": [
+      "match-end",
+      "sportsmanship",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-glhf",
+    "category": "callouts",
+    "tags": [
+      "match-start",
+      "sportsmanship",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-nice",
+    "category": "callouts",
+    "tags": [
+      "praise",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-thanks",
+    "category": "callouts",
+    "tags": [
+      "polite",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-sorry",
+    "category": "callouts",
+    "tags": [
+      "polite",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-my-bad",
+    "category": "callouts",
+    "tags": [
+      "accountability",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-one-more",
+    "category": "callouts",
+    "tags": [
+      "enemy-count",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-i-am-down",
+    "category": "callouts",
+    "tags": [
+      "status",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-i-am-low",
+    "category": "callouts",
+    "tags": [
+      "health",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-enemy-spotted",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-enemy-here",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-enemy-there",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-two-enemies-here",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-three-enemies-here",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-full-team-here",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-behind-you",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-left-side",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-right-side",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-above-us",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-below-us",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-in-front",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-back-site",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-front-site",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-default-spot",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-corner",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-close-corner",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-long-range",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-short-range",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-mid",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-top-mid",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-bottom-mid",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-spawn",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-our-spawn",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-their-spawn",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-flank",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-watch-flank",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-rotating",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-they-rotated",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-fake-rotate",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-site-clear",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-site-not-clear",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-need-backup",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-need-help",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-help-me",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-i-need-healing",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-need-ammo",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-out-of-ammo",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-reloading",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-cover-me",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-i-got-you",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-i-am-watching",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-watching-left",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-watching-right",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-watching-mid",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-clear-left",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-clear-right",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-clear-mid",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-not-clear",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-contact",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-no-contact",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-footsteps",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-i-hear-steps",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-they-are-close",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-they-are-far",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-sniper-watching",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-shotgun-close",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-grenade-out",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-flash-out",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-smoke-out",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-ultimate-ready",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-no-ultimate",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-ability-ready",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-ability-down",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-cooldown",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-ping-it",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-mark-the-enemy",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-i-marked-it",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-check-map",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-look-at-ping",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-enemy-missing",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-all-missing",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-careful",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-wait",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-go-now",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-push-now",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-fall-back",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-run",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-hide",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-do-not-peek",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-peek-together",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-swing-together",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-hold-angle",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-hold-position",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-move-up",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-come-back",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-group-up",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-split-up",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-stay-alive",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-play-time",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-play-safe",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-play-slow",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-play-fast",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-do-not-chase",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-stop-chasing",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-trade-me",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-trade-him",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-i-will-trade",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-nice-trade",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-bait-and-switch",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-crossfire",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-pinched",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-we-are-pinched",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-third-party",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-reset",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-regroup",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-focus-fire",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-target-marked",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-focus-healer",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-focus-sniper",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-ignore-tank",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-shield-broken",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-armor-cracked",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-one-shot",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-tagged-him",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-hit-for-fifty",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-hit-for-a-hundred",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-no-shield",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-knocked-one",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-finished-one",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-team-wipe",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-clean-fight",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-messy-fight",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-bad-timing",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-good-timing",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-unlucky",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-lucky-shot",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-clutch",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-ace",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-carry",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-throw",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-comeback",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-close-game",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-free-kill",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-free-objective",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-open-lane",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-blocked",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-trap-here",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-trap-destroyed",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-door-closed",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-door-open",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-bridge-clear",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-tunnel-clear",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-roof-clear",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-basement-clear",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-window",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-stairs",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-hallway",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-water",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-high-ground",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-low-ground",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-zone-closing",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-circle-moving",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-storm-coming",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-safe-zone",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-out-of-zone",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-loot-here",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-good-loot",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-need-weapon",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-need-shield",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-need-meds",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-drop-ammo",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-drop-weapon",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-take-this",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-do-not-take-it",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-i-will-take-it",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-use-it",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-save-it",
+    "category": "callouts",
+    "tags": [
+      "common",
+      "callout"
+    ]
+  },
+  {
+    "id": "callouts-voice-chat",
+    "category": "callouts",
+    "tags": [
+      "comms",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-text-chat",
+    "category": "callouts",
+    "tags": [
+      "comms",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-good-job",
+    "category": "callouts",
+    "tags": [
+      "praise",
+      "team"
+    ]
+  },
+  {
+    "id": "callouts-well-played",
+    "category": "callouts",
+    "tags": [
+      "praise",
+      "sportsmanship"
+    ]
+  },
+  {
+    "id": "callouts-no-problem",
+    "category": "callouts",
+    "tags": [
+      "polite",
+      "anti-tilt"
+    ]
+  },
+  {
+    "id": "callouts-last-one",
+    "category": "callouts",
+    "tags": [
+      "enemy-count",
+      "round-info"
+    ]
+  },
+  {
+    "id": "callouts-i-see-him",
+    "category": "callouts",
+    "tags": [
+      "vision",
+      "enemy-position"
+    ]
+  },
+  {
+    "id": "callouts-i-see-them",
+    "category": "callouts",
+    "tags": [
+      "vision",
+      "enemy-position"
+    ]
+  },
+  {
+    "id": "callouts-on-me",
+    "category": "callouts",
+    "tags": [
+      "position",
+      "urgency"
+    ]
+  },
+  {
+    "id": "callouts-with-me",
+    "category": "callouts",
+    "tags": [
+      "position",
+      "teamwork"
+    ]
+  },
+  {
+    "id": "callouts-low-hp",
+    "category": "callouts",
+    "tags": [
+      "health",
+      "damage-info"
+    ]
+  },
+  {
+    "id": "callouts-he-is-low",
+    "category": "callouts",
+    "tags": [
+      "damage-info",
+      "cleanup"
+    ]
+  },
+  {
+    "id": "callouts-they-are-low",
+    "category": "callouts",
+    "tags": [
+      "damage-info",
+      "cleanup"
+    ]
+  },
+  {
+    "id": "callouts-no-mic",
+    "category": "callouts",
+    "tags": [
+      "comms"
+    ]
+  },
+  {
+    "id": "callouts-mic-muted",
+    "category": "callouts",
+    "tags": [
+      "comms"
+    ]
+  },
+  {
+    "id": "danger-incoming",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-grenade",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-flash",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-sniper",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-trap",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-mine",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-ambush",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-they-are-rushing",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-they-are-pushing",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-they-are-flanking",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-they-know",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-they-saw-me",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-i-am-exposed",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-no-cover",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-low-cover",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-bad-angle",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-get-out",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-back-up",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-do-not-go-there",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-it-is-a-trap",
+    "category": "danger",
+    "tags": [
+      "danger",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-enemy-ultimate-ready",
+    "category": "danger",
+    "tags": [
+      "ultimate",
+      "warning"
+    ]
+  },
+  {
+    "id": "danger-they-have-sniper",
+    "category": "danger",
+    "tags": [
+      "weapon",
+      "warning"
+    ]
+  },
+  {
+    "id": "instructions-push",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-rush",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-hold",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-defend",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-attack",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-retreat",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-rotate",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-stack-here",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-spread-out",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-stay-together",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-follow-me",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-lead-the-way",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-go-first",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-i-go-first",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-wait-for-me",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-wait-for-cooldowns",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-use-smoke",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-use-flash",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-use-grenade",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-use-ultimate",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-save-ultimate",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-heal-me",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-revive-me",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-res-me",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-cover-the-revive",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-plant-now",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-defuse-now",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-capture-point",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-contest-point",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-touch-point",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-clear-corners",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-check-left",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-check-right",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-check-behind",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-do-not-split",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-do-not-feed",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-do-not-waste-it",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-stop-peeking",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-mute-him",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-report-after",
+    "category": "instructions",
+    "tags": [
+      "command",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-stack-left",
+    "category": "instructions",
+    "tags": [
+      "positioning"
+    ]
+  },
+  {
+    "id": "instructions-stack-right",
+    "category": "instructions",
+    "tags": [
+      "positioning"
+    ]
+  },
+  {
+    "id": "objective-plant-the-bomb",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-bomb-planted",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-bomb-down",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-spike-down",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-defuse-the-bomb",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-half-defuse",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-stick-the-defuse",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-fake-defuse",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-objective-secured",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-objective-lost",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-point-captured",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-point-contested",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-payload-moving",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-payload-stopped",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-escort-the-payload",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-stop-the-payload",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-capture-the-flag",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-return-the-flag",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-hold-the-point",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "objective-leave-the-point",
+    "category": "objective",
+    "tags": [
+      "objective"
+    ]
+  },
+  {
+    "id": "teamwork-nice-shot",
+    "category": "teamwork",
+    "tags": [
+      "praise",
+      "common"
+    ]
+  },
+  {
+    "id": "teamwork-nice-try",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-good-comms",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-keep-comms-clear",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-i-trust-you",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-you-got-this",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-stay-calm",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-we-can-win",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-one-round-at-a-time",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-reset-mental",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-good-effort",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-great-shot",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-great-save",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-great-call",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-nice-clutch",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-nice-aim",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-nice-movement",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-nice-utility",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-i-will-cover-you",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-i-will-heal-you",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-i-will-watch-flank",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-take-my-weapon",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-take-my-loot",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-let-me-go-first",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-i-will-bait-for-you",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-trade-together",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-wait-for-team",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-we-need-everyone",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-play-together",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-do-not-blame",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "teamwork-focus-next",
+    "category": "teamwork",
+    "tags": [
+      "teamwork",
+      "positive"
+    ]
+  },
+  {
+    "id": "strategy-default-setup",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-slow-push",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-fast-push",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-fake-push",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-split-push",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-retake",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-save-round",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-eco-round",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-full-buy",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-force-buy",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-play-for-picks",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-play-objective",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-play-for-late-game",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-take-map-control",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-give-map-control",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-deny-vision",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-gather-info",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-bait-utility",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-use-utility-first",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-trade-setup",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-double-peek",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-off-angle",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-cross-setup",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-late-lurk",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-anchor-site",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-play-retake",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-stack-objective",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-pressure-side-lane",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-cut-rotation",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-hold-rotation",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-time-advantage",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-man-advantage",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-man-disadvantage",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-numbers-advantage",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-damage-advantage",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-ultimate-advantage",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-economy-advantage",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-do-not-overcommit",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-commit-now",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "strategy-cancel-the-push",
+    "category": "strategy",
+    "tags": [
+      "strategy"
+    ]
+  },
+  {
+    "id": "economy-buy",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-save",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-drop-me",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-i-can-drop",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-need-a-drop",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-full-save",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-light-buy",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-half-buy",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-full-armor",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-no-armor",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-upgrade-weapon",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-keep-weapon",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-pick-up-gun",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-save-the-gun",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-we-are-broke",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-they-are-broke",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-they-have-money",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-we-can-buy-next",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-do-not-force",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-force-together",
+    "category": "economy",
+    "tags": [
+      "economy"
+    ]
+  },
+  {
+    "id": "slang-afk",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-brb",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-op",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-nerf",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-buff",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-meta",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-main",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-alt",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-smurf",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-noob",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-camper",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-sweat",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-tryhard",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-clutch-or-kick",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-diff",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-gap",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-tilt",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-rage-quit",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-spawn-camp",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-spawn-kill",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-hitbox",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-lag",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-ping",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-fps",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-dps",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-aoe",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-cc",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-gg-ez",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-wp",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-nt",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-ggwp",
+    "category": "slang",
+    "tags": [
+      "sportsmanship",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-lag-spike",
+    "category": "slang",
+    "tags": [
+      "network",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-ranked",
+    "category": "slang",
+    "tags": [
+      "mode",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-casual",
+    "category": "slang",
+    "tags": [
+      "mode",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-disconnect",
+    "category": "slang",
+    "tags": [
+      "network"
+    ]
+  },
+  {
+    "id": "slang-reconnect",
+    "category": "slang",
+    "tags": [
+      "network"
+    ]
+  },
+  {
+    "id": "antiToxic-clear-comms-please",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-let-us-reset",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-play-safe-next",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-wait-for-the-team-next-time",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-good-try-next-round",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-we-need-better-spacing",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-let-us-trade-better",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-save-your-utility",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-use-comms-not-blame",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-focus-on-objective",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-we-still-have-time",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-no-worries",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-it-happens",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-next-one-is-ours",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  },
+  {
+    "id": "antiToxic-keep-it-positive",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive"
+    ]
+  }
+]

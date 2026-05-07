@@ -1,0 +1,1674 @@
+{
+  "callouts-gg": {
+    "text": "GG",
+    "meaning": "游戏含义: GG"
+  },
+  "callouts-glhf": {
+    "text": "祝好运，玩得开心",
+    "meaning": "游戏含义: 祝好运，玩得开心"
+  },
+  "callouts-nice": {
+    "text": "漂亮!",
+    "meaning": "游戏含义: 漂亮!"
+  },
+  "callouts-thanks": {
+    "text": "谢谢",
+    "meaning": "游戏含义: 谢谢"
+  },
+  "callouts-sorry": {
+    "text": "抱歉",
+    "meaning": "游戏含义: 抱歉"
+  },
+  "callouts-my-bad": {
+    "text": "我的锅",
+    "meaning": "游戏含义: 我的锅"
+  },
+  "callouts-one-more": {
+    "text": "一个 更多",
+    "meaning": "游戏含义: 一个 更多"
+  },
+  "callouts-i-am-down": {
+    "text": "我 不可用",
+    "meaning": "游戏含义: 我 不可用"
+  },
+  "callouts-i-am-low": {
+    "text": "我 残血",
+    "meaning": "游戏含义: 我 残血"
+  },
+  "callouts-enemy-spotted": {
+    "text": "发现敌人",
+    "meaning": "游戏含义: 发现敌人"
+  },
+  "callouts-enemy-here": {
+    "text": "敌人 这里",
+    "meaning": "游戏含义: 敌人 这里"
+  },
+  "callouts-enemy-there": {
+    "text": "敌人 那里",
+    "meaning": "游戏含义: 敌人 那里"
+  },
+  "callouts-two-enemies-here": {
+    "text": "两个 敌人 这里",
+    "meaning": "游戏含义: 两个 敌人 这里"
+  },
+  "callouts-three-enemies-here": {
+    "text": "三个 敌人 这里",
+    "meaning": "游戏含义: 三个 敌人 这里"
+  },
+  "callouts-full-team-here": {
+    "text": "整队 队伍 这里",
+    "meaning": "游戏含义: 整队 队伍 这里"
+  },
+  "callouts-behind-you": {
+    "text": "身后 你!",
+    "meaning": "游戏含义: 身后 你!"
+  },
+  "callouts-left-side": {
+    "text": "左边 边路!",
+    "meaning": "游戏含义: 左边 边路!"
+  },
+  "callouts-right-side": {
+    "text": "右边 边路!",
+    "meaning": "游戏含义: 右边 边路!"
+  },
+  "callouts-above-us": {
+    "text": "上面 我们",
+    "meaning": "游戏含义: 上面 我们"
+  },
+  "callouts-below-us": {
+    "text": "下面 我们",
+    "meaning": "游戏含义: 下面 我们"
+  },
+  "callouts-in-front": {
+    "text": "在 前面",
+    "meaning": "游戏含义: 在 前面"
+  },
+  "callouts-back-site": {
+    "text": "后点 点位",
+    "meaning": "游戏含义: 后点 点位"
+  },
+  "callouts-front-site": {
+    "text": "前面 点位",
+    "meaning": "游戏含义: 前面 点位"
+  },
+  "callouts-default-spot": {
+    "text": "默认 位置",
+    "meaning": "游戏含义: 默认 位置"
+  },
+  "callouts-corner": {
+    "text": "角落",
+    "meaning": "游戏含义: 角落"
+  },
+  "callouts-close-corner": {
+    "text": "近点 角落",
+    "meaning": "游戏含义: 近点 角落"
+  },
+  "callouts-long-range": {
+    "text": "远点 距离",
+    "meaning": "游戏含义: 远点 距离"
+  },
+  "callouts-short-range": {
+    "text": "近点 距离",
+    "meaning": "游戏含义: 近点 距离"
+  },
+  "callouts-mid": {
+    "text": "中路",
+    "meaning": "游戏含义: 中路"
+  },
+  "callouts-top-mid": {
+    "text": "上路 中路",
+    "meaning": "游戏含义: 上路 中路"
+  },
+  "callouts-bottom-mid": {
+    "text": "下路 中路",
+    "meaning": "游戏含义: 下路 中路"
+  },
+  "callouts-spawn": {
+    "text": "出生点",
+    "meaning": "游戏含义: 出生点"
+  },
+  "callouts-our-spawn": {
+    "text": "我方 出生点",
+    "meaning": "游戏含义: 我方 出生点"
+  },
+  "callouts-their-spawn": {
+    "text": "敌方 出生点",
+    "meaning": "游戏含义: 敌方 出生点"
+  },
+  "callouts-flank": {
+    "text": "绕后",
+    "meaning": "游戏含义: 绕后"
+  },
+  "callouts-watch-flank": {
+    "text": "看 绕后",
+    "meaning": "游戏含义: 看 绕后"
+  },
+  "callouts-rotating": {
+    "text": "转点中",
+    "meaning": "游戏含义: 转点中"
+  },
+  "callouts-they-rotated": {
+    "text": "他们 转点了",
+    "meaning": "游戏含义: 他们 转点了"
+  },
+  "callouts-fake-rotate": {
+    "text": "假转点",
+    "meaning": "游戏含义: 假转点"
+  },
+  "callouts-site-clear": {
+    "text": "点位 清了",
+    "meaning": "游戏含义: 点位 清了"
+  },
+  "callouts-site-not-clear": {
+    "text": "点位 未清 清了",
+    "meaning": "游戏含义: 点位 未清 清了"
+  },
+  "callouts-need-backup": {
+    "text": "需要 支援",
+    "meaning": "游戏含义: 需要 支援"
+  },
+  "callouts-need-help": {
+    "text": "需要 帮忙",
+    "meaning": "游戏含义: 需要 帮忙"
+  },
+  "callouts-help-me": {
+    "text": "帮忙 我",
+    "meaning": "游戏含义: 帮忙 我"
+  },
+  "callouts-i-need-healing": {
+    "text": "我 需要 治疗",
+    "meaning": "游戏含义: 我 需要 治疗"
+  },
+  "callouts-need-ammo": {
+    "text": "需要 弹药",
+    "meaning": "游戏含义: 需要 弹药"
+  },
+  "callouts-out-of-ammo": {
+    "text": "没有 的 弹药",
+    "meaning": "游戏含义: 没有 的 弹药"
+  },
+  "callouts-reloading": {
+    "text": "换弹中",
+    "meaning": "游戏含义: 换弹中"
+  },
+  "callouts-cover-me": {
+    "text": "掩护我 我",
+    "meaning": "游戏含义: 掩护我 我"
+  },
+  "callouts-i-got-you": {
+    "text": "我 拿到 你",
+    "meaning": "游戏含义: 我 拿到 你"
+  },
+  "callouts-i-am-watching": {
+    "text": "我 我看着",
+    "meaning": "游戏含义: 我 我看着"
+  },
+  "callouts-watching-left": {
+    "text": "我看着 左边",
+    "meaning": "游戏含义: 我看着 左边"
+  },
+  "callouts-watching-right": {
+    "text": "我看着 右边",
+    "meaning": "游戏含义: 我看着 右边"
+  },
+  "callouts-watching-mid": {
+    "text": "我看着 中路",
+    "meaning": "游戏含义: 我看着 中路"
+  },
+  "callouts-clear-left": {
+    "text": "清了 左边",
+    "meaning": "游戏含义: 清了 左边"
+  },
+  "callouts-clear-right": {
+    "text": "清了 右边",
+    "meaning": "游戏含义: 清了 右边"
+  },
+  "callouts-clear-mid": {
+    "text": "清了 中路",
+    "meaning": "游戏含义: 清了 中路"
+  },
+  "callouts-not-clear": {
+    "text": "未清 清了",
+    "meaning": "游戏含义: 未清 清了"
+  },
+  "callouts-contact": {
+    "text": "接敌",
+    "meaning": "游戏含义: 接敌"
+  },
+  "callouts-no-contact": {
+    "text": "没有 接敌",
+    "meaning": "游戏含义: 没有 接敌"
+  },
+  "callouts-footsteps": {
+    "text": "脚步",
+    "meaning": "游戏含义: 脚步"
+  },
+  "callouts-i-hear-steps": {
+    "text": "我 听到 脚步",
+    "meaning": "游戏含义: 我 听到 脚步"
+  },
+  "callouts-they-are-close": {
+    "text": "他们 近点",
+    "meaning": "游戏含义: 他们 近点"
+  },
+  "callouts-they-are-far": {
+    "text": "他们 远",
+    "meaning": "游戏含义: 他们 远"
+  },
+  "callouts-sniper-watching": {
+    "text": "狙击手 我看着",
+    "meaning": "游戏含义: 狙击手 我看着"
+  },
+  "callouts-shotgun-close": {
+    "text": "霰弹枪 近点",
+    "meaning": "游戏含义: 霰弹枪 近点"
+  },
+  "callouts-grenade-out": {
+    "text": "手雷 没有",
+    "meaning": "游戏含义: 手雷 没有"
+  },
+  "callouts-flash-out": {
+    "text": "闪光 没有",
+    "meaning": "游戏含义: 闪光 没有"
+  },
+  "callouts-smoke-out": {
+    "text": "烟雾 没有",
+    "meaning": "游戏含义: 烟雾 没有"
+  },
+  "callouts-ultimate-ready": {
+    "text": "大招 好了",
+    "meaning": "游戏含义: 大招 好了"
+  },
+  "callouts-no-ultimate": {
+    "text": "没有 大招",
+    "meaning": "游戏含义: 没有 大招"
+  },
+  "callouts-ability-ready": {
+    "text": "技能 好了",
+    "meaning": "游戏含义: 技能 好了"
+  },
+  "callouts-ability-down": {
+    "text": "技能 不可用",
+    "meaning": "游戏含义: 技能 不可用"
+  },
+  "callouts-cooldown": {
+    "text": "冷却",
+    "meaning": "游戏含义: 冷却"
+  },
+  "callouts-ping-it": {
+    "text": "标记 它",
+    "meaning": "游戏含义: 标记 它"
+  },
+  "callouts-mark-the-enemy": {
+    "text": "标记 敌人",
+    "meaning": "游戏含义: 标记 敌人"
+  },
+  "callouts-i-marked-it": {
+    "text": "我 已标记 它",
+    "meaning": "游戏含义: 我 已标记 它"
+  },
+  "callouts-check-map": {
+    "text": "看 地图",
+    "meaning": "游戏含义: 看 地图"
+  },
+  "callouts-look-at-ping": {
+    "text": "看 在 标记",
+    "meaning": "游戏含义: 看 在 标记"
+  },
+  "callouts-enemy-missing": {
+    "text": "敌人 消失",
+    "meaning": "游戏含义: 敌人 消失"
+  },
+  "callouts-all-missing": {
+    "text": "全部 消失",
+    "meaning": "游戏含义: 全部 消失"
+  },
+  "callouts-careful": {
+    "text": "小心",
+    "meaning": "游戏含义: 小心"
+  },
+  "callouts-wait": {
+    "text": "等一下",
+    "meaning": "游戏含义: 等一下"
+  },
+  "callouts-go-now": {
+    "text": "走 现在",
+    "meaning": "游戏含义: 走 现在"
+  },
+  "callouts-push-now": {
+    "text": "推进 现在",
+    "meaning": "游戏含义: 推进 现在"
+  },
+  "callouts-fall-back": {
+    "text": "撤退 后点",
+    "meaning": "游戏含义: 撤退 后点"
+  },
+  "callouts-run": {
+    "text": "跑",
+    "meaning": "游戏含义: 跑"
+  },
+  "callouts-hide": {
+    "text": "躲起来",
+    "meaning": "游戏含义: 躲起来"
+  },
+  "callouts-do-not-peek": {
+    "text": "不要 未清 探头",
+    "meaning": "游戏含义: 不要 未清 探头"
+  },
+  "callouts-peek-together": {
+    "text": "探头 一起",
+    "meaning": "游戏含义: 探头 一起"
+  },
+  "callouts-swing-together": {
+    "text": "一起拉 一起",
+    "meaning": "游戏含义: 一起拉 一起"
+  },
+  "callouts-hold-angle": {
+    "text": "守住 角度",
+    "meaning": "游戏含义: 守住 角度"
+  },
+  "callouts-hold-position": {
+    "text": "守住 位置",
+    "meaning": "游戏含义: 守住 位置"
+  },
+  "callouts-move-up": {
+    "text": "前压 上",
+    "meaning": "游戏含义: 前压 上"
+  },
+  "callouts-come-back": {
+    "text": "回来 后点",
+    "meaning": "游戏含义: 回来 后点"
+  },
+  "callouts-group-up": {
+    "text": "集合 上",
+    "meaning": "游戏含义: 集合 上"
+  },
+  "callouts-split-up": {
+    "text": "分开 上",
+    "meaning": "游戏含义: 分开 上"
+  },
+  "callouts-stay-alive": {
+    "text": "保持 活着",
+    "meaning": "游戏含义: 保持 活着"
+  },
+  "callouts-play-time": {
+    "text": "打 时间",
+    "meaning": "游戏含义: 打 时间"
+  },
+  "callouts-play-safe": {
+    "text": "打 稳点",
+    "meaning": "游戏含义: 打 稳点"
+  },
+  "callouts-play-slow": {
+    "text": "打 慢打",
+    "meaning": "游戏含义: 打 慢打"
+  },
+  "callouts-play-fast": {
+    "text": "打 快打",
+    "meaning": "游戏含义: 打 快打"
+  },
+  "callouts-do-not-chase": {
+    "text": "不要 未清 追",
+    "meaning": "游戏含义: 不要 未清 追"
+  },
+  "callouts-stop-chasing": {
+    "text": "停止 追击",
+    "meaning": "游戏含义: 停止 追击"
+  },
+  "callouts-trade-me": {
+    "text": "补枪 我",
+    "meaning": "游戏含义: 补枪 我"
+  },
+  "callouts-trade-him": {
+    "text": "补枪 他",
+    "meaning": "游戏含义: 补枪 他"
+  },
+  "callouts-i-will-trade": {
+    "text": "我 会 补枪",
+    "meaning": "游戏含义: 我 会 补枪"
+  },
+  "callouts-nice-trade": {
+    "text": "漂亮 补枪",
+    "meaning": "游戏含义: 漂亮 补枪"
+  },
+  "callouts-bait-and-switch": {
+    "text": "卖 和 换位",
+    "meaning": "游戏含义: 卖 和 换位"
+  },
+  "callouts-crossfire": {
+    "text": "交叉火力",
+    "meaning": "游戏含义: 交叉火力"
+  },
+  "callouts-pinched": {
+    "text": "被夹",
+    "meaning": "游戏含义: 被夹"
+  },
+  "callouts-we-are-pinched": {
+    "text": "我们 被夹",
+    "meaning": "游戏含义: 我们 被夹"
+  },
+  "callouts-third-party": {
+    "text": "第三 队",
+    "meaning": "游戏含义: 第三 队"
+  },
+  "callouts-reset": {
+    "text": "重置",
+    "meaning": "游戏含义: 重置"
+  },
+  "callouts-regroup": {
+    "text": "重新集合",
+    "meaning": "游戏含义: 重新集合"
+  },
+  "callouts-focus-fire": {
+    "text": "集火 开火",
+    "meaning": "游戏含义: 集火 开火"
+  },
+  "callouts-target-marked": {
+    "text": "目标 已标记",
+    "meaning": "游戏含义: 目标 已标记"
+  },
+  "callouts-focus-healer": {
+    "text": "集火 奶妈",
+    "meaning": "游戏含义: 集火 奶妈"
+  },
+  "callouts-focus-sniper": {
+    "text": "集火 狙击手",
+    "meaning": "游戏含义: 集火 狙击手"
+  },
+  "callouts-ignore-tank": {
+    "text": "别管 坦克",
+    "meaning": "游戏含义: 别管 坦克"
+  },
+  "callouts-shield-broken": {
+    "text": "护盾 破了",
+    "meaning": "游戏含义: 护盾 破了"
+  },
+  "callouts-armor-cracked": {
+    "text": "护甲 破甲",
+    "meaning": "游戏含义: 护甲 破甲"
+  },
+  "callouts-one-shot": {
+    "text": "一个 一枪",
+    "meaning": "游戏含义: 一个 一枪"
+  },
+  "callouts-tagged-him": {
+    "text": "打中了 他",
+    "meaning": "游戏含义: 打中了 他"
+  },
+  "callouts-hit-for-fifty": {
+    "text": "打了 为了 五十",
+    "meaning": "游戏含义: 打了 为了 五十"
+  },
+  "callouts-hit-for-a-hundred": {
+    "text": "打了 为了 一百",
+    "meaning": "游戏含义: 打了 为了 一百"
+  },
+  "callouts-no-shield": {
+    "text": "没有 护盾",
+    "meaning": "游戏含义: 没有 护盾"
+  },
+  "callouts-knocked-one": {
+    "text": "击倒 一个",
+    "meaning": "游戏含义: 击倒 一个"
+  },
+  "callouts-finished-one": {
+    "text": "补掉 一个",
+    "meaning": "游戏含义: 补掉 一个"
+  },
+  "callouts-team-wipe": {
+    "text": "队伍 团灭",
+    "meaning": "游戏含义: 队伍 团灭"
+  },
+  "callouts-clean-fight": {
+    "text": "干净 团战",
+    "meaning": "游戏含义: 干净 团战"
+  },
+  "callouts-messy-fight": {
+    "text": "乱战 团战",
+    "meaning": "游戏含义: 乱战 团战"
+  },
+  "callouts-bad-timing": {
+    "text": "差 时机",
+    "meaning": "游戏含义: 差 时机"
+  },
+  "callouts-good-timing": {
+    "text": "好 时机",
+    "meaning": "游戏含义: 好 时机"
+  },
+  "callouts-unlucky": {
+    "text": "可惜",
+    "meaning": "游戏含义: 可惜"
+  },
+  "callouts-lucky-shot": {
+    "text": "运气好 一枪",
+    "meaning": "游戏含义: 运气好 一枪"
+  },
+  "callouts-clutch": {
+    "text": "残局",
+    "meaning": "游戏含义: 残局"
+  },
+  "callouts-ace": {
+    "text": "五杀",
+    "meaning": "游戏含义: 五杀"
+  },
+  "callouts-carry": {
+    "text": "带飞",
+    "meaning": "游戏含义: 带飞"
+  },
+  "callouts-throw": {
+    "text": "送掉",
+    "meaning": "游戏含义: 送掉"
+  },
+  "callouts-comeback": {
+    "text": "翻盘",
+    "meaning": "游戏含义: 翻盘"
+  },
+  "callouts-close-game": {
+    "text": "近点 比赛",
+    "meaning": "游戏含义: 近点 比赛"
+  },
+  "callouts-free-kill": {
+    "text": "白给 击杀",
+    "meaning": "游戏含义: 白给 击杀"
+  },
+  "callouts-free-objective": {
+    "text": "白给 目标",
+    "meaning": "游戏含义: 白给 目标"
+  },
+  "callouts-open-lane": {
+    "text": "开放 路线",
+    "meaning": "游戏含义: 开放 路线"
+  },
+  "callouts-blocked": {
+    "text": "堵住",
+    "meaning": "游戏含义: 堵住"
+  },
+  "callouts-trap-here": {
+    "text": "陷阱 这里",
+    "meaning": "游戏含义: 陷阱 这里"
+  },
+  "callouts-trap-destroyed": {
+    "text": "陷阱 已摧毁",
+    "meaning": "游戏含义: 陷阱 已摧毁"
+  },
+  "callouts-door-closed": {
+    "text": "门 关了",
+    "meaning": "游戏含义: 门 关了"
+  },
+  "callouts-door-open": {
+    "text": "门 开放",
+    "meaning": "游戏含义: 门 开放"
+  },
+  "callouts-bridge-clear": {
+    "text": "桥 清了",
+    "meaning": "游戏含义: 桥 清了"
+  },
+  "callouts-tunnel-clear": {
+    "text": "隧道 清了",
+    "meaning": "游戏含义: 隧道 清了"
+  },
+  "callouts-roof-clear": {
+    "text": "屋顶 清了",
+    "meaning": "游戏含义: 屋顶 清了"
+  },
+  "callouts-basement-clear": {
+    "text": "地下室 清了",
+    "meaning": "游戏含义: 地下室 清了"
+  },
+  "callouts-window": {
+    "text": "窗口",
+    "meaning": "游戏含义: 窗口"
+  },
+  "callouts-stairs": {
+    "text": "楼梯",
+    "meaning": "游戏含义: 楼梯"
+  },
+  "callouts-hallway": {
+    "text": "走廊",
+    "meaning": "游戏含义: 走廊"
+  },
+  "callouts-water": {
+    "text": "水边",
+    "meaning": "游戏含义: 水边"
+  },
+  "callouts-high-ground": {
+    "text": "高 地形",
+    "meaning": "游戏含义: 高 地形"
+  },
+  "callouts-low-ground": {
+    "text": "残血 地形",
+    "meaning": "游戏含义: 残血 地形"
+  },
+  "callouts-zone-closing": {
+    "text": "安全区 缩圈",
+    "meaning": "游戏含义: 安全区 缩圈"
+  },
+  "callouts-circle-moving": {
+    "text": "圈 移动中",
+    "meaning": "游戏含义: 圈 移动中"
+  },
+  "callouts-storm-coming": {
+    "text": "风暴 来了",
+    "meaning": "游戏含义: 风暴 来了"
+  },
+  "callouts-safe-zone": {
+    "text": "稳点 安全区",
+    "meaning": "游戏含义: 稳点 安全区"
+  },
+  "callouts-out-of-zone": {
+    "text": "没有 的 安全区",
+    "meaning": "游戏含义: 没有 的 安全区"
+  },
+  "callouts-loot-here": {
+    "text": "物资 这里",
+    "meaning": "游戏含义: 物资 这里"
+  },
+  "callouts-good-loot": {
+    "text": "好 物资",
+    "meaning": "游戏含义: 好 物资"
+  },
+  "callouts-need-weapon": {
+    "text": "需要 武器",
+    "meaning": "游戏含义: 需要 武器"
+  },
+  "callouts-need-shield": {
+    "text": "需要 护盾",
+    "meaning": "游戏含义: 需要 护盾"
+  },
+  "callouts-need-meds": {
+    "text": "需要 药品",
+    "meaning": "游戏含义: 需要 药品"
+  },
+  "callouts-drop-ammo": {
+    "text": "丢给我 弹药",
+    "meaning": "游戏含义: 丢给我 弹药"
+  },
+  "callouts-drop-weapon": {
+    "text": "丢给我 武器",
+    "meaning": "游戏含义: 丢给我 武器"
+  },
+  "callouts-take-this": {
+    "text": "拿 这个",
+    "meaning": "游戏含义: 拿 这个"
+  },
+  "callouts-do-not-take-it": {
+    "text": "不要 未清 拿 它",
+    "meaning": "游戏含义: 不要 未清 拿 它"
+  },
+  "callouts-i-will-take-it": {
+    "text": "我 会 拿 它",
+    "meaning": "游戏含义: 我 会 拿 它"
+  },
+  "callouts-use-it": {
+    "text": "用 它",
+    "meaning": "游戏含义: 用 它"
+  },
+  "callouts-save-it": {
+    "text": "留着 它",
+    "meaning": "游戏含义: 留着 它"
+  },
+  "callouts-voice-chat": {
+    "text": "语音 聊天",
+    "meaning": "游戏含义: 语音 聊天"
+  },
+  "callouts-text-chat": {
+    "text": "文字 聊天",
+    "meaning": "游戏含义: 文字 聊天"
+  },
+  "callouts-good-job": {
+    "text": "干得好",
+    "meaning": "游戏含义: 干得好"
+  },
+  "callouts-well-played": {
+    "text": "打得好",
+    "meaning": "游戏含义: 打得好"
+  },
+  "callouts-no-problem": {
+    "text": "没问题",
+    "meaning": "游戏含义: 没问题"
+  },
+  "callouts-last-one": {
+    "text": "最后 一个",
+    "meaning": "游戏含义: 最后 一个"
+  },
+  "callouts-i-see-him": {
+    "text": "我 看到 他",
+    "meaning": "游戏含义: 我 看到 他"
+  },
+  "callouts-i-see-them": {
+    "text": "我 看到 他们",
+    "meaning": "游戏含义: 我 看到 他们"
+  },
+  "callouts-on-me": {
+    "text": "在 我",
+    "meaning": "游戏含义: 在 我"
+  },
+  "callouts-with-me": {
+    "text": "和 我",
+    "meaning": "游戏含义: 和 我"
+  },
+  "callouts-low-hp": {
+    "text": "残血 HP",
+    "meaning": "游戏含义: 残血 HP"
+  },
+  "callouts-he-is-low": {
+    "text": "他 残血",
+    "meaning": "游戏含义: 他 残血"
+  },
+  "callouts-they-are-low": {
+    "text": "他们 残血",
+    "meaning": "游戏含义: 他们 残血"
+  },
+  "callouts-no-mic": {
+    "text": "没有 麦克风",
+    "meaning": "游戏含义: 没有 麦克风"
+  },
+  "callouts-mic-muted": {
+    "text": "麦克风 已静音",
+    "meaning": "游戏含义: 麦克风 已静音"
+  },
+  "danger-incoming": {
+    "text": "来了!",
+    "meaning": "游戏含义: 来了!"
+  },
+  "danger-grenade": {
+    "text": "手雷!",
+    "meaning": "游戏含义: 手雷!"
+  },
+  "danger-flash": {
+    "text": "闪光!",
+    "meaning": "游戏含义: 闪光!"
+  },
+  "danger-sniper": {
+    "text": "狙击手!",
+    "meaning": "游戏含义: 狙击手!"
+  },
+  "danger-trap": {
+    "text": "陷阱!",
+    "meaning": "游戏含义: 陷阱!"
+  },
+  "danger-mine": {
+    "text": "地雷!",
+    "meaning": "游戏含义: 地雷!"
+  },
+  "danger-ambush": {
+    "text": "埋伏!",
+    "meaning": "游戏含义: 埋伏!"
+  },
+  "danger-they-are-rushing": {
+    "text": "他们 快攻中",
+    "meaning": "游戏含义: 他们 快攻中"
+  },
+  "danger-they-are-pushing": {
+    "text": "他们 推进中",
+    "meaning": "游戏含义: 他们 推进中"
+  },
+  "danger-they-are-flanking": {
+    "text": "他们 绕后中",
+    "meaning": "游戏含义: 他们 绕后中"
+  },
+  "danger-they-know": {
+    "text": "他们 知道",
+    "meaning": "游戏含义: 他们 知道"
+  },
+  "danger-they-saw-me": {
+    "text": "他们 看见 我",
+    "meaning": "游戏含义: 他们 看见 我"
+  },
+  "danger-i-am-exposed": {
+    "text": "我 暴露",
+    "meaning": "游戏含义: 我 暴露"
+  },
+  "danger-no-cover": {
+    "text": "没有 掩护我",
+    "meaning": "游戏含义: 没有 掩护我"
+  },
+  "danger-low-cover": {
+    "text": "残血 掩护我",
+    "meaning": "游戏含义: 残血 掩护我"
+  },
+  "danger-bad-angle": {
+    "text": "差 角度",
+    "meaning": "游戏含义: 差 角度"
+  },
+  "danger-get-out": {
+    "text": "拿到 没有",
+    "meaning": "游戏含义: 拿到 没有"
+  },
+  "danger-back-up": {
+    "text": "后点 上",
+    "meaning": "游戏含义: 后点 上"
+  },
+  "danger-do-not-go-there": {
+    "text": "不要 未清 走 那里",
+    "meaning": "游戏含义: 不要 未清 走 那里"
+  },
+  "danger-it-is-a-trap": {
+    "text": "它 陷阱",
+    "meaning": "游戏含义: 它 陷阱"
+  },
+  "danger-enemy-ultimate-ready": {
+    "text": "敌人 大招 好了",
+    "meaning": "游戏含义: 敌人 大招 好了"
+  },
+  "danger-they-have-sniper": {
+    "text": "他们 有 狙击手",
+    "meaning": "游戏含义: 他们 有 狙击手"
+  },
+  "instructions-push": {
+    "text": "推进",
+    "meaning": "游戏含义: 推进"
+  },
+  "instructions-rush": {
+    "text": "快攻",
+    "meaning": "游戏含义: 快攻"
+  },
+  "instructions-hold": {
+    "text": "守住",
+    "meaning": "游戏含义: 守住"
+  },
+  "instructions-defend": {
+    "text": "防守",
+    "meaning": "游戏含义: 防守"
+  },
+  "instructions-attack": {
+    "text": "进攻",
+    "meaning": "游戏含义: 进攻"
+  },
+  "instructions-retreat": {
+    "text": "撤退",
+    "meaning": "游戏含义: 撤退"
+  },
+  "instructions-rotate": {
+    "text": "转点",
+    "meaning": "游戏含义: 转点"
+  },
+  "instructions-stack-here": {
+    "text": "集合 这里",
+    "meaning": "游戏含义: 集合 这里"
+  },
+  "instructions-spread-out": {
+    "text": "分散 没有",
+    "meaning": "游戏含义: 分散 没有"
+  },
+  "instructions-stay-together": {
+    "text": "保持 一起",
+    "meaning": "游戏含义: 保持 一起"
+  },
+  "instructions-follow-me": {
+    "text": "跟我 我",
+    "meaning": "游戏含义: 跟我 我"
+  },
+  "instructions-lead-the-way": {
+    "text": "带路 路",
+    "meaning": "游戏含义: 带路 路"
+  },
+  "instructions-go-first": {
+    "text": "走 先",
+    "meaning": "游戏含义: 走 先"
+  },
+  "instructions-i-go-first": {
+    "text": "我 走 先",
+    "meaning": "游戏含义: 我 走 先"
+  },
+  "instructions-wait-for-me": {
+    "text": "等一下 为了 我",
+    "meaning": "游戏含义: 等一下 为了 我"
+  },
+  "instructions-wait-for-cooldowns": {
+    "text": "等一下 为了 冷却",
+    "meaning": "游戏含义: 等一下 为了 冷却"
+  },
+  "instructions-use-smoke": {
+    "text": "用 烟雾",
+    "meaning": "游戏含义: 用 烟雾"
+  },
+  "instructions-use-flash": {
+    "text": "用 闪光",
+    "meaning": "游戏含义: 用 闪光"
+  },
+  "instructions-use-grenade": {
+    "text": "用 手雷",
+    "meaning": "游戏含义: 用 手雷"
+  },
+  "instructions-use-ultimate": {
+    "text": "用 大招",
+    "meaning": "游戏含义: 用 大招"
+  },
+  "instructions-save-ultimate": {
+    "text": "留着 大招",
+    "meaning": "游戏含义: 留着 大招"
+  },
+  "instructions-heal-me": {
+    "text": "治疗我 我",
+    "meaning": "游戏含义: 治疗我 我"
+  },
+  "instructions-revive-me": {
+    "text": "救我 我",
+    "meaning": "游戏含义: 救我 我"
+  },
+  "instructions-res-me": {
+    "text": "复活 我",
+    "meaning": "游戏含义: 复活 我"
+  },
+  "instructions-cover-the-revive": {
+    "text": "掩护我 救我",
+    "meaning": "游戏含义: 掩护我 救我"
+  },
+  "instructions-plant-now": {
+    "text": "下包 现在",
+    "meaning": "游戏含义: 下包 现在"
+  },
+  "instructions-defuse-now": {
+    "text": "拆包 现在",
+    "meaning": "游戏含义: 拆包 现在"
+  },
+  "instructions-capture-point": {
+    "text": "占点 点",
+    "meaning": "游戏含义: 占点 点"
+  },
+  "instructions-contest-point": {
+    "text": "争点 点",
+    "meaning": "游戏含义: 争点 点"
+  },
+  "instructions-touch-point": {
+    "text": "摸点 点",
+    "meaning": "游戏含义: 摸点 点"
+  },
+  "instructions-clear-corners": {
+    "text": "清了 角落",
+    "meaning": "游戏含义: 清了 角落"
+  },
+  "instructions-check-left": {
+    "text": "看 左边",
+    "meaning": "游戏含义: 看 左边"
+  },
+  "instructions-check-right": {
+    "text": "看 右边",
+    "meaning": "游戏含义: 看 右边"
+  },
+  "instructions-check-behind": {
+    "text": "看 身后",
+    "meaning": "游戏含义: 看 身后"
+  },
+  "instructions-do-not-split": {
+    "text": "不要 未清 分开",
+    "meaning": "游戏含义: 不要 未清 分开"
+  },
+  "instructions-do-not-feed": {
+    "text": "不要 未清 送",
+    "meaning": "游戏含义: 不要 未清 送"
+  },
+  "instructions-do-not-waste-it": {
+    "text": "不要 未清 浪费 它",
+    "meaning": "游戏含义: 不要 未清 浪费 它"
+  },
+  "instructions-stop-peeking": {
+    "text": "停止 探头",
+    "meaning": "游戏含义: 停止 探头"
+  },
+  "instructions-mute-him": {
+    "text": "屏蔽 他",
+    "meaning": "游戏含义: 屏蔽 他"
+  },
+  "instructions-report-after": {
+    "text": "举报 后",
+    "meaning": "游戏含义: 举报 后"
+  },
+  "instructions-stack-left": {
+    "text": "集合 左边",
+    "meaning": "游戏含义: 集合 左边"
+  },
+  "instructions-stack-right": {
+    "text": "集合 右边",
+    "meaning": "游戏含义: 集合 右边"
+  },
+  "objective-plant-the-bomb": {
+    "text": "下包 炸弹",
+    "meaning": "游戏含义: 下包 炸弹"
+  },
+  "objective-bomb-planted": {
+    "text": "炸弹 已下包",
+    "meaning": "游戏含义: 炸弹 已下包"
+  },
+  "objective-bomb-down": {
+    "text": "炸弹 不可用",
+    "meaning": "游戏含义: 炸弹 不可用"
+  },
+  "objective-spike-down": {
+    "text": "爆能器 不可用",
+    "meaning": "游戏含义: 爆能器 不可用"
+  },
+  "objective-defuse-the-bomb": {
+    "text": "拆包 炸弹",
+    "meaning": "游戏含义: 拆包 炸弹"
+  },
+  "objective-half-defuse": {
+    "text": "一半 拆包",
+    "meaning": "游戏含义: 一半 拆包"
+  },
+  "objective-stick-the-defuse": {
+    "text": "强拆 拆包",
+    "meaning": "游戏含义: 强拆 拆包"
+  },
+  "objective-fake-defuse": {
+    "text": "假拆包",
+    "meaning": "游戏含义: 假拆包"
+  },
+  "objective-objective-secured": {
+    "text": "目标 已确保",
+    "meaning": "游戏含义: 目标 已确保"
+  },
+  "objective-objective-lost": {
+    "text": "目标 丢失",
+    "meaning": "游戏含义: 目标 丢失"
+  },
+  "objective-point-captured": {
+    "text": "点 已占领",
+    "meaning": "游戏含义: 点 已占领"
+  },
+  "objective-point-contested": {
+    "text": "点 争夺中",
+    "meaning": "游戏含义: 点 争夺中"
+  },
+  "objective-payload-moving": {
+    "text": "推车 移动中",
+    "meaning": "游戏含义: 推车 移动中"
+  },
+  "objective-payload-stopped": {
+    "text": "推车 停止了",
+    "meaning": "游戏含义: 推车 停止了"
+  },
+  "objective-escort-the-payload": {
+    "text": "护送 推车",
+    "meaning": "游戏含义: 护送 推车"
+  },
+  "objective-stop-the-payload": {
+    "text": "停止 推车",
+    "meaning": "游戏含义: 停止 推车"
+  },
+  "objective-capture-the-flag": {
+    "text": "占点 旗帜",
+    "meaning": "游戏含义: 占点 旗帜"
+  },
+  "objective-return-the-flag": {
+    "text": "返回 旗帜",
+    "meaning": "游戏含义: 返回 旗帜"
+  },
+  "objective-hold-the-point": {
+    "text": "守住 点",
+    "meaning": "游戏含义: 守住 点"
+  },
+  "objective-leave-the-point": {
+    "text": "离开 点",
+    "meaning": "游戏含义: 离开 点"
+  },
+  "teamwork-nice-shot": {
+    "text": "漂亮 一枪",
+    "meaning": "游戏含义: 漂亮 一枪"
+  },
+  "teamwork-nice-try": {
+    "text": "漂亮 尝试",
+    "meaning": "游戏含义: 漂亮 尝试"
+  },
+  "teamwork-good-comms": {
+    "text": "好 沟通",
+    "meaning": "游戏含义: 好 沟通"
+  },
+  "teamwork-keep-comms-clear": {
+    "text": "保持 沟通 清了",
+    "meaning": "游戏含义: 保持 沟通 清了"
+  },
+  "teamwork-i-trust-you": {
+    "text": "我 相信 你",
+    "meaning": "游戏含义: 我 相信 你"
+  },
+  "teamwork-you-got-this": {
+    "text": "你 拿到 这个",
+    "meaning": "游戏含义: 你 拿到 这个"
+  },
+  "teamwork-stay-calm": {
+    "text": "保持 冷静",
+    "meaning": "游戏含义: 保持 冷静"
+  },
+  "teamwork-we-can-win": {
+    "text": "我们 可以 赢",
+    "meaning": "游戏含义: 我们 可以 赢"
+  },
+  "teamwork-one-round-at-a-time": {
+    "text": "一个 回合 在 时间",
+    "meaning": "游戏含义: 一个 回合 在 时间"
+  },
+  "teamwork-reset-mental": {
+    "text": "重置 心态",
+    "meaning": "游戏含义: 重置 心态"
+  },
+  "teamwork-good-effort": {
+    "text": "好 努力",
+    "meaning": "游戏含义: 好 努力"
+  },
+  "teamwork-great-shot": {
+    "text": "很棒 一枪",
+    "meaning": "游戏含义: 很棒 一枪"
+  },
+  "teamwork-great-save": {
+    "text": "很棒 留着",
+    "meaning": "游戏含义: 很棒 留着"
+  },
+  "teamwork-great-call": {
+    "text": "很棒 报点",
+    "meaning": "游戏含义: 很棒 报点"
+  },
+  "teamwork-nice-clutch": {
+    "text": "漂亮 残局",
+    "meaning": "游戏含义: 漂亮 残局"
+  },
+  "teamwork-nice-aim": {
+    "text": "漂亮 瞄准",
+    "meaning": "游戏含义: 漂亮 瞄准"
+  },
+  "teamwork-nice-movement": {
+    "text": "漂亮 走位",
+    "meaning": "游戏含义: 漂亮 走位"
+  },
+  "teamwork-nice-utility": {
+    "text": "漂亮 道具",
+    "meaning": "游戏含义: 漂亮 道具"
+  },
+  "teamwork-i-will-cover-you": {
+    "text": "我 会 掩护我 你",
+    "meaning": "游戏含义: 我 会 掩护我 你"
+  },
+  "teamwork-i-will-heal-you": {
+    "text": "我 会 治疗我 你",
+    "meaning": "游戏含义: 我 会 治疗我 你"
+  },
+  "teamwork-i-will-watch-flank": {
+    "text": "我 会 看 绕后",
+    "meaning": "游戏含义: 我 会 看 绕后"
+  },
+  "teamwork-take-my-weapon": {
+    "text": "拿 我的 武器",
+    "meaning": "游戏含义: 拿 我的 武器"
+  },
+  "teamwork-take-my-loot": {
+    "text": "拿 我的 物资",
+    "meaning": "游戏含义: 拿 我的 物资"
+  },
+  "teamwork-let-me-go-first": {
+    "text": "让 我 走 先",
+    "meaning": "游戏含义: 让 我 走 先"
+  },
+  "teamwork-i-will-bait-for-you": {
+    "text": "我 会 卖 为了 你",
+    "meaning": "游戏含义: 我 会 卖 为了 你"
+  },
+  "teamwork-trade-together": {
+    "text": "补枪 一起",
+    "meaning": "游戏含义: 补枪 一起"
+  },
+  "teamwork-wait-for-team": {
+    "text": "等一下 为了 队伍",
+    "meaning": "游戏含义: 等一下 为了 队伍"
+  },
+  "teamwork-we-need-everyone": {
+    "text": "我们 需要 所有人",
+    "meaning": "游戏含义: 我们 需要 所有人"
+  },
+  "teamwork-play-together": {
+    "text": "打 一起",
+    "meaning": "游戏含义: 打 一起"
+  },
+  "teamwork-do-not-blame": {
+    "text": "不要 未清 责怪",
+    "meaning": "游戏含义: 不要 未清 责怪"
+  },
+  "teamwork-focus-next": {
+    "text": "集火 下一局",
+    "meaning": "游戏含义: 集火 下一局"
+  },
+  "strategy-default-setup": {
+    "text": "默认 站位",
+    "meaning": "游戏含义: 默认 站位"
+  },
+  "strategy-slow-push": {
+    "text": "慢打 推进",
+    "meaning": "游戏含义: 慢打 推进"
+  },
+  "strategy-fast-push": {
+    "text": "快打 推进",
+    "meaning": "游戏含义: 快打 推进"
+  },
+  "strategy-fake-push": {
+    "text": "假进攻",
+    "meaning": "游戏含义: 假进攻"
+  },
+  "strategy-split-push": {
+    "text": "分开 推进",
+    "meaning": "游戏含义: 分开 推进"
+  },
+  "strategy-retake": {
+    "text": "回防",
+    "meaning": "游戏含义: 回防"
+  },
+  "strategy-save-round": {
+    "text": "留着 回合",
+    "meaning": "游戏含义: 留着 回合"
+  },
+  "strategy-eco-round": {
+    "text": "经济局 回合",
+    "meaning": "游戏含义: 经济局 回合"
+  },
+  "strategy-full-buy": {
+    "text": "整队 买",
+    "meaning": "游戏含义: 整队 买"
+  },
+  "strategy-force-buy": {
+    "text": "强起 买",
+    "meaning": "游戏含义: 强起 买"
+  },
+  "strategy-play-for-picks": {
+    "text": "打 为了 击杀机会",
+    "meaning": "游戏含义: 打 为了 击杀机会"
+  },
+  "strategy-play-objective": {
+    "text": "打 目标",
+    "meaning": "游戏含义: 打 目标"
+  },
+  "strategy-play-for-late-game": {
+    "text": "打 为了 后期 比赛",
+    "meaning": "游戏含义: 打 为了 后期 比赛"
+  },
+  "strategy-take-map-control": {
+    "text": "拿 地图 控制",
+    "meaning": "游戏含义: 拿 地图 控制"
+  },
+  "strategy-give-map-control": {
+    "text": "给 地图 控制",
+    "meaning": "游戏含义: 给 地图 控制"
+  },
+  "strategy-deny-vision": {
+    "text": "阻止 视野",
+    "meaning": "游戏含义: 阻止 视野"
+  },
+  "strategy-gather-info": {
+    "text": "收集 信息",
+    "meaning": "游戏含义: 收集 信息"
+  },
+  "strategy-bait-utility": {
+    "text": "卖 道具",
+    "meaning": "游戏含义: 卖 道具"
+  },
+  "strategy-use-utility-first": {
+    "text": "用 道具 先",
+    "meaning": "游戏含义: 用 道具 先"
+  },
+  "strategy-trade-setup": {
+    "text": "补枪 站位",
+    "meaning": "游戏含义: 补枪 站位"
+  },
+  "strategy-double-peek": {
+    "text": "双人 探头",
+    "meaning": "游戏含义: 双人 探头"
+  },
+  "strategy-off-angle": {
+    "text": "非主流 角度",
+    "meaning": "游戏含义: 非主流 角度"
+  },
+  "strategy-cross-setup": {
+    "text": "交叉 站位",
+    "meaning": "游戏含义: 交叉 站位"
+  },
+  "strategy-late-lurk": {
+    "text": "后期 绕后单摸",
+    "meaning": "游戏含义: 后期 绕后单摸"
+  },
+  "strategy-anchor-site": {
+    "text": "守点 点位",
+    "meaning": "游戏含义: 守点 点位"
+  },
+  "strategy-play-retake": {
+    "text": "打 回防",
+    "meaning": "游戏含义: 打 回防"
+  },
+  "strategy-stack-objective": {
+    "text": "集合 目标",
+    "meaning": "游戏含义: 集合 目标"
+  },
+  "strategy-pressure-side-lane": {
+    "text": "压力 边路 路线",
+    "meaning": "游戏含义: 压力 边路 路线"
+  },
+  "strategy-cut-rotation": {
+    "text": "切断 转点",
+    "meaning": "游戏含义: 切断 转点"
+  },
+  "strategy-hold-rotation": {
+    "text": "守住 转点",
+    "meaning": "游戏含义: 守住 转点"
+  },
+  "strategy-time-advantage": {
+    "text": "时间 优势",
+    "meaning": "游戏含义: 时间 优势"
+  },
+  "strategy-man-advantage": {
+    "text": "人数 优势",
+    "meaning": "游戏含义: 人数 优势"
+  },
+  "strategy-man-disadvantage": {
+    "text": "人数 劣势",
+    "meaning": "游戏含义: 人数 劣势"
+  },
+  "strategy-numbers-advantage": {
+    "text": "人数 优势",
+    "meaning": "游戏含义: 人数 优势"
+  },
+  "strategy-damage-advantage": {
+    "text": "伤害 优势",
+    "meaning": "游戏含义: 伤害 优势"
+  },
+  "strategy-ultimate-advantage": {
+    "text": "大招 优势",
+    "meaning": "游戏含义: 大招 优势"
+  },
+  "strategy-economy-advantage": {
+    "text": "经济 优势",
+    "meaning": "游戏含义: 经济 优势"
+  },
+  "strategy-do-not-overcommit": {
+    "text": "不要 未清 过度投入",
+    "meaning": "游戏含义: 不要 未清 过度投入"
+  },
+  "strategy-commit-now": {
+    "text": "强打 现在",
+    "meaning": "游戏含义: 强打 现在"
+  },
+  "strategy-cancel-the-push": {
+    "text": "取消 推进",
+    "meaning": "游戏含义: 取消 推进"
+  },
+  "economy-buy": {
+    "text": "买",
+    "meaning": "游戏含义: 买"
+  },
+  "economy-save": {
+    "text": "留着",
+    "meaning": "游戏含义: 留着"
+  },
+  "economy-drop-me": {
+    "text": "丢给我 我",
+    "meaning": "游戏含义: 丢给我 我"
+  },
+  "economy-i-can-drop": {
+    "text": "我 可以 丢给我",
+    "meaning": "游戏含义: 我 可以 丢给我"
+  },
+  "economy-need-a-drop": {
+    "text": "需要 丢给我",
+    "meaning": "游戏含义: 需要 丢给我"
+  },
+  "economy-full-save": {
+    "text": "整队 留着",
+    "meaning": "游戏含义: 整队 留着"
+  },
+  "economy-light-buy": {
+    "text": "轻甲 买",
+    "meaning": "游戏含义: 轻甲 买"
+  },
+  "economy-half-buy": {
+    "text": "一半 买",
+    "meaning": "游戏含义: 一半 买"
+  },
+  "economy-full-armor": {
+    "text": "整队 护甲",
+    "meaning": "游戏含义: 整队 护甲"
+  },
+  "economy-no-armor": {
+    "text": "没有 护甲",
+    "meaning": "游戏含义: 没有 护甲"
+  },
+  "economy-upgrade-weapon": {
+    "text": "升级 武器",
+    "meaning": "游戏含义: 升级 武器"
+  },
+  "economy-keep-weapon": {
+    "text": "保持 武器",
+    "meaning": "游戏含义: 保持 武器"
+  },
+  "economy-pick-up-gun": {
+    "text": "首杀 上 枪",
+    "meaning": "游戏含义: 首杀 上 枪"
+  },
+  "economy-save-the-gun": {
+    "text": "留着 枪",
+    "meaning": "游戏含义: 留着 枪"
+  },
+  "economy-we-are-broke": {
+    "text": "我们 没钱",
+    "meaning": "游戏含义: 我们 没钱"
+  },
+  "economy-they-are-broke": {
+    "text": "他们 没钱",
+    "meaning": "游戏含义: 他们 没钱"
+  },
+  "economy-they-have-money": {
+    "text": "他们 有 钱",
+    "meaning": "游戏含义: 他们 有 钱"
+  },
+  "economy-we-can-buy-next": {
+    "text": "我们 可以 买 下一局",
+    "meaning": "游戏含义: 我们 可以 买 下一局"
+  },
+  "economy-do-not-force": {
+    "text": "不要 未清 强起",
+    "meaning": "游戏含义: 不要 未清 强起"
+  },
+  "economy-force-together": {
+    "text": "强起 一起",
+    "meaning": "游戏含义: 强起 一起"
+  },
+  "slang-afk": {
+    "text": "AFK",
+    "meaning": "游戏含义: AFK"
+  },
+  "slang-brb": {
+    "text": "BRB",
+    "meaning": "游戏含义: BRB"
+  },
+  "slang-op": {
+    "text": "OP",
+    "meaning": "游戏含义: OP"
+  },
+  "slang-nerf": {
+    "text": "削弱",
+    "meaning": "游戏含义: 削弱"
+  },
+  "slang-buff": {
+    "text": "加强",
+    "meaning": "游戏含义: 加强"
+  },
+  "slang-meta": {
+    "text": "版本强势",
+    "meaning": "游戏含义: 版本强势"
+  },
+  "slang-main": {
+    "text": "主玩",
+    "meaning": "游戏含义: 主玩"
+  },
+  "slang-alt": {
+    "text": "小号",
+    "meaning": "游戏含义: 小号"
+  },
+  "slang-smurf": {
+    "text": "炸鱼号",
+    "meaning": "游戏含义: 炸鱼号"
+  },
+  "slang-noob": {
+    "text": "新手",
+    "meaning": "游戏含义: 新手"
+  },
+  "slang-camper": {
+    "text": "蹲点玩家",
+    "meaning": "游戏含义: 蹲点玩家"
+  },
+  "slang-sweat": {
+    "text": "认真哥",
+    "meaning": "游戏含义: 认真哥"
+  },
+  "slang-tryhard": {
+    "text": "认真哥",
+    "meaning": "游戏含义: 认真哥"
+  },
+  "slang-clutch-or-kick": {
+    "text": "残局 或 踢出",
+    "meaning": "游戏含义: 残局 或 踢出"
+  },
+  "slang-diff": {
+    "text": "差距",
+    "meaning": "游戏含义: 差距"
+  },
+  "slang-gap": {
+    "text": "差距",
+    "meaning": "游戏含义: 差距"
+  },
+  "slang-tilt": {
+    "text": "心态崩",
+    "meaning": "游戏含义: 心态崩"
+  },
+  "slang-rage-quit": {
+    "text": "愤怒 退出",
+    "meaning": "游戏含义: 愤怒 退出"
+  },
+  "slang-spawn-camp": {
+    "text": "出生点 蹲点",
+    "meaning": "游戏含义: 出生点 蹲点"
+  },
+  "slang-spawn-kill": {
+    "text": "出生点 击杀",
+    "meaning": "游戏含义: 出生点 击杀"
+  },
+  "slang-hitbox": {
+    "text": "碰撞箱",
+    "meaning": "游戏含义: 碰撞箱"
+  },
+  "slang-lag": {
+    "text": "延迟",
+    "meaning": "游戏含义: 延迟"
+  },
+  "slang-ping": {
+    "text": "标记",
+    "meaning": "游戏含义: 标记"
+  },
+  "slang-fps": {
+    "text": "FPS",
+    "meaning": "游戏含义: FPS"
+  },
+  "slang-dps": {
+    "text": "DPS",
+    "meaning": "游戏含义: DPS"
+  },
+  "slang-aoe": {
+    "text": "AOE",
+    "meaning": "游戏含义: AOE"
+  },
+  "slang-cc": {
+    "text": "CC",
+    "meaning": "游戏含义: CC"
+  },
+  "slang-gg-ez": {
+    "text": "GG EZ",
+    "meaning": "游戏含义: GG EZ"
+  },
+  "slang-wp": {
+    "text": "WP",
+    "meaning": "游戏含义: WP"
+  },
+  "slang-nt": {
+    "text": "NT",
+    "meaning": "游戏含义: NT"
+  },
+  "slang-ggwp": {
+    "text": "GGWP",
+    "meaning": "游戏含义: GGWP"
+  },
+  "slang-lag-spike": {
+    "text": "延迟 爆能器",
+    "meaning": "游戏含义: 延迟 爆能器"
+  },
+  "slang-ranked": {
+    "text": "排位",
+    "meaning": "游戏含义: 排位"
+  },
+  "slang-casual": {
+    "text": "休闲",
+    "meaning": "游戏含义: 休闲"
+  },
+  "slang-disconnect": {
+    "text": "掉线",
+    "meaning": "游戏含义: 掉线"
+  },
+  "slang-reconnect": {
+    "text": "重连",
+    "meaning": "游戏含义: 重连"
+  },
+  "antiToxic-clear-comms-please": {
+    "text": "清了 沟通, 请",
+    "meaning": "游戏含义: 清了 沟通, 请"
+  },
+  "antiToxic-let-us-reset": {
+    "text": "让 我们 重置",
+    "meaning": "游戏含义: 让 我们 重置"
+  },
+  "antiToxic-play-safe-next": {
+    "text": "打 稳点 下一局",
+    "meaning": "游戏含义: 打 稳点 下一局"
+  },
+  "antiToxic-wait-for-the-team-next-time": {
+    "text": "等一下 为了 队伍 下一局 时间",
+    "meaning": "游戏含义: 等一下 为了 队伍 下一局 时间"
+  },
+  "antiToxic-good-try-next-round": {
+    "text": "好 尝试, 下一局 回合",
+    "meaning": "游戏含义: 好 尝试, 下一局 回合"
+  },
+  "antiToxic-we-need-better-spacing": {
+    "text": "我们 需要 更好 站位间距",
+    "meaning": "游戏含义: 我们 需要 更好 站位间距"
+  },
+  "antiToxic-let-us-trade-better": {
+    "text": "让 我们 补枪 更好",
+    "meaning": "游戏含义: 让 我们 补枪 更好"
+  },
+  "antiToxic-save-your-utility": {
+    "text": "留着 你的 道具",
+    "meaning": "游戏含义: 留着 你的 道具"
+  },
+  "antiToxic-use-comms-not-blame": {
+    "text": "用 沟通, 未清 责怪",
+    "meaning": "游戏含义: 用 沟通, 未清 责怪"
+  },
+  "antiToxic-focus-on-objective": {
+    "text": "集火 在 目标",
+    "meaning": "游戏含义: 集火 在 目标"
+  },
+  "antiToxic-we-still-have-time": {
+    "text": "我们 仍然 有 时间",
+    "meaning": "游戏含义: 我们 仍然 有 时间"
+  },
+  "antiToxic-no-worries": {
+    "text": "没有 担心",
+    "meaning": "游戏含义: 没有 担心"
+  },
+  "antiToxic-it-happens": {
+    "text": "它 没事",
+    "meaning": "游戏含义: 它 没事"
+  },
+  "antiToxic-next-one-is-ours": {
+    "text": "下一局 一个 我们的",
+    "meaning": "游戏含义: 下一局 一个 我们的"
+  },
+  "antiToxic-keep-it-positive": {
+    "text": "保持 它 积极",
+    "meaning": "游戏含义: 保持 它 积极"
+  }
+}
