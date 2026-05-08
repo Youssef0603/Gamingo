@@ -9,6 +9,7 @@ import React, {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
+import { categoryOrder } from '../data/categories';
 import { phrases as basePhrases } from '../data/phrases';
 import { theme } from '../theme/theme';
 import { supportedLanguageCodes } from '../types/language';
@@ -63,19 +64,7 @@ type PersistedAppState = {
 
 const APP_STATE_STORAGE_KEY = 'playcall.app-state';
 
-const phraseCategories: PhraseCategory[] = [
-  'callouts',
-  'instructions',
-  'strategy',
-  'objective',
-  'danger',
-  'economy',
-  'teamwork',
-  'slang',
-  'toxic',
-  'antiToxic',
-  'custom',
-];
+const phraseCategories: PhraseCategory[] = categoryOrder;
 
 const AppStateContext = createContext<AppStateContextValue | null>(null);
 

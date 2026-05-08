@@ -1,1674 +1,1922 @@
 {
   "callouts-gg": {
     "text": "GG",
-    "meaning": "Oyundaki anlamı: GG"
-  },
-  "callouts-glhf": {
-    "text": "Bol şans, iyi eğlenceler",
-    "meaning": "Oyundaki anlamı: Bol şans, iyi eğlenceler"
-  },
-  "callouts-nice": {
-    "text": "Güzel!",
-    "meaning": "Oyundaki anlamı: Güzel!"
-  },
-  "callouts-thanks": {
-    "text": "Teşekkürler",
-    "meaning": "Oyundaki anlamı: Teşekkürler"
-  },
-  "callouts-sorry": {
-    "text": "Pardon",
-    "meaning": "Oyundaki anlamı: Pardon"
-  },
-  "callouts-my-bad": {
-    "text": "Benim hatam",
-    "meaning": "Oyundaki anlamı: Benim hatam"
-  },
-  "callouts-one-more": {
-    "text": "un more",
-    "meaning": "Oyundaki anlamı: un more"
-  },
-  "callouts-i-am-down": {
-    "text": "i am indisponible",
-    "meaning": "Oyundaki anlamı: i am indisponible"
-  },
-  "callouts-i-am-low": {
-    "text": "i am faible",
-    "meaning": "Oyundaki anlamı: i am faible"
-  },
-  "callouts-enemy-spotted": {
-    "text": "Düşman görüldü",
-    "meaning": "Oyundaki anlamı: Düşman görüldü"
-  },
-  "callouts-enemy-here": {
-    "text": "düşman burada",
-    "meaning": "Oyundaki anlamı: düşman burada"
-  },
-  "callouts-enemy-there": {
-    "text": "düşman orada",
-    "meaning": "Oyundaki anlamı: düşman orada"
-  },
-  "callouts-two-enemies-here": {
-    "text": "deux düşmanlar burada",
-    "meaning": "Oyundaki anlamı: deux düşmanlar burada"
-  },
-  "callouts-three-enemies-here": {
-    "text": "trois düşmanlar burada",
-    "meaning": "Oyundaki anlamı: trois düşmanlar burada"
-  },
-  "callouts-full-team-here": {
-    "text": "toute équipe burada",
-    "meaning": "Oyundaki anlamı: toute équipe burada"
-  },
-  "callouts-behind-you": {
-    "text": "arkanda you!",
-    "meaning": "Oyundaki anlamı: arkanda you!"
-  },
-  "callouts-left-side": {
-    "text": "sol side!",
-    "meaning": "Oyundaki anlamı: sol side!"
-  },
-  "callouts-right-side": {
-    "text": "sağ side!",
-    "meaning": "Oyundaki anlamı: sağ side!"
-  },
-  "callouts-above-us": {
-    "text": "au-dessus us",
-    "meaning": "Oyundaki anlamı: au-dessus us"
-  },
-  "callouts-below-us": {
-    "text": "en dessous us",
-    "meaning": "Oyundaki anlamı: en dessous us"
-  },
-  "callouts-in-front": {
-    "text": "in avant",
-    "meaning": "Oyundaki anlamı: in avant"
-  },
-  "callouts-back-site": {
-    "text": "arrière bölge",
-    "meaning": "Oyundaki anlamı: arrière bölge"
-  },
-  "callouts-front-site": {
-    "text": "avant bölge",
-    "meaning": "Oyundaki anlamı: avant bölge"
-  },
-  "callouts-default-spot": {
-    "text": "standard position",
-    "meaning": "Oyundaki anlamı: standard position"
-  },
-  "callouts-corner": {
-    "text": "coin",
-    "meaning": "Oyundaki anlamı: coin"
-  },
-  "callouts-close-corner": {
-    "text": "proche coin",
-    "meaning": "Oyundaki anlamı: proche coin"
-  },
-  "callouts-long-range": {
-    "text": "longue portée",
-    "meaning": "Oyundaki anlamı: longue portée"
-  },
-  "callouts-short-range": {
-    "text": "courte portée",
-    "meaning": "Oyundaki anlamı: courte portée"
-  },
-  "callouts-mid": {
-    "text": "milieu",
-    "meaning": "Oyundaki anlamı: milieu"
-  },
-  "callouts-top-mid": {
-    "text": "haut milieu",
-    "meaning": "Oyundaki anlamı: haut milieu"
-  },
-  "callouts-bottom-mid": {
-    "text": "bas milieu",
-    "meaning": "Oyundaki anlamı: bas milieu"
-  },
-  "callouts-spawn": {
-    "text": "apparition",
-    "meaning": "Oyundaki anlamı: apparition"
-  },
-  "callouts-our-spawn": {
-    "text": "notre apparition",
-    "meaning": "Oyundaki anlamı: notre apparition"
-  },
-  "callouts-their-spawn": {
-    "text": "leur apparition",
-    "meaning": "Oyundaki anlamı: leur apparition"
-  },
-  "callouts-flank": {
-    "text": "kanat",
-    "meaning": "Oyundaki anlamı: kanat"
-  },
-  "callouts-watch-flank": {
-    "text": "surveille kanat",
-    "meaning": "Oyundaki anlamı: surveille kanat"
-  },
-  "callouts-rotating": {
-    "text": "rotation",
-    "meaning": "Oyundaki anlamı: rotation"
-  },
-  "callouts-they-rotated": {
-    "text": "they ont tourné",
-    "meaning": "Oyundaki anlamı: they ont tourné"
-  },
-  "callouts-fake-rotate": {
-    "text": "Sahte rotasyon",
-    "meaning": "Oyundaki anlamı: Sahte rotasyon"
-  },
-  "callouts-site-clear": {
-    "text": "bölge clair",
-    "meaning": "Oyundaki anlamı: bölge clair"
-  },
-  "callouts-site-not-clear": {
-    "text": "bölge pas clair",
-    "meaning": "Oyundaki anlamı: bölge pas clair"
-  },
-  "callouts-need-backup": {
-    "text": "besoin de renfort",
-    "meaning": "Oyundaki anlamı: besoin de renfort"
-  },
-  "callouts-need-help": {
-    "text": "besoin de yardım",
-    "meaning": "Oyundaki anlamı: besoin de yardım"
-  },
-  "callouts-help-me": {
-    "text": "yardım me",
-    "meaning": "Oyundaki anlamı: yardım me"
-  },
-  "callouts-i-need-healing": {
-    "text": "i besoin de soin",
-    "meaning": "Oyundaki anlamı: i besoin de soin"
-  },
-  "callouts-need-ammo": {
-    "text": "besoin de munitions",
-    "meaning": "Oyundaki anlamı: besoin de munitions"
-  },
-  "callouts-out-of-ammo": {
-    "text": "plus de of munitions",
-    "meaning": "Oyundaki anlamı: plus de of munitions"
-  },
-  "callouts-reloading": {
-    "text": "rechargement",
-    "meaning": "Oyundaki anlamı: rechargement"
-  },
-  "callouts-cover-me": {
-    "text": "couvre me",
-    "meaning": "Oyundaki anlamı: couvre me"
-  },
-  "callouts-i-got-you": {
-    "text": "i got you",
-    "meaning": "Oyundaki anlamı: i got you"
-  },
-  "callouts-i-am-watching": {
-    "text": "i am je couvre",
-    "meaning": "Oyundaki anlamı: i am je couvre"
-  },
-  "callouts-watching-left": {
-    "text": "je couvre sol",
-    "meaning": "Oyundaki anlamı: je couvre sol"
-  },
-  "callouts-watching-right": {
-    "text": "je couvre sağ",
-    "meaning": "Oyundaki anlamı: je couvre sağ"
-  },
-  "callouts-watching-mid": {
-    "text": "je couvre milieu",
-    "meaning": "Oyundaki anlamı: je couvre milieu"
-  },
-  "callouts-clear-left": {
-    "text": "clair sol",
-    "meaning": "Oyundaki anlamı: clair sol"
-  },
-  "callouts-clear-right": {
-    "text": "clair sağ",
-    "meaning": "Oyundaki anlamı: clair sağ"
-  },
-  "callouts-clear-mid": {
-    "text": "clair milieu",
-    "meaning": "Oyundaki anlamı: clair milieu"
-  },
-  "callouts-not-clear": {
-    "text": "pas clair",
-    "meaning": "Oyundaki anlamı: pas clair"
-  },
-  "callouts-contact": {
-    "text": "contact",
-    "meaning": "Oyundaki anlamı: contact"
-  },
-  "callouts-no-contact": {
-    "text": "no contact",
-    "meaning": "Oyundaki anlamı: no contact"
-  },
-  "callouts-footsteps": {
-    "text": "pas",
-    "meaning": "Oyundaki anlamı: pas"
-  },
-  "callouts-i-hear-steps": {
-    "text": "i j’entends pas",
-    "meaning": "Oyundaki anlamı: i j’entends pas"
-  },
-  "callouts-they-are-close": {
-    "text": "they are proche",
-    "meaning": "Oyundaki anlamı: they are proche"
-  },
-  "callouts-they-are-far": {
-    "text": "they are loin",
-    "meaning": "Oyundaki anlamı: they are loin"
-  },
-  "callouts-sniper-watching": {
-    "text": "sniper je couvre",
-    "meaning": "Oyundaki anlamı: sniper je couvre"
-  },
-  "callouts-shotgun-close": {
-    "text": "fusil à pompe proche",
-    "meaning": "Oyundaki anlamı: fusil à pompe proche"
-  },
-  "callouts-grenade-out": {
-    "text": "grenade plus de",
-    "meaning": "Oyundaki anlamı: grenade plus de"
-  },
-  "callouts-flash-out": {
-    "text": "flash plus de",
-    "meaning": "Oyundaki anlamı: flash plus de"
-  },
-  "callouts-smoke-out": {
-    "text": "fumigène plus de",
-    "meaning": "Oyundaki anlamı: fumigène plus de"
-  },
-  "callouts-ultimate-ready": {
-    "text": "ultime prêt",
-    "meaning": "Oyundaki anlamı: ultime prêt"
-  },
-  "callouts-no-ultimate": {
-    "text": "no ultime",
-    "meaning": "Oyundaki anlamı: no ultime"
-  },
-  "callouts-ability-ready": {
-    "text": "compétence prêt",
-    "meaning": "Oyundaki anlamı: compétence prêt"
-  },
-  "callouts-ability-down": {
-    "text": "compétence indisponible",
-    "meaning": "Oyundaki anlamı: compétence indisponible"
-  },
-  "callouts-cooldown": {
-    "text": "recharge",
-    "meaning": "Oyundaki anlamı: recharge"
-  },
-  "callouts-ping-it": {
-    "text": "ping it",
-    "meaning": "Oyundaki anlamı: ping it"
-  },
-  "callouts-mark-the-enemy": {
-    "text": "mark the düşman",
-    "meaning": "Oyundaki anlamı: mark the düşman"
-  },
-  "callouts-i-marked-it": {
-    "text": "i marquée it",
-    "meaning": "Oyundaki anlamı: i marquée it"
-  },
-  "callouts-check-map": {
-    "text": "vérifie carte",
-    "meaning": "Oyundaki anlamı: vérifie carte"
-  },
-  "callouts-look-at-ping": {
-    "text": "look at ping",
-    "meaning": "Oyundaki anlamı: look at ping"
-  },
-  "callouts-enemy-missing": {
-    "text": "düşman missing",
-    "meaning": "Oyundaki anlamı: düşman missing"
-  },
-  "callouts-all-missing": {
-    "text": "all missing",
-    "meaning": "Oyundaki anlamı: all missing"
-  },
-  "callouts-careful": {
-    "text": "dikkat",
-    "meaning": "Oyundaki anlamı: dikkat"
-  },
-  "callouts-wait": {
-    "text": "bekle",
-    "meaning": "Oyundaki anlamı: bekle"
-  },
-  "callouts-go-now": {
-    "text": "allez maintenant",
-    "meaning": "Oyundaki anlamı: allez maintenant"
-  },
-  "callouts-push-now": {
-    "text": "it maintenant",
-    "meaning": "Oyundaki anlamı: it maintenant"
-  },
-  "callouts-fall-back": {
-    "text": "repli arrière",
-    "meaning": "Oyundaki anlamı: repli arrière"
-  },
-  "callouts-run": {
-    "text": "kaç",
-    "meaning": "Oyundaki anlamı: kaç"
-  },
-  "callouts-hide": {
-    "text": "saklan",
-    "meaning": "Oyundaki anlamı: saklan"
-  },
-  "callouts-do-not-peek": {
-    "text": "do pas peek",
-    "meaning": "Oyundaki anlamı: do pas peek"
-  },
-  "callouts-peek-together": {
-    "text": "peek ensemble",
-    "meaning": "Oyundaki anlamı: peek ensemble"
-  },
-  "callouts-swing-together": {
-    "text": "swing ensemble",
-    "meaning": "Oyundaki anlamı: swing ensemble"
-  },
-  "callouts-hold-angle": {
-    "text": "tiens angle",
-    "meaning": "Oyundaki anlamı: tiens angle"
-  },
-  "callouts-hold-position": {
-    "text": "tiens position",
-    "meaning": "Oyundaki anlamı: tiens position"
-  },
-  "callouts-move-up": {
-    "text": "avance up",
-    "meaning": "Oyundaki anlamı: avance up"
-  },
-  "callouts-come-back": {
-    "text": "reviens arrière",
-    "meaning": "Oyundaki anlamı: reviens arrière"
-  },
-  "callouts-group-up": {
-    "text": "groupez up",
-    "meaning": "Oyundaki anlamı: groupez up"
-  },
-  "callouts-split-up": {
-    "text": "séparez up",
-    "meaning": "Oyundaki anlamı: séparez up"
-  },
-  "callouts-stay-alive": {
-    "text": "stay en vie",
-    "meaning": "Oyundaki anlamı: stay en vie"
-  },
-  "callouts-play-time": {
-    "text": "joue time",
-    "meaning": "Oyundaki anlamı: joue time"
-  },
-  "callouts-play-safe": {
-    "text": "joue prudent",
-    "meaning": "Oyundaki anlamı: joue prudent"
-  },
-  "callouts-play-slow": {
-    "text": "joue lentement",
-    "meaning": "Oyundaki anlamı: joue lentement"
-  },
-  "callouts-play-fast": {
-    "text": "joue vite",
-    "meaning": "Oyundaki anlamı: joue vite"
-  },
-  "callouts-do-not-chase": {
-    "text": "do pas poursuis",
-    "meaning": "Oyundaki anlamı: do pas poursuis"
-  },
-  "callouts-stop-chasing": {
-    "text": "stop chasing",
-    "meaning": "Oyundaki anlamı: stop chasing"
-  },
-  "callouts-trade-me": {
-    "text": "trade me",
-    "meaning": "Oyundaki anlamı: trade me"
-  },
-  "callouts-trade-him": {
-    "text": "trade him",
-    "meaning": "Oyundaki anlamı: trade him"
-  },
-  "callouts-i-will-trade": {
-    "text": "i will trade",
-    "meaning": "Oyundaki anlamı: i will trade"
-  },
-  "callouts-nice-trade": {
-    "text": "nice trade",
-    "meaning": "Oyundaki anlamı: nice trade"
-  },
-  "callouts-bait-and-switch": {
-    "text": "appât and switch",
-    "meaning": "Oyundaki anlamı: appât and switch"
-  },
-  "callouts-crossfire": {
-    "text": "feu croisé",
-    "meaning": "Oyundaki anlamı: feu croisé"
-  },
-  "callouts-pinched": {
-    "text": "pris en tenaille",
-    "meaning": "Oyundaki anlamı: pris en tenaille"
-  },
-  "callouts-we-are-pinched": {
-    "text": "we are pris en tenaille",
-    "meaning": "Oyundaki anlamı: we are pris en tenaille"
-  },
-  "callouts-third-party": {
-    "text": "troisième équipe",
-    "meaning": "Oyundaki anlamı: troisième équipe"
-  },
-  "callouts-reset": {
-    "text": "reset",
-    "meaning": "Oyundaki anlamı: reset"
-  },
-  "callouts-regroup": {
-    "text": "regroupement",
-    "meaning": "Oyundaki anlamı: regroupement"
-  },
-  "callouts-focus-fire": {
-    "text": "focus tir",
-    "meaning": "Oyundaki anlamı: focus tir"
-  },
-  "callouts-target-marked": {
-    "text": "cible marquée",
-    "meaning": "Oyundaki anlamı: cible marquée"
-  },
-  "callouts-focus-healer": {
-    "text": "focus soigneur",
-    "meaning": "Oyundaki anlamı: focus soigneur"
-  },
-  "callouts-focus-sniper": {
-    "text": "focus sniper",
-    "meaning": "Oyundaki anlamı: focus sniper"
-  },
-  "callouts-ignore-tank": {
-    "text": "ignore tank",
-    "meaning": "Oyundaki anlamı: ignore tank"
-  },
-  "callouts-shield-broken": {
-    "text": "bouclier cassé",
-    "meaning": "Oyundaki anlamı: bouclier cassé"
-  },
-  "callouts-armor-cracked": {
-    "text": "armure cassée",
-    "meaning": "Oyundaki anlamı: armure cassée"
-  },
-  "callouts-one-shot": {
-    "text": "un tir",
-    "meaning": "Oyundaki anlamı: un tir"
-  },
-  "callouts-tagged-him": {
-    "text": "touché him",
-    "meaning": "Oyundaki anlamı: touché him"
-  },
-  "callouts-hit-for-fifty": {
-    "text": "touché pour cinquante",
-    "meaning": "Oyundaki anlamı: touché pour cinquante"
-  },
-  "callouts-hit-for-a-hundred": {
-    "text": "touché pour a cent",
-    "meaning": "Oyundaki anlamı: touché pour a cent"
-  },
-  "callouts-no-shield": {
-    "text": "no bouclier",
-    "meaning": "Oyundaki anlamı: no bouclier"
-  },
-  "callouts-knocked-one": {
-    "text": "mis à terre un",
-    "meaning": "Oyundaki anlamı: mis à terre un"
-  },
-  "callouts-finished-one": {
-    "text": "achevé un",
-    "meaning": "Oyundaki anlamı: achevé un"
-  },
-  "callouts-team-wipe": {
-    "text": "équipe élimination",
-    "meaning": "Oyundaki anlamı: équipe élimination"
-  },
-  "callouts-clean-fight": {
-    "text": "propre combat",
-    "meaning": "Oyundaki anlamı: propre combat"
-  },
-  "callouts-messy-fight": {
-    "text": "désordonné combat",
-    "meaning": "Oyundaki anlamı: désordonné combat"
-  },
-  "callouts-bad-timing": {
-    "text": "mauvais timing",
-    "meaning": "Oyundaki anlamı: mauvais timing"
-  },
-  "callouts-good-timing": {
-    "text": "bon timing",
-    "meaning": "Oyundaki anlamı: bon timing"
-  },
-  "callouts-unlucky": {
-    "text": "pas de chance",
-    "meaning": "Oyundaki anlamı: pas de chance"
-  },
-  "callouts-lucky-shot": {
-    "text": "chanceux tir",
-    "meaning": "Oyundaki anlamı: chanceux tir"
-  },
-  "callouts-clutch": {
-    "text": "clutch",
-    "meaning": "Oyundaki anlamı: clutch"
-  },
-  "callouts-ace": {
-    "text": "ace",
-    "meaning": "Oyundaki anlamı: ace"
-  },
-  "callouts-carry": {
-    "text": "carry",
-    "meaning": "Oyundaki anlamı: carry"
-  },
-  "callouts-throw": {
-    "text": "throw",
-    "meaning": "Oyundaki anlamı: throw"
-  },
-  "callouts-comeback": {
-    "text": "retour",
-    "meaning": "Oyundaki anlamı: retour"
-  },
-  "callouts-close-game": {
-    "text": "proche partie",
-    "meaning": "Oyundaki anlamı: proche partie"
-  },
-  "callouts-free-kill": {
-    "text": "gratuit kill",
-    "meaning": "Oyundaki anlamı: gratuit kill"
-  },
-  "callouts-free-objective": {
-    "text": "gratuit objectif",
-    "meaning": "Oyundaki anlamı: gratuit objectif"
-  },
-  "callouts-open-lane": {
-    "text": "ouvert voie",
-    "meaning": "Oyundaki anlamı: ouvert voie"
-  },
-  "callouts-blocked": {
-    "text": "bloqué",
-    "meaning": "Oyundaki anlamı: bloqué"
-  },
-  "callouts-trap-here": {
-    "text": "piège burada",
-    "meaning": "Oyundaki anlamı: piège burada"
-  },
-  "callouts-trap-destroyed": {
-    "text": "piège détruit",
-    "meaning": "Oyundaki anlamı: piège détruit"
-  },
-  "callouts-door-closed": {
-    "text": "porte fermée",
-    "meaning": "Oyundaki anlamı: porte fermée"
-  },
-  "callouts-door-open": {
-    "text": "porte ouvert",
-    "meaning": "Oyundaki anlamı: porte ouvert"
-  },
-  "callouts-bridge-clear": {
-    "text": "pont clair",
-    "meaning": "Oyundaki anlamı: pont clair"
-  },
-  "callouts-tunnel-clear": {
-    "text": "tunnel clair",
-    "meaning": "Oyundaki anlamı: tunnel clair"
-  },
-  "callouts-roof-clear": {
-    "text": "toit clair",
-    "meaning": "Oyundaki anlamı: toit clair"
-  },
-  "callouts-basement-clear": {
-    "text": "sous-sol clair",
-    "meaning": "Oyundaki anlamı: sous-sol clair"
-  },
-  "callouts-window": {
-    "text": "fenêtre",
-    "meaning": "Oyundaki anlamı: fenêtre"
-  },
-  "callouts-stairs": {
-    "text": "escaliers",
-    "meaning": "Oyundaki anlamı: escaliers"
-  },
-  "callouts-hallway": {
-    "text": "couloir",
-    "meaning": "Oyundaki anlamı: couloir"
-  },
-  "callouts-water": {
-    "text": "eau",
-    "meaning": "Oyundaki anlamı: eau"
-  },
-  "callouts-high-ground": {
-    "text": "hauteur terrain",
-    "meaning": "Oyundaki anlamı: hauteur terrain"
-  },
-  "callouts-low-ground": {
-    "text": "faible terrain",
-    "meaning": "Oyundaki anlamı: faible terrain"
-  },
-  "callouts-zone-closing": {
-    "text": "zone se ferme",
-    "meaning": "Oyundaki anlamı: zone se ferme"
-  },
-  "callouts-circle-moving": {
-    "text": "cercle moving",
-    "meaning": "Oyundaki anlamı: cercle moving"
-  },
-  "callouts-storm-coming": {
-    "text": "tempête arrive",
-    "meaning": "Oyundaki anlamı: tempête arrive"
-  },
-  "callouts-safe-zone": {
-    "text": "prudent zone",
-    "meaning": "Oyundaki anlamı: prudent zone"
-  },
-  "callouts-out-of-zone": {
-    "text": "plus de of zone",
-    "meaning": "Oyundaki anlamı: plus de of zone"
-  },
-  "callouts-loot-here": {
-    "text": "butin burada",
-    "meaning": "Oyundaki anlamı: butin burada"
-  },
-  "callouts-good-loot": {
-    "text": "bon butin",
-    "meaning": "Oyundaki anlamı: bon butin"
-  },
-  "callouts-need-weapon": {
-    "text": "besoin de arme",
-    "meaning": "Oyundaki anlamı: besoin de arme"
-  },
-  "callouts-need-shield": {
-    "text": "besoin de bouclier",
-    "meaning": "Oyundaki anlamı: besoin de bouclier"
-  },
-  "callouts-need-meds": {
-    "text": "besoin de soins",
-    "meaning": "Oyundaki anlamı: besoin de soins"
-  },
-  "callouts-drop-ammo": {
-    "text": "donne munitions",
-    "meaning": "Oyundaki anlamı: donne munitions"
-  },
-  "callouts-drop-weapon": {
-    "text": "donne arme",
-    "meaning": "Oyundaki anlamı: donne arme"
-  },
-  "callouts-take-this": {
-    "text": "prends this",
-    "meaning": "Oyundaki anlamı: prends this"
-  },
-  "callouts-do-not-take-it": {
-    "text": "do pas prends it",
-    "meaning": "Oyundaki anlamı: do pas prends it"
-  },
-  "callouts-i-will-take-it": {
-    "text": "i will prends it",
-    "meaning": "Oyundaki anlamı: i will prends it"
-  },
-  "callouts-use-it": {
-    "text": "utilise it",
-    "meaning": "Oyundaki anlamı: utilise it"
-  },
-  "callouts-save-it": {
-    "text": "sakla it",
-    "meaning": "Oyundaki anlamı: sakla it"
-  },
-  "callouts-voice-chat": {
-    "text": "voice chat",
-    "meaning": "Oyundaki anlamı: voice chat"
-  },
-  "callouts-text-chat": {
-    "text": "text chat",
-    "meaning": "Oyundaki anlamı: text chat"
-  },
-  "callouts-good-job": {
-    "text": "İyi iş",
-    "meaning": "Oyundaki anlamı: İyi iş"
-  },
-  "callouts-well-played": {
-    "text": "İyi oynadın",
-    "meaning": "Oyundaki anlamı: İyi oynadın"
-  },
-  "callouts-no-problem": {
-    "text": "Sorun değil",
-    "meaning": "Oyundaki anlamı: Sorun değil"
-  },
-  "callouts-last-one": {
-    "text": "last un",
-    "meaning": "Oyundaki anlamı: last un"
-  },
-  "callouts-i-see-him": {
-    "text": "i see him",
-    "meaning": "Oyundaki anlamı: i see him"
-  },
-  "callouts-i-see-them": {
-    "text": "i see them",
-    "meaning": "Oyundaki anlamı: i see them"
-  },
-  "callouts-on-me": {
-    "text": "on me",
-    "meaning": "Oyundaki anlamı: on me"
-  },
-  "callouts-with-me": {
-    "text": "with me",
-    "meaning": "Oyundaki anlamı: with me"
-  },
-  "callouts-low-hp": {
-    "text": "faible HP",
-    "meaning": "Oyundaki anlamı: faible HP"
-  },
-  "callouts-he-is-low": {
-    "text": "he is faible",
-    "meaning": "Oyundaki anlamı: he is faible"
-  },
-  "callouts-they-are-low": {
-    "text": "they are faible",
-    "meaning": "Oyundaki anlamı: they are faible"
-  },
-  "callouts-no-mic": {
-    "text": "no mic",
-    "meaning": "Oyundaki anlamı: no mic"
-  },
-  "callouts-mic-muted": {
-    "text": "mic muted",
-    "meaning": "Oyundaki anlamı: mic muted"
-  },
-  "danger-incoming": {
-    "text": "incoming!",
-    "meaning": "Oyundaki anlamı: incoming!"
-  },
-  "danger-grenade": {
-    "text": "grenade!",
-    "meaning": "Oyundaki anlamı: grenade!"
-  },
-  "danger-flash": {
-    "text": "flash!",
-    "meaning": "Oyundaki anlamı: flash!"
-  },
-  "danger-sniper": {
-    "text": "sniper!",
-    "meaning": "Oyundaki anlamı: sniper!"
-  },
-  "danger-trap": {
-    "text": "piège!",
-    "meaning": "Oyundaki anlamı: piège!"
-  },
-  "danger-mine": {
-    "text": "mine!",
-    "meaning": "Oyundaki anlamı: mine!"
-  },
-  "danger-ambush": {
-    "text": "ambush!",
-    "meaning": "Oyundaki anlamı: ambush!"
-  },
-  "danger-they-are-rushing": {
-    "text": "they are rushing",
-    "meaning": "Oyundaki anlamı: they are rushing"
-  },
-  "danger-they-are-pushing": {
-    "text": "they are pushing",
-    "meaning": "Oyundaki anlamı: they are pushing"
-  },
-  "danger-they-are-flanking": {
-    "text": "they are flanking",
-    "meaning": "Oyundaki anlamı: they are flanking"
-  },
-  "danger-they-know": {
-    "text": "they know",
-    "meaning": "Oyundaki anlamı: they know"
-  },
-  "danger-they-saw-me": {
-    "text": "they saw me",
-    "meaning": "Oyundaki anlamı: they saw me"
-  },
-  "danger-i-am-exposed": {
-    "text": "i am exposed",
-    "meaning": "Oyundaki anlamı: i am exposed"
-  },
-  "danger-no-cover": {
-    "text": "no couvre",
-    "meaning": "Oyundaki anlamı: no couvre"
-  },
-  "danger-low-cover": {
-    "text": "faible couvre",
-    "meaning": "Oyundaki anlamı: faible couvre"
-  },
-  "danger-bad-angle": {
-    "text": "mauvais angle",
-    "meaning": "Oyundaki anlamı: mauvais angle"
-  },
-  "danger-get-out": {
-    "text": "get plus de",
-    "meaning": "Oyundaki anlamı: get plus de"
-  },
-  "danger-back-up": {
-    "text": "arrière up",
-    "meaning": "Oyundaki anlamı: arrière up"
-  },
-  "danger-do-not-go-there": {
-    "text": "do pas allez orada",
-    "meaning": "Oyundaki anlamı: do pas allez orada"
-  },
-  "danger-it-is-a-trap": {
-    "text": "it is a piège",
-    "meaning": "Oyundaki anlamı: it is a piège"
-  },
-  "danger-enemy-ultimate-ready": {
-    "text": "düşman ultime prêt",
-    "meaning": "Oyundaki anlamı: düşman ultime prêt"
-  },
-  "danger-they-have-sniper": {
-    "text": "they have sniper",
-    "meaning": "Oyundaki anlamı: they have sniper"
-  },
-  "instructions-push": {
-    "text": "it",
-    "meaning": "Oyundaki anlamı: it"
-  },
-  "instructions-rush": {
-    "text": "rush",
-    "meaning": "Oyundaki anlamı: rush"
-  },
-  "instructions-hold": {
-    "text": "tiens",
-    "meaning": "Oyundaki anlamı: tiens"
-  },
-  "instructions-defend": {
-    "text": "savun",
-    "meaning": "Oyundaki anlamı: savun"
-  },
-  "instructions-attack": {
-    "text": "saldır",
-    "meaning": "Oyundaki anlamı: saldır"
-  },
-  "instructions-retreat": {
-    "text": "repli",
-    "meaning": "Oyundaki anlamı: repli"
-  },
-  "instructions-rotate": {
-    "text": "rotation",
-    "meaning": "Oyundaki anlamı: rotation"
-  },
-  "instructions-stack-here": {
-    "text": "groupe burada",
-    "meaning": "Oyundaki anlamı: groupe burada"
-  },
-  "instructions-spread-out": {
-    "text": "écartez plus de",
-    "meaning": "Oyundaki anlamı: écartez plus de"
-  },
-  "instructions-stay-together": {
-    "text": "stay ensemble",
-    "meaning": "Oyundaki anlamı: stay ensemble"
-  },
-  "instructions-follow-me": {
-    "text": "suis-moi me",
-    "meaning": "Oyundaki anlamı: suis-moi me"
-  },
-  "instructions-lead-the-way": {
-    "text": "passe devant the way",
-    "meaning": "Oyundaki anlamı: passe devant the way"
-  },
-  "instructions-go-first": {
-    "text": "allez premier",
-    "meaning": "Oyundaki anlamı: allez premier"
-  },
-  "instructions-i-go-first": {
-    "text": "i allez premier",
-    "meaning": "Oyundaki anlamı: i allez premier"
-  },
-  "instructions-wait-for-me": {
-    "text": "bekle pour me",
-    "meaning": "Oyundaki anlamı: bekle pour me"
-  },
-  "instructions-wait-for-cooldowns": {
-    "text": "bekle pour recharges",
-    "meaning": "Oyundaki anlamı: bekle pour recharges"
-  },
-  "instructions-use-smoke": {
-    "text": "utilise fumigène",
-    "meaning": "Oyundaki anlamı: utilise fumigène"
-  },
-  "instructions-use-flash": {
-    "text": "utilise flash",
-    "meaning": "Oyundaki anlamı: utilise flash"
-  },
-  "instructions-use-grenade": {
-    "text": "utilise grenade",
-    "meaning": "Oyundaki anlamı: utilise grenade"
-  },
-  "instructions-use-ultimate": {
-    "text": "utilise ultime",
-    "meaning": "Oyundaki anlamı: utilise ultime"
-  },
-  "instructions-save-ultimate": {
-    "text": "sakla ultime",
-    "meaning": "Oyundaki anlamı: sakla ultime"
-  },
-  "instructions-heal-me": {
-    "text": "soigne me",
-    "meaning": "Oyundaki anlamı: soigne me"
-  },
-  "instructions-revive-me": {
-    "text": "réanime me",
-    "meaning": "Oyundaki anlamı: réanime me"
-  },
-  "instructions-res-me": {
-    "text": "res me",
-    "meaning": "Oyundaki anlamı: res me"
-  },
-  "instructions-cover-the-revive": {
-    "text": "couvre the réanime",
-    "meaning": "Oyundaki anlamı: couvre the réanime"
-  },
-  "instructions-plant-now": {
-    "text": "pose maintenant",
-    "meaning": "Oyundaki anlamı: pose maintenant"
-  },
-  "instructions-defuse-now": {
-    "text": "désamorce maintenant",
-    "meaning": "Oyundaki anlamı: désamorce maintenant"
-  },
-  "instructions-capture-point": {
-    "text": "capture point",
-    "meaning": "Oyundaki anlamı: capture point"
-  },
-  "instructions-contest-point": {
-    "text": "conteste point",
-    "meaning": "Oyundaki anlamı: conteste point"
-  },
-  "instructions-touch-point": {
-    "text": "touche point",
-    "meaning": "Oyundaki anlamı: touche point"
-  },
-  "instructions-clear-corners": {
-    "text": "clair corners",
-    "meaning": "Oyundaki anlamı: clair corners"
-  },
-  "instructions-check-left": {
-    "text": "vérifie sol",
-    "meaning": "Oyundaki anlamı: vérifie sol"
-  },
-  "instructions-check-right": {
-    "text": "vérifie sağ",
-    "meaning": "Oyundaki anlamı: vérifie sağ"
-  },
-  "instructions-check-behind": {
-    "text": "vérifie arkanda",
-    "meaning": "Oyundaki anlamı: vérifie arkanda"
-  },
-  "instructions-do-not-split": {
-    "text": "do pas séparez",
-    "meaning": "Oyundaki anlamı: do pas séparez"
-  },
-  "instructions-do-not-feed": {
-    "text": "do pas feed",
-    "meaning": "Oyundaki anlamı: do pas feed"
-  },
-  "instructions-do-not-waste-it": {
-    "text": "do pas gaspille it",
-    "meaning": "Oyundaki anlamı: do pas gaspille it"
-  },
-  "instructions-stop-peeking": {
-    "text": "stop peeking",
-    "meaning": "Oyundaki anlamı: stop peeking"
-  },
-  "instructions-mute-him": {
-    "text": "mute him",
-    "meaning": "Oyundaki anlamı: mute him"
-  },
-  "instructions-report-after": {
-    "text": "signale after",
-    "meaning": "Oyundaki anlamı: signale after"
-  },
-  "instructions-stack-left": {
-    "text": "groupe sol",
-    "meaning": "Oyundaki anlamı: groupe sol"
-  },
-  "instructions-stack-right": {
-    "text": "groupe sağ",
-    "meaning": "Oyundaki anlamı: groupe sağ"
-  },
-  "objective-plant-the-bomb": {
-    "text": "pose the bomb",
-    "meaning": "Oyundaki anlamı: pose the bomb"
-  },
-  "objective-bomb-planted": {
-    "text": "bomb planted",
-    "meaning": "Oyundaki anlamı: bomb planted"
-  },
-  "objective-bomb-down": {
-    "text": "bomb indisponible",
-    "meaning": "Oyundaki anlamı: bomb indisponible"
-  },
-  "objective-spike-down": {
-    "text": "spike indisponible",
-    "meaning": "Oyundaki anlamı: spike indisponible"
-  },
-  "objective-defuse-the-bomb": {
-    "text": "désamorce the bomb",
-    "meaning": "Oyundaki anlamı: désamorce the bomb"
-  },
-  "objective-half-defuse": {
-    "text": "half désamorce",
-    "meaning": "Oyundaki anlamı: half désamorce"
-  },
-  "objective-stick-the-defuse": {
-    "text": "stick the désamorce",
-    "meaning": "Oyundaki anlamı: stick the désamorce"
-  },
-  "objective-fake-defuse": {
-    "text": "Sahte çözme",
-    "meaning": "Oyundaki anlamı: Sahte çözme"
-  },
-  "objective-objective-secured": {
-    "text": "objectif secured",
-    "meaning": "Oyundaki anlamı: objectif secured"
-  },
-  "objective-objective-lost": {
-    "text": "objectif lost",
-    "meaning": "Oyundaki anlamı: objectif lost"
-  },
-  "objective-point-captured": {
-    "text": "point captured",
-    "meaning": "Oyundaki anlamı: point captured"
-  },
-  "objective-point-contested": {
-    "text": "point contested",
-    "meaning": "Oyundaki anlamı: point contested"
-  },
-  "objective-payload-moving": {
-    "text": "payload moving",
-    "meaning": "Oyundaki anlamı: payload moving"
-  },
-  "objective-payload-stopped": {
-    "text": "payload stopped",
-    "meaning": "Oyundaki anlamı: payload stopped"
-  },
-  "objective-escort-the-payload": {
-    "text": "escort the payload",
-    "meaning": "Oyundaki anlamı: escort the payload"
-  },
-  "objective-stop-the-payload": {
-    "text": "stop the payload",
-    "meaning": "Oyundaki anlamı: stop the payload"
-  },
-  "objective-capture-the-flag": {
-    "text": "capture the flag",
-    "meaning": "Oyundaki anlamı: capture the flag"
-  },
-  "objective-return-the-flag": {
-    "text": "return the flag",
-    "meaning": "Oyundaki anlamı: return the flag"
-  },
-  "objective-hold-the-point": {
-    "text": "tiens the point",
-    "meaning": "Oyundaki anlamı: tiens the point"
-  },
-  "objective-leave-the-point": {
-    "text": "leave the point",
-    "meaning": "Oyundaki anlamı: leave the point"
-  },
-  "teamwork-nice-shot": {
-    "text": "nice tir",
-    "meaning": "Oyundaki anlamı: nice tir"
-  },
-  "teamwork-nice-try": {
-    "text": "nice try",
-    "meaning": "Oyundaki anlamı: nice try"
-  },
-  "teamwork-good-comms": {
-    "text": "bon comms",
-    "meaning": "Oyundaki anlamı: bon comms"
-  },
-  "teamwork-keep-comms-clear": {
-    "text": "keep comms clair",
-    "meaning": "Oyundaki anlamı: keep comms clair"
-  },
-  "teamwork-i-trust-you": {
-    "text": "i trust you",
-    "meaning": "Oyundaki anlamı: i trust you"
-  },
-  "teamwork-you-got-this": {
-    "text": "you got this",
-    "meaning": "Oyundaki anlamı: you got this"
-  },
-  "teamwork-stay-calm": {
-    "text": "stay calm",
-    "meaning": "Oyundaki anlamı: stay calm"
-  },
-  "teamwork-we-can-win": {
-    "text": "we can win",
-    "meaning": "Oyundaki anlamı: we can win"
-  },
-  "teamwork-one-round-at-a-time": {
-    "text": "un round at a time",
-    "meaning": "Oyundaki anlamı: un round at a time"
-  },
-  "teamwork-reset-mental": {
-    "text": "reset mental",
-    "meaning": "Oyundaki anlamı: reset mental"
-  },
-  "teamwork-good-effort": {
-    "text": "bon effort",
-    "meaning": "Oyundaki anlamı: bon effort"
-  },
-  "teamwork-great-shot": {
-    "text": "great tir",
-    "meaning": "Oyundaki anlamı: great tir"
-  },
-  "teamwork-great-save": {
-    "text": "great sakla",
-    "meaning": "Oyundaki anlamı: great sakla"
-  },
-  "teamwork-great-call": {
-    "text": "great call",
-    "meaning": "Oyundaki anlamı: great call"
-  },
-  "teamwork-nice-clutch": {
-    "text": "nice clutch",
-    "meaning": "Oyundaki anlamı: nice clutch"
-  },
-  "teamwork-nice-aim": {
-    "text": "nice aim",
-    "meaning": "Oyundaki anlamı: nice aim"
-  },
-  "teamwork-nice-movement": {
-    "text": "nice movement",
-    "meaning": "Oyundaki anlamı: nice movement"
-  },
-  "teamwork-nice-utility": {
-    "text": "nice utility",
-    "meaning": "Oyundaki anlamı: nice utility"
-  },
-  "teamwork-i-will-cover-you": {
-    "text": "i will couvre you",
-    "meaning": "Oyundaki anlamı: i will couvre you"
-  },
-  "teamwork-i-will-heal-you": {
-    "text": "i will soigne you",
-    "meaning": "Oyundaki anlamı: i will soigne you"
-  },
-  "teamwork-i-will-watch-flank": {
-    "text": "i will surveille kanat",
-    "meaning": "Oyundaki anlamı: i will surveille kanat"
-  },
-  "teamwork-take-my-weapon": {
-    "text": "prends my arme",
-    "meaning": "Oyundaki anlamı: prends my arme"
-  },
-  "teamwork-take-my-loot": {
-    "text": "prends my butin",
-    "meaning": "Oyundaki anlamı: prends my butin"
-  },
-  "teamwork-let-me-go-first": {
-    "text": "let me allez premier",
-    "meaning": "Oyundaki anlamı: let me allez premier"
-  },
-  "teamwork-i-will-bait-for-you": {
-    "text": "i will appât pour you",
-    "meaning": "Oyundaki anlamı: i will appât pour you"
-  },
-  "teamwork-trade-together": {
-    "text": "trade ensemble",
-    "meaning": "Oyundaki anlamı: trade ensemble"
-  },
-  "teamwork-wait-for-team": {
-    "text": "bekle pour équipe",
-    "meaning": "Oyundaki anlamı: bekle pour équipe"
-  },
-  "teamwork-we-need-everyone": {
-    "text": "we besoin de everyone",
-    "meaning": "Oyundaki anlamı: we besoin de everyone"
-  },
-  "teamwork-play-together": {
-    "text": "joue ensemble",
-    "meaning": "Oyundaki anlamı: joue ensemble"
-  },
-  "teamwork-do-not-blame": {
-    "text": "do pas blame",
-    "meaning": "Oyundaki anlamı: do pas blame"
-  },
-  "teamwork-focus-next": {
-    "text": "focus next",
-    "meaning": "Oyundaki anlamı: focus next"
-  },
-  "strategy-default-setup": {
-    "text": "standard setup",
-    "meaning": "Oyundaki anlamı: standard setup"
-  },
-  "strategy-slow-push": {
-    "text": "lentement it",
-    "meaning": "Oyundaki anlamı: lentement it"
-  },
-  "strategy-fast-push": {
-    "text": "vite it",
-    "meaning": "Oyundaki anlamı: vite it"
-  },
-  "strategy-fake-push": {
-    "text": "Sahte saldırı",
-    "meaning": "Oyundaki anlamı: Sahte saldırı"
-  },
-  "strategy-split-push": {
-    "text": "séparez it",
-    "meaning": "Oyundaki anlamı: séparez it"
-  },
-  "strategy-retake": {
-    "text": "retake",
-    "meaning": "Oyundaki anlamı: retake"
-  },
-  "strategy-save-round": {
-    "text": "sakla round",
-    "meaning": "Oyundaki anlamı: sakla round"
-  },
-  "strategy-eco-round": {
-    "text": "eco round",
-    "meaning": "Oyundaki anlamı: eco round"
-  },
-  "strategy-full-buy": {
-    "text": "toute satın al",
-    "meaning": "Oyundaki anlamı: toute satın al"
-  },
-  "strategy-force-buy": {
-    "text": "force satın al",
-    "meaning": "Oyundaki anlamı: force satın al"
-  },
-  "strategy-play-for-picks": {
-    "text": "joue pour picks",
-    "meaning": "Oyundaki anlamı: joue pour picks"
-  },
-  "strategy-play-objective": {
-    "text": "joue objectif",
-    "meaning": "Oyundaki anlamı: joue objectif"
-  },
-  "strategy-play-for-late-game": {
-    "text": "joue pour late partie",
-    "meaning": "Oyundaki anlamı: joue pour late partie"
-  },
-  "strategy-take-map-control": {
-    "text": "prends carte control",
-    "meaning": "Oyundaki anlamı: prends carte control"
-  },
-  "strategy-give-map-control": {
-    "text": "give carte control",
-    "meaning": "Oyundaki anlamı: give carte control"
-  },
-  "strategy-deny-vision": {
-    "text": "deny vision",
-    "meaning": "Oyundaki anlamı: deny vision"
-  },
-  "strategy-gather-info": {
-    "text": "gather info",
-    "meaning": "Oyundaki anlamı: gather info"
-  },
-  "strategy-bait-utility": {
-    "text": "appât utility",
-    "meaning": "Oyundaki anlamı: appât utility"
-  },
-  "strategy-use-utility-first": {
-    "text": "utilise utility premier",
-    "meaning": "Oyundaki anlamı: utilise utility premier"
-  },
-  "strategy-trade-setup": {
-    "text": "trade setup",
-    "meaning": "Oyundaki anlamı: trade setup"
-  },
-  "strategy-double-peek": {
-    "text": "double peek",
-    "meaning": "Oyundaki anlamı: double peek"
-  },
-  "strategy-off-angle": {
-    "text": "off angle",
-    "meaning": "Oyundaki anlamı: off angle"
-  },
-  "strategy-cross-setup": {
-    "text": "cross setup",
-    "meaning": "Oyundaki anlamı: cross setup"
-  },
-  "strategy-late-lurk": {
-    "text": "late lurk",
-    "meaning": "Oyundaki anlamı: late lurk"
-  },
-  "strategy-anchor-site": {
-    "text": "anchor bölge",
-    "meaning": "Oyundaki anlamı: anchor bölge"
-  },
-  "strategy-play-retake": {
-    "text": "joue retake",
-    "meaning": "Oyundaki anlamı: joue retake"
-  },
-  "strategy-stack-objective": {
-    "text": "groupe objectif",
-    "meaning": "Oyundaki anlamı: groupe objectif"
-  },
-  "strategy-pressure-side-lane": {
-    "text": "pressure side voie",
-    "meaning": "Oyundaki anlamı: pressure side voie"
-  },
-  "strategy-cut-rotation": {
-    "text": "cut rotation",
-    "meaning": "Oyundaki anlamı: cut rotation"
-  },
-  "strategy-hold-rotation": {
-    "text": "tiens rotation",
-    "meaning": "Oyundaki anlamı: tiens rotation"
-  },
-  "strategy-time-advantage": {
-    "text": "time advantage",
-    "meaning": "Oyundaki anlamı: time advantage"
-  },
-  "strategy-man-advantage": {
-    "text": "man advantage",
-    "meaning": "Oyundaki anlamı: man advantage"
-  },
-  "strategy-man-disadvantage": {
-    "text": "man disadvantage",
-    "meaning": "Oyundaki anlamı: man disadvantage"
-  },
-  "strategy-numbers-advantage": {
-    "text": "numbers advantage",
-    "meaning": "Oyundaki anlamı: numbers advantage"
-  },
-  "strategy-damage-advantage": {
-    "text": "damage advantage",
-    "meaning": "Oyundaki anlamı: damage advantage"
-  },
-  "strategy-ultimate-advantage": {
-    "text": "ultime advantage",
-    "meaning": "Oyundaki anlamı: ultime advantage"
-  },
-  "strategy-economy-advantage": {
-    "text": "economy advantage",
-    "meaning": "Oyundaki anlamı: economy advantage"
-  },
-  "strategy-do-not-overcommit": {
-    "text": "do pas overcommit",
-    "meaning": "Oyundaki anlamı: do pas overcommit"
-  },
-  "strategy-commit-now": {
-    "text": "commit maintenant",
-    "meaning": "Oyundaki anlamı: commit maintenant"
-  },
-  "strategy-cancel-the-push": {
-    "text": "cancel the it",
-    "meaning": "Oyundaki anlamı: cancel the it"
-  },
-  "economy-buy": {
-    "text": "satın al",
-    "meaning": "Oyundaki anlamı: satın al"
-  },
-  "economy-save": {
-    "text": "sakla",
-    "meaning": "Oyundaki anlamı: sakla"
-  },
-  "economy-drop-me": {
-    "text": "donne me",
-    "meaning": "Oyundaki anlamı: donne me"
-  },
-  "economy-i-can-drop": {
-    "text": "i can donne",
-    "meaning": "Oyundaki anlamı: i can donne"
-  },
-  "economy-need-a-drop": {
-    "text": "besoin de a donne",
-    "meaning": "Oyundaki anlamı: besoin de a donne"
-  },
-  "economy-full-save": {
-    "text": "toute sakla",
-    "meaning": "Oyundaki anlamı: toute sakla"
-  },
-  "economy-light-buy": {
-    "text": "light satın al",
-    "meaning": "Oyundaki anlamı: light satın al"
-  },
-  "economy-half-buy": {
-    "text": "half satın al",
-    "meaning": "Oyundaki anlamı: half satın al"
-  },
-  "economy-full-armor": {
-    "text": "toute armure",
-    "meaning": "Oyundaki anlamı: toute armure"
-  },
-  "economy-no-armor": {
-    "text": "no armure",
-    "meaning": "Oyundaki anlamı: no armure"
-  },
-  "economy-upgrade-weapon": {
-    "text": "upgrade arme",
-    "meaning": "Oyundaki anlamı: upgrade arme"
-  },
-  "economy-keep-weapon": {
-    "text": "keep arme",
-    "meaning": "Oyundaki anlamı: keep arme"
-  },
-  "economy-pick-up-gun": {
-    "text": "pick up gun",
-    "meaning": "Oyundaki anlamı: pick up gun"
-  },
-  "economy-save-the-gun": {
-    "text": "sakla the gun",
-    "meaning": "Oyundaki anlamı: sakla the gun"
-  },
-  "economy-we-are-broke": {
-    "text": "we are broke",
-    "meaning": "Oyundaki anlamı: we are broke"
-  },
-  "economy-they-are-broke": {
-    "text": "they are broke",
-    "meaning": "Oyundaki anlamı: they are broke"
-  },
-  "economy-they-have-money": {
-    "text": "they have money",
-    "meaning": "Oyundaki anlamı: they have money"
-  },
-  "economy-we-can-buy-next": {
-    "text": "we can satın al next",
-    "meaning": "Oyundaki anlamı: we can satın al next"
-  },
-  "economy-do-not-force": {
-    "text": "do pas force",
-    "meaning": "Oyundaki anlamı: do pas force"
-  },
-  "economy-force-together": {
-    "text": "force ensemble",
-    "meaning": "Oyundaki anlamı: force ensemble"
-  },
-  "slang-afk": {
-    "text": "AFK",
-    "meaning": "Oyundaki anlamı: AFK"
-  },
-  "slang-brb": {
-    "text": "BRB",
-    "meaning": "Oyundaki anlamı: BRB"
-  },
-  "slang-op": {
-    "text": "OP",
-    "meaning": "Oyundaki anlamı: OP"
-  },
-  "slang-nerf": {
-    "text": "nerf",
-    "meaning": "Oyundaki anlamı: nerf"
-  },
-  "slang-buff": {
-    "text": "buff",
-    "meaning": "Oyundaki anlamı: buff"
-  },
-  "slang-meta": {
-    "text": "meta",
-    "meaning": "Oyundaki anlamı: meta"
-  },
-  "slang-main": {
-    "text": "main",
-    "meaning": "Oyundaki anlamı: main"
-  },
-  "slang-alt": {
-    "text": "alt",
-    "meaning": "Oyundaki anlamı: alt"
-  },
-  "slang-smurf": {
-    "text": "smurf",
-    "meaning": "Oyundaki anlamı: smurf"
-  },
-  "slang-noob": {
-    "text": "noob",
-    "meaning": "Oyundaki anlamı: noob"
-  },
-  "slang-camper": {
-    "text": "camper",
-    "meaning": "Oyundaki anlamı: camper"
-  },
-  "slang-sweat": {
-    "text": "sweat",
-    "meaning": "Oyundaki anlamı: sweat"
-  },
-  "slang-tryhard": {
-    "text": "tryhard",
-    "meaning": "Oyundaki anlamı: tryhard"
-  },
-  "slang-clutch-or-kick": {
-    "text": "clutch or kick",
-    "meaning": "Oyundaki anlamı: clutch or kick"
-  },
-  "slang-diff": {
-    "text": "diff",
-    "meaning": "Oyundaki anlamı: diff"
-  },
-  "slang-gap": {
-    "text": "gap",
-    "meaning": "Oyundaki anlamı: gap"
-  },
-  "slang-tilt": {
-    "text": "tilt",
-    "meaning": "Oyundaki anlamı: tilt"
-  },
-  "slang-rage-quit": {
-    "text": "rage quit",
-    "meaning": "Oyundaki anlamı: rage quit"
-  },
-  "slang-spawn-camp": {
-    "text": "apparition camp",
-    "meaning": "Oyundaki anlamı: apparition camp"
-  },
-  "slang-spawn-kill": {
-    "text": "apparition kill",
-    "meaning": "Oyundaki anlamı: apparition kill"
-  },
-  "slang-hitbox": {
-    "text": "hitbox",
-    "meaning": "Oyundaki anlamı: hitbox"
-  },
-  "slang-lag": {
-    "text": "lag",
-    "meaning": "Oyundaki anlamı: lag"
-  },
-  "slang-ping": {
-    "text": "ping",
-    "meaning": "Oyundaki anlamı: ping"
-  },
-  "slang-fps": {
-    "text": "FPS",
-    "meaning": "Oyundaki anlamı: FPS"
-  },
-  "slang-dps": {
-    "text": "DPS",
-    "meaning": "Oyundaki anlamı: DPS"
-  },
-  "slang-aoe": {
-    "text": "AOE",
-    "meaning": "Oyundaki anlamı: AOE"
-  },
-  "slang-cc": {
-    "text": "CC",
-    "meaning": "Oyundaki anlamı: CC"
-  },
-  "slang-gg-ez": {
-    "text": "GG EZ",
-    "meaning": "Oyundaki anlamı: GG EZ"
-  },
-  "slang-wp": {
-    "text": "WP",
-    "meaning": "Oyundaki anlamı: WP"
-  },
-  "slang-nt": {
-    "text": "NT",
-    "meaning": "Oyundaki anlamı: NT"
+    "meaning": "İyi oyun; genellikle maçın sonunda söylenir"
   },
   "slang-ggwp": {
     "text": "GGWP",
-    "meaning": "Oyundaki anlamı: GGWP"
+    "meaning": "İyi oyun, iyi oynandı"
   },
-  "slang-lag-spike": {
-    "text": "lag spike",
-    "meaning": "Oyundaki anlamı: lag spike"
+  "callouts-glhf": {
+    "text": "GLHF",
+    "meaning": "İyi şanslar, iyi eğlenceler; maç başlamadan önce kullanılan dostça mesaj"
   },
-  "slang-ranked": {
-    "text": "ranked",
-    "meaning": "Oyundaki anlamı: ranked"
+  "slang-wp": {
+    "text": "WP",
+    "meaning": "İyi oynandı"
   },
-  "slang-casual": {
-    "text": "casual",
-    "meaning": "Oyundaki anlamı: casual"
+  "slang-nt": {
+    "text": "NT",
+    "meaning": "Güzel deneme"
+  },
+  "callouts-nice": {
+    "text": "Güzel!",
+    "meaning": "İyi bir hamleden sonra hızlı övgü"
+  },
+  "teamwork-nice-try": {
+    "text": "Güzel deneme",
+    "meaning": "Başarısız bir denemeden sonra destekleyici söz"
+  },
+  "teamwork-nice-shot": {
+    "text": "Güzel vuruş",
+    "meaning": "İyi bir atıştan sonra övgü"
+  },
+  "callouts-thanks": {
+    "text": "Sağ ol",
+    "meaning": "Takım arkadaşına hızlı teşekkür"
+  },
+  "callouts-sorry": {
+    "text": "Pardon",
+    "meaning": "Hata veya yanlışlıkla takım arkadaşına zarar verdikten sonra özür"
+  },
+  "callouts-my-bad": {
+    "text": "Benim hatam",
+    "meaning": "Konuşan kişi hatanın kendisinde olduğunu kabul eder"
+  },
+  "callouts-good-job": {
+    "text": "İyi iş",
+    "meaning": "Faydalı bir hamle veya turdan sonra olumlu geri bildirim"
+  },
+  "teamwork-good-comms": {
+    "text": "İyi comms",
+    "meaning": "Takım iletişimi faydalıydı"
+  },
+  "slang-afk": {
+    "text": "AFK",
+    "meaning": "Away from keyboard; oyuncu aktif değil"
+  },
+  "slang-brb": {
+    "text": "BRB",
+    "meaning": "Hemen döneceğim"
+  },
+  "slang-dc": {
+    "text": "DC",
+    "meaning": "Disconnect; maçla bağlantının kopması"
   },
   "slang-disconnect": {
-    "text": "disconnect",
-    "meaning": "Oyundaki anlamı: disconnect"
+    "text": "Disconnect",
+    "meaning": "Bir oyuncunun maç bağlantısını kaybetmesi"
   },
   "slang-reconnect": {
-    "text": "reconnect",
-    "meaning": "Oyundaki anlamı: reconnect"
+    "text": "Reconnect",
+    "meaning": "Bir oyuncunun bağlantı koptuktan sonra geri dönmesi"
+  },
+  "slang-lag": {
+    "text": "Lag",
+    "meaning": "Gecikme veya bağlantı sorunları"
+  },
+  "slang-lag-spike": {
+    "text": "Lag spike",
+    "meaning": "Ani ve kısa süreli bağlantı gecikmesi"
+  },
+  "slang-ping": {
+    "text": "Ping",
+    "meaning": "Bağlama göre harita işareti veya ağ gecikmesi"
+  },
+  "slang-fps": {
+    "text": "FPS",
+    "meaning": "First-person shooter; performanstan bahsederken saniyedeki kare sayısı"
+  },
+  "slang-server": {
+    "text": "Server",
+    "meaning": "Maçı barındıran çevrim içi sistem veya bölge"
+  },
+  "slang-hit-reg": {
+    "text": "Hit reg",
+    "meaning": "Hit registration; oyunun bir atışı veya saldırıyı doğru şekilde isabet sayıp saymaması"
+  },
+  "slang-desync": {
+    "text": "Desync",
+    "meaning": "Oyuncuların gördüklerinin sunucuyla veya birbirleriyle senkron olmaması"
+  },
+  "slang-op": {
+    "text": "OP",
+    "meaning": "Overpowered; diğerlerine göre aşırı güçlü"
+  },
+  "slang-meta": {
+    "text": "Meta",
+    "meaning": "O anda en etkili veya en popüler strateji, karakter, silah ya da build"
+  },
+  "slang-nerf": {
+    "text": "Nerf",
+    "meaning": "Bir güncellemeyle bir şeyi zayıflatmak"
+  },
+  "slang-buff": {
+    "text": "Buff",
+    "meaning": "Bir güncellemeyle bir şeyi güçlendirmek"
+  },
+  "slang-noob": {
+    "text": "Noob",
+    "meaning": "Yeni veya deneyimsiz oyuncu; hakaret olarak da kullanılabilir"
+  },
+  "slang-pro": {
+    "text": "Pro",
+    "meaning": "Çok yetenekli veya profesyonel seviyede oyuncu"
+  },
+  "slang-bot": {
+    "text": "Bot",
+    "meaning": "Yapay zekâ kontrollü karakter; kötü oynayan oyuncu için hakaret olarak da kullanılır"
+  },
+  "slang-smurf": {
+    "text": "Smurf",
+    "meaning": "Yüksek yetenekli bir oyuncunun düşük rütbeli hesap kullanması"
+  },
+  "slang-camper": {
+    "text": "Camper",
+    "meaning": "Kill almak için tek bir noktada bekleyen oyuncu"
+  },
+  "slang-tryhard": {
+    "text": "Tryhard",
+    "meaning": "Çok ciddi oynayan oyuncu; bazen hakaret olarak kullanılır"
+  },
+  "slang-sweat": {
+    "text": "Sweat",
+    "meaning": "Kazanmak için çok fazla çabalayan oyuncu"
+  },
+  "slang-tilt": {
+    "text": "Tilt",
+    "meaning": "Oyuncunun daha kötü oynamasına neden olan sinir veya moral bozukluğu"
+  },
+  "slang-toxic": {
+    "text": "Toxic",
+    "meaning": "Sohbette veya oynanışta kaba, saldırgan ya da zararlı davranış"
+  },
+  "slang-salty": {
+    "text": "Salty",
+    "meaning": "Kaybettikten veya outplay yedikten sonra kızgın ya da kırgın olmak"
+  },
+  "slang-rage-quit": {
+    "text": "Rage quit",
+    "meaning": "Sinirlenip oyundan çıkmak"
+  },
+  "slang-pvp": {
+    "text": "PvP",
+    "meaning": "Player versus player; oyuncuların diğer oyunculara karşı savaştığı oynanış"
+  },
+  "slang-pve": {
+    "text": "PvE",
+    "meaning": "Player versus environment; yapay zekâ düşmanlarına veya oyun sistemlerine karşı oynanış"
+  },
+  "slang-ranked": {
+    "text": "Ranked",
+    "meaning": "Rütbeyi etkileyen rekabetçi mod"
+  },
+  "slang-casual": {
+    "text": "Casual",
+    "meaning": "Rahat oynamak için rütbesiz mod"
+  },
+  "slang-mmr": {
+    "text": "MMR",
+    "meaning": "Matchmaking rating; adil maçlar oluşturmak için kullanılan gizli veya görünür yetenek puanı"
+  },
+  "slang-elo": {
+    "text": "Elo",
+    "meaning": "Rekabetçi yetenek puanı için kullanılan bir derecelendirme sistemi veya genel terim"
+  },
+  "slang-kd": {
+    "text": "K/D",
+    "meaning": "Kill/death oranı; öldürmelerin ölümlere oranı"
+  },
+  "slang-kda": {
+    "text": "KDA",
+    "meaning": "Kill, death ve assist; yaygın performans istatistiği"
+  },
+  "slang-mvp": {
+    "text": "MVP",
+    "meaning": "Most valuable player; en büyük etkiyi yapan oyuncu"
+  },
+  "slang-rng": {
+    "text": "RNG",
+    "meaning": "Random number generation; oyundaki şansa bağlı sonuçlar"
+  },
+  "slang-xp": {
+    "text": "XP",
+    "meaning": "Karakteri, hesabı veya battle pass'i seviye atlatmak için kullanılan deneyim puanı"
+  },
+  "slang-level-up": {
+    "text": "Level atlamak",
+    "meaning": "Seviye kazanmak veya ilerleme ve deneyimle gelişmek"
+  },
+  "slang-grind": {
+    "text": "Grind",
+    "meaning": "Ödül, rütbe veya ilerleme için maçları ya da görevleri tekrar tekrar yapmak"
+  },
+  "slang-farm": {
+    "text": "Farm",
+    "meaning": "Kaynak, altın, XP veya kolay kill'leri tekrar tekrar toplamak"
+  },
+  "slang-main": {
+    "text": "Main",
+    "meaning": "Bir oyuncunun en çok kullandığı karakter, rol veya silah"
+  },
+  "slang-alt": {
+    "text": "Alt",
+    "meaning": "İkincil hesap veya alternatif karakter"
+  },
+  "slang-party": {
+    "text": "Party",
+    "meaning": "Birlikte sıraya giren oyuncu grubu"
+  },
+  "slang-squad": {
+    "text": "Squad",
+    "meaning": "Birlikte çalışan küçük oyuncu takımı"
+  },
+  "slang-lobby": {
+    "text": "Lobby",
+    "meaning": "Maç öncesi alan veya maçtaki oyuncu grubu"
+  },
+  "slang-queue": {
+    "text": "Queue",
+    "meaning": "Maç bulmak için eşleştirmede beklemek"
+  },
+  "slang-matchmaking": {
+    "text": "Matchmaking",
+    "meaning": "Oyuncuları bir maça bulan ve dengeleyen sistem"
+  },
+  "slang-solo-queue": {
+    "text": "Solo queue",
+    "meaning": "Hazır takım olmadan tek başına eşleştirme oynamak"
+  },
+  "slang-duo": {
+    "text": "Duo",
+    "meaning": "İki oyuncunun çift olarak birlikte oynaması"
+  },
+  "slang-stack": {
+    "text": "Stack",
+    "meaning": "Birlikte sıraya giren hazır oyuncu grubu; çoğu zaman tam takım"
+  },
+  "slang-comms": {
+    "text": "Comms",
+    "meaning": "Sesli sohbet, yazılı sohbet veya pinglerle takım iletişimi"
+  },
+  "callouts-voice-chat": {
+    "text": "Sesli sohbet",
+    "meaning": "Mikrofonla iletişim"
+  },
+  "callouts-text-chat": {
+    "text": "Yazılı sohbet",
+    "meaning": "Yazılan mesajlarla iletişim"
+  },
+  "callouts-no-mic": {
+    "text": "Mikrofon yok",
+    "meaning": "Konuşan kişi mikrofon kullanamıyor"
+  },
+  "callouts-mic-muted": {
+    "text": "Mikrofon kapalı",
+    "meaning": "Mikrofon sessize alınmış"
+  },
+  "slang-dps": {
+    "text": "DPS",
+    "meaning": "Saniye başına hasar veya hasar vermeye odaklı rol"
+  },
+  "slang-tank": {
+    "text": "Tank",
+    "meaning": "Hasar emen ve takım arkadaşlarını koruyan dayanıklı rol"
+  },
+  "slang-support": {
+    "text": "Support",
+    "meaning": "İyileştirme, utility, buff veya takım arkadaşlarına yardım odaklı rol"
+  },
+  "slang-healer": {
+    "text": "Healer",
+    "meaning": "Takım arkadaşlarının canını yenilemeye odaklı support rolü"
+  },
+  "slang-aoe": {
+    "text": "AOE",
+    "meaning": "Area of effect; bir alanı etkileyen hasar veya yetenek"
+  },
+  "slang-cc": {
+    "text": "CC",
+    "meaning": "Crowd control; stun, slow veya disable veren yetenekler"
+  },
+  "slang-ult": {
+    "text": "Ult",
+    "meaning": "Ultimate'in kısaltması; karakterin en güçlü yeteneği"
+  },
+  "callouts-ultimate-ready": {
+    "text": "Ultimate hazır",
+    "meaning": "Konuşan kişinin ultimate yeteneği hazır"
+  },
+  "callouts-no-ultimate": {
+    "text": "Ultimate yok",
+    "meaning": "Konuşan kişide veya düşmanda ultimate mevcut değil"
+  },
+  "callouts-ability-ready": {
+    "text": "Yetenek hazır",
+    "meaning": "Faydalı bir yetenek kullanılabilir durumda"
+  },
+  "callouts-ability-down": {
+    "text": "Yetenek yok",
+    "meaning": "Önemli bir yetenek kullanılamıyor veya cooldown'da"
+  },
+  "callouts-cooldown": {
+    "text": "Cooldown",
+    "meaning": "Bir yetenek henüz kullanılamıyor"
+  },
+  "callouts-enemy-spotted": {
+    "text": "Düşman görüldü",
+    "meaning": "Bir düşman görüldü"
+  },
+  "callouts-enemy-here": {
+    "text": "Düşman burada",
+    "meaning": "Konuşan kişinin konumunda bir düşman var"
+  },
+  "callouts-enemy-there": {
+    "text": "Düşman orada",
+    "meaning": "İşaretlenen veya konuşulan konumda bir düşman var"
+  },
+  "callouts-on-me": {
+    "text": "Bende",
+    "meaning": "Düşman veya aksiyon konuşan kişinin yakınında"
+  },
+  "callouts-i-see-him": {
+    "text": "Onu görüyorum",
+    "meaning": "Konuşan kişinin bir düşmanla görsel teması var"
+  },
+  "callouts-i-see-them": {
+    "text": "Onları görüyorum",
+    "meaning": "Konuşan kişinin bir veya daha fazla düşmanla görsel teması var"
+  },
+  "callouts-one-more": {
+    "text": "Bir tane daha",
+    "meaning": "Yakında bir düşman daha var veya bir aksiyon daha gerekiyor"
+  },
+  "callouts-last-one": {
+    "text": "Son kişi",
+    "meaning": "Sadece bir düşman kaldı"
+  },
+  "callouts-two-enemies-here": {
+    "text": "Burada iki düşman var",
+    "meaning": "Konuşan kişinin konumunda iki düşman var"
+  },
+  "callouts-three-enemies-here": {
+    "text": "Burada üç düşman var",
+    "meaning": "Konuşan kişinin konumunda üç düşman var"
+  },
+  "callouts-full-team-here": {
+    "text": "Tüm takım burada",
+    "meaning": "Düşmanların çoğu veya tamamı bu bölgede toplanmış"
+  },
+  "callouts-enemy-missing": {
+    "text": "Düşman kayıp",
+    "meaning": "Bir düşman artık görünmüyor ve rotate atabilir"
+  },
+  "callouts-all-missing": {
+    "text": "Hepsi kayıp",
+    "meaning": "Şu anda hiçbir düşman görünmüyor"
+  },
+  "callouts-behind-you": {
+    "text": "Arkanda!",
+    "meaning": "Bir düşman takım arkadaşının tam arkasında"
+  },
+  "callouts-left-side": {
+    "text": "Sol taraf!",
+    "meaning": "Düşman baskısı soldan geliyor"
+  },
+  "callouts-right-side": {
+    "text": "Sağ taraf!",
+    "meaning": "Düşman baskısı sağdan geliyor"
+  },
+  "callouts-above-us": {
+    "text": "Üstümüzde",
+    "meaning": "Bir düşman takımın üstündeki high ground'da"
+  },
+  "callouts-below-us": {
+    "text": "Altımızda",
+    "meaning": "Bir düşman takımın pozisyonunun altında"
+  },
+  "callouts-in-front": {
+    "text": "Önde",
+    "meaning": "Tehdit doğrudan ileride"
+  },
+  "callouts-mid": {
+    "text": "Mid",
+    "meaning": "Düşman veya aksiyon orta koridorda"
+  },
+  "callouts-top-mid": {
+    "text": "Top mid",
+    "meaning": "Düşman üst orta pozisyonda"
+  },
+  "callouts-bottom-mid": {
+    "text": "Bottom mid",
+    "meaning": "Düşman alt orta pozisyonda"
+  },
+  "callouts-spawn": {
+    "text": "Spawn",
+    "meaning": "Düşman veya takım spawn yakınında"
+  },
+  "callouts-our-spawn": {
+    "text": "Bizim spawn",
+    "meaning": "Aksiyon bizim başlangıç alanımızın yakınında"
+  },
+  "callouts-their-spawn": {
+    "text": "Onların spawn",
+    "meaning": "Aksiyon düşmanın başlangıç alanının yakınında"
+  },
+  "callouts-flank": {
+    "text": "Flank",
+    "meaning": "Bir düşman yandan veya arkadan saldırıyor"
+  },
+  "callouts-watch-flank": {
+    "text": "Flank'e bak",
+    "meaning": "Birinin takımın arkasındaki düşmanları kontrol etmesi gerekiyor"
+  },
+  "danger-incoming": {
+    "text": "Geliyor!",
+    "meaning": "Bir tehdit veya saldırı şu anda geliyor"
+  },
+  "danger-grenade": {
+    "text": "Grenade!",
+    "meaning": "Yakında bir el bombası var"
+  },
+  "danger-flash": {
+    "text": "Flash!",
+    "meaning": "Flashbang veya kör etme etkisi geliyor"
+  },
+  "danger-sniper": {
+    "text": "Sniper!",
+    "meaning": "Bir sniper bölgeyi tehdit ediyor"
+  },
+  "danger-trap": {
+    "text": "Trap!",
+    "meaning": "Yakında bir tuzak var"
+  },
+  "danger-mine": {
+    "text": "Mayın!",
+    "meaning": "Yakında patlayıcı mayın var"
+  },
+  "danger-ambush": {
+    "text": "Pusu!",
+    "meaning": "Düşmanlar takımı şaşırtmak için bekliyor"
+  },
+  "danger-they-are-rushing": {
+    "text": "Rush atıyorlar",
+    "meaning": "Düşmanlar çok hızlı saldırıyor"
+  },
+  "danger-they-are-pushing": {
+    "text": "Pushluyorlar",
+    "meaning": "Düşmanlar agresif şekilde ileri çıkıyor"
+  },
+  "danger-they-are-flanking": {
+    "text": "Flankliyorlar",
+    "meaning": "Düşmanlar arkadan veya yandan saldırıyor"
+  },
+  "danger-they-know": {
+    "text": "Biliyorlar",
+    "meaning": "Düşmanlar konumunuzu veya planınızı biliyor"
+  },
+  "danger-they-saw-me": {
+    "text": "Beni gördüler",
+    "meaning": "Konuşan kişi fark edildi"
+  },
+  "danger-i-am-exposed": {
+    "text": "Açıktayım",
+    "meaning": "Konuşan kişi riskli ve görünür bir pozisyonda"
+  },
+  "danger-no-cover": {
+    "text": "Cover yok",
+    "meaning": "Saklanacak güvenli yer yok"
+  },
+  "danger-bad-angle": {
+    "text": "Kötü açı",
+    "meaning": "Mevcut açı tehlikeli veya dezavantajlı"
+  },
+  "danger-get-out": {
+    "text": "Çık oradan",
+    "meaning": "Tehlikeli bölgeden hemen ayrıl"
+  },
+  "danger-back-up": {
+    "text": "Geri çekil",
+    "meaning": "Tehlikeden uzaklaş"
+  },
+  "callouts-i-am-down": {
+    "text": "Düştüm",
+    "meaning": "Konuşan kişi knocklandı, down oldu veya öldü ve savaşamıyor"
+  },
+  "callouts-i-am-low": {
+    "text": "Canım az",
+    "meaning": "Konuşan kişinin canı az ve dikkat ya da yardım gerekiyor"
+  },
+  "callouts-low-hp": {
+    "text": "Low HP",
+    "meaning": "Bir düşmanın veya takım arkadaşının canı çok az"
+  },
+  "callouts-he-is-low": {
+    "text": "Canı az",
+    "meaning": "Erkek düşman zayıf ve bitirilebilir"
+  },
+  "callouts-they-are-low": {
+    "text": "Canları az",
+    "meaning": "Bir veya daha fazla düşman zayıf ve bitirilebilir"
+  },
+  "callouts-one-shot": {
+    "text": "Tek vuruşluk",
+    "meaning": "Bir düşmanın ölmesi için yalnızca bir isabet daha gerekiyor"
+  },
+  "callouts-armor-cracked": {
+    "text": "Armor kırıldı",
+    "meaning": "Bir düşmanın zırhı kırıldı veya çok zayıf"
+  },
+  "callouts-shield-broken": {
+    "text": "Shield kırıldı",
+    "meaning": "Düşman kalkanı veya zırhı yok edildi"
+  },
+  "callouts-no-shield": {
+    "text": "Shield yok",
+    "meaning": "Düşmanın kalkanı veya zırhı kalmadı"
+  },
+  "callouts-tagged-him": {
+    "text": "Vurdum",
+    "meaning": "Konuşan kişi düşmana hasar verdi"
+  },
+  "callouts-hit-for-fifty": {
+    "text": "50 vurdum",
+    "meaning": "Düşman yaklaşık elli hasar aldı"
+  },
+  "callouts-hit-for-a-hundred": {
+    "text": "100 vurdum",
+    "meaning": "Düşman yaklaşık yüz hasar aldı"
+  },
+  "callouts-knocked-one": {
+    "text": "Birini knockladım",
+    "meaning": "Bir düşman yere düşürüldü"
+  },
+  "callouts-finished-one": {
+    "text": "Birini bitirdim",
+    "meaning": "Down olmuş bir düşman elendi"
+  },
+  "callouts-team-wipe": {
+    "text": "Team wipe",
+    "meaning": "Düşman takımın tamamı elendi"
+  },
+  "instructions-push": {
+    "text": "Push",
+    "meaning": "Saldır veya ileri çık"
+  },
+  "instructions-rush": {
+    "text": "Rush",
+    "meaning": "Çok hızlı saldır"
+  },
+  "instructions-hold": {
+    "text": "Tut",
+    "meaning": "Pozisyonda kal"
+  },
+  "instructions-defend": {
+    "text": "Savun",
+    "meaning": "Site'ı veya bölgeyi koru"
+  },
+  "instructions-attack": {
+    "text": "Saldır",
+    "meaning": "Ofansif baskı başlat"
+  },
+  "instructions-retreat": {
+    "text": "Geri çekil",
+    "meaning": "Güvenliğe doğru geri dön"
+  },
+  "instructions-rotate": {
+    "text": "Rotate",
+    "meaning": "Başka bir lane'e veya objective'e geç"
+  },
+  "callouts-rotating": {
+    "text": "Rotate atıyorlar",
+    "meaning": "Düşmanlar başka bir bölgeye hareket ediyor"
+  },
+  "callouts-they-rotated": {
+    "text": "Rotate attılar",
+    "meaning": "Düşman takımı başka bir site'a veya lane'e geçti"
+  },
+  "callouts-fake-rotate": {
+    "text": "Fake rotate",
+    "meaning": "Düşman rotate atıyormuş gibi yapıyor olabilir"
+  },
+  "callouts-push-now": {
+    "text": "Şimdi push",
+    "meaning": "Hemen saldır"
+  },
+  "callouts-go-now": {
+    "text": "Şimdi git",
+    "meaning": "Hemen harekete geç"
+  },
+  "callouts-fall-back": {
+    "text": "Geri düş",
+    "meaning": "Daha güvenli bir pozisyona çekil"
+  },
+  "callouts-group-up": {
+    "text": "Toplanın",
+    "meaning": "Bir sonraki hamleden önce bir araya gelin"
+  },
+  "callouts-regroup": {
+    "text": "Regroup",
+    "meaning": "Bir fight veya rotate sonrası tekrar bir araya gel"
+  },
+  "callouts-need-help": {
+    "text": "Yardıma ihtiyacım var",
+    "meaning": "Konuşan kişi baskı altında ve desteğe ihtiyaç duyuyor"
+  },
+  "callouts-help-me": {
+    "text": "Yardım et",
+    "meaning": "Konuşan kişinin acil yardıma ihtiyacı var"
+  },
+  "callouts-need-backup": {
+    "text": "Backup lazım",
+    "meaning": "Konuşan kişinin takım desteğine ihtiyacı var"
+  },
+  "callouts-i-need-healing": {
+    "text": "Heal lazım",
+    "meaning": "Konuşan kişi heal veya support yeteneği istiyor"
+  },
+  "instructions-heal-me": {
+    "text": "Heal at",
+    "meaning": "Konuşan kişiye iyileştirme yeteneği veya item kullan"
+  },
+  "instructions-revive-me": {
+    "text": "Beni revive et",
+    "meaning": "Konuşan kişiyi down olduktan sonra geri getir"
+  },
+  "instructions-res-me": {
+    "text": "Resle beni",
+    "meaning": "Revive veya resurrect etmenin kısaltması"
+  },
+  "instructions-cover-the-revive": {
+    "text": "Revive'ı coverla",
+    "meaning": "Revive yapan oyuncuyu koru"
+  },
+  "callouts-need-ammo": {
+    "text": "Mermi lazım",
+    "meaning": "Konuşan kişinin mermisi az"
+  },
+  "callouts-out-of-ammo": {
+    "text": "Mermim bitti",
+    "meaning": "Konuşan kişi yeniden doldurana veya ikmal alana kadar ateş edemez"
+  },
+  "callouts-reloading": {
+    "text": "Reload atıyorum",
+    "meaning": "Konuşan kişi şarjör değiştiriyor ve güvenli savaşamaz"
+  },
+  "callouts-cover-me": {
+    "text": "Beni coverla",
+    "meaning": "Konuşan kişi hareket ederken, reload atarken veya objective yaparken onu koru"
+  },
+  "callouts-i-got-you": {
+    "text": "Bendesin",
+    "meaning": "Konuşan kişi takım arkadaşını destekleyecek veya koruyacak"
+  },
+  "callouts-ping-it": {
+    "text": "Pingle",
+    "meaning": "Konumu, item'ı, düşmanı veya objective'i haritada işaretle"
+  },
+  "callouts-mark-the-enemy": {
+    "text": "Düşmanı işaretle",
+    "meaning": "Düşmanın üstüne ping veya marker koy"
+  },
+  "callouts-i-marked-it": {
+    "text": "İşaretledim",
+    "meaning": "Konuşan kişi bir işaret koydu"
+  },
+  "callouts-check-map": {
+    "text": "Haritaya bak",
+    "meaning": "Minimap'e veya taktik haritaya bak"
+  },
+  "callouts-look-at-ping": {
+    "text": "Pinge bak",
+    "meaning": "Koyulan işarete dikkat et"
+  },
+  "instructions-follow-me": {
+    "text": "Beni takip et",
+    "meaning": "Konuşan kişiyle birlikte hareket et"
+  },
+  "instructions-stay-together": {
+    "text": "Birlikte kalın",
+    "meaning": "Takım arkadaşlarına yakın kal"
+  },
+  "instructions-spread-out": {
+    "text": "Yayılın",
+    "meaning": "Birbirinize çok yakın durmayın"
+  },
+  "instructions-wait-for-me": {
+    "text": "Beni bekle",
+    "meaning": "Konuşan kişi gelene kadar aksiyonu geciktir"
+  },
+  "instructions-wait-for-cooldowns": {
+    "text": "Cooldown'ları bekle",
+    "meaning": "Yetenekler hazır olana kadar savaşma"
+  },
+  "objective-plant-the-bomb": {
+    "text": "Bombayı kur",
+    "meaning": "Bombayı veya spike'ı objective site'a yerleştir"
+  },
+  "objective-bomb-planted": {
+    "text": "Bomba kuruldu",
+    "meaning": "Bomba veya spike yerleştirildi"
+  },
+  "objective-bomb-down": {
+    "text": "Bomba düştü",
+    "meaning": "Bomba taşıyıcısı objective item'ı düşürdü"
+  },
+  "objective-spike-down": {
+    "text": "Spike düştü",
+    "meaning": "Spike düşürüldü"
+  },
+  "objective-defuse-the-bomb": {
+    "text": "Bombayı çöz",
+    "meaning": "Patlamadan önce kurulu bombayı durdur"
+  },
+  "objective-half-defuse": {
+    "text": "Yarı defuse",
+    "meaning": "Defuse'u yarı kontrol noktasına kadar yap"
+  },
+  "objective-stick-the-defuse": {
+    "text": "Defuse'u bırakma",
+    "meaning": "Baskı altında bile defuse etmeye devam et"
+  },
+  "objective-fake-defuse": {
+    "text": "Fake defuse",
+    "meaning": "Düşmanları peek atmaya zorlamak için defuse'a dokun"
+  },
+  "objective-objective-secured": {
+    "text": "Objective alındı",
+    "meaning": "Takım objective'i aldı veya korudu"
+  },
+  "objective-objective-lost": {
+    "text": "Objective kaybedildi",
+    "meaning": "Düşman objective'i aldı"
+  },
+  "objective-point-captured": {
+    "text": "Point alındı",
+    "meaning": "Capture point artık kontrol altında"
+  },
+  "objective-point-contested": {
+    "text": "Point contestleniyor",
+    "meaning": "İki takım da point için savaşıyor"
+  },
+  "objective-payload-moving": {
+    "text": "Payload ilerliyor",
+    "meaning": "Escort objective ilerliyor"
+  },
+  "objective-payload-stopped": {
+    "text": "Payload durdu",
+    "meaning": "Escort objective hareket etmiyor"
+  },
+  "slang-loot": {
+    "text": "Loot",
+    "meaning": "Oyunda bulunan veya kazanılan faydalı item'lar, silahlar, kaynaklar veya ödüller"
+  },
+  "callouts-loot-here": {
+    "text": "Burada loot var",
+    "meaning": "Bu konumda faydalı item'lar var"
+  },
+  "callouts-good-loot": {
+    "text": "İyi loot",
+    "meaning": "Bu bölgede değerli item'lar var"
+  },
+  "callouts-need-weapon": {
+    "text": "Silah lazım",
+    "meaning": "Konuşan kişinin kullanılabilir bir silaha ihtiyacı var"
+  },
+  "callouts-need-shield": {
+    "text": "Shield lazım",
+    "meaning": "Konuşan kişinin zırh veya shield item'larına ihtiyacı var"
+  },
+  "callouts-need-meds": {
+    "text": "Med lazım",
+    "meaning": "Konuşan kişinin iyileştirme item'larına ihtiyacı var"
+  },
+  "callouts-drop-ammo": {
+    "text": "Mermi drop'la",
+    "meaning": "Takım arkadaşına mermi ver"
+  },
+  "callouts-drop-weapon": {
+    "text": "Silah drop'la",
+    "meaning": "Takım arkadaşına silah ver"
+  },
+  "callouts-take-this": {
+    "text": "Bunu al",
+    "meaning": "Takım arkadaşı teklif edilen item'ı almalı"
+  },
+  "callouts-do-not-take-it": {
+    "text": "Onu alma",
+    "meaning": "Item'ı başka biri için bırak"
+  },
+  "callouts-i-will-take-it": {
+    "text": "Ben alacağım",
+    "meaning": "Konuşan kişi item'ı almak istiyor"
+  },
+  "callouts-use-it": {
+    "text": "Kullan",
+    "meaning": "Item'ı veya yeteneği etkinleştir ya da tüket"
+  },
+  "callouts-save-it": {
+    "text": "Sakla",
+    "meaning": "Item'ı veya yeteneği henüz kullanma"
+  },
+  "strategy-default-setup": {
+    "text": "Default setup",
+    "meaning": "Normal ve güvenli bir dizilişle başla"
+  },
+  "strategy-slow-push": {
+    "text": "Slow push",
+    "meaning": "Her bölgeyi kontrol ederek dikkatli saldır"
+  },
+  "strategy-fast-push": {
+    "text": "Fast push",
+    "meaning": "Düşmanlar tepki veremeden hızlı saldır"
+  },
+  "strategy-fake-push": {
+    "text": "Fake push",
+    "meaning": "Düşmanları çekmek için bir bölgeye saldırıyormuş gibi yap"
+  },
+  "strategy-split-push": {
+    "text": "Split push",
+    "meaning": "İki veya daha fazla rotadan saldır"
+  },
+  "strategy-retake": {
+    "text": "Retake",
+    "meaning": "Kaybedilen objective'i geri al"
+  },
+  "strategy-eco-round": {
+    "text": "Eco round",
+    "meaning": "Para biriktirmek için ucuz ekipman kullan"
+  },
+  "strategy-full-buy": {
+    "text": "Full buy",
+    "meaning": "Herkes güçlü ekipman alır"
+  },
+  "strategy-force-buy": {
+    "text": "Force buy",
+    "meaning": "Ekonomi düşükken bile şimdi kazanmayı denemek için satın al"
+  },
+  "strategy-play-objective": {
+    "text": "Objective oyna",
+    "meaning": "Kill yerine objective'i önceliklendir"
+  },
+  "strategy-play-for-picks": {
+    "text": "Pick için oyna",
+    "meaning": "Tam commit etmeden önce güvenli bir kill arayın"
+  },
+  "strategy-take-map-control": {
+    "text": "Map control al",
+    "meaning": "Haritanın önemli bölgelerini güvenceye al"
+  },
+  "strategy-gather-info": {
+    "text": "Info topla",
+    "meaning": "Commit etmeden önce scout yap"
+  },
+  "strategy-use-utility-first": {
+    "text": "Önce utility kullan",
+    "meaning": "Girmeden veya savaşmadan önce yetenekleri kullan"
+  },
+  "strategy-double-peek": {
+    "text": "Double peek",
+    "meaning": "İki oyuncu aynı açıyı birlikte peek'ler"
+  },
+  "strategy-off-angle": {
+    "text": "Off angle",
+    "meaning": "Düşmanları şaşırtmak için alışılmadık bir pozisyon tut"
+  },
+  "strategy-late-lurk": {
+    "text": "Late lurk",
+    "meaning": "Bir oyuncu gecikir ve daha sonra arkadan saldırır"
+  },
+  "economy-buy": {
+    "text": "Buy",
+    "meaning": "Silah, ekipman veya item satın al"
+  },
+  "economy-save": {
+    "text": "Save",
+    "meaning": "Sonraki round için para veya kaynak sakla"
+  },
+  "economy-drop-me": {
+    "text": "Bana drop",
+    "meaning": "Konuşan kişiye silah, item veya kaynak satın al ya da ver"
+  },
+  "economy-i-can-drop": {
+    "text": "Drop atabilirim",
+    "meaning": "Konuşan kişi takım arkadaşına silah, item veya kaynak alabilir ya da verebilir"
+  },
+  "economy-need-a-drop": {
+    "text": "Drop lazım",
+    "meaning": "Konuşan kişinin bir takım arkadaşının ona silah veya kaynak almasına ya da vermesine ihtiyacı var"
+  },
+  "economy-full-save": {
+    "text": "Full save",
+    "meaning": "Bu round kimse fazla harcamamalı"
+  },
+  "economy-light-buy": {
+    "text": "Light buy",
+    "meaning": "Sadece ucuz veya sınırlı ekipman al"
+  },
+  "economy-half-buy": {
+    "text": "Half buy",
+    "meaning": "Biraz kaynak harca ama sonraki round için yeterli bırak"
+  },
+  "economy-full-armor": {
+    "text": "Full armor",
+    "meaning": "Maksimum zırh veya koruma satın al"
+  },
+  "economy-no-armor": {
+    "text": "Armor yok",
+    "meaning": "Bir oyuncunun zırhı yok"
+  },
+  "economy-upgrade-weapon": {
+    "text": "Silah yükselt",
+    "meaning": "Daha güçlü bir silaha geç"
+  },
+  "economy-keep-weapon": {
+    "text": "Silahı tut",
+    "meaning": "Mevcut silahı atma"
+  },
+  "economy-pick-up-gun": {
+    "text": "Silahı al",
+    "meaning": "Yere düşmüş bir silahı al"
+  },
+  "economy-save-the-gun": {
+    "text": "Silahı savele",
+    "meaning": "Silahla hayatta kalıp onu sonraki round'a taşı"
+  },
+  "economy-we-are-broke": {
+    "text": "Paramız yok",
+    "meaning": "Takımın çok az parası veya kaynağı var"
+  },
+  "economy-they-are-broke": {
+    "text": "Onların parası yok",
+    "meaning": "Düşman takımın az parası veya kaynağı var"
+  },
+  "slang-skin": {
+    "text": "Skin",
+    "meaning": "Karakter, silah veya item için kozmetik görünüm"
+  },
+  "slang-battle-pass": {
+    "text": "Battle pass",
+    "meaning": "Oynayarak kozmetik veya item açan ödül yolu"
+  },
+  "slang-loadout": {
+    "text": "Loadout",
+    "meaning": "Maçta kullanılan seçili silahlar, ekipman, yetenekler veya perk'ler"
+  },
+  "slang-build": {
+    "text": "Build",
+    "meaning": "Item, yetenek, stat veya yükseltmelerden oluşan seçilmiş kurulum"
+  },
+  "slang-perk": {
+    "text": "Perk",
+    "meaning": "Oyuncunun seçtiği pasif bonus veya özel avantaj"
+  },
+  "slang-cosmetic": {
+    "text": "Kozmetik",
+    "meaning": "Gücü doğrudan artırmadan görünümü değiştiren item"
+  },
+  "slang-patch": {
+    "text": "Patch",
+    "meaning": "Bug'ları düzelten, denge ayarı yapan veya içerik ekleyen oyun güncellemesi"
+  },
+  "slang-patch-notes": {
+    "text": "Patch notları",
+    "meaning": "Oyun güncellemesinde neyin değiştiğini açıklayan resmi notlar"
+  },
+  "slang-hotfix": {
+    "text": "Hotfix",
+    "meaning": "Acil bir sorunu düzelten hızlı güncelleme"
+  },
+  "slang-bug": {
+    "text": "Bug",
+    "meaning": "Oyun hatası veya istenmeyen problem"
+  },
+  "slang-glitch": {
+    "text": "Glitch",
+    "meaning": "Garip veya amaçlanmamış oyun davranışı; bazen kötüye kullanılabilir"
+  },
+  "slang-exploit": {
+    "text": "Exploit",
+    "meaning": "Adil olmayan avantaj için bug veya sistemi kötüye kullanmak"
+  },
+  "slang-cheater": {
+    "text": "Cheater",
+    "meaning": "Avantaj elde etmek için haksız araç veya yöntem kullanan oyuncu"
+  },
+  "slang-hacker": {
+    "text": "Hacker",
+    "meaning": "Hile veya izinsiz araç kullanmakla suçlanan oyuncu"
+  },
+  "slang-ban": {
+    "text": "Ban",
+    "meaning": "Bir oyuncuyu, karakteri, haritayı veya hesabı kullanımdan engellemek"
+  },
+  "slang-report": {
+    "text": "Report",
+    "meaning": "Hile, toxicity veya kural ihlali hakkında şikayet göndermek"
+  },
+  "slang-skill-issue": {
+    "text": "Skill issue",
+    "meaning": "Sorunun oyunda değil kötü oynayışta olduğunu ima eden alaycı ifade"
+  },
+  "slang-touch-grass": {
+    "text": "Touch grass",
+    "meaning": "Birine oyun veya online tartışmadan mola vermesini söylemenin şakalı yolu"
+  },
+  "slang-cooked": {
+    "text": "Cooked",
+    "meaning": "Ciddi sıkıntıda, outplay yemiş veya kaybetmesi muhtemel"
+  },
+  "slang-diffed": {
+    "text": "Diffed",
+    "meaning": "Aynı roldeki veya matchup'taki rakip tarafından daha iyi oynanmak"
+  },
+  "slang-quest": {
+    "text": "Görev",
+    "meaning": "İlerleme veya ödül veren görev"
+  },
+  "slang-mission": {
+    "text": "Misyon",
+    "meaning": "Oyuncunun tamamlaması gereken hedef veya görev"
+  },
+  "slang-boss": {
+    "text": "Boss",
+    "meaning": "Genellikle bölüm veya karşılaşma sonunda çıkan güçlü düşman"
+  },
+  "slang-mob": {
+    "text": "Mob",
+    "meaning": "Sıradan yapay zekâ düşmanı veya yaratık"
+  },
+  "slang-aggro": {
+    "text": "Aggro",
+    "meaning": "Bir oyuncuya odaklanan düşman ilgisi veya tehdit"
+  },
+  "slang-raid": {
+    "text": "Raid",
+    "meaning": "Genellikle boss'lara karşı yapılan büyük kooperatif challenge"
+  },
+  "slang-dungeon": {
+    "text": "Dungeon",
+    "meaning": "Düşmanlar, objective'ler ve ödüller içeren yapılandırılmış PvE alanı"
+  },
+  "slang-cc-chain": {
+    "text": "CC chain",
+    "meaning": "Hedefi etkisiz tutmak için birden fazla crowd control etkisini sırayla kullanmak"
+  },
+  "slang-clutch-or-kick": {
+    "text": "Clutch or kick",
+    "meaning": "Bir oyuncu tek başına kazanmak zorundayken kullanılan şakalı baskı ifadesi"
+  },
+  "slang-diff": {
+    "text": "Diff",
+    "meaning": "Difference kısaltması; bir oyuncu veya rolün daha iyi performans gösterdiğini söylemek için kullanılır"
+  },
+  "slang-gap": {
+    "text": "Gap",
+    "meaning": "Oyuncular veya takımlar arasında büyük yetenek farkı"
+  },
+  "slang-gg-ez": {
+    "text": "GG EZ",
+    "meaning": "Good game, easy; genellikle saygısız kabul edilir"
+  },
+  "slang-hitbox": {
+    "text": "Hitbox",
+    "meaning": "Atışların isabet sayıldığı görünmez alan"
+  },
+  "slang-spawn-camp": {
+    "text": "Spawn camp",
+    "meaning": "Düşmanlara spawn olur olmaz saldırmak"
+  },
+  "slang-spawn-kill": {
+    "text": "Spawn kill",
+    "meaning": "Bir oyuncuyu spawn olur olmaz öldürmek"
+  },
+  "callouts-ace": {
+    "text": "Ace",
+    "meaning": "Bir oyuncunun tüm düşman takımını elemesi"
+  },
+  "callouts-back-site": {
+    "text": "Back site",
+    "meaning": "Düşman objective site'ın arka tarafında"
+  },
+  "callouts-bad-timing": {
+    "text": "Kötü timing",
+    "meaning": "Aksiyon şanssız veya kötü bir anda gerçekleşti"
+  },
+  "callouts-bait-and-switch": {
+    "text": "Bait and switch",
+    "meaning": "Bir oyuncu dikkat çekerken başka biri kill alır"
+  },
+  "callouts-basement-clear": {
+    "text": "Bodrum clear",
+    "meaning": "Bodrum veya alt bölge güvenli görünüyor"
+  },
+  "callouts-blocked": {
+    "text": "Kapalı",
+    "meaning": "Bir yol kullanılamıyor veya güvensiz"
+  },
+  "callouts-bridge-clear": {
+    "text": "Köprü clear",
+    "meaning": "Köprü rotası güvenli görünüyor"
+  },
+  "callouts-careful": {
+    "text": "Dikkat",
+    "meaning": "Tehlike mümkün olduğu için dikkatli ol"
+  },
+  "callouts-carry": {
+    "text": "Carry",
+    "meaning": "Takımın işinin çoğunu yapan veya takımı galibiyete taşıyan oyuncu"
+  },
+  "callouts-circle-moving": {
+    "text": "Circle hareket ediyor",
+    "meaning": "Battle royale çemberi konum değiştiriyor"
+  },
+  "callouts-clean-fight": {
+    "text": "Clean fight",
+    "meaning": "Takım fight'ı iyi kontrolle kazandı"
+  },
+  "callouts-clear-left": {
+    "text": "Sol clear",
+    "meaning": "Sol taraf güvenli görünüyor"
+  },
+  "callouts-clear-mid": {
+    "text": "Mid clear",
+    "meaning": "Orta bölge güvenli görünüyor"
+  },
+  "callouts-clear-right": {
+    "text": "Sağ clear",
+    "meaning": "Sağ taraf güvenli görünüyor"
+  },
+  "callouts-close-corner": {
+    "text": "Yakın köşe",
+    "meaning": "Yakındaki köşede bir düşman saklanıyor"
+  },
+  "callouts-close-game": {
+    "text": "Yakın maç",
+    "meaning": "Maç çok dengeli"
+  },
+  "callouts-clutch": {
+    "text": "Clutch",
+    "meaning": "Bir oyuncunun zor bir durumu tek başına veya baskı altında kazanması"
+  },
+  "callouts-come-back": {
+    "text": "Geri gel",
+    "meaning": "Takıma veya daha güvenli bölgeye dön"
+  },
+  "callouts-comeback": {
+    "text": "Comeback",
+    "meaning": "Takım gerideyken toparlanıyor"
+  },
+  "callouts-contact": {
+    "text": "Contact",
+    "meaning": "Konuşan kişi düşmanlarla karşılaştı"
+  },
+  "callouts-corner": {
+    "text": "Köşe",
+    "meaning": "Bir düşman köşede saklanıyor"
+  },
+  "callouts-crossfire": {
+    "text": "Crossfire",
+    "meaning": "İki takım arkadaşı aynı düşmanı farklı açılardan tutar"
+  },
+  "callouts-default-spot": {
+    "text": "Default spot",
+    "meaning": "Objective kurmak, tutmak veya savunmak için en yaygın pozisyon"
+  },
+  "callouts-do-not-chase": {
+    "text": "Kovalamayın",
+    "meaning": "Bir düşmanı çok uzağa kadar takip etmeyin"
+  },
+  "callouts-do-not-peek": {
+    "text": "Peek atma",
+    "meaning": "Kendini düşman açısına gösterme"
+  },
+  "callouts-door-closed": {
+    "text": "Kapı kapalı",
+    "meaning": "Bir kapı veya yol kapalı"
+  },
+  "callouts-door-open": {
+    "text": "Kapı açık",
+    "meaning": "Bir kapı veya yol kullanılabilir"
+  },
+  "callouts-flash-out": {
+    "text": "Flash çıktı",
+    "meaning": "Flashbang veya kör eden bir yetenek kullanıldı"
+  },
+  "callouts-focus-fire": {
+    "text": "Focus fire",
+    "meaning": "Herkes aynı hedefe ateş etmeli"
+  },
+  "callouts-focus-healer": {
+    "text": "Healer'a focus",
+    "meaning": "Önce düşman healer veya support'a saldır"
+  },
+  "callouts-focus-sniper": {
+    "text": "Sniper'a focus",
+    "meaning": "Önce düşman sniper'a saldır"
+  },
+  "callouts-footsteps": {
+    "text": "Ayak sesleri",
+    "meaning": "Konuşan kişi düşman hareketini duyuyor"
+  },
+  "callouts-free-kill": {
+    "text": "Free kill",
+    "meaning": "Bir düşman kolayca öldürülebilir"
+  },
+  "callouts-free-objective": {
+    "text": "Free objective",
+    "meaning": "Objective çok az dirençle alınabilir"
+  },
+  "callouts-front-site": {
+    "text": "Front site",
+    "meaning": "Düşman objective site'ın ön tarafında"
+  },
+  "callouts-good-timing": {
+    "text": "İyi timing",
+    "meaning": "Aksiyon doğru zamanda gerçekleşti"
+  },
+  "callouts-grenade-out": {
+    "text": "Grenade çıktı",
+    "meaning": "Bir el bombası atıldı"
+  },
+  "callouts-hallway": {
+    "text": "Koridor",
+    "meaning": "Bir düşman veya hareket koridorda"
+  },
+  "callouts-hide": {
+    "text": "Saklan",
+    "meaning": "Görünmekten kaçın"
+  },
+  "callouts-high-ground": {
+    "text": "High ground",
+    "meaning": "Önemli pozisyon düşmanın üstünde"
+  },
+  "callouts-hold-angle": {
+    "text": "Açıyı tut",
+    "meaning": "Düşmanın gelmesi beklenen yola nişan almayı sürdür"
+  },
+  "callouts-hold-position": {
+    "text": "Pozisyonu tut",
+    "meaning": "Bulunduğun yerde kal ve fazla açılma"
+  },
+  "callouts-i-am-watching": {
+    "text": "Tutuyorum",
+    "meaning": "Konuşan kişi bir açı veya bölgeyi tutuyor"
+  },
+  "callouts-i-hear-steps": {
+    "text": "Step duyuyorum",
+    "meaning": "Düşman ayak sesleri duyuluyor"
+  },
+  "callouts-i-will-trade": {
+    "text": "Trade'lerim",
+    "meaning": "Konuşan kişi takip edip return kill alacak"
+  },
+  "callouts-ignore-tank": {
+    "text": "Tankı ignorela",
+    "meaning": "Şu an tanky düşmana hasar harcama"
+  },
+  "callouts-long-range": {
+    "text": "Uzun mesafe",
+    "meaning": "Düşman uzakta veya uzun bir açıyı tutuyor"
+  },
+  "callouts-low-ground": {
+    "text": "Low ground",
+    "meaning": "Takım düşman pozisyonunun altında"
+  },
+  "callouts-lucky-shot": {
+    "text": "Şanslı vuruş",
+    "meaning": "Atış kısmen şans sayesinde başarılı oldu"
+  },
+  "callouts-messy-fight": {
+    "text": "Messy fight",
+    "meaning": "Fight dağınık ve riskliydi"
+  },
+  "callouts-move-up": {
+    "text": "İleri çık",
+    "meaning": "Daha ileri bir pozisyona ilerle"
+  },
+  "callouts-nice-trade": {
+    "text": "Güzel trade",
+    "meaning": "Bir takım arkadaşı başarıyla return kill aldı"
+  },
+  "callouts-no-contact": {
+    "text": "Contact yok",
+    "meaning": "Henüz düşman bulunmadı"
+  },
+  "callouts-no-problem": {
+    "text": "Sorun yok",
+    "meaning": "Takım arkadaşı özür dilediğinde verilen dostça cevap"
+  },
+  "callouts-not-clear": {
+    "text": "Clear değil",
+    "meaning": "Bölgenin güvenli olduğu doğrulanmadı"
+  },
+  "callouts-open-lane": {
+    "text": "Açık lane",
+    "meaning": "Bir lane veya yol savunulmuyor"
+  },
+  "callouts-out-of-zone": {
+    "text": "Zone dışı",
+    "meaning": "Birisi güvenli alanın dışında"
+  },
+  "callouts-peek-together": {
+    "text": "Birlikte peek",
+    "meaning": "İki veya daha fazla takım arkadaşı düşmana aynı anda bakmalı"
+  },
+  "callouts-pinched": {
+    "text": "Sıkıştırıldı",
+    "meaning": "Düşmanlar iki taraftan saldırı altında"
+  },
+  "callouts-play-fast": {
+    "text": "Hızlı oyna",
+    "meaning": "Düşmanı şaşırtmak için hız ve baskı kullan"
+  },
+  "callouts-play-safe": {
+    "text": "Güvenli oyna",
+    "meaning": "Riskli fight'lardan kaçın"
+  },
+  "callouts-play-slow": {
+    "text": "Yavaş oyna",
+    "meaning": "Dikkatli hareket et ve bilgi topla"
+  },
+  "callouts-play-time": {
+    "text": "Time oyna",
+    "meaning": "Timer takımınıza yardım edene kadar düşmanı geciktir"
+  },
+  "callouts-reset": {
+    "text": "Reset",
+    "meaning": "Dağınık fight'ı durdur ve plana geri dön"
+  },
+  "callouts-roof-clear": {
+    "text": "Çatı clear",
+    "meaning": "Çatı bölgesi güvenli görünüyor"
+  },
+  "callouts-run": {
+    "text": "Koş",
+    "meaning": "Hızlıca kaç"
+  },
+  "callouts-safe-zone": {
+    "text": "Safe zone",
+    "meaning": "Bu bölge güvenli alanın içinde"
+  },
+  "callouts-short-range": {
+    "text": "Yakın mesafe",
+    "meaning": "Düşman çok yakın"
+  },
+  "callouts-shotgun-close": {
+    "text": "Shotgun yakın",
+    "meaning": "Shotgun'lı bir düşman yakında"
+  },
+  "callouts-site-clear": {
+    "text": "Site clear",
+    "meaning": "Objective site şimdilik güvenli görünüyor"
+  },
+  "callouts-site-not-clear": {
+    "text": "Site clear değil",
+    "meaning": "Objective site içinde hâlâ düşman olabilir"
+  },
+  "callouts-smoke-out": {
+    "text": "Smoke çıktı",
+    "meaning": "Smoke grenade veya görüş kapatan yetenek kullanıldı"
+  },
+  "callouts-sniper-watching": {
+    "text": "Sniper tutuyor",
+    "meaning": "Bir sniper bu açıyı tutuyor"
+  },
+  "callouts-split-up": {
+    "text": "Ayrılın",
+    "meaning": "Daha fazla alan kaplamak veya baskı yaratmak için ayrıl"
+  },
+  "callouts-stairs": {
+    "text": "Merdiven",
+    "meaning": "Bir düşman veya hareket merdiven yakınında"
+  },
+  "callouts-stay-alive": {
+    "text": "Hayatta kal",
+    "meaning": "Şu an hayatta kalmak önemli olduğu için ölmekten kaçın"
+  },
+  "callouts-stop-chasing": {
+    "text": "Kovalamayı bırak",
+    "meaning": "Kill avlamak yerine objective'e dön"
+  },
+  "callouts-storm-coming": {
+    "text": "Storm geliyor",
+    "meaning": "Hasar veren zone yaklaşıyor"
+  },
+  "callouts-swing-together": {
+    "text": "Birlikte swing",
+    "meaning": "Düşmanla savaşmak için birlikte çık"
+  },
+  "callouts-target-marked": {
+    "text": "Hedef işaretlendi",
+    "meaning": "Öncelikli bir hedef işaretlendi"
+  },
+  "callouts-they-are-close": {
+    "text": "Yakındalar",
+    "meaning": "Düşmanlar yakında"
+  },
+  "callouts-they-are-far": {
+    "text": "Uzaktalar",
+    "meaning": "Düşmanlar uzakta"
+  },
+  "callouts-third-party": {
+    "text": "Third party",
+    "meaning": "Başka bir takım fight'a katılıyor"
+  },
+  "callouts-throw": {
+    "text": "Throw",
+    "meaning": "Avantajı veren veya kazanılabilir durumu kaybettiren hata yapmak"
+  },
+  "callouts-trade-him": {
+    "text": "Onu trade'le",
+    "meaning": "Takım arkadaşı öldürüldükten veya down olduktan sonra return kill al"
+  },
+  "callouts-trade-me": {
+    "text": "Beni trade'le",
+    "meaning": "Konuşan kişiyi öldüren veya down eden düşmanı öldürmeye hazır ol"
+  },
+  "callouts-trap-destroyed": {
+    "text": "Trap yok edildi",
+    "meaning": "Bir tuzak kaldırıldı"
+  },
+  "callouts-trap-here": {
+    "text": "Burada trap var",
+    "meaning": "Bu konumda bir tuzak var"
+  },
+  "callouts-tunnel-clear": {
+    "text": "Tünel clear",
+    "meaning": "Tünel rotası güvenli görünüyor"
+  },
+  "callouts-unlucky": {
+    "text": "Unlucky",
+    "meaning": "Sonuç şanssızdı; mutlaka kötü oyun anlamına gelmez"
+  },
+  "callouts-wait": {
+    "text": "Bekle",
+    "meaning": "Harekete geçmeden önce dur"
+  },
+  "callouts-watching-left": {
+    "text": "Solu tutuyorum",
+    "meaning": "Konuşan kişi sol tarafı coverlıyor"
+  },
+  "callouts-watching-mid": {
+    "text": "Mid tutuyorum",
+    "meaning": "Konuşan kişi orta bölgeyi coverlıyor"
+  },
+  "callouts-watching-right": {
+    "text": "Sağı tutuyorum",
+    "meaning": "Konuşan kişi sağ tarafı coverlıyor"
+  },
+  "callouts-water": {
+    "text": "Su",
+    "meaning": "Bir düşman veya konum su yakınında"
+  },
+  "callouts-we-are-pinched": {
+    "text": "Sıkıştık",
+    "meaning": "Takım düşman açıları arasında sıkıştı"
+  },
+  "callouts-well-played": {
+    "text": "İyi oynandı",
+    "meaning": "Akıllı veya yetenekli bir play için saygılı övgü"
+  },
+  "callouts-window": {
+    "text": "Pencere",
+    "meaning": "Bir düşman veya açı pencerede"
+  },
+  "callouts-with-me": {
+    "text": "Benimle",
+    "meaning": "Konuşan kişi takım arkadaşlarının yakın kalmasını istiyor"
+  },
+  "callouts-zone-closing": {
+    "text": "Zone kapanıyor",
+    "meaning": "Güvenli alan küçülüyor veya hareket ediyor"
+  },
+  "danger-do-not-go-there": {
+    "text": "Oraya gitme",
+    "meaning": "O bölge güvenli değil"
+  },
+  "danger-enemy-ultimate-ready": {
+    "text": "Düşman ultimate hazır",
+    "meaning": "Bir düşmanda muhtemelen en güçlü yeteneği hazır"
+  },
+  "danger-it-is-a-trap": {
+    "text": "Bu bir trap",
+    "meaning": "Düşman muhtemelen sizi bekliyor"
+  },
+  "danger-low-cover": {
+    "text": "Zayıf cover",
+    "meaning": "Cover zayıf veya eksik"
+  },
+  "danger-they-have-sniper": {
+    "text": "Sniperları var",
+    "meaning": "Düşman takımında sniper tehdidi var"
+  },
+  "instructions-capture-point": {
+    "text": "Point'i al",
+    "meaning": "Objective point'in kontrolünü al"
+  },
+  "instructions-check-behind": {
+    "text": "Arkayı kontrol et",
+    "meaning": "Takımın arkasında düşman var mı bak"
+  },
+  "instructions-check-left": {
+    "text": "Solu kontrol et",
+    "meaning": "Solda düşman var mı bak"
+  },
+  "instructions-check-right": {
+    "text": "Sağı kontrol et",
+    "meaning": "Sağda düşman var mı bak"
+  },
+  "instructions-clear-corners": {
+    "text": "Köşeleri temizle",
+    "meaning": "Girmeden önce saklanma noktalarını kontrol et"
+  },
+  "instructions-contest-point": {
+    "text": "Point'i contestle",
+    "meaning": "Düşman ilerlemesini durdurmak için objective üzerinde dur"
+  },
+  "instructions-defuse-now": {
+    "text": "Şimdi defuse",
+    "meaning": "Hemen defuse etmeye başla"
+  },
+  "instructions-do-not-feed": {
+    "text": "Feedleme",
+    "meaning": "Tekrar tekrar ölerek düşmana avantaj verme"
+  },
+  "instructions-do-not-split": {
+    "text": "Split olma",
+    "meaning": "Takımdan ayrılmaktan kaçın"
+  },
+  "instructions-do-not-waste-it": {
+    "text": "Boşa harcama",
+    "meaning": "Kaynağı dikkatli kullan"
+  },
+  "instructions-go-first": {
+    "text": "Önce sen gir",
+    "meaning": "Diğerlerinden önce gir veya engage et"
+  },
+  "instructions-i-go-first": {
+    "text": "Önce ben giriyorum",
+    "meaning": "Konuşan kişi önce girecek veya engage edecek"
+  },
+  "instructions-lead-the-way": {
+    "text": "Önden git",
+    "meaning": "Bir takım arkadaşı önce gitmeli"
+  },
+  "instructions-mute-him": {
+    "text": "Onu mute'la",
+    "meaning": "Sesli veya yazılı sohbette rahatsız edici oyuncuyu sustur"
+  },
+  "instructions-plant-now": {
+    "text": "Şimdi plant",
+    "meaning": "Bombayı veya objective'i şimdi yerleştir"
+  },
+  "instructions-report-after": {
+    "text": "Sonra reportla",
+    "meaning": "Report işini round sırasında değil maçtan sonra hallet"
+  },
+  "instructions-save-ultimate": {
+    "text": "Ultimate sakla",
+    "meaning": "En güçlü yeteneği henüz kullanma"
+  },
+  "instructions-stack-here": {
+    "text": "Burada stack",
+    "meaning": "Bu bölgede birden fazla oyuncu toplanmalı"
+  },
+  "instructions-stack-left": {
+    "text": "Solda stack",
+    "meaning": "Oyuncuları sol tarafta topla"
+  },
+  "instructions-stack-right": {
+    "text": "Sağda stack",
+    "meaning": "Oyuncuları sağ tarafta topla"
+  },
+  "instructions-stop-peeking": {
+    "text": "Peek atmayı bırak",
+    "meaning": "Kendini düşman aim'ine göstermeyi bırak"
+  },
+  "instructions-touch-point": {
+    "text": "Point'e dokun",
+    "meaning": "Timer bitmeden objective'e ulaş"
+  },
+  "instructions-use-flash": {
+    "text": "Flash kullan",
+    "meaning": "Girmeden önce kör eden yetenek kullan"
+  },
+  "instructions-use-grenade": {
+    "text": "Grenade kullan",
+    "meaning": "Patlayıcı veya utility bombası at"
+  },
+  "instructions-use-smoke": {
+    "text": "Smoke kullan",
+    "meaning": "Görüşü kapatmak için smoke koy"
+  },
+  "instructions-use-ultimate": {
+    "text": "Ultimate kullan",
+    "meaning": "En güçlü yeteneği şimdi kullan"
+  },
+  "objective-capture-the-flag": {
+    "text": "Bayrağı al",
+    "meaning": "Düşman bayrak objective'ini al"
+  },
+  "objective-escort-the-payload": {
+    "text": "Payload'u eskortla",
+    "meaning": "Payload hareket etsin diye yakınında kal"
+  },
+  "objective-hold-the-point": {
+    "text": "Point'i tut",
+    "meaning": "Objective üzerinde kal ve savun"
+  },
+  "objective-leave-the-point": {
+    "text": "Point'ten çık",
+    "meaning": "Gerektiğinde objective'den uzaklaş"
+  },
+  "objective-return-the-flag": {
+    "text": "Bayrağı geri götür",
+    "meaning": "Bayrağı geri getir veya kendi bayrağını kurtar"
+  },
+  "objective-stop-the-payload": {
+    "text": "Payload'u durdur",
+    "meaning": "Düşmanın payload'u hareket ettirmesini engelle"
+  },
+  "teamwork-do-not-blame": {
+    "text": "Suçlamayın",
+    "meaning": "Oyun sırasında takım arkadaşlarını suçlamaktan kaçın"
+  },
+  "teamwork-focus-next": {
+    "text": "Sonrakine odaklan",
+    "meaning": "Devam et ve bir sonraki play'e hazırlan"
+  },
+  "teamwork-good-effort": {
+    "text": "İyi deneme",
+    "meaning": "Takım arkadaşının denemesine olumlu cevap"
+  },
+  "teamwork-great-call": {
+    "text": "Harika call",
+    "meaning": "Faydalı iletişim için övgü"
+  },
+  "teamwork-great-save": {
+    "text": "Harika save",
+    "meaning": "Kaybı veya tehlikeyi önlediği için övgü"
+  },
+  "teamwork-great-shot": {
+    "text": "Harika vuruş",
+    "meaning": "İsabetli aim için övgü"
+  },
+  "teamwork-i-trust-you": {
+    "text": "Sana güveniyorum",
+    "meaning": "Play yapan takım arkadaşını cesaretlendirme"
+  },
+  "teamwork-i-will-bait-for-you": {
+    "text": "Senin için bait olurum",
+    "meaning": "Konuşan kişi takım arkadaşı trade alsın diye dikkat çekecek"
+  },
+  "teamwork-i-will-cover-you": {
+    "text": "Seni coverlarım",
+    "meaning": "Konuşan kişi takım arkadaşını koruyacak"
+  },
+  "teamwork-i-will-heal-you": {
+    "text": "Seni heal'lerim",
+    "meaning": "Konuşan kişi takım arkadaşına heal kullanacak"
+  },
+  "teamwork-i-will-watch-flank": {
+    "text": "Flank'i tutarım",
+    "meaning": "Konuşan kişi arka rotayı coverlayacak"
+  },
+  "teamwork-keep-comms-clear": {
+    "text": "Comms temiz kalsın",
+    "meaning": "Şu anda sadece faydalı bilgi söyleyin"
+  },
+  "teamwork-let-me-go-first": {
+    "text": "Önce ben gireyim",
+    "meaning": "Konuşan kişi önce girmeye gönüllü"
+  },
+  "teamwork-nice-aim": {
+    "text": "Güzel aim",
+    "meaning": "Atış yeteneği için övgü"
+  },
+  "teamwork-nice-clutch": {
+    "text": "Güzel clutch",
+    "meaning": "Baskı altında kazanmayı övme"
+  },
+  "teamwork-nice-movement": {
+    "text": "Güzel movement",
+    "meaning": "Hareket yeteneği için övgü"
+  },
+  "teamwork-nice-utility": {
+    "text": "Güzel utility",
+    "meaning": "İyi yetenek veya item kullanımı için övgü"
+  },
+  "teamwork-one-round-at-a-time": {
+    "text": "Tek tek round",
+    "meaning": "Tüm maça değil bir sonraki round'a odaklan"
+  },
+  "teamwork-play-together": {
+    "text": "Birlikte oynayın",
+    "meaning": "Grup olarak koordine olun"
+  },
+  "teamwork-reset-mental": {
+    "text": "Mental reset",
+    "meaning": "Tilt olmayı bırakıp taze başla"
+  },
+  "teamwork-stay-calm": {
+    "text": "Sakin kal",
+    "meaning": "Panik yapma veya tilt olma"
+  },
+  "teamwork-take-my-loot": {
+    "text": "Loot'umu al",
+    "meaning": "Konuşan kişi item'larını teklif ediyor"
+  },
+  "teamwork-take-my-weapon": {
+    "text": "Silahımı al",
+    "meaning": "Konuşan kişi silahını teklif ediyor"
+  },
+  "teamwork-trade-together": {
+    "text": "Birlikte trade",
+    "meaning": "Return kill'ler için koordine ol"
+  },
+  "teamwork-wait-for-team": {
+    "text": "Takımı bekle",
+    "meaning": "Takım arkadaşları gelmeden savaşma"
+  },
+  "teamwork-we-can-win": {
+    "text": "Kazanabiliriz",
+    "meaning": "Maçın hâlâ kazanılabilir olduğuna dair cesaretlendirme"
+  },
+  "teamwork-we-need-everyone": {
+    "text": "Herkes lazım",
+    "meaning": "Takım tüm oyuncular olmadan savaşmamalı"
+  },
+  "teamwork-you-got-this": {
+    "text": "Yaparsın",
+    "meaning": "Zor bir an öncesinde veya sırasında cesaretlendirme"
+  },
+  "strategy-anchor-site": {
+    "text": "Site anchor",
+    "meaning": "Objective site'da kalıp savun"
+  },
+  "strategy-bait-utility": {
+    "text": "Utility baitle",
+    "meaning": "Gerçek saldırıdan önce düşmanların yetenek harcamasını sağla"
+  },
+  "strategy-cancel-the-push": {
+    "text": "Push'u iptal et",
+    "meaning": "Saldırıyı durdur ve plan değiştir"
+  },
+  "strategy-commit-now": {
+    "text": "Şimdi commit",
+    "meaning": "Takım kaynaklarını kullan ve planı tamamen uygula"
+  },
+  "strategy-cross-setup": {
+    "text": "Cross setup",
+    "meaning": "Birbirini destekleyen iki açı kur"
+  },
+  "strategy-cut-rotation": {
+    "text": "Rotate'i kes",
+    "meaning": "Düşmanların site'lar arasında hareket etmesini engelle"
+  },
+  "strategy-damage-advantage": {
+    "text": "Hasar avantajı",
+    "meaning": "Düşmanlar takımınızdan daha zayıf"
+  },
+  "strategy-deny-vision": {
+    "text": "Vision kes",
+    "meaning": "Düşman bilgisini engelle veya kaldır"
+  },
+  "strategy-do-not-overcommit": {
+    "text": "Overcommit yapma",
+    "meaning": "Riskli play'e çok fazla kaynak göndermekten kaçın"
+  },
+  "strategy-economy-advantage": {
+    "text": "Ekonomi avantajı",
+    "meaning": "Takımınızın kaynakları veya silahları daha iyi"
+  },
+  "strategy-give-map-control": {
+    "text": "Map control ver",
+    "meaning": "Düşmanın bilerek alan almasına izin ver"
+  },
+  "strategy-hold-rotation": {
+    "text": "Rotate'i tut",
+    "meaning": "Düşmanların rotate için kullandığı yolu izle"
+  },
+  "strategy-man-advantage": {
+    "text": "Oyuncu avantajı",
+    "meaning": "Takımınızda düşmandan daha fazla hayatta oyuncu var"
+  },
+  "strategy-man-disadvantage": {
+    "text": "Sayı dezavantajı",
+    "meaning": "Takımınızda düşmandan daha az hayatta oyuncu var"
+  },
+  "strategy-numbers-advantage": {
+    "text": "Sayı avantajı",
+    "meaning": "Fight'ta takımınızın daha fazla oyuncusu var"
+  },
+  "strategy-play-for-late-game": {
+    "text": "Late game oyna",
+    "meaning": "Aksiyonu geciktir ve son faza hazırlan"
+  },
+  "strategy-play-retake": {
+    "text": "Retake oyna",
+    "meaning": "Site'ı bırakıp geri almaya hazırlan"
+  },
+  "strategy-pressure-side-lane": {
+    "text": "Side lane'e baskı",
+    "meaning": "Yan rotada tehdit oluştur"
+  },
+  "strategy-save-round": {
+    "text": "Save round",
+    "meaning": "Bu round kaynak harcamaktan kaçın"
+  },
+  "strategy-stack-objective": {
+    "text": "Objective stack",
+    "meaning": "Objective yakınına çok oyuncu koy"
+  },
+  "strategy-time-advantage": {
+    "text": "Zaman avantajı",
+    "meaning": "Timer takımınızın lehine"
+  },
+  "strategy-trade-setup": {
+    "text": "Trade setup",
+    "meaning": "Takım arkadaşlarının return kill alabileceği şekilde pozisyon al"
+  },
+  "strategy-ultimate-advantage": {
+    "text": "Ultimate avantajı",
+    "meaning": "Takımınızda daha güçlü ultimate yetenekleri hazır"
+  },
+  "economy-do-not-force": {
+    "text": "Force yapma",
+    "meaning": "Düşük kaynakla fazla satın alma"
+  },
+  "economy-force-together": {
+    "text": "Birlikte force",
+    "meaning": "Herkes riskli buy'a birlikte commit etmeli"
+  },
+  "economy-they-have-money": {
+    "text": "Paraları var",
+    "meaning": "Düşman takımı güçlü ekipman alabilir"
+  },
+  "economy-we-can-buy-next": {
+    "text": "Sonraki alabiliriz",
+    "meaning": "Takımın sonraki round yeterli kaynağı olmalı"
   },
   "antiToxic-clear-comms-please": {
-    "text": "clair comms, please",
-    "meaning": "Oyundaki anlamı: clair comms, please"
-  },
-  "antiToxic-let-us-reset": {
-    "text": "let us reset",
-    "meaning": "Oyundaki anlamı: let us reset"
-  },
-  "antiToxic-play-safe-next": {
-    "text": "joue prudent next",
-    "meaning": "Oyundaki anlamı: joue prudent next"
-  },
-  "antiToxic-wait-for-the-team-next-time": {
-    "text": "bekle pour the équipe next time",
-    "meaning": "Oyundaki anlamı: bekle pour the équipe next time"
-  },
-  "antiToxic-good-try-next-round": {
-    "text": "bon try, next round",
-    "meaning": "Oyundaki anlamı: bon try, next round"
-  },
-  "antiToxic-we-need-better-spacing": {
-    "text": "we besoin de better spacing",
-    "meaning": "Oyundaki anlamı: we besoin de better spacing"
-  },
-  "antiToxic-let-us-trade-better": {
-    "text": "let us trade better",
-    "meaning": "Oyundaki anlamı: let us trade better"
-  },
-  "antiToxic-save-your-utility": {
-    "text": "sakla your utility",
-    "meaning": "Oyundaki anlamı: sakla your utility"
-  },
-  "antiToxic-use-comms-not-blame": {
-    "text": "utilise comms, pas blame",
-    "meaning": "Oyundaki anlamı: utilise comms, pas blame"
+    "text": "Clear comms lütfen",
+    "meaning": "Takım arkadaşlarından iletişimi odaklı ve faydalı tutmalarını istemek"
   },
   "antiToxic-focus-on-objective": {
-    "text": "focus on objectif",
-    "meaning": "Oyundaki anlamı: focus on objectif"
+    "text": "Objective'e odaklanalım",
+    "meaning": "Takımı kazanma koşullarına geri yönlendir"
   },
-  "antiToxic-we-still-have-time": {
-    "text": "we still have time",
-    "meaning": "Oyundaki anlamı: we still have time"
-  },
-  "antiToxic-no-worries": {
-    "text": "no worries",
-    "meaning": "Oyundaki anlamı: no worries"
+  "antiToxic-good-try-next-round": {
+    "text": "İyi deneme, sonraki round",
+    "meaning": "Round kaybettikten sonra takımı cesaretlendir"
   },
   "antiToxic-it-happens": {
-    "text": "it happens",
-    "meaning": "Oyundaki anlamı: it happens"
-  },
-  "antiToxic-next-one-is-ours": {
-    "text": "next un is ours",
-    "meaning": "Oyundaki anlamı: next un is ours"
+    "text": "Olur böyle",
+    "meaning": "Hatayı normalleştirip devam etmek"
   },
   "antiToxic-keep-it-positive": {
-    "text": "keep it positive",
-    "meaning": "Oyundaki anlamı: keep it positive"
+    "text": "Pozitif kalalım",
+    "meaning": "Takım arkadaşlarından toxic yorumlardan kaçınmalarını istemek"
+  },
+  "antiToxic-let-us-reset": {
+    "text": "Reset atalım",
+    "meaning": "Takımın mental odağını sakin şekilde yeniden başlat"
+  },
+  "antiToxic-let-us-trade-better": {
+    "text": "Daha iyi trade atalım",
+    "meaning": "Return kill teamwork'ünü geliştirmeyi öner"
+  },
+  "antiToxic-next-one-is-ours": {
+    "text": "Sonraki bizim",
+    "meaning": "Kayıptan sonra takımı cesaretlendir"
+  },
+  "antiToxic-no-worries": {
+    "text": "Sorun değil",
+    "meaning": "Takım arkadaşının hatasına nazik cevap"
+  },
+  "antiToxic-play-safe-next": {
+    "text": "Sonraki daha safe oynayalım",
+    "meaning": "Kimseyi suçlamadan daha güvenli plan öner"
+  },
+  "antiToxic-save-your-utility": {
+    "text": "Utility'ni sakla",
+    "meaning": "Takım arkadaşından hakaret etmeden yeteneklerini korumasını istemek"
+  },
+  "antiToxic-use-comms-not-blame": {
+    "text": "Suçlama değil comms",
+    "meaning": "Takım arkadaşlarına tartışmak yerine faydalı bilgi vermeyi hatırlat"
+  },
+  "antiToxic-wait-for-the-team-next-time": {
+    "text": "Bir dahaki sefere takımı bekle",
+    "meaning": "Daha iyi zamanlama istemenin saygılı yolu"
+  },
+  "antiToxic-we-need-better-spacing": {
+    "text": "Spacing'i düzeltmeliyiz",
+    "meaning": "Pozisyonlanma hakkında faydalı geri bildirim vermek"
+  },
+  "antiToxic-we-still-have-time": {
+    "text": "Hâlâ vaktimiz var",
+    "meaning": "Play yapmaya zaman varken takımı sakinleştir"
   }
 }

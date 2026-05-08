@@ -6,6 +6,21 @@ export type CategoryMetadata = {
   icon: string;
 };
 
+export const categoryOrder: PhraseCategory[] = [
+  'callouts',
+  'instructions',
+  'strategy',
+  'objective',
+  'danger',
+  'economy',
+  'teamwork',
+  'abbreviations',
+  'slang',
+  'toxic',
+  'antiToxic',
+  'custom',
+];
+
 export const categoryMetadata: Record<PhraseCategory, CategoryMetadata> = {
   callouts: {
     title: 'Callouts',
@@ -41,6 +56,11 @@ export const categoryMetadata: Record<PhraseCategory, CategoryMetadata> = {
     title: 'Teamwork',
     description: 'Phrases for utility combos, trades, and coordinated support.',
     icon: '🤝',
+  },
+  abbreviations: {
+    title: 'Abbreviations',
+    description: 'Short forms and acronyms like GG, GLHF, AFK, and MVP.',
+    icon: '🔤',
   },
   slang: {
     title: 'Slang',

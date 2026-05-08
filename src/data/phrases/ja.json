@@ -1,1674 +1,1922 @@
 {
   "callouts-gg": {
     "text": "GG",
-    "meaning": "ゲームでの意味: GG"
-  },
-  "callouts-glhf": {
-    "text": "幸運を、楽しんで",
-    "meaning": "ゲームでの意味: 幸運を、楽しんで"
-  },
-  "callouts-nice": {
-    "text": "ナイス!",
-    "meaning": "ゲームでの意味: ナイス!"
-  },
-  "callouts-thanks": {
-    "text": "ありがとう",
-    "meaning": "ゲームでの意味: ありがとう"
-  },
-  "callouts-sorry": {
-    "text": "ごめん",
-    "meaning": "ゲームでの意味: ごめん"
-  },
-  "callouts-my-bad": {
-    "text": "俺のミス",
-    "meaning": "ゲームでの意味: 俺のミス"
-  },
-  "callouts-one-more": {
-    "text": "1人 もう一人",
-    "meaning": "ゲームでの意味: 1人 もう一人"
-  },
-  "callouts-i-am-down": {
-    "text": "私 使用不可",
-    "meaning": "ゲームでの意味: 私 使用不可"
-  },
-  "callouts-i-am-low": {
-    "text": "私 ロー",
-    "meaning": "ゲームでの意味: 私 ロー"
-  },
-  "callouts-enemy-spotted": {
-    "text": "敵を発見",
-    "meaning": "ゲームでの意味: 敵を発見"
-  },
-  "callouts-enemy-here": {
-    "text": "敵 ここ",
-    "meaning": "ゲームでの意味: 敵 ここ"
-  },
-  "callouts-enemy-there": {
-    "text": "敵 そこ",
-    "meaning": "ゲームでの意味: 敵 そこ"
-  },
-  "callouts-two-enemies-here": {
-    "text": "2人 敵 ここ",
-    "meaning": "ゲームでの意味: 2人 敵 ここ"
-  },
-  "callouts-three-enemies-here": {
-    "text": "3人 敵 ここ",
-    "meaning": "ゲームでの意味: 3人 敵 ここ"
-  },
-  "callouts-full-team-here": {
-    "text": "全員 チーム ここ",
-    "meaning": "ゲームでの意味: 全員 チーム ここ"
-  },
-  "callouts-behind-you": {
-    "text": "後ろ あなた!",
-    "meaning": "ゲームでの意味: 後ろ あなた!"
-  },
-  "callouts-left-side": {
-    "text": "左 サイド!",
-    "meaning": "ゲームでの意味: 左 サイド!"
-  },
-  "callouts-right-side": {
-    "text": "右 サイド!",
-    "meaning": "ゲームでの意味: 右 サイド!"
-  },
-  "callouts-above-us": {
-    "text": "上 味方",
-    "meaning": "ゲームでの意味: 上 味方"
-  },
-  "callouts-below-us": {
-    "text": "下 味方",
-    "meaning": "ゲームでの意味: 下 味方"
-  },
-  "callouts-in-front": {
-    "text": "中 前",
-    "meaning": "ゲームでの意味: 中 前"
-  },
-  "callouts-back-site": {
-    "text": "奥 サイト",
-    "meaning": "ゲームでの意味: 奥 サイト"
-  },
-  "callouts-front-site": {
-    "text": "前 サイト",
-    "meaning": "ゲームでの意味: 前 サイト"
-  },
-  "callouts-default-spot": {
-    "text": "定番 位置",
-    "meaning": "ゲームでの意味: 定番 位置"
-  },
-  "callouts-corner": {
-    "text": "角",
-    "meaning": "ゲームでの意味: 角"
-  },
-  "callouts-close-corner": {
-    "text": "近い 角",
-    "meaning": "ゲームでの意味: 近い 角"
-  },
-  "callouts-long-range": {
-    "text": "ロング 距離",
-    "meaning": "ゲームでの意味: ロング 距離"
-  },
-  "callouts-short-range": {
-    "text": "ショート 距離",
-    "meaning": "ゲームでの意味: ショート 距離"
-  },
-  "callouts-mid": {
-    "text": "ミッド",
-    "meaning": "ゲームでの意味: ミッド"
-  },
-  "callouts-top-mid": {
-    "text": "上 ミッド",
-    "meaning": "ゲームでの意味: 上 ミッド"
-  },
-  "callouts-bottom-mid": {
-    "text": "下 ミッド",
-    "meaning": "ゲームでの意味: 下 ミッド"
-  },
-  "callouts-spawn": {
-    "text": "スポーン",
-    "meaning": "ゲームでの意味: スポーン"
-  },
-  "callouts-our-spawn": {
-    "text": "味方 スポーン",
-    "meaning": "ゲームでの意味: 味方 スポーン"
-  },
-  "callouts-their-spawn": {
-    "text": "敵 スポーン",
-    "meaning": "ゲームでの意味: 敵 スポーン"
-  },
-  "callouts-flank": {
-    "text": "裏取り",
-    "meaning": "ゲームでの意味: 裏取り"
-  },
-  "callouts-watch-flank": {
-    "text": "見て 裏取り",
-    "meaning": "ゲームでの意味: 見て 裏取り"
-  },
-  "callouts-rotating": {
-    "text": "ローテ中",
-    "meaning": "ゲームでの意味: ローテ中"
-  },
-  "callouts-they-rotated": {
-    "text": "敵 ローテした",
-    "meaning": "ゲームでの意味: 敵 ローテした"
-  },
-  "callouts-fake-rotate": {
-    "text": "フェイクローテーション",
-    "meaning": "ゲームでの意味: フェイクローテーション"
-  },
-  "callouts-site-clear": {
-    "text": "サイト クリア",
-    "meaning": "ゲームでの意味: サイト クリア"
-  },
-  "callouts-site-not-clear": {
-    "text": "サイト 未確認 クリア",
-    "meaning": "ゲームでの意味: サイト 未確認 クリア"
-  },
-  "callouts-need-backup": {
-    "text": "必要 援護",
-    "meaning": "ゲームでの意味: 必要 援護"
-  },
-  "callouts-need-help": {
-    "text": "必要 助けて",
-    "meaning": "ゲームでの意味: 必要 助けて"
-  },
-  "callouts-help-me": {
-    "text": "助けて 私",
-    "meaning": "ゲームでの意味: 助けて 私"
-  },
-  "callouts-i-need-healing": {
-    "text": "私 必要 回復",
-    "meaning": "ゲームでの意味: 私 必要 回復"
-  },
-  "callouts-need-ammo": {
-    "text": "必要 弾",
-    "meaning": "ゲームでの意味: 必要 弾"
-  },
-  "callouts-out-of-ammo": {
-    "text": "切れ の 弾",
-    "meaning": "ゲームでの意味: 切れ の 弾"
-  },
-  "callouts-reloading": {
-    "text": "リロード中",
-    "meaning": "ゲームでの意味: リロード中"
-  },
-  "callouts-cover-me": {
-    "text": "カバーして 私",
-    "meaning": "ゲームでの意味: カバーして 私"
-  },
-  "callouts-i-got-you": {
-    "text": "私 取った あなた",
-    "meaning": "ゲームでの意味: 私 取った あなた"
-  },
-  "callouts-i-am-watching": {
-    "text": "私 見てる",
-    "meaning": "ゲームでの意味: 私 見てる"
-  },
-  "callouts-watching-left": {
-    "text": "見てる 左",
-    "meaning": "ゲームでの意味: 見てる 左"
-  },
-  "callouts-watching-right": {
-    "text": "見てる 右",
-    "meaning": "ゲームでの意味: 見てる 右"
-  },
-  "callouts-watching-mid": {
-    "text": "見てる ミッド",
-    "meaning": "ゲームでの意味: 見てる ミッド"
-  },
-  "callouts-clear-left": {
-    "text": "クリア 左",
-    "meaning": "ゲームでの意味: クリア 左"
-  },
-  "callouts-clear-right": {
-    "text": "クリア 右",
-    "meaning": "ゲームでの意味: クリア 右"
-  },
-  "callouts-clear-mid": {
-    "text": "クリア ミッド",
-    "meaning": "ゲームでの意味: クリア ミッド"
-  },
-  "callouts-not-clear": {
-    "text": "未確認 クリア",
-    "meaning": "ゲームでの意味: 未確認 クリア"
-  },
-  "callouts-contact": {
-    "text": "接敵",
-    "meaning": "ゲームでの意味: 接敵"
-  },
-  "callouts-no-contact": {
-    "text": "なし 接敵",
-    "meaning": "ゲームでの意味: なし 接敵"
-  },
-  "callouts-footsteps": {
-    "text": "足音",
-    "meaning": "ゲームでの意味: 足音"
-  },
-  "callouts-i-hear-steps": {
-    "text": "私 聞こえる 足音",
-    "meaning": "ゲームでの意味: 私 聞こえる 足音"
-  },
-  "callouts-they-are-close": {
-    "text": "敵 近い",
-    "meaning": "ゲームでの意味: 敵 近い"
-  },
-  "callouts-they-are-far": {
-    "text": "敵 遠い",
-    "meaning": "ゲームでの意味: 敵 遠い"
-  },
-  "callouts-sniper-watching": {
-    "text": "スナイパー 見てる",
-    "meaning": "ゲームでの意味: スナイパー 見てる"
-  },
-  "callouts-shotgun-close": {
-    "text": "ショットガン 近い",
-    "meaning": "ゲームでの意味: ショットガン 近い"
-  },
-  "callouts-grenade-out": {
-    "text": "グレネード 切れ",
-    "meaning": "ゲームでの意味: グレネード 切れ"
-  },
-  "callouts-flash-out": {
-    "text": "フラッシュ 切れ",
-    "meaning": "ゲームでの意味: フラッシュ 切れ"
-  },
-  "callouts-smoke-out": {
-    "text": "スモーク 切れ",
-    "meaning": "ゲームでの意味: スモーク 切れ"
-  },
-  "callouts-ultimate-ready": {
-    "text": "ウルト 準備完了",
-    "meaning": "ゲームでの意味: ウルト 準備完了"
-  },
-  "callouts-no-ultimate": {
-    "text": "なし ウルト",
-    "meaning": "ゲームでの意味: なし ウルト"
-  },
-  "callouts-ability-ready": {
-    "text": "アビリティ 準備完了",
-    "meaning": "ゲームでの意味: アビリティ 準備完了"
-  },
-  "callouts-ability-down": {
-    "text": "アビリティ 使用不可",
-    "meaning": "ゲームでの意味: アビリティ 使用不可"
-  },
-  "callouts-cooldown": {
-    "text": "クールダウン",
-    "meaning": "ゲームでの意味: クールダウン"
-  },
-  "callouts-ping-it": {
-    "text": "ピン それ",
-    "meaning": "ゲームでの意味: ピン それ"
-  },
-  "callouts-mark-the-enemy": {
-    "text": "マーク 敵",
-    "meaning": "ゲームでの意味: マーク 敵"
-  },
-  "callouts-i-marked-it": {
-    "text": "私 マーク済み それ",
-    "meaning": "ゲームでの意味: 私 マーク済み それ"
-  },
-  "callouts-check-map": {
-    "text": "確認 マップ",
-    "meaning": "ゲームでの意味: 確認 マップ"
-  },
-  "callouts-look-at-ping": {
-    "text": "見て で ピン",
-    "meaning": "ゲームでの意味: 見て で ピン"
-  },
-  "callouts-enemy-missing": {
-    "text": "敵 ミッシング",
-    "meaning": "ゲームでの意味: 敵 ミッシング"
-  },
-  "callouts-all-missing": {
-    "text": "全員 ミッシング",
-    "meaning": "ゲームでの意味: 全員 ミッシング"
-  },
-  "callouts-careful": {
-    "text": "注意",
-    "meaning": "ゲームでの意味: 注意"
-  },
-  "callouts-wait": {
-    "text": "待って",
-    "meaning": "ゲームでの意味: 待って"
-  },
-  "callouts-go-now": {
-    "text": "行け 今",
-    "meaning": "ゲームでの意味: 行け 今"
-  },
-  "callouts-push-now": {
-    "text": "プッシュ 今",
-    "meaning": "ゲームでの意味: プッシュ 今"
-  },
-  "callouts-fall-back": {
-    "text": "下がって 奥",
-    "meaning": "ゲームでの意味: 下がって 奥"
-  },
-  "callouts-run": {
-    "text": "走って",
-    "meaning": "ゲームでの意味: 走って"
-  },
-  "callouts-hide": {
-    "text": "隠れて",
-    "meaning": "ゲームでの意味: 隠れて"
-  },
-  "callouts-do-not-peek": {
-    "text": "しない 未確認 ピーク",
-    "meaning": "ゲームでの意味: しない 未確認 ピーク"
-  },
-  "callouts-peek-together": {
-    "text": "ピーク 一緒に",
-    "meaning": "ゲームでの意味: ピーク 一緒に"
-  },
-  "callouts-swing-together": {
-    "text": "一緒に出て 一緒に",
-    "meaning": "ゲームでの意味: 一緒に出て 一緒に"
-  },
-  "callouts-hold-angle": {
-    "text": "キープ 射線",
-    "meaning": "ゲームでの意味: キープ 射線"
-  },
-  "callouts-hold-position": {
-    "text": "キープ 位置",
-    "meaning": "ゲームでの意味: キープ 位置"
-  },
-  "callouts-move-up": {
-    "text": "上がって 上",
-    "meaning": "ゲームでの意味: 上がって 上"
-  },
-  "callouts-come-back": {
-    "text": "戻って 奥",
-    "meaning": "ゲームでの意味: 戻って 奥"
-  },
-  "callouts-group-up": {
-    "text": "集合 上",
-    "meaning": "ゲームでの意味: 集合 上"
-  },
-  "callouts-split-up": {
-    "text": "分かれて 上",
-    "meaning": "ゲームでの意味: 分かれて 上"
-  },
-  "callouts-stay-alive": {
-    "text": "残って 生存",
-    "meaning": "ゲームでの意味: 残って 生存"
-  },
-  "callouts-play-time": {
-    "text": "プレイ 時間",
-    "meaning": "ゲームでの意味: プレイ 時間"
-  },
-  "callouts-play-safe": {
-    "text": "プレイ 安全に",
-    "meaning": "ゲームでの意味: プレイ 安全に"
-  },
-  "callouts-play-slow": {
-    "text": "プレイ ゆっくり",
-    "meaning": "ゲームでの意味: プレイ ゆっくり"
-  },
-  "callouts-play-fast": {
-    "text": "プレイ 速く",
-    "meaning": "ゲームでの意味: プレイ 速く"
-  },
-  "callouts-do-not-chase": {
-    "text": "しない 未確認 追う",
-    "meaning": "ゲームでの意味: しない 未確認 追う"
-  },
-  "callouts-stop-chasing": {
-    "text": "止めて 追跡",
-    "meaning": "ゲームでの意味: 止めて 追跡"
-  },
-  "callouts-trade-me": {
-    "text": "トレード 私",
-    "meaning": "ゲームでの意味: トレード 私"
-  },
-  "callouts-trade-him": {
-    "text": "トレード 敵",
-    "meaning": "ゲームでの意味: トレード 敵"
-  },
-  "callouts-i-will-trade": {
-    "text": "私 する トレード",
-    "meaning": "ゲームでの意味: 私 する トレード"
-  },
-  "callouts-nice-trade": {
-    "text": "ナイス トレード",
-    "meaning": "ゲームでの意味: ナイス トレード"
-  },
-  "callouts-bait-and-switch": {
-    "text": "ベイト と スイッチ",
-    "meaning": "ゲームでの意味: ベイト と スイッチ"
-  },
-  "callouts-crossfire": {
-    "text": "クロスファイア",
-    "meaning": "ゲームでの意味: クロスファイア"
-  },
-  "callouts-pinched": {
-    "text": "挟まれた",
-    "meaning": "ゲームでの意味: 挟まれた"
-  },
-  "callouts-we-are-pinched": {
-    "text": "味方 挟まれた",
-    "meaning": "ゲームでの意味: 味方 挟まれた"
-  },
-  "callouts-third-party": {
-    "text": "第三 チーム",
-    "meaning": "ゲームでの意味: 第三 チーム"
-  },
-  "callouts-reset": {
-    "text": "リセット",
-    "meaning": "ゲームでの意味: リセット"
-  },
-  "callouts-regroup": {
-    "text": "再集合",
-    "meaning": "ゲームでの意味: 再集合"
-  },
-  "callouts-focus-fire": {
-    "text": "フォーカス 射撃",
-    "meaning": "ゲームでの意味: フォーカス 射撃"
-  },
-  "callouts-target-marked": {
-    "text": "ターゲット マーク済み",
-    "meaning": "ゲームでの意味: ターゲット マーク済み"
-  },
-  "callouts-focus-healer": {
-    "text": "フォーカス ヒーラー",
-    "meaning": "ゲームでの意味: フォーカス ヒーラー"
-  },
-  "callouts-focus-sniper": {
-    "text": "フォーカス スナイパー",
-    "meaning": "ゲームでの意味: フォーカス スナイパー"
-  },
-  "callouts-ignore-tank": {
-    "text": "無視 タンク",
-    "meaning": "ゲームでの意味: 無視 タンク"
-  },
-  "callouts-shield-broken": {
-    "text": "シールド 割れた",
-    "meaning": "ゲームでの意味: シールド 割れた"
-  },
-  "callouts-armor-cracked": {
-    "text": "アーマー 割れた",
-    "meaning": "ゲームでの意味: アーマー 割れた"
-  },
-  "callouts-one-shot": {
-    "text": "1人 ショット",
-    "meaning": "ゲームでの意味: 1人 ショット"
-  },
-  "callouts-tagged-him": {
-    "text": "当てた 敵",
-    "meaning": "ゲームでの意味: 当てた 敵"
-  },
-  "callouts-hit-for-fifty": {
-    "text": "当てた のため 50",
-    "meaning": "ゲームでの意味: 当てた のため 50"
-  },
-  "callouts-hit-for-a-hundred": {
-    "text": "当てた のため 100",
-    "meaning": "ゲームでの意味: 当てた のため 100"
-  },
-  "callouts-no-shield": {
-    "text": "なし シールド",
-    "meaning": "ゲームでの意味: なし シールド"
-  },
-  "callouts-knocked-one": {
-    "text": "ノック 1人",
-    "meaning": "ゲームでの意味: ノック 1人"
-  },
-  "callouts-finished-one": {
-    "text": "確殺 1人",
-    "meaning": "ゲームでの意味: 確殺 1人"
-  },
-  "callouts-team-wipe": {
-    "text": "チーム 全滅",
-    "meaning": "ゲームでの意味: チーム 全滅"
-  },
-  "callouts-clean-fight": {
-    "text": "きれいな 戦闘",
-    "meaning": "ゲームでの意味: きれいな 戦闘"
-  },
-  "callouts-messy-fight": {
-    "text": "乱戦 戦闘",
-    "meaning": "ゲームでの意味: 乱戦 戦闘"
-  },
-  "callouts-bad-timing": {
-    "text": "悪い タイミング",
-    "meaning": "ゲームでの意味: 悪い タイミング"
-  },
-  "callouts-good-timing": {
-    "text": "良い タイミング",
-    "meaning": "ゲームでの意味: 良い タイミング"
-  },
-  "callouts-unlucky": {
-    "text": "不運",
-    "meaning": "ゲームでの意味: 不運"
-  },
-  "callouts-lucky-shot": {
-    "text": "ラッキー ショット",
-    "meaning": "ゲームでの意味: ラッキー ショット"
-  },
-  "callouts-clutch": {
-    "text": "クラッチ",
-    "meaning": "ゲームでの意味: クラッチ"
-  },
-  "callouts-ace": {
-    "text": "エース",
-    "meaning": "ゲームでの意味: エース"
-  },
-  "callouts-carry": {
-    "text": "キャリー",
-    "meaning": "ゲームでの意味: キャリー"
-  },
-  "callouts-throw": {
-    "text": "スロー",
-    "meaning": "ゲームでの意味: スロー"
-  },
-  "callouts-comeback": {
-    "text": "逆転",
-    "meaning": "ゲームでの意味: 逆転"
-  },
-  "callouts-close-game": {
-    "text": "近い 試合",
-    "meaning": "ゲームでの意味: 近い 試合"
-  },
-  "callouts-free-kill": {
-    "text": "簡単 キル",
-    "meaning": "ゲームでの意味: 簡単 キル"
-  },
-  "callouts-free-objective": {
-    "text": "簡単 目標",
-    "meaning": "ゲームでの意味: 簡単 目標"
-  },
-  "callouts-open-lane": {
-    "text": "空き レーン",
-    "meaning": "ゲームでの意味: 空き レーン"
-  },
-  "callouts-blocked": {
-    "text": "塞がり",
-    "meaning": "ゲームでの意味: 塞がり"
-  },
-  "callouts-trap-here": {
-    "text": "罠 ここ",
-    "meaning": "ゲームでの意味: 罠 ここ"
-  },
-  "callouts-trap-destroyed": {
-    "text": "罠 破壊済み",
-    "meaning": "ゲームでの意味: 罠 破壊済み"
-  },
-  "callouts-door-closed": {
-    "text": "ドア 閉じた",
-    "meaning": "ゲームでの意味: ドア 閉じた"
-  },
-  "callouts-door-open": {
-    "text": "ドア 空き",
-    "meaning": "ゲームでの意味: ドア 空き"
-  },
-  "callouts-bridge-clear": {
-    "text": "橋 クリア",
-    "meaning": "ゲームでの意味: 橋 クリア"
-  },
-  "callouts-tunnel-clear": {
-    "text": "トンネル クリア",
-    "meaning": "ゲームでの意味: トンネル クリア"
-  },
-  "callouts-roof-clear": {
-    "text": "屋上 クリア",
-    "meaning": "ゲームでの意味: 屋上 クリア"
-  },
-  "callouts-basement-clear": {
-    "text": "地下 クリア",
-    "meaning": "ゲームでの意味: 地下 クリア"
-  },
-  "callouts-window": {
-    "text": "窓",
-    "meaning": "ゲームでの意味: 窓"
-  },
-  "callouts-stairs": {
-    "text": "階段",
-    "meaning": "ゲームでの意味: 階段"
-  },
-  "callouts-hallway": {
-    "text": "廊下",
-    "meaning": "ゲームでの意味: 廊下"
-  },
-  "callouts-water": {
-    "text": "水場",
-    "meaning": "ゲームでの意味: 水場"
-  },
-  "callouts-high-ground": {
-    "text": "高い 位置",
-    "meaning": "ゲームでの意味: 高い 位置"
-  },
-  "callouts-low-ground": {
-    "text": "ロー 位置",
-    "meaning": "ゲームでの意味: ロー 位置"
-  },
-  "callouts-zone-closing": {
-    "text": "ゾーン 閉まる",
-    "meaning": "ゲームでの意味: ゾーン 閉まる"
-  },
-  "callouts-circle-moving": {
-    "text": "円 移動中",
-    "meaning": "ゲームでの意味: 円 移動中"
-  },
-  "callouts-storm-coming": {
-    "text": "ストーム 来る",
-    "meaning": "ゲームでの意味: ストーム 来る"
-  },
-  "callouts-safe-zone": {
-    "text": "安全に ゾーン",
-    "meaning": "ゲームでの意味: 安全に ゾーン"
-  },
-  "callouts-out-of-zone": {
-    "text": "切れ の ゾーン",
-    "meaning": "ゲームでの意味: 切れ の ゾーン"
-  },
-  "callouts-loot-here": {
-    "text": "物資 ここ",
-    "meaning": "ゲームでの意味: 物資 ここ"
-  },
-  "callouts-good-loot": {
-    "text": "良い 物資",
-    "meaning": "ゲームでの意味: 良い 物資"
-  },
-  "callouts-need-weapon": {
-    "text": "必要 武器",
-    "meaning": "ゲームでの意味: 必要 武器"
-  },
-  "callouts-need-shield": {
-    "text": "必要 シールド",
-    "meaning": "ゲームでの意味: 必要 シールド"
-  },
-  "callouts-need-meds": {
-    "text": "必要 回復",
-    "meaning": "ゲームでの意味: 必要 回復"
-  },
-  "callouts-drop-ammo": {
-    "text": "落として 弾",
-    "meaning": "ゲームでの意味: 落として 弾"
-  },
-  "callouts-drop-weapon": {
-    "text": "落として 武器",
-    "meaning": "ゲームでの意味: 落として 武器"
-  },
-  "callouts-take-this": {
-    "text": "取って これ",
-    "meaning": "ゲームでの意味: 取って これ"
-  },
-  "callouts-do-not-take-it": {
-    "text": "しない 未確認 取って それ",
-    "meaning": "ゲームでの意味: しない 未確認 取って それ"
-  },
-  "callouts-i-will-take-it": {
-    "text": "私 する 取って それ",
-    "meaning": "ゲームでの意味: 私 する 取って それ"
-  },
-  "callouts-use-it": {
-    "text": "使って それ",
-    "meaning": "ゲームでの意味: 使って それ"
-  },
-  "callouts-save-it": {
-    "text": "温存 それ",
-    "meaning": "ゲームでの意味: 温存 それ"
-  },
-  "callouts-voice-chat": {
-    "text": "ボイス チャット",
-    "meaning": "ゲームでの意味: ボイス チャット"
-  },
-  "callouts-text-chat": {
-    "text": "テキスト チャット",
-    "meaning": "ゲームでの意味: テキスト チャット"
-  },
-  "callouts-good-job": {
-    "text": "よくやった",
-    "meaning": "ゲームでの意味: よくやった"
-  },
-  "callouts-well-played": {
-    "text": "いいプレイ",
-    "meaning": "ゲームでの意味: いいプレイ"
-  },
-  "callouts-no-problem": {
-    "text": "問題ない",
-    "meaning": "ゲームでの意味: 問題ない"
-  },
-  "callouts-last-one": {
-    "text": "ラスト 1人",
-    "meaning": "ゲームでの意味: ラスト 1人"
-  },
-  "callouts-i-see-him": {
-    "text": "私 見える 敵",
-    "meaning": "ゲームでの意味: 私 見える 敵"
-  },
-  "callouts-i-see-them": {
-    "text": "私 見える 敵",
-    "meaning": "ゲームでの意味: 私 見える 敵"
-  },
-  "callouts-on-me": {
-    "text": "で 私",
-    "meaning": "ゲームでの意味: で 私"
-  },
-  "callouts-with-me": {
-    "text": "一緒 私",
-    "meaning": "ゲームでの意味: 一緒 私"
-  },
-  "callouts-low-hp": {
-    "text": "ロー HP",
-    "meaning": "ゲームでの意味: ロー HP"
-  },
-  "callouts-he-is-low": {
-    "text": "敵 ロー",
-    "meaning": "ゲームでの意味: 敵 ロー"
-  },
-  "callouts-they-are-low": {
-    "text": "敵 ロー",
-    "meaning": "ゲームでの意味: 敵 ロー"
-  },
-  "callouts-no-mic": {
-    "text": "なし マイク",
-    "meaning": "ゲームでの意味: なし マイク"
-  },
-  "callouts-mic-muted": {
-    "text": "マイク ミュート中",
-    "meaning": "ゲームでの意味: マイク ミュート中"
-  },
-  "danger-incoming": {
-    "text": "来る!",
-    "meaning": "ゲームでの意味: 来る!"
-  },
-  "danger-grenade": {
-    "text": "グレネード!",
-    "meaning": "ゲームでの意味: グレネード!"
-  },
-  "danger-flash": {
-    "text": "フラッシュ!",
-    "meaning": "ゲームでの意味: フラッシュ!"
-  },
-  "danger-sniper": {
-    "text": "スナイパー!",
-    "meaning": "ゲームでの意味: スナイパー!"
-  },
-  "danger-trap": {
-    "text": "罠!",
-    "meaning": "ゲームでの意味: 罠!"
-  },
-  "danger-mine": {
-    "text": "地雷!",
-    "meaning": "ゲームでの意味: 地雷!"
-  },
-  "danger-ambush": {
-    "text": "待ち伏せ!",
-    "meaning": "ゲームでの意味: 待ち伏せ!"
-  },
-  "danger-they-are-rushing": {
-    "text": "敵 ラッシュ中",
-    "meaning": "ゲームでの意味: 敵 ラッシュ中"
-  },
-  "danger-they-are-pushing": {
-    "text": "敵 プッシュ中",
-    "meaning": "ゲームでの意味: 敵 プッシュ中"
-  },
-  "danger-they-are-flanking": {
-    "text": "敵 裏取り中",
-    "meaning": "ゲームでの意味: 敵 裏取り中"
-  },
-  "danger-they-know": {
-    "text": "敵 バレてる",
-    "meaning": "ゲームでの意味: 敵 バレてる"
-  },
-  "danger-they-saw-me": {
-    "text": "敵 見られた 私",
-    "meaning": "ゲームでの意味: 敵 見られた 私"
-  },
-  "danger-i-am-exposed": {
-    "text": "私 見えてる",
-    "meaning": "ゲームでの意味: 私 見えてる"
-  },
-  "danger-no-cover": {
-    "text": "なし カバーして",
-    "meaning": "ゲームでの意味: なし カバーして"
-  },
-  "danger-low-cover": {
-    "text": "ロー カバーして",
-    "meaning": "ゲームでの意味: ロー カバーして"
-  },
-  "danger-bad-angle": {
-    "text": "悪い 射線",
-    "meaning": "ゲームでの意味: 悪い 射線"
-  },
-  "danger-get-out": {
-    "text": "取って 切れ",
-    "meaning": "ゲームでの意味: 取って 切れ"
-  },
-  "danger-back-up": {
-    "text": "奥 上",
-    "meaning": "ゲームでの意味: 奥 上"
-  },
-  "danger-do-not-go-there": {
-    "text": "しない 未確認 行け そこ",
-    "meaning": "ゲームでの意味: しない 未確認 行け そこ"
-  },
-  "danger-it-is-a-trap": {
-    "text": "それ 罠",
-    "meaning": "ゲームでの意味: それ 罠"
-  },
-  "danger-enemy-ultimate-ready": {
-    "text": "敵 ウルト 準備完了",
-    "meaning": "ゲームでの意味: 敵 ウルト 準備完了"
-  },
-  "danger-they-have-sniper": {
-    "text": "敵 持っている スナイパー",
-    "meaning": "ゲームでの意味: 敵 持っている スナイパー"
-  },
-  "instructions-push": {
-    "text": "プッシュ",
-    "meaning": "ゲームでの意味: プッシュ"
-  },
-  "instructions-rush": {
-    "text": "ラッシュ",
-    "meaning": "ゲームでの意味: ラッシュ"
-  },
-  "instructions-hold": {
-    "text": "キープ",
-    "meaning": "ゲームでの意味: キープ"
-  },
-  "instructions-defend": {
-    "text": "守備",
-    "meaning": "ゲームでの意味: 守備"
-  },
-  "instructions-attack": {
-    "text": "攻撃",
-    "meaning": "ゲームでの意味: 攻撃"
-  },
-  "instructions-retreat": {
-    "text": "撤退",
-    "meaning": "ゲームでの意味: 撤退"
-  },
-  "instructions-rotate": {
-    "text": "ローテ",
-    "meaning": "ゲームでの意味: ローテ"
-  },
-  "instructions-stack-here": {
-    "text": "固まって ここ",
-    "meaning": "ゲームでの意味: 固まって ここ"
-  },
-  "instructions-spread-out": {
-    "text": "広がって 切れ",
-    "meaning": "ゲームでの意味: 広がって 切れ"
-  },
-  "instructions-stay-together": {
-    "text": "残って 一緒に",
-    "meaning": "ゲームでの意味: 残って 一緒に"
-  },
-  "instructions-follow-me": {
-    "text": "ついてきて 私",
-    "meaning": "ゲームでの意味: ついてきて 私"
-  },
-  "instructions-lead-the-way": {
-    "text": "先導して 道",
-    "meaning": "ゲームでの意味: 先導して 道"
-  },
-  "instructions-go-first": {
-    "text": "行け 先に",
-    "meaning": "ゲームでの意味: 行け 先に"
-  },
-  "instructions-i-go-first": {
-    "text": "私 行け 先に",
-    "meaning": "ゲームでの意味: 私 行け 先に"
-  },
-  "instructions-wait-for-me": {
-    "text": "待って のため 私",
-    "meaning": "ゲームでの意味: 待って のため 私"
-  },
-  "instructions-wait-for-cooldowns": {
-    "text": "待って のため クールダウン",
-    "meaning": "ゲームでの意味: 待って のため クールダウン"
-  },
-  "instructions-use-smoke": {
-    "text": "使って スモーク",
-    "meaning": "ゲームでの意味: 使って スモーク"
-  },
-  "instructions-use-flash": {
-    "text": "使って フラッシュ",
-    "meaning": "ゲームでの意味: 使って フラッシュ"
-  },
-  "instructions-use-grenade": {
-    "text": "使って グレネード",
-    "meaning": "ゲームでの意味: 使って グレネード"
-  },
-  "instructions-use-ultimate": {
-    "text": "使って ウルト",
-    "meaning": "ゲームでの意味: 使って ウルト"
-  },
-  "instructions-save-ultimate": {
-    "text": "温存 ウルト",
-    "meaning": "ゲームでの意味: 温存 ウルト"
-  },
-  "instructions-heal-me": {
-    "text": "回復して 私",
-    "meaning": "ゲームでの意味: 回復して 私"
-  },
-  "instructions-revive-me": {
-    "text": "蘇生して 私",
-    "meaning": "ゲームでの意味: 蘇生して 私"
-  },
-  "instructions-res-me": {
-    "text": "蘇生 私",
-    "meaning": "ゲームでの意味: 蘇生 私"
-  },
-  "instructions-cover-the-revive": {
-    "text": "カバーして 蘇生して",
-    "meaning": "ゲームでの意味: カバーして 蘇生して"
-  },
-  "instructions-plant-now": {
-    "text": "設置 今",
-    "meaning": "ゲームでの意味: 設置 今"
-  },
-  "instructions-defuse-now": {
-    "text": "解除 今",
-    "meaning": "ゲームでの意味: 解除 今"
-  },
-  "instructions-capture-point": {
-    "text": "占拠 ポイント",
-    "meaning": "ゲームでの意味: 占拠 ポイント"
-  },
-  "instructions-contest-point": {
-    "text": "争って ポイント",
-    "meaning": "ゲームでの意味: 争って ポイント"
-  },
-  "instructions-touch-point": {
-    "text": "触って ポイント",
-    "meaning": "ゲームでの意味: 触って ポイント"
-  },
-  "instructions-clear-corners": {
-    "text": "クリア 角",
-    "meaning": "ゲームでの意味: クリア 角"
-  },
-  "instructions-check-left": {
-    "text": "確認 左",
-    "meaning": "ゲームでの意味: 確認 左"
-  },
-  "instructions-check-right": {
-    "text": "確認 右",
-    "meaning": "ゲームでの意味: 確認 右"
-  },
-  "instructions-check-behind": {
-    "text": "確認 後ろ",
-    "meaning": "ゲームでの意味: 確認 後ろ"
-  },
-  "instructions-do-not-split": {
-    "text": "しない 未確認 分かれて",
-    "meaning": "ゲームでの意味: しない 未確認 分かれて"
-  },
-  "instructions-do-not-feed": {
-    "text": "しない 未確認 フィード",
-    "meaning": "ゲームでの意味: しない 未確認 フィード"
-  },
-  "instructions-do-not-waste-it": {
-    "text": "しない 未確認 無駄遣い それ",
-    "meaning": "ゲームでの意味: しない 未確認 無駄遣い それ"
-  },
-  "instructions-stop-peeking": {
-    "text": "止めて ピーク中",
-    "meaning": "ゲームでの意味: 止めて ピーク中"
-  },
-  "instructions-mute-him": {
-    "text": "ミュート 敵",
-    "meaning": "ゲームでの意味: ミュート 敵"
-  },
-  "instructions-report-after": {
-    "text": "通報 後",
-    "meaning": "ゲームでの意味: 通報 後"
-  },
-  "instructions-stack-left": {
-    "text": "固まって 左",
-    "meaning": "ゲームでの意味: 固まって 左"
-  },
-  "instructions-stack-right": {
-    "text": "固まって 右",
-    "meaning": "ゲームでの意味: 固まって 右"
-  },
-  "objective-plant-the-bomb": {
-    "text": "設置 ボム",
-    "meaning": "ゲームでの意味: 設置 ボム"
-  },
-  "objective-bomb-planted": {
-    "text": "ボム 設置済み",
-    "meaning": "ゲームでの意味: ボム 設置済み"
-  },
-  "objective-bomb-down": {
-    "text": "ボム 使用不可",
-    "meaning": "ゲームでの意味: ボム 使用不可"
-  },
-  "objective-spike-down": {
-    "text": "スパイク 使用不可",
-    "meaning": "ゲームでの意味: スパイク 使用不可"
-  },
-  "objective-defuse-the-bomb": {
-    "text": "解除 ボム",
-    "meaning": "ゲームでの意味: 解除 ボム"
-  },
-  "objective-half-defuse": {
-    "text": "半分 解除",
-    "meaning": "ゲームでの意味: 半分 解除"
-  },
-  "objective-stick-the-defuse": {
-    "text": "続けて 解除",
-    "meaning": "ゲームでの意味: 続けて 解除"
-  },
-  "objective-fake-defuse": {
-    "text": "フェイク解除",
-    "meaning": "ゲームでの意味: フェイク解除"
-  },
-  "objective-objective-secured": {
-    "text": "目標 確保済み",
-    "meaning": "ゲームでの意味: 目標 確保済み"
-  },
-  "objective-objective-lost": {
-    "text": "目標 失った",
-    "meaning": "ゲームでの意味: 目標 失った"
-  },
-  "objective-point-captured": {
-    "text": "ポイント 確保済み",
-    "meaning": "ゲームでの意味: ポイント 確保済み"
-  },
-  "objective-point-contested": {
-    "text": "ポイント 争奪中",
-    "meaning": "ゲームでの意味: ポイント 争奪中"
-  },
-  "objective-payload-moving": {
-    "text": "ペイロード 移動中",
-    "meaning": "ゲームでの意味: ペイロード 移動中"
-  },
-  "objective-payload-stopped": {
-    "text": "ペイロード 停止",
-    "meaning": "ゲームでの意味: ペイロード 停止"
-  },
-  "objective-escort-the-payload": {
-    "text": "護衛 ペイロード",
-    "meaning": "ゲームでの意味: 護衛 ペイロード"
-  },
-  "objective-stop-the-payload": {
-    "text": "止めて ペイロード",
-    "meaning": "ゲームでの意味: 止めて ペイロード"
-  },
-  "objective-capture-the-flag": {
-    "text": "占拠 旗",
-    "meaning": "ゲームでの意味: 占拠 旗"
-  },
-  "objective-return-the-flag": {
-    "text": "戻す 旗",
-    "meaning": "ゲームでの意味: 戻す 旗"
-  },
-  "objective-hold-the-point": {
-    "text": "キープ ポイント",
-    "meaning": "ゲームでの意味: キープ ポイント"
-  },
-  "objective-leave-the-point": {
-    "text": "離れて ポイント",
-    "meaning": "ゲームでの意味: 離れて ポイント"
-  },
-  "teamwork-nice-shot": {
-    "text": "ナイス ショット",
-    "meaning": "ゲームでの意味: ナイス ショット"
-  },
-  "teamwork-nice-try": {
-    "text": "ナイス トライ",
-    "meaning": "ゲームでの意味: ナイス トライ"
-  },
-  "teamwork-good-comms": {
-    "text": "良い コール",
-    "meaning": "ゲームでの意味: 良い コール"
-  },
-  "teamwork-keep-comms-clear": {
-    "text": "キープ コール クリア",
-    "meaning": "ゲームでの意味: キープ コール クリア"
-  },
-  "teamwork-i-trust-you": {
-    "text": "私 信頼 あなた",
-    "meaning": "ゲームでの意味: 私 信頼 あなた"
-  },
-  "teamwork-you-got-this": {
-    "text": "あなた 取った これ",
-    "meaning": "ゲームでの意味: あなた 取った これ"
-  },
-  "teamwork-stay-calm": {
-    "text": "残って 落ち着いて",
-    "meaning": "ゲームでの意味: 残って 落ち着いて"
-  },
-  "teamwork-we-can-win": {
-    "text": "味方 できる 勝つ",
-    "meaning": "ゲームでの意味: 味方 できる 勝つ"
-  },
-  "teamwork-one-round-at-a-time": {
-    "text": "1人 ラウンド で 時間",
-    "meaning": "ゲームでの意味: 1人 ラウンド で 時間"
-  },
-  "teamwork-reset-mental": {
-    "text": "リセット メンタル",
-    "meaning": "ゲームでの意味: リセット メンタル"
-  },
-  "teamwork-good-effort": {
-    "text": "良い 努力",
-    "meaning": "ゲームでの意味: 良い 努力"
-  },
-  "teamwork-great-shot": {
-    "text": "すごい ショット",
-    "meaning": "ゲームでの意味: すごい ショット"
-  },
-  "teamwork-great-save": {
-    "text": "すごい 温存",
-    "meaning": "ゲームでの意味: すごい 温存"
-  },
-  "teamwork-great-call": {
-    "text": "すごい コール",
-    "meaning": "ゲームでの意味: すごい コール"
-  },
-  "teamwork-nice-clutch": {
-    "text": "ナイス クラッチ",
-    "meaning": "ゲームでの意味: ナイス クラッチ"
-  },
-  "teamwork-nice-aim": {
-    "text": "ナイス エイム",
-    "meaning": "ゲームでの意味: ナイス エイム"
-  },
-  "teamwork-nice-movement": {
-    "text": "ナイス 動き",
-    "meaning": "ゲームでの意味: ナイス 動き"
-  },
-  "teamwork-nice-utility": {
-    "text": "ナイス ユーティリティ",
-    "meaning": "ゲームでの意味: ナイス ユーティリティ"
-  },
-  "teamwork-i-will-cover-you": {
-    "text": "私 する カバーして あなた",
-    "meaning": "ゲームでの意味: 私 する カバーして あなた"
-  },
-  "teamwork-i-will-heal-you": {
-    "text": "私 する 回復して あなた",
-    "meaning": "ゲームでの意味: 私 する 回復して あなた"
-  },
-  "teamwork-i-will-watch-flank": {
-    "text": "私 する 見て 裏取り",
-    "meaning": "ゲームでの意味: 私 する 見て 裏取り"
-  },
-  "teamwork-take-my-weapon": {
-    "text": "取って 私の 武器",
-    "meaning": "ゲームでの意味: 取って 私の 武器"
-  },
-  "teamwork-take-my-loot": {
-    "text": "取って 私の 物資",
-    "meaning": "ゲームでの意味: 取って 私の 物資"
-  },
-  "teamwork-let-me-go-first": {
-    "text": "させて 私 行け 先に",
-    "meaning": "ゲームでの意味: させて 私 行け 先に"
-  },
-  "teamwork-i-will-bait-for-you": {
-    "text": "私 する ベイト のため あなた",
-    "meaning": "ゲームでの意味: 私 する ベイト のため あなた"
-  },
-  "teamwork-trade-together": {
-    "text": "トレード 一緒に",
-    "meaning": "ゲームでの意味: トレード 一緒に"
-  },
-  "teamwork-wait-for-team": {
-    "text": "待って のため チーム",
-    "meaning": "ゲームでの意味: 待って のため チーム"
-  },
-  "teamwork-we-need-everyone": {
-    "text": "味方 必要 全員",
-    "meaning": "ゲームでの意味: 味方 必要 全員"
-  },
-  "teamwork-play-together": {
-    "text": "プレイ 一緒に",
-    "meaning": "ゲームでの意味: プレイ 一緒に"
-  },
-  "teamwork-do-not-blame": {
-    "text": "しない 未確認 責める",
-    "meaning": "ゲームでの意味: しない 未確認 責める"
-  },
-  "teamwork-focus-next": {
-    "text": "フォーカス 次",
-    "meaning": "ゲームでの意味: フォーカス 次"
-  },
-  "strategy-default-setup": {
-    "text": "定番 セットアップ",
-    "meaning": "ゲームでの意味: 定番 セットアップ"
-  },
-  "strategy-slow-push": {
-    "text": "ゆっくり プッシュ",
-    "meaning": "ゲームでの意味: ゆっくり プッシュ"
-  },
-  "strategy-fast-push": {
-    "text": "速く プッシュ",
-    "meaning": "ゲームでの意味: 速く プッシュ"
-  },
-  "strategy-fake-push": {
-    "text": "フェイク攻撃",
-    "meaning": "ゲームでの意味: フェイク攻撃"
-  },
-  "strategy-split-push": {
-    "text": "分かれて プッシュ",
-    "meaning": "ゲームでの意味: 分かれて プッシュ"
-  },
-  "strategy-retake": {
-    "text": "リテイク",
-    "meaning": "ゲームでの意味: リテイク"
-  },
-  "strategy-save-round": {
-    "text": "温存 ラウンド",
-    "meaning": "ゲームでの意味: 温存 ラウンド"
-  },
-  "strategy-eco-round": {
-    "text": "エコ ラウンド",
-    "meaning": "ゲームでの意味: エコ ラウンド"
-  },
-  "strategy-full-buy": {
-    "text": "全員 購入",
-    "meaning": "ゲームでの意味: 全員 購入"
-  },
-  "strategy-force-buy": {
-    "text": "フォース 購入",
-    "meaning": "ゲームでの意味: フォース 購入"
-  },
-  "strategy-play-for-picks": {
-    "text": "プレイ のため ピック",
-    "meaning": "ゲームでの意味: プレイ のため ピック"
-  },
-  "strategy-play-objective": {
-    "text": "プレイ 目標",
-    "meaning": "ゲームでの意味: プレイ 目標"
-  },
-  "strategy-play-for-late-game": {
-    "text": "プレイ のため 遅い 試合",
-    "meaning": "ゲームでの意味: プレイ のため 遅い 試合"
-  },
-  "strategy-take-map-control": {
-    "text": "取って マップ コントロール",
-    "meaning": "ゲームでの意味: 取って マップ コントロール"
-  },
-  "strategy-give-map-control": {
-    "text": "渡して マップ コントロール",
-    "meaning": "ゲームでの意味: 渡して マップ コントロール"
-  },
-  "strategy-deny-vision": {
-    "text": "阻止 視界",
-    "meaning": "ゲームでの意味: 阻止 視界"
-  },
-  "strategy-gather-info": {
-    "text": "集めて 情報",
-    "meaning": "ゲームでの意味: 集めて 情報"
-  },
-  "strategy-bait-utility": {
-    "text": "ベイト ユーティリティ",
-    "meaning": "ゲームでの意味: ベイト ユーティリティ"
-  },
-  "strategy-use-utility-first": {
-    "text": "使って ユーティリティ 先に",
-    "meaning": "ゲームでの意味: 使って ユーティリティ 先に"
-  },
-  "strategy-trade-setup": {
-    "text": "トレード セットアップ",
-    "meaning": "ゲームでの意味: トレード セットアップ"
-  },
-  "strategy-double-peek": {
-    "text": "ダブル ピーク",
-    "meaning": "ゲームでの意味: ダブル ピーク"
-  },
-  "strategy-off-angle": {
-    "text": "オフ 射線",
-    "meaning": "ゲームでの意味: オフ 射線"
-  },
-  "strategy-cross-setup": {
-    "text": "クロス セットアップ",
-    "meaning": "ゲームでの意味: クロス セットアップ"
-  },
-  "strategy-late-lurk": {
-    "text": "遅い ラーク",
-    "meaning": "ゲームでの意味: 遅い ラーク"
-  },
-  "strategy-anchor-site": {
-    "text": "アンカー サイト",
-    "meaning": "ゲームでの意味: アンカー サイト"
-  },
-  "strategy-play-retake": {
-    "text": "プレイ リテイク",
-    "meaning": "ゲームでの意味: プレイ リテイク"
-  },
-  "strategy-stack-objective": {
-    "text": "固まって 目標",
-    "meaning": "ゲームでの意味: 固まって 目標"
-  },
-  "strategy-pressure-side-lane": {
-    "text": "圧 サイド レーン",
-    "meaning": "ゲームでの意味: 圧 サイド レーン"
-  },
-  "strategy-cut-rotation": {
-    "text": "カット ローテーション",
-    "meaning": "ゲームでの意味: カット ローテーション"
-  },
-  "strategy-hold-rotation": {
-    "text": "キープ ローテーション",
-    "meaning": "ゲームでの意味: キープ ローテーション"
-  },
-  "strategy-time-advantage": {
-    "text": "時間 有利",
-    "meaning": "ゲームでの意味: 時間 有利"
-  },
-  "strategy-man-advantage": {
-    "text": "人数 有利",
-    "meaning": "ゲームでの意味: 人数 有利"
-  },
-  "strategy-man-disadvantage": {
-    "text": "人数 不利",
-    "meaning": "ゲームでの意味: 人数 不利"
-  },
-  "strategy-numbers-advantage": {
-    "text": "人数 有利",
-    "meaning": "ゲームでの意味: 人数 有利"
-  },
-  "strategy-damage-advantage": {
-    "text": "ダメージ 有利",
-    "meaning": "ゲームでの意味: ダメージ 有利"
-  },
-  "strategy-ultimate-advantage": {
-    "text": "ウルト 有利",
-    "meaning": "ゲームでの意味: ウルト 有利"
-  },
-  "strategy-economy-advantage": {
-    "text": "エコノミー 有利",
-    "meaning": "ゲームでの意味: エコノミー 有利"
-  },
-  "strategy-do-not-overcommit": {
-    "text": "しない 未確認 やりすぎ",
-    "meaning": "ゲームでの意味: しない 未確認 やりすぎ"
-  },
-  "strategy-commit-now": {
-    "text": "コミット 今",
-    "meaning": "ゲームでの意味: コミット 今"
-  },
-  "strategy-cancel-the-push": {
-    "text": "中止 プッシュ",
-    "meaning": "ゲームでの意味: 中止 プッシュ"
-  },
-  "economy-buy": {
-    "text": "購入",
-    "meaning": "ゲームでの意味: 購入"
-  },
-  "economy-save": {
-    "text": "温存",
-    "meaning": "ゲームでの意味: 温存"
-  },
-  "economy-drop-me": {
-    "text": "落として 私",
-    "meaning": "ゲームでの意味: 落として 私"
-  },
-  "economy-i-can-drop": {
-    "text": "私 できる 落として",
-    "meaning": "ゲームでの意味: 私 できる 落として"
-  },
-  "economy-need-a-drop": {
-    "text": "必要 落として",
-    "meaning": "ゲームでの意味: 必要 落として"
-  },
-  "economy-full-save": {
-    "text": "全員 温存",
-    "meaning": "ゲームでの意味: 全員 温存"
-  },
-  "economy-light-buy": {
-    "text": "軽い 購入",
-    "meaning": "ゲームでの意味: 軽い 購入"
-  },
-  "economy-half-buy": {
-    "text": "半分 購入",
-    "meaning": "ゲームでの意味: 半分 購入"
-  },
-  "economy-full-armor": {
-    "text": "全員 アーマー",
-    "meaning": "ゲームでの意味: 全員 アーマー"
-  },
-  "economy-no-armor": {
-    "text": "なし アーマー",
-    "meaning": "ゲームでの意味: なし アーマー"
-  },
-  "economy-upgrade-weapon": {
-    "text": "アップグレード 武器",
-    "meaning": "ゲームでの意味: アップグレード 武器"
-  },
-  "economy-keep-weapon": {
-    "text": "キープ 武器",
-    "meaning": "ゲームでの意味: キープ 武器"
-  },
-  "economy-pick-up-gun": {
-    "text": "ピック 上 銃",
-    "meaning": "ゲームでの意味: ピック 上 銃"
-  },
-  "economy-save-the-gun": {
-    "text": "温存 銃",
-    "meaning": "ゲームでの意味: 温存 銃"
-  },
-  "economy-we-are-broke": {
-    "text": "味方 金欠",
-    "meaning": "ゲームでの意味: 味方 金欠"
-  },
-  "economy-they-are-broke": {
-    "text": "敵 金欠",
-    "meaning": "ゲームでの意味: 敵 金欠"
-  },
-  "economy-they-have-money": {
-    "text": "敵 持っている お金",
-    "meaning": "ゲームでの意味: 敵 持っている お金"
-  },
-  "economy-we-can-buy-next": {
-    "text": "味方 できる 購入 次",
-    "meaning": "ゲームでの意味: 味方 できる 購入 次"
-  },
-  "economy-do-not-force": {
-    "text": "しない 未確認 フォース",
-    "meaning": "ゲームでの意味: しない 未確認 フォース"
-  },
-  "economy-force-together": {
-    "text": "フォース 一緒に",
-    "meaning": "ゲームでの意味: フォース 一緒に"
-  },
-  "slang-afk": {
-    "text": "AFK",
-    "meaning": "ゲームでの意味: AFK"
-  },
-  "slang-brb": {
-    "text": "BRB",
-    "meaning": "ゲームでの意味: BRB"
-  },
-  "slang-op": {
-    "text": "OP",
-    "meaning": "ゲームでの意味: OP"
-  },
-  "slang-nerf": {
-    "text": "弱体化",
-    "meaning": "ゲームでの意味: 弱体化"
-  },
-  "slang-buff": {
-    "text": "強化",
-    "meaning": "ゲームでの意味: 強化"
-  },
-  "slang-meta": {
-    "text": "メタ",
-    "meaning": "ゲームでの意味: メタ"
-  },
-  "slang-main": {
-    "text": "メイン",
-    "meaning": "ゲームでの意味: メイン"
-  },
-  "slang-alt": {
-    "text": "サブ",
-    "meaning": "ゲームでの意味: サブ"
-  },
-  "slang-smurf": {
-    "text": "スマーフ",
-    "meaning": "ゲームでの意味: スマーフ"
-  },
-  "slang-noob": {
-    "text": "初心者",
-    "meaning": "ゲームでの意味: 初心者"
-  },
-  "slang-camper": {
-    "text": "キャンパー",
-    "meaning": "ゲームでの意味: キャンパー"
-  },
-  "slang-sweat": {
-    "text": "ガチ勢",
-    "meaning": "ゲームでの意味: ガチ勢"
-  },
-  "slang-tryhard": {
-    "text": "ガチ勢",
-    "meaning": "ゲームでの意味: ガチ勢"
-  },
-  "slang-clutch-or-kick": {
-    "text": "クラッチ または キック",
-    "meaning": "ゲームでの意味: クラッチ または キック"
-  },
-  "slang-diff": {
-    "text": "差",
-    "meaning": "ゲームでの意味: 差"
-  },
-  "slang-gap": {
-    "text": "差",
-    "meaning": "ゲームでの意味: 差"
-  },
-  "slang-tilt": {
-    "text": "ティルト",
-    "meaning": "ゲームでの意味: ティルト"
-  },
-  "slang-rage-quit": {
-    "text": "怒り 退出",
-    "meaning": "ゲームでの意味: 怒り 退出"
-  },
-  "slang-spawn-camp": {
-    "text": "スポーン キャンプ",
-    "meaning": "ゲームでの意味: スポーン キャンプ"
-  },
-  "slang-spawn-kill": {
-    "text": "スポーン キル",
-    "meaning": "ゲームでの意味: スポーン キル"
-  },
-  "slang-hitbox": {
-    "text": "ヒットボックス",
-    "meaning": "ゲームでの意味: ヒットボックス"
-  },
-  "slang-lag": {
-    "text": "ラグ",
-    "meaning": "ゲームでの意味: ラグ"
-  },
-  "slang-ping": {
-    "text": "ピン",
-    "meaning": "ゲームでの意味: ピン"
-  },
-  "slang-fps": {
-    "text": "FPS",
-    "meaning": "ゲームでの意味: FPS"
-  },
-  "slang-dps": {
-    "text": "DPS",
-    "meaning": "ゲームでの意味: DPS"
-  },
-  "slang-aoe": {
-    "text": "AOE",
-    "meaning": "ゲームでの意味: AOE"
-  },
-  "slang-cc": {
-    "text": "CC",
-    "meaning": "ゲームでの意味: CC"
-  },
-  "slang-gg-ez": {
-    "text": "GG EZ",
-    "meaning": "ゲームでの意味: GG EZ"
-  },
-  "slang-wp": {
-    "text": "WP",
-    "meaning": "ゲームでの意味: WP"
-  },
-  "slang-nt": {
-    "text": "NT",
-    "meaning": "ゲームでの意味: NT"
+    "meaning": "Good gameの略。試合終了時に「いい試合だった」という意味でよく使う"
   },
   "slang-ggwp": {
     "text": "GGWP",
-    "meaning": "ゲームでの意味: GGWP"
+    "meaning": "Good game, well playedの略。いい試合で、よくプレイしたという敬意を表す"
   },
-  "slang-lag-spike": {
-    "text": "ラグ スパイク",
-    "meaning": "ゲームでの意味: ラグ スパイク"
+  "callouts-glhf": {
+    "text": "GLHF",
+    "meaning": "Good luck, have funの略。試合開始前の「よろしく、楽しもう」という挨拶"
   },
-  "slang-ranked": {
-    "text": "ランク",
-    "meaning": "ゲームでの意味: ランク"
+  "slang-wp": {
+    "text": "WP",
+    "meaning": "Well playedの略。いいプレイだったという称賛"
   },
-  "slang-casual": {
-    "text": "カジュアル",
-    "meaning": "ゲームでの意味: カジュアル"
+  "slang-nt": {
+    "text": "NT",
+    "meaning": "Nice tryの略。失敗しても惜しかったと励ます言葉"
+  },
+  "callouts-nice": {
+    "text": "ナイス！",
+    "meaning": "いいプレイの直後に使う短い称賛"
+  },
+  "teamwork-nice-try": {
+    "text": "ナイストライ",
+    "meaning": "失敗したプレイの後に、惜しかったと前向きに伝える言葉"
+  },
+  "teamwork-nice-shot": {
+    "text": "ナイスショット",
+    "meaning": "いい射撃や正確なショットを褒める言葉"
+  },
+  "callouts-thanks": {
+    "text": "ありがとう",
+    "meaning": "味方に素早く感謝を伝える言葉"
+  },
+  "callouts-sorry": {
+    "text": "ごめん",
+    "meaning": "ミスや味方への誤射などの後に謝る言葉"
+  },
+  "callouts-my-bad": {
+    "text": "今の自分のミス",
+    "meaning": "そのミスが自分の責任だと認める表現"
+  },
+  "callouts-good-job": {
+    "text": "グッジョブ",
+    "meaning": "役立つ行動やラウンド後に送る前向きな評価"
+  },
+  "teamwork-good-comms": {
+    "text": "いい報告",
+    "meaning": "チームのコミュニケーションが役に立ったという意味"
+  },
+  "slang-afk": {
+    "text": "AFK",
+    "meaning": "Away from keyboardの略。プレイヤーが操作していない状態"
+  },
+  "slang-brb": {
+    "text": "BRB",
+    "meaning": "Be right backの略。すぐ戻るという意味"
+  },
+  "slang-dc": {
+    "text": "DC",
+    "meaning": "Disconnectの略。試合から接続が切れること"
   },
   "slang-disconnect": {
     "text": "切断",
-    "meaning": "ゲームでの意味: 切断"
+    "meaning": "プレイヤーが試合への接続を失うこと"
   },
   "slang-reconnect": {
     "text": "再接続",
-    "meaning": "ゲームでの意味: 再接続"
+    "meaning": "接続が切れた後、プレイヤーが試合に戻ること"
+  },
+  "slang-lag": {
+    "text": "ラグ",
+    "meaning": "遅延や回線の問題で操作や表示が遅れること"
+  },
+  "slang-lag-spike": {
+    "text": "ラグスパイク",
+    "meaning": "短時間だけ急に発生する大きな通信遅延"
+  },
+  "slang-ping": {
+    "text": "Ping",
+    "meaning": "文脈により、マップのピンまたは通信遅延を指す"
+  },
+  "slang-fps": {
+    "text": "FPS",
+    "meaning": "ファーストパーソン・シューター、または性能の話では1秒あたりのフレーム数"
+  },
+  "slang-server": {
+    "text": "サーバー",
+    "meaning": "試合をホストするオンライン環境や地域"
+  },
+  "slang-hit-reg": {
+    "text": "ヒットレジ",
+    "meaning": "ヒット判定。攻撃や弾が正しく当たりとして処理されたかどうか"
+  },
+  "slang-desync": {
+    "text": "同期ズレ",
+    "meaning": "プレイヤーが見ている状態とサーバーや他プレイヤーの状態がずれること"
+  },
+  "slang-op": {
+    "text": "OP",
+    "meaning": "Overpoweredの略。他と比べて強すぎる状態"
+  },
+  "slang-meta": {
+    "text": "メタ",
+    "meaning": "その時点で最も有効または流行している戦略、キャラ、武器、ビルド"
+  },
+  "slang-nerf": {
+    "text": "ナーフ",
+    "meaning": "アップデートでキャラ、武器、能力などを弱体化すること"
+  },
+  "slang-buff": {
+    "text": "バフ",
+    "meaning": "アップデートでキャラ、武器、能力などを強化すること"
+  },
+  "slang-noob": {
+    "text": "ヌーブ",
+    "meaning": "初心者や不慣れなプレイヤーを指す言葉。侮辱になることがある"
+  },
+  "slang-pro": {
+    "text": "プロ",
+    "meaning": "非常に上手い、またはプロレベルのプレイヤー"
+  },
+  "slang-bot": {
+    "text": "ボット",
+    "meaning": "AI操作のキャラ。または下手なプレイヤーへの侮辱として使われる"
+  },
+  "slang-smurf": {
+    "text": "スマーフ",
+    "meaning": "上級者が低ランクのアカウントでプレイすること"
+  },
+  "slang-camper": {
+    "text": "キャンパー",
+    "meaning": "一か所に待ち伏せしてキルを狙うプレイヤー"
+  },
+  "slang-tryhard": {
+    "text": "トライハード",
+    "meaning": "勝つために非常に真剣にプレイする人。時に皮肉や侮辱として使う"
+  },
+  "slang-sweat": {
+    "text": "ガチ勢",
+    "meaning": "勝つためにかなり本気でプレイしているプレイヤー"
+  },
+  "slang-tilt": {
+    "text": "ティルト",
+    "meaning": "イライラしてプレイの質が落ちる状態"
+  },
+  "slang-toxic": {
+    "text": "トキシック",
+    "meaning": "チャットやプレイで失礼、攻撃的、有害な行動をすること"
+  },
+  "slang-salty": {
+    "text": "ソルティ",
+    "meaning": "負けたり出し抜かれたりして怒っている、または不満そうな状態"
+  },
+  "slang-rage-quit": {
+    "text": "レイジクイット",
+    "meaning": "怒って試合を途中で抜けること"
+  },
+  "slang-pvp": {
+    "text": "PvP",
+    "meaning": "Player versus playerの略。プレイヤー同士が戦うゲームモード"
+  },
+  "slang-pve": {
+    "text": "PvE",
+    "meaning": "Player versus environmentの略。AI敵やゲームシステムと戦うプレイ"
+  },
+  "slang-ranked": {
+    "text": "ランク",
+    "meaning": "ランクに影響する競技モード"
+  },
+  "slang-casual": {
+    "text": "カジュアル",
+    "meaning": "ランクに影響しない、比較的気軽なモード"
+  },
+  "slang-mmr": {
+    "text": "MMR",
+    "meaning": "マッチメイキングレーティング。公平な試合を組むための隠しまたは表示されるスキル評価"
+  },
+  "slang-elo": {
+    "text": "Elo",
+    "meaning": "レーティングシステム、または競技スキル評価を指す一般的な言葉"
+  },
+  "slang-kd": {
+    "text": "K/D",
+    "meaning": "キルデス比。キル数とデス数の比率"
+  },
+  "slang-kda": {
+    "text": "KDA",
+    "meaning": "キル、デス、アシストを合わせた一般的な成績指標"
+  },
+  "slang-mvp": {
+    "text": "MVP",
+    "meaning": "Most valuable player。最も試合に貢献したプレイヤー"
+  },
+  "slang-rng": {
+    "text": "RNG",
+    "meaning": "ランダム要素。ゲーム内の運に左右される結果"
+  },
+  "slang-xp": {
+    "text": "XP",
+    "meaning": "経験値。キャラ、アカウント、バトルパスなどをレベルアップするためのポイント"
+  },
+  "slang-level-up": {
+    "text": "レベルアップ",
+    "meaning": "経験や進行によってレベルが上がる、または上達すること"
+  },
+  "slang-grind": {
+    "text": "周回",
+    "meaning": "報酬、ランク、進行のために試合や作業を繰り返すこと"
+  },
+  "slang-farm": {
+    "text": "ファーム",
+    "meaning": "資源、ゴールド、XP、簡単なキルなどを繰り返し集めること"
+  },
+  "slang-main": {
+    "text": "メイン",
+    "meaning": "プレイヤーが最もよく使うキャラ、ロール、武器"
+  },
+  "slang-alt": {
+    "text": "サブ",
+    "meaning": "サブアカウント、または別キャラ"
+  },
+  "slang-party": {
+    "text": "パーティー",
+    "meaning": "一緒にキューに入るプレイヤーのグループ"
+  },
+  "slang-squad": {
+    "text": "スクワッド",
+    "meaning": "協力して動く小規模なチーム"
+  },
+  "slang-lobby": {
+    "text": "ロビー",
+    "meaning": "試合前の待機画面、または試合にいるプレイヤーの集まり"
+  },
+  "slang-queue": {
+    "text": "キュー",
+    "meaning": "マッチメイキングで試合が見つかるのを待つこと"
+  },
+  "slang-matchmaking": {
+    "text": "マッチメイキング",
+    "meaning": "プレイヤーを探してバランスのよい試合を作るシステム"
+  },
+  "slang-solo-queue": {
+    "text": "ソロキュー",
+    "meaning": "固定チームなしで一人でマッチメイキングをすること"
+  },
+  "slang-duo": {
+    "text": "デュオ",
+    "meaning": "2人組で一緒にプレイすること"
+  },
+  "slang-stack": {
+    "text": "スタック",
+    "meaning": "一緒にキューに入る固定グループ。多くの場合フルパーティーを指す"
+  },
+  "slang-comms": {
+    "text": "報告",
+    "meaning": "VC、テキストチャット、ピンなどによるチーム内コミュニケーション"
+  },
+  "callouts-voice-chat": {
+    "text": "ボイスチャット",
+    "meaning": "マイクを使ったコミュニケーション"
+  },
+  "callouts-text-chat": {
+    "text": "テキストチャット",
+    "meaning": "文字入力によるコミュニケーション"
+  },
+  "callouts-no-mic": {
+    "text": "マイクなし",
+    "meaning": "話し手がマイクを使えないという意味"
+  },
+  "callouts-mic-muted": {
+    "text": "マイクミュート",
+    "meaning": "マイクがミュートになっている状態"
+  },
+  "slang-dps": {
+    "text": "DPS",
+    "meaning": "Damage per second。またはダメージを出す役割"
+  },
+  "slang-tank": {
+    "text": "タンク",
+    "meaning": "高耐久でダメージを受け止め、味方を守るロール"
+  },
+  "slang-support": {
+    "text": "サポート",
+    "meaning": "回復、ユーティリティ、バフ、味方支援を担当するロール"
+  },
+  "slang-healer": {
+    "text": "ヒーラー",
+    "meaning": "味方の体力を回復することに特化したサポートロール"
+  },
+  "slang-aoe": {
+    "text": "AOE",
+    "meaning": "Area of effectの略。範囲に影響するダメージやアビリティ"
+  },
+  "slang-cc": {
+    "text": "CC",
+    "meaning": "Crowd controlの略。スタン、スロー、拘束など行動を妨害する効果"
+  },
+  "slang-ult": {
+    "text": "ウルト",
+    "meaning": "アルティメットの略。キャラの最も強いアビリティ"
+  },
+  "callouts-ultimate-ready": {
+    "text": "ウルトある",
+    "meaning": "話し手のアルティメットが使える状態"
+  },
+  "callouts-no-ultimate": {
+    "text": "ウルトなし",
+    "meaning": "話し手または敵のアルティメットが使えない状態"
+  },
+  "callouts-ability-ready": {
+    "text": "スキルある",
+    "meaning": "有用なアビリティが使える状態"
+  },
+  "callouts-ability-down": {
+    "text": "スキル落ちてる",
+    "meaning": "重要なアビリティが使えない、またはクールダウン中の状態"
+  },
+  "callouts-cooldown": {
+    "text": "クールダウン",
+    "meaning": "アビリティがまだ再使用できない状態"
+  },
+  "callouts-enemy-spotted": {
+    "text": "敵発見",
+    "meaning": "敵を視認したという報告"
+  },
+  "callouts-enemy-here": {
+    "text": "ここ敵",
+    "meaning": "話し手の位置に敵がいるという意味"
+  },
+  "callouts-enemy-there": {
+    "text": "そこ敵",
+    "meaning": "ピンした場所や話題の場所に敵がいるという意味"
+  },
+  "callouts-on-me": {
+    "text": "自分のところ",
+    "meaning": "敵や戦闘が話し手の近くにあるという意味"
+  },
+  "callouts-i-see-him": {
+    "text": "見えてる",
+    "meaning": "話し手が敵を視認している"
+  },
+  "callouts-i-see-them": {
+    "text": "敵見えてる",
+    "meaning": "話し手が1人以上の敵を視認している"
+  },
+  "callouts-one-more": {
+    "text": "もう1人",
+    "meaning": "近くに敵がもう1人いる、またはもう一つ行動が必要という意味"
+  },
+  "callouts-last-one": {
+    "text": "ラスト1人",
+    "meaning": "敵が残り1人だけという意味"
+  },
+  "callouts-two-enemies-here": {
+    "text": "ここ2人",
+    "meaning": "話し手の位置に敵が2人いる"
+  },
+  "callouts-three-enemies-here": {
+    "text": "ここ3人",
+    "meaning": "話し手の位置に敵が3人いる"
+  },
+  "callouts-full-team-here": {
+    "text": "フルパここ",
+    "meaning": "敵のほとんど、または全員がこのエリアに固まっている"
+  },
+  "callouts-enemy-missing": {
+    "text": "敵見失った",
+    "meaning": "敵が見えなくなり、ローテーションしている可能性がある"
+  },
+  "callouts-all-missing": {
+    "text": "全員見えない",
+    "meaning": "今は敵が誰も見えていない状態"
+  },
+  "callouts-behind-you": {
+    "text": "後ろ！",
+    "meaning": "味方の真後ろに敵がいる"
+  },
+  "callouts-left-side": {
+    "text": "左！",
+    "meaning": "左側から敵の圧力が来ている"
+  },
+  "callouts-right-side": {
+    "text": "右！",
+    "meaning": "右側から敵の圧力が来ている"
+  },
+  "callouts-above-us": {
+    "text": "上にいる",
+    "meaning": "敵がチームの上、高所にいる"
+  },
+  "callouts-below-us": {
+    "text": "下にいる",
+    "meaning": "敵がチームの位置より下にいる"
+  },
+  "callouts-in-front": {
+    "text": "正面",
+    "meaning": "脅威が真正面にある"
+  },
+  "callouts-mid": {
+    "text": "ミッド",
+    "meaning": "敵や戦闘が中央レーンにある"
+  },
+  "callouts-top-mid": {
+    "text": "トップミッド",
+    "meaning": "敵が中央上側のポジションにいる"
+  },
+  "callouts-bottom-mid": {
+    "text": "ボトムミッド",
+    "meaning": "敵が中央下側のポジションにいる"
+  },
+  "callouts-spawn": {
+    "text": "スポーン",
+    "meaning": "敵または味方がスポーン地点付近にいる"
+  },
+  "callouts-our-spawn": {
+    "text": "自陣スポーン",
+    "meaning": "自分たちの開始地点付近で起きている"
+  },
+  "callouts-their-spawn": {
+    "text": "敵スポーン",
+    "meaning": "敵の開始地点付近で起きている"
+  },
+  "callouts-flank": {
+    "text": "裏取り",
+    "meaning": "敵が横や後ろから攻撃している"
+  },
+  "callouts-watch-flank": {
+    "text": "裏見て",
+    "meaning": "誰かがチームの後ろから来る敵を確認するべきという意味"
+  },
+  "danger-incoming": {
+    "text": "来てる！",
+    "meaning": "脅威や攻撃が今向かってきている"
+  },
+  "danger-grenade": {
+    "text": "グレ！",
+    "meaning": "近くにグレネードがある"
+  },
+  "danger-flash": {
+    "text": "フラッシュ！",
+    "meaning": "フラッシュバンや視界を奪う効果が来ている"
+  },
+  "danger-sniper": {
+    "text": "スナイパー！",
+    "meaning": "スナイパーがそのエリアを脅かしている"
+  },
+  "danger-trap": {
+    "text": "トラップ！",
+    "meaning": "近くにトラップがある"
+  },
+  "danger-mine": {
+    "text": "地雷！",
+    "meaning": "近くに爆発する地雷がある"
+  },
+  "danger-ambush": {
+    "text": "待ち伏せ！",
+    "meaning": "敵がチームを奇襲しようと待っている"
+  },
+  "danger-they-are-rushing": {
+    "text": "ラッシュ来てる",
+    "meaning": "敵が非常に速く攻めてきている"
+  },
+  "danger-they-are-pushing": {
+    "text": "詰めてきてる",
+    "meaning": "敵が前に出て積極的に攻めてきている"
+  },
+  "danger-they-are-flanking": {
+    "text": "裏取り来てる",
+    "meaning": "敵が後ろや横から攻めてきている"
+  },
+  "danger-they-know": {
+    "text": "バレてる",
+    "meaning": "敵がこちらの位置や作戦を把握している"
+  },
+  "danger-they-saw-me": {
+    "text": "見られた",
+    "meaning": "話し手が敵に発見された"
+  },
+  "danger-i-am-exposed": {
+    "text": "射線通ってる",
+    "meaning": "話し手が見られやすく危険な位置にいる"
+  },
+  "danger-no-cover": {
+    "text": "遮蔽なし",
+    "meaning": "安全に隠れられる場所がない"
+  },
+  "danger-bad-angle": {
+    "text": "悪いアングル",
+    "meaning": "今の角度が危険、または不利な状態"
+  },
+  "danger-get-out": {
+    "text": "逃げて",
+    "meaning": "危険なエリアからすぐ離れるべきという意味"
+  },
+  "danger-back-up": {
+    "text": "下がって",
+    "meaning": "危険から距離を取ること"
+  },
+  "callouts-i-am-down": {
+    "text": "ダウンした",
+    "meaning": "話し手がノック、ダウン、または倒されて戦えない状態"
+  },
+  "callouts-i-am-low": {
+    "text": "体力少ない",
+    "meaning": "話し手の体力が少なく、注意や助けが必要な状態"
+  },
+  "callouts-low-hp": {
+    "text": "ローHP",
+    "meaning": "敵または味方の体力が少ない状態"
+  },
+  "callouts-he-is-low": {
+    "text": "あいつロー",
+    "meaning": "その敵が弱っていて倒しやすい状態"
+  },
+  "callouts-they-are-low": {
+    "text": "敵ロー",
+    "meaning": "1人以上の敵が弱っていて倒しやすい状態"
+  },
+  "callouts-one-shot": {
+    "text": "ワンショット",
+    "meaning": "敵があと一発程度で倒せる状態"
+  },
+  "callouts-armor-cracked": {
+    "text": "アーマー割った",
+    "meaning": "敵のアーマーが壊れた、またはかなり弱い状態"
+  },
+  "callouts-shield-broken": {
+    "text": "シールド割った",
+    "meaning": "敵のシールドやアーマーを破壊した"
+  },
+  "callouts-no-shield": {
+    "text": "シールドなし",
+    "meaning": "敵にシールドやアーマーが残っていない"
+  },
+  "callouts-tagged-him": {
+    "text": "当てた",
+    "meaning": "話し手が敵にダメージを与えた"
+  },
+  "callouts-hit-for-fifty": {
+    "text": "50入れた",
+    "meaning": "敵に約50ダメージを与えた"
+  },
+  "callouts-hit-for-a-hundred": {
+    "text": "100入れた",
+    "meaning": "敵に約100ダメージを与えた"
+  },
+  "callouts-knocked-one": {
+    "text": "1人ダウン",
+    "meaning": "敵を1人ダウンさせた"
+  },
+  "callouts-finished-one": {
+    "text": "1人確殺",
+    "meaning": "ダウンした敵を1人完全に倒した"
+  },
+  "callouts-team-wipe": {
+    "text": "チーム壊滅",
+    "meaning": "敵チーム全員を倒した"
+  },
+  "instructions-push": {
+    "text": "プッシュ",
+    "meaning": "攻める、または前に出ること"
+  },
+  "instructions-rush": {
+    "text": "ラッシュ",
+    "meaning": "非常に素早く攻めること"
+  },
+  "instructions-hold": {
+    "text": "ホールド",
+    "meaning": "その位置を維持すること"
+  },
+  "instructions-defend": {
+    "text": "守って",
+    "meaning": "サイトやエリアを守ること"
+  },
+  "instructions-attack": {
+    "text": "攻めて",
+    "meaning": "攻撃の圧力をかけ始めること"
+  },
+  "instructions-retreat": {
+    "text": "退いて",
+    "meaning": "安全な場所へ下がること"
+  },
+  "instructions-rotate": {
+    "text": "ローテート",
+    "meaning": "別のレーンや目標へ移動すること"
+  },
+  "callouts-rotating": {
+    "text": "ローテ中",
+    "meaning": "敵が別のエリアへ移動している"
+  },
+  "callouts-they-rotated": {
+    "text": "敵ローテした",
+    "meaning": "敵チームが別サイトや別レーンへ移動した"
+  },
+  "callouts-fake-rotate": {
+    "text": "フェイクローテ",
+    "meaning": "敵がローテートするふりをしている可能性がある"
+  },
+  "callouts-push-now": {
+    "text": "今プッシュ",
+    "meaning": "今すぐ攻めるという指示"
+  },
+  "callouts-go-now": {
+    "text": "今行って",
+    "meaning": "今すぐ行動するという指示"
+  },
+  "callouts-fall-back": {
+    "text": "下がって",
+    "meaning": "より安全な位置へ撤退すること"
+  },
+  "callouts-group-up": {
+    "text": "集合して",
+    "meaning": "次の動きの前に味方と集まること"
+  },
+  "callouts-regroup": {
+    "text": "立て直そう",
+    "meaning": "戦闘やローテーション後にもう一度集まること"
+  },
+  "callouts-need-help": {
+    "text": "ヘルプ必要",
+    "meaning": "話し手がプレッシャーを受けていて助けが必要"
+  },
+  "callouts-help-me": {
+    "text": "助けて",
+    "meaning": "話し手がすぐに助けを必要としている"
+  },
+  "callouts-need-backup": {
+    "text": "バックアップ欲しい",
+    "meaning": "話し手が味方の援護を必要としている"
+  },
+  "callouts-i-need-healing": {
+    "text": "ヒール欲しい",
+    "meaning": "話し手が回復やサポート能力を求めている"
+  },
+  "instructions-heal-me": {
+    "text": "ヒールして",
+    "meaning": "話し手に回復アビリティや回復アイテムを使うこと"
+  },
+  "instructions-revive-me": {
+    "text": "蘇生して",
+    "meaning": "ダウンした話し手を復帰させること"
+  },
+  "instructions-res-me": {
+    "text": "リザして",
+    "meaning": "蘇生して、または復活させての短い言い方"
+  },
+  "instructions-cover-the-revive": {
+    "text": "蘇生カバー",
+    "meaning": "蘇生しているプレイヤーを守ること"
+  },
+  "callouts-need-ammo": {
+    "text": "弾欲しい",
+    "meaning": "話し手の弾薬が少ない状態"
+  },
+  "callouts-out-of-ammo": {
+    "text": "弾切れ",
+    "meaning": "リロードや補給をするまで撃てない状態"
+  },
+  "callouts-reloading": {
+    "text": "リロード中",
+    "meaning": "話し手がリロードしていて安全に戦いにくい状態"
+  },
+  "callouts-cover-me": {
+    "text": "カバーして",
+    "meaning": "移動、リロード、目標操作中の話し手を守ること"
+  },
+  "callouts-i-got-you": {
+    "text": "任せて",
+    "meaning": "話し手が味方を援護または守るという意味"
+  },
+  "callouts-ping-it": {
+    "text": "ピンして",
+    "meaning": "場所、アイテム、敵、目標をマップ上でマークすること"
+  },
+  "callouts-mark-the-enemy": {
+    "text": "敵にピンして",
+    "meaning": "敵にピンやマーカーを置くこと"
+  },
+  "callouts-i-marked-it": {
+    "text": "ピンした",
+    "meaning": "話し手がマーカーを置いた"
+  },
+  "callouts-check-map": {
+    "text": "マップ見て",
+    "meaning": "ミニマップや戦術マップを見ること"
+  },
+  "callouts-look-at-ping": {
+    "text": "ピン見て",
+    "meaning": "置かれたマーカーに注意すること"
+  },
+  "instructions-follow-me": {
+    "text": "ついてきて",
+    "meaning": "話し手と一緒に移動すること"
+  },
+  "instructions-stay-together": {
+    "text": "固まって",
+    "meaning": "味方の近くにいること"
+  },
+  "instructions-spread-out": {
+    "text": "広がって",
+    "meaning": "密集しすぎないこと"
+  },
+  "instructions-wait-for-me": {
+    "text": "待ってて",
+    "meaning": "話し手が到着するまで行動を遅らせること"
+  },
+  "instructions-wait-for-cooldowns": {
+    "text": "クールダウン待って",
+    "meaning": "アビリティが戻るまで戦わないこと"
+  },
+  "objective-plant-the-bomb": {
+    "text": "ボムを設置して",
+    "meaning": "ボムやスパイクを目標サイトに設置すること"
+  },
+  "objective-bomb-planted": {
+    "text": "ボム設置済み",
+    "meaning": "ボムやスパイクが設置された状態"
+  },
+  "objective-bomb-down": {
+    "text": "ボム落ちた",
+    "meaning": "ボムを持っていたプレイヤーが目標アイテムを落とした"
+  },
+  "objective-spike-down": {
+    "text": "スパイク落ちた",
+    "meaning": "スパイクが落ちた状態"
+  },
+  "objective-defuse-the-bomb": {
+    "text": "解除して",
+    "meaning": "設置されたボムが爆発する前に止めること"
+  },
+  "objective-half-defuse": {
+    "text": "ハーフ解除",
+    "meaning": "解除を半分のチェックポイントまで進めること"
+  },
+  "objective-stick-the-defuse": {
+    "text": "解除続けて",
+    "meaning": "プレッシャーがあっても解除をやめないこと"
+  },
+  "objective-fake-defuse": {
+    "text": "フェイク解除",
+    "meaning": "解除を少し触って敵にピークさせること"
+  },
+  "objective-objective-secured": {
+    "text": "目標確保",
+    "meaning": "チームが目標を取った、または守った状態"
+  },
+  "objective-objective-lost": {
+    "text": "目標取られた",
+    "meaning": "敵に目標を奪われた状態"
+  },
+  "objective-point-captured": {
+    "text": "ポイント確保",
+    "meaning": "キャプチャーポイントを支配している状態"
+  },
+  "objective-point-contested": {
+    "text": "ポイント争奪中",
+    "meaning": "両チームがポイント上で争っている"
+  },
+  "objective-payload-moving": {
+    "text": "ペイロード進行中",
+    "meaning": "護送目標が前進している"
+  },
+  "objective-payload-stopped": {
+    "text": "ペイロード停止",
+    "meaning": "護送目標が動いていない"
+  },
+  "slang-loot": {
+    "text": "ルート",
+    "meaning": "ゲーム内で見つけたり獲得したりする有用なアイテム、武器、資源、報酬"
+  },
+  "callouts-loot-here": {
+    "text": "ここにルート",
+    "meaning": "この場所に役立つアイテムがある"
+  },
+  "callouts-good-loot": {
+    "text": "いいルート",
+    "meaning": "このエリアに価値の高いアイテムがある"
+  },
+  "callouts-need-weapon": {
+    "text": "武器欲しい",
+    "meaning": "話し手が使える武器を必要としている"
+  },
+  "callouts-need-shield": {
+    "text": "シールド欲しい",
+    "meaning": "話し手がアーマーやシールドアイテムを必要としている"
+  },
+  "callouts-need-meds": {
+    "text": "回復欲しい",
+    "meaning": "話し手が回復アイテムを必要としている"
+  },
+  "callouts-drop-ammo": {
+    "text": "弾落として",
+    "meaning": "味方に弾薬を渡すこと"
+  },
+  "callouts-drop-weapon": {
+    "text": "武器落として",
+    "meaning": "味方に武器を渡すこと"
+  },
+  "callouts-take-this": {
+    "text": "これ取って",
+    "meaning": "味方に差し出したアイテムを拾ってほしいという意味"
+  },
+  "callouts-do-not-take-it": {
+    "text": "取らないで",
+    "meaning": "そのアイテムを誰かのために残すこと"
+  },
+  "callouts-i-will-take-it": {
+    "text": "それ取る",
+    "meaning": "話し手がそのアイテムを拾いたいという意味"
+  },
+  "callouts-use-it": {
+    "text": "使って",
+    "meaning": "アイテムやアビリティを発動、または消費すること"
+  },
+  "callouts-save-it": {
+    "text": "温存して",
+    "meaning": "そのアイテムやアビリティをまだ使わないこと"
+  },
+  "strategy-default-setup": {
+    "text": "デフォルト配置",
+    "meaning": "通常の安全な陣形で始めること"
+  },
+  "strategy-slow-push": {
+    "text": "スロープッシュ",
+    "meaning": "各エリアを確認しながら慎重に攻めること"
+  },
+  "strategy-fast-push": {
+    "text": "ファストプッシュ",
+    "meaning": "敵が反応する前に素早く攻めること"
+  },
+  "strategy-fake-push": {
+    "text": "フェイクプッシュ",
+    "meaning": "敵を動かすために一つのエリアを攻めるふりをすること"
+  },
+  "strategy-split-push": {
+    "text": "スプリットプッシュ",
+    "meaning": "2つ以上のルートから攻めること"
+  },
+  "strategy-retake": {
+    "text": "リテイク",
+    "meaning": "失った目標を取り返すこと"
+  },
+  "strategy-eco-round": {
+    "text": "エコラウンド",
+    "meaning": "お金を貯めるために安い装備を使うラウンド"
+  },
+  "strategy-full-buy": {
+    "text": "フルバイ",
+    "meaning": "全員が強い装備を買うこと"
+  },
+  "strategy-force-buy": {
+    "text": "フォースバイ",
+    "meaning": "お金が少なくても今勝つために無理に買うこと"
+  },
+  "strategy-play-objective": {
+    "text": "オブジェクト重視",
+    "meaning": "キルよりも目標達成を優先すること"
+  },
+  "strategy-play-for-picks": {
+    "text": "ピック狙い",
+    "meaning": "本格的に攻める前に安全な1キルを狙うこと"
+  },
+  "strategy-take-map-control": {
+    "text": "マップコントロール取って",
+    "meaning": "マップ上の重要なエリアを確保すること"
+  },
+  "strategy-gather-info": {
+    "text": "情報取って",
+    "meaning": "本格的に動く前に偵察して情報を集めること"
+  },
+  "strategy-use-utility-first": {
+    "text": "先にユーティリティ使って",
+    "meaning": "入る前や戦う前にアビリティを使うこと"
+  },
+  "strategy-double-peek": {
+    "text": "ダブルピーク",
+    "meaning": "2人で同じ角度を同時にピークすること"
+  },
+  "strategy-off-angle": {
+    "text": "オフアングル",
+    "meaning": "敵の意表を突くために普通ではない位置を構えること"
+  },
+  "strategy-late-lurk": {
+    "text": "遅めのラーク",
+    "meaning": "1人が遅れて動き、後から裏や横を突くこと"
+  },
+  "economy-buy": {
+    "text": "買って",
+    "meaning": "武器、装備、アイテムを購入すること"
+  },
+  "economy-save": {
+    "text": "セーブ",
+    "meaning": "次のラウンドのためにお金や資源を残すこと"
+  },
+  "economy-drop-me": {
+    "text": "ドロップして",
+    "meaning": "話し手に武器、アイテム、資源を買う、または渡すこと"
+  },
+  "economy-i-can-drop": {
+    "text": "ドロップできる",
+    "meaning": "話し手が味方に武器、アイテム、資源を買う、または渡せる状態"
+  },
+  "economy-need-a-drop": {
+    "text": "ドロップ欲しい",
+    "meaning": "話し手が味方に武器や資源を買ってもらう、または渡してもらう必要がある"
+  },
+  "economy-full-save": {
+    "text": "フルセーブ",
+    "meaning": "このラウンドは誰も大きくお金を使わないこと"
+  },
+  "economy-light-buy": {
+    "text": "ライトバイ",
+    "meaning": "安い装備や限られた装備だけを買うこと"
+  },
+  "economy-half-buy": {
+    "text": "ハーフバイ",
+    "meaning": "一部の資源を使い、次のラウンド分を残す買い方"
+  },
+  "economy-full-armor": {
+    "text": "フルアーマー",
+    "meaning": "最大のアーマーや防御装備を買うこと"
+  },
+  "economy-no-armor": {
+    "text": "アーマーなし",
+    "meaning": "プレイヤーにアーマーがない状態"
+  },
+  "economy-upgrade-weapon": {
+    "text": "武器アップグレード",
+    "meaning": "より強い武器に持ち替えること"
+  },
+  "economy-keep-weapon": {
+    "text": "武器キープ",
+    "meaning": "今持っている武器を捨てないこと"
+  },
+  "economy-pick-up-gun": {
+    "text": "銃拾って",
+    "meaning": "落ちている武器を拾うこと"
+  },
+  "economy-save-the-gun": {
+    "text": "銃をセーブして",
+    "meaning": "次のラウンドに武器を持ち越すため生き残ること"
+  },
+  "economy-we-are-broke": {
+    "text": "こっち金ない",
+    "meaning": "チームのお金や資源がかなり少ない状態"
+  },
+  "economy-they-are-broke": {
+    "text": "敵金ない",
+    "meaning": "敵チームのお金や資源が少ない状態"
+  },
+  "slang-skin": {
+    "text": "スキン",
+    "meaning": "キャラ、武器、アイテムの見た目を変える装飾"
+  },
+  "slang-battle-pass": {
+    "text": "バトルパス",
+    "meaning": "プレイを通じてスキンやアイテムなどの報酬を解放する進行システム"
+  },
+  "slang-loadout": {
+    "text": "ロードアウト",
+    "meaning": "試合で使う武器、装備、アビリティ、パークのセット"
+  },
+  "slang-build": {
+    "text": "ビルド",
+    "meaning": "アイテム、アビリティ、ステータス、強化などの構成"
+  },
+  "slang-perk": {
+    "text": "パーク",
+    "meaning": "プレイヤーが選ぶパッシブ効果や特別な利点"
+  },
+  "slang-cosmetic": {
+    "text": "コスメ",
+    "meaning": "強さには直接影響せず、見た目を変えるアイテム"
+  },
+  "slang-patch": {
+    "text": "パッチ",
+    "meaning": "バグ修正、バランス調整、コンテンツ追加を行うゲームアップデート"
+  },
+  "slang-patch-notes": {
+    "text": "パッチノート",
+    "meaning": "ゲームアップデートで何が変わったかを説明する公式の記録"
+  },
+  "slang-hotfix": {
+    "text": "ホットフィックス",
+    "meaning": "緊急の問題を直すための素早いアップデート"
+  },
+  "slang-bug": {
+    "text": "バグ",
+    "meaning": "ゲーム内のエラーや意図しない問題"
+  },
+  "slang-glitch": {
+    "text": "グリッチ",
+    "meaning": "奇妙または意図しない挙動。悪用できる場合もある"
+  },
+  "slang-exploit": {
+    "text": "エクスプロイト",
+    "meaning": "バグやシステムを悪用して不公平な有利を得ること"
+  },
+  "slang-cheater": {
+    "text": "チーター",
+    "meaning": "不正ツールや不正な方法で有利を得るプレイヤー"
+  },
+  "slang-hacker": {
+    "text": "ハッカー",
+    "meaning": "チートや不正ツールの使用を疑われているプレイヤー"
+  },
+  "slang-ban": {
+    "text": "BAN",
+    "meaning": "プレイヤー、キャラ、マップ、アカウントなどの使用を禁止すること"
+  },
+  "slang-report": {
+    "text": "通報",
+    "meaning": "チート、暴言、ルール違反について運営へ報告すること"
+  },
+  "slang-skill-issue": {
+    "text": "スキル不足",
+    "meaning": "問題はゲームではなくプレイの下手さだとからかう表現"
+  },
+  "slang-touch-grass": {
+    "text": "外出ろ",
+    "meaning": "ゲームやネットの言い争いから離れて休め、という冗談っぽい表現"
+  },
+  "slang-cooked": {
+    "text": "詰んでる",
+    "meaning": "かなり不利、完全に出し抜かれた、または負けそうな状態"
+  },
+  "slang-diffed": {
+    "text": "差をつけられた",
+    "meaning": "同じロールや対面の相手にパフォーマンスで上回られたこと"
+  },
+  "slang-quest": {
+    "text": "クエスト",
+    "meaning": "進行や報酬を得るための任務や課題"
+  },
+  "slang-mission": {
+    "text": "ミッション",
+    "meaning": "プレイヤーが達成する必要のある目標や課題"
+  },
+  "slang-boss": {
+    "text": "ボス",
+    "meaning": "強力な敵。多くの場合レベルや戦闘の最後に登場する"
+  },
+  "slang-mob": {
+    "text": "モブ",
+    "meaning": "通常のAI敵やクリーチャー"
+  },
+  "slang-aggro": {
+    "text": "ヘイト",
+    "meaning": "敵の注意や脅威が特定のプレイヤーに向いている状態"
+  },
+  "slang-raid": {
+    "text": "レイド",
+    "meaning": "ボス戦などを含む大規模な協力型チャレンジ"
+  },
+  "slang-dungeon": {
+    "text": "ダンジョン",
+    "meaning": "敵、目標、報酬がある構造化されたPvEエリア"
+  },
+  "slang-cc-chain": {
+    "text": "CCチェーン",
+    "meaning": "複数の行動妨害効果を連続で使い、対象を動けない状態に保つこと"
+  },
+  "slang-clutch-or-kick": {
+    "text": "クラッチしろ、無理ならキック",
+    "meaning": "1人で勝たなければならない場面で冗談っぽく圧をかける言葉"
+  },
+  "slang-diff": {
+    "text": "Diff",
+    "meaning": "差の略。同じロールやプレイヤー同士で片方が上回ったことを表す"
+  },
+  "slang-gap": {
+    "text": "ギャップ",
+    "meaning": "プレイヤーやチーム間の大きな実力差"
+  },
+  "slang-gg-ez": {
+    "text": "GG EZ",
+    "meaning": "Good game, easyの略。失礼に受け取られることが多い"
+  },
+  "slang-hitbox": {
+    "text": "ヒットボックス",
+    "meaning": "攻撃が当たりとして判定される見えない範囲"
+  },
+  "slang-spawn-camp": {
+    "text": "スポーンキャンプ",
+    "meaning": "敵がスポーンした直後を狙って攻撃すること"
+  },
+  "slang-spawn-kill": {
+    "text": "スポーンキル",
+    "meaning": "プレイヤーがスポーンした直後に倒すこと"
+  },
+  "callouts-ace": {
+    "text": "エース",
+    "meaning": "1人のプレイヤーが敵チーム全員を倒すこと"
+  },
+  "callouts-back-site": {
+    "text": "サイト奥",
+    "meaning": "敵が目標サイトの奥側にいる"
+  },
+  "callouts-bad-timing": {
+    "text": "タイミング悪い",
+    "meaning": "行動が不運または悪いタイミングで起きた"
+  },
+  "callouts-bait-and-switch": {
+    "text": "ベイトアンドスイッチ",
+    "meaning": "1人が注意を引き、別の味方がキルを取る連携"
+  },
+  "callouts-basement-clear": {
+    "text": "地下クリア",
+    "meaning": "地下や下のエリアが安全そうな状態"
+  },
+  "callouts-blocked": {
+    "text": "通れない",
+    "meaning": "道が使えない、または危険な状態"
+  },
+  "callouts-bridge-clear": {
+    "text": "橋クリア",
+    "meaning": "橋ルートが安全そうな状態"
+  },
+  "callouts-careful": {
+    "text": "気をつけて",
+    "meaning": "危険の可能性があるので慎重に動くこと"
+  },
+  "callouts-carry": {
+    "text": "キャリー",
+    "meaning": "1人のプレイヤーがチームを大きく引っ張って勝利に導くこと"
+  },
+  "callouts-circle-moving": {
+    "text": "円が動く",
+    "meaning": "バトルロイヤルの円が移動している"
+  },
+  "callouts-clean-fight": {
+    "text": "きれいなファイト",
+    "meaning": "チームがうまくコントロールして戦闘に勝った"
+  },
+  "callouts-clear-left": {
+    "text": "左クリア",
+    "meaning": "左側は安全そうな状態"
+  },
+  "callouts-clear-mid": {
+    "text": "ミッドクリア",
+    "meaning": "中央エリアは安全そうな状態"
+  },
+  "callouts-clear-right": {
+    "text": "右クリア",
+    "meaning": "右側は安全そうな状態"
+  },
+  "callouts-close-corner": {
+    "text": "近い角",
+    "meaning": "近くの角に敵が隠れている"
+  },
+  "callouts-close-game": {
+    "text": "接戦",
+    "meaning": "試合がかなり互角な状態"
+  },
+  "callouts-clutch": {
+    "text": "クラッチ",
+    "meaning": "不利な状況やプレッシャーの中で1人で勝ち切ること"
+  },
+  "callouts-come-back": {
+    "text": "戻って",
+    "meaning": "チームや安全な場所へ戻ること"
+  },
+  "callouts-comeback": {
+    "text": "逆転",
+    "meaning": "チームが劣勢から巻き返している状態"
+  },
+  "callouts-contact": {
+    "text": "接敵",
+    "meaning": "話し手が敵と遭遇した"
+  },
+  "callouts-corner": {
+    "text": "角",
+    "meaning": "敵が角に隠れている"
+  },
+  "callouts-crossfire": {
+    "text": "クロスファイア",
+    "meaning": "2人の味方が別角度から同じ敵をカバーする形"
+  },
+  "callouts-default-spot": {
+    "text": "デフォルト位置",
+    "meaning": "設置、維持、防衛で最も一般的なポジション"
+  },
+  "callouts-do-not-chase": {
+    "text": "追いすぎないで",
+    "meaning": "敵を遠くまで追いかけすぎないこと"
+  },
+  "callouts-do-not-peek": {
+    "text": "ピークしないで",
+    "meaning": "敵の射線に体を出さないこと"
+  },
+  "callouts-door-closed": {
+    "text": "ドア閉まってる",
+    "meaning": "ドアや通路が塞がっている"
+  },
+  "callouts-door-open": {
+    "text": "ドア開いてる",
+    "meaning": "ドアや通路が使える状態"
+  },
+  "callouts-flash-out": {
+    "text": "フラッシュ入った",
+    "meaning": "フラッシュバンや視界を奪うアビリティが使われた"
+  },
+  "callouts-focus-fire": {
+    "text": "フォーカス合わせて",
+    "meaning": "全員で同じターゲットを撃つこと"
+  },
+  "callouts-focus-healer": {
+    "text": "ヒーラー狙って",
+    "meaning": "敵のヒーラーやサポートを先に攻撃すること"
+  },
+  "callouts-focus-sniper": {
+    "text": "スナイパー狙って",
+    "meaning": "敵のスナイパーを先に攻撃すること"
+  },
+  "callouts-footsteps": {
+    "text": "足音",
+    "meaning": "話し手が敵の移動音を聞いている"
+  },
+  "callouts-free-kill": {
+    "text": "フリーキル",
+    "meaning": "簡単に倒せる敵"
+  },
+  "callouts-free-objective": {
+    "text": "フリーオブジェクト",
+    "meaning": "少ない抵抗で目標を取れる状態"
+  },
+  "callouts-front-site": {
+    "text": "サイト手前",
+    "meaning": "敵が目標サイトの手前側にいる"
+  },
+  "callouts-good-timing": {
+    "text": "いいタイミング",
+    "meaning": "行動がちょうど良いタイミングで起きた"
+  },
+  "callouts-grenade-out": {
+    "text": "グレ投げた",
+    "meaning": "グレネードが投げられた"
+  },
+  "callouts-hallway": {
+    "text": "廊下",
+    "meaning": "敵や移動が廊下にある"
+  },
+  "callouts-hide": {
+    "text": "隠れて",
+    "meaning": "見つからないようにすること"
+  },
+  "callouts-high-ground": {
+    "text": "高所",
+    "meaning": "敵より上にある重要なポジション"
+  },
+  "callouts-hold-angle": {
+    "text": "アングル見て",
+    "meaning": "敵が来そうな道にエイムを置き続けること"
+  },
+  "callouts-hold-position": {
+    "text": "ポジション維持",
+    "meaning": "今の位置にとどまり、前に出すぎないこと"
+  },
+  "callouts-i-am-watching": {
+    "text": "見てる",
+    "meaning": "話し手が角度やエリアをカバーしている"
+  },
+  "callouts-i-hear-steps": {
+    "text": "足音聞こえる",
+    "meaning": "敵の足音が聞こえている"
+  },
+  "callouts-i-will-trade": {
+    "text": "トレードする",
+    "meaning": "話し手が後ろについて返しのキルを取るという意味"
+  },
+  "callouts-ignore-tank": {
+    "text": "タンク無視",
+    "meaning": "今は硬い敵にダメージを無駄にしないこと"
+  },
+  "callouts-long-range": {
+    "text": "遠距離",
+    "meaning": "敵が遠くにいる、または長い射線を見ている"
+  },
+  "callouts-low-ground": {
+    "text": "低所",
+    "meaning": "チームが敵の位置より下にいる"
+  },
+  "callouts-lucky-shot": {
+    "text": "ラッキーショット",
+    "meaning": "運の要素もあって当たったショット"
+  },
+  "callouts-messy-fight": {
+    "text": "ぐちゃぐちゃなファイト",
+    "meaning": "戦闘が整理されておらず危険だった"
+  },
+  "callouts-move-up": {
+    "text": "前に出て",
+    "meaning": "より前のポジションへ進むこと"
+  },
+  "callouts-nice-trade": {
+    "text": "ナイストレード",
+    "meaning": "味方が返しのキルをうまく取った"
+  },
+  "callouts-no-contact": {
+    "text": "接敵なし",
+    "meaning": "まだ敵が見つかっていない"
+  },
+  "callouts-no-problem": {
+    "text": "大丈夫",
+    "meaning": "味方が謝った時の友好的な返答"
+  },
+  "callouts-not-clear": {
+    "text": "クリアじゃない",
+    "meaning": "そのエリアが安全とは確認されていない"
+  },
+  "callouts-open-lane": {
+    "text": "レーン空いてる",
+    "meaning": "レーンや道が守られていない"
+  },
+  "callouts-out-of-zone": {
+    "text": "ゾーン外",
+    "meaning": "誰かが安全エリアの外にいる"
+  },
+  "callouts-peek-together": {
+    "text": "一緒にピーク",
+    "meaning": "2人以上で同時に敵を見ること"
+  },
+  "callouts-pinched": {
+    "text": "挟んだ",
+    "meaning": "敵が2方向から攻撃されている"
+  },
+  "callouts-play-fast": {
+    "text": "速く行こう",
+    "meaning": "スピードと圧力で敵の意表を突くこと"
+  },
+  "callouts-play-safe": {
+    "text": "安全に行こう",
+    "meaning": "リスクの高い戦闘を避けること"
+  },
+  "callouts-play-slow": {
+    "text": "ゆっくり行こう",
+    "meaning": "慎重に動き、情報を集めること"
+  },
+  "callouts-play-time": {
+    "text": "時間使って",
+    "meaning": "タイマーが味方するまで敵を遅らせること"
+  },
+  "callouts-reset": {
+    "text": "リセット",
+    "meaning": "崩れた戦闘を止めて作戦に戻ること"
+  },
+  "callouts-roof-clear": {
+    "text": "屋上クリア",
+    "meaning": "屋上エリアが安全そうな状態"
+  },
+  "callouts-run": {
+    "text": "走って",
+    "meaning": "素早く逃げること"
+  },
+  "callouts-safe-zone": {
+    "text": "安全地帯",
+    "meaning": "このエリアが安全ゾーン内にある"
+  },
+  "callouts-short-range": {
+    "text": "近距離",
+    "meaning": "敵が非常に近い"
+  },
+  "callouts-shotgun-close": {
+    "text": "近くにショットガン",
+    "meaning": "ショットガンを持った敵が近くにいる"
+  },
+  "callouts-site-clear": {
+    "text": "サイトクリア",
+    "meaning": "目標サイトは今のところ安全そうな状態"
+  },
+  "callouts-site-not-clear": {
+    "text": "サイト未クリア",
+    "meaning": "目標サイト内にまだ敵がいる可能性がある"
+  },
+  "callouts-smoke-out": {
+    "text": "スモーク出た",
+    "meaning": "スモークグレネードや視界を遮るアビリティが使われた"
+  },
+  "callouts-sniper-watching": {
+    "text": "スナイパー見てる",
+    "meaning": "スナイパーがこの角度を構えている"
+  },
+  "callouts-split-up": {
+    "text": "分かれて",
+    "meaning": "より多くのエリアをカバーしたり圧力を作るために分かれること"
+  },
+  "callouts-stairs": {
+    "text": "階段",
+    "meaning": "敵や移動が階段付近にある"
+  },
+  "callouts-stay-alive": {
+    "text": "生きて",
+    "meaning": "今は生存が重要なので死なないようにすること"
+  },
+  "callouts-stop-chasing": {
+    "text": "追うのやめて",
+    "meaning": "キルを追うより目標へ戻ること"
+  },
+  "callouts-storm-coming": {
+    "text": "ストーム来る",
+    "meaning": "ダメージを受けるゾーンが近づいている"
+  },
+  "callouts-swing-together": {
+    "text": "一緒にスイング",
+    "meaning": "一緒に体を出して敵と戦うこと"
+  },
+  "callouts-target-marked": {
+    "text": "ターゲットマーク済み",
+    "meaning": "優先ターゲットがマークされた"
+  },
+  "callouts-they-are-close": {
+    "text": "敵近い",
+    "meaning": "敵が近くにいる"
+  },
+  "callouts-they-are-far": {
+    "text": "敵遠い",
+    "meaning": "敵が遠くにいる"
+  },
+  "callouts-third-party": {
+    "text": "漁夫来た",
+    "meaning": "別チームが戦闘に入ってきている"
+  },
+  "callouts-throw": {
+    "text": "スロー",
+    "meaning": "有利を失ったり勝てる状況を落とすミスをすること"
+  },
+  "callouts-trade-him": {
+    "text": "トレードして",
+    "meaning": "味方が倒された後に返しのキルを取ること"
+  },
+  "callouts-trade-me": {
+    "text": "トレードお願い",
+    "meaning": "話し手を倒した敵をすぐ倒せるように準備しておくこと"
+  },
+  "callouts-trap-destroyed": {
+    "text": "トラップ壊した",
+    "meaning": "トラップが除去された"
+  },
+  "callouts-trap-here": {
+    "text": "ここトラップ",
+    "meaning": "この場所にトラップがある"
+  },
+  "callouts-tunnel-clear": {
+    "text": "トンネルクリア",
+    "meaning": "トンネルルートが安全そうな状態"
+  },
+  "callouts-unlucky": {
+    "text": "アンラッキー",
+    "meaning": "悪いプレイとは限らず、不運な結果だったという意味"
+  },
+  "callouts-wait": {
+    "text": "待って",
+    "meaning": "行動する前に一度止まること"
+  },
+  "callouts-watching-left": {
+    "text": "左見てる",
+    "meaning": "話し手が左側をカバーしている"
+  },
+  "callouts-watching-mid": {
+    "text": "ミッド見てる",
+    "meaning": "話し手が中央エリアをカバーしている"
+  },
+  "callouts-watching-right": {
+    "text": "右見てる",
+    "meaning": "話し手が右側をカバーしている"
+  },
+  "callouts-water": {
+    "text": "水辺",
+    "meaning": "敵や場所が水の近くにある"
+  },
+  "callouts-we-are-pinched": {
+    "text": "挟まれてる",
+    "meaning": "チームが敵の複数の射線に挟まれている"
+  },
+  "callouts-well-played": {
+    "text": "いいプレイ",
+    "meaning": "賢い、または上手いプレイへの敬意ある称賛"
+  },
+  "callouts-window": {
+    "text": "窓",
+    "meaning": "敵や射線が窓にある"
+  },
+  "callouts-with-me": {
+    "text": "一緒に来て",
+    "meaning": "話し手が味方に近くにいてほしいという意味"
+  },
+  "callouts-zone-closing": {
+    "text": "ゾーン縮小",
+    "meaning": "安全ゾーンが縮小、または移動している"
+  },
+  "danger-do-not-go-there": {
+    "text": "そこ行かないで",
+    "meaning": "そのエリアは危険"
+  },
+  "danger-enemy-ultimate-ready": {
+    "text": "敵ウルトある",
+    "meaning": "敵が最強アビリティを使える可能性が高い"
+  },
+  "danger-it-is-a-trap": {
+    "text": "罠だ",
+    "meaning": "敵が待ち構えている可能性が高い"
+  },
+  "danger-low-cover": {
+    "text": "遮蔽弱い",
+    "meaning": "遮蔽物が弱い、または不完全な状態"
+  },
+  "danger-they-have-sniper": {
+    "text": "敵スナイパーいる",
+    "meaning": "敵チームにスナイパーの脅威がある"
+  },
+  "instructions-capture-point": {
+    "text": "ポイント取って",
+    "meaning": "目標ポイントを制圧すること"
+  },
+  "instructions-check-behind": {
+    "text": "後ろ確認",
+    "meaning": "チームの後ろに敵がいないか確認すること"
+  },
+  "instructions-check-left": {
+    "text": "左確認",
+    "meaning": "左側に敵がいないか見ること"
+  },
+  "instructions-check-right": {
+    "text": "右確認",
+    "meaning": "右側に敵がいないか見ること"
+  },
+  "instructions-clear-corners": {
+    "text": "角クリアして",
+    "meaning": "入る前に隠れ場所を確認すること"
+  },
+  "instructions-contest-point": {
+    "text": "ポイント触って",
+    "meaning": "敵の進行を止めるために目標上に乗ること"
+  },
+  "instructions-defuse-now": {
+    "text": "今解除",
+    "meaning": "すぐに解除を始めること"
+  },
+  "instructions-do-not-feed": {
+    "text": "フィードしないで",
+    "meaning": "何度も倒されて敵に有利を与えないこと"
+  },
+  "instructions-do-not-split": {
+    "text": "分かれないで",
+    "meaning": "チームから離れないようにすること"
+  },
+  "instructions-do-not-waste-it": {
+    "text": "無駄にしないで",
+    "meaning": "資源やアビリティを慎重に使うこと"
+  },
+  "instructions-go-first": {
+    "text": "先に行って",
+    "meaning": "他の味方より先に入る、または仕掛けること"
+  },
+  "instructions-i-go-first": {
+    "text": "自分が先に行く",
+    "meaning": "話し手が先に入る、または仕掛けるという意味"
+  },
+  "instructions-lead-the-way": {
+    "text": "先導して",
+    "meaning": "味方が先に行くべきという意味"
+  },
+  "instructions-mute-him": {
+    "text": "ミュートして",
+    "meaning": "VCやテキストチャットで迷惑なプレイヤーを黙らせること"
+  },
+  "instructions-plant-now": {
+    "text": "今設置",
+    "meaning": "今すぐボムや目標を設置すること"
+  },
+  "instructions-report-after": {
+    "text": "通報は後で",
+    "meaning": "ラウンド中ではなく試合後に通報すること"
+  },
+  "instructions-save-ultimate": {
+    "text": "ウルト温存",
+    "meaning": "最強アビリティをまだ使わないこと"
+  },
+  "instructions-stack-here": {
+    "text": "ここに固まって",
+    "meaning": "このエリアに複数人で集まること"
+  },
+  "instructions-stack-left": {
+    "text": "左に固まって",
+    "meaning": "左側にプレイヤーを集めること"
+  },
+  "instructions-stack-right": {
+    "text": "右に固まって",
+    "meaning": "右側にプレイヤーを集めること"
+  },
+  "instructions-stop-peeking": {
+    "text": "ピークやめて",
+    "meaning": "敵のエイムに体を出すのをやめること"
+  },
+  "instructions-touch-point": {
+    "text": "ポイント触って",
+    "meaning": "タイマーが終わる前に目標に触れること"
+  },
+  "instructions-use-flash": {
+    "text": "フラッシュ使って",
+    "meaning": "入る前に視界を奪うアビリティを使うこと"
+  },
+  "instructions-use-grenade": {
+    "text": "グレ使って",
+    "meaning": "爆発物やユーティリティグレネードを投げること"
+  },
+  "instructions-use-smoke": {
+    "text": "スモーク使って",
+    "meaning": "視界を遮るためにスモークを置くこと"
+  },
+  "instructions-use-ultimate": {
+    "text": "ウルト使って",
+    "meaning": "最強アビリティを今使うこと"
+  },
+  "objective-capture-the-flag": {
+    "text": "旗を取って",
+    "meaning": "敵の旗目標を取ること"
+  },
+  "objective-escort-the-payload": {
+    "text": "ペイロード護衛",
+    "meaning": "ペイロードの近くにいて進ませること"
+  },
+  "objective-hold-the-point": {
+    "text": "ポイント維持",
+    "meaning": "目標上に残って守ること"
+  },
+  "objective-leave-the-point": {
+    "text": "ポイント離れて",
+    "meaning": "必要に応じて目標から離れること"
+  },
+  "objective-return-the-flag": {
+    "text": "旗を戻して",
+    "meaning": "旗を持ち帰る、または自分たちの旗を取り戻すこと"
+  },
+  "objective-stop-the-payload": {
+    "text": "ペイロード止めて",
+    "meaning": "敵がペイロードを進めるのを防ぐこと"
+  },
+  "teamwork-do-not-blame": {
+    "text": "責めないで",
+    "meaning": "試合中に味方を責めるのを避けること"
+  },
+  "teamwork-focus-next": {
+    "text": "次に集中",
+    "meaning": "切り替えて次のプレイに備えること"
+  },
+  "teamwork-good-effort": {
+    "text": "いい努力",
+    "meaning": "味方の挑戦に対する前向きな反応"
+  },
+  "teamwork-great-call": {
+    "text": "ナイスコール",
+    "meaning": "役立つ報告や判断を褒める言葉"
+  },
+  "teamwork-great-save": {
+    "text": "ナイスセーブ",
+    "meaning": "負けや危険を防いだことを褒める言葉"
+  },
+  "teamwork-great-shot": {
+    "text": "ナイスショット",
+    "meaning": "正確なエイムを褒める言葉"
+  },
+  "teamwork-i-trust-you": {
+    "text": "任せる",
+    "meaning": "プレイしようとしている味方を励ます言葉"
+  },
+  "teamwork-i-will-bait-for-you": {
+    "text": "ベイトする",
+    "meaning": "話し手が注意を引き、味方がトレードできるようにする"
+  },
+  "teamwork-i-will-cover-you": {
+    "text": "カバーする",
+    "meaning": "話し手が味方を守るという意味"
+  },
+  "teamwork-i-will-heal-you": {
+    "text": "ヒールする",
+    "meaning": "話し手が味方を回復するという意味"
+  },
+  "teamwork-i-will-watch-flank": {
+    "text": "裏見る",
+    "meaning": "話し手が後ろのルートをカバーするという意味"
+  },
+  "teamwork-keep-comms-clear": {
+    "text": "報告だけにして",
+    "meaning": "今は役立つ情報だけ話すこと"
+  },
+  "teamwork-let-me-go-first": {
+    "text": "自分が先に行く",
+    "meaning": "話し手が先に入る役を引き受ける"
+  },
+  "teamwork-nice-aim": {
+    "text": "ナイスエイム",
+    "meaning": "射撃の上手さを褒める言葉"
+  },
+  "teamwork-nice-clutch": {
+    "text": "ナイスクラッチ",
+    "meaning": "プレッシャー下で勝ち切ったことを褒める言葉"
+  },
+  "teamwork-nice-movement": {
+    "text": "ナイスムーブ",
+    "meaning": "移動の上手さを褒める言葉"
+  },
+  "teamwork-nice-utility": {
+    "text": "ナイスユーティリティ",
+    "meaning": "アビリティやアイテムの使い方が良かったことを褒める言葉"
+  },
+  "teamwork-one-round-at-a-time": {
+    "text": "1ラウンドずつ",
+    "meaning": "試合全体ではなく次のラウンドに集中すること"
+  },
+  "teamwork-play-together": {
+    "text": "一緒にプレイしよう",
+    "meaning": "グループとして連携すること"
+  },
+  "teamwork-reset-mental": {
+    "text": "メンタルリセット",
+    "meaning": "ティルトを止めて気持ちを切り替えること"
+  },
+  "teamwork-stay-calm": {
+    "text": "落ち着いて",
+    "meaning": "パニックになったりティルトしたりしないこと"
+  },
+  "teamwork-take-my-loot": {
+    "text": "自分のアイテム取って",
+    "meaning": "話し手が自分のアイテムを味方に渡すという意味"
+  },
+  "teamwork-take-my-weapon": {
+    "text": "自分の武器取って",
+    "meaning": "話し手が自分の武器を味方に渡すという意味"
+  },
+  "teamwork-trade-together": {
+    "text": "一緒にトレード",
+    "meaning": "返しのキルを取れるように連携すること"
+  },
+  "teamwork-wait-for-team": {
+    "text": "味方待って",
+    "meaning": "味方が到着する前に戦わないこと"
+  },
+  "teamwork-we-can-win": {
+    "text": "まだ勝てる",
+    "meaning": "試合はまだ勝てるとチームを励ます言葉"
+  },
+  "teamwork-we-need-everyone": {
+    "text": "全員必要",
+    "meaning": "全員そろわずに戦うべきではないという意味"
+  },
+  "teamwork-you-got-this": {
+    "text": "いけるよ",
+    "meaning": "難しい場面の前や最中に味方を励ます言葉"
+  },
+  "strategy-anchor-site": {
+    "text": "サイトアンカー",
+    "meaning": "目標サイトに残って守ること"
+  },
+  "strategy-bait-utility": {
+    "text": "ユーティリティを吐かせる",
+    "meaning": "本命の攻めの前に敵のアビリティを使わせること"
+  },
+  "strategy-cancel-the-push": {
+    "text": "プッシュ中止",
+    "meaning": "攻めを止めて作戦を変えること"
+  },
+  "strategy-commit-now": {
+    "text": "今コミット",
+    "meaning": "チームの資源を使って作戦を完全に実行すること"
+  },
+  "strategy-cross-setup": {
+    "text": "クロスセットアップ",
+    "meaning": "互いに支え合う2つの射線を作ること"
+  },
+  "strategy-cut-rotation": {
+    "text": "ローテカット",
+    "meaning": "敵がサイト間を移動するのを止めること"
+  },
+  "strategy-damage-advantage": {
+    "text": "ダメージ有利",
+    "meaning": "敵の方がチームより弱っている状態"
+  },
+  "strategy-deny-vision": {
+    "text": "視界を切る",
+    "meaning": "敵の情報を遮断、または取り除くこと"
+  },
+  "strategy-do-not-overcommit": {
+    "text": "オーバーコミットしないで",
+    "meaning": "危険なプレイに資源を使いすぎないこと"
+  },
+  "strategy-economy-advantage": {
+    "text": "エコノミー有利",
+    "meaning": "チームの資源や武器が敵より良い状態"
+  },
+  "strategy-give-map-control": {
+    "text": "マップコントロール渡す",
+    "meaning": "意図的に敵へスペースを与えること"
+  },
+  "strategy-hold-rotation": {
+    "text": "ローテ見て",
+    "meaning": "敵がローテートに使う道を監視すること"
+  },
+  "strategy-man-advantage": {
+    "text": "人数有利",
+    "meaning": "味方の生存人数が敵より多い状態"
+  },
+  "strategy-man-disadvantage": {
+    "text": "人数不利",
+    "meaning": "味方の生存人数が敵より少ない状態"
+  },
+  "strategy-numbers-advantage": {
+    "text": "数的有利",
+    "meaning": "その戦闘に参加している味方の人数が多い状態"
+  },
+  "strategy-play-for-late-game": {
+    "text": "終盤を見る",
+    "meaning": "行動を遅らせて最終局面に備えること"
+  },
+  "strategy-play-retake": {
+    "text": "リテイクで行こう",
+    "meaning": "一度サイトを渡してから取り返す準備をすること"
+  },
+  "strategy-pressure-side-lane": {
+    "text": "サイドレーンに圧をかけて",
+    "meaning": "横のルートに脅威を作ること"
+  },
+  "strategy-save-round": {
+    "text": "セーブラウンド",
+    "meaning": "このラウンドは資源を使わないようにすること"
+  },
+  "strategy-stack-objective": {
+    "text": "目標に寄せて",
+    "meaning": "目標付近に多くのプレイヤーを置くこと"
+  },
+  "strategy-time-advantage": {
+    "text": "時間有利",
+    "meaning": "タイマーが味方に有利な状態"
+  },
+  "strategy-trade-setup": {
+    "text": "トレード配置",
+    "meaning": "味方が返しのキルを取れるように位置取ること"
+  },
+  "strategy-ultimate-advantage": {
+    "text": "ウルト有利",
+    "meaning": "味方チームの方が強いアルティメットを使える状態"
+  },
+  "economy-do-not-force": {
+    "text": "フォースしないで",
+    "meaning": "資源が少ない時に買いすぎないこと"
+  },
+  "economy-force-together": {
+    "text": "みんなでフォース",
+    "meaning": "全員でリスクのある買いに合わせること"
+  },
+  "economy-they-have-money": {
+    "text": "敵お金ある",
+    "meaning": "敵チームが強い装備を買える状態"
+  },
+  "economy-we-can-buy-next": {
+    "text": "次買える",
+    "meaning": "次のラウンドには十分な資源があるはずという意味"
   },
   "antiToxic-clear-comms-please": {
-    "text": "クリア コール, お願い",
-    "meaning": "ゲームでの意味: クリア コール, お願い"
-  },
-  "antiToxic-let-us-reset": {
-    "text": "させて 味方 リセット",
-    "meaning": "ゲームでの意味: させて 味方 リセット"
-  },
-  "antiToxic-play-safe-next": {
-    "text": "プレイ 安全に 次",
-    "meaning": "ゲームでの意味: プレイ 安全に 次"
-  },
-  "antiToxic-wait-for-the-team-next-time": {
-    "text": "待って のため チーム 次 時間",
-    "meaning": "ゲームでの意味: 待って のため チーム 次 時間"
-  },
-  "antiToxic-good-try-next-round": {
-    "text": "良い トライ, 次 ラウンド",
-    "meaning": "ゲームでの意味: 良い トライ, 次 ラウンド"
-  },
-  "antiToxic-we-need-better-spacing": {
-    "text": "味方 必要 改善 間隔",
-    "meaning": "ゲームでの意味: 味方 必要 改善 間隔"
-  },
-  "antiToxic-let-us-trade-better": {
-    "text": "させて 味方 トレード 改善",
-    "meaning": "ゲームでの意味: させて 味方 トレード 改善"
-  },
-  "antiToxic-save-your-utility": {
-    "text": "温存 あなたの ユーティリティ",
-    "meaning": "ゲームでの意味: 温存 あなたの ユーティリティ"
-  },
-  "antiToxic-use-comms-not-blame": {
-    "text": "使って コール, 未確認 責める",
-    "meaning": "ゲームでの意味: 使って コール, 未確認 責める"
+    "text": "報告をクリアにお願いします",
+    "meaning": "味方にコミュニケーションを集中して有用に保つよう頼む表現"
   },
   "antiToxic-focus-on-objective": {
-    "text": "フォーカス で 目標",
-    "meaning": "ゲームでの意味: フォーカス で 目標"
+    "text": "目標に集中しよう",
+    "meaning": "勝利条件にチームの意識を戻す言葉"
   },
-  "antiToxic-we-still-have-time": {
-    "text": "味方 まだ 持っている 時間",
-    "meaning": "ゲームでの意味: 味方 まだ 持っている 時間"
-  },
-  "antiToxic-no-worries": {
-    "text": "なし 心配なし",
-    "meaning": "ゲームでの意味: なし 心配なし"
+  "antiToxic-good-try-next-round": {
+    "text": "ナイストライ、次行こう",
+    "meaning": "ラウンドを落とした後にチームを励ます言葉"
   },
   "antiToxic-it-happens": {
-    "text": "それ よくある",
-    "meaning": "ゲームでの意味: それ よくある"
-  },
-  "antiToxic-next-one-is-ours": {
-    "text": "次 1人 味方の",
-    "meaning": "ゲームでの意味: 次 1人 味方の"
+    "text": "そういう時もある",
+    "meaning": "ミスを責めずに受け流して次へ進む表現"
   },
   "antiToxic-keep-it-positive": {
-    "text": "キープ それ ポジティブ",
-    "meaning": "ゲームでの意味: キープ それ ポジティブ"
+    "text": "前向きに行こう",
+    "meaning": "味方にトキシックな発言を避けるよう促す言葉"
+  },
+  "antiToxic-let-us-reset": {
+    "text": "一回リセットしよう",
+    "meaning": "チームのメンタルを落ち着いて立て直す言葉"
+  },
+  "antiToxic-let-us-trade-better": {
+    "text": "もっとトレード意識しよう",
+    "meaning": "返しのキルの連携を良くしようと提案する言葉"
+  },
+  "antiToxic-next-one-is-ours": {
+    "text": "次は取れる",
+    "meaning": "負けた後にチームを励ます言葉"
+  },
+  "antiToxic-no-worries": {
+    "text": "気にしないで",
+    "meaning": "味方のミスに優しく返す言葉"
+  },
+  "antiToxic-play-safe-next": {
+    "text": "次は安全に行こう",
+    "meaning": "誰かを責めずに、より安全な作戦を提案する言葉"
+  },
+  "antiToxic-save-your-utility": {
+    "text": "ユーティリティ温存しよう",
+    "meaning": "味方を侮辱せずにアビリティを残すよう頼む表現"
+  },
+  "antiToxic-use-comms-not-blame": {
+    "text": "責めずに報告しよう",
+    "meaning": "言い争いではなく役立つ情報を共有するよう促す言葉"
+  },
+  "antiToxic-wait-for-the-team-next-time": {
+    "text": "次は味方を待とう",
+    "meaning": "より良いタイミングを丁寧に求める表現"
+  },
+  "antiToxic-we-need-better-spacing": {
+    "text": "間隔をもっと良くしよう",
+    "meaning": "ポジショニングについて建設的に提案する言葉"
+  },
+  "antiToxic-we-still-have-time": {
+    "text": "まだ時間ある",
+    "meaning": "プレイする時間が残っている時にチームを落ち着かせる言葉"
   }
 }

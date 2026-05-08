@@ -13,7 +13,7 @@ import {
 import PhraseCard from '../components/PhraseCard';
 import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
-import { categoryMetadata } from '../data/categories';
+import { categoryMetadata, categoryOrder } from '../data/categories';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
 import { showInterstitialBefore } from '../features/ads/mobileAds';
 import AddPhraseModal from '../features/phrases/AddPhraseModal';
@@ -126,10 +126,11 @@ function PracticeScreen() {
     Partial<Record<CategoryFilter, { width: number; x: number }>>
   >({});
 
-  const availableCategories = useMemo(
-    () => Array.from(new Set(phrases.map(item => item.category))),
-    [phrases],
-  ) as PhraseCategory[];
+  const availableCategories = useMemo(() => {
+    const availableCategorySet = new Set(phrases.map(item => item.category));
+
+    return categoryOrder.filter(category => availableCategorySet.has(category));
+  }, [phrases]);
   const categoryOptions = useMemo<CategoryFilter[]>(
     () => ['all', ...availableCategories],
     [availableCategories],

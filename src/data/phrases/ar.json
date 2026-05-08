@@ -1,1674 +1,1922 @@
 {
   "callouts-gg": {
-    "text": "لعبة حلوة",
-    "meaning": "المعنى في اللعب: لعبة حلوة"
-  },
-  "callouts-glhf": {
-    "text": "حظ موفق واستمتعوا",
-    "meaning": "المعنى في اللعب: حظ موفق واستمتعوا"
-  },
-  "callouts-nice": {
-    "text": "حلو!",
-    "meaning": "المعنى في اللعب: حلو!"
-  },
-  "callouts-thanks": {
-    "text": "شكرا",
-    "meaning": "المعنى في اللعب: شكرا"
-  },
-  "callouts-sorry": {
-    "text": "آسف",
-    "meaning": "المعنى في اللعب: آسف"
-  },
-  "callouts-my-bad": {
-    "text": "غلطتي",
-    "meaning": "المعنى في اللعب: غلطتي"
-  },
-  "callouts-one-more": {
-    "text": "واحد آخر",
-    "meaning": "المعنى في اللعب: واحد آخر"
-  },
-  "callouts-i-am-down": {
-    "text": "أنا غير متاحة",
-    "meaning": "المعنى في اللعب: أنا غير متاحة"
-  },
-  "callouts-i-am-low": {
-    "text": "أنا ضعيف",
-    "meaning": "المعنى في اللعب: أنا ضعيف"
-  },
-  "callouts-enemy-spotted": {
-    "text": "تم رصد عدو",
-    "meaning": "المعنى في اللعب: تم رصد عدو"
-  },
-  "callouts-enemy-here": {
-    "text": "عدو هنا",
-    "meaning": "المعنى في اللعب: عدو هنا"
-  },
-  "callouts-enemy-there": {
-    "text": "عدو هناك",
-    "meaning": "المعنى في اللعب: عدو هناك"
-  },
-  "callouts-two-enemies-here": {
-    "text": "عدوان أعداء هنا",
-    "meaning": "المعنى في اللعب: عدوان أعداء هنا"
-  },
-  "callouts-three-enemies-here": {
-    "text": "ثلاثة أعداء أعداء هنا",
-    "meaning": "المعنى في اللعب: ثلاثة أعداء أعداء هنا"
-  },
-  "callouts-full-team-here": {
-    "text": "الفريق كامل فريق هنا",
-    "meaning": "المعنى في اللعب: الفريق كامل فريق هنا"
-  },
-  "callouts-behind-you": {
-    "text": "خلفك أنت!",
-    "meaning": "المعنى في اللعب: خلفك أنت!"
-  },
-  "callouts-left-side": {
-    "text": "يسار جانب!",
-    "meaning": "المعنى في اللعب: يسار جانب!"
-  },
-  "callouts-right-side": {
-    "text": "يمين جانب!",
-    "meaning": "المعنى في اللعب: يمين جانب!"
-  },
-  "callouts-above-us": {
-    "text": "فوقنا لنا",
-    "meaning": "المعنى في اللعب: فوقنا لنا"
-  },
-  "callouts-below-us": {
-    "text": "تحتنا لنا",
-    "meaning": "المعنى في اللعب: تحتنا لنا"
-  },
-  "callouts-in-front": {
-    "text": "في أمام",
-    "meaning": "المعنى في اللعب: في أمام"
-  },
-  "callouts-back-site": {
-    "text": "خلف الموقع",
-    "meaning": "المعنى في اللعب: خلف الموقع"
-  },
-  "callouts-front-site": {
-    "text": "أمام الموقع",
-    "meaning": "المعنى في اللعب: أمام الموقع"
-  },
-  "callouts-default-spot": {
-    "text": "المكان المعتاد مكان",
-    "meaning": "المعنى في اللعب: المكان المعتاد مكان"
-  },
-  "callouts-corner": {
-    "text": "زاوية",
-    "meaning": "المعنى في اللعب: زاوية"
-  },
-  "callouts-close-corner": {
-    "text": "قريب زاوية",
-    "meaning": "المعنى في اللعب: قريب زاوية"
-  },
-  "callouts-long-range": {
-    "text": "بعيد مدى",
-    "meaning": "المعنى في اللعب: بعيد مدى"
-  },
-  "callouts-short-range": {
-    "text": "قريب مدى",
-    "meaning": "المعنى في اللعب: قريب مدى"
-  },
-  "callouts-mid": {
-    "text": "الوسط",
-    "meaning": "المعنى في اللعب: الوسط"
-  },
-  "callouts-top-mid": {
-    "text": "أعلى الوسط",
-    "meaning": "المعنى في اللعب: أعلى الوسط"
-  },
-  "callouts-bottom-mid": {
-    "text": "أسفل الوسط",
-    "meaning": "المعنى في اللعب: أسفل الوسط"
-  },
-  "callouts-spawn": {
-    "text": "نقطة البداية",
-    "meaning": "المعنى في اللعب: نقطة البداية"
-  },
-  "callouts-our-spawn": {
-    "text": "لنا نقطة البداية",
-    "meaning": "المعنى في اللعب: لنا نقطة البداية"
-  },
-  "callouts-their-spawn": {
-    "text": "لهم نقطة البداية",
-    "meaning": "المعنى في اللعب: لهم نقطة البداية"
-  },
-  "callouts-flank": {
-    "text": "التفاف",
-    "meaning": "المعنى في اللعب: التفاف"
-  },
-  "callouts-watch-flank": {
-    "text": "راقب التفاف",
-    "meaning": "المعنى في اللعب: راقب التفاف"
-  },
-  "callouts-rotating": {
-    "text": "ينتقلون",
-    "meaning": "المعنى في اللعب: ينتقلون"
-  },
-  "callouts-they-rotated": {
-    "text": "هم انتقلوا",
-    "meaning": "المعنى في اللعب: هم انتقلوا"
-  },
-  "callouts-fake-rotate": {
-    "text": "دوران تمويهي",
-    "meaning": "المعنى في اللعب: دوران تمويهي"
-  },
-  "callouts-site-clear": {
-    "text": "الموقع آمن",
-    "meaning": "المعنى في اللعب: الموقع آمن"
-  },
-  "callouts-site-not-clear": {
-    "text": "الموقع غير آمن",
-    "meaning": "المعنى في اللعب: الموقع غير آمن"
-  },
-  "callouts-need-backup": {
-    "text": "أحتاج دعم",
-    "meaning": "المعنى في اللعب: أحتاج دعم"
-  },
-  "callouts-need-help": {
-    "text": "أحتاج مساعدة",
-    "meaning": "المعنى في اللعب: أحتاج مساعدة"
-  },
-  "callouts-help-me": {
-    "text": "مساعدة لي",
-    "meaning": "المعنى في اللعب: مساعدة لي"
-  },
-  "callouts-i-need-healing": {
-    "text": "أنا أحتاج شفاء",
-    "meaning": "المعنى في اللعب: أنا أحتاج شفاء"
-  },
-  "callouts-need-ammo": {
-    "text": "أحتاج ذخيرة",
-    "meaning": "المعنى في اللعب: أحتاج ذخيرة"
-  },
-  "callouts-out-of-ammo": {
-    "text": "نفدت ذخيرة",
-    "meaning": "المعنى في اللعب: نفدت ذخيرة"
-  },
-  "callouts-reloading": {
-    "text": "أعيد التلقيم",
-    "meaning": "المعنى في اللعب: أعيد التلقيم"
-  },
-  "callouts-cover-me": {
-    "text": "غطني لي",
-    "meaning": "المعنى في اللعب: غطني لي"
-  },
-  "callouts-i-got-you": {
-    "text": "أنا مسكت أنت",
-    "meaning": "المعنى في اللعب: أنا مسكت أنت"
-  },
-  "callouts-i-am-watching": {
-    "text": "أنا أراقب",
-    "meaning": "المعنى في اللعب: أنا أراقب"
-  },
-  "callouts-watching-left": {
-    "text": "أراقب يسار",
-    "meaning": "المعنى في اللعب: أراقب يسار"
-  },
-  "callouts-watching-right": {
-    "text": "أراقب يمين",
-    "meaning": "المعنى في اللعب: أراقب يمين"
-  },
-  "callouts-watching-mid": {
-    "text": "أراقب الوسط",
-    "meaning": "المعنى في اللعب: أراقب الوسط"
-  },
-  "callouts-clear-left": {
-    "text": "آمن يسار",
-    "meaning": "المعنى في اللعب: آمن يسار"
-  },
-  "callouts-clear-right": {
-    "text": "آمن يمين",
-    "meaning": "المعنى في اللعب: آمن يمين"
-  },
-  "callouts-clear-mid": {
-    "text": "آمن الوسط",
-    "meaning": "المعنى في اللعب: آمن الوسط"
-  },
-  "callouts-not-clear": {
-    "text": "غير آمن",
-    "meaning": "المعنى في اللعب: غير آمن"
-  },
-  "callouts-contact": {
-    "text": "اشتباك",
-    "meaning": "المعنى في اللعب: اشتباك"
-  },
-  "callouts-no-contact": {
-    "text": "لا اشتباك",
-    "meaning": "المعنى في اللعب: لا اشتباك"
-  },
-  "callouts-footsteps": {
-    "text": "خطوات",
-    "meaning": "المعنى في اللعب: خطوات"
-  },
-  "callouts-i-hear-steps": {
-    "text": "أنا أسمع خطوات",
-    "meaning": "المعنى في اللعب: أنا أسمع خطوات"
-  },
-  "callouts-they-are-close": {
-    "text": "هم قريب",
-    "meaning": "المعنى في اللعب: هم قريب"
-  },
-  "callouts-they-are-far": {
-    "text": "هم بعيد",
-    "meaning": "المعنى في اللعب: هم بعيد"
-  },
-  "callouts-sniper-watching": {
-    "text": "قناص أراقب",
-    "meaning": "المعنى في اللعب: قناص أراقب"
-  },
-  "callouts-shotgun-close": {
-    "text": "شوتغن قريب",
-    "meaning": "المعنى في اللعب: شوتغن قريب"
-  },
-  "callouts-grenade-out": {
-    "text": "قنبلة نفدت",
-    "meaning": "المعنى في اللعب: قنبلة نفدت"
-  },
-  "callouts-flash-out": {
-    "text": "فلاش نفدت",
-    "meaning": "المعنى في اللعب: فلاش نفدت"
-  },
-  "callouts-smoke-out": {
-    "text": "دخان نفدت",
-    "meaning": "المعنى في اللعب: دخان نفدت"
-  },
-  "callouts-ultimate-ready": {
-    "text": "الألتمت جاهز",
-    "meaning": "المعنى في اللعب: الألتمت جاهز"
-  },
-  "callouts-no-ultimate": {
-    "text": "لا الألتمت",
-    "meaning": "المعنى في اللعب: لا الألتمت"
-  },
-  "callouts-ability-ready": {
-    "text": "قدرة جاهز",
-    "meaning": "المعنى في اللعب: قدرة جاهز"
-  },
-  "callouts-ability-down": {
-    "text": "قدرة غير متاحة",
-    "meaning": "المعنى في اللعب: قدرة غير متاحة"
-  },
-  "callouts-cooldown": {
-    "text": "تبريد",
-    "meaning": "المعنى في اللعب: تبريد"
-  },
-  "callouts-ping-it": {
-    "text": "علّم هو",
-    "meaning": "المعنى في اللعب: علّم هو"
-  },
-  "callouts-mark-the-enemy": {
-    "text": "علّم عدو",
-    "meaning": "المعنى في اللعب: علّم عدو"
-  },
-  "callouts-i-marked-it": {
-    "text": "أنا معلّم هو",
-    "meaning": "المعنى في اللعب: أنا معلّم هو"
-  },
-  "callouts-check-map": {
-    "text": "افحص الخريطة",
-    "meaning": "المعنى في اللعب: افحص الخريطة"
-  },
-  "callouts-look-at-ping": {
-    "text": "انظر في علّم",
-    "meaning": "المعنى في اللعب: انظر في علّم"
-  },
-  "callouts-enemy-missing": {
-    "text": "عدو اختفى",
-    "meaning": "المعنى في اللعب: عدو اختفى"
-  },
-  "callouts-all-missing": {
-    "text": "الكل اختفى",
-    "meaning": "المعنى في اللعب: الكل اختفى"
-  },
-  "callouts-careful": {
-    "text": "انتبه",
-    "meaning": "المعنى في اللعب: انتبه"
-  },
-  "callouts-wait": {
-    "text": "انتظر",
-    "meaning": "المعنى في اللعب: انتظر"
-  },
-  "callouts-go-now": {
-    "text": "اذهب الآن",
-    "meaning": "المعنى في اللعب: اذهب الآن"
-  },
-  "callouts-push-now": {
-    "text": "ادفع الآن",
-    "meaning": "المعنى في اللعب: ادفع الآن"
-  },
-  "callouts-fall-back": {
-    "text": "انسحب خلف",
-    "meaning": "المعنى في اللعب: انسحب خلف"
-  },
-  "callouts-run": {
-    "text": "اهرب",
-    "meaning": "المعنى في اللعب: اهرب"
-  },
-  "callouts-hide": {
-    "text": "اختبئ",
-    "meaning": "المعنى في اللعب: اختبئ"
-  },
-  "callouts-do-not-peek": {
-    "text": "لا غير اكشف",
-    "meaning": "المعنى في اللعب: لا غير اكشف"
-  },
-  "callouts-peek-together": {
-    "text": "اكشف معا",
-    "meaning": "المعنى في اللعب: اكشف معا"
-  },
-  "callouts-swing-together": {
-    "text": "اخرج معا",
-    "meaning": "المعنى في اللعب: اخرج معا"
-  },
-  "callouts-hold-angle": {
-    "text": "امسك زاوية",
-    "meaning": "المعنى في اللعب: امسك زاوية"
-  },
-  "callouts-hold-position": {
-    "text": "امسك الموقع",
-    "meaning": "المعنى في اللعب: امسك الموقع"
-  },
-  "callouts-move-up": {
-    "text": "تقدم فوق",
-    "meaning": "المعنى في اللعب: تقدم فوق"
-  },
-  "callouts-come-back": {
-    "text": "ارجع خلف",
-    "meaning": "المعنى في اللعب: ارجع خلف"
-  },
-  "callouts-group-up": {
-    "text": "تجمعوا فوق",
-    "meaning": "المعنى في اللعب: تجمعوا فوق"
-  },
-  "callouts-split-up": {
-    "text": "تفرقوا فوق",
-    "meaning": "المعنى في اللعب: تفرقوا فوق"
-  },
-  "callouts-stay-alive": {
-    "text": "ابقَ حي",
-    "meaning": "المعنى في اللعب: ابقَ حي"
-  },
-  "callouts-play-time": {
-    "text": "العب وقت",
-    "meaning": "المعنى في اللعب: العب وقت"
-  },
-  "callouts-play-safe": {
-    "text": "العب بأمان",
-    "meaning": "المعنى في اللعب: العب بأمان"
-  },
-  "callouts-play-slow": {
-    "text": "العب ببطء",
-    "meaning": "المعنى في اللعب: العب ببطء"
-  },
-  "callouts-play-fast": {
-    "text": "العب بسرعة",
-    "meaning": "المعنى في اللعب: العب بسرعة"
-  },
-  "callouts-do-not-chase": {
-    "text": "لا غير تطارد",
-    "meaning": "المعنى في اللعب: لا غير تطارد"
-  },
-  "callouts-stop-chasing": {
-    "text": "توقف المطاردة",
-    "meaning": "المعنى في اللعب: توقف المطاردة"
-  },
-  "callouts-trade-me": {
-    "text": "بادل لي",
-    "meaning": "المعنى في اللعب: بادل لي"
-  },
-  "callouts-trade-him": {
-    "text": "بادل هو",
-    "meaning": "المعنى في اللعب: بادل هو"
-  },
-  "callouts-i-will-trade": {
-    "text": "أنا سوف بادل",
-    "meaning": "المعنى في اللعب: أنا سوف بادل"
-  },
-  "callouts-nice-trade": {
-    "text": "ممتاز بادل",
-    "meaning": "المعنى في اللعب: ممتاز بادل"
-  },
-  "callouts-bait-and-switch": {
-    "text": "استدرج و بدّل",
-    "meaning": "المعنى في اللعب: استدرج و بدّل"
-  },
-  "callouts-crossfire": {
-    "text": "نيران متقاطعة",
-    "meaning": "المعنى في اللعب: نيران متقاطعة"
-  },
-  "callouts-pinched": {
-    "text": "محاصرون",
-    "meaning": "المعنى في اللعب: محاصرون"
-  },
-  "callouts-we-are-pinched": {
-    "text": "نحن محاصرون",
-    "meaning": "المعنى في اللعب: نحن محاصرون"
-  },
-  "callouts-third-party": {
-    "text": "طرف ثالث فريق",
-    "meaning": "المعنى في اللعب: طرف ثالث فريق"
-  },
-  "callouts-reset": {
-    "text": "إعادة تنظيم",
-    "meaning": "المعنى في اللعب: إعادة تنظيم"
-  },
-  "callouts-regroup": {
-    "text": "تجمعوا",
-    "meaning": "المعنى في اللعب: تجمعوا"
-  },
-  "callouts-focus-fire": {
-    "text": "ركزوا النار",
-    "meaning": "المعنى في اللعب: ركزوا النار"
-  },
-  "callouts-target-marked": {
-    "text": "هدف معلّم",
-    "meaning": "المعنى في اللعب: هدف معلّم"
-  },
-  "callouts-focus-healer": {
-    "text": "ركزوا المعالج",
-    "meaning": "المعنى في اللعب: ركزوا المعالج"
-  },
-  "callouts-focus-sniper": {
-    "text": "ركزوا قناص",
-    "meaning": "المعنى في اللعب: ركزوا قناص"
-  },
-  "callouts-ignore-tank": {
-    "text": "تجاهل الدبابة",
-    "meaning": "المعنى في اللعب: تجاهل الدبابة"
-  },
-  "callouts-shield-broken": {
-    "text": "درع مكسور",
-    "meaning": "المعنى في اللعب: درع مكسور"
-  },
-  "callouts-armor-cracked": {
-    "text": "درع مكسور",
-    "meaning": "المعنى في اللعب: درع مكسور"
-  },
-  "callouts-one-shot": {
-    "text": "واحد طلقة",
-    "meaning": "المعنى في اللعب: واحد طلقة"
-  },
-  "callouts-tagged-him": {
-    "text": "أصبته هو",
-    "meaning": "المعنى في اللعب: أصبته هو"
-  },
-  "callouts-hit-for-fifty": {
-    "text": "أصبت لـ خمسين",
-    "meaning": "المعنى في اللعب: أصبت لـ خمسين"
-  },
-  "callouts-hit-for-a-hundred": {
-    "text": "أصبت لـ مئة",
-    "meaning": "المعنى في اللعب: أصبت لـ مئة"
-  },
-  "callouts-no-shield": {
-    "text": "لا درع",
-    "meaning": "المعنى في اللعب: لا درع"
-  },
-  "callouts-knocked-one": {
-    "text": "أسقطت واحد",
-    "meaning": "المعنى في اللعب: أسقطت واحد"
-  },
-  "callouts-finished-one": {
-    "text": "أنهيت واحد",
-    "meaning": "المعنى في اللعب: أنهيت واحد"
-  },
-  "callouts-team-wipe": {
-    "text": "فريق مسح الفريق",
-    "meaning": "المعنى في اللعب: فريق مسح الفريق"
-  },
-  "callouts-clean-fight": {
-    "text": "نظيف قتال",
-    "meaning": "المعنى في اللعب: نظيف قتال"
-  },
-  "callouts-messy-fight": {
-    "text": "فوضوي قتال",
-    "meaning": "المعنى في اللعب: فوضوي قتال"
-  },
-  "callouts-bad-timing": {
-    "text": "سيئ توقيت",
-    "meaning": "المعنى في اللعب: سيئ توقيت"
-  },
-  "callouts-good-timing": {
-    "text": "جيد توقيت",
-    "meaning": "المعنى في اللعب: جيد توقيت"
-  },
-  "callouts-unlucky": {
-    "text": "حظ سيئ",
-    "meaning": "المعنى في اللعب: حظ سيئ"
-  },
-  "callouts-lucky-shot": {
-    "text": "محظوظ طلقة",
-    "meaning": "المعنى في اللعب: محظوظ طلقة"
-  },
-  "callouts-clutch": {
-    "text": "كلتش",
-    "meaning": "المعنى في اللعب: كلتش"
-  },
-  "callouts-ace": {
-    "text": "إيس",
-    "meaning": "المعنى في اللعب: إيس"
-  },
-  "callouts-carry": {
-    "text": "يحمل الفريق",
-    "meaning": "المعنى في اللعب: يحمل الفريق"
-  },
-  "callouts-throw": {
-    "text": "رمي المباراة",
-    "meaning": "المعنى في اللعب: رمي المباراة"
-  },
-  "callouts-comeback": {
-    "text": "عودة",
-    "meaning": "المعنى في اللعب: عودة"
-  },
-  "callouts-close-game": {
-    "text": "قريب مباراة",
-    "meaning": "المعنى في اللعب: قريب مباراة"
-  },
-  "callouts-free-kill": {
-    "text": "سهل قتل",
-    "meaning": "المعنى في اللعب: سهل قتل"
-  },
-  "callouts-free-objective": {
-    "text": "سهل هدف",
-    "meaning": "المعنى في اللعب: سهل هدف"
-  },
-  "callouts-open-lane": {
-    "text": "مفتوح مسار",
-    "meaning": "المعنى في اللعب: مفتوح مسار"
-  },
-  "callouts-blocked": {
-    "text": "مغلق",
-    "meaning": "المعنى في اللعب: مغلق"
-  },
-  "callouts-trap-here": {
-    "text": "فخ هنا",
-    "meaning": "المعنى في اللعب: فخ هنا"
-  },
-  "callouts-trap-destroyed": {
-    "text": "فخ مدمر",
-    "meaning": "المعنى في اللعب: فخ مدمر"
-  },
-  "callouts-door-closed": {
-    "text": "باب مغلق",
-    "meaning": "المعنى في اللعب: باب مغلق"
-  },
-  "callouts-door-open": {
-    "text": "باب مفتوح",
-    "meaning": "المعنى في اللعب: باب مفتوح"
-  },
-  "callouts-bridge-clear": {
-    "text": "جسر آمن",
-    "meaning": "المعنى في اللعب: جسر آمن"
-  },
-  "callouts-tunnel-clear": {
-    "text": "نفق آمن",
-    "meaning": "المعنى في اللعب: نفق آمن"
-  },
-  "callouts-roof-clear": {
-    "text": "سطح آمن",
-    "meaning": "المعنى في اللعب: سطح آمن"
-  },
-  "callouts-basement-clear": {
-    "text": "قبو آمن",
-    "meaning": "المعنى في اللعب: قبو آمن"
-  },
-  "callouts-window": {
-    "text": "نافذة",
-    "meaning": "المعنى في اللعب: نافذة"
-  },
-  "callouts-stairs": {
-    "text": "درج",
-    "meaning": "المعنى في اللعب: درج"
-  },
-  "callouts-hallway": {
-    "text": "ممر",
-    "meaning": "المعنى في اللعب: ممر"
-  },
-  "callouts-water": {
-    "text": "ماء",
-    "meaning": "المعنى في اللعب: ماء"
-  },
-  "callouts-high-ground": {
-    "text": "مرتفع أرض",
-    "meaning": "المعنى في اللعب: مرتفع أرض"
-  },
-  "callouts-low-ground": {
-    "text": "ضعيف أرض",
-    "meaning": "المعنى في اللعب: ضعيف أرض"
-  },
-  "callouts-zone-closing": {
-    "text": "منطقة تغلق",
-    "meaning": "المعنى في اللعب: منطقة تغلق"
-  },
-  "callouts-circle-moving": {
-    "text": "الدائرة يتحرك",
-    "meaning": "المعنى في اللعب: الدائرة يتحرك"
-  },
-  "callouts-storm-coming": {
-    "text": "العاصفة قادمة",
-    "meaning": "المعنى في اللعب: العاصفة قادمة"
-  },
-  "callouts-safe-zone": {
-    "text": "بأمان منطقة",
-    "meaning": "المعنى في اللعب: بأمان منطقة"
-  },
-  "callouts-out-of-zone": {
-    "text": "نفدت منطقة",
-    "meaning": "المعنى في اللعب: نفدت منطقة"
-  },
-  "callouts-loot-here": {
-    "text": "غنائم هنا",
-    "meaning": "المعنى في اللعب: غنائم هنا"
-  },
-  "callouts-good-loot": {
-    "text": "جيد غنائم",
-    "meaning": "المعنى في اللعب: جيد غنائم"
-  },
-  "callouts-need-weapon": {
-    "text": "أحتاج سلاح",
-    "meaning": "المعنى في اللعب: أحتاج سلاح"
-  },
-  "callouts-need-shield": {
-    "text": "أحتاج درع",
-    "meaning": "المعنى في اللعب: أحتاج درع"
-  },
-  "callouts-need-meds": {
-    "text": "أحتاج علاجات",
-    "meaning": "المعنى في اللعب: أحتاج علاجات"
-  },
-  "callouts-drop-ammo": {
-    "text": "أعطني ذخيرة",
-    "meaning": "المعنى في اللعب: أعطني ذخيرة"
-  },
-  "callouts-drop-weapon": {
-    "text": "أعطني سلاح",
-    "meaning": "المعنى في اللعب: أعطني سلاح"
-  },
-  "callouts-take-this": {
-    "text": "خذ هذا",
-    "meaning": "المعنى في اللعب: خذ هذا"
-  },
-  "callouts-do-not-take-it": {
-    "text": "لا غير خذ هو",
-    "meaning": "المعنى في اللعب: لا غير خذ هو"
-  },
-  "callouts-i-will-take-it": {
-    "text": "أنا سوف خذ هو",
-    "meaning": "المعنى في اللعب: أنا سوف خذ هو"
-  },
-  "callouts-use-it": {
-    "text": "استخدم هو",
-    "meaning": "المعنى في اللعب: استخدم هو"
-  },
-  "callouts-save-it": {
-    "text": "احفظ هو",
-    "meaning": "المعنى في اللعب: احفظ هو"
-  },
-  "callouts-voice-chat": {
-    "text": "صوتية دردشة",
-    "meaning": "المعنى في اللعب: صوتية دردشة"
-  },
-  "callouts-text-chat": {
-    "text": "نصية دردشة",
-    "meaning": "المعنى في اللعب: نصية دردشة"
-  },
-  "callouts-good-job": {
-    "text": "شغل ممتاز",
-    "meaning": "المعنى في اللعب: شغل ممتاز"
-  },
-  "callouts-well-played": {
-    "text": "لعب ممتاز",
-    "meaning": "المعنى في اللعب: لعب ممتاز"
-  },
-  "callouts-no-problem": {
-    "text": "ولا يهمك",
-    "meaning": "المعنى في اللعب: ولا يهمك"
-  },
-  "callouts-last-one": {
-    "text": "الأخير واحد",
-    "meaning": "المعنى في اللعب: الأخير واحد"
-  },
-  "callouts-i-see-him": {
-    "text": "أنا أرى هو",
-    "meaning": "المعنى في اللعب: أنا أرى هو"
-  },
-  "callouts-i-see-them": {
-    "text": "أنا أرى هم",
-    "meaning": "المعنى في اللعب: أنا أرى هم"
-  },
-  "callouts-on-me": {
-    "text": "على لي",
-    "meaning": "المعنى في اللعب: على لي"
-  },
-  "callouts-with-me": {
-    "text": "مع لي",
-    "meaning": "المعنى في اللعب: مع لي"
-  },
-  "callouts-low-hp": {
-    "text": "ضعيف HP",
-    "meaning": "المعنى في اللعب: ضعيف HP"
-  },
-  "callouts-he-is-low": {
-    "text": "هو ضعيف",
-    "meaning": "المعنى في اللعب: هو ضعيف"
-  },
-  "callouts-they-are-low": {
-    "text": "هم ضعيف",
-    "meaning": "المعنى في اللعب: هم ضعيف"
-  },
-  "callouts-no-mic": {
-    "text": "لا الميكروفون",
-    "meaning": "المعنى في اللعب: لا الميكروفون"
-  },
-  "callouts-mic-muted": {
-    "text": "الميكروفون مكتوم",
-    "meaning": "المعنى في اللعب: الميكروفون مكتوم"
-  },
-  "danger-incoming": {
-    "text": "قادم!",
-    "meaning": "المعنى في اللعب: قادم!"
-  },
-  "danger-grenade": {
-    "text": "قنبلة!",
-    "meaning": "المعنى في اللعب: قنبلة!"
-  },
-  "danger-flash": {
-    "text": "فلاش!",
-    "meaning": "المعنى في اللعب: فلاش!"
-  },
-  "danger-sniper": {
-    "text": "قناص!",
-    "meaning": "المعنى في اللعب: قناص!"
-  },
-  "danger-trap": {
-    "text": "فخ!",
-    "meaning": "المعنى في اللعب: فخ!"
-  },
-  "danger-mine": {
-    "text": "لغم!",
-    "meaning": "المعنى في اللعب: لغم!"
-  },
-  "danger-ambush": {
-    "text": "كمين!",
-    "meaning": "المعنى في اللعب: كمين!"
-  },
-  "danger-they-are-rushing": {
-    "text": "هم يهجمون بسرعة",
-    "meaning": "المعنى في اللعب: هم يهجمون بسرعة"
-  },
-  "danger-they-are-pushing": {
-    "text": "هم يدفعون",
-    "meaning": "المعنى في اللعب: هم يدفعون"
-  },
-  "danger-they-are-flanking": {
-    "text": "هم يلتفون",
-    "meaning": "المعنى في اللعب: هم يلتفون"
-  },
-  "danger-they-know": {
-    "text": "هم يعرفون",
-    "meaning": "المعنى في اللعب: هم يعرفون"
-  },
-  "danger-they-saw-me": {
-    "text": "هم رآني لي",
-    "meaning": "المعنى في اللعب: هم رآني لي"
-  },
-  "danger-i-am-exposed": {
-    "text": "أنا مكشوف",
-    "meaning": "المعنى في اللعب: أنا مكشوف"
-  },
-  "danger-no-cover": {
-    "text": "لا غطني",
-    "meaning": "المعنى في اللعب: لا غطني"
-  },
-  "danger-low-cover": {
-    "text": "ضعيف غطني",
-    "meaning": "المعنى في اللعب: ضعيف غطني"
-  },
-  "danger-bad-angle": {
-    "text": "سيئ زاوية",
-    "meaning": "المعنى في اللعب: سيئ زاوية"
-  },
-  "danger-get-out": {
-    "text": "خذ نفدت",
-    "meaning": "المعنى في اللعب: خذ نفدت"
-  },
-  "danger-back-up": {
-    "text": "خلف فوق",
-    "meaning": "المعنى في اللعب: خلف فوق"
-  },
-  "danger-do-not-go-there": {
-    "text": "لا غير اذهب هناك",
-    "meaning": "المعنى في اللعب: لا غير اذهب هناك"
-  },
-  "danger-it-is-a-trap": {
-    "text": "هو فخ",
-    "meaning": "المعنى في اللعب: هو فخ"
-  },
-  "danger-enemy-ultimate-ready": {
-    "text": "عدو الألتمت جاهز",
-    "meaning": "المعنى في اللعب: عدو الألتمت جاهز"
-  },
-  "danger-they-have-sniper": {
-    "text": "هم لديهم قناص",
-    "meaning": "المعنى في اللعب: هم لديهم قناص"
-  },
-  "instructions-push": {
-    "text": "ادفع",
-    "meaning": "المعنى في اللعب: ادفع"
-  },
-  "instructions-rush": {
-    "text": "هجوم سريع",
-    "meaning": "المعنى في اللعب: هجوم سريع"
-  },
-  "instructions-hold": {
-    "text": "امسك",
-    "meaning": "المعنى في اللعب: امسك"
-  },
-  "instructions-defend": {
-    "text": "دافع",
-    "meaning": "المعنى في اللعب: دافع"
-  },
-  "instructions-attack": {
-    "text": "هاجم",
-    "meaning": "المعنى في اللعب: هاجم"
-  },
-  "instructions-retreat": {
-    "text": "انسحب",
-    "meaning": "المعنى في اللعب: انسحب"
-  },
-  "instructions-rotate": {
-    "text": "انتقل",
-    "meaning": "المعنى في اللعب: انتقل"
-  },
-  "instructions-stack-here": {
-    "text": "تجمعوا هنا",
-    "meaning": "المعنى في اللعب: تجمعوا هنا"
-  },
-  "instructions-spread-out": {
-    "text": "انتشروا نفدت",
-    "meaning": "المعنى في اللعب: انتشروا نفدت"
-  },
-  "instructions-stay-together": {
-    "text": "ابقَ معا",
-    "meaning": "المعنى في اللعب: ابقَ معا"
-  },
-  "instructions-follow-me": {
-    "text": "اتبعني لي",
-    "meaning": "المعنى في اللعب: اتبعني لي"
-  },
-  "instructions-lead-the-way": {
-    "text": "تقدم طريق",
-    "meaning": "المعنى في اللعب: تقدم طريق"
-  },
-  "instructions-go-first": {
-    "text": "اذهب أولا",
-    "meaning": "المعنى في اللعب: اذهب أولا"
-  },
-  "instructions-i-go-first": {
-    "text": "أنا اذهب أولا",
-    "meaning": "المعنى في اللعب: أنا اذهب أولا"
-  },
-  "instructions-wait-for-me": {
-    "text": "انتظر لـ لي",
-    "meaning": "المعنى في اللعب: انتظر لـ لي"
-  },
-  "instructions-wait-for-cooldowns": {
-    "text": "انتظر لـ التبريدات",
-    "meaning": "المعنى في اللعب: انتظر لـ التبريدات"
-  },
-  "instructions-use-smoke": {
-    "text": "استخدم دخان",
-    "meaning": "المعنى في اللعب: استخدم دخان"
-  },
-  "instructions-use-flash": {
-    "text": "استخدم فلاش",
-    "meaning": "المعنى في اللعب: استخدم فلاش"
-  },
-  "instructions-use-grenade": {
-    "text": "استخدم قنبلة",
-    "meaning": "المعنى في اللعب: استخدم قنبلة"
-  },
-  "instructions-use-ultimate": {
-    "text": "استخدم الألتمت",
-    "meaning": "المعنى في اللعب: استخدم الألتمت"
-  },
-  "instructions-save-ultimate": {
-    "text": "احفظ الألتمت",
-    "meaning": "المعنى في اللعب: احفظ الألتمت"
-  },
-  "instructions-heal-me": {
-    "text": "اشفني لي",
-    "meaning": "المعنى في اللعب: اشفني لي"
-  },
-  "instructions-revive-me": {
-    "text": "أنعشني لي",
-    "meaning": "المعنى في اللعب: أنعشني لي"
-  },
-  "instructions-res-me": {
-    "text": "إنعاش لي",
-    "meaning": "المعنى في اللعب: إنعاش لي"
-  },
-  "instructions-cover-the-revive": {
-    "text": "غطني أنعشني",
-    "meaning": "المعنى في اللعب: غطني أنعشني"
-  },
-  "instructions-plant-now": {
-    "text": "ازرع الآن",
-    "meaning": "المعنى في اللعب: ازرع الآن"
-  },
-  "instructions-defuse-now": {
-    "text": "فكك الآن",
-    "meaning": "المعنى في اللعب: فكك الآن"
-  },
-  "instructions-capture-point": {
-    "text": "سيطر النقطة",
-    "meaning": "المعنى في اللعب: سيطر النقطة"
-  },
-  "instructions-contest-point": {
-    "text": "نازع النقطة",
-    "meaning": "المعنى في اللعب: نازع النقطة"
-  },
-  "instructions-touch-point": {
-    "text": "المس النقطة",
-    "meaning": "المعنى في اللعب: المس النقطة"
-  },
-  "instructions-clear-corners": {
-    "text": "آمن الزوايا",
-    "meaning": "المعنى في اللعب: آمن الزوايا"
-  },
-  "instructions-check-left": {
-    "text": "افحص يسار",
-    "meaning": "المعنى في اللعب: افحص يسار"
-  },
-  "instructions-check-right": {
-    "text": "افحص يمين",
-    "meaning": "المعنى في اللعب: افحص يمين"
-  },
-  "instructions-check-behind": {
-    "text": "افحص خلفك",
-    "meaning": "المعنى في اللعب: افحص خلفك"
-  },
-  "instructions-do-not-split": {
-    "text": "لا غير تفرقوا",
-    "meaning": "المعنى في اللعب: لا غير تفرقوا"
-  },
-  "instructions-do-not-feed": {
-    "text": "لا غير تغذّي العدو",
-    "meaning": "المعنى في اللعب: لا غير تغذّي العدو"
-  },
-  "instructions-do-not-waste-it": {
-    "text": "لا غير تهدر هو",
-    "meaning": "المعنى في اللعب: لا غير تهدر هو"
-  },
-  "instructions-stop-peeking": {
-    "text": "توقف يكشف",
-    "meaning": "المعنى في اللعب: توقف يكشف"
-  },
-  "instructions-mute-him": {
-    "text": "اكتم هو",
-    "meaning": "المعنى في اللعب: اكتم هو"
-  },
-  "instructions-report-after": {
-    "text": "بلّغ بعد",
-    "meaning": "المعنى في اللعب: بلّغ بعد"
-  },
-  "instructions-stack-left": {
-    "text": "تجمعوا يسار",
-    "meaning": "المعنى في اللعب: تجمعوا يسار"
-  },
-  "instructions-stack-right": {
-    "text": "تجمعوا يمين",
-    "meaning": "المعنى في اللعب: تجمعوا يمين"
-  },
-  "objective-plant-the-bomb": {
-    "text": "ازرع القنبلة",
-    "meaning": "المعنى في اللعب: ازرع القنبلة"
-  },
-  "objective-bomb-planted": {
-    "text": "القنبلة مزروعة",
-    "meaning": "المعنى في اللعب: القنبلة مزروعة"
-  },
-  "objective-bomb-down": {
-    "text": "القنبلة غير متاحة",
-    "meaning": "المعنى في اللعب: القنبلة غير متاحة"
-  },
-  "objective-spike-down": {
-    "text": "سبايك غير متاحة",
-    "meaning": "المعنى في اللعب: سبايك غير متاحة"
-  },
-  "objective-defuse-the-bomb": {
-    "text": "فكك القنبلة",
-    "meaning": "المعنى في اللعب: فكك القنبلة"
-  },
-  "objective-half-defuse": {
-    "text": "نصف فكك",
-    "meaning": "المعنى في اللعب: نصف فكك"
-  },
-  "objective-stick-the-defuse": {
-    "text": "استمر فكك",
-    "meaning": "المعنى في اللعب: استمر فكك"
-  },
-  "objective-fake-defuse": {
-    "text": "تفكيك تمويهي",
-    "meaning": "المعنى في اللعب: تفكيك تمويهي"
-  },
-  "objective-objective-secured": {
-    "text": "هدف مؤمّن",
-    "meaning": "المعنى في اللعب: هدف مؤمّن"
-  },
-  "objective-objective-lost": {
-    "text": "هدف ضاع",
-    "meaning": "المعنى في اللعب: هدف ضاع"
-  },
-  "objective-point-captured": {
-    "text": "النقطة تمت السيطرة",
-    "meaning": "المعنى في اللعب: النقطة تمت السيطرة"
-  },
-  "objective-point-contested": {
-    "text": "النقطة متنازع عليها",
-    "meaning": "المعنى في اللعب: النقطة متنازع عليها"
-  },
-  "objective-payload-moving": {
-    "text": "الحمولة يتحرك",
-    "meaning": "المعنى في اللعب: الحمولة يتحرك"
-  },
-  "objective-payload-stopped": {
-    "text": "الحمولة متوقفة",
-    "meaning": "المعنى في اللعب: الحمولة متوقفة"
-  },
-  "objective-escort-the-payload": {
-    "text": "رافق الحمولة",
-    "meaning": "المعنى في اللعب: رافق الحمولة"
-  },
-  "objective-stop-the-payload": {
-    "text": "توقف الحمولة",
-    "meaning": "المعنى في اللعب: توقف الحمولة"
-  },
-  "objective-capture-the-flag": {
-    "text": "سيطر العلم",
-    "meaning": "المعنى في اللعب: سيطر العلم"
-  },
-  "objective-return-the-flag": {
-    "text": "أعد العلم",
-    "meaning": "المعنى في اللعب: أعد العلم"
-  },
-  "objective-hold-the-point": {
-    "text": "امسك النقطة",
-    "meaning": "المعنى في اللعب: امسك النقطة"
-  },
-  "objective-leave-the-point": {
-    "text": "اترك النقطة",
-    "meaning": "المعنى في اللعب: اترك النقطة"
-  },
-  "teamwork-nice-shot": {
-    "text": "ممتاز طلقة",
-    "meaning": "المعنى في اللعب: ممتاز طلقة"
-  },
-  "teamwork-nice-try": {
-    "text": "ممتاز محاولة",
-    "meaning": "المعنى في اللعب: ممتاز محاولة"
-  },
-  "teamwork-good-comms": {
-    "text": "جيد التواصل",
-    "meaning": "المعنى في اللعب: جيد التواصل"
-  },
-  "teamwork-keep-comms-clear": {
-    "text": "أبقِ التواصل آمن",
-    "meaning": "المعنى في اللعب: أبقِ التواصل آمن"
-  },
-  "teamwork-i-trust-you": {
-    "text": "أنا أثق أنت",
-    "meaning": "المعنى في اللعب: أنا أثق أنت"
-  },
-  "teamwork-you-got-this": {
-    "text": "أنت مسكت هذا",
-    "meaning": "المعنى في اللعب: أنت مسكت هذا"
-  },
-  "teamwork-stay-calm": {
-    "text": "ابقَ اهدأ",
-    "meaning": "المعنى في اللعب: ابقَ اهدأ"
-  },
-  "teamwork-we-can-win": {
-    "text": "نحن يمكن نفوز",
-    "meaning": "المعنى في اللعب: نحن يمكن نفوز"
-  },
-  "teamwork-one-round-at-a-time": {
-    "text": "واحد جولة في وقت",
-    "meaning": "المعنى في اللعب: واحد جولة في وقت"
-  },
-  "teamwork-reset-mental": {
-    "text": "إعادة تنظيم ذهنيا",
-    "meaning": "المعنى في اللعب: إعادة تنظيم ذهنيا"
-  },
-  "teamwork-good-effort": {
-    "text": "جيد محاولة",
-    "meaning": "المعنى في اللعب: جيد محاولة"
-  },
-  "teamwork-great-shot": {
-    "text": "رائع طلقة",
-    "meaning": "المعنى في اللعب: رائع طلقة"
-  },
-  "teamwork-great-save": {
-    "text": "رائع احفظ",
-    "meaning": "المعنى في اللعب: رائع احفظ"
-  },
-  "teamwork-great-call": {
-    "text": "رائع نداء",
-    "meaning": "المعنى في اللعب: رائع نداء"
-  },
-  "teamwork-nice-clutch": {
-    "text": "ممتاز كلتش",
-    "meaning": "المعنى في اللعب: ممتاز كلتش"
-  },
-  "teamwork-nice-aim": {
-    "text": "ممتاز تصويب",
-    "meaning": "المعنى في اللعب: ممتاز تصويب"
-  },
-  "teamwork-nice-movement": {
-    "text": "ممتاز حركة",
-    "meaning": "المعنى في اللعب: ممتاز حركة"
-  },
-  "teamwork-nice-utility": {
-    "text": "ممتاز قدرات مساعدة",
-    "meaning": "المعنى في اللعب: ممتاز قدرات مساعدة"
-  },
-  "teamwork-i-will-cover-you": {
-    "text": "أنا سوف غطني أنت",
-    "meaning": "المعنى في اللعب: أنا سوف غطني أنت"
-  },
-  "teamwork-i-will-heal-you": {
-    "text": "أنا سوف اشفني أنت",
-    "meaning": "المعنى في اللعب: أنا سوف اشفني أنت"
-  },
-  "teamwork-i-will-watch-flank": {
-    "text": "أنا سوف راقب التفاف",
-    "meaning": "المعنى في اللعب: أنا سوف راقب التفاف"
-  },
-  "teamwork-take-my-weapon": {
-    "text": "خذ خاصتي سلاح",
-    "meaning": "المعنى في اللعب: خذ خاصتي سلاح"
-  },
-  "teamwork-take-my-loot": {
-    "text": "خذ خاصتي غنائم",
-    "meaning": "المعنى في اللعب: خذ خاصتي غنائم"
-  },
-  "teamwork-let-me-go-first": {
-    "text": "دعنا لي اذهب أولا",
-    "meaning": "المعنى في اللعب: دعنا لي اذهب أولا"
-  },
-  "teamwork-i-will-bait-for-you": {
-    "text": "أنا سوف استدرج لـ أنت",
-    "meaning": "المعنى في اللعب: أنا سوف استدرج لـ أنت"
-  },
-  "teamwork-trade-together": {
-    "text": "بادل معا",
-    "meaning": "المعنى في اللعب: بادل معا"
-  },
-  "teamwork-wait-for-team": {
-    "text": "انتظر لـ فريق",
-    "meaning": "المعنى في اللعب: انتظر لـ فريق"
-  },
-  "teamwork-we-need-everyone": {
-    "text": "نحن أحتاج الجميع",
-    "meaning": "المعنى في اللعب: نحن أحتاج الجميع"
-  },
-  "teamwork-play-together": {
-    "text": "العب معا",
-    "meaning": "المعنى في اللعب: العب معا"
-  },
-  "teamwork-do-not-blame": {
-    "text": "لا غير تلوم",
-    "meaning": "المعنى في اللعب: لا غير تلوم"
-  },
-  "teamwork-focus-next": {
-    "text": "ركزوا التالي",
-    "meaning": "المعنى في اللعب: ركزوا التالي"
-  },
-  "strategy-default-setup": {
-    "text": "المكان المعتاد خطة",
-    "meaning": "المعنى في اللعب: المكان المعتاد خطة"
-  },
-  "strategy-slow-push": {
-    "text": "ببطء ادفع",
-    "meaning": "المعنى في اللعب: ببطء ادفع"
-  },
-  "strategy-fast-push": {
-    "text": "بسرعة ادفع",
-    "meaning": "المعنى في اللعب: بسرعة ادفع"
-  },
-  "strategy-fake-push": {
-    "text": "هجوم تمويهي",
-    "meaning": "المعنى في اللعب: هجوم تمويهي"
-  },
-  "strategy-split-push": {
-    "text": "تفرقوا ادفع",
-    "meaning": "المعنى في اللعب: تفرقوا ادفع"
-  },
-  "strategy-retake": {
-    "text": "استعادة",
-    "meaning": "المعنى في اللعب: استعادة"
-  },
-  "strategy-save-round": {
-    "text": "احفظ جولة",
-    "meaning": "المعنى في اللعب: احفظ جولة"
-  },
-  "strategy-eco-round": {
-    "text": "اقتصادي جولة",
-    "meaning": "المعنى في اللعب: اقتصادي جولة"
-  },
-  "strategy-full-buy": {
-    "text": "الفريق كامل اشتر",
-    "meaning": "المعنى في اللعب: الفريق كامل اشتر"
-  },
-  "strategy-force-buy": {
-    "text": "شراء إجباري اشتر",
-    "meaning": "المعنى في اللعب: شراء إجباري اشتر"
-  },
-  "strategy-play-for-picks": {
-    "text": "العب لـ التقاطات",
-    "meaning": "المعنى في اللعب: العب لـ التقاطات"
-  },
-  "strategy-play-objective": {
-    "text": "العب هدف",
-    "meaning": "المعنى في اللعب: العب هدف"
-  },
-  "strategy-play-for-late-game": {
-    "text": "العب لـ متأخر مباراة",
-    "meaning": "المعنى في اللعب: العب لـ متأخر مباراة"
-  },
-  "strategy-take-map-control": {
-    "text": "خذ الخريطة سيطرة",
-    "meaning": "المعنى في اللعب: خذ الخريطة سيطرة"
-  },
-  "strategy-give-map-control": {
-    "text": "أعطِ الخريطة سيطرة",
-    "meaning": "المعنى في اللعب: أعطِ الخريطة سيطرة"
-  },
-  "strategy-deny-vision": {
-    "text": "امنع رؤية",
-    "meaning": "المعنى في اللعب: امنع رؤية"
-  },
-  "strategy-gather-info": {
-    "text": "اجمع معلومات",
-    "meaning": "المعنى في اللعب: اجمع معلومات"
-  },
-  "strategy-bait-utility": {
-    "text": "استدرج قدرات مساعدة",
-    "meaning": "المعنى في اللعب: استدرج قدرات مساعدة"
-  },
-  "strategy-use-utility-first": {
-    "text": "استخدم قدرات مساعدة أولا",
-    "meaning": "المعنى في اللعب: استخدم قدرات مساعدة أولا"
-  },
-  "strategy-trade-setup": {
-    "text": "بادل خطة",
-    "meaning": "المعنى في اللعب: بادل خطة"
-  },
-  "strategy-double-peek": {
-    "text": "مزدوج اكشف",
-    "meaning": "المعنى في اللعب: مزدوج اكشف"
-  },
-  "strategy-off-angle": {
-    "text": "غير معتادة زاوية",
-    "meaning": "المعنى في اللعب: غير معتادة زاوية"
-  },
-  "strategy-cross-setup": {
-    "text": "متقاطع خطة",
-    "meaning": "المعنى في اللعب: متقاطع خطة"
-  },
-  "strategy-late-lurk": {
-    "text": "متأخر تسلل",
-    "meaning": "المعنى في اللعب: متأخر تسلل"
-  },
-  "strategy-anchor-site": {
-    "text": "ثبّت الموقع",
-    "meaning": "المعنى في اللعب: ثبّت الموقع"
-  },
-  "strategy-play-retake": {
-    "text": "العب استعادة",
-    "meaning": "المعنى في اللعب: العب استعادة"
-  },
-  "strategy-stack-objective": {
-    "text": "تجمعوا هدف",
-    "meaning": "المعنى في اللعب: تجمعوا هدف"
-  },
-  "strategy-pressure-side-lane": {
-    "text": "ضغط جانب مسار",
-    "meaning": "المعنى في اللعب: ضغط جانب مسار"
-  },
-  "strategy-cut-rotation": {
-    "text": "اقطع دوران",
-    "meaning": "المعنى في اللعب: اقطع دوران"
-  },
-  "strategy-hold-rotation": {
-    "text": "امسك دوران",
-    "meaning": "المعنى في اللعب: امسك دوران"
-  },
-  "strategy-time-advantage": {
-    "text": "وقت أفضلية",
-    "meaning": "المعنى في اللعب: وقت أفضلية"
-  },
-  "strategy-man-advantage": {
-    "text": "لاعب أفضلية",
-    "meaning": "المعنى في اللعب: لاعب أفضلية"
-  },
-  "strategy-man-disadvantage": {
-    "text": "لاعب نقص",
-    "meaning": "المعنى في اللعب: لاعب نقص"
-  },
-  "strategy-numbers-advantage": {
-    "text": "عدد أفضلية",
-    "meaning": "المعنى في اللعب: عدد أفضلية"
-  },
-  "strategy-damage-advantage": {
-    "text": "ضرر أفضلية",
-    "meaning": "المعنى في اللعب: ضرر أفضلية"
-  },
-  "strategy-ultimate-advantage": {
-    "text": "الألتمت أفضلية",
-    "meaning": "المعنى في اللعب: الألتمت أفضلية"
-  },
-  "strategy-economy-advantage": {
-    "text": "اقتصاد أفضلية",
-    "meaning": "المعنى في اللعب: اقتصاد أفضلية"
-  },
-  "strategy-do-not-overcommit": {
-    "text": "لا غير تندفع كثيرا",
-    "meaning": "المعنى في اللعب: لا غير تندفع كثيرا"
-  },
-  "strategy-commit-now": {
-    "text": "التزم الآن",
-    "meaning": "المعنى في اللعب: التزم الآن"
-  },
-  "strategy-cancel-the-push": {
-    "text": "ألغِ ادفع",
-    "meaning": "المعنى في اللعب: ألغِ ادفع"
-  },
-  "economy-buy": {
-    "text": "اشتر",
-    "meaning": "المعنى في اللعب: اشتر"
-  },
-  "economy-save": {
-    "text": "احفظ",
-    "meaning": "المعنى في اللعب: احفظ"
-  },
-  "economy-drop-me": {
-    "text": "أعطني لي",
-    "meaning": "المعنى في اللعب: أعطني لي"
-  },
-  "economy-i-can-drop": {
-    "text": "أنا يمكن أعطني",
-    "meaning": "المعنى في اللعب: أنا يمكن أعطني"
-  },
-  "economy-need-a-drop": {
-    "text": "أحتاج أعطني",
-    "meaning": "المعنى في اللعب: أحتاج أعطني"
-  },
-  "economy-full-save": {
-    "text": "الفريق كامل احفظ",
-    "meaning": "المعنى في اللعب: الفريق كامل احفظ"
-  },
-  "economy-light-buy": {
-    "text": "خفيف اشتر",
-    "meaning": "المعنى في اللعب: خفيف اشتر"
-  },
-  "economy-half-buy": {
-    "text": "نصف اشتر",
-    "meaning": "المعنى في اللعب: نصف اشتر"
-  },
-  "economy-full-armor": {
-    "text": "الفريق كامل درع",
-    "meaning": "المعنى في اللعب: الفريق كامل درع"
-  },
-  "economy-no-armor": {
-    "text": "لا درع",
-    "meaning": "المعنى في اللعب: لا درع"
-  },
-  "economy-upgrade-weapon": {
-    "text": "طوّر سلاح",
-    "meaning": "المعنى في اللعب: طوّر سلاح"
-  },
-  "economy-keep-weapon": {
-    "text": "أبقِ سلاح",
-    "meaning": "المعنى في اللعب: أبقِ سلاح"
-  },
-  "economy-pick-up-gun": {
-    "text": "التقاط فوق سلاح",
-    "meaning": "المعنى في اللعب: التقاط فوق سلاح"
-  },
-  "economy-save-the-gun": {
-    "text": "احفظ سلاح",
-    "meaning": "المعنى في اللعب: احفظ سلاح"
-  },
-  "economy-we-are-broke": {
-    "text": "نحن مفلس",
-    "meaning": "المعنى في اللعب: نحن مفلس"
-  },
-  "economy-they-are-broke": {
-    "text": "هم مفلس",
-    "meaning": "المعنى في اللعب: هم مفلس"
-  },
-  "economy-they-have-money": {
-    "text": "هم لديهم مال",
-    "meaning": "المعنى في اللعب: هم لديهم مال"
-  },
-  "economy-we-can-buy-next": {
-    "text": "نحن يمكن اشتر التالي",
-    "meaning": "المعنى في اللعب: نحن يمكن اشتر التالي"
-  },
-  "economy-do-not-force": {
-    "text": "لا غير شراء إجباري",
-    "meaning": "المعنى في اللعب: لا غير شراء إجباري"
-  },
-  "economy-force-together": {
-    "text": "شراء إجباري معا",
-    "meaning": "المعنى في اللعب: شراء إجباري معا"
-  },
-  "slang-afk": {
-    "text": "AFK",
-    "meaning": "المعنى في اللعب: AFK"
-  },
-  "slang-brb": {
-    "text": "BRB",
-    "meaning": "المعنى في اللعب: BRB"
-  },
-  "slang-op": {
-    "text": "OP",
-    "meaning": "المعنى في اللعب: OP"
-  },
-  "slang-nerf": {
-    "text": "إضعاف",
-    "meaning": "المعنى في اللعب: إضعاف"
-  },
-  "slang-buff": {
-    "text": "تقوية",
-    "meaning": "المعنى في اللعب: تقوية"
-  },
-  "slang-meta": {
-    "text": "ميتا",
-    "meaning": "المعنى في اللعب: ميتا"
-  },
-  "slang-main": {
-    "text": "الشخصية الرئيسية",
-    "meaning": "المعنى في اللعب: الشخصية الرئيسية"
-  },
-  "slang-alt": {
-    "text": "حساب بديل",
-    "meaning": "المعنى في اللعب: حساب بديل"
-  },
-  "slang-smurf": {
-    "text": "سميرف",
-    "meaning": "المعنى في اللعب: سميرف"
-  },
-  "slang-noob": {
-    "text": "مبتدئ",
-    "meaning": "المعنى في اللعب: مبتدئ"
-  },
-  "slang-camper": {
-    "text": "كمبر",
-    "meaning": "المعنى في اللعب: كمبر"
-  },
-  "slang-sweat": {
-    "text": "لاعب جاد",
-    "meaning": "المعنى في اللعب: لاعب جاد"
-  },
-  "slang-tryhard": {
-    "text": "لاعب متعرق",
-    "meaning": "المعنى في اللعب: لاعب متعرق"
-  },
-  "slang-clutch-or-kick": {
-    "text": "كلتش أو طرد",
-    "meaning": "المعنى في اللعب: كلتش أو طرد"
-  },
-  "slang-diff": {
-    "text": "فرق",
-    "meaning": "المعنى في اللعب: فرق"
-  },
-  "slang-gap": {
-    "text": "فارق",
-    "meaning": "المعنى في اللعب: فارق"
-  },
-  "slang-tilt": {
-    "text": "توتر",
-    "meaning": "المعنى في اللعب: توتر"
-  },
-  "slang-rage-quit": {
-    "text": "غضب خروج",
-    "meaning": "المعنى في اللعب: غضب خروج"
-  },
-  "slang-spawn-camp": {
-    "text": "نقطة البداية تمركز",
-    "meaning": "المعنى في اللعب: نقطة البداية تمركز"
-  },
-  "slang-spawn-kill": {
-    "text": "نقطة البداية قتل",
-    "meaning": "المعنى في اللعب: نقطة البداية قتل"
-  },
-  "slang-hitbox": {
-    "text": "منطقة الإصابة",
-    "meaning": "المعنى في اللعب: منطقة الإصابة"
-  },
-  "slang-lag": {
-    "text": "لاق",
-    "meaning": "المعنى في اللعب: لاق"
-  },
-  "slang-ping": {
-    "text": "علّم",
-    "meaning": "المعنى في اللعب: علّم"
-  },
-  "slang-fps": {
-    "text": "FPS",
-    "meaning": "المعنى في اللعب: FPS"
-  },
-  "slang-dps": {
-    "text": "DPS",
-    "meaning": "المعنى في اللعب: DPS"
-  },
-  "slang-aoe": {
-    "text": "AOE",
-    "meaning": "المعنى في اللعب: AOE"
-  },
-  "slang-cc": {
-    "text": "CC",
-    "meaning": "المعنى في اللعب: CC"
-  },
-  "slang-gg-ez": {
-    "text": "GG EZ",
-    "meaning": "المعنى في اللعب: GG EZ"
-  },
-  "slang-wp": {
-    "text": "WP",
-    "meaning": "المعنى في اللعب: WP"
-  },
-  "slang-nt": {
-    "text": "NT",
-    "meaning": "المعنى في اللعب: NT"
+    "text": "GG",
+    "meaning": "اختصار لعبارة Good Game؛ يُقال عادة في نهاية المباراة لإظهار الاحترام."
   },
   "slang-ggwp": {
     "text": "GGWP",
-    "meaning": "المعنى في اللعب: GGWP"
+    "meaning": "اختصار لعبارة Good Game, Well Played؛ مدح واحترام بعد المباراة."
   },
-  "slang-lag-spike": {
-    "text": "لاق سبايك",
-    "meaning": "المعنى في اللعب: لاق سبايك"
+  "callouts-glhf": {
+    "text": "GLHF",
+    "meaning": "اختصار لعبارة Good Luck, Have Fun؛ رسالة ودية قبل بداية المباراة."
   },
-  "slang-ranked": {
-    "text": "مصنف",
-    "meaning": "المعنى في اللعب: مصنف"
+  "slang-wp": {
+    "text": "WP",
+    "meaning": "اختصار Well Played؛ يعني أن اللاعب أو الفريق لعب بشكل جيد."
   },
-  "slang-casual": {
-    "text": "عادي",
-    "meaning": "المعنى في اللعب: عادي"
+  "slang-nt": {
+    "text": "NT",
+    "meaning": "اختصار Nice Try؛ دعم بعد محاولة جيدة حتى لو فشلت."
+  },
+  "callouts-nice": {
+    "text": "رائع!",
+    "meaning": "نداء سريع أثناء اللعب يعني: رائع!."
+  },
+  "teamwork-nice-try": {
+    "text": "محاولة جيدة",
+    "meaning": "عبارة تعاون أو تشجيع تعني: محاولة جيدة."
+  },
+  "teamwork-nice-shot": {
+    "text": "تصويبة رائعة",
+    "meaning": "عبارة تعاون أو تشجيع تعني: تصويبة رائعة."
+  },
+  "callouts-thanks": {
+    "text": "شكراً",
+    "meaning": "نداء سريع أثناء اللعب يعني: شكراً."
+  },
+  "callouts-sorry": {
+    "text": "آسف",
+    "meaning": "نداء سريع أثناء اللعب يعني: آسف."
+  },
+  "callouts-my-bad": {
+    "text": "غلطي",
+    "meaning": "نداء سريع أثناء اللعب يعني: غلطي."
+  },
+  "callouts-good-job": {
+    "text": "عمل جيد",
+    "meaning": "نداء سريع أثناء اللعب يعني: عمل جيد."
+  },
+  "teamwork-good-comms": {
+    "text": "تواصل جيد",
+    "meaning": "عبارة تعاون أو تشجيع تعني: تواصل جيد."
+  },
+  "slang-afk": {
+    "text": "AFK",
+    "meaning": "Away From Keyboard؛ يعني أن اللاعب غير نشط أو بعيد عن الجهاز."
+  },
+  "slang-brb": {
+    "text": "BRB",
+    "meaning": "Be Right Back؛ يعني أن اللاعب سيعود بعد قليل."
+  },
+  "slang-dc": {
+    "text": "DC",
+    "meaning": "Disconnect؛ يعني انقطاع الاتصال بالمباراة."
   },
   "slang-disconnect": {
     "text": "انقطاع الاتصال",
-    "meaning": "المعنى في اللعب: انقطاع الاتصال"
+    "meaning": "مصطلح شائع في الألعاب يعني: انقطاع الاتصال."
   },
   "slang-reconnect": {
     "text": "إعادة الاتصال",
-    "meaning": "المعنى في اللعب: إعادة الاتصال"
+    "meaning": "مصطلح شائع في الألعاب يعني: إعادة الاتصال."
+  },
+  "slang-lag": {
+    "text": "لاج",
+    "meaning": "تأخير أو مشكلة اتصال تجعل اللعب يستجيب ببطء."
+  },
+  "slang-lag-spike": {
+    "text": "ارتفاع مفاجئ في اللاج",
+    "meaning": "مصطلح شائع في الألعاب يعني: ارتفاع مفاجئ في اللاج."
+  },
+  "slang-ping": {
+    "text": "بينغ",
+    "meaning": "قد يعني علامة على الخريطة أو زمن تأخير الاتصال حسب السياق."
+  },
+  "slang-fps": {
+    "text": "FPS",
+    "meaning": "قد تعني لعبة منظور أول أو عدد الإطارات في الثانية عند الحديث عن الأداء."
+  },
+  "slang-server": {
+    "text": "سيرفر",
+    "meaning": "مصطلح شائع في الألعاب يعني: سيرفر."
+  },
+  "slang-hit-reg": {
+    "text": "تسجيل الضربة",
+    "meaning": "مصطلح شائع في الألعاب يعني: تسجيل الضربة."
+  },
+  "slang-desync": {
+    "text": "عدم تزامن",
+    "meaning": "مصطلح شائع في الألعاب يعني: عدم تزامن."
+  },
+  "slang-op": {
+    "text": "OP",
+    "meaning": "Overpowered؛ شيء أقوى من اللازم مقارنة بغيره."
+  },
+  "slang-meta": {
+    "text": "ميتا",
+    "meaning": "الاستراتيجية أو الشخصية أو السلاح الأكثر فعالية وشهرة حالياً."
+  },
+  "slang-nerf": {
+    "text": "نيرف",
+    "meaning": "إضعاف شيء في تحديث للعبة."
+  },
+  "slang-buff": {
+    "text": "بَف",
+    "meaning": "تقوية شيء في تحديث للعبة."
+  },
+  "slang-noob": {
+    "text": "نوب",
+    "meaning": "لاعب جديد أو قليل الخبرة؛ قد تُستخدم كإهانة."
+  },
+  "slang-pro": {
+    "text": "محترف",
+    "meaning": "مصطلح شائع في الألعاب يعني: محترف."
+  },
+  "slang-bot": {
+    "text": "بوت",
+    "meaning": "مصطلح شائع في الألعاب يعني: بوت."
+  },
+  "slang-smurf": {
+    "text": "سميرف",
+    "meaning": "لاعب قوي يستخدم حساباً برتبة أقل."
+  },
+  "slang-camper": {
+    "text": "كامبر",
+    "meaning": "مصطلح شائع في الألعاب يعني: كامبر."
+  },
+  "slang-tryhard": {
+    "text": "ترايهارد",
+    "meaning": "مصطلح شائع في الألعاب يعني: ترايهارد."
+  },
+  "slang-sweat": {
+    "text": "سويت",
+    "meaning": "مصطلح شائع في الألعاب يعني: سويت."
+  },
+  "slang-tilt": {
+    "text": "تيلت",
+    "meaning": "توتر أو غضب يجعل اللاعب يلعب أسوأ."
+  },
+  "slang-toxic": {
+    "text": "توكسك",
+    "meaning": "سلوك سيئ أو مؤذٍ في الدردشة أو اللعب."
+  },
+  "slang-salty": {
+    "text": "زعلان",
+    "meaning": "مصطلح شائع في الألعاب يعني: زعلان."
+  },
+  "slang-rage-quit": {
+    "text": "خروج غضب",
+    "meaning": "مصطلح شائع في الألعاب يعني: خروج غضب."
+  },
+  "slang-pvp": {
+    "text": "PvP",
+    "meaning": "لاعب ضد لاعب؛ نمط يواجه فيه اللاعبون بعضهم."
+  },
+  "slang-pve": {
+    "text": "PvE",
+    "meaning": "لاعب ضد البيئة؛ لعب ضد أعداء أو أنظمة يتحكم بها الكمبيوتر."
+  },
+  "slang-ranked": {
+    "text": "رانكد",
+    "meaning": "مصطلح شائع في الألعاب يعني: رانكد."
+  },
+  "slang-casual": {
+    "text": "كاجوال",
+    "meaning": "مصطلح شائع في الألعاب يعني: كاجوال."
+  },
+  "slang-mmr": {
+    "text": "MMR",
+    "meaning": "تقييم مهارة يستخدمه نظام المطابقة لصنع مباريات متوازنة."
+  },
+  "slang-elo": {
+    "text": "إيلو",
+    "meaning": "مصطلح شائع في الألعاب يعني: إيلو."
+  },
+  "slang-kd": {
+    "text": "K/D",
+    "meaning": "نسبة القتل إلى الموت."
+  },
+  "slang-kda": {
+    "text": "KDA",
+    "meaning": "القتل والموت والمساعدات؛ إحصائية أداء شائعة."
+  },
+  "slang-mvp": {
+    "text": "MVP",
+    "meaning": "أكثر لاعب تأثيراً في المباراة."
+  },
+  "slang-rng": {
+    "text": "RNG",
+    "meaning": "العشوائية في اللعبة؛ نتائج تعتمد على الحظ."
+  },
+  "slang-xp": {
+    "text": "XP",
+    "meaning": "نقاط خبرة تُستخدم لرفع المستوى أو التقدم."
+  },
+  "slang-level-up": {
+    "text": "رفع المستوى",
+    "meaning": "مصطلح شائع في الألعاب يعني: رفع المستوى."
+  },
+  "slang-grind": {
+    "text": "جريند",
+    "meaning": "مصطلح شائع في الألعاب يعني: جريند."
+  },
+  "slang-farm": {
+    "text": "فارم",
+    "meaning": "مصطلح شائع في الألعاب يعني: فارم."
+  },
+  "slang-main": {
+    "text": "مين",
+    "meaning": "مصطلح شائع في الألعاب يعني: مين."
+  },
+  "slang-alt": {
+    "text": "حساب بديل",
+    "meaning": "مصطلح شائع في الألعاب يعني: حساب بديل."
+  },
+  "slang-party": {
+    "text": "بارتي",
+    "meaning": "مصطلح شائع في الألعاب يعني: بارتي."
+  },
+  "slang-squad": {
+    "text": "سكواد",
+    "meaning": "مصطلح شائع في الألعاب يعني: سكواد."
+  },
+  "slang-lobby": {
+    "text": "لوبي",
+    "meaning": "مصطلح شائع في الألعاب يعني: لوبي."
+  },
+  "slang-queue": {
+    "text": "طابور البحث",
+    "meaning": "مصطلح شائع في الألعاب يعني: طابور البحث."
+  },
+  "slang-matchmaking": {
+    "text": "نظام المطابقة",
+    "meaning": "مصطلح شائع في الألعاب يعني: نظام المطابقة."
+  },
+  "slang-solo-queue": {
+    "text": "سولو كيو",
+    "meaning": "مصطلح شائع في الألعاب يعني: سولو كيو."
+  },
+  "slang-duo": {
+    "text": "ديو",
+    "meaning": "مصطلح شائع في الألعاب يعني: ديو."
+  },
+  "slang-stack": {
+    "text": "ستاك",
+    "meaning": "مصطلح شائع في الألعاب يعني: ستاك."
+  },
+  "slang-comms": {
+    "text": "كومز",
+    "meaning": "مصطلح شائع في الألعاب يعني: كومز."
+  },
+  "callouts-voice-chat": {
+    "text": "دردشة صوتية",
+    "meaning": "نداء سريع أثناء اللعب يعني: دردشة صوتية."
+  },
+  "callouts-text-chat": {
+    "text": "دردشة كتابية",
+    "meaning": "نداء سريع أثناء اللعب يعني: دردشة كتابية."
+  },
+  "callouts-no-mic": {
+    "text": "بدون مايك",
+    "meaning": "نداء سريع أثناء اللعب يعني: بدون مايك."
+  },
+  "callouts-mic-muted": {
+    "text": "المايك مكتوم",
+    "meaning": "نداء سريع أثناء اللعب يعني: المايك مكتوم."
+  },
+  "slang-dps": {
+    "text": "DPS",
+    "meaning": "مصطلح شائع في الألعاب يعني: DPS."
+  },
+  "slang-tank": {
+    "text": "تانك",
+    "meaning": "مصطلح شائع في الألعاب يعني: تانك."
+  },
+  "slang-support": {
+    "text": "دعم",
+    "meaning": "مصطلح شائع في الألعاب يعني: دعم."
+  },
+  "slang-healer": {
+    "text": "معالج",
+    "meaning": "مصطلح شائع في الألعاب يعني: معالج."
+  },
+  "slang-aoe": {
+    "text": "AOE",
+    "meaning": "مصطلح شائع في الألعاب يعني: AOE."
+  },
+  "slang-cc": {
+    "text": "CC",
+    "meaning": "مصطلح شائع في الألعاب يعني: CC."
+  },
+  "slang-ult": {
+    "text": "ألت",
+    "meaning": "مصطلح شائع في الألعاب يعني: ألت."
+  },
+  "callouts-ultimate-ready": {
+    "text": "الألت جاهز",
+    "meaning": "نداء سريع أثناء اللعب يعني: الألت جاهز."
+  },
+  "callouts-no-ultimate": {
+    "text": "لا يوجد ألت",
+    "meaning": "نداء سريع أثناء اللعب يعني: لا يوجد ألت."
+  },
+  "callouts-ability-ready": {
+    "text": "القدرة جاهزة",
+    "meaning": "نداء سريع أثناء اللعب يعني: القدرة جاهزة."
+  },
+  "callouts-ability-down": {
+    "text": "القدرة غير متاحة",
+    "meaning": "نداء سريع أثناء اللعب يعني: القدرة غير متاحة."
+  },
+  "callouts-cooldown": {
+    "text": "كولداون",
+    "meaning": "نداء سريع أثناء اللعب يعني: كولداون."
+  },
+  "callouts-enemy-spotted": {
+    "text": "تم رصد عدو",
+    "meaning": "نداء سريع أثناء اللعب يعني: تم رصد عدو."
+  },
+  "callouts-enemy-here": {
+    "text": "عدو هنا",
+    "meaning": "نداء سريع أثناء اللعب يعني: عدو هنا."
+  },
+  "callouts-enemy-there": {
+    "text": "عدو هناك",
+    "meaning": "نداء سريع أثناء اللعب يعني: عدو هناك."
+  },
+  "callouts-on-me": {
+    "text": "عندي",
+    "meaning": "نداء سريع أثناء اللعب يعني: عندي."
+  },
+  "callouts-i-see-him": {
+    "text": "أراه",
+    "meaning": "نداء سريع أثناء اللعب يعني: أراه."
+  },
+  "callouts-i-see-them": {
+    "text": "أراهم",
+    "meaning": "نداء سريع أثناء اللعب يعني: أراهم."
+  },
+  "callouts-one-more": {
+    "text": "واحد آخر",
+    "meaning": "نداء سريع أثناء اللعب يعني: واحد آخر."
+  },
+  "callouts-last-one": {
+    "text": "آخر واحد",
+    "meaning": "نداء سريع أثناء اللعب يعني: آخر واحد."
+  },
+  "callouts-two-enemies-here": {
+    "text": "عدوان هنا",
+    "meaning": "نداء سريع أثناء اللعب يعني: عدوان هنا."
+  },
+  "callouts-three-enemies-here": {
+    "text": "ثلاثة أعداء هنا",
+    "meaning": "نداء سريع أثناء اللعب يعني: ثلاثة أعداء هنا."
+  },
+  "callouts-full-team-here": {
+    "text": "الفريق كله هنا",
+    "meaning": "نداء سريع أثناء اللعب يعني: الفريق كله هنا."
+  },
+  "callouts-enemy-missing": {
+    "text": "عدو مختفٍ",
+    "meaning": "نداء سريع أثناء اللعب يعني: عدو مختفٍ."
+  },
+  "callouts-all-missing": {
+    "text": "كلهم مختفون",
+    "meaning": "نداء سريع أثناء اللعب يعني: كلهم مختفون."
+  },
+  "callouts-behind-you": {
+    "text": "خلفك!",
+    "meaning": "نداء سريع أثناء اللعب يعني: خلفك!."
+  },
+  "callouts-left-side": {
+    "text": "الجهة اليسرى!",
+    "meaning": "نداء سريع أثناء اللعب يعني: الجهة اليسرى!."
+  },
+  "callouts-right-side": {
+    "text": "الجهة اليمنى!",
+    "meaning": "نداء سريع أثناء اللعب يعني: الجهة اليمنى!."
+  },
+  "callouts-above-us": {
+    "text": "فوقنا",
+    "meaning": "نداء سريع أثناء اللعب يعني: فوقنا."
+  },
+  "callouts-below-us": {
+    "text": "تحتنا",
+    "meaning": "نداء سريع أثناء اللعب يعني: تحتنا."
+  },
+  "callouts-in-front": {
+    "text": "أمامنا",
+    "meaning": "نداء سريع أثناء اللعب يعني: أمامنا."
+  },
+  "callouts-mid": {
+    "text": "المنتصف",
+    "meaning": "نداء سريع أثناء اللعب يعني: المنتصف."
+  },
+  "callouts-top-mid": {
+    "text": "أعلى المنتصف",
+    "meaning": "نداء سريع أثناء اللعب يعني: أعلى المنتصف."
+  },
+  "callouts-bottom-mid": {
+    "text": "أسفل المنتصف",
+    "meaning": "نداء سريع أثناء اللعب يعني: أسفل المنتصف."
+  },
+  "callouts-spawn": {
+    "text": "منطقة الظهور",
+    "meaning": "نداء سريع أثناء اللعب يعني: منطقة الظهور."
+  },
+  "callouts-our-spawn": {
+    "text": "منطقة ظهورنا",
+    "meaning": "نداء سريع أثناء اللعب يعني: منطقة ظهورنا."
+  },
+  "callouts-their-spawn": {
+    "text": "منطقة ظهورهم",
+    "meaning": "نداء سريع أثناء اللعب يعني: منطقة ظهورهم."
+  },
+  "callouts-flank": {
+    "text": "التفاف",
+    "meaning": "نداء سريع أثناء اللعب يعني: التفاف."
+  },
+  "callouts-watch-flank": {
+    "text": "راقب الالتفاف",
+    "meaning": "نداء سريع أثناء اللعب يعني: راقب الالتفاف."
+  },
+  "danger-incoming": {
+    "text": "هجوم قادم!",
+    "meaning": "تحذير سريع للفريق يعني: هجوم قادم!."
+  },
+  "danger-grenade": {
+    "text": "قنبلة!",
+    "meaning": "تحذير سريع للفريق يعني: قنبلة!."
+  },
+  "danger-flash": {
+    "text": "فلاش!",
+    "meaning": "تحذير سريع للفريق يعني: فلاش!."
+  },
+  "danger-sniper": {
+    "text": "قناص!",
+    "meaning": "تحذير سريع للفريق يعني: قناص!."
+  },
+  "danger-trap": {
+    "text": "فخ!",
+    "meaning": "تحذير سريع للفريق يعني: فخ!."
+  },
+  "danger-mine": {
+    "text": "لغم!",
+    "meaning": "تحذير سريع للفريق يعني: لغم!."
+  },
+  "danger-ambush": {
+    "text": "كمين!",
+    "meaning": "تحذير سريع للفريق يعني: كمين!."
+  },
+  "danger-they-are-rushing": {
+    "text": "إنهم يندفعون بسرعة",
+    "meaning": "تحذير سريع للفريق يعني: إنهم يندفعون بسرعة."
+  },
+  "danger-they-are-pushing": {
+    "text": "إنهم يضغطون",
+    "meaning": "تحذير سريع للفريق يعني: إنهم يضغطون."
+  },
+  "danger-they-are-flanking": {
+    "text": "إنهم يلتفون",
+    "meaning": "تحذير سريع للفريق يعني: إنهم يلتفون."
+  },
+  "danger-they-know": {
+    "text": "هم يعرفون",
+    "meaning": "تحذير سريع للفريق يعني: هم يعرفون."
+  },
+  "danger-they-saw-me": {
+    "text": "رأوني",
+    "meaning": "تحذير سريع للفريق يعني: رأوني."
+  },
+  "danger-i-am-exposed": {
+    "text": "أنا مكشوف",
+    "meaning": "تحذير سريع للفريق يعني: أنا مكشوف."
+  },
+  "danger-no-cover": {
+    "text": "لا يوجد غطاء",
+    "meaning": "تحذير سريع للفريق يعني: لا يوجد غطاء."
+  },
+  "danger-bad-angle": {
+    "text": "زاوية سيئة",
+    "meaning": "تحذير سريع للفريق يعني: زاوية سيئة."
+  },
+  "danger-get-out": {
+    "text": "اخرج",
+    "meaning": "تحذير سريع للفريق يعني: اخرج."
+  },
+  "danger-back-up": {
+    "text": "ارجع للخلف",
+    "meaning": "تحذير سريع للفريق يعني: ارجع للخلف."
+  },
+  "callouts-i-am-down": {
+    "text": "أنا ساقط",
+    "meaning": "نداء سريع أثناء اللعب يعني: أنا ساقط."
+  },
+  "callouts-i-am-low": {
+    "text": "صحتي منخفضة",
+    "meaning": "نداء سريع أثناء اللعب يعني: صحتي منخفضة."
+  },
+  "callouts-low-hp": {
+    "text": "صحة منخفضة",
+    "meaning": "نداء سريع أثناء اللعب يعني: صحة منخفضة."
+  },
+  "callouts-he-is-low": {
+    "text": "صحته منخفضة",
+    "meaning": "نداء سريع أثناء اللعب يعني: صحته منخفضة."
+  },
+  "callouts-they-are-low": {
+    "text": "صحتهم منخفضة",
+    "meaning": "نداء سريع أثناء اللعب يعني: صحتهم منخفضة."
+  },
+  "callouts-one-shot": {
+    "text": "ضربة واحدة",
+    "meaning": "نداء سريع أثناء اللعب يعني: ضربة واحدة."
+  },
+  "callouts-armor-cracked": {
+    "text": "الدرع مكسور",
+    "meaning": "نداء سريع أثناء اللعب يعني: الدرع مكسور."
+  },
+  "callouts-shield-broken": {
+    "text": "الشيلد مكسور",
+    "meaning": "نداء سريع أثناء اللعب يعني: الشيلد مكسور."
+  },
+  "callouts-no-shield": {
+    "text": "بدون شيلد",
+    "meaning": "نداء سريع أثناء اللعب يعني: بدون شيلد."
+  },
+  "callouts-tagged-him": {
+    "text": "ضربته",
+    "meaning": "نداء سريع أثناء اللعب يعني: ضربته."
+  },
+  "callouts-hit-for-fifty": {
+    "text": "ضربته ٥٠",
+    "meaning": "نداء سريع أثناء اللعب يعني: ضربته ٥٠."
+  },
+  "callouts-hit-for-a-hundred": {
+    "text": "ضربته ١٠٠",
+    "meaning": "نداء سريع أثناء اللعب يعني: ضربته ١٠٠."
+  },
+  "callouts-knocked-one": {
+    "text": "أسقطت واحداً",
+    "meaning": "نداء سريع أثناء اللعب يعني: أسقطت واحداً."
+  },
+  "callouts-finished-one": {
+    "text": "أنهيت واحداً",
+    "meaning": "نداء سريع أثناء اللعب يعني: أنهيت واحداً."
+  },
+  "callouts-team-wipe": {
+    "text": "مسح الفريق",
+    "meaning": "نداء سريع أثناء اللعب يعني: مسح الفريق."
+  },
+  "instructions-push": {
+    "text": "ادفع",
+    "meaning": "أمر أو توجيه للفريق يعني: ادفع."
+  },
+  "instructions-rush": {
+    "text": "اهجم بسرعة",
+    "meaning": "أمر أو توجيه للفريق يعني: اهجم بسرعة."
+  },
+  "instructions-hold": {
+    "text": "اثبت",
+    "meaning": "أمر أو توجيه للفريق يعني: اثبت."
+  },
+  "instructions-defend": {
+    "text": "دافع",
+    "meaning": "أمر أو توجيه للفريق يعني: دافع."
+  },
+  "instructions-attack": {
+    "text": "هاجم",
+    "meaning": "أمر أو توجيه للفريق يعني: هاجم."
+  },
+  "instructions-retreat": {
+    "text": "انسحب",
+    "meaning": "أمر أو توجيه للفريق يعني: انسحب."
+  },
+  "instructions-rotate": {
+    "text": "بدّل الموقع",
+    "meaning": "أمر أو توجيه للفريق يعني: بدّل الموقع."
+  },
+  "callouts-rotating": {
+    "text": "يبدّلون الموقع",
+    "meaning": "نداء سريع أثناء اللعب يعني: يبدّلون الموقع."
+  },
+  "callouts-they-rotated": {
+    "text": "هم بدّلوا الموقع",
+    "meaning": "نداء سريع أثناء اللعب يعني: هم بدّلوا الموقع."
+  },
+  "callouts-fake-rotate": {
+    "text": "روتيت وهمي",
+    "meaning": "نداء سريع أثناء اللعب يعني: روتيت وهمي."
+  },
+  "callouts-push-now": {
+    "text": "ادفع الآن",
+    "meaning": "نداء سريع أثناء اللعب يعني: ادفع الآن."
+  },
+  "callouts-go-now": {
+    "text": "اذهب الآن",
+    "meaning": "نداء سريع أثناء اللعب يعني: اذهب الآن."
+  },
+  "callouts-fall-back": {
+    "text": "تراجع",
+    "meaning": "نداء سريع أثناء اللعب يعني: تراجع."
+  },
+  "callouts-group-up": {
+    "text": "تجمعوا",
+    "meaning": "نداء سريع أثناء اللعب يعني: تجمعوا."
+  },
+  "callouts-regroup": {
+    "text": "أعيدوا التجمع",
+    "meaning": "نداء سريع أثناء اللعب يعني: أعيدوا التجمع."
+  },
+  "callouts-need-help": {
+    "text": "أحتاج مساعدة",
+    "meaning": "نداء سريع أثناء اللعب يعني: أحتاج مساعدة."
+  },
+  "callouts-help-me": {
+    "text": "ساعدني",
+    "meaning": "نداء سريع أثناء اللعب يعني: ساعدني."
+  },
+  "callouts-need-backup": {
+    "text": "أحتاج دعم",
+    "meaning": "نداء سريع أثناء اللعب يعني: أحتاج دعم."
+  },
+  "callouts-i-need-healing": {
+    "text": "أحتاج علاج",
+    "meaning": "نداء سريع أثناء اللعب يعني: أحتاج علاج."
+  },
+  "instructions-heal-me": {
+    "text": "عالجني",
+    "meaning": "أمر أو توجيه للفريق يعني: عالجني."
+  },
+  "instructions-revive-me": {
+    "text": "أحيِني",
+    "meaning": "أمر أو توجيه للفريق يعني: أحيِني."
+  },
+  "instructions-res-me": {
+    "text": "ريسني",
+    "meaning": "أمر أو توجيه للفريق يعني: ريسني."
+  },
+  "instructions-cover-the-revive": {
+    "text": "غطِّ الإحياء",
+    "meaning": "أمر أو توجيه للفريق يعني: غطِّ الإحياء."
+  },
+  "callouts-need-ammo": {
+    "text": "أحتاج ذخيرة",
+    "meaning": "نداء سريع أثناء اللعب يعني: أحتاج ذخيرة."
+  },
+  "callouts-out-of-ammo": {
+    "text": "نفدت الذخيرة",
+    "meaning": "نداء سريع أثناء اللعب يعني: نفدت الذخيرة."
+  },
+  "callouts-reloading": {
+    "text": "أعيد التلقيم",
+    "meaning": "نداء سريع أثناء اللعب يعني: أعيد التلقيم."
+  },
+  "callouts-cover-me": {
+    "text": "غطّني",
+    "meaning": "نداء سريع أثناء اللعب يعني: غطّني."
+  },
+  "callouts-i-got-you": {
+    "text": "أنا معك",
+    "meaning": "نداء سريع أثناء اللعب يعني: أنا معك."
+  },
+  "callouts-ping-it": {
+    "text": "علّمها بالبينغ",
+    "meaning": "نداء سريع أثناء اللعب يعني: علّمها بالبينغ."
+  },
+  "callouts-mark-the-enemy": {
+    "text": "علّم العدو",
+    "meaning": "نداء سريع أثناء اللعب يعني: علّم العدو."
+  },
+  "callouts-i-marked-it": {
+    "text": "علّمتها",
+    "meaning": "نداء سريع أثناء اللعب يعني: علّمتها."
+  },
+  "callouts-check-map": {
+    "text": "افحص الخريطة",
+    "meaning": "نداء سريع أثناء اللعب يعني: افحص الخريطة."
+  },
+  "callouts-look-at-ping": {
+    "text": "انظر إلى البينغ",
+    "meaning": "نداء سريع أثناء اللعب يعني: انظر إلى البينغ."
+  },
+  "instructions-follow-me": {
+    "text": "اتبعني",
+    "meaning": "أمر أو توجيه للفريق يعني: اتبعني."
+  },
+  "instructions-stay-together": {
+    "text": "ابقوا معاً",
+    "meaning": "أمر أو توجيه للفريق يعني: ابقوا معاً."
+  },
+  "instructions-spread-out": {
+    "text": "تباعدوا",
+    "meaning": "أمر أو توجيه للفريق يعني: تباعدوا."
+  },
+  "instructions-wait-for-me": {
+    "text": "انتظرني",
+    "meaning": "أمر أو توجيه للفريق يعني: انتظرني."
+  },
+  "instructions-wait-for-cooldowns": {
+    "text": "انتظروا الكولداون",
+    "meaning": "أمر أو توجيه للفريق يعني: انتظروا الكولداون."
+  },
+  "objective-plant-the-bomb": {
+    "text": "ازرع القنبلة",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: ازرع القنبلة."
+  },
+  "objective-bomb-planted": {
+    "text": "القنبلة مزروعة",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: القنبلة مزروعة."
+  },
+  "objective-bomb-down": {
+    "text": "القنبلة سقطت",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: القنبلة سقطت."
+  },
+  "objective-spike-down": {
+    "text": "السبايك سقط",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: السبايك سقط."
+  },
+  "objective-defuse-the-bomb": {
+    "text": "فك القنبلة",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: فك القنبلة."
+  },
+  "objective-half-defuse": {
+    "text": "نصف فك",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: نصف فك."
+  },
+  "objective-stick-the-defuse": {
+    "text": "استمر في الفك",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: استمر في الفك."
+  },
+  "objective-fake-defuse": {
+    "text": "فك وهمي",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: فك وهمي."
+  },
+  "objective-objective-secured": {
+    "text": "تم تأمين الهدف",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: تم تأمين الهدف."
+  },
+  "objective-objective-lost": {
+    "text": "فقدنا الهدف",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: فقدنا الهدف."
+  },
+  "objective-point-captured": {
+    "text": "تمت السيطرة على النقطة",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: تمت السيطرة على النقطة."
+  },
+  "objective-point-contested": {
+    "text": "النقطة متنازع عليها",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: النقطة متنازع عليها."
+  },
+  "objective-payload-moving": {
+    "text": "البايلود يتحرك",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: البايلود يتحرك."
+  },
+  "objective-payload-stopped": {
+    "text": "البايلود متوقف",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: البايلود متوقف."
+  },
+  "slang-loot": {
+    "text": "لوت",
+    "meaning": "مصطلح شائع في الألعاب يعني: لوت."
+  },
+  "callouts-loot-here": {
+    "text": "لوت هنا",
+    "meaning": "نداء سريع أثناء اللعب يعني: لوت هنا."
+  },
+  "callouts-good-loot": {
+    "text": "لوت جيد",
+    "meaning": "نداء سريع أثناء اللعب يعني: لوت جيد."
+  },
+  "callouts-need-weapon": {
+    "text": "أحتاج سلاحاً",
+    "meaning": "نداء سريع أثناء اللعب يعني: أحتاج سلاحاً."
+  },
+  "callouts-need-shield": {
+    "text": "أحتاج شيلد",
+    "meaning": "نداء سريع أثناء اللعب يعني: أحتاج شيلد."
+  },
+  "callouts-need-meds": {
+    "text": "أحتاج علاجاً",
+    "meaning": "نداء سريع أثناء اللعب يعني: أحتاج علاجاً."
+  },
+  "callouts-drop-ammo": {
+    "text": "ارمِ ذخيرة",
+    "meaning": "نداء سريع أثناء اللعب يعني: ارمِ ذخيرة."
+  },
+  "callouts-drop-weapon": {
+    "text": "ارمِ سلاحاً",
+    "meaning": "نداء سريع أثناء اللعب يعني: ارمِ سلاحاً."
+  },
+  "callouts-take-this": {
+    "text": "خذ هذا",
+    "meaning": "نداء سريع أثناء اللعب يعني: خذ هذا."
+  },
+  "callouts-do-not-take-it": {
+    "text": "لا تأخذه",
+    "meaning": "نداء سريع أثناء اللعب يعني: لا تأخذه."
+  },
+  "callouts-i-will-take-it": {
+    "text": "سآخذه",
+    "meaning": "نداء سريع أثناء اللعب يعني: سآخذه."
+  },
+  "callouts-use-it": {
+    "text": "استخدمه",
+    "meaning": "نداء سريع أثناء اللعب يعني: استخدمه."
+  },
+  "callouts-save-it": {
+    "text": "احتفظ به",
+    "meaning": "نداء سريع أثناء اللعب يعني: احتفظ به."
+  },
+  "strategy-default-setup": {
+    "text": "إعداد افتراضي",
+    "meaning": "مصطلح استراتيجي يعني: إعداد افتراضي."
+  },
+  "strategy-slow-push": {
+    "text": "دفع بطيء",
+    "meaning": "مصطلح استراتيجي يعني: دفع بطيء."
+  },
+  "strategy-fast-push": {
+    "text": "دفع سريع",
+    "meaning": "مصطلح استراتيجي يعني: دفع سريع."
+  },
+  "strategy-fake-push": {
+    "text": "دفع وهمي",
+    "meaning": "مصطلح استراتيجي يعني: دفع وهمي."
+  },
+  "strategy-split-push": {
+    "text": "دفع مقسّم",
+    "meaning": "مصطلح استراتيجي يعني: دفع مقسّم."
+  },
+  "strategy-retake": {
+    "text": "استرجاع",
+    "meaning": "مصطلح استراتيجي يعني: استرجاع."
+  },
+  "strategy-eco-round": {
+    "text": "جولة إيكو",
+    "meaning": "مصطلح استراتيجي يعني: جولة إيكو."
+  },
+  "strategy-full-buy": {
+    "text": "شراء كامل",
+    "meaning": "مصطلح استراتيجي يعني: شراء كامل."
+  },
+  "strategy-force-buy": {
+    "text": "شراء إجباري",
+    "meaning": "مصطلح استراتيجي يعني: شراء إجباري."
+  },
+  "strategy-play-objective": {
+    "text": "العب على الهدف",
+    "meaning": "مصطلح استراتيجي يعني: العب على الهدف."
+  },
+  "strategy-play-for-picks": {
+    "text": "العب على الالتقاطات",
+    "meaning": "مصطلح استراتيجي يعني: العب على الالتقاطات."
+  },
+  "strategy-take-map-control": {
+    "text": "خذ سيطرة الخريطة",
+    "meaning": "مصطلح استراتيجي يعني: خذ سيطرة الخريطة."
+  },
+  "strategy-gather-info": {
+    "text": "اجمع معلومات",
+    "meaning": "مصطلح استراتيجي يعني: اجمع معلومات."
+  },
+  "strategy-use-utility-first": {
+    "text": "استخدم الأدوات أولاً",
+    "meaning": "مصطلح استراتيجي يعني: استخدم الأدوات أولاً."
+  },
+  "strategy-double-peek": {
+    "text": "نظرة مزدوجة",
+    "meaning": "مصطلح استراتيجي يعني: نظرة مزدوجة."
+  },
+  "strategy-off-angle": {
+    "text": "زاوية غير متوقعة",
+    "meaning": "مصطلح استراتيجي يعني: زاوية غير متوقعة."
+  },
+  "strategy-late-lurk": {
+    "text": "لورك متأخر",
+    "meaning": "مصطلح استراتيجي يعني: لورك متأخر."
+  },
+  "economy-buy": {
+    "text": "اشترِ",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: اشترِ."
+  },
+  "economy-save": {
+    "text": "وفّر",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: وفّر."
+  },
+  "economy-drop-me": {
+    "text": "اشترِ لي / أعطني",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: اشترِ لي / أعطني."
+  },
+  "economy-i-can-drop": {
+    "text": "أستطيع أن أعطي",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: أستطيع أن أعطي."
+  },
+  "economy-need-a-drop": {
+    "text": "أحتاج دروب",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: أحتاج دروب."
+  },
+  "economy-full-save": {
+    "text": "توفير كامل",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: توفير كامل."
+  },
+  "economy-light-buy": {
+    "text": "شراء خفيف",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: شراء خفيف."
+  },
+  "economy-half-buy": {
+    "text": "نصف شراء",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: نصف شراء."
+  },
+  "economy-full-armor": {
+    "text": "درع كامل",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: درع كامل."
+  },
+  "economy-no-armor": {
+    "text": "بدون درع",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: بدون درع."
+  },
+  "economy-upgrade-weapon": {
+    "text": "طوّر السلاح",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: طوّر السلاح."
+  },
+  "economy-keep-weapon": {
+    "text": "احتفظ بالسلاح",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: احتفظ بالسلاح."
+  },
+  "economy-pick-up-gun": {
+    "text": "التقط السلاح",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: التقط السلاح."
+  },
+  "economy-save-the-gun": {
+    "text": "احفظ السلاح",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: احفظ السلاح."
+  },
+  "economy-we-are-broke": {
+    "text": "نحن مفلسون",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: نحن مفلسون."
+  },
+  "economy-they-are-broke": {
+    "text": "هم مفلسون",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: هم مفلسون."
+  },
+  "slang-skin": {
+    "text": "سكن",
+    "meaning": "مصطلح شائع في الألعاب يعني: سكن."
+  },
+  "slang-battle-pass": {
+    "text": "باتل باس",
+    "meaning": "مصطلح شائع في الألعاب يعني: باتل باس."
+  },
+  "slang-loadout": {
+    "text": "لود آوت",
+    "meaning": "مصطلح شائع في الألعاب يعني: لود آوت."
+  },
+  "slang-build": {
+    "text": "بيلد",
+    "meaning": "مصطلح شائع في الألعاب يعني: بيلد."
+  },
+  "slang-perk": {
+    "text": "بيرك",
+    "meaning": "مصطلح شائع في الألعاب يعني: بيرك."
+  },
+  "slang-cosmetic": {
+    "text": "تجميلي",
+    "meaning": "مصطلح شائع في الألعاب يعني: تجميلي."
+  },
+  "slang-patch": {
+    "text": "باتش",
+    "meaning": "مصطلح شائع في الألعاب يعني: باتش."
+  },
+  "slang-patch-notes": {
+    "text": "ملاحظات الباتش",
+    "meaning": "مصطلح شائع في الألعاب يعني: ملاحظات الباتش."
+  },
+  "slang-hotfix": {
+    "text": "إصلاح سريع",
+    "meaning": "مصطلح شائع في الألعاب يعني: إصلاح سريع."
+  },
+  "slang-bug": {
+    "text": "خلل",
+    "meaning": "مصطلح شائع في الألعاب يعني: خلل."
+  },
+  "slang-glitch": {
+    "text": "غلِتش",
+    "meaning": "مصطلح شائع في الألعاب يعني: غلِتش."
+  },
+  "slang-exploit": {
+    "text": "استغلال خلل",
+    "meaning": "مصطلح شائع في الألعاب يعني: استغلال خلل."
+  },
+  "slang-cheater": {
+    "text": "غشاش",
+    "meaning": "مصطلح شائع في الألعاب يعني: غشاش."
+  },
+  "slang-hacker": {
+    "text": "هاكر",
+    "meaning": "مصطلح شائع في الألعاب يعني: هاكر."
+  },
+  "slang-ban": {
+    "text": "حظر",
+    "meaning": "مصطلح شائع في الألعاب يعني: حظر."
+  },
+  "slang-report": {
+    "text": "تبليغ",
+    "meaning": "مصطلح شائع في الألعاب يعني: تبليغ."
+  },
+  "slang-skill-issue": {
+    "text": "مشكلة مهارة",
+    "meaning": "مصطلح شائع في الألعاب يعني: مشكلة مهارة."
+  },
+  "slang-touch-grass": {
+    "text": "اخرج للمس العشب",
+    "meaning": "مصطلح شائع في الألعاب يعني: اخرج للمس العشب."
+  },
+  "slang-cooked": {
+    "text": "منتهي",
+    "meaning": "مصطلح شائع في الألعاب يعني: منتهي."
+  },
+  "slang-diffed": {
+    "text": "متفوق عليه",
+    "meaning": "مصطلح شائع في الألعاب يعني: متفوق عليه."
+  },
+  "slang-quest": {
+    "text": "مهمة",
+    "meaning": "مصطلح شائع في الألعاب يعني: مهمة."
+  },
+  "slang-mission": {
+    "text": "مهمة",
+    "meaning": "مصطلح شائع في الألعاب يعني: مهمة."
+  },
+  "slang-boss": {
+    "text": "زعيم",
+    "meaning": "مصطلح شائع في الألعاب يعني: زعيم."
+  },
+  "slang-mob": {
+    "text": "عدو عادي",
+    "meaning": "مصطلح شائع في الألعاب يعني: عدو عادي."
+  },
+  "slang-aggro": {
+    "text": "أغرو",
+    "meaning": "مصطلح شائع في الألعاب يعني: أغرو."
+  },
+  "slang-raid": {
+    "text": "رايد",
+    "meaning": "مصطلح شائع في الألعاب يعني: رايد."
+  },
+  "slang-dungeon": {
+    "text": "دنغن",
+    "meaning": "مصطلح شائع في الألعاب يعني: دنغن."
+  },
+  "slang-cc-chain": {
+    "text": "سلسلة CC",
+    "meaning": "مصطلح شائع في الألعاب يعني: سلسلة CC."
+  },
+  "slang-clutch-or-kick": {
+    "text": "كلتش أو طرد",
+    "meaning": "مصطلح شائع في الألعاب يعني: كلتش أو طرد."
+  },
+  "slang-diff": {
+    "text": "فرق",
+    "meaning": "مصطلح شائع في الألعاب يعني: فرق."
+  },
+  "slang-gap": {
+    "text": "فجوة",
+    "meaning": "مصطلح شائع في الألعاب يعني: فجوة."
+  },
+  "slang-gg-ez": {
+    "text": "GG EZ",
+    "meaning": "مصطلح شائع في الألعاب يعني: GG EZ."
+  },
+  "slang-hitbox": {
+    "text": "هيت بوكس",
+    "meaning": "مصطلح شائع في الألعاب يعني: هيت بوكس."
+  },
+  "slang-spawn-camp": {
+    "text": "كامب عند الظهور",
+    "meaning": "مصطلح شائع في الألعاب يعني: كامب عند الظهور."
+  },
+  "slang-spawn-kill": {
+    "text": "قتل عند الظهور",
+    "meaning": "مصطلح شائع في الألعاب يعني: قتل عند الظهور."
+  },
+  "callouts-ace": {
+    "text": "إيس",
+    "meaning": "نداء سريع أثناء اللعب يعني: إيس."
+  },
+  "callouts-back-site": {
+    "text": "خلف الموقع",
+    "meaning": "نداء سريع أثناء اللعب يعني: خلف الموقع."
+  },
+  "callouts-bad-timing": {
+    "text": "توقيت سيئ",
+    "meaning": "نداء سريع أثناء اللعب يعني: توقيت سيئ."
+  },
+  "callouts-bait-and-switch": {
+    "text": "طُعم وتبديل",
+    "meaning": "نداء سريع أثناء اللعب يعني: طُعم وتبديل."
+  },
+  "callouts-basement-clear": {
+    "text": "القبو آمن",
+    "meaning": "نداء سريع أثناء اللعب يعني: القبو آمن."
+  },
+  "callouts-blocked": {
+    "text": "مغلق",
+    "meaning": "نداء سريع أثناء اللعب يعني: مغلق."
+  },
+  "callouts-bridge-clear": {
+    "text": "الجسر آمن",
+    "meaning": "نداء سريع أثناء اللعب يعني: الجسر آمن."
+  },
+  "callouts-careful": {
+    "text": "انتبه",
+    "meaning": "نداء سريع أثناء اللعب يعني: انتبه."
+  },
+  "callouts-carry": {
+    "text": "كاري",
+    "meaning": "نداء سريع أثناء اللعب يعني: كاري."
+  },
+  "callouts-circle-moving": {
+    "text": "الدائرة تتحرك",
+    "meaning": "نداء سريع أثناء اللعب يعني: الدائرة تتحرك."
+  },
+  "callouts-clean-fight": {
+    "text": "قتال نظيف",
+    "meaning": "نداء سريع أثناء اللعب يعني: قتال نظيف."
+  },
+  "callouts-clear-left": {
+    "text": "اليسار آمن",
+    "meaning": "نداء سريع أثناء اللعب يعني: اليسار آمن."
+  },
+  "callouts-clear-mid": {
+    "text": "المنتصف آمن",
+    "meaning": "نداء سريع أثناء اللعب يعني: المنتصف آمن."
+  },
+  "callouts-clear-right": {
+    "text": "اليمين آمن",
+    "meaning": "نداء سريع أثناء اللعب يعني: اليمين آمن."
+  },
+  "callouts-close-corner": {
+    "text": "الزاوية القريبة",
+    "meaning": "نداء سريع أثناء اللعب يعني: الزاوية القريبة."
+  },
+  "callouts-close-game": {
+    "text": "مباراة متقاربة",
+    "meaning": "نداء سريع أثناء اللعب يعني: مباراة متقاربة."
+  },
+  "callouts-clutch": {
+    "text": "كلتش",
+    "meaning": "نداء سريع أثناء اللعب يعني: كلتش."
+  },
+  "callouts-come-back": {
+    "text": "ارجع",
+    "meaning": "نداء سريع أثناء اللعب يعني: ارجع."
+  },
+  "callouts-comeback": {
+    "text": "عودة",
+    "meaning": "نداء سريع أثناء اللعب يعني: عودة."
+  },
+  "callouts-contact": {
+    "text": "اشتباك",
+    "meaning": "نداء سريع أثناء اللعب يعني: اشتباك."
+  },
+  "callouts-corner": {
+    "text": "زاوية",
+    "meaning": "نداء سريع أثناء اللعب يعني: زاوية."
+  },
+  "callouts-crossfire": {
+    "text": "نيران متقاطعة",
+    "meaning": "نداء سريع أثناء اللعب يعني: نيران متقاطعة."
+  },
+  "callouts-default-spot": {
+    "text": "المكان الافتراضي",
+    "meaning": "نداء سريع أثناء اللعب يعني: المكان الافتراضي."
+  },
+  "callouts-do-not-chase": {
+    "text": "لا تطارد",
+    "meaning": "نداء سريع أثناء اللعب يعني: لا تطارد."
+  },
+  "callouts-do-not-peek": {
+    "text": "لا تكشف نفسك",
+    "meaning": "نداء سريع أثناء اللعب يعني: لا تكشف نفسك."
+  },
+  "callouts-door-closed": {
+    "text": "الباب مغلق",
+    "meaning": "نداء سريع أثناء اللعب يعني: الباب مغلق."
+  },
+  "callouts-door-open": {
+    "text": "الباب مفتوح",
+    "meaning": "نداء سريع أثناء اللعب يعني: الباب مفتوح."
+  },
+  "callouts-flash-out": {
+    "text": "فلاش مرمي",
+    "meaning": "نداء سريع أثناء اللعب يعني: فلاش مرمي."
+  },
+  "callouts-focus-fire": {
+    "text": "ركّزوا النار",
+    "meaning": "نداء سريع أثناء اللعب يعني: ركّزوا النار."
+  },
+  "callouts-focus-healer": {
+    "text": "ركّزوا على المعالج",
+    "meaning": "نداء سريع أثناء اللعب يعني: ركّزوا على المعالج."
+  },
+  "callouts-focus-sniper": {
+    "text": "ركّزوا على القناص",
+    "meaning": "نداء سريع أثناء اللعب يعني: ركّزوا على القناص."
+  },
+  "callouts-footsteps": {
+    "text": "خطوات",
+    "meaning": "نداء سريع أثناء اللعب يعني: خطوات."
+  },
+  "callouts-free-kill": {
+    "text": "قتلة مجانية",
+    "meaning": "نداء سريع أثناء اللعب يعني: قتلة مجانية."
+  },
+  "callouts-free-objective": {
+    "text": "هدف مجاني",
+    "meaning": "نداء سريع أثناء اللعب يعني: هدف مجاني."
+  },
+  "callouts-front-site": {
+    "text": "أمام الموقع",
+    "meaning": "نداء سريع أثناء اللعب يعني: أمام الموقع."
+  },
+  "callouts-good-timing": {
+    "text": "توقيت جيد",
+    "meaning": "نداء سريع أثناء اللعب يعني: توقيت جيد."
+  },
+  "callouts-grenade-out": {
+    "text": "قنبلة مرمية",
+    "meaning": "نداء سريع أثناء اللعب يعني: قنبلة مرمية."
+  },
+  "callouts-hallway": {
+    "text": "ممر",
+    "meaning": "نداء سريع أثناء اللعب يعني: ممر."
+  },
+  "callouts-hide": {
+    "text": "اختبئ",
+    "meaning": "نداء سريع أثناء اللعب يعني: اختبئ."
+  },
+  "callouts-high-ground": {
+    "text": "أرض مرتفعة",
+    "meaning": "نداء سريع أثناء اللعب يعني: أرض مرتفعة."
+  },
+  "callouts-hold-angle": {
+    "text": "امسك الزاوية",
+    "meaning": "نداء سريع أثناء اللعب يعني: امسك الزاوية."
+  },
+  "callouts-hold-position": {
+    "text": "اثبت في مكانك",
+    "meaning": "نداء سريع أثناء اللعب يعني: اثبت في مكانك."
+  },
+  "callouts-i-am-watching": {
+    "text": "أنا أراقب",
+    "meaning": "نداء سريع أثناء اللعب يعني: أنا أراقب."
+  },
+  "callouts-i-hear-steps": {
+    "text": "أسمع خطوات",
+    "meaning": "نداء سريع أثناء اللعب يعني: أسمع خطوات."
+  },
+  "callouts-i-will-trade": {
+    "text": "سأبادل القتل",
+    "meaning": "نداء سريع أثناء اللعب يعني: سأبادل القتل."
+  },
+  "callouts-ignore-tank": {
+    "text": "تجاهل التانك",
+    "meaning": "نداء سريع أثناء اللعب يعني: تجاهل التانك."
+  },
+  "callouts-long-range": {
+    "text": "مدى بعيد",
+    "meaning": "نداء سريع أثناء اللعب يعني: مدى بعيد."
+  },
+  "callouts-low-ground": {
+    "text": "أرض منخفضة",
+    "meaning": "نداء سريع أثناء اللعب يعني: أرض منخفضة."
+  },
+  "callouts-lucky-shot": {
+    "text": "طلقة حظ",
+    "meaning": "نداء سريع أثناء اللعب يعني: طلقة حظ."
+  },
+  "callouts-messy-fight": {
+    "text": "قتال فوضوي",
+    "meaning": "نداء سريع أثناء اللعب يعني: قتال فوضوي."
+  },
+  "callouts-move-up": {
+    "text": "تقدم",
+    "meaning": "نداء سريع أثناء اللعب يعني: تقدم."
+  },
+  "callouts-nice-trade": {
+    "text": "تبادل جيد",
+    "meaning": "نداء سريع أثناء اللعب يعني: تبادل جيد."
+  },
+  "callouts-no-contact": {
+    "text": "لا يوجد احتكاك",
+    "meaning": "نداء سريع أثناء اللعب يعني: لا يوجد احتكاك."
+  },
+  "callouts-no-problem": {
+    "text": "لا مشكلة",
+    "meaning": "نداء سريع أثناء اللعب يعني: لا مشكلة."
+  },
+  "callouts-not-clear": {
+    "text": "غير آمن",
+    "meaning": "نداء سريع أثناء اللعب يعني: غير آمن."
+  },
+  "callouts-open-lane": {
+    "text": "مسار مفتوح",
+    "meaning": "نداء سريع أثناء اللعب يعني: مسار مفتوح."
+  },
+  "callouts-out-of-zone": {
+    "text": "خارج الزون",
+    "meaning": "نداء سريع أثناء اللعب يعني: خارج الزون."
+  },
+  "callouts-peek-together": {
+    "text": "اكشفوا معاً",
+    "meaning": "نداء سريع أثناء اللعب يعني: اكشفوا معاً."
+  },
+  "callouts-pinched": {
+    "text": "محاصر من جهتين",
+    "meaning": "نداء سريع أثناء اللعب يعني: محاصر من جهتين."
+  },
+  "callouts-play-fast": {
+    "text": "العب بسرعة",
+    "meaning": "نداء سريع أثناء اللعب يعني: العب بسرعة."
+  },
+  "callouts-play-safe": {
+    "text": "العب بأمان",
+    "meaning": "نداء سريع أثناء اللعب يعني: العب بأمان."
+  },
+  "callouts-play-slow": {
+    "text": "العب ببطء",
+    "meaning": "نداء سريع أثناء اللعب يعني: العب ببطء."
+  },
+  "callouts-play-time": {
+    "text": "العب على الوقت",
+    "meaning": "نداء سريع أثناء اللعب يعني: العب على الوقت."
+  },
+  "callouts-reset": {
+    "text": "إعادة ضبط",
+    "meaning": "نداء سريع أثناء اللعب يعني: إعادة ضبط."
+  },
+  "callouts-roof-clear": {
+    "text": "السطح آمن",
+    "meaning": "نداء سريع أثناء اللعب يعني: السطح آمن."
+  },
+  "callouts-run": {
+    "text": "اركض",
+    "meaning": "نداء سريع أثناء اللعب يعني: اركض."
+  },
+  "callouts-safe-zone": {
+    "text": "المنطقة الآمنة",
+    "meaning": "نداء سريع أثناء اللعب يعني: المنطقة الآمنة."
+  },
+  "callouts-short-range": {
+    "text": "مدى قريب",
+    "meaning": "نداء سريع أثناء اللعب يعني: مدى قريب."
+  },
+  "callouts-shotgun-close": {
+    "text": "شوتغن قريب",
+    "meaning": "نداء سريع أثناء اللعب يعني: شوتغن قريب."
+  },
+  "callouts-site-clear": {
+    "text": "الموقع آمن",
+    "meaning": "نداء سريع أثناء اللعب يعني: الموقع آمن."
+  },
+  "callouts-site-not-clear": {
+    "text": "الموقع غير آمن",
+    "meaning": "نداء سريع أثناء اللعب يعني: الموقع غير آمن."
+  },
+  "callouts-smoke-out": {
+    "text": "سموك مرمي",
+    "meaning": "نداء سريع أثناء اللعب يعني: سموك مرمي."
+  },
+  "callouts-sniper-watching": {
+    "text": "قناص يراقب",
+    "meaning": "نداء سريع أثناء اللعب يعني: قناص يراقب."
+  },
+  "callouts-split-up": {
+    "text": "تفرقوا",
+    "meaning": "نداء سريع أثناء اللعب يعني: تفرقوا."
+  },
+  "callouts-stairs": {
+    "text": "درج",
+    "meaning": "نداء سريع أثناء اللعب يعني: درج."
+  },
+  "callouts-stay-alive": {
+    "text": "ابقَ حياً",
+    "meaning": "نداء سريع أثناء اللعب يعني: ابقَ حياً."
+  },
+  "callouts-stop-chasing": {
+    "text": "توقف عن المطاردة",
+    "meaning": "نداء سريع أثناء اللعب يعني: توقف عن المطاردة."
+  },
+  "callouts-storm-coming": {
+    "text": "العاصفة قادمة",
+    "meaning": "نداء سريع أثناء اللعب يعني: العاصفة قادمة."
+  },
+  "callouts-swing-together": {
+    "text": "اخرجوا معاً",
+    "meaning": "نداء سريع أثناء اللعب يعني: اخرجوا معاً."
+  },
+  "callouts-target-marked": {
+    "text": "الهدف معلّم",
+    "meaning": "نداء سريع أثناء اللعب يعني: الهدف معلّم."
+  },
+  "callouts-they-are-close": {
+    "text": "هم قريبون",
+    "meaning": "نداء سريع أثناء اللعب يعني: هم قريبون."
+  },
+  "callouts-they-are-far": {
+    "text": "هم بعيدون",
+    "meaning": "نداء سريع أثناء اللعب يعني: هم بعيدون."
+  },
+  "callouts-third-party": {
+    "text": "طرف ثالث",
+    "meaning": "نداء سريع أثناء اللعب يعني: طرف ثالث."
+  },
+  "callouts-throw": {
+    "text": "رمي المباراة",
+    "meaning": "نداء سريع أثناء اللعب يعني: رمي المباراة."
+  },
+  "callouts-trade-him": {
+    "text": "بادله",
+    "meaning": "نداء سريع أثناء اللعب يعني: بادله."
+  },
+  "callouts-trade-me": {
+    "text": "بادلني",
+    "meaning": "نداء سريع أثناء اللعب يعني: بادلني."
+  },
+  "callouts-trap-destroyed": {
+    "text": "تم تدمير الفخ",
+    "meaning": "نداء سريع أثناء اللعب يعني: تم تدمير الفخ."
+  },
+  "callouts-trap-here": {
+    "text": "فخ هنا",
+    "meaning": "نداء سريع أثناء اللعب يعني: فخ هنا."
+  },
+  "callouts-tunnel-clear": {
+    "text": "النفق آمن",
+    "meaning": "نداء سريع أثناء اللعب يعني: النفق آمن."
+  },
+  "callouts-unlucky": {
+    "text": "حظ سيئ",
+    "meaning": "نداء سريع أثناء اللعب يعني: حظ سيئ."
+  },
+  "callouts-wait": {
+    "text": "انتظر",
+    "meaning": "نداء سريع أثناء اللعب يعني: انتظر."
+  },
+  "callouts-watching-left": {
+    "text": "أراقب اليسار",
+    "meaning": "نداء سريع أثناء اللعب يعني: أراقب اليسار."
+  },
+  "callouts-watching-mid": {
+    "text": "أراقب المنتصف",
+    "meaning": "نداء سريع أثناء اللعب يعني: أراقب المنتصف."
+  },
+  "callouts-watching-right": {
+    "text": "أراقب اليمين",
+    "meaning": "نداء سريع أثناء اللعب يعني: أراقب اليمين."
+  },
+  "callouts-water": {
+    "text": "ماء",
+    "meaning": "نداء سريع أثناء اللعب يعني: ماء."
+  },
+  "callouts-we-are-pinched": {
+    "text": "نحن محاصرون من جهتين",
+    "meaning": "نداء سريع أثناء اللعب يعني: نحن محاصرون من جهتين."
+  },
+  "callouts-well-played": {
+    "text": "لعب جيد",
+    "meaning": "نداء سريع أثناء اللعب يعني: لعب جيد."
+  },
+  "callouts-window": {
+    "text": "نافذة",
+    "meaning": "نداء سريع أثناء اللعب يعني: نافذة."
+  },
+  "callouts-with-me": {
+    "text": "معي",
+    "meaning": "نداء سريع أثناء اللعب يعني: معي."
+  },
+  "callouts-zone-closing": {
+    "text": "الزون يغلق",
+    "meaning": "نداء سريع أثناء اللعب يعني: الزون يغلق."
+  },
+  "danger-do-not-go-there": {
+    "text": "لا تذهب هناك",
+    "meaning": "تحذير سريع للفريق يعني: لا تذهب هناك."
+  },
+  "danger-enemy-ultimate-ready": {
+    "text": "ألت العدو جاهز",
+    "meaning": "تحذير سريع للفريق يعني: ألت العدو جاهز."
+  },
+  "danger-it-is-a-trap": {
+    "text": "إنه فخ",
+    "meaning": "تحذير سريع للفريق يعني: إنه فخ."
+  },
+  "danger-low-cover": {
+    "text": "غطاء ضعيف",
+    "meaning": "تحذير سريع للفريق يعني: غطاء ضعيف."
+  },
+  "danger-they-have-sniper": {
+    "text": "لديهم قناص",
+    "meaning": "تحذير سريع للفريق يعني: لديهم قناص."
+  },
+  "instructions-capture-point": {
+    "text": "سيطر على النقطة",
+    "meaning": "أمر أو توجيه للفريق يعني: سيطر على النقطة."
+  },
+  "instructions-check-behind": {
+    "text": "افحص الخلف",
+    "meaning": "أمر أو توجيه للفريق يعني: افحص الخلف."
+  },
+  "instructions-check-left": {
+    "text": "افحص اليسار",
+    "meaning": "أمر أو توجيه للفريق يعني: افحص اليسار."
+  },
+  "instructions-check-right": {
+    "text": "افحص اليمين",
+    "meaning": "أمر أو توجيه للفريق يعني: افحص اليمين."
+  },
+  "instructions-clear-corners": {
+    "text": "نظّف الزوايا",
+    "meaning": "أمر أو توجيه للفريق يعني: نظّف الزوايا."
+  },
+  "instructions-contest-point": {
+    "text": "نازع على النقطة",
+    "meaning": "أمر أو توجيه للفريق يعني: نازع على النقطة."
+  },
+  "instructions-defuse-now": {
+    "text": "فك الآن",
+    "meaning": "أمر أو توجيه للفريق يعني: فك الآن."
+  },
+  "instructions-do-not-feed": {
+    "text": "لا تُغذِّ العدو",
+    "meaning": "أمر أو توجيه للفريق يعني: لا تُغذِّ العدو."
+  },
+  "instructions-do-not-split": {
+    "text": "لا تنفصل",
+    "meaning": "أمر أو توجيه للفريق يعني: لا تنفصل."
+  },
+  "instructions-do-not-waste-it": {
+    "text": "لا تهدره",
+    "meaning": "أمر أو توجيه للفريق يعني: لا تهدره."
+  },
+  "instructions-go-first": {
+    "text": "ادخل أولاً",
+    "meaning": "أمر أو توجيه للفريق يعني: ادخل أولاً."
+  },
+  "instructions-i-go-first": {
+    "text": "أنا أدخل أولاً",
+    "meaning": "أمر أو توجيه للفريق يعني: أنا أدخل أولاً."
+  },
+  "instructions-lead-the-way": {
+    "text": "تقدم أنت",
+    "meaning": "أمر أو توجيه للفريق يعني: تقدم أنت."
+  },
+  "instructions-mute-him": {
+    "text": "اكتمه",
+    "meaning": "أمر أو توجيه للفريق يعني: اكتمه."
+  },
+  "instructions-plant-now": {
+    "text": "ازرع الآن",
+    "meaning": "أمر أو توجيه للفريق يعني: ازرع الآن."
+  },
+  "instructions-report-after": {
+    "text": "بلّغ بعد المباراة",
+    "meaning": "أمر أو توجيه للفريق يعني: بلّغ بعد المباراة."
+  },
+  "instructions-save-ultimate": {
+    "text": "احتفظ بالألت",
+    "meaning": "أمر أو توجيه للفريق يعني: احتفظ بالألت."
+  },
+  "instructions-stack-here": {
+    "text": "تجمعوا هنا",
+    "meaning": "أمر أو توجيه للفريق يعني: تجمعوا هنا."
+  },
+  "instructions-stack-left": {
+    "text": "تجمعوا يساراً",
+    "meaning": "أمر أو توجيه للفريق يعني: تجمعوا يساراً."
+  },
+  "instructions-stack-right": {
+    "text": "تجمعوا يميناً",
+    "meaning": "أمر أو توجيه للفريق يعني: تجمعوا يميناً."
+  },
+  "instructions-stop-peeking": {
+    "text": "توقف عن كشف نفسك",
+    "meaning": "أمر أو توجيه للفريق يعني: توقف عن كشف نفسك."
+  },
+  "instructions-touch-point": {
+    "text": "المس النقطة",
+    "meaning": "أمر أو توجيه للفريق يعني: المس النقطة."
+  },
+  "instructions-use-flash": {
+    "text": "استخدم فلاش",
+    "meaning": "أمر أو توجيه للفريق يعني: استخدم فلاش."
+  },
+  "instructions-use-grenade": {
+    "text": "استخدم قنبلة",
+    "meaning": "أمر أو توجيه للفريق يعني: استخدم قنبلة."
+  },
+  "instructions-use-smoke": {
+    "text": "استخدم سموك",
+    "meaning": "أمر أو توجيه للفريق يعني: استخدم سموك."
+  },
+  "instructions-use-ultimate": {
+    "text": "استخدم الألت",
+    "meaning": "أمر أو توجيه للفريق يعني: استخدم الألت."
+  },
+  "objective-capture-the-flag": {
+    "text": "استولِ على العلم",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: استولِ على العلم."
+  },
+  "objective-escort-the-payload": {
+    "text": "رافق البايلود",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: رافق البايلود."
+  },
+  "objective-hold-the-point": {
+    "text": "امسك النقطة",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: امسك النقطة."
+  },
+  "objective-leave-the-point": {
+    "text": "اترك النقطة",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: اترك النقطة."
+  },
+  "objective-return-the-flag": {
+    "text": "أعد العلم",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: أعد العلم."
+  },
+  "objective-stop-the-payload": {
+    "text": "أوقف البايلود",
+    "meaning": "مصطلح مرتبط بهدف المباراة يعني: أوقف البايلود."
+  },
+  "teamwork-do-not-blame": {
+    "text": "لا تلم أحداً",
+    "meaning": "عبارة تعاون أو تشجيع تعني: لا تلم أحداً."
+  },
+  "teamwork-focus-next": {
+    "text": "ركّز على التالي",
+    "meaning": "عبارة تعاون أو تشجيع تعني: ركّز على التالي."
+  },
+  "teamwork-good-effort": {
+    "text": "مجهود جيد",
+    "meaning": "عبارة تعاون أو تشجيع تعني: مجهود جيد."
+  },
+  "teamwork-great-call": {
+    "text": "نداء ممتاز",
+    "meaning": "عبارة تعاون أو تشجيع تعني: نداء ممتاز."
+  },
+  "teamwork-great-save": {
+    "text": "إنقاذ ممتاز",
+    "meaning": "عبارة تعاون أو تشجيع تعني: إنقاذ ممتاز."
+  },
+  "teamwork-great-shot": {
+    "text": "تصويبة ممتازة",
+    "meaning": "عبارة تعاون أو تشجيع تعني: تصويبة ممتازة."
+  },
+  "teamwork-i-trust-you": {
+    "text": "أثق بك",
+    "meaning": "عبارة تعاون أو تشجيع تعني: أثق بك."
+  },
+  "teamwork-i-will-bait-for-you": {
+    "text": "سأكون طُعماً لك",
+    "meaning": "عبارة تعاون أو تشجيع تعني: سأكون طُعماً لك."
+  },
+  "teamwork-i-will-cover-you": {
+    "text": "سأغطيك",
+    "meaning": "عبارة تعاون أو تشجيع تعني: سأغطيك."
+  },
+  "teamwork-i-will-heal-you": {
+    "text": "سأعالجك",
+    "meaning": "عبارة تعاون أو تشجيع تعني: سأعالجك."
+  },
+  "teamwork-i-will-watch-flank": {
+    "text": "سأراقب الالتفاف",
+    "meaning": "عبارة تعاون أو تشجيع تعني: سأراقب الالتفاف."
+  },
+  "teamwork-keep-comms-clear": {
+    "text": "خلّوا التواصل واضحاً",
+    "meaning": "عبارة تعاون أو تشجيع تعني: خلّوا التواصل واضحاً."
+  },
+  "teamwork-let-me-go-first": {
+    "text": "دعني أدخل أولاً",
+    "meaning": "عبارة تعاون أو تشجيع تعني: دعني أدخل أولاً."
+  },
+  "teamwork-nice-aim": {
+    "text": "تصويب جميل",
+    "meaning": "عبارة تعاون أو تشجيع تعني: تصويب جميل."
+  },
+  "teamwork-nice-clutch": {
+    "text": "كلتش جميل",
+    "meaning": "عبارة تعاون أو تشجيع تعني: كلتش جميل."
+  },
+  "teamwork-nice-movement": {
+    "text": "حركة جميلة",
+    "meaning": "عبارة تعاون أو تشجيع تعني: حركة جميلة."
+  },
+  "teamwork-nice-utility": {
+    "text": "استخدام أدوات جميل",
+    "meaning": "عبارة تعاون أو تشجيع تعني: استخدام أدوات جميل."
+  },
+  "teamwork-one-round-at-a-time": {
+    "text": "جولة بجولة",
+    "meaning": "عبارة تعاون أو تشجيع تعني: جولة بجولة."
+  },
+  "teamwork-play-together": {
+    "text": "العبوا معاً",
+    "meaning": "عبارة تعاون أو تشجيع تعني: العبوا معاً."
+  },
+  "teamwork-reset-mental": {
+    "text": "صفِّ ذهنك",
+    "meaning": "عبارة تعاون أو تشجيع تعني: صفِّ ذهنك."
+  },
+  "teamwork-stay-calm": {
+    "text": "اهدأ",
+    "meaning": "عبارة تعاون أو تشجيع تعني: اهدأ."
+  },
+  "teamwork-take-my-loot": {
+    "text": "خذ لوتي",
+    "meaning": "عبارة تعاون أو تشجيع تعني: خذ لوتي."
+  },
+  "teamwork-take-my-weapon": {
+    "text": "خذ سلاحي",
+    "meaning": "عبارة تعاون أو تشجيع تعني: خذ سلاحي."
+  },
+  "teamwork-trade-together": {
+    "text": "بادلوا معاً",
+    "meaning": "عبارة تعاون أو تشجيع تعني: بادلوا معاً."
+  },
+  "teamwork-wait-for-team": {
+    "text": "انتظر الفريق",
+    "meaning": "عبارة تعاون أو تشجيع تعني: انتظر الفريق."
+  },
+  "teamwork-we-can-win": {
+    "text": "يمكننا الفوز",
+    "meaning": "عبارة تعاون أو تشجيع تعني: يمكننا الفوز."
+  },
+  "teamwork-we-need-everyone": {
+    "text": "نحتاج الجميع",
+    "meaning": "عبارة تعاون أو تشجيع تعني: نحتاج الجميع."
+  },
+  "teamwork-you-got-this": {
+    "text": "تقدر عليها",
+    "meaning": "عبارة تعاون أو تشجيع تعني: تقدر عليها."
+  },
+  "strategy-anchor-site": {
+    "text": "ثبّت الموقع",
+    "meaning": "مصطلح استراتيجي يعني: ثبّت الموقع."
+  },
+  "strategy-bait-utility": {
+    "text": "استدرج الأدوات",
+    "meaning": "مصطلح استراتيجي يعني: استدرج الأدوات."
+  },
+  "strategy-cancel-the-push": {
+    "text": "ألغِ الدفع",
+    "meaning": "مصطلح استراتيجي يعني: ألغِ الدفع."
+  },
+  "strategy-commit-now": {
+    "text": "التزموا الآن",
+    "meaning": "مصطلح استراتيجي يعني: التزموا الآن."
+  },
+  "strategy-cross-setup": {
+    "text": "إعداد متقاطع",
+    "meaning": "مصطلح استراتيجي يعني: إعداد متقاطع."
+  },
+  "strategy-cut-rotation": {
+    "text": "اقطع الروتيت",
+    "meaning": "مصطلح استراتيجي يعني: اقطع الروتيت."
+  },
+  "strategy-damage-advantage": {
+    "text": "أفضلية ضرر",
+    "meaning": "مصطلح استراتيجي يعني: أفضلية ضرر."
+  },
+  "strategy-deny-vision": {
+    "text": "امنع الرؤية",
+    "meaning": "مصطلح استراتيجي يعني: امنع الرؤية."
+  },
+  "strategy-do-not-overcommit": {
+    "text": "لا تلتزم زيادة",
+    "meaning": "مصطلح استراتيجي يعني: لا تلتزم زيادة."
+  },
+  "strategy-economy-advantage": {
+    "text": "أفضلية اقتصادية",
+    "meaning": "مصطلح استراتيجي يعني: أفضلية اقتصادية."
+  },
+  "strategy-give-map-control": {
+    "text": "اترك سيطرة الخريطة",
+    "meaning": "مصطلح استراتيجي يعني: اترك سيطرة الخريطة."
+  },
+  "strategy-hold-rotation": {
+    "text": "امسك طريق الروتيت",
+    "meaning": "مصطلح استراتيجي يعني: امسك طريق الروتيت."
+  },
+  "strategy-man-advantage": {
+    "text": "أفضلية عددية",
+    "meaning": "مصطلح استراتيجي يعني: أفضلية عددية."
+  },
+  "strategy-man-disadvantage": {
+    "text": "نقص عددي",
+    "meaning": "مصطلح استراتيجي يعني: نقص عددي."
+  },
+  "strategy-numbers-advantage": {
+    "text": "أفضلية عددية",
+    "meaning": "مصطلح استراتيجي يعني: أفضلية عددية."
+  },
+  "strategy-play-for-late-game": {
+    "text": "العب للمرحلة الأخيرة",
+    "meaning": "مصطلح استراتيجي يعني: العب للمرحلة الأخيرة."
+  },
+  "strategy-play-retake": {
+    "text": "العب استرجاع",
+    "meaning": "مصطلح استراتيجي يعني: العب استرجاع."
+  },
+  "strategy-pressure-side-lane": {
+    "text": "اضغط المسار الجانبي",
+    "meaning": "مصطلح استراتيجي يعني: اضغط المسار الجانبي."
+  },
+  "strategy-save-round": {
+    "text": "جولة توفير",
+    "meaning": "مصطلح استراتيجي يعني: جولة توفير."
+  },
+  "strategy-stack-objective": {
+    "text": "تجمعوا عند الهدف",
+    "meaning": "مصطلح استراتيجي يعني: تجمعوا عند الهدف."
+  },
+  "strategy-time-advantage": {
+    "text": "أفضلية الوقت",
+    "meaning": "مصطلح استراتيجي يعني: أفضلية الوقت."
+  },
+  "strategy-trade-setup": {
+    "text": "إعداد تبادل",
+    "meaning": "مصطلح استراتيجي يعني: إعداد تبادل."
+  },
+  "strategy-ultimate-advantage": {
+    "text": "أفضلية الألت",
+    "meaning": "مصطلح استراتيجي يعني: أفضلية الألت."
+  },
+  "economy-do-not-force": {
+    "text": "لا تجبر الشراء",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: لا تجبر الشراء."
+  },
+  "economy-force-together": {
+    "text": "اشتروا فورس معاً",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: اشتروا فورس معاً."
+  },
+  "economy-they-have-money": {
+    "text": "لديهم مال",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: لديهم مال."
+  },
+  "economy-we-can-buy-next": {
+    "text": "نستطيع الشراء الجولة القادمة",
+    "meaning": "مصطلح اقتصادي داخل اللعبة يعني: نستطيع الشراء الجولة القادمة."
   },
   "antiToxic-clear-comms-please": {
-    "text": "آمن التواصل, من فضلك",
-    "meaning": "المعنى في اللعب: آمن التواصل, من فضلك"
-  },
-  "antiToxic-let-us-reset": {
-    "text": "دعنا لنا إعادة تنظيم",
-    "meaning": "المعنى في اللعب: دعنا لنا إعادة تنظيم"
-  },
-  "antiToxic-play-safe-next": {
-    "text": "العب بأمان التالي",
-    "meaning": "المعنى في اللعب: العب بأمان التالي"
-  },
-  "antiToxic-wait-for-the-team-next-time": {
-    "text": "انتظر لـ فريق التالي وقت",
-    "meaning": "المعنى في اللعب: انتظر لـ فريق التالي وقت"
-  },
-  "antiToxic-good-try-next-round": {
-    "text": "جيد محاولة, التالي جولة",
-    "meaning": "المعنى في اللعب: جيد محاولة, التالي جولة"
-  },
-  "antiToxic-we-need-better-spacing": {
-    "text": "نحن أحتاج أفضل تباعد",
-    "meaning": "المعنى في اللعب: نحن أحتاج أفضل تباعد"
-  },
-  "antiToxic-let-us-trade-better": {
-    "text": "دعنا لنا بادل أفضل",
-    "meaning": "المعنى في اللعب: دعنا لنا بادل أفضل"
-  },
-  "antiToxic-save-your-utility": {
-    "text": "احفظ خاصتك قدرات مساعدة",
-    "meaning": "المعنى في اللعب: احفظ خاصتك قدرات مساعدة"
-  },
-  "antiToxic-use-comms-not-blame": {
-    "text": "استخدم التواصل, غير تلوم",
-    "meaning": "المعنى في اللعب: استخدم التواصل, غير تلوم"
+    "text": "تواصل واضح من فضلكم",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: تواصل واضح من فضلكم."
   },
   "antiToxic-focus-on-objective": {
-    "text": "ركزوا على هدف",
-    "meaning": "المعنى في اللعب: ركزوا على هدف"
+    "text": "ركّزوا على الهدف",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: ركّزوا على الهدف."
   },
-  "antiToxic-we-still-have-time": {
-    "text": "نحن ما زال لديهم وقت",
-    "meaning": "المعنى في اللعب: نحن ما زال لديهم وقت"
-  },
-  "antiToxic-no-worries": {
-    "text": "لا لا تقلق",
-    "meaning": "المعنى في اللعب: لا لا تقلق"
+  "antiToxic-good-try-next-round": {
+    "text": "محاولة جيدة، الجولة القادمة",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: محاولة جيدة، الجولة القادمة."
   },
   "antiToxic-it-happens": {
-    "text": "هو تصير",
-    "meaning": "المعنى في اللعب: هو تصير"
-  },
-  "antiToxic-next-one-is-ours": {
-    "text": "التالي واحد لنا",
-    "meaning": "المعنى في اللعب: التالي واحد لنا"
+    "text": "هذا يحدث",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: هذا يحدث."
   },
   "antiToxic-keep-it-positive": {
-    "text": "أبقِ هو إيجابي",
-    "meaning": "المعنى في اللعب: أبقِ هو إيجابي"
+    "text": "خلّوها إيجابية",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: خلّوها إيجابية."
+  },
+  "antiToxic-let-us-reset": {
+    "text": "لنعد ضبط الوضع",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: لنعد ضبط الوضع."
+  },
+  "antiToxic-let-us-trade-better": {
+    "text": "لنبادل القتل بشكل أفضل",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: لنبادل القتل بشكل أفضل."
+  },
+  "antiToxic-next-one-is-ours": {
+    "text": "الجولة القادمة لنا",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: الجولة القادمة لنا."
+  },
+  "antiToxic-no-worries": {
+    "text": "لا تقلق",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: لا تقلق."
+  },
+  "antiToxic-play-safe-next": {
+    "text": "العبوا بأمان في القادمة",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: العبوا بأمان في القادمة."
+  },
+  "antiToxic-save-your-utility": {
+    "text": "احتفظ بأدواتك",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: احتفظ بأدواتك."
+  },
+  "antiToxic-use-comms-not-blame": {
+    "text": "استخدموا التواصل لا اللوم",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: استخدموا التواصل لا اللوم."
+  },
+  "antiToxic-wait-for-the-team-next-time": {
+    "text": "انتظر الفريق في المرة القادمة",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: انتظر الفريق في المرة القادمة."
+  },
+  "antiToxic-we-need-better-spacing": {
+    "text": "نحتاج تباعداً أفضل",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: نحتاج تباعداً أفضل."
+  },
+  "antiToxic-we-still-have-time": {
+    "text": "ما زال لدينا وقت",
+    "meaning": "عبارة إيجابية لتخفيف التوتر تعني: ما زال لدينا وقت."
   }
 }

@@ -1,1674 +1,1922 @@
 {
   "callouts-gg": {
     "text": "GG",
-    "meaning": "Betekenis in game: GG"
-  },
-  "callouts-glhf": {
-    "text": "Succes en veel plezier",
-    "meaning": "Betekenis in game: Succes en veel plezier"
-  },
-  "callouts-nice": {
-    "text": "Netjes!",
-    "meaning": "Betekenis in game: Netjes!"
-  },
-  "callouts-thanks": {
-    "text": "Bedankt",
-    "meaning": "Betekenis in game: Bedankt"
-  },
-  "callouts-sorry": {
-    "text": "Sorry",
-    "meaning": "Betekenis in game: Sorry"
-  },
-  "callouts-my-bad": {
-    "text": "Mijn fout",
-    "meaning": "Betekenis in game: Mijn fout"
-  },
-  "callouts-one-more": {
-    "text": "un more",
-    "meaning": "Betekenis in game: un more"
-  },
-  "callouts-i-am-down": {
-    "text": "i am indisponible",
-    "meaning": "Betekenis in game: i am indisponible"
-  },
-  "callouts-i-am-low": {
-    "text": "i am faible",
-    "meaning": "Betekenis in game: i am faible"
-  },
-  "callouts-enemy-spotted": {
-    "text": "Vijand gespot",
-    "meaning": "Betekenis in game: Vijand gespot"
-  },
-  "callouts-enemy-here": {
-    "text": "vijand hier",
-    "meaning": "Betekenis in game: vijand hier"
-  },
-  "callouts-enemy-there": {
-    "text": "vijand daar",
-    "meaning": "Betekenis in game: vijand daar"
-  },
-  "callouts-two-enemies-here": {
-    "text": "deux vijanden hier",
-    "meaning": "Betekenis in game: deux vijanden hier"
-  },
-  "callouts-three-enemies-here": {
-    "text": "trois vijanden hier",
-    "meaning": "Betekenis in game: trois vijanden hier"
-  },
-  "callouts-full-team-here": {
-    "text": "toute équipe hier",
-    "meaning": "Betekenis in game: toute équipe hier"
-  },
-  "callouts-behind-you": {
-    "text": "achter you!",
-    "meaning": "Betekenis in game: achter you!"
-  },
-  "callouts-left-side": {
-    "text": "links side!",
-    "meaning": "Betekenis in game: links side!"
-  },
-  "callouts-right-side": {
-    "text": "rechts side!",
-    "meaning": "Betekenis in game: rechts side!"
-  },
-  "callouts-above-us": {
-    "text": "au-dessus us",
-    "meaning": "Betekenis in game: au-dessus us"
-  },
-  "callouts-below-us": {
-    "text": "en dessous us",
-    "meaning": "Betekenis in game: en dessous us"
-  },
-  "callouts-in-front": {
-    "text": "in avant",
-    "meaning": "Betekenis in game: in avant"
-  },
-  "callouts-back-site": {
-    "text": "arrière site",
-    "meaning": "Betekenis in game: arrière site"
-  },
-  "callouts-front-site": {
-    "text": "avant site",
-    "meaning": "Betekenis in game: avant site"
-  },
-  "callouts-default-spot": {
-    "text": "standard position",
-    "meaning": "Betekenis in game: standard position"
-  },
-  "callouts-corner": {
-    "text": "coin",
-    "meaning": "Betekenis in game: coin"
-  },
-  "callouts-close-corner": {
-    "text": "proche coin",
-    "meaning": "Betekenis in game: proche coin"
-  },
-  "callouts-long-range": {
-    "text": "longue portée",
-    "meaning": "Betekenis in game: longue portée"
-  },
-  "callouts-short-range": {
-    "text": "courte portée",
-    "meaning": "Betekenis in game: courte portée"
-  },
-  "callouts-mid": {
-    "text": "milieu",
-    "meaning": "Betekenis in game: milieu"
-  },
-  "callouts-top-mid": {
-    "text": "haut milieu",
-    "meaning": "Betekenis in game: haut milieu"
-  },
-  "callouts-bottom-mid": {
-    "text": "bas milieu",
-    "meaning": "Betekenis in game: bas milieu"
-  },
-  "callouts-spawn": {
-    "text": "apparition",
-    "meaning": "Betekenis in game: apparition"
-  },
-  "callouts-our-spawn": {
-    "text": "notre apparition",
-    "meaning": "Betekenis in game: notre apparition"
-  },
-  "callouts-their-spawn": {
-    "text": "leur apparition",
-    "meaning": "Betekenis in game: leur apparition"
-  },
-  "callouts-flank": {
-    "text": "flank",
-    "meaning": "Betekenis in game: flank"
-  },
-  "callouts-watch-flank": {
-    "text": "surveille flank",
-    "meaning": "Betekenis in game: surveille flank"
-  },
-  "callouts-rotating": {
-    "text": "rotation",
-    "meaning": "Betekenis in game: rotation"
-  },
-  "callouts-they-rotated": {
-    "text": "they ont tourné",
-    "meaning": "Betekenis in game: they ont tourné"
-  },
-  "callouts-fake-rotate": {
-    "text": "Schijnrotatie",
-    "meaning": "Betekenis in game: Schijnrotatie"
-  },
-  "callouts-site-clear": {
-    "text": "site clair",
-    "meaning": "Betekenis in game: site clair"
-  },
-  "callouts-site-not-clear": {
-    "text": "site pas clair",
-    "meaning": "Betekenis in game: site pas clair"
-  },
-  "callouts-need-backup": {
-    "text": "besoin de renfort",
-    "meaning": "Betekenis in game: besoin de renfort"
-  },
-  "callouts-need-help": {
-    "text": "besoin de hulp",
-    "meaning": "Betekenis in game: besoin de hulp"
-  },
-  "callouts-help-me": {
-    "text": "hulp me",
-    "meaning": "Betekenis in game: hulp me"
-  },
-  "callouts-i-need-healing": {
-    "text": "i besoin de soin",
-    "meaning": "Betekenis in game: i besoin de soin"
-  },
-  "callouts-need-ammo": {
-    "text": "besoin de munitions",
-    "meaning": "Betekenis in game: besoin de munitions"
-  },
-  "callouts-out-of-ammo": {
-    "text": "plus de of munitions",
-    "meaning": "Betekenis in game: plus de of munitions"
-  },
-  "callouts-reloading": {
-    "text": "rechargement",
-    "meaning": "Betekenis in game: rechargement"
-  },
-  "callouts-cover-me": {
-    "text": "couvre me",
-    "meaning": "Betekenis in game: couvre me"
-  },
-  "callouts-i-got-you": {
-    "text": "i got you",
-    "meaning": "Betekenis in game: i got you"
-  },
-  "callouts-i-am-watching": {
-    "text": "i am je couvre",
-    "meaning": "Betekenis in game: i am je couvre"
-  },
-  "callouts-watching-left": {
-    "text": "je couvre links",
-    "meaning": "Betekenis in game: je couvre links"
-  },
-  "callouts-watching-right": {
-    "text": "je couvre rechts",
-    "meaning": "Betekenis in game: je couvre rechts"
-  },
-  "callouts-watching-mid": {
-    "text": "je couvre milieu",
-    "meaning": "Betekenis in game: je couvre milieu"
-  },
-  "callouts-clear-left": {
-    "text": "clair links",
-    "meaning": "Betekenis in game: clair links"
-  },
-  "callouts-clear-right": {
-    "text": "clair rechts",
-    "meaning": "Betekenis in game: clair rechts"
-  },
-  "callouts-clear-mid": {
-    "text": "clair milieu",
-    "meaning": "Betekenis in game: clair milieu"
-  },
-  "callouts-not-clear": {
-    "text": "pas clair",
-    "meaning": "Betekenis in game: pas clair"
-  },
-  "callouts-contact": {
-    "text": "contact",
-    "meaning": "Betekenis in game: contact"
-  },
-  "callouts-no-contact": {
-    "text": "no contact",
-    "meaning": "Betekenis in game: no contact"
-  },
-  "callouts-footsteps": {
-    "text": "pas",
-    "meaning": "Betekenis in game: pas"
-  },
-  "callouts-i-hear-steps": {
-    "text": "i j’entends pas",
-    "meaning": "Betekenis in game: i j’entends pas"
-  },
-  "callouts-they-are-close": {
-    "text": "they are proche",
-    "meaning": "Betekenis in game: they are proche"
-  },
-  "callouts-they-are-far": {
-    "text": "they are loin",
-    "meaning": "Betekenis in game: they are loin"
-  },
-  "callouts-sniper-watching": {
-    "text": "sniper je couvre",
-    "meaning": "Betekenis in game: sniper je couvre"
-  },
-  "callouts-shotgun-close": {
-    "text": "fusil à pompe proche",
-    "meaning": "Betekenis in game: fusil à pompe proche"
-  },
-  "callouts-grenade-out": {
-    "text": "grenade plus de",
-    "meaning": "Betekenis in game: grenade plus de"
-  },
-  "callouts-flash-out": {
-    "text": "flash plus de",
-    "meaning": "Betekenis in game: flash plus de"
-  },
-  "callouts-smoke-out": {
-    "text": "fumigène plus de",
-    "meaning": "Betekenis in game: fumigène plus de"
-  },
-  "callouts-ultimate-ready": {
-    "text": "ultime prêt",
-    "meaning": "Betekenis in game: ultime prêt"
-  },
-  "callouts-no-ultimate": {
-    "text": "no ultime",
-    "meaning": "Betekenis in game: no ultime"
-  },
-  "callouts-ability-ready": {
-    "text": "compétence prêt",
-    "meaning": "Betekenis in game: compétence prêt"
-  },
-  "callouts-ability-down": {
-    "text": "compétence indisponible",
-    "meaning": "Betekenis in game: compétence indisponible"
-  },
-  "callouts-cooldown": {
-    "text": "recharge",
-    "meaning": "Betekenis in game: recharge"
-  },
-  "callouts-ping-it": {
-    "text": "ping it",
-    "meaning": "Betekenis in game: ping it"
-  },
-  "callouts-mark-the-enemy": {
-    "text": "mark the vijand",
-    "meaning": "Betekenis in game: mark the vijand"
-  },
-  "callouts-i-marked-it": {
-    "text": "i marquée it",
-    "meaning": "Betekenis in game: i marquée it"
-  },
-  "callouts-check-map": {
-    "text": "vérifie carte",
-    "meaning": "Betekenis in game: vérifie carte"
-  },
-  "callouts-look-at-ping": {
-    "text": "look at ping",
-    "meaning": "Betekenis in game: look at ping"
-  },
-  "callouts-enemy-missing": {
-    "text": "vijand missing",
-    "meaning": "Betekenis in game: vijand missing"
-  },
-  "callouts-all-missing": {
-    "text": "all missing",
-    "meaning": "Betekenis in game: all missing"
-  },
-  "callouts-careful": {
-    "text": "voorzichtig",
-    "meaning": "Betekenis in game: voorzichtig"
-  },
-  "callouts-wait": {
-    "text": "wacht",
-    "meaning": "Betekenis in game: wacht"
-  },
-  "callouts-go-now": {
-    "text": "allez maintenant",
-    "meaning": "Betekenis in game: allez maintenant"
-  },
-  "callouts-push-now": {
-    "text": "push maintenant",
-    "meaning": "Betekenis in game: push maintenant"
-  },
-  "callouts-fall-back": {
-    "text": "repli arrière",
-    "meaning": "Betekenis in game: repli arrière"
-  },
-  "callouts-run": {
-    "text": "ren",
-    "meaning": "Betekenis in game: ren"
-  },
-  "callouts-hide": {
-    "text": "verstop",
-    "meaning": "Betekenis in game: verstop"
-  },
-  "callouts-do-not-peek": {
-    "text": "do pas peek",
-    "meaning": "Betekenis in game: do pas peek"
-  },
-  "callouts-peek-together": {
-    "text": "peek ensemble",
-    "meaning": "Betekenis in game: peek ensemble"
-  },
-  "callouts-swing-together": {
-    "text": "swing ensemble",
-    "meaning": "Betekenis in game: swing ensemble"
-  },
-  "callouts-hold-angle": {
-    "text": "tiens angle",
-    "meaning": "Betekenis in game: tiens angle"
-  },
-  "callouts-hold-position": {
-    "text": "tiens position",
-    "meaning": "Betekenis in game: tiens position"
-  },
-  "callouts-move-up": {
-    "text": "avance up",
-    "meaning": "Betekenis in game: avance up"
-  },
-  "callouts-come-back": {
-    "text": "reviens arrière",
-    "meaning": "Betekenis in game: reviens arrière"
-  },
-  "callouts-group-up": {
-    "text": "groupez up",
-    "meaning": "Betekenis in game: groupez up"
-  },
-  "callouts-split-up": {
-    "text": "séparez up",
-    "meaning": "Betekenis in game: séparez up"
-  },
-  "callouts-stay-alive": {
-    "text": "stay en vie",
-    "meaning": "Betekenis in game: stay en vie"
-  },
-  "callouts-play-time": {
-    "text": "joue time",
-    "meaning": "Betekenis in game: joue time"
-  },
-  "callouts-play-safe": {
-    "text": "joue prudent",
-    "meaning": "Betekenis in game: joue prudent"
-  },
-  "callouts-play-slow": {
-    "text": "joue lentement",
-    "meaning": "Betekenis in game: joue lentement"
-  },
-  "callouts-play-fast": {
-    "text": "joue vite",
-    "meaning": "Betekenis in game: joue vite"
-  },
-  "callouts-do-not-chase": {
-    "text": "do pas poursuis",
-    "meaning": "Betekenis in game: do pas poursuis"
-  },
-  "callouts-stop-chasing": {
-    "text": "stop chasing",
-    "meaning": "Betekenis in game: stop chasing"
-  },
-  "callouts-trade-me": {
-    "text": "trade me",
-    "meaning": "Betekenis in game: trade me"
-  },
-  "callouts-trade-him": {
-    "text": "trade him",
-    "meaning": "Betekenis in game: trade him"
-  },
-  "callouts-i-will-trade": {
-    "text": "i will trade",
-    "meaning": "Betekenis in game: i will trade"
-  },
-  "callouts-nice-trade": {
-    "text": "nice trade",
-    "meaning": "Betekenis in game: nice trade"
-  },
-  "callouts-bait-and-switch": {
-    "text": "appât and switch",
-    "meaning": "Betekenis in game: appât and switch"
-  },
-  "callouts-crossfire": {
-    "text": "feu croisé",
-    "meaning": "Betekenis in game: feu croisé"
-  },
-  "callouts-pinched": {
-    "text": "pris en tenaille",
-    "meaning": "Betekenis in game: pris en tenaille"
-  },
-  "callouts-we-are-pinched": {
-    "text": "we are pris en tenaille",
-    "meaning": "Betekenis in game: we are pris en tenaille"
-  },
-  "callouts-third-party": {
-    "text": "troisième équipe",
-    "meaning": "Betekenis in game: troisième équipe"
-  },
-  "callouts-reset": {
-    "text": "reset",
-    "meaning": "Betekenis in game: reset"
-  },
-  "callouts-regroup": {
-    "text": "regroupement",
-    "meaning": "Betekenis in game: regroupement"
-  },
-  "callouts-focus-fire": {
-    "text": "focus tir",
-    "meaning": "Betekenis in game: focus tir"
-  },
-  "callouts-target-marked": {
-    "text": "cible marquée",
-    "meaning": "Betekenis in game: cible marquée"
-  },
-  "callouts-focus-healer": {
-    "text": "focus soigneur",
-    "meaning": "Betekenis in game: focus soigneur"
-  },
-  "callouts-focus-sniper": {
-    "text": "focus sniper",
-    "meaning": "Betekenis in game: focus sniper"
-  },
-  "callouts-ignore-tank": {
-    "text": "ignore tank",
-    "meaning": "Betekenis in game: ignore tank"
-  },
-  "callouts-shield-broken": {
-    "text": "bouclier cassé",
-    "meaning": "Betekenis in game: bouclier cassé"
-  },
-  "callouts-armor-cracked": {
-    "text": "armure cassée",
-    "meaning": "Betekenis in game: armure cassée"
-  },
-  "callouts-one-shot": {
-    "text": "un tir",
-    "meaning": "Betekenis in game: un tir"
-  },
-  "callouts-tagged-him": {
-    "text": "touché him",
-    "meaning": "Betekenis in game: touché him"
-  },
-  "callouts-hit-for-fifty": {
-    "text": "touché pour cinquante",
-    "meaning": "Betekenis in game: touché pour cinquante"
-  },
-  "callouts-hit-for-a-hundred": {
-    "text": "touché pour a cent",
-    "meaning": "Betekenis in game: touché pour a cent"
-  },
-  "callouts-no-shield": {
-    "text": "no bouclier",
-    "meaning": "Betekenis in game: no bouclier"
-  },
-  "callouts-knocked-one": {
-    "text": "mis à terre un",
-    "meaning": "Betekenis in game: mis à terre un"
-  },
-  "callouts-finished-one": {
-    "text": "achevé un",
-    "meaning": "Betekenis in game: achevé un"
-  },
-  "callouts-team-wipe": {
-    "text": "équipe élimination",
-    "meaning": "Betekenis in game: équipe élimination"
-  },
-  "callouts-clean-fight": {
-    "text": "propre combat",
-    "meaning": "Betekenis in game: propre combat"
-  },
-  "callouts-messy-fight": {
-    "text": "désordonné combat",
-    "meaning": "Betekenis in game: désordonné combat"
-  },
-  "callouts-bad-timing": {
-    "text": "mauvais timing",
-    "meaning": "Betekenis in game: mauvais timing"
-  },
-  "callouts-good-timing": {
-    "text": "bon timing",
-    "meaning": "Betekenis in game: bon timing"
-  },
-  "callouts-unlucky": {
-    "text": "pas de chance",
-    "meaning": "Betekenis in game: pas de chance"
-  },
-  "callouts-lucky-shot": {
-    "text": "chanceux tir",
-    "meaning": "Betekenis in game: chanceux tir"
-  },
-  "callouts-clutch": {
-    "text": "clutch",
-    "meaning": "Betekenis in game: clutch"
-  },
-  "callouts-ace": {
-    "text": "ace",
-    "meaning": "Betekenis in game: ace"
-  },
-  "callouts-carry": {
-    "text": "carry",
-    "meaning": "Betekenis in game: carry"
-  },
-  "callouts-throw": {
-    "text": "throw",
-    "meaning": "Betekenis in game: throw"
-  },
-  "callouts-comeback": {
-    "text": "retour",
-    "meaning": "Betekenis in game: retour"
-  },
-  "callouts-close-game": {
-    "text": "proche partie",
-    "meaning": "Betekenis in game: proche partie"
-  },
-  "callouts-free-kill": {
-    "text": "gratuit kill",
-    "meaning": "Betekenis in game: gratuit kill"
-  },
-  "callouts-free-objective": {
-    "text": "gratuit objectif",
-    "meaning": "Betekenis in game: gratuit objectif"
-  },
-  "callouts-open-lane": {
-    "text": "ouvert voie",
-    "meaning": "Betekenis in game: ouvert voie"
-  },
-  "callouts-blocked": {
-    "text": "bloqué",
-    "meaning": "Betekenis in game: bloqué"
-  },
-  "callouts-trap-here": {
-    "text": "piège hier",
-    "meaning": "Betekenis in game: piège hier"
-  },
-  "callouts-trap-destroyed": {
-    "text": "piège détruit",
-    "meaning": "Betekenis in game: piège détruit"
-  },
-  "callouts-door-closed": {
-    "text": "porte fermée",
-    "meaning": "Betekenis in game: porte fermée"
-  },
-  "callouts-door-open": {
-    "text": "porte ouvert",
-    "meaning": "Betekenis in game: porte ouvert"
-  },
-  "callouts-bridge-clear": {
-    "text": "pont clair",
-    "meaning": "Betekenis in game: pont clair"
-  },
-  "callouts-tunnel-clear": {
-    "text": "tunnel clair",
-    "meaning": "Betekenis in game: tunnel clair"
-  },
-  "callouts-roof-clear": {
-    "text": "toit clair",
-    "meaning": "Betekenis in game: toit clair"
-  },
-  "callouts-basement-clear": {
-    "text": "sous-sol clair",
-    "meaning": "Betekenis in game: sous-sol clair"
-  },
-  "callouts-window": {
-    "text": "fenêtre",
-    "meaning": "Betekenis in game: fenêtre"
-  },
-  "callouts-stairs": {
-    "text": "escaliers",
-    "meaning": "Betekenis in game: escaliers"
-  },
-  "callouts-hallway": {
-    "text": "couloir",
-    "meaning": "Betekenis in game: couloir"
-  },
-  "callouts-water": {
-    "text": "eau",
-    "meaning": "Betekenis in game: eau"
-  },
-  "callouts-high-ground": {
-    "text": "hauteur terrain",
-    "meaning": "Betekenis in game: hauteur terrain"
-  },
-  "callouts-low-ground": {
-    "text": "faible terrain",
-    "meaning": "Betekenis in game: faible terrain"
-  },
-  "callouts-zone-closing": {
-    "text": "zone se ferme",
-    "meaning": "Betekenis in game: zone se ferme"
-  },
-  "callouts-circle-moving": {
-    "text": "cercle moving",
-    "meaning": "Betekenis in game: cercle moving"
-  },
-  "callouts-storm-coming": {
-    "text": "tempête arrive",
-    "meaning": "Betekenis in game: tempête arrive"
-  },
-  "callouts-safe-zone": {
-    "text": "prudent zone",
-    "meaning": "Betekenis in game: prudent zone"
-  },
-  "callouts-out-of-zone": {
-    "text": "plus de of zone",
-    "meaning": "Betekenis in game: plus de of zone"
-  },
-  "callouts-loot-here": {
-    "text": "butin hier",
-    "meaning": "Betekenis in game: butin hier"
-  },
-  "callouts-good-loot": {
-    "text": "bon butin",
-    "meaning": "Betekenis in game: bon butin"
-  },
-  "callouts-need-weapon": {
-    "text": "besoin de arme",
-    "meaning": "Betekenis in game: besoin de arme"
-  },
-  "callouts-need-shield": {
-    "text": "besoin de bouclier",
-    "meaning": "Betekenis in game: besoin de bouclier"
-  },
-  "callouts-need-meds": {
-    "text": "besoin de soins",
-    "meaning": "Betekenis in game: besoin de soins"
-  },
-  "callouts-drop-ammo": {
-    "text": "donne munitions",
-    "meaning": "Betekenis in game: donne munitions"
-  },
-  "callouts-drop-weapon": {
-    "text": "donne arme",
-    "meaning": "Betekenis in game: donne arme"
-  },
-  "callouts-take-this": {
-    "text": "prends this",
-    "meaning": "Betekenis in game: prends this"
-  },
-  "callouts-do-not-take-it": {
-    "text": "do pas prends it",
-    "meaning": "Betekenis in game: do pas prends it"
-  },
-  "callouts-i-will-take-it": {
-    "text": "i will prends it",
-    "meaning": "Betekenis in game: i will prends it"
-  },
-  "callouts-use-it": {
-    "text": "utilise it",
-    "meaning": "Betekenis in game: utilise it"
-  },
-  "callouts-save-it": {
-    "text": "sparen it",
-    "meaning": "Betekenis in game: sparen it"
-  },
-  "callouts-voice-chat": {
-    "text": "voice chat",
-    "meaning": "Betekenis in game: voice chat"
-  },
-  "callouts-text-chat": {
-    "text": "text chat",
-    "meaning": "Betekenis in game: text chat"
-  },
-  "callouts-good-job": {
-    "text": "Goed gedaan",
-    "meaning": "Betekenis in game: Goed gedaan"
-  },
-  "callouts-well-played": {
-    "text": "Goed gespeeld",
-    "meaning": "Betekenis in game: Goed gespeeld"
-  },
-  "callouts-no-problem": {
-    "text": "Geen probleem",
-    "meaning": "Betekenis in game: Geen probleem"
-  },
-  "callouts-last-one": {
-    "text": "last un",
-    "meaning": "Betekenis in game: last un"
-  },
-  "callouts-i-see-him": {
-    "text": "i see him",
-    "meaning": "Betekenis in game: i see him"
-  },
-  "callouts-i-see-them": {
-    "text": "i see them",
-    "meaning": "Betekenis in game: i see them"
-  },
-  "callouts-on-me": {
-    "text": "on me",
-    "meaning": "Betekenis in game: on me"
-  },
-  "callouts-with-me": {
-    "text": "with me",
-    "meaning": "Betekenis in game: with me"
-  },
-  "callouts-low-hp": {
-    "text": "faible HP",
-    "meaning": "Betekenis in game: faible HP"
-  },
-  "callouts-he-is-low": {
-    "text": "he is faible",
-    "meaning": "Betekenis in game: he is faible"
-  },
-  "callouts-they-are-low": {
-    "text": "they are faible",
-    "meaning": "Betekenis in game: they are faible"
-  },
-  "callouts-no-mic": {
-    "text": "no mic",
-    "meaning": "Betekenis in game: no mic"
-  },
-  "callouts-mic-muted": {
-    "text": "mic muted",
-    "meaning": "Betekenis in game: mic muted"
-  },
-  "danger-incoming": {
-    "text": "incoming!",
-    "meaning": "Betekenis in game: incoming!"
-  },
-  "danger-grenade": {
-    "text": "grenade!",
-    "meaning": "Betekenis in game: grenade!"
-  },
-  "danger-flash": {
-    "text": "flash!",
-    "meaning": "Betekenis in game: flash!"
-  },
-  "danger-sniper": {
-    "text": "sniper!",
-    "meaning": "Betekenis in game: sniper!"
-  },
-  "danger-trap": {
-    "text": "piège!",
-    "meaning": "Betekenis in game: piège!"
-  },
-  "danger-mine": {
-    "text": "mine!",
-    "meaning": "Betekenis in game: mine!"
-  },
-  "danger-ambush": {
-    "text": "ambush!",
-    "meaning": "Betekenis in game: ambush!"
-  },
-  "danger-they-are-rushing": {
-    "text": "they are rushing",
-    "meaning": "Betekenis in game: they are rushing"
-  },
-  "danger-they-are-pushing": {
-    "text": "they are pushing",
-    "meaning": "Betekenis in game: they are pushing"
-  },
-  "danger-they-are-flanking": {
-    "text": "they are flanking",
-    "meaning": "Betekenis in game: they are flanking"
-  },
-  "danger-they-know": {
-    "text": "they know",
-    "meaning": "Betekenis in game: they know"
-  },
-  "danger-they-saw-me": {
-    "text": "they saw me",
-    "meaning": "Betekenis in game: they saw me"
-  },
-  "danger-i-am-exposed": {
-    "text": "i am exposed",
-    "meaning": "Betekenis in game: i am exposed"
-  },
-  "danger-no-cover": {
-    "text": "no couvre",
-    "meaning": "Betekenis in game: no couvre"
-  },
-  "danger-low-cover": {
-    "text": "faible couvre",
-    "meaning": "Betekenis in game: faible couvre"
-  },
-  "danger-bad-angle": {
-    "text": "mauvais angle",
-    "meaning": "Betekenis in game: mauvais angle"
-  },
-  "danger-get-out": {
-    "text": "get plus de",
-    "meaning": "Betekenis in game: get plus de"
-  },
-  "danger-back-up": {
-    "text": "arrière up",
-    "meaning": "Betekenis in game: arrière up"
-  },
-  "danger-do-not-go-there": {
-    "text": "do pas allez daar",
-    "meaning": "Betekenis in game: do pas allez daar"
-  },
-  "danger-it-is-a-trap": {
-    "text": "it is a piège",
-    "meaning": "Betekenis in game: it is a piège"
-  },
-  "danger-enemy-ultimate-ready": {
-    "text": "vijand ultime prêt",
-    "meaning": "Betekenis in game: vijand ultime prêt"
-  },
-  "danger-they-have-sniper": {
-    "text": "they have sniper",
-    "meaning": "Betekenis in game: they have sniper"
-  },
-  "instructions-push": {
-    "text": "push",
-    "meaning": "Betekenis in game: push"
-  },
-  "instructions-rush": {
-    "text": "rush",
-    "meaning": "Betekenis in game: rush"
-  },
-  "instructions-hold": {
-    "text": "tiens",
-    "meaning": "Betekenis in game: tiens"
-  },
-  "instructions-defend": {
-    "text": "verdedigen",
-    "meaning": "Betekenis in game: verdedigen"
-  },
-  "instructions-attack": {
-    "text": "aanvallen",
-    "meaning": "Betekenis in game: aanvallen"
-  },
-  "instructions-retreat": {
-    "text": "repli",
-    "meaning": "Betekenis in game: repli"
-  },
-  "instructions-rotate": {
-    "text": "rotation",
-    "meaning": "Betekenis in game: rotation"
-  },
-  "instructions-stack-here": {
-    "text": "groupe hier",
-    "meaning": "Betekenis in game: groupe hier"
-  },
-  "instructions-spread-out": {
-    "text": "écartez plus de",
-    "meaning": "Betekenis in game: écartez plus de"
-  },
-  "instructions-stay-together": {
-    "text": "stay ensemble",
-    "meaning": "Betekenis in game: stay ensemble"
-  },
-  "instructions-follow-me": {
-    "text": "suis-moi me",
-    "meaning": "Betekenis in game: suis-moi me"
-  },
-  "instructions-lead-the-way": {
-    "text": "passe devant the way",
-    "meaning": "Betekenis in game: passe devant the way"
-  },
-  "instructions-go-first": {
-    "text": "allez premier",
-    "meaning": "Betekenis in game: allez premier"
-  },
-  "instructions-i-go-first": {
-    "text": "i allez premier",
-    "meaning": "Betekenis in game: i allez premier"
-  },
-  "instructions-wait-for-me": {
-    "text": "wacht pour me",
-    "meaning": "Betekenis in game: wacht pour me"
-  },
-  "instructions-wait-for-cooldowns": {
-    "text": "wacht pour recharges",
-    "meaning": "Betekenis in game: wacht pour recharges"
-  },
-  "instructions-use-smoke": {
-    "text": "utilise fumigène",
-    "meaning": "Betekenis in game: utilise fumigène"
-  },
-  "instructions-use-flash": {
-    "text": "utilise flash",
-    "meaning": "Betekenis in game: utilise flash"
-  },
-  "instructions-use-grenade": {
-    "text": "utilise grenade",
-    "meaning": "Betekenis in game: utilise grenade"
-  },
-  "instructions-use-ultimate": {
-    "text": "utilise ultime",
-    "meaning": "Betekenis in game: utilise ultime"
-  },
-  "instructions-save-ultimate": {
-    "text": "sparen ultime",
-    "meaning": "Betekenis in game: sparen ultime"
-  },
-  "instructions-heal-me": {
-    "text": "soigne me",
-    "meaning": "Betekenis in game: soigne me"
-  },
-  "instructions-revive-me": {
-    "text": "réanime me",
-    "meaning": "Betekenis in game: réanime me"
-  },
-  "instructions-res-me": {
-    "text": "res me",
-    "meaning": "Betekenis in game: res me"
-  },
-  "instructions-cover-the-revive": {
-    "text": "couvre the réanime",
-    "meaning": "Betekenis in game: couvre the réanime"
-  },
-  "instructions-plant-now": {
-    "text": "pose maintenant",
-    "meaning": "Betekenis in game: pose maintenant"
-  },
-  "instructions-defuse-now": {
-    "text": "désamorce maintenant",
-    "meaning": "Betekenis in game: désamorce maintenant"
-  },
-  "instructions-capture-point": {
-    "text": "capture point",
-    "meaning": "Betekenis in game: capture point"
-  },
-  "instructions-contest-point": {
-    "text": "conteste point",
-    "meaning": "Betekenis in game: conteste point"
-  },
-  "instructions-touch-point": {
-    "text": "touche point",
-    "meaning": "Betekenis in game: touche point"
-  },
-  "instructions-clear-corners": {
-    "text": "clair corners",
-    "meaning": "Betekenis in game: clair corners"
-  },
-  "instructions-check-left": {
-    "text": "vérifie links",
-    "meaning": "Betekenis in game: vérifie links"
-  },
-  "instructions-check-right": {
-    "text": "vérifie rechts",
-    "meaning": "Betekenis in game: vérifie rechts"
-  },
-  "instructions-check-behind": {
-    "text": "vérifie achter",
-    "meaning": "Betekenis in game: vérifie achter"
-  },
-  "instructions-do-not-split": {
-    "text": "do pas séparez",
-    "meaning": "Betekenis in game: do pas séparez"
-  },
-  "instructions-do-not-feed": {
-    "text": "do pas feed",
-    "meaning": "Betekenis in game: do pas feed"
-  },
-  "instructions-do-not-waste-it": {
-    "text": "do pas gaspille it",
-    "meaning": "Betekenis in game: do pas gaspille it"
-  },
-  "instructions-stop-peeking": {
-    "text": "stop peeking",
-    "meaning": "Betekenis in game: stop peeking"
-  },
-  "instructions-mute-him": {
-    "text": "mute him",
-    "meaning": "Betekenis in game: mute him"
-  },
-  "instructions-report-after": {
-    "text": "signale after",
-    "meaning": "Betekenis in game: signale after"
-  },
-  "instructions-stack-left": {
-    "text": "groupe links",
-    "meaning": "Betekenis in game: groupe links"
-  },
-  "instructions-stack-right": {
-    "text": "groupe rechts",
-    "meaning": "Betekenis in game: groupe rechts"
-  },
-  "objective-plant-the-bomb": {
-    "text": "pose the bomb",
-    "meaning": "Betekenis in game: pose the bomb"
-  },
-  "objective-bomb-planted": {
-    "text": "bomb planted",
-    "meaning": "Betekenis in game: bomb planted"
-  },
-  "objective-bomb-down": {
-    "text": "bomb indisponible",
-    "meaning": "Betekenis in game: bomb indisponible"
-  },
-  "objective-spike-down": {
-    "text": "spike indisponible",
-    "meaning": "Betekenis in game: spike indisponible"
-  },
-  "objective-defuse-the-bomb": {
-    "text": "désamorce the bomb",
-    "meaning": "Betekenis in game: désamorce the bomb"
-  },
-  "objective-half-defuse": {
-    "text": "half désamorce",
-    "meaning": "Betekenis in game: half désamorce"
-  },
-  "objective-stick-the-defuse": {
-    "text": "stick the désamorce",
-    "meaning": "Betekenis in game: stick the désamorce"
-  },
-  "objective-fake-defuse": {
-    "text": "Fake ontmanteling",
-    "meaning": "Betekenis in game: Fake ontmanteling"
-  },
-  "objective-objective-secured": {
-    "text": "objectif secured",
-    "meaning": "Betekenis in game: objectif secured"
-  },
-  "objective-objective-lost": {
-    "text": "objectif lost",
-    "meaning": "Betekenis in game: objectif lost"
-  },
-  "objective-point-captured": {
-    "text": "point captured",
-    "meaning": "Betekenis in game: point captured"
-  },
-  "objective-point-contested": {
-    "text": "point contested",
-    "meaning": "Betekenis in game: point contested"
-  },
-  "objective-payload-moving": {
-    "text": "payload moving",
-    "meaning": "Betekenis in game: payload moving"
-  },
-  "objective-payload-stopped": {
-    "text": "payload stopped",
-    "meaning": "Betekenis in game: payload stopped"
-  },
-  "objective-escort-the-payload": {
-    "text": "escort the payload",
-    "meaning": "Betekenis in game: escort the payload"
-  },
-  "objective-stop-the-payload": {
-    "text": "stop the payload",
-    "meaning": "Betekenis in game: stop the payload"
-  },
-  "objective-capture-the-flag": {
-    "text": "capture the flag",
-    "meaning": "Betekenis in game: capture the flag"
-  },
-  "objective-return-the-flag": {
-    "text": "return the flag",
-    "meaning": "Betekenis in game: return the flag"
-  },
-  "objective-hold-the-point": {
-    "text": "tiens the point",
-    "meaning": "Betekenis in game: tiens the point"
-  },
-  "objective-leave-the-point": {
-    "text": "leave the point",
-    "meaning": "Betekenis in game: leave the point"
-  },
-  "teamwork-nice-shot": {
-    "text": "nice tir",
-    "meaning": "Betekenis in game: nice tir"
-  },
-  "teamwork-nice-try": {
-    "text": "nice try",
-    "meaning": "Betekenis in game: nice try"
-  },
-  "teamwork-good-comms": {
-    "text": "bon comms",
-    "meaning": "Betekenis in game: bon comms"
-  },
-  "teamwork-keep-comms-clear": {
-    "text": "keep comms clair",
-    "meaning": "Betekenis in game: keep comms clair"
-  },
-  "teamwork-i-trust-you": {
-    "text": "i trust you",
-    "meaning": "Betekenis in game: i trust you"
-  },
-  "teamwork-you-got-this": {
-    "text": "you got this",
-    "meaning": "Betekenis in game: you got this"
-  },
-  "teamwork-stay-calm": {
-    "text": "stay calm",
-    "meaning": "Betekenis in game: stay calm"
-  },
-  "teamwork-we-can-win": {
-    "text": "we can win",
-    "meaning": "Betekenis in game: we can win"
-  },
-  "teamwork-one-round-at-a-time": {
-    "text": "un round at a time",
-    "meaning": "Betekenis in game: un round at a time"
-  },
-  "teamwork-reset-mental": {
-    "text": "reset mental",
-    "meaning": "Betekenis in game: reset mental"
-  },
-  "teamwork-good-effort": {
-    "text": "bon effort",
-    "meaning": "Betekenis in game: bon effort"
-  },
-  "teamwork-great-shot": {
-    "text": "great tir",
-    "meaning": "Betekenis in game: great tir"
-  },
-  "teamwork-great-save": {
-    "text": "great sparen",
-    "meaning": "Betekenis in game: great sparen"
-  },
-  "teamwork-great-call": {
-    "text": "great call",
-    "meaning": "Betekenis in game: great call"
-  },
-  "teamwork-nice-clutch": {
-    "text": "nice clutch",
-    "meaning": "Betekenis in game: nice clutch"
-  },
-  "teamwork-nice-aim": {
-    "text": "nice aim",
-    "meaning": "Betekenis in game: nice aim"
-  },
-  "teamwork-nice-movement": {
-    "text": "nice movement",
-    "meaning": "Betekenis in game: nice movement"
-  },
-  "teamwork-nice-utility": {
-    "text": "nice utility",
-    "meaning": "Betekenis in game: nice utility"
-  },
-  "teamwork-i-will-cover-you": {
-    "text": "i will couvre you",
-    "meaning": "Betekenis in game: i will couvre you"
-  },
-  "teamwork-i-will-heal-you": {
-    "text": "i will soigne you",
-    "meaning": "Betekenis in game: i will soigne you"
-  },
-  "teamwork-i-will-watch-flank": {
-    "text": "i will surveille flank",
-    "meaning": "Betekenis in game: i will surveille flank"
-  },
-  "teamwork-take-my-weapon": {
-    "text": "prends my arme",
-    "meaning": "Betekenis in game: prends my arme"
-  },
-  "teamwork-take-my-loot": {
-    "text": "prends my butin",
-    "meaning": "Betekenis in game: prends my butin"
-  },
-  "teamwork-let-me-go-first": {
-    "text": "let me allez premier",
-    "meaning": "Betekenis in game: let me allez premier"
-  },
-  "teamwork-i-will-bait-for-you": {
-    "text": "i will appât pour you",
-    "meaning": "Betekenis in game: i will appât pour you"
-  },
-  "teamwork-trade-together": {
-    "text": "trade ensemble",
-    "meaning": "Betekenis in game: trade ensemble"
-  },
-  "teamwork-wait-for-team": {
-    "text": "wacht pour équipe",
-    "meaning": "Betekenis in game: wacht pour équipe"
-  },
-  "teamwork-we-need-everyone": {
-    "text": "we besoin de everyone",
-    "meaning": "Betekenis in game: we besoin de everyone"
-  },
-  "teamwork-play-together": {
-    "text": "joue ensemble",
-    "meaning": "Betekenis in game: joue ensemble"
-  },
-  "teamwork-do-not-blame": {
-    "text": "do pas blame",
-    "meaning": "Betekenis in game: do pas blame"
-  },
-  "teamwork-focus-next": {
-    "text": "focus next",
-    "meaning": "Betekenis in game: focus next"
-  },
-  "strategy-default-setup": {
-    "text": "standard setup",
-    "meaning": "Betekenis in game: standard setup"
-  },
-  "strategy-slow-push": {
-    "text": "lentement push",
-    "meaning": "Betekenis in game: lentement push"
-  },
-  "strategy-fast-push": {
-    "text": "vite push",
-    "meaning": "Betekenis in game: vite push"
-  },
-  "strategy-fake-push": {
-    "text": "Schijnaanval",
-    "meaning": "Betekenis in game: Schijnaanval"
-  },
-  "strategy-split-push": {
-    "text": "séparez push",
-    "meaning": "Betekenis in game: séparez push"
-  },
-  "strategy-retake": {
-    "text": "retake",
-    "meaning": "Betekenis in game: retake"
-  },
-  "strategy-save-round": {
-    "text": "sparen round",
-    "meaning": "Betekenis in game: sparen round"
-  },
-  "strategy-eco-round": {
-    "text": "eco round",
-    "meaning": "Betekenis in game: eco round"
-  },
-  "strategy-full-buy": {
-    "text": "toute kopen",
-    "meaning": "Betekenis in game: toute kopen"
-  },
-  "strategy-force-buy": {
-    "text": "force kopen",
-    "meaning": "Betekenis in game: force kopen"
-  },
-  "strategy-play-for-picks": {
-    "text": "joue pour picks",
-    "meaning": "Betekenis in game: joue pour picks"
-  },
-  "strategy-play-objective": {
-    "text": "joue objectif",
-    "meaning": "Betekenis in game: joue objectif"
-  },
-  "strategy-play-for-late-game": {
-    "text": "joue pour late partie",
-    "meaning": "Betekenis in game: joue pour late partie"
-  },
-  "strategy-take-map-control": {
-    "text": "prends carte control",
-    "meaning": "Betekenis in game: prends carte control"
-  },
-  "strategy-give-map-control": {
-    "text": "give carte control",
-    "meaning": "Betekenis in game: give carte control"
-  },
-  "strategy-deny-vision": {
-    "text": "deny vision",
-    "meaning": "Betekenis in game: deny vision"
-  },
-  "strategy-gather-info": {
-    "text": "gather info",
-    "meaning": "Betekenis in game: gather info"
-  },
-  "strategy-bait-utility": {
-    "text": "appât utility",
-    "meaning": "Betekenis in game: appât utility"
-  },
-  "strategy-use-utility-first": {
-    "text": "utilise utility premier",
-    "meaning": "Betekenis in game: utilise utility premier"
-  },
-  "strategy-trade-setup": {
-    "text": "trade setup",
-    "meaning": "Betekenis in game: trade setup"
-  },
-  "strategy-double-peek": {
-    "text": "double peek",
-    "meaning": "Betekenis in game: double peek"
-  },
-  "strategy-off-angle": {
-    "text": "off angle",
-    "meaning": "Betekenis in game: off angle"
-  },
-  "strategy-cross-setup": {
-    "text": "cross setup",
-    "meaning": "Betekenis in game: cross setup"
-  },
-  "strategy-late-lurk": {
-    "text": "late lurk",
-    "meaning": "Betekenis in game: late lurk"
-  },
-  "strategy-anchor-site": {
-    "text": "anchor site",
-    "meaning": "Betekenis in game: anchor site"
-  },
-  "strategy-play-retake": {
-    "text": "joue retake",
-    "meaning": "Betekenis in game: joue retake"
-  },
-  "strategy-stack-objective": {
-    "text": "groupe objectif",
-    "meaning": "Betekenis in game: groupe objectif"
-  },
-  "strategy-pressure-side-lane": {
-    "text": "pressure side voie",
-    "meaning": "Betekenis in game: pressure side voie"
-  },
-  "strategy-cut-rotation": {
-    "text": "cut rotation",
-    "meaning": "Betekenis in game: cut rotation"
-  },
-  "strategy-hold-rotation": {
-    "text": "tiens rotation",
-    "meaning": "Betekenis in game: tiens rotation"
-  },
-  "strategy-time-advantage": {
-    "text": "time advantage",
-    "meaning": "Betekenis in game: time advantage"
-  },
-  "strategy-man-advantage": {
-    "text": "man advantage",
-    "meaning": "Betekenis in game: man advantage"
-  },
-  "strategy-man-disadvantage": {
-    "text": "man disadvantage",
-    "meaning": "Betekenis in game: man disadvantage"
-  },
-  "strategy-numbers-advantage": {
-    "text": "numbers advantage",
-    "meaning": "Betekenis in game: numbers advantage"
-  },
-  "strategy-damage-advantage": {
-    "text": "damage advantage",
-    "meaning": "Betekenis in game: damage advantage"
-  },
-  "strategy-ultimate-advantage": {
-    "text": "ultime advantage",
-    "meaning": "Betekenis in game: ultime advantage"
-  },
-  "strategy-economy-advantage": {
-    "text": "economy advantage",
-    "meaning": "Betekenis in game: economy advantage"
-  },
-  "strategy-do-not-overcommit": {
-    "text": "do pas overcommit",
-    "meaning": "Betekenis in game: do pas overcommit"
-  },
-  "strategy-commit-now": {
-    "text": "commit maintenant",
-    "meaning": "Betekenis in game: commit maintenant"
-  },
-  "strategy-cancel-the-push": {
-    "text": "cancel the push",
-    "meaning": "Betekenis in game: cancel the push"
-  },
-  "economy-buy": {
-    "text": "kopen",
-    "meaning": "Betekenis in game: kopen"
-  },
-  "economy-save": {
-    "text": "sparen",
-    "meaning": "Betekenis in game: sparen"
-  },
-  "economy-drop-me": {
-    "text": "donne me",
-    "meaning": "Betekenis in game: donne me"
-  },
-  "economy-i-can-drop": {
-    "text": "i can donne",
-    "meaning": "Betekenis in game: i can donne"
-  },
-  "economy-need-a-drop": {
-    "text": "besoin de a donne",
-    "meaning": "Betekenis in game: besoin de a donne"
-  },
-  "economy-full-save": {
-    "text": "toute sparen",
-    "meaning": "Betekenis in game: toute sparen"
-  },
-  "economy-light-buy": {
-    "text": "light kopen",
-    "meaning": "Betekenis in game: light kopen"
-  },
-  "economy-half-buy": {
-    "text": "half kopen",
-    "meaning": "Betekenis in game: half kopen"
-  },
-  "economy-full-armor": {
-    "text": "toute armure",
-    "meaning": "Betekenis in game: toute armure"
-  },
-  "economy-no-armor": {
-    "text": "no armure",
-    "meaning": "Betekenis in game: no armure"
-  },
-  "economy-upgrade-weapon": {
-    "text": "upgrade arme",
-    "meaning": "Betekenis in game: upgrade arme"
-  },
-  "economy-keep-weapon": {
-    "text": "keep arme",
-    "meaning": "Betekenis in game: keep arme"
-  },
-  "economy-pick-up-gun": {
-    "text": "pick up gun",
-    "meaning": "Betekenis in game: pick up gun"
-  },
-  "economy-save-the-gun": {
-    "text": "sparen the gun",
-    "meaning": "Betekenis in game: sparen the gun"
-  },
-  "economy-we-are-broke": {
-    "text": "we are broke",
-    "meaning": "Betekenis in game: we are broke"
-  },
-  "economy-they-are-broke": {
-    "text": "they are broke",
-    "meaning": "Betekenis in game: they are broke"
-  },
-  "economy-they-have-money": {
-    "text": "they have money",
-    "meaning": "Betekenis in game: they have money"
-  },
-  "economy-we-can-buy-next": {
-    "text": "we can kopen next",
-    "meaning": "Betekenis in game: we can kopen next"
-  },
-  "economy-do-not-force": {
-    "text": "do pas force",
-    "meaning": "Betekenis in game: do pas force"
-  },
-  "economy-force-together": {
-    "text": "force ensemble",
-    "meaning": "Betekenis in game: force ensemble"
-  },
-  "slang-afk": {
-    "text": "AFK",
-    "meaning": "Betekenis in game: AFK"
-  },
-  "slang-brb": {
-    "text": "BRB",
-    "meaning": "Betekenis in game: BRB"
-  },
-  "slang-op": {
-    "text": "OP",
-    "meaning": "Betekenis in game: OP"
-  },
-  "slang-nerf": {
-    "text": "nerf",
-    "meaning": "Betekenis in game: nerf"
-  },
-  "slang-buff": {
-    "text": "buff",
-    "meaning": "Betekenis in game: buff"
-  },
-  "slang-meta": {
-    "text": "meta",
-    "meaning": "Betekenis in game: meta"
-  },
-  "slang-main": {
-    "text": "main",
-    "meaning": "Betekenis in game: main"
-  },
-  "slang-alt": {
-    "text": "alt",
-    "meaning": "Betekenis in game: alt"
-  },
-  "slang-smurf": {
-    "text": "smurf",
-    "meaning": "Betekenis in game: smurf"
-  },
-  "slang-noob": {
-    "text": "noob",
-    "meaning": "Betekenis in game: noob"
-  },
-  "slang-camper": {
-    "text": "camper",
-    "meaning": "Betekenis in game: camper"
-  },
-  "slang-sweat": {
-    "text": "sweat",
-    "meaning": "Betekenis in game: sweat"
-  },
-  "slang-tryhard": {
-    "text": "tryhard",
-    "meaning": "Betekenis in game: tryhard"
-  },
-  "slang-clutch-or-kick": {
-    "text": "clutch or kick",
-    "meaning": "Betekenis in game: clutch or kick"
-  },
-  "slang-diff": {
-    "text": "diff",
-    "meaning": "Betekenis in game: diff"
-  },
-  "slang-gap": {
-    "text": "gap",
-    "meaning": "Betekenis in game: gap"
-  },
-  "slang-tilt": {
-    "text": "tilt",
-    "meaning": "Betekenis in game: tilt"
-  },
-  "slang-rage-quit": {
-    "text": "rage quit",
-    "meaning": "Betekenis in game: rage quit"
-  },
-  "slang-spawn-camp": {
-    "text": "apparition camp",
-    "meaning": "Betekenis in game: apparition camp"
-  },
-  "slang-spawn-kill": {
-    "text": "apparition kill",
-    "meaning": "Betekenis in game: apparition kill"
-  },
-  "slang-hitbox": {
-    "text": "hitbox",
-    "meaning": "Betekenis in game: hitbox"
-  },
-  "slang-lag": {
-    "text": "lag",
-    "meaning": "Betekenis in game: lag"
-  },
-  "slang-ping": {
-    "text": "ping",
-    "meaning": "Betekenis in game: ping"
-  },
-  "slang-fps": {
-    "text": "FPS",
-    "meaning": "Betekenis in game: FPS"
-  },
-  "slang-dps": {
-    "text": "DPS",
-    "meaning": "Betekenis in game: DPS"
-  },
-  "slang-aoe": {
-    "text": "AOE",
-    "meaning": "Betekenis in game: AOE"
-  },
-  "slang-cc": {
-    "text": "CC",
-    "meaning": "Betekenis in game: CC"
-  },
-  "slang-gg-ez": {
-    "text": "GG EZ",
-    "meaning": "Betekenis in game: GG EZ"
-  },
-  "slang-wp": {
-    "text": "WP",
-    "meaning": "Betekenis in game: WP"
-  },
-  "slang-nt": {
-    "text": "NT",
-    "meaning": "Betekenis in game: NT"
+    "meaning": "Good game; meestal gezegd aan het einde van een match als sportieve afsluiting."
   },
   "slang-ggwp": {
     "text": "GGWP",
-    "meaning": "Betekenis in game: GGWP"
+    "meaning": "Good game, well played; sportieve afsluiting na een goede match."
   },
-  "slang-lag-spike": {
-    "text": "lag spike",
-    "meaning": "Betekenis in game: lag spike"
+  "callouts-glhf": {
+    "text": "GLHF",
+    "meaning": "Good luck, have fun; vriendelijke boodschap vóór de match begint."
   },
-  "slang-ranked": {
-    "text": "ranked",
-    "meaning": "Betekenis in game: ranked"
+  "slang-wp": {
+    "text": "WP",
+    "meaning": "Well played; gebruikt om goed spel te prijzen."
   },
-  "slang-casual": {
-    "text": "casual",
-    "meaning": "Betekenis in game: casual"
+  "slang-nt": {
+    "text": "NT",
+    "meaning": "Nice try; steunende reactie na een goede poging die net niet lukte."
+  },
+  "callouts-nice": {
+    "text": "Nice!",
+    "meaning": "Snelle callout tijdens het spelen: Nice!."
+  },
+  "teamwork-nice-try": {
+    "text": "Nice try",
+    "meaning": "Teamwork- of aanmoedigingszin: Nice try."
+  },
+  "teamwork-nice-shot": {
+    "text": "Nice shot",
+    "meaning": "Teamwork- of aanmoedigingszin: Nice shot."
+  },
+  "callouts-thanks": {
+    "text": "Thanks",
+    "meaning": "Snelle callout tijdens het spelen: Thanks."
+  },
+  "callouts-sorry": {
+    "text": "Sorry",
+    "meaning": "Snelle callout tijdens het spelen: Sorry."
+  },
+  "callouts-my-bad": {
+    "text": "My bad",
+    "meaning": "Snelle callout tijdens het spelen: My bad."
+  },
+  "callouts-good-job": {
+    "text": "Goed gedaan",
+    "meaning": "Snelle callout tijdens het spelen: Goed gedaan."
+  },
+  "teamwork-good-comms": {
+    "text": "Goede comms",
+    "meaning": "Teamwork- of aanmoedigingszin: Goede comms."
+  },
+  "slang-afk": {
+    "text": "AFK",
+    "meaning": "Away from keyboard; de speler is even niet actief."
+  },
+  "slang-brb": {
+    "text": "BRB",
+    "meaning": "Be right back; de speler is zo terug."
+  },
+  "slang-dc": {
+    "text": "DC",
+    "meaning": "Disconnect; de verbinding met de match is weggevallen."
   },
   "slang-disconnect": {
-    "text": "disconnect",
-    "meaning": "Betekenis in game: disconnect"
+    "text": "Disconnect",
+    "meaning": "Een speler verliest de verbinding met de match."
   },
   "slang-reconnect": {
-    "text": "reconnect",
-    "meaning": "Betekenis in game: reconnect"
+    "text": "Reconnect",
+    "meaning": "Een speler komt terug nadat de verbinding wegviel."
+  },
+  "slang-lag": {
+    "text": "Lag",
+    "meaning": "Vertraging of netwerkproblemen waardoor het spel traag reageert."
+  },
+  "slang-lag-spike": {
+    "text": "Lag spike",
+    "meaning": "Een korte, plotselinge piek in netwerkvertraging."
+  },
+  "slang-ping": {
+    "text": "Ping",
+    "meaning": "Kan een marker op de map zijn of netwerkvertraging, afhankelijk van de context."
+  },
+  "slang-fps": {
+    "text": "FPS",
+    "meaning": "First-person shooter, of frames per seconde wanneer het over prestaties gaat."
+  },
+  "slang-server": {
+    "text": "Server",
+    "meaning": "Het online systeem of de regio waarop de match draait."
+  },
+  "slang-hit-reg": {
+    "text": "Hit reg",
+    "meaning": "Hit registration; of het spel een schot of aanval correct als hit telt."
+  },
+  "slang-desync": {
+    "text": "Desync",
+    "meaning": "Wanneer wat spelers zien niet synchroon loopt met de server of met elkaar."
+  },
+  "slang-op": {
+    "text": "OP",
+    "meaning": "Overpowered; te sterk vergeleken met andere opties."
+  },
+  "slang-meta": {
+    "text": "Meta",
+    "meaning": "De op dat moment sterkste of populairste strategie, character, weapon of build."
+  },
+  "slang-nerf": {
+    "text": "Nerf",
+    "meaning": "Iets zwakker maken via een game-update."
+  },
+  "slang-buff": {
+    "text": "Buff",
+    "meaning": "Iets sterker maken via een game-update."
+  },
+  "slang-noob": {
+    "text": "Noob",
+    "meaning": "Nieuwe of onervaren speler; kan beledigend zijn."
+  },
+  "slang-pro": {
+    "text": "Pro",
+    "meaning": "Een zeer vaardige of professioneel spelende speler."
+  },
+  "slang-bot": {
+    "text": "Bot",
+    "meaning": "Een AI-gestuurd personage, of een belediging voor iemand die slecht speelt."
+  },
+  "slang-smurf": {
+    "text": "Smurf",
+    "meaning": "Een sterke speler die op een account met lagere rank speelt."
+  },
+  "slang-camper": {
+    "text": "Camper",
+    "meaning": "Een speler die op één plek wacht om kills te krijgen."
+  },
+  "slang-tryhard": {
+    "text": "Tryhard",
+    "meaning": "Iemand die heel serieus speelt; soms als belediging gebruikt."
+  },
+  "slang-sweat": {
+    "text": "Sweat",
+    "meaning": "Een speler die heel hard probeert te winnen."
+  },
+  "slang-tilt": {
+    "text": "Tilt",
+    "meaning": "Frustratie waardoor iemand slechter gaat spelen."
+  },
+  "slang-toxic": {
+    "text": "Toxic",
+    "meaning": "Onbeleefd, agressief of schadelijk gedrag in chat of gameplay."
+  },
+  "slang-salty": {
+    "text": "Salty",
+    "meaning": "Boos of geïrriteerd na verliezen of outplayed worden."
+  },
+  "slang-rage-quit": {
+    "text": "Rage quit",
+    "meaning": "De game verlaten uit woede."
+  },
+  "slang-pvp": {
+    "text": "PvP",
+    "meaning": "Player versus player; spelers vechten tegen andere spelers."
+  },
+  "slang-pve": {
+    "text": "PvE",
+    "meaning": "Player versus environment; spelen tegen AI-vijanden of game-systemen."
+  },
+  "slang-ranked": {
+    "text": "Ranked",
+    "meaning": "Competitieve modus die je rank beïnvloedt."
+  },
+  "slang-casual": {
+    "text": "Casual",
+    "meaning": "Niet-ranked modus voor relaxter spelen."
+  },
+  "slang-mmr": {
+    "text": "MMR",
+    "meaning": "Matchmaking rating; verborgen of zichtbare skill-rating voor eerlijkere matches."
+  },
+  "slang-elo": {
+    "text": "Elo",
+    "meaning": "Ratingsysteem of algemene term voor competitieve skill-rating."
+  },
+  "slang-kd": {
+    "text": "K/D",
+    "meaning": "Kill/death ratio; kills vergeleken met deaths."
+  },
+  "slang-kda": {
+    "text": "KDA",
+    "meaning": "Kills, deaths en assists; veelgebruikte prestatiestatistiek."
+  },
+  "slang-mvp": {
+    "text": "MVP",
+    "meaning": "Most valuable player; de speler met de grootste impact."
+  },
+  "slang-rng": {
+    "text": "RNG",
+    "meaning": "Random number generation; luck-based uitkomsten in een game."
+  },
+  "slang-xp": {
+    "text": "XP",
+    "meaning": "Experience points waarmee je een character, account of battle pass levelt."
+  },
+  "slang-level-up": {
+    "text": "Level up",
+    "meaning": "Een level krijgen of verbeteren door progressie en ervaring."
+  },
+  "slang-grind": {
+    "text": "Grinden",
+    "meaning": "Herhaaldelijk matches of taken doen voor beloningen, rank of progressie."
+  },
+  "slang-farm": {
+    "text": "Farmen",
+    "meaning": "Herhaaldelijk resources, gold, XP of makkelijke kills verzamelen."
+  },
+  "slang-main": {
+    "text": "Main",
+    "meaning": "Het character, de rol of het wapen dat een speler het meest gebruikt."
+  },
+  "slang-alt": {
+    "text": "Alt",
+    "meaning": "Een tweede account of alternatief character."
+  },
+  "slang-party": {
+    "text": "Party",
+    "meaning": "Veelgebruikte gamingterm: Party."
+  },
+  "slang-squad": {
+    "text": "Squad",
+    "meaning": "Veelgebruikte gamingterm: Squad."
+  },
+  "slang-lobby": {
+    "text": "Lobby",
+    "meaning": "Veelgebruikte gamingterm: Lobby."
+  },
+  "slang-queue": {
+    "text": "Queue",
+    "meaning": "Veelgebruikte gamingterm: Queue."
+  },
+  "slang-matchmaking": {
+    "text": "Matchmaking",
+    "meaning": "Veelgebruikte gamingterm: Matchmaking."
+  },
+  "slang-solo-queue": {
+    "text": "Solo queue",
+    "meaning": "Veelgebruikte gamingterm: Solo queue."
+  },
+  "slang-duo": {
+    "text": "Duo",
+    "meaning": "Veelgebruikte gamingterm: Duo."
+  },
+  "slang-stack": {
+    "text": "Stack",
+    "meaning": "Veelgebruikte gamingterm: Stack."
+  },
+  "slang-comms": {
+    "text": "Comms",
+    "meaning": "Teamcommunicatie via voicechat, tekstchat of pings."
+  },
+  "callouts-voice-chat": {
+    "text": "Voicechat",
+    "meaning": "Snelle callout tijdens het spelen: Voicechat."
+  },
+  "callouts-text-chat": {
+    "text": "Tekstchat",
+    "meaning": "Snelle callout tijdens het spelen: Tekstchat."
+  },
+  "callouts-no-mic": {
+    "text": "Geen mic",
+    "meaning": "Snelle callout tijdens het spelen: Geen mic."
+  },
+  "callouts-mic-muted": {
+    "text": "Mic staat op mute",
+    "meaning": "Snelle callout tijdens het spelen: Mic staat op mute."
+  },
+  "slang-dps": {
+    "text": "DPS",
+    "meaning": "Damage per second, of een rol die vooral damage doet."
+  },
+  "slang-tank": {
+    "text": "Tank",
+    "meaning": "Duurzame rol die damage opvangt en teamgenoten beschermt."
+  },
+  "slang-support": {
+    "text": "Support",
+    "meaning": "Rol die focust op healing, utility, buffs of teamhulp."
+  },
+  "slang-healer": {
+    "text": "Healer",
+    "meaning": "Supportrol die vooral health van teamgenoten herstelt."
+  },
+  "slang-aoe": {
+    "text": "AOE",
+    "meaning": "Area of effect; damage of ability die een gebied raakt."
+  },
+  "slang-cc": {
+    "text": "CC",
+    "meaning": "Crowd control; abilities die stunnen, vertragen of uitschakelen."
+  },
+  "slang-ult": {
+    "text": "Ult",
+    "meaning": "Afkorting van ultimate; de sterkste ability van een character."
+  },
+  "callouts-ultimate-ready": {
+    "text": "Ult ready",
+    "meaning": "Snelle callout tijdens het spelen: Ult ready."
+  },
+  "callouts-no-ultimate": {
+    "text": "Geen ult",
+    "meaning": "Snelle callout tijdens het spelen: Geen ult."
+  },
+  "callouts-ability-ready": {
+    "text": "Ability ready",
+    "meaning": "Snelle callout tijdens het spelen: Ability ready."
+  },
+  "callouts-ability-down": {
+    "text": "Ability down",
+    "meaning": "Snelle callout tijdens het spelen: Ability down."
+  },
+  "callouts-cooldown": {
+    "text": "Cooldown",
+    "meaning": "Snelle callout tijdens het spelen: Cooldown."
+  },
+  "callouts-enemy-spotted": {
+    "text": "Enemy spotted",
+    "meaning": "Snelle callout tijdens het spelen: Enemy spotted."
+  },
+  "callouts-enemy-here": {
+    "text": "Enemy hier",
+    "meaning": "Snelle callout tijdens het spelen: Enemy hier."
+  },
+  "callouts-enemy-there": {
+    "text": "Enemy daar",
+    "meaning": "Snelle callout tijdens het spelen: Enemy daar."
+  },
+  "callouts-on-me": {
+    "text": "Op mij",
+    "meaning": "Snelle callout tijdens het spelen: Op mij."
+  },
+  "callouts-i-see-him": {
+    "text": "Ik zie hem",
+    "meaning": "Snelle callout tijdens het spelen: Ik zie hem."
+  },
+  "callouts-i-see-them": {
+    "text": "Ik zie ze",
+    "meaning": "Snelle callout tijdens het spelen: Ik zie ze."
+  },
+  "callouts-one-more": {
+    "text": "Nog eentje",
+    "meaning": "Snelle callout tijdens het spelen: Nog eentje."
+  },
+  "callouts-last-one": {
+    "text": "Laatste",
+    "meaning": "Snelle callout tijdens het spelen: Laatste."
+  },
+  "callouts-two-enemies-here": {
+    "text": "Twee enemies hier",
+    "meaning": "Snelle callout tijdens het spelen: Twee enemies hier."
+  },
+  "callouts-three-enemies-here": {
+    "text": "Drie enemies hier",
+    "meaning": "Snelle callout tijdens het spelen: Drie enemies hier."
+  },
+  "callouts-full-team-here": {
+    "text": "Hele team hier",
+    "meaning": "Snelle callout tijdens het spelen: Hele team hier."
+  },
+  "callouts-enemy-missing": {
+    "text": "Enemy missing",
+    "meaning": "Snelle callout tijdens het spelen: Enemy missing."
+  },
+  "callouts-all-missing": {
+    "text": "Iedereen missing",
+    "meaning": "Snelle callout tijdens het spelen: Iedereen missing."
+  },
+  "callouts-behind-you": {
+    "text": "Achter je!",
+    "meaning": "Snelle callout tijdens het spelen: Achter je!."
+  },
+  "callouts-left-side": {
+    "text": "Links!",
+    "meaning": "Snelle callout tijdens het spelen: Links!."
+  },
+  "callouts-right-side": {
+    "text": "Rechts!",
+    "meaning": "Snelle callout tijdens het spelen: Rechts!."
+  },
+  "callouts-above-us": {
+    "text": "Boven ons",
+    "meaning": "Snelle callout tijdens het spelen: Boven ons."
+  },
+  "callouts-below-us": {
+    "text": "Onder ons",
+    "meaning": "Snelle callout tijdens het spelen: Onder ons."
+  },
+  "callouts-in-front": {
+    "text": "Voor ons",
+    "meaning": "Snelle callout tijdens het spelen: Voor ons."
+  },
+  "callouts-mid": {
+    "text": "Mid",
+    "meaning": "Snelle callout tijdens het spelen: Mid."
+  },
+  "callouts-top-mid": {
+    "text": "Top mid",
+    "meaning": "Snelle callout tijdens het spelen: Top mid."
+  },
+  "callouts-bottom-mid": {
+    "text": "Bottom mid",
+    "meaning": "Snelle callout tijdens het spelen: Bottom mid."
+  },
+  "callouts-spawn": {
+    "text": "Spawn",
+    "meaning": "Snelle callout tijdens het spelen: Spawn."
+  },
+  "callouts-our-spawn": {
+    "text": "Onze spawn",
+    "meaning": "Snelle callout tijdens het spelen: Onze spawn."
+  },
+  "callouts-their-spawn": {
+    "text": "Hun spawn",
+    "meaning": "Snelle callout tijdens het spelen: Hun spawn."
+  },
+  "callouts-flank": {
+    "text": "Flank",
+    "meaning": "Snelle callout tijdens het spelen: Flank."
+  },
+  "callouts-watch-flank": {
+    "text": "Watch flank",
+    "meaning": "Snelle callout tijdens het spelen: Watch flank."
+  },
+  "danger-incoming": {
+    "text": "Incoming!",
+    "meaning": "Waarschuwing voor direct gevaar: Incoming!."
+  },
+  "danger-grenade": {
+    "text": "Granaat!",
+    "meaning": "Waarschuwing voor direct gevaar: Granaat!."
+  },
+  "danger-flash": {
+    "text": "Flash!",
+    "meaning": "Waarschuwing voor direct gevaar: Flash!."
+  },
+  "danger-sniper": {
+    "text": "Sniper!",
+    "meaning": "Waarschuwing voor direct gevaar: Sniper!."
+  },
+  "danger-trap": {
+    "text": "Trap!",
+    "meaning": "Waarschuwing voor direct gevaar: Trap!."
+  },
+  "danger-mine": {
+    "text": "Mijn!",
+    "meaning": "Waarschuwing voor direct gevaar: Mijn!."
+  },
+  "danger-ambush": {
+    "text": "Ambush!",
+    "meaning": "Waarschuwing voor direct gevaar: Ambush!."
+  },
+  "danger-they-are-rushing": {
+    "text": "Ze rushen",
+    "meaning": "Waarschuwing voor direct gevaar: Ze rushen."
+  },
+  "danger-they-are-pushing": {
+    "text": "Ze pushen",
+    "meaning": "Waarschuwing voor direct gevaar: Ze pushen."
+  },
+  "danger-they-are-flanking": {
+    "text": "Ze flanken",
+    "meaning": "Waarschuwing voor direct gevaar: Ze flanken."
+  },
+  "danger-they-know": {
+    "text": "Ze weten het",
+    "meaning": "Waarschuwing voor direct gevaar: Ze weten het."
+  },
+  "danger-they-saw-me": {
+    "text": "Ze hebben me gezien",
+    "meaning": "Waarschuwing voor direct gevaar: Ze hebben me gezien."
+  },
+  "danger-i-am-exposed": {
+    "text": "Ik sta open",
+    "meaning": "Waarschuwing voor direct gevaar: Ik sta open."
+  },
+  "danger-no-cover": {
+    "text": "Geen cover",
+    "meaning": "Waarschuwing voor direct gevaar: Geen cover."
+  },
+  "danger-bad-angle": {
+    "text": "Slechte angle",
+    "meaning": "Waarschuwing voor direct gevaar: Slechte angle."
+  },
+  "danger-get-out": {
+    "text": "Ga eruit",
+    "meaning": "Waarschuwing voor direct gevaar: Ga eruit."
+  },
+  "danger-back-up": {
+    "text": "Back up",
+    "meaning": "Waarschuwing voor direct gevaar: Back up."
+  },
+  "callouts-i-am-down": {
+    "text": "Ik ben down",
+    "meaning": "Snelle callout tijdens het spelen: Ik ben down."
+  },
+  "callouts-i-am-low": {
+    "text": "Ik ben low",
+    "meaning": "Snelle callout tijdens het spelen: Ik ben low."
+  },
+  "callouts-low-hp": {
+    "text": "Low HP",
+    "meaning": "Snelle callout tijdens het spelen: Low HP."
+  },
+  "callouts-he-is-low": {
+    "text": "Hij is low",
+    "meaning": "Snelle callout tijdens het spelen: Hij is low."
+  },
+  "callouts-they-are-low": {
+    "text": "Ze zijn low",
+    "meaning": "Snelle callout tijdens het spelen: Ze zijn low."
+  },
+  "callouts-one-shot": {
+    "text": "One shot",
+    "meaning": "Snelle callout tijdens het spelen: One shot."
+  },
+  "callouts-armor-cracked": {
+    "text": "Armor cracked",
+    "meaning": "Snelle callout tijdens het spelen: Armor cracked."
+  },
+  "callouts-shield-broken": {
+    "text": "Shield gebroken",
+    "meaning": "Snelle callout tijdens het spelen: Shield gebroken."
+  },
+  "callouts-no-shield": {
+    "text": "Geen shield",
+    "meaning": "Snelle callout tijdens het spelen: Geen shield."
+  },
+  "callouts-tagged-him": {
+    "text": "Ik heb hem geraakt",
+    "meaning": "Snelle callout tijdens het spelen: Ik heb hem geraakt."
+  },
+  "callouts-hit-for-fifty": {
+    "text": "Hit voor 50",
+    "meaning": "Snelle callout tijdens het spelen: Hit voor 50."
+  },
+  "callouts-hit-for-a-hundred": {
+    "text": "Hit voor 100",
+    "meaning": "Snelle callout tijdens het spelen: Hit voor 100."
+  },
+  "callouts-knocked-one": {
+    "text": "Eentje knocked",
+    "meaning": "Snelle callout tijdens het spelen: Eentje knocked."
+  },
+  "callouts-finished-one": {
+    "text": "Eentje gefinisht",
+    "meaning": "Snelle callout tijdens het spelen: Eentje gefinisht."
+  },
+  "callouts-team-wipe": {
+    "text": "Team wipe",
+    "meaning": "Snelle callout tijdens het spelen: Team wipe."
+  },
+  "instructions-push": {
+    "text": "Push",
+    "meaning": "Team-instructie of korte opdracht: Push."
+  },
+  "instructions-rush": {
+    "text": "Rush",
+    "meaning": "Team-instructie of korte opdracht: Rush."
+  },
+  "instructions-hold": {
+    "text": "Hold",
+    "meaning": "Team-instructie of korte opdracht: Hold."
+  },
+  "instructions-defend": {
+    "text": "Verdedig",
+    "meaning": "Team-instructie of korte opdracht: Verdedig."
+  },
+  "instructions-attack": {
+    "text": "Aanvallen",
+    "meaning": "Team-instructie of korte opdracht: Aanvallen."
+  },
+  "instructions-retreat": {
+    "text": "Terugtrekken",
+    "meaning": "Team-instructie of korte opdracht: Terugtrekken."
+  },
+  "instructions-rotate": {
+    "text": "Roteren",
+    "meaning": "Team-instructie of korte opdracht: Roteren."
+  },
+  "callouts-rotating": {
+    "text": "Aan het roteren",
+    "meaning": "Snelle callout tijdens het spelen: Aan het roteren."
+  },
+  "callouts-they-rotated": {
+    "text": "Ze zijn geroteerd",
+    "meaning": "Snelle callout tijdens het spelen: Ze zijn geroteerd."
+  },
+  "callouts-fake-rotate": {
+    "text": "Fake rotate",
+    "meaning": "Snelle callout tijdens het spelen: Fake rotate."
+  },
+  "callouts-push-now": {
+    "text": "Push nu",
+    "meaning": "Snelle callout tijdens het spelen: Push nu."
+  },
+  "callouts-go-now": {
+    "text": "Ga nu",
+    "meaning": "Snelle callout tijdens het spelen: Ga nu."
+  },
+  "callouts-fall-back": {
+    "text": "Val terug",
+    "meaning": "Snelle callout tijdens het spelen: Val terug."
+  },
+  "callouts-group-up": {
+    "text": "Group up",
+    "meaning": "Snelle callout tijdens het spelen: Group up."
+  },
+  "callouts-regroup": {
+    "text": "Regroup",
+    "meaning": "Snelle callout tijdens het spelen: Regroup."
+  },
+  "callouts-need-help": {
+    "text": "Hulp nodig",
+    "meaning": "Snelle callout tijdens het spelen: Hulp nodig."
+  },
+  "callouts-help-me": {
+    "text": "Help me",
+    "meaning": "Snelle callout tijdens het spelen: Help me."
+  },
+  "callouts-need-backup": {
+    "text": "Backup nodig",
+    "meaning": "Snelle callout tijdens het spelen: Backup nodig."
+  },
+  "callouts-i-need-healing": {
+    "text": "Ik heb healing nodig",
+    "meaning": "Snelle callout tijdens het spelen: Ik heb healing nodig."
+  },
+  "instructions-heal-me": {
+    "text": "Heal me",
+    "meaning": "Team-instructie of korte opdracht: Heal me."
+  },
+  "instructions-revive-me": {
+    "text": "Revive me",
+    "meaning": "Team-instructie of korte opdracht: Revive me."
+  },
+  "instructions-res-me": {
+    "text": "Res me",
+    "meaning": "Team-instructie of korte opdracht: Res me."
+  },
+  "instructions-cover-the-revive": {
+    "text": "Cover de revive",
+    "meaning": "Team-instructie of korte opdracht: Cover de revive."
+  },
+  "callouts-need-ammo": {
+    "text": "Ammo nodig",
+    "meaning": "Snelle callout tijdens het spelen: Ammo nodig."
+  },
+  "callouts-out-of-ammo": {
+    "text": "Geen ammo meer",
+    "meaning": "Snelle callout tijdens het spelen: Geen ammo meer."
+  },
+  "callouts-reloading": {
+    "text": "Reloading",
+    "meaning": "Snelle callout tijdens het spelen: Reloading."
+  },
+  "callouts-cover-me": {
+    "text": "Cover me",
+    "meaning": "Snelle callout tijdens het spelen: Cover me."
+  },
+  "callouts-i-got-you": {
+    "text": "Ik cover je",
+    "meaning": "Snelle callout tijdens het spelen: Ik cover je."
+  },
+  "callouts-ping-it": {
+    "text": "Ping het",
+    "meaning": "Snelle callout tijdens het spelen: Ping het."
+  },
+  "callouts-mark-the-enemy": {
+    "text": "Markeer de enemy",
+    "meaning": "Snelle callout tijdens het spelen: Markeer de enemy."
+  },
+  "callouts-i-marked-it": {
+    "text": "Ik heb het gemarkeerd",
+    "meaning": "Snelle callout tijdens het spelen: Ik heb het gemarkeerd."
+  },
+  "callouts-check-map": {
+    "text": "Check de map",
+    "meaning": "Snelle callout tijdens het spelen: Check de map."
+  },
+  "callouts-look-at-ping": {
+    "text": "Kijk naar de ping",
+    "meaning": "Snelle callout tijdens het spelen: Kijk naar de ping."
+  },
+  "instructions-follow-me": {
+    "text": "Volg mij",
+    "meaning": "Team-instructie of korte opdracht: Volg mij."
+  },
+  "instructions-stay-together": {
+    "text": "Blijf samen",
+    "meaning": "Team-instructie of korte opdracht: Blijf samen."
+  },
+  "instructions-spread-out": {
+    "text": "Verspreid je",
+    "meaning": "Team-instructie of korte opdracht: Verspreid je."
+  },
+  "instructions-wait-for-me": {
+    "text": "Wacht op mij",
+    "meaning": "Team-instructie of korte opdracht: Wacht op mij."
+  },
+  "instructions-wait-for-cooldowns": {
+    "text": "Wacht op cooldowns",
+    "meaning": "Team-instructie of korte opdracht: Wacht op cooldowns."
+  },
+  "objective-plant-the-bomb": {
+    "text": "Plant de bom",
+    "meaning": "Objective-term: Plant de bom."
+  },
+  "objective-bomb-planted": {
+    "text": "Bom geplant",
+    "meaning": "Objective-term: Bom geplant."
+  },
+  "objective-bomb-down": {
+    "text": "Bom down",
+    "meaning": "Objective-term: Bom down."
+  },
+  "objective-spike-down": {
+    "text": "Spike down",
+    "meaning": "Objective-term: Spike down."
+  },
+  "objective-defuse-the-bomb": {
+    "text": "Defuse de bom",
+    "meaning": "Objective-term: Defuse de bom."
+  },
+  "objective-half-defuse": {
+    "text": "Half defuse",
+    "meaning": "Objective-term: Half defuse."
+  },
+  "objective-stick-the-defuse": {
+    "text": "Stick de defuse",
+    "meaning": "Objective-term: Stick de defuse."
+  },
+  "objective-fake-defuse": {
+    "text": "Fake defuse",
+    "meaning": "Objective-term: Fake defuse."
+  },
+  "objective-objective-secured": {
+    "text": "Objective secured",
+    "meaning": "Objective-term: Objective secured."
+  },
+  "objective-objective-lost": {
+    "text": "Objective verloren",
+    "meaning": "Objective-term: Objective verloren."
+  },
+  "objective-point-captured": {
+    "text": "Punt gecaptured",
+    "meaning": "Objective-term: Punt gecaptured."
+  },
+  "objective-point-contested": {
+    "text": "Punt contested",
+    "meaning": "Objective-term: Punt contested."
+  },
+  "objective-payload-moving": {
+    "text": "Payload beweegt",
+    "meaning": "Objective-term: Payload beweegt."
+  },
+  "objective-payload-stopped": {
+    "text": "Payload gestopt",
+    "meaning": "Objective-term: Payload gestopt."
+  },
+  "slang-loot": {
+    "text": "Loot",
+    "meaning": "Veelgebruikte gamingterm: Loot."
+  },
+  "callouts-loot-here": {
+    "text": "Loot hier",
+    "meaning": "Snelle callout tijdens het spelen: Loot hier."
+  },
+  "callouts-good-loot": {
+    "text": "Goede loot",
+    "meaning": "Snelle callout tijdens het spelen: Goede loot."
+  },
+  "callouts-need-weapon": {
+    "text": "Wapen nodig",
+    "meaning": "Snelle callout tijdens het spelen: Wapen nodig."
+  },
+  "callouts-need-shield": {
+    "text": "Shield nodig",
+    "meaning": "Snelle callout tijdens het spelen: Shield nodig."
+  },
+  "callouts-need-meds": {
+    "text": "Meds nodig",
+    "meaning": "Snelle callout tijdens het spelen: Meds nodig."
+  },
+  "callouts-drop-ammo": {
+    "text": "Drop ammo",
+    "meaning": "Snelle callout tijdens het spelen: Drop ammo."
+  },
+  "callouts-drop-weapon": {
+    "text": "Drop wapen",
+    "meaning": "Snelle callout tijdens het spelen: Drop wapen."
+  },
+  "callouts-take-this": {
+    "text": "Neem dit",
+    "meaning": "Snelle callout tijdens het spelen: Neem dit."
+  },
+  "callouts-do-not-take-it": {
+    "text": "Neem het niet",
+    "meaning": "Snelle callout tijdens het spelen: Neem het niet."
+  },
+  "callouts-i-will-take-it": {
+    "text": "Ik neem het",
+    "meaning": "Snelle callout tijdens het spelen: Ik neem het."
+  },
+  "callouts-use-it": {
+    "text": "Gebruik het",
+    "meaning": "Snelle callout tijdens het spelen: Gebruik het."
+  },
+  "callouts-save-it": {
+    "text": "Bewaar het",
+    "meaning": "Snelle callout tijdens het spelen: Bewaar het."
+  },
+  "strategy-default-setup": {
+    "text": "Default setup",
+    "meaning": "Strategische term of call: Default setup."
+  },
+  "strategy-slow-push": {
+    "text": "Slow push",
+    "meaning": "Strategische term of call: Slow push."
+  },
+  "strategy-fast-push": {
+    "text": "Fast push",
+    "meaning": "Strategische term of call: Fast push."
+  },
+  "strategy-fake-push": {
+    "text": "Fake push",
+    "meaning": "Strategische term of call: Fake push."
+  },
+  "strategy-split-push": {
+    "text": "Split push",
+    "meaning": "Strategische term of call: Split push."
+  },
+  "strategy-retake": {
+    "text": "Retake",
+    "meaning": "Strategische term of call: Retake."
+  },
+  "strategy-eco-round": {
+    "text": "Eco round",
+    "meaning": "Strategische term of call: Eco round."
+  },
+  "strategy-full-buy": {
+    "text": "Full buy",
+    "meaning": "Strategische term of call: Full buy."
+  },
+  "strategy-force-buy": {
+    "text": "Force buy",
+    "meaning": "Strategische term of call: Force buy."
+  },
+  "strategy-play-objective": {
+    "text": "Speel objective",
+    "meaning": "Strategische term of call: Speel objective."
+  },
+  "strategy-play-for-picks": {
+    "text": "Speel voor picks",
+    "meaning": "Strategische term of call: Speel voor picks."
+  },
+  "strategy-take-map-control": {
+    "text": "Pak map control",
+    "meaning": "Strategische term of call: Pak map control."
+  },
+  "strategy-gather-info": {
+    "text": "Info verzamelen",
+    "meaning": "Strategische term of call: Info verzamelen."
+  },
+  "strategy-use-utility-first": {
+    "text": "Gebruik eerst utility",
+    "meaning": "Strategische term of call: Gebruik eerst utility."
+  },
+  "strategy-double-peek": {
+    "text": "Double peek",
+    "meaning": "Strategische term of call: Double peek."
+  },
+  "strategy-off-angle": {
+    "text": "Off angle",
+    "meaning": "Strategische term of call: Off angle."
+  },
+  "strategy-late-lurk": {
+    "text": "Late lurk",
+    "meaning": "Strategische term of call: Late lurk."
+  },
+  "economy-buy": {
+    "text": "Buy",
+    "meaning": "Economy-term voor kopen, sparen of resources: Buy."
+  },
+  "economy-save": {
+    "text": "Save",
+    "meaning": "Economy-term voor kopen, sparen of resources: Save."
+  },
+  "economy-drop-me": {
+    "text": "Drop me",
+    "meaning": "Economy-term voor kopen, sparen of resources: Drop me."
+  },
+  "economy-i-can-drop": {
+    "text": "Ik kan droppen",
+    "meaning": "Economy-term voor kopen, sparen of resources: Ik kan droppen."
+  },
+  "economy-need-a-drop": {
+    "text": "Drop nodig",
+    "meaning": "Economy-term voor kopen, sparen of resources: Drop nodig."
+  },
+  "economy-full-save": {
+    "text": "Full save",
+    "meaning": "Economy-term voor kopen, sparen of resources: Full save."
+  },
+  "economy-light-buy": {
+    "text": "Light buy",
+    "meaning": "Economy-term voor kopen, sparen of resources: Light buy."
+  },
+  "economy-half-buy": {
+    "text": "Half buy",
+    "meaning": "Economy-term voor kopen, sparen of resources: Half buy."
+  },
+  "economy-full-armor": {
+    "text": "Full armor",
+    "meaning": "Economy-term voor kopen, sparen of resources: Full armor."
+  },
+  "economy-no-armor": {
+    "text": "Geen armor",
+    "meaning": "Economy-term voor kopen, sparen of resources: Geen armor."
+  },
+  "economy-upgrade-weapon": {
+    "text": "Upgrade wapen",
+    "meaning": "Economy-term voor kopen, sparen of resources: Upgrade wapen."
+  },
+  "economy-keep-weapon": {
+    "text": "Bewaar wapen",
+    "meaning": "Economy-term voor kopen, sparen of resources: Bewaar wapen."
+  },
+  "economy-pick-up-gun": {
+    "text": "Pak het wapen",
+    "meaning": "Economy-term voor kopen, sparen of resources: Pak het wapen."
+  },
+  "economy-save-the-gun": {
+    "text": "Save het wapen",
+    "meaning": "Economy-term voor kopen, sparen of resources: Save het wapen."
+  },
+  "economy-we-are-broke": {
+    "text": "We zijn broke",
+    "meaning": "Economy-term voor kopen, sparen of resources: We zijn broke."
+  },
+  "economy-they-are-broke": {
+    "text": "Zij zijn broke",
+    "meaning": "Economy-term voor kopen, sparen of resources: Zij zijn broke."
+  },
+  "slang-skin": {
+    "text": "Skin",
+    "meaning": "Veelgebruikte gamingterm: Skin."
+  },
+  "slang-battle-pass": {
+    "text": "Battle pass",
+    "meaning": "Veelgebruikte gamingterm: Battle pass."
+  },
+  "slang-loadout": {
+    "text": "Loadout",
+    "meaning": "Veelgebruikte gamingterm: Loadout."
+  },
+  "slang-build": {
+    "text": "Build",
+    "meaning": "Veelgebruikte gamingterm: Build."
+  },
+  "slang-perk": {
+    "text": "Perk",
+    "meaning": "Veelgebruikte gamingterm: Perk."
+  },
+  "slang-cosmetic": {
+    "text": "Cosmetic",
+    "meaning": "Veelgebruikte gamingterm: Cosmetic."
+  },
+  "slang-patch": {
+    "text": "Patch",
+    "meaning": "Veelgebruikte gamingterm: Patch."
+  },
+  "slang-patch-notes": {
+    "text": "Patch notes",
+    "meaning": "Veelgebruikte gamingterm: Patch notes."
+  },
+  "slang-hotfix": {
+    "text": "Hotfix",
+    "meaning": "Veelgebruikte gamingterm: Hotfix."
+  },
+  "slang-bug": {
+    "text": "Bug",
+    "meaning": "Veelgebruikte gamingterm: Bug."
+  },
+  "slang-glitch": {
+    "text": "Glitch",
+    "meaning": "Veelgebruikte gamingterm: Glitch."
+  },
+  "slang-exploit": {
+    "text": "Exploit",
+    "meaning": "Veelgebruikte gamingterm: Exploit."
+  },
+  "slang-cheater": {
+    "text": "Cheater",
+    "meaning": "Veelgebruikte gamingterm: Cheater."
+  },
+  "slang-hacker": {
+    "text": "Hacker",
+    "meaning": "Veelgebruikte gamingterm: Hacker."
+  },
+  "slang-ban": {
+    "text": "Ban",
+    "meaning": "Veelgebruikte gamingterm: Ban."
+  },
+  "slang-report": {
+    "text": "Report",
+    "meaning": "Veelgebruikte gamingterm: Report."
+  },
+  "slang-skill-issue": {
+    "text": "Skill issue",
+    "meaning": "Veelgebruikte gamingterm: Skill issue."
+  },
+  "slang-touch-grass": {
+    "text": "Touch grass",
+    "meaning": "Veelgebruikte gamingterm: Touch grass."
+  },
+  "slang-cooked": {
+    "text": "Cooked",
+    "meaning": "Veelgebruikte gamingterm: Cooked."
+  },
+  "slang-diffed": {
+    "text": "Diffed",
+    "meaning": "Veelgebruikte gamingterm: Diffed."
+  },
+  "slang-quest": {
+    "text": "Quest",
+    "meaning": "Veelgebruikte gamingterm: Quest."
+  },
+  "slang-mission": {
+    "text": "Missie",
+    "meaning": "Veelgebruikte gamingterm: Missie."
+  },
+  "slang-boss": {
+    "text": "Boss",
+    "meaning": "Veelgebruikte gamingterm: Boss."
+  },
+  "slang-mob": {
+    "text": "Mob",
+    "meaning": "Veelgebruikte gamingterm: Mob."
+  },
+  "slang-aggro": {
+    "text": "Aggro",
+    "meaning": "Veelgebruikte gamingterm: Aggro."
+  },
+  "slang-raid": {
+    "text": "Raid",
+    "meaning": "Veelgebruikte gamingterm: Raid."
+  },
+  "slang-dungeon": {
+    "text": "Dungeon",
+    "meaning": "Veelgebruikte gamingterm: Dungeon."
+  },
+  "slang-cc-chain": {
+    "text": "CC-chain",
+    "meaning": "Veelgebruikte gamingterm: CC-chain."
+  },
+  "slang-clutch-or-kick": {
+    "text": "Clutch or kick",
+    "meaning": "Veelgebruikte gamingterm: Clutch or kick."
+  },
+  "slang-diff": {
+    "text": "Diff",
+    "meaning": "Veelgebruikte gamingterm: Diff."
+  },
+  "slang-gap": {
+    "text": "Gap",
+    "meaning": "Veelgebruikte gamingterm: Gap."
+  },
+  "slang-gg-ez": {
+    "text": "GG EZ",
+    "meaning": "Veelgebruikte gamingterm: GG EZ."
+  },
+  "slang-hitbox": {
+    "text": "Hitbox",
+    "meaning": "Veelgebruikte gamingterm: Hitbox."
+  },
+  "slang-spawn-camp": {
+    "text": "Spawn camp",
+    "meaning": "Veelgebruikte gamingterm: Spawn camp."
+  },
+  "slang-spawn-kill": {
+    "text": "Spawn kill",
+    "meaning": "Veelgebruikte gamingterm: Spawn kill."
+  },
+  "callouts-ace": {
+    "text": "Ace",
+    "meaning": "Snelle callout tijdens het spelen: Ace."
+  },
+  "callouts-back-site": {
+    "text": "Back site",
+    "meaning": "Snelle callout tijdens het spelen: Back site."
+  },
+  "callouts-bad-timing": {
+    "text": "Slechte timing",
+    "meaning": "Snelle callout tijdens het spelen: Slechte timing."
+  },
+  "callouts-bait-and-switch": {
+    "text": "Bait and switch",
+    "meaning": "Snelle callout tijdens het spelen: Bait and switch."
+  },
+  "callouts-basement-clear": {
+    "text": "Kelder clear",
+    "meaning": "Snelle callout tijdens het spelen: Kelder clear."
+  },
+  "callouts-blocked": {
+    "text": "Geblokkeerd",
+    "meaning": "Snelle callout tijdens het spelen: Geblokkeerd."
+  },
+  "callouts-bridge-clear": {
+    "text": "Brug clear",
+    "meaning": "Snelle callout tijdens het spelen: Brug clear."
+  },
+  "callouts-careful": {
+    "text": "Careful",
+    "meaning": "Snelle callout tijdens het spelen: Careful."
+  },
+  "callouts-carry": {
+    "text": "Carry",
+    "meaning": "Snelle callout tijdens het spelen: Carry."
+  },
+  "callouts-circle-moving": {
+    "text": "Circle beweegt",
+    "meaning": "Snelle callout tijdens het spelen: Circle beweegt."
+  },
+  "callouts-clean-fight": {
+    "text": "Clean fight",
+    "meaning": "Snelle callout tijdens het spelen: Clean fight."
+  },
+  "callouts-clear-left": {
+    "text": "Links clear",
+    "meaning": "Snelle callout tijdens het spelen: Links clear."
+  },
+  "callouts-clear-mid": {
+    "text": "Mid clear",
+    "meaning": "Snelle callout tijdens het spelen: Mid clear."
+  },
+  "callouts-clear-right": {
+    "text": "Rechts clear",
+    "meaning": "Snelle callout tijdens het spelen: Rechts clear."
+  },
+  "callouts-close-corner": {
+    "text": "Close corner",
+    "meaning": "Snelle callout tijdens het spelen: Close corner."
+  },
+  "callouts-close-game": {
+    "text": "Close game",
+    "meaning": "Snelle callout tijdens het spelen: Close game."
+  },
+  "callouts-clutch": {
+    "text": "Clutch",
+    "meaning": "Snelle callout tijdens het spelen: Clutch."
+  },
+  "callouts-come-back": {
+    "text": "Kom terug",
+    "meaning": "Snelle callout tijdens het spelen: Kom terug."
+  },
+  "callouts-comeback": {
+    "text": "Comeback",
+    "meaning": "Snelle callout tijdens het spelen: Comeback."
+  },
+  "callouts-contact": {
+    "text": "Contact",
+    "meaning": "Snelle callout tijdens het spelen: Contact."
+  },
+  "callouts-corner": {
+    "text": "Corner",
+    "meaning": "Snelle callout tijdens het spelen: Corner."
+  },
+  "callouts-crossfire": {
+    "text": "Crossfire",
+    "meaning": "Snelle callout tijdens het spelen: Crossfire."
+  },
+  "callouts-default-spot": {
+    "text": "Default spot",
+    "meaning": "Snelle callout tijdens het spelen: Default spot."
+  },
+  "callouts-do-not-chase": {
+    "text": "Niet chasen",
+    "meaning": "Snelle callout tijdens het spelen: Niet chasen."
+  },
+  "callouts-do-not-peek": {
+    "text": "Niet peeken",
+    "meaning": "Snelle callout tijdens het spelen: Niet peeken."
+  },
+  "callouts-door-closed": {
+    "text": "Deur dicht",
+    "meaning": "Snelle callout tijdens het spelen: Deur dicht."
+  },
+  "callouts-door-open": {
+    "text": "Deur open",
+    "meaning": "Snelle callout tijdens het spelen: Deur open."
+  },
+  "callouts-flash-out": {
+    "text": "Flash out",
+    "meaning": "Snelle callout tijdens het spelen: Flash out."
+  },
+  "callouts-focus-fire": {
+    "text": "Focus fire",
+    "meaning": "Snelle callout tijdens het spelen: Focus fire."
+  },
+  "callouts-focus-healer": {
+    "text": "Focus healer",
+    "meaning": "Snelle callout tijdens het spelen: Focus healer."
+  },
+  "callouts-focus-sniper": {
+    "text": "Focus sniper",
+    "meaning": "Snelle callout tijdens het spelen: Focus sniper."
+  },
+  "callouts-footsteps": {
+    "text": "Footsteps",
+    "meaning": "Snelle callout tijdens het spelen: Footsteps."
+  },
+  "callouts-free-kill": {
+    "text": "Free kill",
+    "meaning": "Snelle callout tijdens het spelen: Free kill."
+  },
+  "callouts-free-objective": {
+    "text": "Free objective",
+    "meaning": "Snelle callout tijdens het spelen: Free objective."
+  },
+  "callouts-front-site": {
+    "text": "Front site",
+    "meaning": "Snelle callout tijdens het spelen: Front site."
+  },
+  "callouts-good-timing": {
+    "text": "Goede timing",
+    "meaning": "Snelle callout tijdens het spelen: Goede timing."
+  },
+  "callouts-grenade-out": {
+    "text": "Granaat out",
+    "meaning": "Snelle callout tijdens het spelen: Granaat out."
+  },
+  "callouts-hallway": {
+    "text": "Gang",
+    "meaning": "Snelle callout tijdens het spelen: Gang."
+  },
+  "callouts-hide": {
+    "text": "Verstop je",
+    "meaning": "Snelle callout tijdens het spelen: Verstop je."
+  },
+  "callouts-high-ground": {
+    "text": "High ground",
+    "meaning": "Snelle callout tijdens het spelen: High ground."
+  },
+  "callouts-hold-angle": {
+    "text": "Hold angle",
+    "meaning": "Snelle callout tijdens het spelen: Hold angle."
+  },
+  "callouts-hold-position": {
+    "text": "Hold position",
+    "meaning": "Snelle callout tijdens het spelen: Hold position."
+  },
+  "callouts-i-am-watching": {
+    "text": "Ik watch",
+    "meaning": "Snelle callout tijdens het spelen: Ik watch."
+  },
+  "callouts-i-hear-steps": {
+    "text": "Ik hoor steps",
+    "meaning": "Snelle callout tijdens het spelen: Ik hoor steps."
+  },
+  "callouts-i-will-trade": {
+    "text": "Ik trade",
+    "meaning": "Snelle callout tijdens het spelen: Ik trade."
+  },
+  "callouts-ignore-tank": {
+    "text": "Ignore tank",
+    "meaning": "Snelle callout tijdens het spelen: Ignore tank."
+  },
+  "callouts-long-range": {
+    "text": "Long range",
+    "meaning": "Snelle callout tijdens het spelen: Long range."
+  },
+  "callouts-low-ground": {
+    "text": "Low ground",
+    "meaning": "Snelle callout tijdens het spelen: Low ground."
+  },
+  "callouts-lucky-shot": {
+    "text": "Lucky shot",
+    "meaning": "Snelle callout tijdens het spelen: Lucky shot."
+  },
+  "callouts-messy-fight": {
+    "text": "Messy fight",
+    "meaning": "Snelle callout tijdens het spelen: Messy fight."
+  },
+  "callouts-move-up": {
+    "text": "Move up",
+    "meaning": "Snelle callout tijdens het spelen: Move up."
+  },
+  "callouts-nice-trade": {
+    "text": "Nice trade",
+    "meaning": "Snelle callout tijdens het spelen: Nice trade."
+  },
+  "callouts-no-contact": {
+    "text": "Geen contact",
+    "meaning": "Snelle callout tijdens het spelen: Geen contact."
+  },
+  "callouts-no-problem": {
+    "text": "Geen probleem",
+    "meaning": "Snelle callout tijdens het spelen: Geen probleem."
+  },
+  "callouts-not-clear": {
+    "text": "Niet clear",
+    "meaning": "Snelle callout tijdens het spelen: Niet clear."
+  },
+  "callouts-open-lane": {
+    "text": "Open lane",
+    "meaning": "Snelle callout tijdens het spelen: Open lane."
+  },
+  "callouts-out-of-zone": {
+    "text": "Out of zone",
+    "meaning": "Snelle callout tijdens het spelen: Out of zone."
+  },
+  "callouts-peek-together": {
+    "text": "Peek samen",
+    "meaning": "Snelle callout tijdens het spelen: Peek samen."
+  },
+  "callouts-pinched": {
+    "text": "Pinched",
+    "meaning": "Snelle callout tijdens het spelen: Pinched."
+  },
+  "callouts-play-fast": {
+    "text": "Speel snel",
+    "meaning": "Snelle callout tijdens het spelen: Speel snel."
+  },
+  "callouts-play-safe": {
+    "text": "Speel safe",
+    "meaning": "Snelle callout tijdens het spelen: Speel safe."
+  },
+  "callouts-play-slow": {
+    "text": "Speel slow",
+    "meaning": "Snelle callout tijdens het spelen: Speel slow."
+  },
+  "callouts-play-time": {
+    "text": "Speel op tijd",
+    "meaning": "Snelle callout tijdens het spelen: Speel op tijd."
+  },
+  "callouts-reset": {
+    "text": "Reset",
+    "meaning": "Snelle callout tijdens het spelen: Reset."
+  },
+  "callouts-roof-clear": {
+    "text": "Dak clear",
+    "meaning": "Snelle callout tijdens het spelen: Dak clear."
+  },
+  "callouts-run": {
+    "text": "Ren",
+    "meaning": "Snelle callout tijdens het spelen: Ren."
+  },
+  "callouts-safe-zone": {
+    "text": "Safe zone",
+    "meaning": "Snelle callout tijdens het spelen: Safe zone."
+  },
+  "callouts-short-range": {
+    "text": "Short range",
+    "meaning": "Snelle callout tijdens het spelen: Short range."
+  },
+  "callouts-shotgun-close": {
+    "text": "Shotgun close",
+    "meaning": "Snelle callout tijdens het spelen: Shotgun close."
+  },
+  "callouts-site-clear": {
+    "text": "Site clear",
+    "meaning": "Snelle callout tijdens het spelen: Site clear."
+  },
+  "callouts-site-not-clear": {
+    "text": "Site niet clear",
+    "meaning": "Snelle callout tijdens het spelen: Site niet clear."
+  },
+  "callouts-smoke-out": {
+    "text": "Smoke out",
+    "meaning": "Snelle callout tijdens het spelen: Smoke out."
+  },
+  "callouts-sniper-watching": {
+    "text": "Sniper watcht",
+    "meaning": "Snelle callout tijdens het spelen: Sniper watcht."
+  },
+  "callouts-split-up": {
+    "text": "Split op",
+    "meaning": "Snelle callout tijdens het spelen: Split op."
+  },
+  "callouts-stairs": {
+    "text": "Trap",
+    "meaning": "Snelle callout tijdens het spelen: Trap."
+  },
+  "callouts-stay-alive": {
+    "text": "Blijf leven",
+    "meaning": "Snelle callout tijdens het spelen: Blijf leven."
+  },
+  "callouts-stop-chasing": {
+    "text": "Stop met chasen",
+    "meaning": "Snelle callout tijdens het spelen: Stop met chasen."
+  },
+  "callouts-storm-coming": {
+    "text": "Storm komt",
+    "meaning": "Snelle callout tijdens het spelen: Storm komt."
+  },
+  "callouts-swing-together": {
+    "text": "Swing samen",
+    "meaning": "Snelle callout tijdens het spelen: Swing samen."
+  },
+  "callouts-target-marked": {
+    "text": "Target gemarkeerd",
+    "meaning": "Snelle callout tijdens het spelen: Target gemarkeerd."
+  },
+  "callouts-they-are-close": {
+    "text": "Ze zijn dichtbij",
+    "meaning": "Snelle callout tijdens het spelen: Ze zijn dichtbij."
+  },
+  "callouts-they-are-far": {
+    "text": "Ze zijn ver",
+    "meaning": "Snelle callout tijdens het spelen: Ze zijn ver."
+  },
+  "callouts-third-party": {
+    "text": "Third party",
+    "meaning": "Snelle callout tijdens het spelen: Third party."
+  },
+  "callouts-throw": {
+    "text": "Throw",
+    "meaning": "Snelle callout tijdens het spelen: Throw."
+  },
+  "callouts-trade-him": {
+    "text": "Trade hem",
+    "meaning": "Snelle callout tijdens het spelen: Trade hem."
+  },
+  "callouts-trade-me": {
+    "text": "Trade mij",
+    "meaning": "Snelle callout tijdens het spelen: Trade mij."
+  },
+  "callouts-trap-destroyed": {
+    "text": "Trap kapot",
+    "meaning": "Snelle callout tijdens het spelen: Trap kapot."
+  },
+  "callouts-trap-here": {
+    "text": "Trap hier",
+    "meaning": "Snelle callout tijdens het spelen: Trap hier."
+  },
+  "callouts-tunnel-clear": {
+    "text": "Tunnel clear",
+    "meaning": "Snelle callout tijdens het spelen: Tunnel clear."
+  },
+  "callouts-unlucky": {
+    "text": "Unlucky",
+    "meaning": "Snelle callout tijdens het spelen: Unlucky."
+  },
+  "callouts-wait": {
+    "text": "Wacht",
+    "meaning": "Snelle callout tijdens het spelen: Wacht."
+  },
+  "callouts-watching-left": {
+    "text": "Ik watch links",
+    "meaning": "Snelle callout tijdens het spelen: Ik watch links."
+  },
+  "callouts-watching-mid": {
+    "text": "Ik watch mid",
+    "meaning": "Snelle callout tijdens het spelen: Ik watch mid."
+  },
+  "callouts-watching-right": {
+    "text": "Ik watch rechts",
+    "meaning": "Snelle callout tijdens het spelen: Ik watch rechts."
+  },
+  "callouts-water": {
+    "text": "Water",
+    "meaning": "Snelle callout tijdens het spelen: Water."
+  },
+  "callouts-we-are-pinched": {
+    "text": "We zitten pinched",
+    "meaning": "Snelle callout tijdens het spelen: We zitten pinched."
+  },
+  "callouts-well-played": {
+    "text": "Well played",
+    "meaning": "Snelle callout tijdens het spelen: Well played."
+  },
+  "callouts-window": {
+    "text": "Raam",
+    "meaning": "Snelle callout tijdens het spelen: Raam."
+  },
+  "callouts-with-me": {
+    "text": "Met mij",
+    "meaning": "Snelle callout tijdens het spelen: Met mij."
+  },
+  "callouts-zone-closing": {
+    "text": "Zone sluit",
+    "meaning": "Snelle callout tijdens het spelen: Zone sluit."
+  },
+  "danger-do-not-go-there": {
+    "text": "Ga daar niet heen",
+    "meaning": "Waarschuwing voor direct gevaar: Ga daar niet heen."
+  },
+  "danger-enemy-ultimate-ready": {
+    "text": "Enemy ult ready",
+    "meaning": "Waarschuwing voor direct gevaar: Enemy ult ready."
+  },
+  "danger-it-is-a-trap": {
+    "text": "Het is een trap",
+    "meaning": "Waarschuwing voor direct gevaar: Het is een trap."
+  },
+  "danger-low-cover": {
+    "text": "Weinig cover",
+    "meaning": "Waarschuwing voor direct gevaar: Weinig cover."
+  },
+  "danger-they-have-sniper": {
+    "text": "Ze hebben een sniper",
+    "meaning": "Waarschuwing voor direct gevaar: Ze hebben een sniper."
+  },
+  "instructions-capture-point": {
+    "text": "Capture point",
+    "meaning": "Team-instructie of korte opdracht: Capture point."
+  },
+  "instructions-check-behind": {
+    "text": "Check achter",
+    "meaning": "Team-instructie of korte opdracht: Check achter."
+  },
+  "instructions-check-left": {
+    "text": "Check links",
+    "meaning": "Team-instructie of korte opdracht: Check links."
+  },
+  "instructions-check-right": {
+    "text": "Check rechts",
+    "meaning": "Team-instructie of korte opdracht: Check rechts."
+  },
+  "instructions-clear-corners": {
+    "text": "Clear corners",
+    "meaning": "Team-instructie of korte opdracht: Clear corners."
+  },
+  "instructions-contest-point": {
+    "text": "Contest point",
+    "meaning": "Team-instructie of korte opdracht: Contest point."
+  },
+  "instructions-defuse-now": {
+    "text": "Defuse nu",
+    "meaning": "Team-instructie of korte opdracht: Defuse nu."
+  },
+  "instructions-do-not-feed": {
+    "text": "Niet feeden",
+    "meaning": "Team-instructie of korte opdracht: Niet feeden."
+  },
+  "instructions-do-not-split": {
+    "text": "Niet splitten",
+    "meaning": "Team-instructie of korte opdracht: Niet splitten."
+  },
+  "instructions-do-not-waste-it": {
+    "text": "Verspil het niet",
+    "meaning": "Team-instructie of korte opdracht: Verspil het niet."
+  },
+  "instructions-go-first": {
+    "text": "Ga eerst",
+    "meaning": "Team-instructie of korte opdracht: Ga eerst."
+  },
+  "instructions-i-go-first": {
+    "text": "Ik ga eerst",
+    "meaning": "Team-instructie of korte opdracht: Ik ga eerst."
+  },
+  "instructions-lead-the-way": {
+    "text": "Ga voorop",
+    "meaning": "Team-instructie of korte opdracht: Ga voorop."
+  },
+  "instructions-mute-him": {
+    "text": "Mute hem",
+    "meaning": "Team-instructie of korte opdracht: Mute hem."
+  },
+  "instructions-plant-now": {
+    "text": "Plant nu",
+    "meaning": "Team-instructie of korte opdracht: Plant nu."
+  },
+  "instructions-report-after": {
+    "text": "Report na de match",
+    "meaning": "Team-instructie of korte opdracht: Report na de match."
+  },
+  "instructions-save-ultimate": {
+    "text": "Bewaar ult",
+    "meaning": "Team-instructie of korte opdracht: Bewaar ult."
+  },
+  "instructions-stack-here": {
+    "text": "Stack hier",
+    "meaning": "Team-instructie of korte opdracht: Stack hier."
+  },
+  "instructions-stack-left": {
+    "text": "Stack links",
+    "meaning": "Team-instructie of korte opdracht: Stack links."
+  },
+  "instructions-stack-right": {
+    "text": "Stack rechts",
+    "meaning": "Team-instructie of korte opdracht: Stack rechts."
+  },
+  "instructions-stop-peeking": {
+    "text": "Stop met peeken",
+    "meaning": "Team-instructie of korte opdracht: Stop met peeken."
+  },
+  "instructions-touch-point": {
+    "text": "Touch point",
+    "meaning": "Team-instructie of korte opdracht: Touch point."
+  },
+  "instructions-use-flash": {
+    "text": "Gebruik flash",
+    "meaning": "Team-instructie of korte opdracht: Gebruik flash."
+  },
+  "instructions-use-grenade": {
+    "text": "Gebruik granaat",
+    "meaning": "Team-instructie of korte opdracht: Gebruik granaat."
+  },
+  "instructions-use-smoke": {
+    "text": "Gebruik smoke",
+    "meaning": "Team-instructie of korte opdracht: Gebruik smoke."
+  },
+  "instructions-use-ultimate": {
+    "text": "Gebruik ult",
+    "meaning": "Team-instructie of korte opdracht: Gebruik ult."
+  },
+  "objective-capture-the-flag": {
+    "text": "Capture the flag",
+    "meaning": "Objective-term: Capture the flag."
+  },
+  "objective-escort-the-payload": {
+    "text": "Escort de payload",
+    "meaning": "Objective-term: Escort de payload."
+  },
+  "objective-hold-the-point": {
+    "text": "Hold het punt",
+    "meaning": "Objective-term: Hold het punt."
+  },
+  "objective-leave-the-point": {
+    "text": "Verlaat het punt",
+    "meaning": "Objective-term: Verlaat het punt."
+  },
+  "objective-return-the-flag": {
+    "text": "Breng de flag terug",
+    "meaning": "Objective-term: Breng de flag terug."
+  },
+  "objective-stop-the-payload": {
+    "text": "Stop de payload",
+    "meaning": "Objective-term: Stop de payload."
+  },
+  "teamwork-do-not-blame": {
+    "text": "Niet blamen",
+    "meaning": "Teamwork- of aanmoedigingszin: Niet blamen."
+  },
+  "teamwork-focus-next": {
+    "text": "Focus op de volgende",
+    "meaning": "Teamwork- of aanmoedigingszin: Focus op de volgende."
+  },
+  "teamwork-good-effort": {
+    "text": "Goede poging",
+    "meaning": "Teamwork- of aanmoedigingszin: Goede poging."
+  },
+  "teamwork-great-call": {
+    "text": "Goede call",
+    "meaning": "Teamwork- of aanmoedigingszin: Goede call."
+  },
+  "teamwork-great-save": {
+    "text": "Great save",
+    "meaning": "Teamwork- of aanmoedigingszin: Great save."
+  },
+  "teamwork-great-shot": {
+    "text": "Great shot",
+    "meaning": "Teamwork- of aanmoedigingszin: Great shot."
+  },
+  "teamwork-i-trust-you": {
+    "text": "Ik vertrouw je",
+    "meaning": "Teamwork- of aanmoedigingszin: Ik vertrouw je."
+  },
+  "teamwork-i-will-bait-for-you": {
+    "text": "Ik bait voor je",
+    "meaning": "Teamwork- of aanmoedigingszin: Ik bait voor je."
+  },
+  "teamwork-i-will-cover-you": {
+    "text": "Ik cover je",
+    "meaning": "Teamwork- of aanmoedigingszin: Ik cover je."
+  },
+  "teamwork-i-will-heal-you": {
+    "text": "Ik heal je",
+    "meaning": "Teamwork- of aanmoedigingszin: Ik heal je."
+  },
+  "teamwork-i-will-watch-flank": {
+    "text": "Ik watch flank",
+    "meaning": "Teamwork- of aanmoedigingszin: Ik watch flank."
+  },
+  "teamwork-keep-comms-clear": {
+    "text": "Houd comms clear",
+    "meaning": "Teamwork- of aanmoedigingszin: Houd comms clear."
+  },
+  "teamwork-let-me-go-first": {
+    "text": "Laat mij eerst gaan",
+    "meaning": "Teamwork- of aanmoedigingszin: Laat mij eerst gaan."
+  },
+  "teamwork-nice-aim": {
+    "text": "Nice aim",
+    "meaning": "Teamwork- of aanmoedigingszin: Nice aim."
+  },
+  "teamwork-nice-clutch": {
+    "text": "Nice clutch",
+    "meaning": "Teamwork- of aanmoedigingszin: Nice clutch."
+  },
+  "teamwork-nice-movement": {
+    "text": "Nice movement",
+    "meaning": "Teamwork- of aanmoedigingszin: Nice movement."
+  },
+  "teamwork-nice-utility": {
+    "text": "Nice utility",
+    "meaning": "Teamwork- of aanmoedigingszin: Nice utility."
+  },
+  "teamwork-one-round-at-a-time": {
+    "text": "Eén ronde tegelijk",
+    "meaning": "Teamwork- of aanmoedigingszin: Eén ronde tegelijk."
+  },
+  "teamwork-play-together": {
+    "text": "Speel samen",
+    "meaning": "Teamwork- of aanmoedigingszin: Speel samen."
+  },
+  "teamwork-reset-mental": {
+    "text": "Reset je mental",
+    "meaning": "Teamwork- of aanmoedigingszin: Reset je mental."
+  },
+  "teamwork-stay-calm": {
+    "text": "Blijf kalm",
+    "meaning": "Teamwork- of aanmoedigingszin: Blijf kalm."
+  },
+  "teamwork-take-my-loot": {
+    "text": "Neem mijn loot",
+    "meaning": "Teamwork- of aanmoedigingszin: Neem mijn loot."
+  },
+  "teamwork-take-my-weapon": {
+    "text": "Neem mijn wapen",
+    "meaning": "Teamwork- of aanmoedigingszin: Neem mijn wapen."
+  },
+  "teamwork-trade-together": {
+    "text": "Trade samen",
+    "meaning": "Teamwork- of aanmoedigingszin: Trade samen."
+  },
+  "teamwork-wait-for-team": {
+    "text": "Wacht op team",
+    "meaning": "Teamwork- of aanmoedigingszin: Wacht op team."
+  },
+  "teamwork-we-can-win": {
+    "text": "We kunnen winnen",
+    "meaning": "Teamwork- of aanmoedigingszin: We kunnen winnen."
+  },
+  "teamwork-we-need-everyone": {
+    "text": "We hebben iedereen nodig",
+    "meaning": "Teamwork- of aanmoedigingszin: We hebben iedereen nodig."
+  },
+  "teamwork-you-got-this": {
+    "text": "Je kan dit",
+    "meaning": "Teamwork- of aanmoedigingszin: Je kan dit."
+  },
+  "strategy-anchor-site": {
+    "text": "Anchor site",
+    "meaning": "Strategische term of call: Anchor site."
+  },
+  "strategy-bait-utility": {
+    "text": "Bait utility",
+    "meaning": "Strategische term of call: Bait utility."
+  },
+  "strategy-cancel-the-push": {
+    "text": "Cancel de push",
+    "meaning": "Strategische term of call: Cancel de push."
+  },
+  "strategy-commit-now": {
+    "text": "Commit nu",
+    "meaning": "Strategische term of call: Commit nu."
+  },
+  "strategy-cross-setup": {
+    "text": "Cross setup",
+    "meaning": "Strategische term of call: Cross setup."
+  },
+  "strategy-cut-rotation": {
+    "text": "Cut rotation",
+    "meaning": "Strategische term of call: Cut rotation."
+  },
+  "strategy-damage-advantage": {
+    "text": "Damage advantage",
+    "meaning": "Strategische term of call: Damage advantage."
+  },
+  "strategy-deny-vision": {
+    "text": "Deny vision",
+    "meaning": "Strategische term of call: Deny vision."
+  },
+  "strategy-do-not-overcommit": {
+    "text": "Niet overcommiten",
+    "meaning": "Strategische term of call: Niet overcommiten."
+  },
+  "strategy-economy-advantage": {
+    "text": "Economy advantage",
+    "meaning": "Strategische term of call: Economy advantage."
+  },
+  "strategy-give-map-control": {
+    "text": "Geef map control",
+    "meaning": "Strategische term of call: Geef map control."
+  },
+  "strategy-hold-rotation": {
+    "text": "Hold rotation",
+    "meaning": "Strategische term of call: Hold rotation."
+  },
+  "strategy-man-advantage": {
+    "text": "Man advantage",
+    "meaning": "Strategische term of call: Man advantage."
+  },
+  "strategy-man-disadvantage": {
+    "text": "Numbers disadvantage",
+    "meaning": "Strategische term of call: Numbers disadvantage."
+  },
+  "strategy-numbers-advantage": {
+    "text": "Numbers advantage",
+    "meaning": "Strategische term of call: Numbers advantage."
+  },
+  "strategy-play-for-late-game": {
+    "text": "Speel voor late game",
+    "meaning": "Strategische term of call: Speel voor late game."
+  },
+  "strategy-play-retake": {
+    "text": "Speel retake",
+    "meaning": "Strategische term of call: Speel retake."
+  },
+  "strategy-pressure-side-lane": {
+    "text": "Pressure side lane",
+    "meaning": "Strategische term of call: Pressure side lane."
+  },
+  "strategy-save-round": {
+    "text": "Save round",
+    "meaning": "Strategische term of call: Save round."
+  },
+  "strategy-stack-objective": {
+    "text": "Stack objective",
+    "meaning": "Strategische term of call: Stack objective."
+  },
+  "strategy-time-advantage": {
+    "text": "Time advantage",
+    "meaning": "Strategische term of call: Time advantage."
+  },
+  "strategy-trade-setup": {
+    "text": "Trade setup",
+    "meaning": "Strategische term of call: Trade setup."
+  },
+  "strategy-ultimate-advantage": {
+    "text": "Ult advantage",
+    "meaning": "Strategische term of call: Ult advantage."
+  },
+  "economy-do-not-force": {
+    "text": "Niet forcen",
+    "meaning": "Economy-term voor kopen, sparen of resources: Niet forcen."
+  },
+  "economy-force-together": {
+    "text": "Force samen",
+    "meaning": "Economy-term voor kopen, sparen of resources: Force samen."
+  },
+  "economy-they-have-money": {
+    "text": "Zij hebben money",
+    "meaning": "Economy-term voor kopen, sparen of resources: Zij hebben money."
+  },
+  "economy-we-can-buy-next": {
+    "text": "We kunnen next kopen",
+    "meaning": "Economy-term voor kopen, sparen of resources: We kunnen next kopen."
   },
   "antiToxic-clear-comms-please": {
-    "text": "clair comms, please",
-    "meaning": "Betekenis in game: clair comms, please"
-  },
-  "antiToxic-let-us-reset": {
-    "text": "let us reset",
-    "meaning": "Betekenis in game: let us reset"
-  },
-  "antiToxic-play-safe-next": {
-    "text": "joue prudent next",
-    "meaning": "Betekenis in game: joue prudent next"
-  },
-  "antiToxic-wait-for-the-team-next-time": {
-    "text": "wacht pour the équipe next time",
-    "meaning": "Betekenis in game: wacht pour the équipe next time"
-  },
-  "antiToxic-good-try-next-round": {
-    "text": "bon try, next round",
-    "meaning": "Betekenis in game: bon try, next round"
-  },
-  "antiToxic-we-need-better-spacing": {
-    "text": "we besoin de better spacing",
-    "meaning": "Betekenis in game: we besoin de better spacing"
-  },
-  "antiToxic-let-us-trade-better": {
-    "text": "let us trade better",
-    "meaning": "Betekenis in game: let us trade better"
-  },
-  "antiToxic-save-your-utility": {
-    "text": "sparen your utility",
-    "meaning": "Betekenis in game: sparen your utility"
-  },
-  "antiToxic-use-comms-not-blame": {
-    "text": "utilise comms, pas blame",
-    "meaning": "Betekenis in game: utilise comms, pas blame"
+    "text": "Clear comms, alsjeblieft",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: Clear comms, alsjeblieft."
   },
   "antiToxic-focus-on-objective": {
-    "text": "focus on objectif",
-    "meaning": "Betekenis in game: focus on objectif"
+    "text": "Focus op objective",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: Focus op objective."
   },
-  "antiToxic-we-still-have-time": {
-    "text": "we still have time",
-    "meaning": "Betekenis in game: we still have time"
-  },
-  "antiToxic-no-worries": {
-    "text": "no worries",
-    "meaning": "Betekenis in game: no worries"
+  "antiToxic-good-try-next-round": {
+    "text": "Goede poging, volgende ronde",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: Goede poging, volgende ronde."
   },
   "antiToxic-it-happens": {
-    "text": "it happens",
-    "meaning": "Betekenis in game: it happens"
-  },
-  "antiToxic-next-one-is-ours": {
-    "text": "next un is ours",
-    "meaning": "Betekenis in game: next un is ours"
+    "text": "Kan gebeuren",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: Kan gebeuren."
   },
   "antiToxic-keep-it-positive": {
-    "text": "keep it positive",
-    "meaning": "Betekenis in game: keep it positive"
+    "text": "Houd het positief",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: Houd het positief."
+  },
+  "antiToxic-let-us-reset": {
+    "text": "Laten we resetten",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: Laten we resetten."
+  },
+  "antiToxic-let-us-trade-better": {
+    "text": "Laten we beter traden",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: Laten we beter traden."
+  },
+  "antiToxic-next-one-is-ours": {
+    "text": "De volgende is van ons",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: De volgende is van ons."
+  },
+  "antiToxic-no-worries": {
+    "text": "Geen zorgen",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: Geen zorgen."
+  },
+  "antiToxic-play-safe-next": {
+    "text": "Speel volgende safe",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: Speel volgende safe."
+  },
+  "antiToxic-save-your-utility": {
+    "text": "Bewaar je utility",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: Bewaar je utility."
+  },
+  "antiToxic-use-comms-not-blame": {
+    "text": "Gebruik comms, geen blame",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: Gebruik comms, geen blame."
+  },
+  "antiToxic-wait-for-the-team-next-time": {
+    "text": "Wacht volgende keer op het team",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: Wacht volgende keer op het team."
+  },
+  "antiToxic-we-need-better-spacing": {
+    "text": "We hebben betere spacing nodig",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: We hebben betere spacing nodig."
+  },
+  "antiToxic-we-still-have-time": {
+    "text": "We hebben nog tijd",
+    "meaning": "Positieve zin om het team rustig en gefocust te houden: We hebben nog tijd."
   }
 }

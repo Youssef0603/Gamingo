@@ -1,1674 +1,1922 @@
 {
   "callouts-gg": {
-    "text": "ГГ",
-    "meaning": "Значение в игре: ГГ"
-  },
-  "callouts-glhf": {
-    "text": "Удачи и хорошей игры",
-    "meaning": "Значение в игре: Удачи и хорошей игры"
-  },
-  "callouts-nice": {
-    "text": "Хорошо!",
-    "meaning": "Значение в игре: Хорошо!"
-  },
-  "callouts-thanks": {
-    "text": "Спасибо",
-    "meaning": "Значение в игре: Спасибо"
-  },
-  "callouts-sorry": {
-    "text": "Извини",
-    "meaning": "Значение в игре: Извини"
-  },
-  "callouts-my-bad": {
-    "text": "Моя ошибка",
-    "meaning": "Значение в игре: Моя ошибка"
-  },
-  "callouts-one-more": {
-    "text": "один еще",
-    "meaning": "Значение в игре: один еще"
-  },
-  "callouts-i-am-down": {
-    "text": "я недоступна",
-    "meaning": "Значение в игре: я недоступна"
-  },
-  "callouts-i-am-low": {
-    "text": "я слабый",
-    "meaning": "Значение в игре: я слабый"
-  },
-  "callouts-enemy-spotted": {
-    "text": "Враг замечен",
-    "meaning": "Значение в игре: Враг замечен"
-  },
-  "callouts-enemy-here": {
-    "text": "враг здесь",
-    "meaning": "Значение в игре: враг здесь"
-  },
-  "callouts-enemy-there": {
-    "text": "враг там",
-    "meaning": "Значение в игре: враг там"
-  },
-  "callouts-two-enemies-here": {
-    "text": "два враги здесь",
-    "meaning": "Значение в игре: два враги здесь"
-  },
-  "callouts-three-enemies-here": {
-    "text": "три враги здесь",
-    "meaning": "Значение в игре: три враги здесь"
-  },
-  "callouts-full-team-here": {
-    "text": "вся команда здесь",
-    "meaning": "Значение в игре: вся команда здесь"
-  },
-  "callouts-behind-you": {
-    "text": "сзади ты!",
-    "meaning": "Значение в игре: сзади ты!"
-  },
-  "callouts-left-side": {
-    "text": "слева сторона!",
-    "meaning": "Значение в игре: слева сторона!"
-  },
-  "callouts-right-side": {
-    "text": "справа сторона!",
-    "meaning": "Значение в игре: справа сторона!"
-  },
-  "callouts-above-us": {
-    "text": "над нами нас",
-    "meaning": "Значение в игре: над нами нас"
-  },
-  "callouts-below-us": {
-    "text": "под нами нас",
-    "meaning": "Значение в игре: под нами нас"
-  },
-  "callouts-in-front": {
-    "text": "в спереди",
-    "meaning": "Значение в игре: в спереди"
-  },
-  "callouts-back-site": {
-    "text": "сзади сайт",
-    "meaning": "Значение в игре: сзади сайт"
-  },
-  "callouts-front-site": {
-    "text": "спереди сайт",
-    "meaning": "Значение в игре: спереди сайт"
-  },
-  "callouts-default-spot": {
-    "text": "стандартная позиция",
-    "meaning": "Значение в игре: стандартная позиция"
-  },
-  "callouts-corner": {
-    "text": "угол",
-    "meaning": "Значение в игре: угол"
-  },
-  "callouts-close-corner": {
-    "text": "близко угол",
-    "meaning": "Значение в игре: близко угол"
-  },
-  "callouts-long-range": {
-    "text": "дальняя дистанция",
-    "meaning": "Значение в игре: дальняя дистанция"
-  },
-  "callouts-short-range": {
-    "text": "ближняя дистанция",
-    "meaning": "Значение в игре: ближняя дистанция"
-  },
-  "callouts-mid": {
-    "text": "мид",
-    "meaning": "Значение в игре: мид"
-  },
-  "callouts-top-mid": {
-    "text": "верхний мид",
-    "meaning": "Значение в игре: верхний мид"
-  },
-  "callouts-bottom-mid": {
-    "text": "нижний мид",
-    "meaning": "Значение в игре: нижний мид"
-  },
-  "callouts-spawn": {
-    "text": "спавн",
-    "meaning": "Значение в игре: спавн"
-  },
-  "callouts-our-spawn": {
-    "text": "наш спавн",
-    "meaning": "Значение в игре: наш спавн"
-  },
-  "callouts-their-spawn": {
-    "text": "их спавн",
-    "meaning": "Значение в игре: их спавн"
-  },
-  "callouts-flank": {
-    "text": "фланг",
-    "meaning": "Значение в игре: фланг"
-  },
-  "callouts-watch-flank": {
-    "text": "смотри фланг",
-    "meaning": "Значение в игре: смотри фланг"
-  },
-  "callouts-rotating": {
-    "text": "ротируются",
-    "meaning": "Значение в игре: ротируются"
-  },
-  "callouts-they-rotated": {
-    "text": "они ушли в ротацию",
-    "meaning": "Значение в игре: они ушли в ротацию"
-  },
-  "callouts-fake-rotate": {
-    "text": "Ложная ротация",
-    "meaning": "Значение в игре: Ложная ротация"
-  },
-  "callouts-site-clear": {
-    "text": "сайт чисто",
-    "meaning": "Значение в игре: сайт чисто"
-  },
-  "callouts-site-not-clear": {
-    "text": "сайт не чисто",
-    "meaning": "Значение в игре: сайт не чисто"
-  },
-  "callouts-need-backup": {
-    "text": "нужна поддержка",
-    "meaning": "Значение в игре: нужна поддержка"
-  },
-  "callouts-need-help": {
-    "text": "нужна помощь",
-    "meaning": "Значение в игре: нужна помощь"
-  },
-  "callouts-help-me": {
-    "text": "помощь мне",
-    "meaning": "Значение в игре: помощь мне"
-  },
-  "callouts-i-need-healing": {
-    "text": "я нужна лечение",
-    "meaning": "Значение в игре: я нужна лечение"
-  },
-  "callouts-need-ammo": {
-    "text": "нужна патроны",
-    "meaning": "Значение в игре: нужна патроны"
-  },
-  "callouts-out-of-ammo": {
-    "text": "нет патроны",
-    "meaning": "Значение в игре: нет патроны"
-  },
-  "callouts-reloading": {
-    "text": "перезаряжаюсь",
-    "meaning": "Значение в игре: перезаряжаюсь"
-  },
-  "callouts-cover-me": {
-    "text": "прикрой мне",
-    "meaning": "Значение в игре: прикрой мне"
-  },
-  "callouts-i-got-you": {
-    "text": "я взял ты",
-    "meaning": "Значение в игре: я взял ты"
-  },
-  "callouts-i-am-watching": {
-    "text": "я держу",
-    "meaning": "Значение в игре: я держу"
-  },
-  "callouts-watching-left": {
-    "text": "держу слева",
-    "meaning": "Значение в игре: держу слева"
-  },
-  "callouts-watching-right": {
-    "text": "держу справа",
-    "meaning": "Значение в игре: держу справа"
-  },
-  "callouts-watching-mid": {
-    "text": "держу мид",
-    "meaning": "Значение в игре: держу мид"
-  },
-  "callouts-clear-left": {
-    "text": "чисто слева",
-    "meaning": "Значение в игре: чисто слева"
-  },
-  "callouts-clear-right": {
-    "text": "чисто справа",
-    "meaning": "Значение в игре: чисто справа"
-  },
-  "callouts-clear-mid": {
-    "text": "чисто мид",
-    "meaning": "Значение в игре: чисто мид"
-  },
-  "callouts-not-clear": {
-    "text": "не чисто",
-    "meaning": "Значение в игре: не чисто"
-  },
-  "callouts-contact": {
-    "text": "контакт",
-    "meaning": "Значение в игре: контакт"
-  },
-  "callouts-no-contact": {
-    "text": "нет контакт",
-    "meaning": "Значение в игре: нет контакт"
-  },
-  "callouts-footsteps": {
-    "text": "шаги",
-    "meaning": "Значение в игре: шаги"
-  },
-  "callouts-i-hear-steps": {
-    "text": "я слышу шаги",
-    "meaning": "Значение в игре: я слышу шаги"
-  },
-  "callouts-they-are-close": {
-    "text": "они близко",
-    "meaning": "Значение в игре: они близко"
-  },
-  "callouts-they-are-far": {
-    "text": "они далеко",
-    "meaning": "Значение в игре: они далеко"
-  },
-  "callouts-sniper-watching": {
-    "text": "снайпер держу",
-    "meaning": "Значение в игре: снайпер держу"
-  },
-  "callouts-shotgun-close": {
-    "text": "дробовик близко",
-    "meaning": "Значение в игре: дробовик близко"
-  },
-  "callouts-grenade-out": {
-    "text": "граната нет",
-    "meaning": "Значение в игре: граната нет"
-  },
-  "callouts-flash-out": {
-    "text": "флешка нет",
-    "meaning": "Значение в игре: флешка нет"
-  },
-  "callouts-smoke-out": {
-    "text": "дым нет",
-    "meaning": "Значение в игре: дым нет"
-  },
-  "callouts-ultimate-ready": {
-    "text": "ультимейт готов",
-    "meaning": "Значение в игре: ультимейт готов"
-  },
-  "callouts-no-ultimate": {
-    "text": "нет ультимейт",
-    "meaning": "Значение в игре: нет ультимейт"
-  },
-  "callouts-ability-ready": {
-    "text": "способность готов",
-    "meaning": "Значение в игре: способность готов"
-  },
-  "callouts-ability-down": {
-    "text": "способность недоступна",
-    "meaning": "Значение в игре: способность недоступна"
-  },
-  "callouts-cooldown": {
-    "text": "перезарядка",
-    "meaning": "Значение в игре: перезарядка"
-  },
-  "callouts-ping-it": {
-    "text": "пинг это",
-    "meaning": "Значение в игре: пинг это"
-  },
-  "callouts-mark-the-enemy": {
-    "text": "отметь враг",
-    "meaning": "Значение в игре: отметь враг"
-  },
-  "callouts-i-marked-it": {
-    "text": "я отмечена это",
-    "meaning": "Значение в игре: я отмечена это"
-  },
-  "callouts-check-map": {
-    "text": "проверь карта",
-    "meaning": "Значение в игре: проверь карта"
-  },
-  "callouts-look-at-ping": {
-    "text": "смотри на пинг",
-    "meaning": "Значение в игре: смотри на пинг"
-  },
-  "callouts-enemy-missing": {
-    "text": "враг пропал",
-    "meaning": "Значение в игре: враг пропал"
-  },
-  "callouts-all-missing": {
-    "text": "все пропал",
-    "meaning": "Значение в игре: все пропал"
-  },
-  "callouts-careful": {
-    "text": "осторожно",
-    "meaning": "Значение в игре: осторожно"
-  },
-  "callouts-wait": {
-    "text": "жди",
-    "meaning": "Значение в игре: жди"
-  },
-  "callouts-go-now": {
-    "text": "иди сейчас",
-    "meaning": "Значение в игре: иди сейчас"
-  },
-  "callouts-push-now": {
-    "text": "пуш сейчас",
-    "meaning": "Значение в игре: пуш сейчас"
-  },
-  "callouts-fall-back": {
-    "text": "отходи сзади",
-    "meaning": "Значение в игре: отходи сзади"
-  },
-  "callouts-run": {
-    "text": "беги",
-    "meaning": "Значение в игре: беги"
-  },
-  "callouts-hide": {
-    "text": "спрячься",
-    "meaning": "Значение в игре: спрячься"
-  },
-  "callouts-do-not-peek": {
-    "text": "не не пикни",
-    "meaning": "Значение в игре: не не пикни"
-  },
-  "callouts-peek-together": {
-    "text": "пикни вместе",
-    "meaning": "Значение в игре: пикни вместе"
-  },
-  "callouts-swing-together": {
-    "text": "выходите вместе",
-    "meaning": "Значение в игре: выходите вместе"
-  },
-  "callouts-hold-angle": {
-    "text": "держи угол",
-    "meaning": "Значение в игре: держи угол"
-  },
-  "callouts-hold-position": {
-    "text": "держи позиция",
-    "meaning": "Значение в игре: держи позиция"
-  },
-  "callouts-move-up": {
-    "text": "двигайся вверх",
-    "meaning": "Значение в игре: двигайся вверх"
-  },
-  "callouts-come-back": {
-    "text": "вернись сзади",
-    "meaning": "Значение в игре: вернись сзади"
-  },
-  "callouts-group-up": {
-    "text": "соберитесь вверх",
-    "meaning": "Значение в игре: соберитесь вверх"
-  },
-  "callouts-split-up": {
-    "text": "разделитесь вверх",
-    "meaning": "Значение в игре: разделитесь вверх"
-  },
-  "callouts-stay-alive": {
-    "text": "останься живым",
-    "meaning": "Значение в игре: останься живым"
-  },
-  "callouts-play-time": {
-    "text": "играй время",
-    "meaning": "Значение в игре: играй время"
-  },
-  "callouts-play-safe": {
-    "text": "играй безопасно",
-    "meaning": "Значение в игре: играй безопасно"
-  },
-  "callouts-play-slow": {
-    "text": "играй медленно",
-    "meaning": "Значение в игре: играй медленно"
-  },
-  "callouts-play-fast": {
-    "text": "играй быстро",
-    "meaning": "Значение в игре: играй быстро"
-  },
-  "callouts-do-not-chase": {
-    "text": "не не преследуй",
-    "meaning": "Значение в игре: не не преследуй"
-  },
-  "callouts-stop-chasing": {
-    "text": "стоп преследование",
-    "meaning": "Значение в игре: стоп преследование"
-  },
-  "callouts-trade-me": {
-    "text": "размен мне",
-    "meaning": "Значение в игре: размен мне"
-  },
-  "callouts-trade-him": {
-    "text": "размен его",
-    "meaning": "Значение в игре: размен его"
-  },
-  "callouts-i-will-trade": {
-    "text": "я буду размен",
-    "meaning": "Значение в игре: я буду размен"
-  },
-  "callouts-nice-trade": {
-    "text": "найс размен",
-    "meaning": "Значение в игре: найс размен"
-  },
-  "callouts-bait-and-switch": {
-    "text": "байт и смена",
-    "meaning": "Значение в игре: байт и смена"
-  },
-  "callouts-crossfire": {
-    "text": "перекрестный огонь",
-    "meaning": "Значение в игре: перекрестный огонь"
-  },
-  "callouts-pinched": {
-    "text": "зажаты",
-    "meaning": "Значение в игре: зажаты"
-  },
-  "callouts-we-are-pinched": {
-    "text": "мы зажаты",
-    "meaning": "Значение в игре: мы зажаты"
-  },
-  "callouts-third-party": {
-    "text": "третья команда",
-    "meaning": "Значение в игре: третья команда"
-  },
-  "callouts-reset": {
-    "text": "сброс",
-    "meaning": "Значение в игре: сброс"
-  },
-  "callouts-regroup": {
-    "text": "перегруппировка",
-    "meaning": "Значение в игре: перегруппировка"
-  },
-  "callouts-focus-fire": {
-    "text": "фокус огонь",
-    "meaning": "Значение в игре: фокус огонь"
-  },
-  "callouts-target-marked": {
-    "text": "цель отмечена",
-    "meaning": "Значение в игре: цель отмечена"
-  },
-  "callouts-focus-healer": {
-    "text": "фокус хилер",
-    "meaning": "Значение в игре: фокус хилер"
-  },
-  "callouts-focus-sniper": {
-    "text": "фокус снайпер",
-    "meaning": "Значение в игре: фокус снайпер"
-  },
-  "callouts-ignore-tank": {
-    "text": "игнорируй танк",
-    "meaning": "Значение в игре: игнорируй танк"
-  },
-  "callouts-shield-broken": {
-    "text": "щит сломано",
-    "meaning": "Значение в игре: щит сломано"
-  },
-  "callouts-armor-cracked": {
-    "text": "броня сломана",
-    "meaning": "Значение в игре: броня сломана"
-  },
-  "callouts-one-shot": {
-    "text": "один выстрел",
-    "meaning": "Значение в игре: один выстрел"
-  },
-  "callouts-tagged-him": {
-    "text": "задел его",
-    "meaning": "Значение в игре: задел его"
-  },
-  "callouts-hit-for-fifty": {
-    "text": "попал для пятьдесят",
-    "meaning": "Значение в игре: попал для пятьдесят"
-  },
-  "callouts-hit-for-a-hundred": {
-    "text": "попал для сто",
-    "meaning": "Значение в игре: попал для сто"
-  },
-  "callouts-no-shield": {
-    "text": "нет щит",
-    "meaning": "Значение в игре: нет щит"
-  },
-  "callouts-knocked-one": {
-    "text": "нокнул один",
-    "meaning": "Значение в игре: нокнул один"
-  },
-  "callouts-finished-one": {
-    "text": "добил один",
-    "meaning": "Значение в игре: добил один"
-  },
-  "callouts-team-wipe": {
-    "text": "команда вайп команды",
-    "meaning": "Значение в игре: команда вайп команды"
-  },
-  "callouts-clean-fight": {
-    "text": "чистый бой",
-    "meaning": "Значение в игре: чистый бой"
-  },
-  "callouts-messy-fight": {
-    "text": "хаотичный бой",
-    "meaning": "Значение в игре: хаотичный бой"
-  },
-  "callouts-bad-timing": {
-    "text": "плохой тайминг",
-    "meaning": "Значение в игре: плохой тайминг"
-  },
-  "callouts-good-timing": {
-    "text": "хороший тайминг",
-    "meaning": "Значение в игре: хороший тайминг"
-  },
-  "callouts-unlucky": {
-    "text": "не повезло",
-    "meaning": "Значение в игре: не повезло"
-  },
-  "callouts-lucky-shot": {
-    "text": "удачный выстрел",
-    "meaning": "Значение в игре: удачный выстрел"
-  },
-  "callouts-clutch": {
-    "text": "клатч",
-    "meaning": "Значение в игре: клатч"
-  },
-  "callouts-ace": {
-    "text": "эйс",
-    "meaning": "Значение в игре: эйс"
-  },
-  "callouts-carry": {
-    "text": "керри",
-    "meaning": "Значение в игре: керри"
-  },
-  "callouts-throw": {
-    "text": "отдать игру",
-    "meaning": "Значение в игре: отдать игру"
-  },
-  "callouts-comeback": {
-    "text": "камбэк",
-    "meaning": "Значение в игре: камбэк"
-  },
-  "callouts-close-game": {
-    "text": "близко игра",
-    "meaning": "Значение в игре: близко игра"
-  },
-  "callouts-free-kill": {
-    "text": "легкий килл",
-    "meaning": "Значение в игре: легкий килл"
-  },
-  "callouts-free-objective": {
-    "text": "легкий цель",
-    "meaning": "Значение в игре: легкий цель"
-  },
-  "callouts-open-lane": {
-    "text": "открыт линия",
-    "meaning": "Значение в игре: открыт линия"
-  },
-  "callouts-blocked": {
-    "text": "заблокировано",
-    "meaning": "Значение в игре: заблокировано"
-  },
-  "callouts-trap-here": {
-    "text": "ловушка здесь",
-    "meaning": "Значение в игре: ловушка здесь"
-  },
-  "callouts-trap-destroyed": {
-    "text": "ловушка уничтожена",
-    "meaning": "Значение в игре: ловушка уничтожена"
-  },
-  "callouts-door-closed": {
-    "text": "дверь закрыта",
-    "meaning": "Значение в игре: дверь закрыта"
-  },
-  "callouts-door-open": {
-    "text": "дверь открыт",
-    "meaning": "Значение в игре: дверь открыт"
-  },
-  "callouts-bridge-clear": {
-    "text": "мост чисто",
-    "meaning": "Значение в игре: мост чисто"
-  },
-  "callouts-tunnel-clear": {
-    "text": "туннель чисто",
-    "meaning": "Значение в игре: туннель чисто"
-  },
-  "callouts-roof-clear": {
-    "text": "крыша чисто",
-    "meaning": "Значение в игре: крыша чисто"
-  },
-  "callouts-basement-clear": {
-    "text": "подвал чисто",
-    "meaning": "Значение в игре: подвал чисто"
-  },
-  "callouts-window": {
-    "text": "окно",
-    "meaning": "Значение в игре: окно"
-  },
-  "callouts-stairs": {
-    "text": "лестница",
-    "meaning": "Значение в игре: лестница"
-  },
-  "callouts-hallway": {
-    "text": "коридор",
-    "meaning": "Значение в игре: коридор"
-  },
-  "callouts-water": {
-    "text": "вода",
-    "meaning": "Значение в игре: вода"
-  },
-  "callouts-high-ground": {
-    "text": "высокая позиция",
-    "meaning": "Значение в игре: высокая позиция"
-  },
-  "callouts-low-ground": {
-    "text": "слабый позиция",
-    "meaning": "Значение в игре: слабый позиция"
-  },
-  "callouts-zone-closing": {
-    "text": "зона закрывается",
-    "meaning": "Значение в игре: зона закрывается"
-  },
-  "callouts-circle-moving": {
-    "text": "круг движется",
-    "meaning": "Значение в игре: круг движется"
-  },
-  "callouts-storm-coming": {
-    "text": "буря идет",
-    "meaning": "Значение в игре: буря идет"
-  },
-  "callouts-safe-zone": {
-    "text": "безопасно зона",
-    "meaning": "Значение в игре: безопасно зона"
-  },
-  "callouts-out-of-zone": {
-    "text": "нет зона",
-    "meaning": "Значение в игре: нет зона"
-  },
-  "callouts-loot-here": {
-    "text": "лут здесь",
-    "meaning": "Значение в игре: лут здесь"
-  },
-  "callouts-good-loot": {
-    "text": "хороший лут",
-    "meaning": "Значение в игре: хороший лут"
-  },
-  "callouts-need-weapon": {
-    "text": "нужна оружие",
-    "meaning": "Значение в игре: нужна оружие"
-  },
-  "callouts-need-shield": {
-    "text": "нужна щит",
-    "meaning": "Значение в игре: нужна щит"
-  },
-  "callouts-need-meds": {
-    "text": "нужна аптечки",
-    "meaning": "Значение в игре: нужна аптечки"
-  },
-  "callouts-drop-ammo": {
-    "text": "скинь патроны",
-    "meaning": "Значение в игре: скинь патроны"
-  },
-  "callouts-drop-weapon": {
-    "text": "скинь оружие",
-    "meaning": "Значение в игре: скинь оружие"
-  },
-  "callouts-take-this": {
-    "text": "возьми это",
-    "meaning": "Значение в игре: возьми это"
-  },
-  "callouts-do-not-take-it": {
-    "text": "не не возьми это",
-    "meaning": "Значение в игре: не не возьми это"
-  },
-  "callouts-i-will-take-it": {
-    "text": "я буду возьми это",
-    "meaning": "Значение в игре: я буду возьми это"
-  },
-  "callouts-use-it": {
-    "text": "используй это",
-    "meaning": "Значение в игре: используй это"
-  },
-  "callouts-save-it": {
-    "text": "сохрани это",
-    "meaning": "Значение в игре: сохрани это"
-  },
-  "callouts-voice-chat": {
-    "text": "голосовой чат",
-    "meaning": "Значение в игре: голосовой чат"
-  },
-  "callouts-text-chat": {
-    "text": "текстовый чат",
-    "meaning": "Значение в игре: текстовый чат"
-  },
-  "callouts-good-job": {
-    "text": "Хорошая работа",
-    "meaning": "Значение в игре: Хорошая работа"
-  },
-  "callouts-well-played": {
-    "text": "Хорошо сыграно",
-    "meaning": "Значение в игре: Хорошо сыграно"
-  },
-  "callouts-no-problem": {
-    "text": "Без проблем",
-    "meaning": "Значение в игре: Без проблем"
-  },
-  "callouts-last-one": {
-    "text": "последний один",
-    "meaning": "Значение в игре: последний один"
-  },
-  "callouts-i-see-him": {
-    "text": "я вижу его",
-    "meaning": "Значение в игре: я вижу его"
-  },
-  "callouts-i-see-them": {
-    "text": "я вижу их",
-    "meaning": "Значение в игре: я вижу их"
-  },
-  "callouts-on-me": {
-    "text": "на мне",
-    "meaning": "Значение в игре: на мне"
-  },
-  "callouts-with-me": {
-    "text": "с мне",
-    "meaning": "Значение в игре: с мне"
-  },
-  "callouts-low-hp": {
-    "text": "слабый HP",
-    "meaning": "Значение в игре: слабый HP"
-  },
-  "callouts-he-is-low": {
-    "text": "он слабый",
-    "meaning": "Значение в игре: он слабый"
-  },
-  "callouts-they-are-low": {
-    "text": "они слабый",
-    "meaning": "Значение в игре: они слабый"
-  },
-  "callouts-no-mic": {
-    "text": "нет микрофон",
-    "meaning": "Значение в игре: нет микрофон"
-  },
-  "callouts-mic-muted": {
-    "text": "микрофон выключен",
-    "meaning": "Значение в игре: микрофон выключен"
-  },
-  "danger-incoming": {
-    "text": "летит!",
-    "meaning": "Значение в игре: летит!"
-  },
-  "danger-grenade": {
-    "text": "граната!",
-    "meaning": "Значение в игре: граната!"
-  },
-  "danger-flash": {
-    "text": "флешка!",
-    "meaning": "Значение в игре: флешка!"
-  },
-  "danger-sniper": {
-    "text": "снайпер!",
-    "meaning": "Значение в игре: снайпер!"
-  },
-  "danger-trap": {
-    "text": "ловушка!",
-    "meaning": "Значение в игре: ловушка!"
-  },
-  "danger-mine": {
-    "text": "мина!",
-    "meaning": "Значение в игре: мина!"
-  },
-  "danger-ambush": {
-    "text": "засада!",
-    "meaning": "Значение в игре: засада!"
-  },
-  "danger-they-are-rushing": {
-    "text": "они рашат",
-    "meaning": "Значение в игре: они рашат"
-  },
-  "danger-they-are-pushing": {
-    "text": "они пушат",
-    "meaning": "Значение в игре: они пушат"
-  },
-  "danger-they-are-flanking": {
-    "text": "они флангуют",
-    "meaning": "Значение в игре: они флангуют"
-  },
-  "danger-they-know": {
-    "text": "они знают",
-    "meaning": "Значение в игре: они знают"
-  },
-  "danger-they-saw-me": {
-    "text": "они увидел мне",
-    "meaning": "Значение в игре: они увидел мне"
-  },
-  "danger-i-am-exposed": {
-    "text": "я открыт",
-    "meaning": "Значение в игре: я открыт"
-  },
-  "danger-no-cover": {
-    "text": "нет прикрой",
-    "meaning": "Значение в игре: нет прикрой"
-  },
-  "danger-low-cover": {
-    "text": "слабый прикрой",
-    "meaning": "Значение в игре: слабый прикрой"
-  },
-  "danger-bad-angle": {
-    "text": "плохой угол",
-    "meaning": "Значение в игре: плохой угол"
-  },
-  "danger-get-out": {
-    "text": "возьми нет",
-    "meaning": "Значение в игре: возьми нет"
-  },
-  "danger-back-up": {
-    "text": "сзади вверх",
-    "meaning": "Значение в игре: сзади вверх"
-  },
-  "danger-do-not-go-there": {
-    "text": "не не иди там",
-    "meaning": "Значение в игре: не не иди там"
-  },
-  "danger-it-is-a-trap": {
-    "text": "это ловушка",
-    "meaning": "Значение в игре: это ловушка"
-  },
-  "danger-enemy-ultimate-ready": {
-    "text": "враг ультимейт готов",
-    "meaning": "Значение в игре: враг ультимейт готов"
-  },
-  "danger-they-have-sniper": {
-    "text": "они есть снайпер",
-    "meaning": "Значение в игре: они есть снайпер"
-  },
-  "instructions-push": {
-    "text": "пуш",
-    "meaning": "Значение в игре: пуш"
-  },
-  "instructions-rush": {
-    "text": "раш",
-    "meaning": "Значение в игре: раш"
-  },
-  "instructions-hold": {
-    "text": "держи",
-    "meaning": "Значение в игре: держи"
-  },
-  "instructions-defend": {
-    "text": "защита",
-    "meaning": "Значение в игре: защита"
-  },
-  "instructions-attack": {
-    "text": "атака",
-    "meaning": "Значение в игре: атака"
-  },
-  "instructions-retreat": {
-    "text": "отступай",
-    "meaning": "Значение в игре: отступай"
-  },
-  "instructions-rotate": {
-    "text": "ротация",
-    "meaning": "Значение в игре: ротация"
-  },
-  "instructions-stack-here": {
-    "text": "стак здесь",
-    "meaning": "Значение в игре: стак здесь"
-  },
-  "instructions-spread-out": {
-    "text": "разойдитесь нет",
-    "meaning": "Значение в игре: разойдитесь нет"
-  },
-  "instructions-stay-together": {
-    "text": "останься вместе",
-    "meaning": "Значение в игре: останься вместе"
-  },
-  "instructions-follow-me": {
-    "text": "за мной мне",
-    "meaning": "Значение в игре: за мной мне"
-  },
-  "instructions-lead-the-way": {
-    "text": "иди первым путь",
-    "meaning": "Значение в игре: иди первым путь"
-  },
-  "instructions-go-first": {
-    "text": "иди первым",
-    "meaning": "Значение в игре: иди первым"
-  },
-  "instructions-i-go-first": {
-    "text": "я иди первым",
-    "meaning": "Значение в игре: я иди первым"
-  },
-  "instructions-wait-for-me": {
-    "text": "жди для мне",
-    "meaning": "Значение в игре: жди для мне"
-  },
-  "instructions-wait-for-cooldowns": {
-    "text": "жди для кулдауны",
-    "meaning": "Значение в игре: жди для кулдауны"
-  },
-  "instructions-use-smoke": {
-    "text": "используй дым",
-    "meaning": "Значение в игре: используй дым"
-  },
-  "instructions-use-flash": {
-    "text": "используй флешка",
-    "meaning": "Значение в игре: используй флешка"
-  },
-  "instructions-use-grenade": {
-    "text": "используй граната",
-    "meaning": "Значение в игре: используй граната"
-  },
-  "instructions-use-ultimate": {
-    "text": "используй ультимейт",
-    "meaning": "Значение в игре: используй ультимейт"
-  },
-  "instructions-save-ultimate": {
-    "text": "сохрани ультимейт",
-    "meaning": "Значение в игре: сохрани ультимейт"
-  },
-  "instructions-heal-me": {
-    "text": "полечи мне",
-    "meaning": "Значение в игре: полечи мне"
-  },
-  "instructions-revive-me": {
-    "text": "подними мне",
-    "meaning": "Значение в игре: подними мне"
-  },
-  "instructions-res-me": {
-    "text": "рес мне",
-    "meaning": "Значение в игре: рес мне"
-  },
-  "instructions-cover-the-revive": {
-    "text": "прикрой подними",
-    "meaning": "Значение в игре: прикрой подними"
-  },
-  "instructions-plant-now": {
-    "text": "ставь сейчас",
-    "meaning": "Значение в игре: ставь сейчас"
-  },
-  "instructions-defuse-now": {
-    "text": "разминируй сейчас",
-    "meaning": "Значение в игре: разминируй сейчас"
-  },
-  "instructions-capture-point": {
-    "text": "захвати точка",
-    "meaning": "Значение в игре: захвати точка"
-  },
-  "instructions-contest-point": {
-    "text": "контести точка",
-    "meaning": "Значение в игре: контести точка"
-  },
-  "instructions-touch-point": {
-    "text": "коснись точка",
-    "meaning": "Значение в игре: коснись точка"
-  },
-  "instructions-clear-corners": {
-    "text": "чисто углы",
-    "meaning": "Значение в игре: чисто углы"
-  },
-  "instructions-check-left": {
-    "text": "проверь слева",
-    "meaning": "Значение в игре: проверь слева"
-  },
-  "instructions-check-right": {
-    "text": "проверь справа",
-    "meaning": "Значение в игре: проверь справа"
-  },
-  "instructions-check-behind": {
-    "text": "проверь сзади",
-    "meaning": "Значение в игре: проверь сзади"
-  },
-  "instructions-do-not-split": {
-    "text": "не не разделитесь",
-    "meaning": "Значение в игре: не не разделитесь"
-  },
-  "instructions-do-not-feed": {
-    "text": "не не фидь",
-    "meaning": "Значение в игре: не не фидь"
-  },
-  "instructions-do-not-waste-it": {
-    "text": "не не трать это",
-    "meaning": "Значение в игре: не не трать это"
-  },
-  "instructions-stop-peeking": {
-    "text": "стоп пикает",
-    "meaning": "Значение в игре: стоп пикает"
-  },
-  "instructions-mute-him": {
-    "text": "замуть его",
-    "meaning": "Значение в игре: замуть его"
-  },
-  "instructions-report-after": {
-    "text": "репорт после",
-    "meaning": "Значение в игре: репорт после"
-  },
-  "instructions-stack-left": {
-    "text": "стак слева",
-    "meaning": "Значение в игре: стак слева"
-  },
-  "instructions-stack-right": {
-    "text": "стак справа",
-    "meaning": "Значение в игре: стак справа"
-  },
-  "objective-plant-the-bomb": {
-    "text": "ставь бомба",
-    "meaning": "Значение в игре: ставь бомба"
-  },
-  "objective-bomb-planted": {
-    "text": "бомба поставлено",
-    "meaning": "Значение в игре: бомба поставлено"
-  },
-  "objective-bomb-down": {
-    "text": "бомба недоступна",
-    "meaning": "Значение в игре: бомба недоступна"
-  },
-  "objective-spike-down": {
-    "text": "спайк недоступна",
-    "meaning": "Значение в игре: спайк недоступна"
-  },
-  "objective-defuse-the-bomb": {
-    "text": "разминируй бомба",
-    "meaning": "Значение в игре: разминируй бомба"
-  },
-  "objective-half-defuse": {
-    "text": "половина разминируй",
-    "meaning": "Значение в игре: половина разминируй"
-  },
-  "objective-stick-the-defuse": {
-    "text": "держи разминируй",
-    "meaning": "Значение в игре: держи разминируй"
-  },
-  "objective-fake-defuse": {
-    "text": "Ложное обезвреживание",
-    "meaning": "Значение в игре: Ложное обезвреживание"
-  },
-  "objective-objective-secured": {
-    "text": "цель защищено",
-    "meaning": "Значение в игре: цель защищено"
-  },
-  "objective-objective-lost": {
-    "text": "цель потерян",
-    "meaning": "Значение в игре: цель потерян"
-  },
-  "objective-point-captured": {
-    "text": "точка захвачено",
-    "meaning": "Значение в игре: точка захвачено"
-  },
-  "objective-point-contested": {
-    "text": "точка оспаривается",
-    "meaning": "Значение в игре: точка оспаривается"
-  },
-  "objective-payload-moving": {
-    "text": "груз движется",
-    "meaning": "Значение в игре: груз движется"
-  },
-  "objective-payload-stopped": {
-    "text": "груз остановлен",
-    "meaning": "Значение в игре: груз остановлен"
-  },
-  "objective-escort-the-payload": {
-    "text": "сопровождай груз",
-    "meaning": "Значение в игре: сопровождай груз"
-  },
-  "objective-stop-the-payload": {
-    "text": "стоп груз",
-    "meaning": "Значение в игре: стоп груз"
-  },
-  "objective-capture-the-flag": {
-    "text": "захвати флаг",
-    "meaning": "Значение в игре: захвати флаг"
-  },
-  "objective-return-the-flag": {
-    "text": "верни флаг",
-    "meaning": "Значение в игре: верни флаг"
-  },
-  "objective-hold-the-point": {
-    "text": "держи точка",
-    "meaning": "Значение в игре: держи точка"
-  },
-  "objective-leave-the-point": {
-    "text": "оставь точка",
-    "meaning": "Значение в игре: оставь точка"
-  },
-  "teamwork-nice-shot": {
-    "text": "найс выстрел",
-    "meaning": "Значение в игре: найс выстрел"
-  },
-  "teamwork-nice-try": {
-    "text": "найс попытка",
-    "meaning": "Значение в игре: найс попытка"
-  },
-  "teamwork-good-comms": {
-    "text": "хороший коммы",
-    "meaning": "Значение в игре: хороший коммы"
-  },
-  "teamwork-keep-comms-clear": {
-    "text": "держи коммы чисто",
-    "meaning": "Значение в игре: держи коммы чисто"
-  },
-  "teamwork-i-trust-you": {
-    "text": "я доверяю ты",
-    "meaning": "Значение в игре: я доверяю ты"
-  },
-  "teamwork-you-got-this": {
-    "text": "ты взял это",
-    "meaning": "Значение в игре: ты взял это"
-  },
-  "teamwork-stay-calm": {
-    "text": "останься спокойно",
-    "meaning": "Значение в игре: останься спокойно"
-  },
-  "teamwork-we-can-win": {
-    "text": "мы можно победа",
-    "meaning": "Значение в игре: мы можно победа"
-  },
-  "teamwork-one-round-at-a-time": {
-    "text": "один раунд на время",
-    "meaning": "Значение в игре: один раунд на время"
-  },
-  "teamwork-reset-mental": {
-    "text": "сброс ментал",
-    "meaning": "Значение в игре: сброс ментал"
-  },
-  "teamwork-good-effort": {
-    "text": "хороший усилие",
-    "meaning": "Значение в игре: хороший усилие"
-  },
-  "teamwork-great-shot": {
-    "text": "отличный выстрел",
-    "meaning": "Значение в игре: отличный выстрел"
-  },
-  "teamwork-great-save": {
-    "text": "отличный сохрани",
-    "meaning": "Значение в игре: отличный сохрани"
-  },
-  "teamwork-great-call": {
-    "text": "отличный колл",
-    "meaning": "Значение в игре: отличный колл"
-  },
-  "teamwork-nice-clutch": {
-    "text": "найс клатч",
-    "meaning": "Значение в игре: найс клатч"
-  },
-  "teamwork-nice-aim": {
-    "text": "найс аим",
-    "meaning": "Значение в игре: найс аим"
-  },
-  "teamwork-nice-movement": {
-    "text": "найс движение",
-    "meaning": "Значение в игре: найс движение"
-  },
-  "teamwork-nice-utility": {
-    "text": "найс утилити",
-    "meaning": "Значение в игре: найс утилити"
-  },
-  "teamwork-i-will-cover-you": {
-    "text": "я буду прикрой ты",
-    "meaning": "Значение в игре: я буду прикрой ты"
-  },
-  "teamwork-i-will-heal-you": {
-    "text": "я буду полечи ты",
-    "meaning": "Значение в игре: я буду полечи ты"
-  },
-  "teamwork-i-will-watch-flank": {
-    "text": "я буду смотри фланг",
-    "meaning": "Значение в игре: я буду смотри фланг"
-  },
-  "teamwork-take-my-weapon": {
-    "text": "возьми мой оружие",
-    "meaning": "Значение в игре: возьми мой оружие"
-  },
-  "teamwork-take-my-loot": {
-    "text": "возьми мой лут",
-    "meaning": "Значение в игре: возьми мой лут"
-  },
-  "teamwork-let-me-go-first": {
-    "text": "давай мне иди первым",
-    "meaning": "Значение в игре: давай мне иди первым"
-  },
-  "teamwork-i-will-bait-for-you": {
-    "text": "я буду байт для ты",
-    "meaning": "Значение в игре: я буду байт для ты"
-  },
-  "teamwork-trade-together": {
-    "text": "размен вместе",
-    "meaning": "Значение в игре: размен вместе"
-  },
-  "teamwork-wait-for-team": {
-    "text": "жди для команда",
-    "meaning": "Значение в игре: жди для команда"
-  },
-  "teamwork-we-need-everyone": {
-    "text": "мы нужна все",
-    "meaning": "Значение в игре: мы нужна все"
-  },
-  "teamwork-play-together": {
-    "text": "играй вместе",
-    "meaning": "Значение в игре: играй вместе"
-  },
-  "teamwork-do-not-blame": {
-    "text": "не не вини",
-    "meaning": "Значение в игре: не не вини"
-  },
-  "teamwork-focus-next": {
-    "text": "фокус следующий",
-    "meaning": "Значение в игре: фокус следующий"
-  },
-  "strategy-default-setup": {
-    "text": "стандартная сетап",
-    "meaning": "Значение в игре: стандартная сетап"
-  },
-  "strategy-slow-push": {
-    "text": "медленно пуш",
-    "meaning": "Значение в игре: медленно пуш"
-  },
-  "strategy-fast-push": {
-    "text": "быстро пуш",
-    "meaning": "Значение в игре: быстро пуш"
-  },
-  "strategy-fake-push": {
-    "text": "Ложная атака",
-    "meaning": "Значение в игре: Ложная атака"
-  },
-  "strategy-split-push": {
-    "text": "разделитесь пуш",
-    "meaning": "Значение в игре: разделитесь пуш"
-  },
-  "strategy-retake": {
-    "text": "ретейк",
-    "meaning": "Значение в игре: ретейк"
-  },
-  "strategy-save-round": {
-    "text": "сохрани раунд",
-    "meaning": "Значение в игре: сохрани раунд"
-  },
-  "strategy-eco-round": {
-    "text": "эко раунд",
-    "meaning": "Значение в игре: эко раунд"
-  },
-  "strategy-full-buy": {
-    "text": "вся купи",
-    "meaning": "Значение в игре: вся купи"
-  },
-  "strategy-force-buy": {
-    "text": "форс купи",
-    "meaning": "Значение в игре: форс купи"
-  },
-  "strategy-play-for-picks": {
-    "text": "играй для пики",
-    "meaning": "Значение в игре: играй для пики"
-  },
-  "strategy-play-objective": {
-    "text": "играй цель",
-    "meaning": "Значение в игре: играй цель"
-  },
-  "strategy-play-for-late-game": {
-    "text": "играй для поздний игра",
-    "meaning": "Значение в игре: играй для поздний игра"
-  },
-  "strategy-take-map-control": {
-    "text": "возьми карта контроль",
-    "meaning": "Значение в игре: возьми карта контроль"
-  },
-  "strategy-give-map-control": {
-    "text": "дай карта контроль",
-    "meaning": "Значение в игре: дай карта контроль"
-  },
-  "strategy-deny-vision": {
-    "text": "запрети видимость",
-    "meaning": "Значение в игре: запрети видимость"
-  },
-  "strategy-gather-info": {
-    "text": "собери инфа",
-    "meaning": "Значение в игре: собери инфа"
-  },
-  "strategy-bait-utility": {
-    "text": "байт утилити",
-    "meaning": "Значение в игре: байт утилити"
-  },
-  "strategy-use-utility-first": {
-    "text": "используй утилити первым",
-    "meaning": "Значение в игре: используй утилити первым"
-  },
-  "strategy-trade-setup": {
-    "text": "размен сетап",
-    "meaning": "Значение в игре: размен сетап"
-  },
-  "strategy-double-peek": {
-    "text": "двойной пикни",
-    "meaning": "Значение в игре: двойной пикни"
-  },
-  "strategy-off-angle": {
-    "text": "нестандартный угол",
-    "meaning": "Значение в игре: нестандартный угол"
-  },
-  "strategy-cross-setup": {
-    "text": "крест сетап",
-    "meaning": "Значение в игре: крест сетап"
-  },
-  "strategy-late-lurk": {
-    "text": "поздний лурк",
-    "meaning": "Значение в игре: поздний лурк"
-  },
-  "strategy-anchor-site": {
-    "text": "анкерь сайт",
-    "meaning": "Значение в игре: анкерь сайт"
-  },
-  "strategy-play-retake": {
-    "text": "играй ретейк",
-    "meaning": "Значение в игре: играй ретейк"
-  },
-  "strategy-stack-objective": {
-    "text": "стак цель",
-    "meaning": "Значение в игре: стак цель"
-  },
-  "strategy-pressure-side-lane": {
-    "text": "давление сторона линия",
-    "meaning": "Значение в игре: давление сторона линия"
-  },
-  "strategy-cut-rotation": {
-    "text": "отрежь ротация",
-    "meaning": "Значение в игре: отрежь ротация"
-  },
-  "strategy-hold-rotation": {
-    "text": "держи ротация",
-    "meaning": "Значение в игре: держи ротация"
-  },
-  "strategy-time-advantage": {
-    "text": "время преимущество",
-    "meaning": "Значение в игре: время преимущество"
-  },
-  "strategy-man-advantage": {
-    "text": "игрок преимущество",
-    "meaning": "Значение в игре: игрок преимущество"
-  },
-  "strategy-man-disadvantage": {
-    "text": "игрок недостаток",
-    "meaning": "Значение в игре: игрок недостаток"
-  },
-  "strategy-numbers-advantage": {
-    "text": "числа преимущество",
-    "meaning": "Значение в игре: числа преимущество"
-  },
-  "strategy-damage-advantage": {
-    "text": "урон преимущество",
-    "meaning": "Значение в игре: урон преимущество"
-  },
-  "strategy-ultimate-advantage": {
-    "text": "ультимейт преимущество",
-    "meaning": "Значение в игре: ультимейт преимущество"
-  },
-  "strategy-economy-advantage": {
-    "text": "экономика преимущество",
-    "meaning": "Значение в игре: экономика преимущество"
-  },
-  "strategy-do-not-overcommit": {
-    "text": "не не перекоммит",
-    "meaning": "Значение в игре: не не перекоммит"
-  },
-  "strategy-commit-now": {
-    "text": "коммить сейчас",
-    "meaning": "Значение в игре: коммить сейчас"
-  },
-  "strategy-cancel-the-push": {
-    "text": "отмена пуш",
-    "meaning": "Значение в игре: отмена пуш"
-  },
-  "economy-buy": {
-    "text": "купи",
-    "meaning": "Значение в игре: купи"
-  },
-  "economy-save": {
-    "text": "сохрани",
-    "meaning": "Значение в игре: сохрани"
-  },
-  "economy-drop-me": {
-    "text": "скинь мне",
-    "meaning": "Значение в игре: скинь мне"
-  },
-  "economy-i-can-drop": {
-    "text": "я можно скинь",
-    "meaning": "Значение в игре: я можно скинь"
-  },
-  "economy-need-a-drop": {
-    "text": "нужна скинь",
-    "meaning": "Значение в игре: нужна скинь"
-  },
-  "economy-full-save": {
-    "text": "вся сохрани",
-    "meaning": "Значение в игре: вся сохрани"
-  },
-  "economy-light-buy": {
-    "text": "легкий купи",
-    "meaning": "Значение в игре: легкий купи"
-  },
-  "economy-half-buy": {
-    "text": "половина купи",
-    "meaning": "Значение в игре: половина купи"
-  },
-  "economy-full-armor": {
-    "text": "вся броня",
-    "meaning": "Значение в игре: вся броня"
-  },
-  "economy-no-armor": {
-    "text": "нет броня",
-    "meaning": "Значение в игре: нет броня"
-  },
-  "economy-upgrade-weapon": {
-    "text": "улучшить оружие",
-    "meaning": "Значение в игре: улучшить оружие"
-  },
-  "economy-keep-weapon": {
-    "text": "держи оружие",
-    "meaning": "Значение в игре: держи оружие"
-  },
-  "economy-pick-up-gun": {
-    "text": "пик вверх пушка",
-    "meaning": "Значение в игре: пик вверх пушка"
-  },
-  "economy-save-the-gun": {
-    "text": "сохрани пушка",
-    "meaning": "Значение в игре: сохрани пушка"
-  },
-  "economy-we-are-broke": {
-    "text": "мы без денег",
-    "meaning": "Значение в игре: мы без денег"
-  },
-  "economy-they-are-broke": {
-    "text": "они без денег",
-    "meaning": "Значение в игре: они без денег"
-  },
-  "economy-they-have-money": {
-    "text": "они есть деньги",
-    "meaning": "Значение в игре: они есть деньги"
-  },
-  "economy-we-can-buy-next": {
-    "text": "мы можно купи следующий",
-    "meaning": "Значение в игре: мы можно купи следующий"
-  },
-  "economy-do-not-force": {
-    "text": "не не форс",
-    "meaning": "Значение в игре: не не форс"
-  },
-  "economy-force-together": {
-    "text": "форс вместе",
-    "meaning": "Значение в игре: форс вместе"
-  },
-  "slang-afk": {
-    "text": "AFK",
-    "meaning": "Значение в игре: AFK"
-  },
-  "slang-brb": {
-    "text": "BRB",
-    "meaning": "Значение в игре: BRB"
-  },
-  "slang-op": {
-    "text": "OP",
-    "meaning": "Значение в игре: OP"
-  },
-  "slang-nerf": {
-    "text": "нерф",
-    "meaning": "Значение в игре: нерф"
-  },
-  "slang-buff": {
-    "text": "бафф",
-    "meaning": "Значение в игре: бафф"
-  },
-  "slang-meta": {
-    "text": "мета",
-    "meaning": "Значение в игре: мета"
-  },
-  "slang-main": {
-    "text": "мейн",
-    "meaning": "Значение в игре: мейн"
-  },
-  "slang-alt": {
-    "text": "альт",
-    "meaning": "Значение в игре: альт"
-  },
-  "slang-smurf": {
-    "text": "смурф",
-    "meaning": "Значение в игре: смурф"
-  },
-  "slang-noob": {
-    "text": "нуб",
-    "meaning": "Значение в игре: нуб"
-  },
-  "slang-camper": {
-    "text": "кемпер",
-    "meaning": "Значение в игре: кемпер"
-  },
-  "slang-sweat": {
-    "text": "потный игрок",
-    "meaning": "Значение в игре: потный игрок"
-  },
-  "slang-tryhard": {
-    "text": "трайхард",
-    "meaning": "Значение в игре: трайхард"
-  },
-  "slang-clutch-or-kick": {
-    "text": "клатч или кик",
-    "meaning": "Значение в игре: клатч или кик"
-  },
-  "slang-diff": {
-    "text": "дифф",
-    "meaning": "Значение в игре: дифф"
-  },
-  "slang-gap": {
-    "text": "разрыв",
-    "meaning": "Значение в игре: разрыв"
-  },
-  "slang-tilt": {
-    "text": "тильт",
-    "meaning": "Значение в игре: тильт"
-  },
-  "slang-rage-quit": {
-    "text": "рейдж выйти",
-    "meaning": "Значение в игре: рейдж выйти"
-  },
-  "slang-spawn-camp": {
-    "text": "спавн кемп",
-    "meaning": "Значение в игре: спавн кемп"
-  },
-  "slang-spawn-kill": {
-    "text": "спавн килл",
-    "meaning": "Значение в игре: спавн килл"
-  },
-  "slang-hitbox": {
-    "text": "хитбокс",
-    "meaning": "Значение в игре: хитбокс"
-  },
-  "slang-lag": {
-    "text": "лаг",
-    "meaning": "Значение в игре: лаг"
-  },
-  "slang-ping": {
-    "text": "пинг",
-    "meaning": "Значение в игре: пинг"
-  },
-  "slang-fps": {
-    "text": "FPS",
-    "meaning": "Значение в игре: FPS"
-  },
-  "slang-dps": {
-    "text": "DPS",
-    "meaning": "Значение в игре: DPS"
-  },
-  "slang-aoe": {
-    "text": "AOE",
-    "meaning": "Значение в игре: AOE"
-  },
-  "slang-cc": {
-    "text": "CC",
-    "meaning": "Значение в игре: CC"
-  },
-  "slang-gg-ez": {
-    "text": "GG EZ",
-    "meaning": "Значение в игре: GG EZ"
-  },
-  "slang-wp": {
-    "text": "WP",
-    "meaning": "Значение в игре: WP"
-  },
-  "slang-nt": {
-    "text": "NT",
-    "meaning": "Значение в игре: NT"
+    "text": "GG",
+    "meaning": "Хорошая игра; обычно говорят в конце матча."
   },
   "slang-ggwp": {
     "text": "GGWP",
-    "meaning": "Значение в игре: GGWP"
+    "meaning": "Хорошая игра, хорошо сыграно."
   },
-  "slang-lag-spike": {
-    "text": "лаг спайк",
-    "meaning": "Значение в игре: лаг спайк"
+  "callouts-glhf": {
+    "text": "GLHF",
+    "meaning": "Удачи и приятной игры; дружелюбное сообщение перед началом матча."
   },
-  "slang-ranked": {
-    "text": "ранкед",
-    "meaning": "Значение в игре: ранкед"
+  "slang-wp": {
+    "text": "WP",
+    "meaning": "Хорошо сыграно."
   },
-  "slang-casual": {
-    "text": "казуальный",
-    "meaning": "Значение в игре: казуальный"
+  "slang-nt": {
+    "text": "NT",
+    "meaning": "Хорошая попытка."
+  },
+  "callouts-nice": {
+    "text": "Найс!",
+    "meaning": "Короткая похвала после хорошего действия."
+  },
+  "teamwork-nice-try": {
+    "text": "Хорошая попытка",
+    "meaning": "Поддерживающая фраза после неудачной попытки."
+  },
+  "teamwork-nice-shot": {
+    "text": "Найс шот",
+    "meaning": "Похвала за хороший выстрел."
+  },
+  "callouts-thanks": {
+    "text": "Спасибо",
+    "meaning": "Короткая благодарность тиммейту."
+  },
+  "callouts-sorry": {
+    "text": "Сорри",
+    "meaning": "Извинение после ошибки или случайного урона по союзнику."
+  },
+  "callouts-my-bad": {
+    "text": "Мой косяк",
+    "meaning": "Игрок признаёт, что ошибка была его."
+  },
+  "callouts-good-job": {
+    "text": "Хорошая работа",
+    "meaning": "Положительный отзыв после полезного действия или раунда."
+  },
+  "teamwork-good-comms": {
+    "text": "Хорошая инфа",
+    "meaning": "Командная коммуникация была полезной."
+  },
+  "slang-afk": {
+    "text": "AFK",
+    "meaning": "Отошёл от клавиатуры; игрок сейчас не активен."
+  },
+  "slang-brb": {
+    "text": "BRB",
+    "meaning": "Сейчас вернусь."
+  },
+  "slang-dc": {
+    "text": "DC",
+    "meaning": "Дисконнект; потеря соединения с матчем."
   },
   "slang-disconnect": {
-    "text": "дисконнект",
-    "meaning": "Значение в игре: дисконнект"
+    "text": "Дисконнект",
+    "meaning": "Игрок теряет соединение с матчем."
   },
   "slang-reconnect": {
-    "text": "реконнект",
-    "meaning": "Значение в игре: реконнект"
+    "text": "Реконнект",
+    "meaning": "Игрок возвращается после потери соединения."
+  },
+  "slang-lag": {
+    "text": "Лаг",
+    "meaning": "Задержка, фризы или проблемы с сетью."
+  },
+  "slang-lag-spike": {
+    "text": "Лаг-спайк",
+    "meaning": "Внезапный короткий скачок задержки."
+  },
+  "slang-ping": {
+    "text": "Пинг",
+    "meaning": "Метка на карте или задержка сети, в зависимости от контекста."
+  },
+  "slang-fps": {
+    "text": "FPS",
+    "meaning": "Шутер от первого лица или количество кадров в секунду, когда говорят о производительности."
+  },
+  "slang-server": {
+    "text": "Сервер",
+    "meaning": "Онлайн-система или регион, где проходит матч."
+  },
+  "slang-hit-reg": {
+    "text": "Хитрег",
+    "meaning": "Регистрация попаданий; корректно ли игра засчитывает выстрел или атаку как попадание."
+  },
+  "slang-desync": {
+    "text": "Десинк",
+    "meaning": "Ситуация, когда картинка у игроков не совпадает с сервером или друг с другом."
+  },
+  "slang-op": {
+    "text": "OP",
+    "meaning": "Слишком сильный; заметно сильнее остальных вариантов."
+  },
+  "slang-meta": {
+    "text": "Мета",
+    "meaning": "Самая эффективная или популярная стратегия, персонаж, оружие или билд на данный момент."
+  },
+  "slang-nerf": {
+    "text": "Нерф",
+    "meaning": "Ослабить что-то через обновление игры."
+  },
+  "slang-buff": {
+    "text": "Бафф",
+    "meaning": "Усилить что-то через обновление игры."
+  },
+  "slang-noob": {
+    "text": "Нуб",
+    "meaning": "Новый или неопытный игрок; может звучать оскорбительно."
+  },
+  "slang-pro": {
+    "text": "Про",
+    "meaning": "Очень сильный игрок или игрок профессионального уровня."
+  },
+  "slang-bot": {
+    "text": "Бот",
+    "meaning": "Персонаж под управлением ИИ или оскорбление для игрока, который играет плохо."
+  },
+  "slang-smurf": {
+    "text": "Смурф",
+    "meaning": "Сильный игрок, играющий на аккаунте низкого ранга."
+  },
+  "slang-camper": {
+    "text": "Кемпер",
+    "meaning": "Игрок, который сидит в одной точке и ждёт фраги."
+  },
+  "slang-tryhard": {
+    "text": "Трайхард",
+    "meaning": "Игрок, который слишком серьёзно старается выиграть; иногда используется как оскорбление."
+  },
+  "slang-sweat": {
+    "text": "Потный",
+    "meaning": "Игрок, который очень сильно старается победить."
+  },
+  "slang-tilt": {
+    "text": "Тильт",
+    "meaning": "Раздражение, из-за которого игрок начинает играть хуже."
+  },
+  "slang-toxic": {
+    "text": "Токсик",
+    "meaning": "Грубое, оскорбительное или вредное поведение в чате или игре."
+  },
+  "slang-salty": {
+    "text": "Солёный",
+    "meaning": "Злой или обиженный после поражения или переигрыша."
+  },
+  "slang-rage-quit": {
+    "text": "Рейдж-квит",
+    "meaning": "Выйти из игры из-за злости."
+  },
+  "slang-pvp": {
+    "text": "PvP",
+    "meaning": "Игрок против игрока; режим, где игроки сражаются с другими игроками."
+  },
+  "slang-pve": {
+    "text": "PvE",
+    "meaning": "Игрок против окружения; игра против ИИ-врагов или игровых систем."
+  },
+  "slang-ranked": {
+    "text": "Ранкед",
+    "meaning": "Соревновательный режим, который влияет на ранг."
+  },
+  "slang-casual": {
+    "text": "Казуал",
+    "meaning": "Неранговый режим для более спокойной игры."
+  },
+  "slang-mmr": {
+    "text": "MMR",
+    "meaning": "Рейтинг подбора игроков; скрытая или видимая оценка навыка для более честных матчей."
+  },
+  "slang-elo": {
+    "text": "Эло",
+    "meaning": "Рейтинговая система или общее слово для соревновательного рейтинга."
+  },
+  "slang-kd": {
+    "text": "K/D",
+    "meaning": "Соотношение убийств и смертей."
+  },
+  "slang-kda": {
+    "text": "KDA",
+    "meaning": "Убийства, смерти и ассисты; распространённая статистика эффективности."
+  },
+  "slang-mvp": {
+    "text": "MVP",
+    "meaning": "Самый ценный игрок; игрок с наибольшим вкладом."
+  },
+  "slang-rng": {
+    "text": "RNG",
+    "meaning": "Генерация случайных чисел; элементы игры, зависящие от удачи."
+  },
+  "slang-xp": {
+    "text": "XP",
+    "meaning": "Очки опыта для прокачки персонажа, аккаунта или боевого пропуска."
+  },
+  "slang-level-up": {
+    "text": "Левел ап",
+    "meaning": "Получить уровень или стать сильнее через прогресс и опыт."
+  },
+  "slang-grind": {
+    "text": "Гринд",
+    "meaning": "Повторять матчи или задания ради наград, ранга или прогресса."
+  },
+  "slang-farm": {
+    "text": "Фарм",
+    "meaning": "Многократно собирать ресурсы, золото, опыт или лёгкие убийства."
+  },
+  "slang-main": {
+    "text": "Мейн",
+    "meaning": "Персонаж, роль или оружие, которым игрок пользуется чаще всего."
+  },
+  "slang-alt": {
+    "text": "Альт",
+    "meaning": "Второй аккаунт или альтернативный персонаж."
+  },
+  "slang-party": {
+    "text": "Пати",
+    "meaning": "Группа игроков, которые встают в очередь вместе."
+  },
+  "slang-squad": {
+    "text": "Сквад",
+    "meaning": "Небольшая команда игроков, действующих вместе."
+  },
+  "slang-lobby": {
+    "text": "Лобби",
+    "meaning": "Зона перед матчем или группа игроков в матче."
+  },
+  "slang-queue": {
+    "text": "Очередь",
+    "meaning": "Ожидание подбора игры в матчмейкинге."
+  },
+  "slang-matchmaking": {
+    "text": "Матчмейкинг",
+    "meaning": "Система, которая находит и балансирует игроков для матча."
+  },
+  "slang-solo-queue": {
+    "text": "Соло-кью",
+    "meaning": "Игра в матчмейкинге одному, без заранее собранной команды."
+  },
+  "slang-duo": {
+    "text": "Дуо",
+    "meaning": "Два игрока, играющие вместе парой."
+  },
+  "slang-stack": {
+    "text": "Стак",
+    "meaning": "Заранее собранная группа игроков в очереди, часто полный состав."
+  },
+  "slang-comms": {
+    "text": "Коммы",
+    "meaning": "Командная коммуникация через голос, текстовый чат или пинги."
+  },
+  "callouts-voice-chat": {
+    "text": "Голосовой чат",
+    "meaning": "Общение через микрофон."
+  },
+  "callouts-text-chat": {
+    "text": "Текстовый чат",
+    "meaning": "Общение через набранные текстовые сообщения."
+  },
+  "callouts-no-mic": {
+    "text": "Без микро",
+    "meaning": "Игрок не может использовать микрофон."
+  },
+  "callouts-mic-muted": {
+    "text": "Микрофон выключен",
+    "meaning": "Микрофон заглушен или отключён."
+  },
+  "slang-dps": {
+    "text": "DPS",
+    "meaning": "Урон в секунду или роль, сфокусированная на нанесении урона."
+  },
+  "slang-tank": {
+    "text": "Танк",
+    "meaning": "Живучая роль, которая впитывает урон и защищает тиммейтов."
+  },
+  "slang-support": {
+    "text": "Саппорт",
+    "meaning": "Роль, которая лечит, даёт утилити, баффы или помогает команде."
+  },
+  "slang-healer": {
+    "text": "Хилер",
+    "meaning": "Саппорт, который в основном восстанавливает здоровье союзников."
+  },
+  "slang-aoe": {
+    "text": "AOE",
+    "meaning": "Область действия; урон или способность, влияющая на зону."
+  },
+  "slang-cc": {
+    "text": "CC",
+    "meaning": "Контроль; способности, которые станят, замедляют или отключают врагов."
+  },
+  "slang-ult": {
+    "text": "Ульта",
+    "meaning": "Сокращение от ultimate; самая сильная способность персонажа."
+  },
+  "callouts-ultimate-ready": {
+    "text": "Ульта готова",
+    "meaning": "Ультимативная способность игрока готова."
+  },
+  "callouts-no-ultimate": {
+    "text": "Ульты нет",
+    "meaning": "У игрока или врага нет доступной ультимативной способности."
+  },
+  "callouts-ability-ready": {
+    "text": "Способность готова",
+    "meaning": "Полезная способность доступна."
+  },
+  "callouts-ability-down": {
+    "text": "Способность в кд",
+    "meaning": "Ключевая способность недоступна или находится на перезарядке."
+  },
+  "callouts-cooldown": {
+    "text": "Кулдаун",
+    "meaning": "Способность пока нельзя использовать."
+  },
+  "callouts-enemy-spotted": {
+    "text": "Враг замечен",
+    "meaning": "Враг был замечен."
+  },
+  "callouts-enemy-here": {
+    "text": "Враг здесь",
+    "meaning": "Враг находится рядом с говорящим."
+  },
+  "callouts-enemy-there": {
+    "text": "Враг там",
+    "meaning": "Враг находится на отмеченной или обсуждаемой позиции."
+  },
+  "callouts-on-me": {
+    "text": "На мне",
+    "meaning": "Враг или действие рядом с говорящим."
+  },
+  "callouts-i-see-him": {
+    "text": "Я его вижу",
+    "meaning": "Говорящий визуально видит врага."
+  },
+  "callouts-i-see-them": {
+    "text": "Я их вижу",
+    "meaning": "Говорящий визуально видит одного или нескольких врагов."
+  },
+  "callouts-one-more": {
+    "text": "Ещё один",
+    "meaning": "Рядом ещё один враг или нужно ещё одно действие."
+  },
+  "callouts-last-one": {
+    "text": "Последний",
+    "meaning": "Остался только один враг."
+  },
+  "callouts-two-enemies-here": {
+    "text": "Двое здесь",
+    "meaning": "Два врага находятся рядом с говорящим."
+  },
+  "callouts-three-enemies-here": {
+    "text": "Трое здесь",
+    "meaning": "Три врага находятся рядом с говорящим."
+  },
+  "callouts-full-team-here": {
+    "text": "Вся команда здесь",
+    "meaning": "Большая часть или вся вражеская команда собралась в этой зоне."
+  },
+  "callouts-enemy-missing": {
+    "text": "Враг пропал",
+    "meaning": "Враг больше не виден и может ротироваться."
+  },
+  "callouts-all-missing": {
+    "text": "Все пропали",
+    "meaning": "Сейчас не видно ни одного врага."
+  },
+  "callouts-behind-you": {
+    "text": "Сзади!",
+    "meaning": "Враг прямо за тиммейтом."
+  },
+  "callouts-left-side": {
+    "text": "Слева!",
+    "meaning": "Давление врага идёт слева."
+  },
+  "callouts-right-side": {
+    "text": "Справа!",
+    "meaning": "Давление врага идёт справа."
+  },
+  "callouts-above-us": {
+    "text": "Над нами",
+    "meaning": "Враг на хайграунде над командой."
+  },
+  "callouts-below-us": {
+    "text": "Под нами",
+    "meaning": "Враг ниже позиции команды."
+  },
+  "callouts-in-front": {
+    "text": "Спереди",
+    "meaning": "Угроза прямо впереди."
+  },
+  "callouts-mid": {
+    "text": "Мид",
+    "meaning": "Враг или действие в центральной линии."
+  },
+  "callouts-top-mid": {
+    "text": "Топ мид",
+    "meaning": "Враг на верхней центральной позиции."
+  },
+  "callouts-bottom-mid": {
+    "text": "Нижний мид",
+    "meaning": "Враг на нижней центральной позиции."
+  },
+  "callouts-spawn": {
+    "text": "Спавн",
+    "meaning": "Враг или команда рядом со спавном."
+  },
+  "callouts-our-spawn": {
+    "text": "Наш спавн",
+    "meaning": "Действие происходит рядом с нашей стартовой зоной."
+  },
+  "callouts-their-spawn": {
+    "text": "Их спавн",
+    "meaning": "Действие происходит рядом со стартовой зоной врага."
+  },
+  "callouts-flank": {
+    "text": "Фланг",
+    "meaning": "Враг атакует сбоку или сзади."
+  },
+  "callouts-watch-flank": {
+    "text": "Смотрите фланг",
+    "meaning": "Кто-то должен проверить врагов за спиной команды."
+  },
+  "danger-incoming": {
+    "text": "Летит!",
+    "meaning": "Угроза или атака приближается прямо сейчас."
+  },
+  "danger-grenade": {
+    "text": "Граната!",
+    "meaning": "Граната рядом."
+  },
+  "danger-flash": {
+    "text": "Флешка!",
+    "meaning": "Приближается флешка или ослепляющий эффект."
+  },
+  "danger-sniper": {
+    "text": "Снайпер!",
+    "meaning": "Снайпер контролирует или угрожает зоне."
+  },
+  "danger-trap": {
+    "text": "Ловушка!",
+    "meaning": "Рядом есть ловушка."
+  },
+  "danger-mine": {
+    "text": "Мина!",
+    "meaning": "Рядом есть взрывная мина."
+  },
+  "danger-ambush": {
+    "text": "Засада!",
+    "meaning": "Враги ждут, чтобы застать команду врасплох."
+  },
+  "danger-they-are-rushing": {
+    "text": "Они рашат",
+    "meaning": "Враги атакуют очень быстро."
+  },
+  "danger-they-are-pushing": {
+    "text": "Они пушат",
+    "meaning": "Враги агрессивно продвигаются вперёд."
+  },
+  "danger-they-are-flanking": {
+    "text": "Они флангуют",
+    "meaning": "Враги атакуют сзади или сбоку."
+  },
+  "danger-they-know": {
+    "text": "Они знают",
+    "meaning": "Враги знают вашу позицию или план."
+  },
+  "danger-they-saw-me": {
+    "text": "Они меня увидели",
+    "meaning": "Говорящего заметили."
+  },
+  "danger-i-am-exposed": {
+    "text": "Я открыт",
+    "meaning": "Говорящий находится в опасной видимой позиции."
+  },
+  "danger-no-cover": {
+    "text": "Нет укрытия",
+    "meaning": "Негде безопасно спрятаться."
+  },
+  "danger-bad-angle": {
+    "text": "Плохой угол",
+    "meaning": "Текущий угол опасный или невыгодный."
+  },
+  "danger-get-out": {
+    "text": "Уходи",
+    "meaning": "Немедленно покинь опасную зону."
+  },
+  "danger-back-up": {
+    "text": "Назад",
+    "meaning": "Отойди от опасности."
+  },
+  "callouts-i-am-down": {
+    "text": "Я упал",
+    "meaning": "Говорящий нокнут, убит или не может продолжать бой."
+  },
+  "callouts-i-am-low": {
+    "text": "Я лоу",
+    "meaning": "У говорящего мало здоровья, нужна осторожность или помощь."
+  },
+  "callouts-low-hp": {
+    "text": "Лоу HP",
+    "meaning": "У врага или союзника мало здоровья."
+  },
+  "callouts-he-is-low": {
+    "text": "Он лоу",
+    "meaning": "Враг мужского рода слабый, его можно добить."
+  },
+  "callouts-they-are-low": {
+    "text": "Они лоу",
+    "meaning": "Один или несколько врагов слабые, их можно добить."
+  },
+  "callouts-one-shot": {
+    "text": "Ваншот",
+    "meaning": "Врагу нужен всего один удар или выстрел до смерти."
+  },
+  "callouts-armor-cracked": {
+    "text": "Броня сломана",
+    "meaning": "Броня врага сломана или очень слабая."
+  },
+  "callouts-shield-broken": {
+    "text": "Щит сломан",
+    "meaning": "Вражеский щит или броня уничтожены."
+  },
+  "callouts-no-shield": {
+    "text": "Без щита",
+    "meaning": "У врага больше нет щита или брони."
+  },
+  "callouts-tagged-him": {
+    "text": "Дал урон",
+    "meaning": "Говорящий нанёс врагу урон."
+  },
+  "callouts-hit-for-fifty": {
+    "text": "Минус пятьдесят",
+    "meaning": "Враг получил примерно пятьдесят урона."
+  },
+  "callouts-hit-for-a-hundred": {
+    "text": "Минус сто",
+    "meaning": "Враг получил примерно сто урона."
+  },
+  "callouts-knocked-one": {
+    "text": "Одного нокнул",
+    "meaning": "Один враг был повален."
+  },
+  "callouts-finished-one": {
+    "text": "Одного добил",
+    "meaning": "Поваленный враг был устранён."
+  },
+  "callouts-team-wipe": {
+    "text": "Тимвайп",
+    "meaning": "Вся вражеская команда уничтожена."
+  },
+  "instructions-push": {
+    "text": "Пуш",
+    "meaning": "Атаковать или продвигаться вперёд."
+  },
+  "instructions-rush": {
+    "text": "Раш",
+    "meaning": "Атаковать очень быстро."
+  },
+  "instructions-hold": {
+    "text": "Холд",
+    "meaning": "Оставаться на позиции."
+  },
+  "instructions-defend": {
+    "text": "Дефать",
+    "meaning": "Защищать сайт или зону."
+  },
+  "instructions-attack": {
+    "text": "Атакуем",
+    "meaning": "Начать давление в атаке."
+  },
+  "instructions-retreat": {
+    "text": "Отступаем",
+    "meaning": "Отойти в безопасную позицию."
+  },
+  "instructions-rotate": {
+    "text": "Ротируемся",
+    "meaning": "Перейти на другую линию или цель."
+  },
+  "callouts-rotating": {
+    "text": "Ротируются",
+    "meaning": "Враги перемещаются в другую зону."
+  },
+  "callouts-they-rotated": {
+    "text": "Они ротировались",
+    "meaning": "Вражеская команда ушла на другой сайт или линию."
+  },
+  "callouts-fake-rotate": {
+    "text": "Фейк ротации",
+    "meaning": "Враг может притворяться, что ротируется."
+  },
+  "callouts-push-now": {
+    "text": "Пуш сейчас",
+    "meaning": "Атаковать немедленно."
+  },
+  "callouts-go-now": {
+    "text": "Го сейчас",
+    "meaning": "Действовать немедленно."
+  },
+  "callouts-fall-back": {
+    "text": "Отходим",
+    "meaning": "Отступить на более безопасную позицию."
+  },
+  "callouts-group-up": {
+    "text": "Соберитесь",
+    "meaning": "Собраться вместе перед следующим действием."
+  },
+  "callouts-regroup": {
+    "text": "Регруп",
+    "meaning": "Собраться вместе после драки или ротации."
+  },
+  "callouts-need-help": {
+    "text": "Нужна помощь",
+    "meaning": "Говорящий под давлением и нуждается в помощи."
+  },
+  "callouts-help-me": {
+    "text": "Помогите",
+    "meaning": "Говорящему нужна немедленная помощь."
+  },
+  "callouts-need-backup": {
+    "text": "Нужен бэкап",
+    "meaning": "Говорящему нужна поддержка тиммейтов."
+  },
+  "callouts-i-need-healing": {
+    "text": "Нужен хил",
+    "meaning": "Говорящий хочет лечение или поддержку хилом."
+  },
+  "instructions-heal-me": {
+    "text": "Похилите меня",
+    "meaning": "Использовать лечение или хилящий предмет на говорящем."
+  },
+  "instructions-revive-me": {
+    "text": "Поднимите меня",
+    "meaning": "Вернуть говорящего после нока или смерти."
+  },
+  "instructions-res-me": {
+    "text": "Ресните меня",
+    "meaning": "Коротко: revive или resurrect me; поднять или воскресить говорящего."
+  },
+  "instructions-cover-the-revive": {
+    "text": "Прикройте рес",
+    "meaning": "Защитить игрока, который поднимает союзника."
+  },
+  "callouts-need-ammo": {
+    "text": "Нужны патроны",
+    "meaning": "У говорящего мало боеприпасов."
+  },
+  "callouts-out-of-ammo": {
+    "text": "Нет патронов",
+    "meaning": "Говорящий не может стрелять, пока не перезарядится или не получит патроны."
+  },
+  "callouts-reloading": {
+    "text": "Перезаряжаюсь",
+    "meaning": "Говорящий перезаряжается и не может безопасно сражаться."
+  },
+  "callouts-cover-me": {
+    "text": "Прикройте меня",
+    "meaning": "Защитите говорящего, пока он двигается, перезаряжается или выполняет цель."
+  },
+  "callouts-i-got-you": {
+    "text": "Я прикрою",
+    "meaning": "Говорящий поддержит или защитит тиммейта."
+  },
+  "callouts-ping-it": {
+    "text": "Запингуй",
+    "meaning": "Отметь эту позицию, предмет, врага или цель на карте."
+  },
+  "callouts-mark-the-enemy": {
+    "text": "Отметь врага",
+    "meaning": "Поставь пинг или маркер на врага."
+  },
+  "callouts-i-marked-it": {
+    "text": "Я отметил",
+    "meaning": "Говорящий поставил маркер."
+  },
+  "callouts-check-map": {
+    "text": "Смотрите карту",
+    "meaning": "Посмотрите на миникарту или тактическую карту."
+  },
+  "callouts-look-at-ping": {
+    "text": "Смотрите пинг",
+    "meaning": "Обратите внимание на поставленную метку."
+  },
+  "instructions-follow-me": {
+    "text": "За мной",
+    "meaning": "Двигайтесь вместе с говорящим."
+  },
+  "instructions-stay-together": {
+    "text": "Держимся вместе",
+    "meaning": "Оставайтесь рядом с тиммейтами."
+  },
+  "instructions-spread-out": {
+    "text": "Разойдитесь",
+    "meaning": "Не стойте слишком близко друг к другу."
+  },
+  "instructions-wait-for-me": {
+    "text": "Подождите меня",
+    "meaning": "Отложить действие, пока говорящий не подойдёт."
+  },
+  "instructions-wait-for-cooldowns": {
+    "text": "Ждём кулдауны",
+    "meaning": "Не драться, пока способности не будут готовы."
+  },
+  "objective-plant-the-bomb": {
+    "text": "Ставь бомбу",
+    "meaning": "Поставить бомбу или spike на объекте."
+  },
+  "objective-bomb-planted": {
+    "text": "Бомба поставлена",
+    "meaning": "Бомба или spike установлены."
+  },
+  "objective-bomb-down": {
+    "text": "Бомба упала",
+    "meaning": "Носитель бомбы уронил предмет цели."
+  },
+  "objective-spike-down": {
+    "text": "Spike упал",
+    "meaning": "Spike был уронен."
+  },
+  "objective-defuse-the-bomb": {
+    "text": "Дефьюз бомбы",
+    "meaning": "Обезвредить установленную бомбу до взрыва."
+  },
+  "objective-half-defuse": {
+    "text": "Половина дефьюза",
+    "meaning": "Довести дефьюз до середины."
+  },
+  "objective-stick-the-defuse": {
+    "text": "Держи дефьюз",
+    "meaning": "Продолжать обезвреживание даже под давлением."
+  },
+  "objective-fake-defuse": {
+    "text": "Фейк дефьюза",
+    "meaning": "Коснуться дефьюза, чтобы заставить врагов пикнуть."
+  },
+  "objective-objective-secured": {
+    "text": "Цель взята",
+    "meaning": "Команда взяла или защитила цель."
+  },
+  "objective-objective-lost": {
+    "text": "Цель потеряна",
+    "meaning": "Враг захватил цель."
+  },
+  "objective-point-captured": {
+    "text": "Точка захвачена",
+    "meaning": "Точка захвата теперь под контролем."
+  },
+  "objective-point-contested": {
+    "text": "Точка спорная",
+    "meaning": "Обе команды дерутся за точку."
+  },
+  "objective-payload-moving": {
+    "text": "Пейлоад движется",
+    "meaning": "Сопровождаемая цель продвигается."
+  },
+  "objective-payload-stopped": {
+    "text": "Пейлоад остановлен",
+    "meaning": "Сопровождаемая цель не движется."
+  },
+  "slang-loot": {
+    "text": "Лут",
+    "meaning": "Полезные предметы, оружие, ресурсы или награды, найденные или полученные в игре."
+  },
+  "callouts-loot-here": {
+    "text": "Лут здесь",
+    "meaning": "Полезные предметы находятся в этой точке."
+  },
+  "callouts-good-loot": {
+    "text": "Хороший лут",
+    "meaning": "В этой зоне есть ценные предметы."
+  },
+  "callouts-need-weapon": {
+    "text": "Нужно оружие",
+    "meaning": "Говорящему нужно рабочее оружие."
+  },
+  "callouts-need-shield": {
+    "text": "Нужен щит",
+    "meaning": "Говорящему нужна броня или предметы для щита."
+  },
+  "callouts-need-meds": {
+    "text": "Нужны хилки",
+    "meaning": "Говорящему нужны лечебные предметы."
+  },
+  "callouts-drop-ammo": {
+    "text": "Дропни патроны",
+    "meaning": "Дай патроны тиммейту."
+  },
+  "callouts-drop-weapon": {
+    "text": "Дропни оружие",
+    "meaning": "Дай оружие тиммейту."
+  },
+  "callouts-take-this": {
+    "text": "Возьми это",
+    "meaning": "Тиммейт должен подобрать предложенный предмет."
+  },
+  "callouts-do-not-take-it": {
+    "text": "Не бери",
+    "meaning": "Оставь предмет для кого-то другого."
+  },
+  "callouts-i-will-take-it": {
+    "text": "Я возьму",
+    "meaning": "Говорящий хочет подобрать предмет."
+  },
+  "callouts-use-it": {
+    "text": "Используй",
+    "meaning": "Активируй или потрать предмет или способность."
+  },
+  "callouts-save-it": {
+    "text": "Сохрани",
+    "meaning": "Пока не используй предмет или способность."
+  },
+  "strategy-default-setup": {
+    "text": "Дефолтный сетап",
+    "meaning": "Начать с обычной безопасной расстановки."
+  },
+  "strategy-slow-push": {
+    "text": "Медленный пуш",
+    "meaning": "Атаковать осторожно, проверяя каждую зону."
+  },
+  "strategy-fast-push": {
+    "text": "Быстрый пуш",
+    "meaning": "Атаковать быстро, пока враги не успели среагировать."
+  },
+  "strategy-fake-push": {
+    "text": "Фейк пуша",
+    "meaning": "Сделать вид, что атакуете одну зону, чтобы стянуть туда врагов."
+  },
+  "strategy-split-push": {
+    "text": "Сплит-пуш",
+    "meaning": "Атаковать с двух или более направлений."
+  },
+  "strategy-retake": {
+    "text": "Ретейк",
+    "meaning": "Вернуть контроль над целью после её потери."
+  },
+  "strategy-eco-round": {
+    "text": "Эко-раунд",
+    "meaning": "Использовать дешёвое снаряжение, чтобы сэкономить деньги."
+  },
+  "strategy-full-buy": {
+    "text": "Фулл бай",
+    "meaning": "Все покупают сильное снаряжение."
+  },
+  "strategy-force-buy": {
+    "text": "Форс бай",
+    "meaning": "Покупаться даже при слабой экономике, чтобы попытаться выиграть сейчас."
+  },
+  "strategy-play-objective": {
+    "text": "Играем объект",
+    "meaning": "Ставить цель выше убийств."
+  },
+  "strategy-play-for-picks": {
+    "text": "Играем на пик",
+    "meaning": "Искать одно безопасное убийство перед полноценным заходом."
+  },
+  "strategy-take-map-control": {
+    "text": "Берём контроль карты",
+    "meaning": "Занять важные зоны карты."
+  },
+  "strategy-gather-info": {
+    "text": "Собираем инфу",
+    "meaning": "Разведать ситуацию перед полноценным действием."
+  },
+  "strategy-use-utility-first": {
+    "text": "Сначала утилити",
+    "meaning": "Использовать способности перед входом или дракой."
+  },
+  "strategy-double-peek": {
+    "text": "Дабл пик",
+    "meaning": "Два игрока одновременно пикают один и тот же угол."
+  },
+  "strategy-off-angle": {
+    "text": "Офф-угол",
+    "meaning": "Держать необычную позицию, чтобы удивить врагов."
+  },
+  "strategy-late-lurk": {
+    "text": "Поздний лёрк",
+    "meaning": "Один игрок задерживается и позже атакует сзади."
+  },
+  "economy-buy": {
+    "text": "Бай",
+    "meaning": "Купить оружие, снаряжение или предметы."
+  },
+  "economy-save": {
+    "text": "Сейв",
+    "meaning": "Сохранить деньги или ресурсы на следующий раунд."
+  },
+  "economy-drop-me": {
+    "text": "Дропни мне",
+    "meaning": "Купить или дать говорящему оружие, предмет или ресурс."
+  },
+  "economy-i-can-drop": {
+    "text": "Могу дропнуть",
+    "meaning": "Говорящий может купить или дать тиммейту оружие, предмет или ресурс."
+  },
+  "economy-need-a-drop": {
+    "text": "Нужен дроп",
+    "meaning": "Говорящему нужно, чтобы тиммейт купил или дал ему оружие или ресурс."
+  },
+  "economy-full-save": {
+    "text": "Фулл сейв",
+    "meaning": "В этом раунде почти никто не должен тратить ресурсы."
+  },
+  "economy-light-buy": {
+    "text": "Лайт бай",
+    "meaning": "Купить только дешёвое или ограниченное снаряжение."
+  },
+  "economy-half-buy": {
+    "text": "Халф бай",
+    "meaning": "Потратить часть ресурсов, но оставить достаточно на следующий раунд."
+  },
+  "economy-full-armor": {
+    "text": "Фулл армор",
+    "meaning": "Купить максимальную броню или защиту."
+  },
+  "economy-no-armor": {
+    "text": "Без брони",
+    "meaning": "У игрока нет брони."
+  },
+  "economy-upgrade-weapon": {
+    "text": "Апгрейд оружия",
+    "meaning": "Перейти на более сильное оружие."
+  },
+  "economy-keep-weapon": {
+    "text": "Сохрани оружие",
+    "meaning": "Не выбрасывай текущее оружие."
+  },
+  "economy-pick-up-gun": {
+    "text": "Подними пушку",
+    "meaning": "Подбери упавшее оружие."
+  },
+  "economy-save-the-gun": {
+    "text": "Сейв пушку",
+    "meaning": "Выжить с оружием и сохранить его на следующий раунд."
+  },
+  "economy-we-are-broke": {
+    "text": "Мы без денег",
+    "meaning": "У команды очень мало денег или ресурсов."
+  },
+  "economy-they-are-broke": {
+    "text": "Они без денег",
+    "meaning": "У вражеской команды мало денег или ресурсов."
+  },
+  "slang-skin": {
+    "text": "Скин",
+    "meaning": "Косметический вид персонажа, оружия или предмета."
+  },
+  "slang-battle-pass": {
+    "text": "Боевой пропуск",
+    "meaning": "Линейка наград, которая открывает косметику или предметы за игру."
+  },
+  "slang-loadout": {
+    "text": "Лоадаут",
+    "meaning": "Выбранное оружие, снаряжение, способности или перки для матча."
+  },
+  "slang-build": {
+    "text": "Билд",
+    "meaning": "Выбранная сборка предметов, способностей, характеристик или улучшений."
+  },
+  "slang-perk": {
+    "text": "Перк",
+    "meaning": "Пассивный бонус или особое преимущество, выбранное игроком."
+  },
+  "slang-cosmetic": {
+    "text": "Косметика",
+    "meaning": "Предмет, меняющий внешний вид без прямого усиления силы."
+  },
+  "slang-patch": {
+    "text": "Патч",
+    "meaning": "Обновление игры, которое исправляет баги, балансирует геймплей или добавляет контент."
+  },
+  "slang-patch-notes": {
+    "text": "Патчноуты",
+    "meaning": "Официальные заметки о том, что изменилось в обновлении игры."
+  },
+  "slang-hotfix": {
+    "text": "Хотфикс",
+    "meaning": "Быстрое обновление, исправляющее срочную проблему."
+  },
+  "slang-bug": {
+    "text": "Баг",
+    "meaning": "Ошибка игры или непредвиденная проблема."
+  },
+  "slang-glitch": {
+    "text": "Глитч",
+    "meaning": "Странное или непреднамеренное поведение игры, иногда используемое как эксплойт."
+  },
+  "slang-exploit": {
+    "text": "Эксплойт",
+    "meaning": "Злоупотребление багом или системой для нечестного преимущества."
+  },
+  "slang-cheater": {
+    "text": "Читер",
+    "meaning": "Игрок, использующий нечестные инструменты или методы для преимущества."
+  },
+  "slang-hacker": {
+    "text": "Хакер",
+    "meaning": "Игрок, которого обвиняют в использовании читов или запрещённых инструментов."
+  },
+  "slang-ban": {
+    "text": "Бан",
+    "meaning": "Запретить игрока, персонажа, карту или аккаунт к использованию."
+  },
+  "slang-report": {
+    "text": "Репорт",
+    "meaning": "Отправить жалобу на читерство, токсичность или нарушение правил."
+  },
+  "slang-skill-issue": {
+    "text": "Скилл ишью",
+    "meaning": "Насмешливая фраза: проблема в слабой игре, а не в самой игре."
+  },
+  "slang-touch-grass": {
+    "text": "Тач грасс",
+    "meaning": "Шутливый совет отдохнуть от игр или онлайн-споров."
+  },
+  "slang-cooked": {
+    "text": "Кукед",
+    "meaning": "В серьёзной беде, переигран или почти точно проигрывает."
+  },
+  "slang-diffed": {
+    "text": "Диффед",
+    "meaning": "Переигран соперником на той же роли или в том же матчапе."
+  },
+  "slang-quest": {
+    "text": "Квест",
+    "meaning": "Миссия или задание, дающее прогресс или награды."
+  },
+  "slang-mission": {
+    "text": "Миссия",
+    "meaning": "Цель или задание, которое игрок должен выполнить."
+  },
+  "slang-boss": {
+    "text": "Босс",
+    "meaning": "Сильный враг, часто в конце уровня или сражения."
+  },
+  "slang-mob": {
+    "text": "Моб",
+    "meaning": "Обычный ИИ-враг или существо."
+  },
+  "slang-aggro": {
+    "text": "Агро",
+    "meaning": "Внимание или угроза врагов, направленная на игрока."
+  },
+  "slang-raid": {
+    "text": "Рейд",
+    "meaning": "Крупное кооперативное испытание, часто против боссов."
+  },
+  "slang-dungeon": {
+    "text": "Данж",
+    "meaning": "Структурированная PvE-зона с врагами, целями и наградами."
+  },
+  "slang-cc-chain": {
+    "text": "CC chain",
+    "meaning": "Несколько эффектов контроля подряд, чтобы удерживать цель отключённой."
+  },
+  "slang-clutch-or-kick": {
+    "text": "Clutch or kick",
+    "meaning": "Шутливая фраза давления, когда один игрок должен выиграть ситуацию в одиночку."
+  },
+  "slang-diff": {
+    "text": "Дифф",
+    "meaning": "Сокращение от difference; используется, чтобы сказать, что один игрок или роль сыграли лучше."
+  },
+  "slang-gap": {
+    "text": "Gap",
+    "meaning": "Большая разница в скилле между игроками или командами."
+  },
+  "slang-gg-ez": {
+    "text": "GG EZ",
+    "meaning": "Хорошая игра, легко; часто считается неуважительным."
+  },
+  "slang-hitbox": {
+    "text": "Хитбокс",
+    "meaning": "Невидимая зона, по которой попадания засчитываются как урон."
+  },
+  "slang-spawn-camp": {
+    "text": "Спавнкемп",
+    "meaning": "Атаковать врагов сразу после их появления."
+  },
+  "slang-spawn-kill": {
+    "text": "Спавнкилл",
+    "meaning": "Убить игрока сразу после его появления."
+  },
+  "callouts-ace": {
+    "text": "Эйс",
+    "meaning": "Один игрок уничтожил всю вражескую команду."
+  },
+  "callouts-back-site": {
+    "text": "Бэк сайт",
+    "meaning": "Враг находится в задней части точки или сайта."
+  },
+  "callouts-bad-timing": {
+    "text": "Плохой тайминг",
+    "meaning": "Действие произошло в неудачный или неподходящий момент."
+  },
+  "callouts-bait-and-switch": {
+    "text": "Бейт-энд-свитч",
+    "meaning": "Один игрок отвлекает внимание, а другой забирает убийство."
+  },
+  "callouts-basement-clear": {
+    "text": "Подвал чист",
+    "meaning": "Подвал или нижняя зона выглядят безопасно."
+  },
+  "callouts-blocked": {
+    "text": "Заблокировано",
+    "meaning": "Путь недоступен или небезопасен."
+  },
+  "callouts-bridge-clear": {
+    "text": "Мост чист",
+    "meaning": "Маршрут через мост выглядит безопасно."
+  },
+  "callouts-careful": {
+    "text": "Осторожно",
+    "meaning": "Будь аккуратен, потому что возможна опасность."
+  },
+  "callouts-carry": {
+    "text": "Керри",
+    "meaning": "Игрок, который делает большую часть работы или тащит команду к победе."
+  },
+  "callouts-circle-moving": {
+    "text": "Круг двигается",
+    "meaning": "Круг в battle royale меняет позицию."
+  },
+  "callouts-clean-fight": {
+    "text": "Чистая драка",
+    "meaning": "Команда выиграла бой уверенно и контролируемо."
+  },
+  "callouts-clear-left": {
+    "text": "Слева чисто",
+    "meaning": "Левая сторона выглядит безопасно."
+  },
+  "callouts-clear-mid": {
+    "text": "Мид чист",
+    "meaning": "Центральная зона выглядит безопасно."
+  },
+  "callouts-clear-right": {
+    "text": "Справа чисто",
+    "meaning": "Правая сторона выглядит безопасно."
+  },
+  "callouts-close-corner": {
+    "text": "Ближний угол",
+    "meaning": "Враг прячется в ближайшем углу."
+  },
+  "callouts-close-game": {
+    "text": "Ровная игра",
+    "meaning": "Матч очень равный."
+  },
+  "callouts-clutch": {
+    "text": "Клатч",
+    "meaning": "Игрок выиграл сложную ситуацию один или под сильным давлением."
+  },
+  "callouts-come-back": {
+    "text": "Вернись",
+    "meaning": "Вернись к команде или в более безопасную зону."
+  },
+  "callouts-comeback": {
+    "text": "Камбэк",
+    "meaning": "Команда отыгрывается после отставания."
+  },
+  "callouts-contact": {
+    "text": "Контакт",
+    "meaning": "Говорящий столкнулся с врагами."
+  },
+  "callouts-corner": {
+    "text": "Угол",
+    "meaning": "Враг прячется в углу."
+  },
+  "callouts-crossfire": {
+    "text": "Кроссфайр",
+    "meaning": "Два тиммейта держат одного врага с разных углов."
+  },
+  "callouts-default-spot": {
+    "text": "Дефолтная точка",
+    "meaning": "Самая стандартная позиция для установки, удержания или защиты цели."
+  },
+  "callouts-do-not-chase": {
+    "text": "Не гонись",
+    "meaning": "Не преследуй врага слишком далеко."
+  },
+  "callouts-do-not-peek": {
+    "text": "Не пикай",
+    "meaning": "Не выходи под вражеский угол."
+  },
+  "callouts-door-closed": {
+    "text": "Дверь закрыта",
+    "meaning": "Дверной проём или путь заблокирован."
+  },
+  "callouts-door-open": {
+    "text": "Дверь открыта",
+    "meaning": "Дверной проём или путь доступен."
+  },
+  "callouts-flash-out": {
+    "text": "Флешка пошла",
+    "meaning": "Флешка или ослепляющая способность была использована."
+  },
+  "callouts-focus-fire": {
+    "text": "Фокус огонь",
+    "meaning": "Все должны стрелять по одной цели."
+  },
+  "callouts-focus-healer": {
+    "text": "Фокус хилера",
+    "meaning": "Сначала атакуйте вражеского хилера или саппорта."
+  },
+  "callouts-focus-sniper": {
+    "text": "Фокус снайпера",
+    "meaning": "Сначала атакуйте вражеского снайпера."
+  },
+  "callouts-footsteps": {
+    "text": "Шаги",
+    "meaning": "Говорящий слышит движение врага."
+  },
+  "callouts-free-kill": {
+    "text": "Фри килл",
+    "meaning": "Врага можно легко убить."
+  },
+  "callouts-free-objective": {
+    "text": "Фри объект",
+    "meaning": "Цель можно взять почти без сопротивления."
+  },
+  "callouts-front-site": {
+    "text": "Фронт сайт",
+    "meaning": "Враг находится в передней части точки или сайта."
+  },
+  "callouts-good-timing": {
+    "text": "Хороший тайминг",
+    "meaning": "Действие произошло в правильный момент."
+  },
+  "callouts-grenade-out": {
+    "text": "Граната пошла",
+    "meaning": "Граната была брошена."
+  },
+  "callouts-hallway": {
+    "text": "Коридор",
+    "meaning": "Враг или движение в коридоре."
+  },
+  "callouts-hide": {
+    "text": "Спрячься",
+    "meaning": "Избегай обнаружения."
+  },
+  "callouts-high-ground": {
+    "text": "Хайграунд",
+    "meaning": "Важная позиция находится выше врага."
+  },
+  "callouts-hold-angle": {
+    "text": "Держи угол",
+    "meaning": "Продолжай целиться в ожидаемый путь врага."
+  },
+  "callouts-hold-position": {
+    "text": "Держи позицию",
+    "meaning": "Оставайся на месте и не переагрессируй."
+  },
+  "callouts-i-am-watching": {
+    "text": "Я держу",
+    "meaning": "Говорящий держит угол или зону."
+  },
+  "callouts-i-hear-steps": {
+    "text": "Слышу шаги",
+    "meaning": "Слышны вражеские шаги."
+  },
+  "callouts-i-will-trade": {
+    "text": "Я трейдну",
+    "meaning": "Говорящий пойдёт следом и заберёт ответное убийство."
+  },
+  "callouts-ignore-tank": {
+    "text": "Игнор танка",
+    "meaning": "Не тратьте урон на жирного врага прямо сейчас."
+  },
+  "callouts-long-range": {
+    "text": "Дальняя дистанция",
+    "meaning": "Враг далеко или держит длинный угол."
+  },
+  "callouts-low-ground": {
+    "text": "Лоуграунд",
+    "meaning": "Команда находится ниже позиции врага."
+  },
+  "callouts-lucky-shot": {
+    "text": "Лаки шот",
+    "meaning": "Выстрел сработал частично благодаря удаче."
+  },
+  "callouts-messy-fight": {
+    "text": "Грязная драка",
+    "meaning": "Бой был хаотичным и рискованным."
+  },
+  "callouts-move-up": {
+    "text": "Продвигайся",
+    "meaning": "Займи более переднюю позицию."
+  },
+  "callouts-nice-trade": {
+    "text": "Найс трейд",
+    "meaning": "Тиммейт успешно забрал ответное убийство."
+  },
+  "callouts-no-contact": {
+    "text": "Нет контакта",
+    "meaning": "Враги пока не найдены."
+  },
+  "callouts-no-problem": {
+    "text": "Без проблем",
+    "meaning": "Дружелюбный ответ, когда тиммейт извиняется."
+  },
+  "callouts-not-clear": {
+    "text": "Не чисто",
+    "meaning": "Зона не подтверждена как безопасная."
+  },
+  "callouts-open-lane": {
+    "text": "Открытая линия",
+    "meaning": "Линия или путь не защищены."
+  },
+  "callouts-out-of-zone": {
+    "text": "Вне зоны",
+    "meaning": "Кто-то находится вне безопасной зоны."
+  },
+  "callouts-peek-together": {
+    "text": "Пикаем вместе",
+    "meaning": "Два или больше тиммейта должны одновременно посмотреть на врага."
+  },
+  "callouts-pinched": {
+    "text": "Зажали",
+    "meaning": "Врагов атакуют с двух сторон."
+  },
+  "callouts-play-fast": {
+    "text": "Играем быстро",
+    "meaning": "Использовать скорость и давление, чтобы застать врага врасплох."
+  },
+  "callouts-play-safe": {
+    "text": "Играем сейфово",
+    "meaning": "Избегать рискованных боёв."
+  },
+  "callouts-play-slow": {
+    "text": "Играем медленно",
+    "meaning": "Двигаться осторожно и собирать информацию."
+  },
+  "callouts-play-time": {
+    "text": "Играем на время",
+    "meaning": "Затягивать врага, пока таймер помогает вашей команде."
+  },
+  "callouts-reset": {
+    "text": "Ресет",
+    "meaning": "Остановить хаотичный бой и вернуться к плану."
+  },
+  "callouts-roof-clear": {
+    "text": "Крыша чиста",
+    "meaning": "Зона крыши выглядит безопасно."
+  },
+  "callouts-run": {
+    "text": "Беги",
+    "meaning": "Быстро уходи."
+  },
+  "callouts-safe-zone": {
+    "text": "Безопасная зона",
+    "meaning": "Эта зона находится внутри безопасного круга."
+  },
+  "callouts-short-range": {
+    "text": "Близкая дистанция",
+    "meaning": "Враг очень близко."
+  },
+  "callouts-shotgun-close": {
+    "text": "Дробовик близко",
+    "meaning": "Враг с дробовиком рядом."
+  },
+  "callouts-site-clear": {
+    "text": "Сайт чист",
+    "meaning": "Точка или сайт сейчас выглядят безопасно."
+  },
+  "callouts-site-not-clear": {
+    "text": "Сайт не чист",
+    "meaning": "Враги всё ещё могут быть внутри точки или сайта."
+  },
+  "callouts-smoke-out": {
+    "text": "Смок пошёл",
+    "meaning": "Смок или способность, блокирующая обзор, была использована."
+  },
+  "callouts-sniper-watching": {
+    "text": "Снайпер держит",
+    "meaning": "Снайпер держит этот угол."
+  },
+  "callouts-split-up": {
+    "text": "Разделяемся",
+    "meaning": "Разойтись, чтобы закрыть больше зон или создать давление."
+  },
+  "callouts-stairs": {
+    "text": "Лестница",
+    "meaning": "Враг или движение рядом с лестницей."
+  },
+  "callouts-stay-alive": {
+    "text": "Живи",
+    "meaning": "Не умирай, потому что сейчас важно выжить."
+  },
+  "callouts-stop-chasing": {
+    "text": "Хватит гнаться",
+    "meaning": "Вернись к цели вместо охоты за фрагами."
+  },
+  "callouts-storm-coming": {
+    "text": "Шторм идёт",
+    "meaning": "Опасная зона приближается."
+  },
+  "callouts-swing-together": {
+    "text": "Свингуем вместе",
+    "meaning": "Выйти вместе, чтобы принять бой с врагом."
+  },
+  "callouts-target-marked": {
+    "text": "Цель отмечена",
+    "meaning": "Приоритетная цель была отмечена."
+  },
+  "callouts-they-are-close": {
+    "text": "Они близко",
+    "meaning": "Враги рядом."
+  },
+  "callouts-they-are-far": {
+    "text": "Они далеко",
+    "meaning": "Враги далеко."
+  },
+  "callouts-third-party": {
+    "text": "Третья сторона",
+    "meaning": "Ещё одна команда вмешивается в бой."
+  },
+  "callouts-throw": {
+    "text": "Троу",
+    "meaning": "Совершить ошибку, которая отдаёт преимущество или проигрывает выигрышную ситуацию."
+  },
+  "callouts-trade-him": {
+    "text": "Трейдни его",
+    "meaning": "Забери ответное убийство после смерти или нока тиммейта."
+  },
+  "callouts-trade-me": {
+    "text": "Трейдни меня",
+    "meaning": "Будь готов убить врага, который убьёт или нокнет говорящего."
+  },
+  "callouts-trap-destroyed": {
+    "text": "Ловушка уничтожена",
+    "meaning": "Ловушка была удалена."
+  },
+  "callouts-trap-here": {
+    "text": "Ловушка здесь",
+    "meaning": "В этой точке есть ловушка."
+  },
+  "callouts-tunnel-clear": {
+    "text": "Тоннель чист",
+    "meaning": "Маршрут через тоннель выглядит безопасно."
+  },
+  "callouts-unlucky": {
+    "text": "Анлаки",
+    "meaning": "Результат был неудачным, но не обязательно из-за плохой игры."
+  },
+  "callouts-wait": {
+    "text": "Жди",
+    "meaning": "Остановись перед действием."
+  },
+  "callouts-watching-left": {
+    "text": "Держу лево",
+    "meaning": "Говорящий прикрывает левую сторону."
+  },
+  "callouts-watching-mid": {
+    "text": "Держу мид",
+    "meaning": "Говорящий прикрывает центральную зону."
+  },
+  "callouts-watching-right": {
+    "text": "Держу право",
+    "meaning": "Говорящий прикрывает правую сторону."
+  },
+  "callouts-water": {
+    "text": "Вода",
+    "meaning": "Враг или позиция рядом с водой."
+  },
+  "callouts-we-are-pinched": {
+    "text": "Нас зажали",
+    "meaning": "Команда зажата между вражескими углами."
+  },
+  "callouts-well-played": {
+    "text": "Хорошо сыграно",
+    "meaning": "Уважительная похвала за умное или скилловое действие."
+  },
+  "callouts-window": {
+    "text": "Окно",
+    "meaning": "Враг или угол у окна."
+  },
+  "callouts-with-me": {
+    "text": "Со мной",
+    "meaning": "Говорящий хочет, чтобы тиммейты держались рядом."
+  },
+  "callouts-zone-closing": {
+    "text": "Зона закрывается",
+    "meaning": "Безопасная зона сужается или движется."
+  },
+  "danger-do-not-go-there": {
+    "text": "Не ходи туда",
+    "meaning": "Эта зона небезопасна."
+  },
+  "danger-enemy-ultimate-ready": {
+    "text": "У врага ульта готова",
+    "meaning": "У врага, вероятно, доступна самая сильная способность."
+  },
+  "danger-it-is-a-trap": {
+    "text": "Это ловушка",
+    "meaning": "Враг, скорее всего, ждёт вас."
+  },
+  "danger-low-cover": {
+    "text": "Слабое укрытие",
+    "meaning": "Укрытие слабое или неполное."
+  },
+  "danger-they-have-sniper": {
+    "text": "У них снайпер",
+    "meaning": "У вражеской команды есть снайперская угроза."
+  },
+  "instructions-capture-point": {
+    "text": "Захвати точку",
+    "meaning": "Взять под контроль точку цели."
+  },
+  "instructions-check-behind": {
+    "text": "Проверь сзади",
+    "meaning": "Посмотри, нет ли врагов за командой."
+  },
+  "instructions-check-left": {
+    "text": "Проверь слева",
+    "meaning": "Посмотри, нет ли врагов слева."
+  },
+  "instructions-check-right": {
+    "text": "Проверь справа",
+    "meaning": "Посмотри, нет ли врагов справа."
+  },
+  "instructions-clear-corners": {
+    "text": "Чисти углы",
+    "meaning": "Проверяй укрытия и углы перед входом."
+  },
+  "instructions-contest-point": {
+    "text": "Контести точку",
+    "meaning": "Встань на цель, чтобы остановить прогресс врага."
+  },
+  "instructions-defuse-now": {
+    "text": "Дефьюз сейчас",
+    "meaning": "Начинай обезвреживание немедленно."
+  },
+  "instructions-do-not-feed": {
+    "text": "Не фидь",
+    "meaning": "Не умирай снова и снова и не отдавай врагу преимущество."
+  },
+  "instructions-do-not-split": {
+    "text": "Не разделяйтесь",
+    "meaning": "Не отделяйтесь от команды."
+  },
+  "instructions-do-not-waste-it": {
+    "text": "Не трать зря",
+    "meaning": "Используй ресурс аккуратно."
+  },
+  "instructions-go-first": {
+    "text": "Иди первым",
+    "meaning": "Войти или начать бой раньше остальных."
+  },
+  "instructions-i-go-first": {
+    "text": "Я иду первым",
+    "meaning": "Говорящий войдёт или начнёт бой первым."
+  },
+  "instructions-lead-the-way": {
+    "text": "Веди",
+    "meaning": "Тиммейт должен идти первым."
+  },
+  "instructions-mute-him": {
+    "text": "Замуть его",
+    "meaning": "Отключить мешающего игрока в голосовом или текстовом чате."
+  },
+  "instructions-plant-now": {
+    "text": "Плент сейчас",
+    "meaning": "Поставить бомбу или выполнить цель прямо сейчас."
+  },
+  "instructions-report-after": {
+    "text": "Репорт после",
+    "meaning": "Заняться жалобой после матча, а не во время раунда."
+  },
+  "instructions-save-ultimate": {
+    "text": "Сохрани ульту",
+    "meaning": "Пока не используй самую сильную способность."
+  },
+  "instructions-stack-here": {
+    "text": "Стакаемся здесь",
+    "meaning": "Собрать несколько игроков в этой зоне."
+  },
+  "instructions-stack-left": {
+    "text": "Стак слева",
+    "meaning": "Собрать игроков на левой стороне."
+  },
+  "instructions-stack-right": {
+    "text": "Стак справа",
+    "meaning": "Собрать игроков на правой стороне."
+  },
+  "instructions-stop-peeking": {
+    "text": "Хватит пикать",
+    "meaning": "Перестань выходить под прицел врага."
+  },
+  "instructions-touch-point": {
+    "text": "Коснись точки",
+    "meaning": "Дойти до цели до окончания таймера."
+  },
+  "instructions-use-flash": {
+    "text": "Дай флеш",
+    "meaning": "Использовать ослепляющую способность перед входом."
+  },
+  "instructions-use-grenade": {
+    "text": "Дай гранату",
+    "meaning": "Бросить взрывную или utility-гранату."
+  },
+  "instructions-use-smoke": {
+    "text": "Дай смок",
+    "meaning": "Поставить смок, чтобы закрыть обзор."
+  },
+  "instructions-use-ultimate": {
+    "text": "Дай ульту",
+    "meaning": "Использовать самую сильную способность сейчас."
+  },
+  "objective-capture-the-flag": {
+    "text": "Захвати флаг",
+    "meaning": "Взять вражеский флаг как цель."
+  },
+  "objective-escort-the-payload": {
+    "text": "Сопровождай пейлоад",
+    "meaning": "Оставайся рядом с пейлоадом, чтобы он двигался."
+  },
+  "objective-hold-the-point": {
+    "text": "Держи точку",
+    "meaning": "Оставаться на цели и защищать её."
+  },
+  "objective-leave-the-point": {
+    "text": "Уйди с точки",
+    "meaning": "Отойти от цели, когда это нужно."
+  },
+  "objective-return-the-flag": {
+    "text": "Верни флаг",
+    "meaning": "Вернуть флаг обратно или забрать свой флаг."
+  },
+  "objective-stop-the-payload": {
+    "text": "Останови пейлоад",
+    "meaning": "Не дать врагу двигать пейлоад."
+  },
+  "teamwork-do-not-blame": {
+    "text": "Не обвиняй",
+    "meaning": "Не обвиняй тиммейтов во время игры."
+  },
+  "teamwork-focus-next": {
+    "text": "Фокус на следующем",
+    "meaning": "Отпустить ошибку и готовиться к следующему действию."
+  },
+  "teamwork-good-effort": {
+    "text": "Хорошая попытка",
+    "meaning": "Положительный ответ на попытку тиммейта."
+  },
+  "teamwork-great-call": {
+    "text": "Отличный колл",
+    "meaning": "Похвала за полезную коммуникацию."
+  },
+  "teamwork-great-save": {
+    "text": "Отличный сейв",
+    "meaning": "Похвала за предотвращение поражения или опасности."
+  },
+  "teamwork-great-shot": {
+    "text": "Отличный выстрел",
+    "meaning": "Похвала за точную стрельбу."
+  },
+  "teamwork-i-trust-you": {
+    "text": "Я тебе доверяю",
+    "meaning": "Поддержка тиммейта, который делает play."
+  },
+  "teamwork-i-will-bait-for-you": {
+    "text": "Я забейчу для тебя",
+    "meaning": "Говорящий отвлечёт внимание, чтобы тиммейт смог трейднуть."
+  },
+  "teamwork-i-will-cover-you": {
+    "text": "Я тебя прикрою",
+    "meaning": "Говорящий защитит тиммейта."
+  },
+  "teamwork-i-will-heal-you": {
+    "text": "Я тебя похилю",
+    "meaning": "Говорящий использует лечение на тиммейте."
+  },
+  "teamwork-i-will-watch-flank": {
+    "text": "Я держу фланг",
+    "meaning": "Говорящий прикроет путь сзади."
+  },
+  "teamwork-keep-comms-clear": {
+    "text": "Коммы чисто",
+    "meaning": "Сейчас говорить только полезную информацию."
+  },
+  "teamwork-let-me-go-first": {
+    "text": "Дайте я первый",
+    "meaning": "Говорящий сам вызывается войти первым."
+  },
+  "teamwork-nice-aim": {
+    "text": "Найс аим",
+    "meaning": "Похвала за навык стрельбы."
+  },
+  "teamwork-nice-clutch": {
+    "text": "Найс клатч",
+    "meaning": "Похвала за победу под давлением."
+  },
+  "teamwork-nice-movement": {
+    "text": "Найс мувмент",
+    "meaning": "Похвала за хороший навык движения."
+  },
+  "teamwork-nice-utility": {
+    "text": "Найс утилити",
+    "meaning": "Похвала за хорошее использование способностей или предметов."
+  },
+  "teamwork-one-round-at-a-time": {
+    "text": "Раунд за раундом",
+    "meaning": "Сосредоточиться на следующем раунде, а не на всём матче."
+  },
+  "teamwork-play-together": {
+    "text": "Играем вместе",
+    "meaning": "Координироваться как группа."
+  },
+  "teamwork-reset-mental": {
+    "text": "Ресет ментала",
+    "meaning": "Перестать тильтовать и начать заново."
+  },
+  "teamwork-stay-calm": {
+    "text": "Спокойно",
+    "meaning": "Не паниковать и не тильтовать."
+  },
+  "teamwork-take-my-loot": {
+    "text": "Возьми мой лут",
+    "meaning": "Говорящий предлагает свои предметы."
+  },
+  "teamwork-take-my-weapon": {
+    "text": "Возьми моё оружие",
+    "meaning": "Говорящий предлагает своё оружие."
+  },
+  "teamwork-trade-together": {
+    "text": "Трейдим вместе",
+    "meaning": "Координироваться для ответных убийств."
+  },
+  "teamwork-wait-for-team": {
+    "text": "Жди команду",
+    "meaning": "Не драться до прихода тиммейтов."
+  },
+  "teamwork-we-can-win": {
+    "text": "Мы можем выиграть",
+    "meaning": "Поддержка: матч всё ещё можно выиграть."
+  },
+  "teamwork-we-need-everyone": {
+    "text": "Нужны все",
+    "meaning": "Команда не должна драться без всех игроков."
+  },
+  "teamwork-you-got-this": {
+    "text": "Ты справишься",
+    "meaning": "Поддержка перед или во время сложного момента."
+  },
+  "strategy-anchor-site": {
+    "text": "Анкер сайта",
+    "meaning": "Оставаться на сайте цели, чтобы защищать его."
+  },
+  "strategy-bait-utility": {
+    "text": "Бейт утилити",
+    "meaning": "Заставить врагов потратить способности перед настоящей атакой."
+  },
+  "strategy-cancel-the-push": {
+    "text": "Отменяем пуш",
+    "meaning": "Остановить атаку и сменить план."
+  },
+  "strategy-commit-now": {
+    "text": "Коммит сейчас",
+    "meaning": "Использовать ресурсы команды и полностью выполнить план."
+  },
+  "strategy-cross-setup": {
+    "text": "Кросс-сетап",
+    "meaning": "Поставить два угла, которые прикрывают друг друга."
+  },
+  "strategy-cut-rotation": {
+    "text": "Отрезать ротацию",
+    "meaning": "Остановить врагов на пути между сайтами."
+  },
+  "strategy-damage-advantage": {
+    "text": "Преимущество по урону",
+    "meaning": "Враги слабее вашей команды по здоровью или ресурсам."
+  },
+  "strategy-deny-vision": {
+    "text": "Денай вижн",
+    "meaning": "Заблокировать или убрать информацию врага."
+  },
+  "strategy-do-not-overcommit": {
+    "text": "Не оверкоммить",
+    "meaning": "Не вкладывать слишком много ресурсов в рискованное действие."
+  },
+  "strategy-economy-advantage": {
+    "text": "Преимущество по экономике",
+    "meaning": "У вашей команды лучше ресурсы или оружие."
+  },
+  "strategy-give-map-control": {
+    "text": "Отдать контроль карты",
+    "meaning": "Намеренно позволить врагу занять пространство."
+  },
+  "strategy-hold-rotation": {
+    "text": "Держать ротацию",
+    "meaning": "Смотреть путь, по которому враги ротируются."
+  },
+  "strategy-man-advantage": {
+    "text": "Преимущество по людям",
+    "meaning": "У вашей команды больше живых игроков, чем у врага."
+  },
+  "strategy-man-disadvantage": {
+    "text": "Минус по людям",
+    "meaning": "У вашей команды меньше живых игроков, чем у врага."
+  },
+  "strategy-numbers-advantage": {
+    "text": "Численное преимущество",
+    "meaning": "У вашей команды больше игроков в бою."
+  },
+  "strategy-play-for-late-game": {
+    "text": "Играем на лейт",
+    "meaning": "Затянуть действие и подготовиться к финальной фазе."
+  },
+  "strategy-play-retake": {
+    "text": "Играем ретейк",
+    "meaning": "Отдать сайт и подготовиться забрать его обратно."
+  },
+  "strategy-pressure-side-lane": {
+    "text": "Давим боковую линию",
+    "meaning": "Создать угрозу на боковом маршруте."
+  },
+  "strategy-save-round": {
+    "text": "Сейв-раунд",
+    "meaning": "Не тратить ресурсы в этом раунде."
+  },
+  "strategy-stack-objective": {
+    "text": "Стак на объекте",
+    "meaning": "Поставить много игроков рядом с целью."
+  },
+  "strategy-time-advantage": {
+    "text": "Преимущество по времени",
+    "meaning": "Таймер играет в пользу вашей команды."
+  },
+  "strategy-trade-setup": {
+    "text": "Трейд-сетап",
+    "meaning": "Встать так, чтобы тиммейты могли забрать ответные убийства."
+  },
+  "strategy-ultimate-advantage": {
+    "text": "Преимущество по ультам",
+    "meaning": "У вашей команды доступны более сильные ультимативные способности."
+  },
+  "economy-do-not-force": {
+    "text": "Не форсите",
+    "meaning": "Не покупайте слишком много при слабых ресурсах."
+  },
+  "economy-force-together": {
+    "text": "Форсим вместе",
+    "meaning": "Вся команда должна вместе пойти на рискованную покупку."
+  },
+  "economy-they-have-money": {
+    "text": "У них есть деньги",
+    "meaning": "Вражеская команда может позволить себе сильное снаряжение."
+  },
+  "economy-we-can-buy-next": {
+    "text": "На следующий купим",
+    "meaning": "У команды должно хватить ресурсов на следующий раунд."
   },
   "antiToxic-clear-comms-please": {
-    "text": "чисто коммы, пожалуйста",
-    "meaning": "Значение в игре: чисто коммы, пожалуйста"
-  },
-  "antiToxic-let-us-reset": {
-    "text": "давай нас сброс",
-    "meaning": "Значение в игре: давай нас сброс"
-  },
-  "antiToxic-play-safe-next": {
-    "text": "играй безопасно следующий",
-    "meaning": "Значение в игре: играй безопасно следующий"
-  },
-  "antiToxic-wait-for-the-team-next-time": {
-    "text": "жди для команда следующий время",
-    "meaning": "Значение в игре: жди для команда следующий время"
-  },
-  "antiToxic-good-try-next-round": {
-    "text": "хороший попытка, следующий раунд",
-    "meaning": "Значение в игре: хороший попытка, следующий раунд"
-  },
-  "antiToxic-we-need-better-spacing": {
-    "text": "мы нужна лучше спейсинг",
-    "meaning": "Значение в игре: мы нужна лучше спейсинг"
-  },
-  "antiToxic-let-us-trade-better": {
-    "text": "давай нас размен лучше",
-    "meaning": "Значение в игре: давай нас размен лучше"
-  },
-  "antiToxic-save-your-utility": {
-    "text": "сохрани твой утилити",
-    "meaning": "Значение в игре: сохрани твой утилити"
-  },
-  "antiToxic-use-comms-not-blame": {
-    "text": "используй коммы, не вини",
-    "meaning": "Значение в игре: используй коммы, не вини"
+    "text": "Чистые коммы, пожалуйста",
+    "meaning": "Попросить тиммейтов держать коммуникацию сфокусированной и полезной."
   },
   "antiToxic-focus-on-objective": {
-    "text": "фокус на цель",
-    "meaning": "Значение в игре: фокус на цель"
+    "text": "Фокус на объекте",
+    "meaning": "Вернуть команду к условиям победы."
   },
-  "antiToxic-we-still-have-time": {
-    "text": "мы еще есть время",
-    "meaning": "Значение в игре: мы еще есть время"
-  },
-  "antiToxic-no-worries": {
-    "text": "нет без проблем",
-    "meaning": "Значение в игре: нет без проблем"
+  "antiToxic-good-try-next-round": {
+    "text": "Хорошая попытка, следующий раунд",
+    "meaning": "Поддержать команду после проигранного раунда."
   },
   "antiToxic-it-happens": {
-    "text": "это бывает",
-    "meaning": "Значение в игре: это бывает"
-  },
-  "antiToxic-next-one-is-ours": {
-    "text": "следующий один наш",
-    "meaning": "Значение в игре: следующий один наш"
+    "text": "Бывает",
+    "meaning": "Нормализовать ошибку и двигаться дальше."
   },
   "antiToxic-keep-it-positive": {
-    "text": "держи это позитив",
-    "meaning": "Значение в игре: держи это позитив"
+    "text": "Давайте без токсика",
+    "meaning": "Попросить тиммейтов избегать токсичных комментариев."
+  },
+  "antiToxic-let-us-reset": {
+    "text": "Давайте ресет",
+    "meaning": "Спокойно перезапустить настрой команды."
+  },
+  "antiToxic-let-us-trade-better": {
+    "text": "Давайте лучше трейдить",
+    "meaning": "Предложить улучшить командную игру на ответных убийствах."
+  },
+  "antiToxic-next-one-is-ours": {
+    "text": "Следующий наш",
+    "meaning": "Поддержать команду после поражения."
+  },
+  "antiToxic-no-worries": {
+    "text": "Ничего страшного",
+    "meaning": "Дружелюбно ответить на ошибку тиммейта."
+  },
+  "antiToxic-play-safe-next": {
+    "text": "Следующий сыграем сейфово",
+    "meaning": "Предложить более безопасный план без обвинений."
+  },
+  "antiToxic-save-your-utility": {
+    "text": "Сохрани утилити",
+    "meaning": "Попросить тиммейта сохранить способности без оскорблений."
+  },
+  "antiToxic-use-comms-not-blame": {
+    "text": "Давайте инфу, не обвинения",
+    "meaning": "Напомнить тиммейтам давать полезную информацию вместо споров."
+  },
+  "antiToxic-wait-for-the-team-next-time": {
+    "text": "В следующий раз жди команду",
+    "meaning": "Попросить уважительно выбирать момент лучше и ждать тиммейтов."
+  },
+  "antiToxic-we-need-better-spacing": {
+    "text": "Нужно лучше держать дистанцию",
+    "meaning": "Дать полезный фидбек по позиционированию."
+  },
+  "antiToxic-we-still-have-time": {
+    "text": "У нас ещё есть время",
+    "meaning": "Успокоить команду, когда ещё есть время сделать действие."
   }
 }

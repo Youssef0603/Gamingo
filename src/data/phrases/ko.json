@@ -1,1674 +1,1922 @@
 {
   "callouts-gg": {
     "text": "GG",
-    "meaning": "게임 의미: GG"
-  },
-  "callouts-glhf": {
-    "text": "행운을 빌고 즐겜",
-    "meaning": "게임 의미: 행운을 빌고 즐겜"
-  },
-  "callouts-nice": {
-    "text": "나이스!",
-    "meaning": "게임 의미: 나이스!"
-  },
-  "callouts-thanks": {
-    "text": "고마워",
-    "meaning": "게임 의미: 고마워"
-  },
-  "callouts-sorry": {
-    "text": "미안",
-    "meaning": "게임 의미: 미안"
-  },
-  "callouts-my-bad": {
-    "text": "내 실수야",
-    "meaning": "게임 의미: 내 실수야"
-  },
-  "callouts-one-more": {
-    "text": "한 명 더",
-    "meaning": "게임 의미: 한 명 더"
-  },
-  "callouts-i-am-down": {
-    "text": "나 사용 불가",
-    "meaning": "게임 의미: 나 사용 불가"
-  },
-  "callouts-i-am-low": {
-    "text": "나 피 적음",
-    "meaning": "게임 의미: 나 피 적음"
-  },
-  "callouts-enemy-spotted": {
-    "text": "적 발견",
-    "meaning": "게임 의미: 적 발견"
-  },
-  "callouts-enemy-here": {
-    "text": "적 여기",
-    "meaning": "게임 의미: 적 여기"
-  },
-  "callouts-enemy-there": {
-    "text": "적 저기",
-    "meaning": "게임 의미: 적 저기"
-  },
-  "callouts-two-enemies-here": {
-    "text": "두 명 적들 여기",
-    "meaning": "게임 의미: 두 명 적들 여기"
-  },
-  "callouts-three-enemies-here": {
-    "text": "세 명 적들 여기",
-    "meaning": "게임 의미: 세 명 적들 여기"
-  },
-  "callouts-full-team-here": {
-    "text": "전원 팀 여기",
-    "meaning": "게임 의미: 전원 팀 여기"
-  },
-  "callouts-behind-you": {
-    "text": "뒤 너!",
-    "meaning": "게임 의미: 뒤 너!"
-  },
-  "callouts-left-side": {
-    "text": "왼쪽 사이드!",
-    "meaning": "게임 의미: 왼쪽 사이드!"
-  },
-  "callouts-right-side": {
-    "text": "오른쪽 사이드!",
-    "meaning": "게임 의미: 오른쪽 사이드!"
-  },
-  "callouts-above-us": {
-    "text": "위 우리",
-    "meaning": "게임 의미: 위 우리"
-  },
-  "callouts-below-us": {
-    "text": "아래 우리",
-    "meaning": "게임 의미: 아래 우리"
-  },
-  "callouts-in-front": {
-    "text": "안 앞",
-    "meaning": "게임 의미: 안 앞"
-  },
-  "callouts-back-site": {
-    "text": "뒤쪽 사이트",
-    "meaning": "게임 의미: 뒤쪽 사이트"
-  },
-  "callouts-front-site": {
-    "text": "앞 사이트",
-    "meaning": "게임 의미: 앞 사이트"
-  },
-  "callouts-default-spot": {
-    "text": "기본 위치",
-    "meaning": "게임 의미: 기본 위치"
-  },
-  "callouts-corner": {
-    "text": "코너",
-    "meaning": "게임 의미: 코너"
-  },
-  "callouts-close-corner": {
-    "text": "가까움 코너",
-    "meaning": "게임 의미: 가까움 코너"
-  },
-  "callouts-long-range": {
-    "text": "장거리 거리",
-    "meaning": "게임 의미: 장거리 거리"
-  },
-  "callouts-short-range": {
-    "text": "근거리 거리",
-    "meaning": "게임 의미: 근거리 거리"
-  },
-  "callouts-mid": {
-    "text": "미드",
-    "meaning": "게임 의미: 미드"
-  },
-  "callouts-top-mid": {
-    "text": "상단 미드",
-    "meaning": "게임 의미: 상단 미드"
-  },
-  "callouts-bottom-mid": {
-    "text": "하단 미드",
-    "meaning": "게임 의미: 하단 미드"
-  },
-  "callouts-spawn": {
-    "text": "스폰",
-    "meaning": "게임 의미: 스폰"
-  },
-  "callouts-our-spawn": {
-    "text": "우리 스폰",
-    "meaning": "게임 의미: 우리 스폰"
-  },
-  "callouts-their-spawn": {
-    "text": "적 스폰",
-    "meaning": "게임 의미: 적 스폰"
-  },
-  "callouts-flank": {
-    "text": "뒤치기",
-    "meaning": "게임 의미: 뒤치기"
-  },
-  "callouts-watch-flank": {
-    "text": "봐줘 뒤치기",
-    "meaning": "게임 의미: 봐줘 뒤치기"
-  },
-  "callouts-rotating": {
-    "text": "로테 중",
-    "meaning": "게임 의미: 로테 중"
-  },
-  "callouts-they-rotated": {
-    "text": "상대 로테했다",
-    "meaning": "게임 의미: 상대 로테했다"
-  },
-  "callouts-fake-rotate": {
-    "text": "페이크 로테이션",
-    "meaning": "게임 의미: 페이크 로테이션"
-  },
-  "callouts-site-clear": {
-    "text": "사이트 클리어",
-    "meaning": "게임 의미: 사이트 클리어"
-  },
-  "callouts-site-not-clear": {
-    "text": "사이트 아님 클리어",
-    "meaning": "게임 의미: 사이트 아님 클리어"
-  },
-  "callouts-need-backup": {
-    "text": "필요 지원",
-    "meaning": "게임 의미: 필요 지원"
-  },
-  "callouts-need-help": {
-    "text": "필요 도움",
-    "meaning": "게임 의미: 필요 도움"
-  },
-  "callouts-help-me": {
-    "text": "도움 나",
-    "meaning": "게임 의미: 도움 나"
-  },
-  "callouts-i-need-healing": {
-    "text": "나 필요 힐",
-    "meaning": "게임 의미: 나 필요 힐"
-  },
-  "callouts-need-ammo": {
-    "text": "필요 탄약",
-    "meaning": "게임 의미: 필요 탄약"
-  },
-  "callouts-out-of-ammo": {
-    "text": "없음 의 탄약",
-    "meaning": "게임 의미: 없음 의 탄약"
-  },
-  "callouts-reloading": {
-    "text": "재장전 중",
-    "meaning": "게임 의미: 재장전 중"
-  },
-  "callouts-cover-me": {
-    "text": "엄호해줘 나",
-    "meaning": "게임 의미: 엄호해줘 나"
-  },
-  "callouts-i-got-you": {
-    "text": "나 잡았다 너",
-    "meaning": "게임 의미: 나 잡았다 너"
-  },
-  "callouts-i-am-watching": {
-    "text": "나 보고 있어",
-    "meaning": "게임 의미: 나 보고 있어"
-  },
-  "callouts-watching-left": {
-    "text": "보고 있어 왼쪽",
-    "meaning": "게임 의미: 보고 있어 왼쪽"
-  },
-  "callouts-watching-right": {
-    "text": "보고 있어 오른쪽",
-    "meaning": "게임 의미: 보고 있어 오른쪽"
-  },
-  "callouts-watching-mid": {
-    "text": "보고 있어 미드",
-    "meaning": "게임 의미: 보고 있어 미드"
-  },
-  "callouts-clear-left": {
-    "text": "클리어 왼쪽",
-    "meaning": "게임 의미: 클리어 왼쪽"
-  },
-  "callouts-clear-right": {
-    "text": "클리어 오른쪽",
-    "meaning": "게임 의미: 클리어 오른쪽"
-  },
-  "callouts-clear-mid": {
-    "text": "클리어 미드",
-    "meaning": "게임 의미: 클리어 미드"
-  },
-  "callouts-not-clear": {
-    "text": "아님 클리어",
-    "meaning": "게임 의미: 아님 클리어"
-  },
-  "callouts-contact": {
-    "text": "교전",
-    "meaning": "게임 의미: 교전"
-  },
-  "callouts-no-contact": {
-    "text": "없음 교전",
-    "meaning": "게임 의미: 없음 교전"
-  },
-  "callouts-footsteps": {
-    "text": "발소리",
-    "meaning": "게임 의미: 발소리"
-  },
-  "callouts-i-hear-steps": {
-    "text": "나 들려 발소리",
-    "meaning": "게임 의미: 나 들려 발소리"
-  },
-  "callouts-they-are-close": {
-    "text": "상대 가까움",
-    "meaning": "게임 의미: 상대 가까움"
-  },
-  "callouts-they-are-far": {
-    "text": "상대 멀다",
-    "meaning": "게임 의미: 상대 멀다"
-  },
-  "callouts-sniper-watching": {
-    "text": "스나이퍼 보고 있어",
-    "meaning": "게임 의미: 스나이퍼 보고 있어"
-  },
-  "callouts-shotgun-close": {
-    "text": "샷건 가까움",
-    "meaning": "게임 의미: 샷건 가까움"
-  },
-  "callouts-grenade-out": {
-    "text": "수류탄 없음",
-    "meaning": "게임 의미: 수류탄 없음"
-  },
-  "callouts-flash-out": {
-    "text": "플래시 없음",
-    "meaning": "게임 의미: 플래시 없음"
-  },
-  "callouts-smoke-out": {
-    "text": "연막 없음",
-    "meaning": "게임 의미: 연막 없음"
-  },
-  "callouts-ultimate-ready": {
-    "text": "궁극기 준비됨",
-    "meaning": "게임 의미: 궁극기 준비됨"
-  },
-  "callouts-no-ultimate": {
-    "text": "없음 궁극기",
-    "meaning": "게임 의미: 없음 궁극기"
-  },
-  "callouts-ability-ready": {
-    "text": "스킬 준비됨",
-    "meaning": "게임 의미: 스킬 준비됨"
-  },
-  "callouts-ability-down": {
-    "text": "스킬 사용 불가",
-    "meaning": "게임 의미: 스킬 사용 불가"
-  },
-  "callouts-cooldown": {
-    "text": "쿨다운",
-    "meaning": "게임 의미: 쿨다운"
-  },
-  "callouts-ping-it": {
-    "text": "핑 그것",
-    "meaning": "게임 의미: 핑 그것"
-  },
-  "callouts-mark-the-enemy": {
-    "text": "표시 적",
-    "meaning": "게임 의미: 표시 적"
-  },
-  "callouts-i-marked-it": {
-    "text": "나 표시됨 그것",
-    "meaning": "게임 의미: 나 표시됨 그것"
-  },
-  "callouts-check-map": {
-    "text": "확인 맵",
-    "meaning": "게임 의미: 확인 맵"
-  },
-  "callouts-look-at-ping": {
-    "text": "봐 에 핑",
-    "meaning": "게임 의미: 봐 에 핑"
-  },
-  "callouts-enemy-missing": {
-    "text": "적 사라짐",
-    "meaning": "게임 의미: 적 사라짐"
-  },
-  "callouts-all-missing": {
-    "text": "전부 사라짐",
-    "meaning": "게임 의미: 전부 사라짐"
-  },
-  "callouts-careful": {
-    "text": "조심",
-    "meaning": "게임 의미: 조심"
-  },
-  "callouts-wait": {
-    "text": "기다려",
-    "meaning": "게임 의미: 기다려"
-  },
-  "callouts-go-now": {
-    "text": "가자 지금",
-    "meaning": "게임 의미: 가자 지금"
-  },
-  "callouts-push-now": {
-    "text": "푸시 지금",
-    "meaning": "게임 의미: 푸시 지금"
-  },
-  "callouts-fall-back": {
-    "text": "빠져 뒤쪽",
-    "meaning": "게임 의미: 빠져 뒤쪽"
-  },
-  "callouts-run": {
-    "text": "도망쳐",
-    "meaning": "게임 의미: 도망쳐"
-  },
-  "callouts-hide": {
-    "text": "숨어",
-    "meaning": "게임 의미: 숨어"
-  },
-  "callouts-do-not-peek": {
-    "text": "하지 마 아님 피크",
-    "meaning": "게임 의미: 하지 마 아님 피크"
-  },
-  "callouts-peek-together": {
-    "text": "피크 같이",
-    "meaning": "게임 의미: 피크 같이"
-  },
-  "callouts-swing-together": {
-    "text": "같이 나가 같이",
-    "meaning": "게임 의미: 같이 나가 같이"
-  },
-  "callouts-hold-angle": {
-    "text": "지켜 각",
-    "meaning": "게임 의미: 지켜 각"
-  },
-  "callouts-hold-position": {
-    "text": "지켜 위치",
-    "meaning": "게임 의미: 지켜 위치"
-  },
-  "callouts-move-up": {
-    "text": "전진 위",
-    "meaning": "게임 의미: 전진 위"
-  },
-  "callouts-come-back": {
-    "text": "돌아와 뒤쪽",
-    "meaning": "게임 의미: 돌아와 뒤쪽"
-  },
-  "callouts-group-up": {
-    "text": "모여 위",
-    "meaning": "게임 의미: 모여 위"
-  },
-  "callouts-split-up": {
-    "text": "흩어져 위",
-    "meaning": "게임 의미: 흩어져 위"
-  },
-  "callouts-stay-alive": {
-    "text": "머물러 살아있어",
-    "meaning": "게임 의미: 머물러 살아있어"
-  },
-  "callouts-play-time": {
-    "text": "플레이 시간",
-    "meaning": "게임 의미: 플레이 시간"
-  },
-  "callouts-play-safe": {
-    "text": "플레이 안전하게",
-    "meaning": "게임 의미: 플레이 안전하게"
-  },
-  "callouts-play-slow": {
-    "text": "플레이 천천히",
-    "meaning": "게임 의미: 플레이 천천히"
-  },
-  "callouts-play-fast": {
-    "text": "플레이 빠르게",
-    "meaning": "게임 의미: 플레이 빠르게"
-  },
-  "callouts-do-not-chase": {
-    "text": "하지 마 아님 추격",
-    "meaning": "게임 의미: 하지 마 아님 추격"
-  },
-  "callouts-stop-chasing": {
-    "text": "멈춰 추격 중",
-    "meaning": "게임 의미: 멈춰 추격 중"
-  },
-  "callouts-trade-me": {
-    "text": "트레이드 나",
-    "meaning": "게임 의미: 트레이드 나"
-  },
-  "callouts-trade-him": {
-    "text": "트레이드 그",
-    "meaning": "게임 의미: 트레이드 그"
-  },
-  "callouts-i-will-trade": {
-    "text": "나 할게 트레이드",
-    "meaning": "게임 의미: 나 할게 트레이드"
-  },
-  "callouts-nice-trade": {
-    "text": "나이스 트레이드",
-    "meaning": "게임 의미: 나이스 트레이드"
-  },
-  "callouts-bait-and-switch": {
-    "text": "미끼 그리고 스위치",
-    "meaning": "게임 의미: 미끼 그리고 스위치"
-  },
-  "callouts-crossfire": {
-    "text": "크로스파이어",
-    "meaning": "게임 의미: 크로스파이어"
-  },
-  "callouts-pinched": {
-    "text": "양쪽에서 압박",
-    "meaning": "게임 의미: 양쪽에서 압박"
-  },
-  "callouts-we-are-pinched": {
-    "text": "우리 양쪽에서 압박",
-    "meaning": "게임 의미: 우리 양쪽에서 압박"
-  },
-  "callouts-third-party": {
-    "text": "제3 팀",
-    "meaning": "게임 의미: 제3 팀"
-  },
-  "callouts-reset": {
-    "text": "리셋",
-    "meaning": "게임 의미: 리셋"
-  },
-  "callouts-regroup": {
-    "text": "재정비",
-    "meaning": "게임 의미: 재정비"
-  },
-  "callouts-focus-fire": {
-    "text": "집중 사격",
-    "meaning": "게임 의미: 집중 사격"
-  },
-  "callouts-target-marked": {
-    "text": "타겟 표시됨",
-    "meaning": "게임 의미: 타겟 표시됨"
-  },
-  "callouts-focus-healer": {
-    "text": "집중 힐러",
-    "meaning": "게임 의미: 집중 힐러"
-  },
-  "callouts-focus-sniper": {
-    "text": "집중 스나이퍼",
-    "meaning": "게임 의미: 집중 스나이퍼"
-  },
-  "callouts-ignore-tank": {
-    "text": "무시 탱커",
-    "meaning": "게임 의미: 무시 탱커"
-  },
-  "callouts-shield-broken": {
-    "text": "실드 깨짐",
-    "meaning": "게임 의미: 실드 깨짐"
-  },
-  "callouts-armor-cracked": {
-    "text": "아머 깨짐",
-    "meaning": "게임 의미: 아머 깨짐"
-  },
-  "callouts-one-shot": {
-    "text": "한 명 샷",
-    "meaning": "게임 의미: 한 명 샷"
-  },
-  "callouts-tagged-him": {
-    "text": "맞혔다 그",
-    "meaning": "게임 의미: 맞혔다 그"
-  },
-  "callouts-hit-for-fifty": {
-    "text": "맞힘 위해 50",
-    "meaning": "게임 의미: 맞힘 위해 50"
-  },
-  "callouts-hit-for-a-hundred": {
-    "text": "맞힘 위해 100",
-    "meaning": "게임 의미: 맞힘 위해 100"
-  },
-  "callouts-no-shield": {
-    "text": "없음 실드",
-    "meaning": "게임 의미: 없음 실드"
-  },
-  "callouts-knocked-one": {
-    "text": "다운시킴 한 명",
-    "meaning": "게임 의미: 다운시킴 한 명"
-  },
-  "callouts-finished-one": {
-    "text": "마무리 한 명",
-    "meaning": "게임 의미: 마무리 한 명"
-  },
-  "callouts-team-wipe": {
-    "text": "팀 전멸",
-    "meaning": "게임 의미: 팀 전멸"
-  },
-  "callouts-clean-fight": {
-    "text": "깔끔한 교전",
-    "meaning": "게임 의미: 깔끔한 교전"
-  },
-  "callouts-messy-fight": {
-    "text": "난전 교전",
-    "meaning": "게임 의미: 난전 교전"
-  },
-  "callouts-bad-timing": {
-    "text": "나쁜 타이밍",
-    "meaning": "게임 의미: 나쁜 타이밍"
-  },
-  "callouts-good-timing": {
-    "text": "좋은 타이밍",
-    "meaning": "게임 의미: 좋은 타이밍"
-  },
-  "callouts-unlucky": {
-    "text": "아깝다",
-    "meaning": "게임 의미: 아깝다"
-  },
-  "callouts-lucky-shot": {
-    "text": "운 좋은 샷",
-    "meaning": "게임 의미: 운 좋은 샷"
-  },
-  "callouts-clutch": {
-    "text": "클러치",
-    "meaning": "게임 의미: 클러치"
-  },
-  "callouts-ace": {
-    "text": "에이스",
-    "meaning": "게임 의미: 에이스"
-  },
-  "callouts-carry": {
-    "text": "캐리",
-    "meaning": "게임 의미: 캐리"
-  },
-  "callouts-throw": {
-    "text": "던짐",
-    "meaning": "게임 의미: 던짐"
-  },
-  "callouts-comeback": {
-    "text": "역전",
-    "meaning": "게임 의미: 역전"
-  },
-  "callouts-close-game": {
-    "text": "가까움 게임",
-    "meaning": "게임 의미: 가까움 게임"
-  },
-  "callouts-free-kill": {
-    "text": "쉬운 킬",
-    "meaning": "게임 의미: 쉬운 킬"
-  },
-  "callouts-free-objective": {
-    "text": "쉬운 목표",
-    "meaning": "게임 의미: 쉬운 목표"
-  },
-  "callouts-open-lane": {
-    "text": "열림 라인",
-    "meaning": "게임 의미: 열림 라인"
-  },
-  "callouts-blocked": {
-    "text": "막힘",
-    "meaning": "게임 의미: 막힘"
-  },
-  "callouts-trap-here": {
-    "text": "함정 여기",
-    "meaning": "게임 의미: 함정 여기"
-  },
-  "callouts-trap-destroyed": {
-    "text": "함정 파괴됨",
-    "meaning": "게임 의미: 함정 파괴됨"
-  },
-  "callouts-door-closed": {
-    "text": "문 닫힘",
-    "meaning": "게임 의미: 문 닫힘"
-  },
-  "callouts-door-open": {
-    "text": "문 열림",
-    "meaning": "게임 의미: 문 열림"
-  },
-  "callouts-bridge-clear": {
-    "text": "다리 클리어",
-    "meaning": "게임 의미: 다리 클리어"
-  },
-  "callouts-tunnel-clear": {
-    "text": "터널 클리어",
-    "meaning": "게임 의미: 터널 클리어"
-  },
-  "callouts-roof-clear": {
-    "text": "지붕 클리어",
-    "meaning": "게임 의미: 지붕 클리어"
-  },
-  "callouts-basement-clear": {
-    "text": "지하 클리어",
-    "meaning": "게임 의미: 지하 클리어"
-  },
-  "callouts-window": {
-    "text": "창문",
-    "meaning": "게임 의미: 창문"
-  },
-  "callouts-stairs": {
-    "text": "계단",
-    "meaning": "게임 의미: 계단"
-  },
-  "callouts-hallway": {
-    "text": "복도",
-    "meaning": "게임 의미: 복도"
-  },
-  "callouts-water": {
-    "text": "물가",
-    "meaning": "게임 의미: 물가"
-  },
-  "callouts-high-ground": {
-    "text": "높은 위치",
-    "meaning": "게임 의미: 높은 위치"
-  },
-  "callouts-low-ground": {
-    "text": "피 적음 위치",
-    "meaning": "게임 의미: 피 적음 위치"
-  },
-  "callouts-zone-closing": {
-    "text": "구역 좁혀짐",
-    "meaning": "게임 의미: 구역 좁혀짐"
-  },
-  "callouts-circle-moving": {
-    "text": "원 이동 중",
-    "meaning": "게임 의미: 원 이동 중"
-  },
-  "callouts-storm-coming": {
-    "text": "폭풍 옴",
-    "meaning": "게임 의미: 폭풍 옴"
-  },
-  "callouts-safe-zone": {
-    "text": "안전하게 구역",
-    "meaning": "게임 의미: 안전하게 구역"
-  },
-  "callouts-out-of-zone": {
-    "text": "없음 의 구역",
-    "meaning": "게임 의미: 없음 의 구역"
-  },
-  "callouts-loot-here": {
-    "text": "루트 여기",
-    "meaning": "게임 의미: 루트 여기"
-  },
-  "callouts-good-loot": {
-    "text": "좋은 루트",
-    "meaning": "게임 의미: 좋은 루트"
-  },
-  "callouts-need-weapon": {
-    "text": "필요 무기",
-    "meaning": "게임 의미: 필요 무기"
-  },
-  "callouts-need-shield": {
-    "text": "필요 실드",
-    "meaning": "게임 의미: 필요 실드"
-  },
-  "callouts-need-meds": {
-    "text": "필요 회복템",
-    "meaning": "게임 의미: 필요 회복템"
-  },
-  "callouts-drop-ammo": {
-    "text": "줘 탄약",
-    "meaning": "게임 의미: 줘 탄약"
-  },
-  "callouts-drop-weapon": {
-    "text": "줘 무기",
-    "meaning": "게임 의미: 줘 무기"
-  },
-  "callouts-take-this": {
-    "text": "가져가 이것",
-    "meaning": "게임 의미: 가져가 이것"
-  },
-  "callouts-do-not-take-it": {
-    "text": "하지 마 아님 가져가 그것",
-    "meaning": "게임 의미: 하지 마 아님 가져가 그것"
-  },
-  "callouts-i-will-take-it": {
-    "text": "나 할게 가져가 그것",
-    "meaning": "게임 의미: 나 할게 가져가 그것"
-  },
-  "callouts-use-it": {
-    "text": "사용해 그것",
-    "meaning": "게임 의미: 사용해 그것"
-  },
-  "callouts-save-it": {
-    "text": "아껴 그것",
-    "meaning": "게임 의미: 아껴 그것"
-  },
-  "callouts-voice-chat": {
-    "text": "음성 채팅",
-    "meaning": "게임 의미: 음성 채팅"
-  },
-  "callouts-text-chat": {
-    "text": "텍스트 채팅",
-    "meaning": "게임 의미: 텍스트 채팅"
-  },
-  "callouts-good-job": {
-    "text": "잘했어",
-    "meaning": "게임 의미: 잘했어"
-  },
-  "callouts-well-played": {
-    "text": "잘했어",
-    "meaning": "게임 의미: 잘했어"
-  },
-  "callouts-no-problem": {
-    "text": "괜찮아",
-    "meaning": "게임 의미: 괜찮아"
-  },
-  "callouts-last-one": {
-    "text": "마지막 한 명",
-    "meaning": "게임 의미: 마지막 한 명"
-  },
-  "callouts-i-see-him": {
-    "text": "나 본다 그",
-    "meaning": "게임 의미: 나 본다 그"
-  },
-  "callouts-i-see-them": {
-    "text": "나 본다 상대",
-    "meaning": "게임 의미: 나 본다 상대"
-  },
-  "callouts-on-me": {
-    "text": "위 나",
-    "meaning": "게임 의미: 위 나"
-  },
-  "callouts-with-me": {
-    "text": "함께 나",
-    "meaning": "게임 의미: 함께 나"
-  },
-  "callouts-low-hp": {
-    "text": "피 적음 HP",
-    "meaning": "게임 의미: 피 적음 HP"
-  },
-  "callouts-he-is-low": {
-    "text": "그 피 적음",
-    "meaning": "게임 의미: 그 피 적음"
-  },
-  "callouts-they-are-low": {
-    "text": "상대 피 적음",
-    "meaning": "게임 의미: 상대 피 적음"
-  },
-  "callouts-no-mic": {
-    "text": "없음 마이크",
-    "meaning": "게임 의미: 없음 마이크"
-  },
-  "callouts-mic-muted": {
-    "text": "마이크 음소거됨",
-    "meaning": "게임 의미: 마이크 음소거됨"
-  },
-  "danger-incoming": {
-    "text": "오는 중!",
-    "meaning": "게임 의미: 오는 중!"
-  },
-  "danger-grenade": {
-    "text": "수류탄!",
-    "meaning": "게임 의미: 수류탄!"
-  },
-  "danger-flash": {
-    "text": "플래시!",
-    "meaning": "게임 의미: 플래시!"
-  },
-  "danger-sniper": {
-    "text": "스나이퍼!",
-    "meaning": "게임 의미: 스나이퍼!"
-  },
-  "danger-trap": {
-    "text": "함정!",
-    "meaning": "게임 의미: 함정!"
-  },
-  "danger-mine": {
-    "text": "지뢰!",
-    "meaning": "게임 의미: 지뢰!"
-  },
-  "danger-ambush": {
-    "text": "매복!",
-    "meaning": "게임 의미: 매복!"
-  },
-  "danger-they-are-rushing": {
-    "text": "상대 러시 중",
-    "meaning": "게임 의미: 상대 러시 중"
-  },
-  "danger-they-are-pushing": {
-    "text": "상대 푸시 중",
-    "meaning": "게임 의미: 상대 푸시 중"
-  },
-  "danger-they-are-flanking": {
-    "text": "상대 뒤치기 중",
-    "meaning": "게임 의미: 상대 뒤치기 중"
-  },
-  "danger-they-know": {
-    "text": "상대 알고 있음",
-    "meaning": "게임 의미: 상대 알고 있음"
-  },
-  "danger-they-saw-me": {
-    "text": "상대 봤다 나",
-    "meaning": "게임 의미: 상대 봤다 나"
-  },
-  "danger-i-am-exposed": {
-    "text": "나 노출됨",
-    "meaning": "게임 의미: 나 노출됨"
-  },
-  "danger-no-cover": {
-    "text": "없음 엄호해줘",
-    "meaning": "게임 의미: 없음 엄호해줘"
-  },
-  "danger-low-cover": {
-    "text": "피 적음 엄호해줘",
-    "meaning": "게임 의미: 피 적음 엄호해줘"
-  },
-  "danger-bad-angle": {
-    "text": "나쁜 각",
-    "meaning": "게임 의미: 나쁜 각"
-  },
-  "danger-get-out": {
-    "text": "가져 없음",
-    "meaning": "게임 의미: 가져 없음"
-  },
-  "danger-back-up": {
-    "text": "뒤쪽 위",
-    "meaning": "게임 의미: 뒤쪽 위"
-  },
-  "danger-do-not-go-there": {
-    "text": "하지 마 아님 가자 저기",
-    "meaning": "게임 의미: 하지 마 아님 가자 저기"
-  },
-  "danger-it-is-a-trap": {
-    "text": "그것 함정",
-    "meaning": "게임 의미: 그것 함정"
-  },
-  "danger-enemy-ultimate-ready": {
-    "text": "적 궁극기 준비됨",
-    "meaning": "게임 의미: 적 궁극기 준비됨"
-  },
-  "danger-they-have-sniper": {
-    "text": "상대 가지고 있음 스나이퍼",
-    "meaning": "게임 의미: 상대 가지고 있음 스나이퍼"
-  },
-  "instructions-push": {
-    "text": "푸시",
-    "meaning": "게임 의미: 푸시"
-  },
-  "instructions-rush": {
-    "text": "러시",
-    "meaning": "게임 의미: 러시"
-  },
-  "instructions-hold": {
-    "text": "지켜",
-    "meaning": "게임 의미: 지켜"
-  },
-  "instructions-defend": {
-    "text": "방어",
-    "meaning": "게임 의미: 방어"
-  },
-  "instructions-attack": {
-    "text": "공격",
-    "meaning": "게임 의미: 공격"
-  },
-  "instructions-retreat": {
-    "text": "후퇴",
-    "meaning": "게임 의미: 후퇴"
-  },
-  "instructions-rotate": {
-    "text": "로테",
-    "meaning": "게임 의미: 로테"
-  },
-  "instructions-stack-here": {
-    "text": "모여 여기",
-    "meaning": "게임 의미: 모여 여기"
-  },
-  "instructions-spread-out": {
-    "text": "퍼져 없음",
-    "meaning": "게임 의미: 퍼져 없음"
-  },
-  "instructions-stay-together": {
-    "text": "머물러 같이",
-    "meaning": "게임 의미: 머물러 같이"
-  },
-  "instructions-follow-me": {
-    "text": "따라와 나",
-    "meaning": "게임 의미: 따라와 나"
-  },
-  "instructions-lead-the-way": {
-    "text": "앞장서 길",
-    "meaning": "게임 의미: 앞장서 길"
-  },
-  "instructions-go-first": {
-    "text": "가자 먼저",
-    "meaning": "게임 의미: 가자 먼저"
-  },
-  "instructions-i-go-first": {
-    "text": "나 가자 먼저",
-    "meaning": "게임 의미: 나 가자 먼저"
-  },
-  "instructions-wait-for-me": {
-    "text": "기다려 위해 나",
-    "meaning": "게임 의미: 기다려 위해 나"
-  },
-  "instructions-wait-for-cooldowns": {
-    "text": "기다려 위해 쿨다운",
-    "meaning": "게임 의미: 기다려 위해 쿨다운"
-  },
-  "instructions-use-smoke": {
-    "text": "사용해 연막",
-    "meaning": "게임 의미: 사용해 연막"
-  },
-  "instructions-use-flash": {
-    "text": "사용해 플래시",
-    "meaning": "게임 의미: 사용해 플래시"
-  },
-  "instructions-use-grenade": {
-    "text": "사용해 수류탄",
-    "meaning": "게임 의미: 사용해 수류탄"
-  },
-  "instructions-use-ultimate": {
-    "text": "사용해 궁극기",
-    "meaning": "게임 의미: 사용해 궁극기"
-  },
-  "instructions-save-ultimate": {
-    "text": "아껴 궁극기",
-    "meaning": "게임 의미: 아껴 궁극기"
-  },
-  "instructions-heal-me": {
-    "text": "힐해줘 나",
-    "meaning": "게임 의미: 힐해줘 나"
-  },
-  "instructions-revive-me": {
-    "text": "부활시켜 나",
-    "meaning": "게임 의미: 부활시켜 나"
-  },
-  "instructions-res-me": {
-    "text": "부활 나",
-    "meaning": "게임 의미: 부활 나"
-  },
-  "instructions-cover-the-revive": {
-    "text": "엄호해줘 부활시켜",
-    "meaning": "게임 의미: 엄호해줘 부활시켜"
-  },
-  "instructions-plant-now": {
-    "text": "설치 지금",
-    "meaning": "게임 의미: 설치 지금"
-  },
-  "instructions-defuse-now": {
-    "text": "해제 지금",
-    "meaning": "게임 의미: 해제 지금"
-  },
-  "instructions-capture-point": {
-    "text": "점령 거점",
-    "meaning": "게임 의미: 점령 거점"
-  },
-  "instructions-contest-point": {
-    "text": "비벼 거점",
-    "meaning": "게임 의미: 비벼 거점"
-  },
-  "instructions-touch-point": {
-    "text": "터치 거점",
-    "meaning": "게임 의미: 터치 거점"
-  },
-  "instructions-clear-corners": {
-    "text": "클리어 코너들",
-    "meaning": "게임 의미: 클리어 코너들"
-  },
-  "instructions-check-left": {
-    "text": "확인 왼쪽",
-    "meaning": "게임 의미: 확인 왼쪽"
-  },
-  "instructions-check-right": {
-    "text": "확인 오른쪽",
-    "meaning": "게임 의미: 확인 오른쪽"
-  },
-  "instructions-check-behind": {
-    "text": "확인 뒤",
-    "meaning": "게임 의미: 확인 뒤"
-  },
-  "instructions-do-not-split": {
-    "text": "하지 마 아님 흩어져",
-    "meaning": "게임 의미: 하지 마 아님 흩어져"
-  },
-  "instructions-do-not-feed": {
-    "text": "하지 마 아님 피드",
-    "meaning": "게임 의미: 하지 마 아님 피드"
-  },
-  "instructions-do-not-waste-it": {
-    "text": "하지 마 아님 낭비 그것",
-    "meaning": "게임 의미: 하지 마 아님 낭비 그것"
-  },
-  "instructions-stop-peeking": {
-    "text": "멈춰 피크 중",
-    "meaning": "게임 의미: 멈춰 피크 중"
-  },
-  "instructions-mute-him": {
-    "text": "뮤트 그",
-    "meaning": "게임 의미: 뮤트 그"
-  },
-  "instructions-report-after": {
-    "text": "신고 후",
-    "meaning": "게임 의미: 신고 후"
-  },
-  "instructions-stack-left": {
-    "text": "모여 왼쪽",
-    "meaning": "게임 의미: 모여 왼쪽"
-  },
-  "instructions-stack-right": {
-    "text": "모여 오른쪽",
-    "meaning": "게임 의미: 모여 오른쪽"
-  },
-  "objective-plant-the-bomb": {
-    "text": "설치 폭탄",
-    "meaning": "게임 의미: 설치 폭탄"
-  },
-  "objective-bomb-planted": {
-    "text": "폭탄 설치됨",
-    "meaning": "게임 의미: 폭탄 설치됨"
-  },
-  "objective-bomb-down": {
-    "text": "폭탄 사용 불가",
-    "meaning": "게임 의미: 폭탄 사용 불가"
-  },
-  "objective-spike-down": {
-    "text": "스파이크 사용 불가",
-    "meaning": "게임 의미: 스파이크 사용 불가"
-  },
-  "objective-defuse-the-bomb": {
-    "text": "해제 폭탄",
-    "meaning": "게임 의미: 해제 폭탄"
-  },
-  "objective-half-defuse": {
-    "text": "절반 해제",
-    "meaning": "게임 의미: 절반 해제"
-  },
-  "objective-stick-the-defuse": {
-    "text": "계속해 해제",
-    "meaning": "게임 의미: 계속해 해제"
-  },
-  "objective-fake-defuse": {
-    "text": "페이크 해제",
-    "meaning": "게임 의미: 페이크 해제"
-  },
-  "objective-objective-secured": {
-    "text": "목표 확보됨",
-    "meaning": "게임 의미: 목표 확보됨"
-  },
-  "objective-objective-lost": {
-    "text": "목표 잃음",
-    "meaning": "게임 의미: 목표 잃음"
-  },
-  "objective-point-captured": {
-    "text": "거점 점령됨",
-    "meaning": "게임 의미: 거점 점령됨"
-  },
-  "objective-point-contested": {
-    "text": "거점 교전 중",
-    "meaning": "게임 의미: 거점 교전 중"
-  },
-  "objective-payload-moving": {
-    "text": "화물 이동 중",
-    "meaning": "게임 의미: 화물 이동 중"
-  },
-  "objective-payload-stopped": {
-    "text": "화물 멈춤",
-    "meaning": "게임 의미: 화물 멈춤"
-  },
-  "objective-escort-the-payload": {
-    "text": "호위 화물",
-    "meaning": "게임 의미: 호위 화물"
-  },
-  "objective-stop-the-payload": {
-    "text": "멈춰 화물",
-    "meaning": "게임 의미: 멈춰 화물"
-  },
-  "objective-capture-the-flag": {
-    "text": "점령 깃발",
-    "meaning": "게임 의미: 점령 깃발"
-  },
-  "objective-return-the-flag": {
-    "text": "반환 깃발",
-    "meaning": "게임 의미: 반환 깃발"
-  },
-  "objective-hold-the-point": {
-    "text": "지켜 거점",
-    "meaning": "게임 의미: 지켜 거점"
-  },
-  "objective-leave-the-point": {
-    "text": "떠나 거점",
-    "meaning": "게임 의미: 떠나 거점"
-  },
-  "teamwork-nice-shot": {
-    "text": "나이스 샷",
-    "meaning": "게임 의미: 나이스 샷"
-  },
-  "teamwork-nice-try": {
-    "text": "나이스 시도",
-    "meaning": "게임 의미: 나이스 시도"
-  },
-  "teamwork-good-comms": {
-    "text": "좋은 콜",
-    "meaning": "게임 의미: 좋은 콜"
-  },
-  "teamwork-keep-comms-clear": {
-    "text": "유지 콜 클리어",
-    "meaning": "게임 의미: 유지 콜 클리어"
-  },
-  "teamwork-i-trust-you": {
-    "text": "나 믿어 너",
-    "meaning": "게임 의미: 나 믿어 너"
-  },
-  "teamwork-you-got-this": {
-    "text": "너 잡았다 이것",
-    "meaning": "게임 의미: 너 잡았다 이것"
-  },
-  "teamwork-stay-calm": {
-    "text": "머물러 침착",
-    "meaning": "게임 의미: 머물러 침착"
-  },
-  "teamwork-we-can-win": {
-    "text": "우리 가능 승리",
-    "meaning": "게임 의미: 우리 가능 승리"
-  },
-  "teamwork-one-round-at-a-time": {
-    "text": "한 명 라운드 에 시간",
-    "meaning": "게임 의미: 한 명 라운드 에 시간"
-  },
-  "teamwork-reset-mental": {
-    "text": "리셋 멘탈",
-    "meaning": "게임 의미: 리셋 멘탈"
-  },
-  "teamwork-good-effort": {
-    "text": "좋은 노력",
-    "meaning": "게임 의미: 좋은 노력"
-  },
-  "teamwork-great-shot": {
-    "text": "훌륭한 샷",
-    "meaning": "게임 의미: 훌륭한 샷"
-  },
-  "teamwork-great-save": {
-    "text": "훌륭한 아껴",
-    "meaning": "게임 의미: 훌륭한 아껴"
-  },
-  "teamwork-great-call": {
-    "text": "훌륭한 콜",
-    "meaning": "게임 의미: 훌륭한 콜"
-  },
-  "teamwork-nice-clutch": {
-    "text": "나이스 클러치",
-    "meaning": "게임 의미: 나이스 클러치"
-  },
-  "teamwork-nice-aim": {
-    "text": "나이스 에임",
-    "meaning": "게임 의미: 나이스 에임"
-  },
-  "teamwork-nice-movement": {
-    "text": "나이스 무빙",
-    "meaning": "게임 의미: 나이스 무빙"
-  },
-  "teamwork-nice-utility": {
-    "text": "나이스 유틸",
-    "meaning": "게임 의미: 나이스 유틸"
-  },
-  "teamwork-i-will-cover-you": {
-    "text": "나 할게 엄호해줘 너",
-    "meaning": "게임 의미: 나 할게 엄호해줘 너"
-  },
-  "teamwork-i-will-heal-you": {
-    "text": "나 할게 힐해줘 너",
-    "meaning": "게임 의미: 나 할게 힐해줘 너"
-  },
-  "teamwork-i-will-watch-flank": {
-    "text": "나 할게 봐줘 뒤치기",
-    "meaning": "게임 의미: 나 할게 봐줘 뒤치기"
-  },
-  "teamwork-take-my-weapon": {
-    "text": "가져가 내 무기",
-    "meaning": "게임 의미: 가져가 내 무기"
-  },
-  "teamwork-take-my-loot": {
-    "text": "가져가 내 루트",
-    "meaning": "게임 의미: 가져가 내 루트"
-  },
-  "teamwork-let-me-go-first": {
-    "text": "하자 나 가자 먼저",
-    "meaning": "게임 의미: 하자 나 가자 먼저"
-  },
-  "teamwork-i-will-bait-for-you": {
-    "text": "나 할게 미끼 위해 너",
-    "meaning": "게임 의미: 나 할게 미끼 위해 너"
-  },
-  "teamwork-trade-together": {
-    "text": "트레이드 같이",
-    "meaning": "게임 의미: 트레이드 같이"
-  },
-  "teamwork-wait-for-team": {
-    "text": "기다려 위해 팀",
-    "meaning": "게임 의미: 기다려 위해 팀"
-  },
-  "teamwork-we-need-everyone": {
-    "text": "우리 필요 모두",
-    "meaning": "게임 의미: 우리 필요 모두"
-  },
-  "teamwork-play-together": {
-    "text": "플레이 같이",
-    "meaning": "게임 의미: 플레이 같이"
-  },
-  "teamwork-do-not-blame": {
-    "text": "하지 마 아님 비난",
-    "meaning": "게임 의미: 하지 마 아님 비난"
-  },
-  "teamwork-focus-next": {
-    "text": "집중 다음",
-    "meaning": "게임 의미: 집중 다음"
-  },
-  "strategy-default-setup": {
-    "text": "기본 셋업",
-    "meaning": "게임 의미: 기본 셋업"
-  },
-  "strategy-slow-push": {
-    "text": "천천히 푸시",
-    "meaning": "게임 의미: 천천히 푸시"
-  },
-  "strategy-fast-push": {
-    "text": "빠르게 푸시",
-    "meaning": "게임 의미: 빠르게 푸시"
-  },
-  "strategy-fake-push": {
-    "text": "페이크 공격",
-    "meaning": "게임 의미: 페이크 공격"
-  },
-  "strategy-split-push": {
-    "text": "흩어져 푸시",
-    "meaning": "게임 의미: 흩어져 푸시"
-  },
-  "strategy-retake": {
-    "text": "리테이크",
-    "meaning": "게임 의미: 리테이크"
-  },
-  "strategy-save-round": {
-    "text": "아껴 라운드",
-    "meaning": "게임 의미: 아껴 라운드"
-  },
-  "strategy-eco-round": {
-    "text": "에코 라운드",
-    "meaning": "게임 의미: 에코 라운드"
-  },
-  "strategy-full-buy": {
-    "text": "전원 구매",
-    "meaning": "게임 의미: 전원 구매"
-  },
-  "strategy-force-buy": {
-    "text": "강제 구매 구매",
-    "meaning": "게임 의미: 강제 구매 구매"
-  },
-  "strategy-play-for-picks": {
-    "text": "플레이 위해 픽",
-    "meaning": "게임 의미: 플레이 위해 픽"
-  },
-  "strategy-play-objective": {
-    "text": "플레이 목표",
-    "meaning": "게임 의미: 플레이 목표"
-  },
-  "strategy-play-for-late-game": {
-    "text": "플레이 위해 늦은 게임",
-    "meaning": "게임 의미: 플레이 위해 늦은 게임"
-  },
-  "strategy-take-map-control": {
-    "text": "가져가 맵 장악",
-    "meaning": "게임 의미: 가져가 맵 장악"
-  },
-  "strategy-give-map-control": {
-    "text": "줘 맵 장악",
-    "meaning": "게임 의미: 줘 맵 장악"
-  },
-  "strategy-deny-vision": {
-    "text": "차단 시야",
-    "meaning": "게임 의미: 차단 시야"
-  },
-  "strategy-gather-info": {
-    "text": "모아 정보",
-    "meaning": "게임 의미: 모아 정보"
-  },
-  "strategy-bait-utility": {
-    "text": "미끼 유틸",
-    "meaning": "게임 의미: 미끼 유틸"
-  },
-  "strategy-use-utility-first": {
-    "text": "사용해 유틸 먼저",
-    "meaning": "게임 의미: 사용해 유틸 먼저"
-  },
-  "strategy-trade-setup": {
-    "text": "트레이드 셋업",
-    "meaning": "게임 의미: 트레이드 셋업"
-  },
-  "strategy-double-peek": {
-    "text": "더블 피크",
-    "meaning": "게임 의미: 더블 피크"
-  },
-  "strategy-off-angle": {
-    "text": "오프 각",
-    "meaning": "게임 의미: 오프 각"
-  },
-  "strategy-cross-setup": {
-    "text": "크로스 셋업",
-    "meaning": "게임 의미: 크로스 셋업"
-  },
-  "strategy-late-lurk": {
-    "text": "늦은 러크",
-    "meaning": "게임 의미: 늦은 러크"
-  },
-  "strategy-anchor-site": {
-    "text": "앵커 사이트",
-    "meaning": "게임 의미: 앵커 사이트"
-  },
-  "strategy-play-retake": {
-    "text": "플레이 리테이크",
-    "meaning": "게임 의미: 플레이 리테이크"
-  },
-  "strategy-stack-objective": {
-    "text": "모여 목표",
-    "meaning": "게임 의미: 모여 목표"
-  },
-  "strategy-pressure-side-lane": {
-    "text": "압박 사이드 라인",
-    "meaning": "게임 의미: 압박 사이드 라인"
-  },
-  "strategy-cut-rotation": {
-    "text": "차단 로테이션",
-    "meaning": "게임 의미: 차단 로테이션"
-  },
-  "strategy-hold-rotation": {
-    "text": "지켜 로테이션",
-    "meaning": "게임 의미: 지켜 로테이션"
-  },
-  "strategy-time-advantage": {
-    "text": "시간 우위",
-    "meaning": "게임 의미: 시간 우위"
-  },
-  "strategy-man-advantage": {
-    "text": "인원 우위",
-    "meaning": "게임 의미: 인원 우위"
-  },
-  "strategy-man-disadvantage": {
-    "text": "인원 불리",
-    "meaning": "게임 의미: 인원 불리"
-  },
-  "strategy-numbers-advantage": {
-    "text": "인원수 우위",
-    "meaning": "게임 의미: 인원수 우위"
-  },
-  "strategy-damage-advantage": {
-    "text": "피해 우위",
-    "meaning": "게임 의미: 피해 우위"
-  },
-  "strategy-ultimate-advantage": {
-    "text": "궁극기 우위",
-    "meaning": "게임 의미: 궁극기 우위"
-  },
-  "strategy-economy-advantage": {
-    "text": "경제 우위",
-    "meaning": "게임 의미: 경제 우위"
-  },
-  "strategy-do-not-overcommit": {
-    "text": "하지 마 아님 과투입",
-    "meaning": "게임 의미: 하지 마 아님 과투입"
-  },
-  "strategy-commit-now": {
-    "text": "전념 지금",
-    "meaning": "게임 의미: 전념 지금"
-  },
-  "strategy-cancel-the-push": {
-    "text": "취소 푸시",
-    "meaning": "게임 의미: 취소 푸시"
-  },
-  "economy-buy": {
-    "text": "구매",
-    "meaning": "게임 의미: 구매"
-  },
-  "economy-save": {
-    "text": "아껴",
-    "meaning": "게임 의미: 아껴"
-  },
-  "economy-drop-me": {
-    "text": "줘 나",
-    "meaning": "게임 의미: 줘 나"
-  },
-  "economy-i-can-drop": {
-    "text": "나 가능 줘",
-    "meaning": "게임 의미: 나 가능 줘"
-  },
-  "economy-need-a-drop": {
-    "text": "필요 줘",
-    "meaning": "게임 의미: 필요 줘"
-  },
-  "economy-full-save": {
-    "text": "전원 아껴",
-    "meaning": "게임 의미: 전원 아껴"
-  },
-  "economy-light-buy": {
-    "text": "가벼운 구매",
-    "meaning": "게임 의미: 가벼운 구매"
-  },
-  "economy-half-buy": {
-    "text": "절반 구매",
-    "meaning": "게임 의미: 절반 구매"
-  },
-  "economy-full-armor": {
-    "text": "전원 아머",
-    "meaning": "게임 의미: 전원 아머"
-  },
-  "economy-no-armor": {
-    "text": "없음 아머",
-    "meaning": "게임 의미: 없음 아머"
-  },
-  "economy-upgrade-weapon": {
-    "text": "업그레이드 무기",
-    "meaning": "게임 의미: 업그레이드 무기"
-  },
-  "economy-keep-weapon": {
-    "text": "유지 무기",
-    "meaning": "게임 의미: 유지 무기"
-  },
-  "economy-pick-up-gun": {
-    "text": "픽 위 총",
-    "meaning": "게임 의미: 픽 위 총"
-  },
-  "economy-save-the-gun": {
-    "text": "아껴 총",
-    "meaning": "게임 의미: 아껴 총"
-  },
-  "economy-we-are-broke": {
-    "text": "우리 돈 없음",
-    "meaning": "게임 의미: 우리 돈 없음"
-  },
-  "economy-they-are-broke": {
-    "text": "상대 돈 없음",
-    "meaning": "게임 의미: 상대 돈 없음"
-  },
-  "economy-they-have-money": {
-    "text": "상대 가지고 있음 돈",
-    "meaning": "게임 의미: 상대 가지고 있음 돈"
-  },
-  "economy-we-can-buy-next": {
-    "text": "우리 가능 구매 다음",
-    "meaning": "게임 의미: 우리 가능 구매 다음"
-  },
-  "economy-do-not-force": {
-    "text": "하지 마 아님 강제 구매",
-    "meaning": "게임 의미: 하지 마 아님 강제 구매"
-  },
-  "economy-force-together": {
-    "text": "강제 구매 같이",
-    "meaning": "게임 의미: 강제 구매 같이"
-  },
-  "slang-afk": {
-    "text": "AFK",
-    "meaning": "게임 의미: AFK"
-  },
-  "slang-brb": {
-    "text": "BRB",
-    "meaning": "게임 의미: BRB"
-  },
-  "slang-op": {
-    "text": "OP",
-    "meaning": "게임 의미: OP"
-  },
-  "slang-nerf": {
-    "text": "너프",
-    "meaning": "게임 의미: 너프"
-  },
-  "slang-buff": {
-    "text": "버프",
-    "meaning": "게임 의미: 버프"
-  },
-  "slang-meta": {
-    "text": "메타",
-    "meaning": "게임 의미: 메타"
-  },
-  "slang-main": {
-    "text": "주캐",
-    "meaning": "게임 의미: 주캐"
-  },
-  "slang-alt": {
-    "text": "부계",
-    "meaning": "게임 의미: 부계"
-  },
-  "slang-smurf": {
-    "text": "스머프",
-    "meaning": "게임 의미: 스머프"
-  },
-  "slang-noob": {
-    "text": "초보",
-    "meaning": "게임 의미: 초보"
-  },
-  "slang-camper": {
-    "text": "캠퍼",
-    "meaning": "게임 의미: 캠퍼"
-  },
-  "slang-sweat": {
-    "text": "빡겜러",
-    "meaning": "게임 의미: 빡겜러"
-  },
-  "slang-tryhard": {
-    "text": "빡겜러",
-    "meaning": "게임 의미: 빡겜러"
-  },
-  "slang-clutch-or-kick": {
-    "text": "클러치 또는 킥",
-    "meaning": "게임 의미: 클러치 또는 킥"
-  },
-  "slang-diff": {
-    "text": "차이",
-    "meaning": "게임 의미: 차이"
-  },
-  "slang-gap": {
-    "text": "격차",
-    "meaning": "게임 의미: 격차"
-  },
-  "slang-tilt": {
-    "text": "멘탈 흔들림",
-    "meaning": "게임 의미: 멘탈 흔들림"
-  },
-  "slang-rage-quit": {
-    "text": "분노 나감",
-    "meaning": "게임 의미: 분노 나감"
-  },
-  "slang-spawn-camp": {
-    "text": "스폰 캠프",
-    "meaning": "게임 의미: 스폰 캠프"
-  },
-  "slang-spawn-kill": {
-    "text": "스폰 킬",
-    "meaning": "게임 의미: 스폰 킬"
-  },
-  "slang-hitbox": {
-    "text": "히트박스",
-    "meaning": "게임 의미: 히트박스"
-  },
-  "slang-lag": {
-    "text": "렉",
-    "meaning": "게임 의미: 렉"
-  },
-  "slang-ping": {
-    "text": "핑",
-    "meaning": "게임 의미: 핑"
-  },
-  "slang-fps": {
-    "text": "FPS",
-    "meaning": "게임 의미: FPS"
-  },
-  "slang-dps": {
-    "text": "DPS",
-    "meaning": "게임 의미: DPS"
-  },
-  "slang-aoe": {
-    "text": "AOE",
-    "meaning": "게임 의미: AOE"
-  },
-  "slang-cc": {
-    "text": "CC",
-    "meaning": "게임 의미: CC"
-  },
-  "slang-gg-ez": {
-    "text": "GG EZ",
-    "meaning": "게임 의미: GG EZ"
-  },
-  "slang-wp": {
-    "text": "WP",
-    "meaning": "게임 의미: WP"
-  },
-  "slang-nt": {
-    "text": "NT",
-    "meaning": "게임 의미: NT"
+    "meaning": "Good game의 약자. 보통 경기 끝에 좋은 게임이었다는 뜻으로 사용한다"
   },
   "slang-ggwp": {
     "text": "GGWP",
-    "meaning": "게임 의미: GGWP"
+    "meaning": "Good game, well played의 약자. 좋은 경기였고 잘했다는 뜻"
   },
-  "slang-lag-spike": {
-    "text": "렉 스파이크",
-    "meaning": "게임 의미: 렉 스파이크"
+  "callouts-glhf": {
+    "text": "GLHF",
+    "meaning": "Good luck, have fun의 약자. 경기 시작 전 행운을 빌고 즐기자는 친근한 인사"
   },
-  "slang-ranked": {
-    "text": "랭크",
-    "meaning": "게임 의미: 랭크"
+  "slang-wp": {
+    "text": "WP",
+    "meaning": "Well played의 약자. 잘했다는 칭찬"
   },
-  "slang-casual": {
-    "text": "일반",
-    "meaning": "게임 의미: 일반"
+  "slang-nt": {
+    "text": "NT",
+    "meaning": "Nice try의 약자. 실패했지만 좋은 시도였다는 격려"
+  },
+  "callouts-nice": {
+    "text": "나이스!",
+    "meaning": "좋은 플레이 직후 짧게 하는 칭찬"
+  },
+  "teamwork-nice-try": {
+    "text": "나이스 트라이",
+    "meaning": "실패한 시도 후에도 아쉬웠고 잘했다는 격려 표현"
+  },
+  "teamwork-nice-shot": {
+    "text": "나이스 샷",
+    "meaning": "좋은 사격이나 정확한 샷을 칭찬하는 말"
+  },
+  "callouts-thanks": {
+    "text": "고마워",
+    "meaning": "팀원에게 빠르게 감사할 때 쓰는 말"
+  },
+  "callouts-sorry": {
+    "text": "미안",
+    "meaning": "실수나 팀킬, 아군 피해 후 사과하는 말"
+  },
+  "callouts-my-bad": {
+    "text": "내 실수야",
+    "meaning": "방금 실수가 자기 책임이라고 인정하는 말"
+  },
+  "callouts-good-job": {
+    "text": "잘했어",
+    "meaning": "유용한 행동이나 라운드 후 주는 긍정적인 피드백"
+  },
+  "teamwork-good-comms": {
+    "text": "좋은 브리핑",
+    "meaning": "팀 커뮤니케이션이 도움이 됐다는 뜻"
+  },
+  "slang-afk": {
+    "text": "AFK",
+    "meaning": "Away from keyboard의 약자. 플레이어가 조작하지 않고 자리를 비운 상태"
+  },
+  "slang-brb": {
+    "text": "BRB",
+    "meaning": "Be right back의 약자. 곧 돌아오겠다는 뜻"
+  },
+  "slang-dc": {
+    "text": "DC",
+    "meaning": "Disconnect의 약자. 경기 연결이 끊기는 것"
   },
   "slang-disconnect": {
-    "text": "연결 끊김",
-    "meaning": "게임 의미: 연결 끊김"
+    "text": "접속 끊김",
+    "meaning": "플레이어가 경기 연결을 잃는 것"
   },
   "slang-reconnect": {
     "text": "재접속",
-    "meaning": "게임 의미: 재접속"
+    "meaning": "연결이 끊긴 뒤 다시 경기에 들어오는 것"
+  },
+  "slang-lag": {
+    "text": "렉",
+    "meaning": "네트워크나 서버 문제로 입력과 화면 반응이 늦어지는 현상"
+  },
+  "slang-lag-spike": {
+    "text": "렉 스파이크",
+    "meaning": "짧은 순간 갑자기 크게 발생하는 네트워크 지연"
+  },
+  "slang-ping": {
+    "text": "핑",
+    "meaning": "상황에 따라 지도 표시 또는 네트워크 지연 시간을 뜻한다"
+  },
+  "slang-fps": {
+    "text": "FPS",
+    "meaning": "1인칭 슈팅 게임 또는 성능 이야기에서는 초당 프레임 수"
+  },
+  "slang-server": {
+    "text": "서버",
+    "meaning": "경기를 호스팅하는 온라인 시스템이나 지역"
+  },
+  "slang-hit-reg": {
+    "text": "히트 판정",
+    "meaning": "공격이나 총알이 게임에서 제대로 맞은 것으로 처리되는지 여부"
+  },
+  "slang-desync": {
+    "text": "동기화 오류",
+    "meaning": "플레이어가 보는 상태와 서버 또는 다른 플레이어의 상태가 어긋나는 현상"
+  },
+  "slang-op": {
+    "text": "OP",
+    "meaning": "Overpowered의 약자. 다른 것에 비해 너무 강한 상태"
+  },
+  "slang-meta": {
+    "text": "메타",
+    "meaning": "현재 가장 효과적이거나 유행하는 전략, 캐릭터, 무기, 빌드"
+  },
+  "slang-nerf": {
+    "text": "너프",
+    "meaning": "업데이트로 캐릭터, 무기, 능력 등을 약하게 만드는 것"
+  },
+  "slang-buff": {
+    "text": "버프",
+    "meaning": "업데이트로 캐릭터, 무기, 능력 등을 강하게 만드는 것"
+  },
+  "slang-noob": {
+    "text": "뉴비",
+    "meaning": "초보자나 미숙한 플레이어를 뜻한다. 상황에 따라 모욕이 될 수 있다"
+  },
+  "slang-pro": {
+    "text": "프로",
+    "meaning": "매우 실력이 좋거나 프로 수준의 플레이어"
+  },
+  "slang-bot": {
+    "text": "봇",
+    "meaning": "AI가 조종하는 캐릭터. 또는 못하는 플레이어를 비꼬는 말"
+  },
+  "slang-smurf": {
+    "text": "스머프",
+    "meaning": "실력자가 낮은 랭크 계정으로 플레이하는 것"
+  },
+  "slang-camper": {
+    "text": "캠퍼",
+    "meaning": "한 자리에 숨어 기다리며 킬을 노리는 플레이어"
+  },
+  "slang-tryhard": {
+    "text": "트라이하드",
+    "meaning": "이기려고 매우 진지하게 플레이하는 사람. 때로는 비꼬는 말로 쓰인다"
+  },
+  "slang-sweat": {
+    "text": "빡겜러",
+    "meaning": "이기기 위해 매우 열심히 플레이하는 사람"
+  },
+  "slang-tilt": {
+    "text": "멘탈 나감",
+    "meaning": "짜증이나 분노 때문에 플레이가 나빠지는 상태"
+  },
+  "slang-toxic": {
+    "text": "트롤/비매너",
+    "meaning": "채팅이나 플레이에서 무례하고 공격적이거나 해로운 행동"
+  },
+  "slang-salty": {
+    "text": "삐짐/분함",
+    "meaning": "패배하거나 당해서 화가 나 있거나 불만이 있는 상태"
+  },
+  "slang-rage-quit": {
+    "text": "분노 종료",
+    "meaning": "화가 나서 경기를 중간에 나가는 것"
+  },
+  "slang-pvp": {
+    "text": "PvP",
+    "meaning": "Player versus player의 약자. 플레이어끼리 싸우는 게임 모드"
+  },
+  "slang-pve": {
+    "text": "PvE",
+    "meaning": "Player versus environment의 약자. AI 적이나 게임 시스템을 상대로 하는 플레이"
+  },
+  "slang-ranked": {
+    "text": "랭크",
+    "meaning": "등급에 영향을 주는 경쟁 모드"
+  },
+  "slang-casual": {
+    "text": "일반전",
+    "meaning": "랭크에 영향을 주지 않는 비교적 편한 모드"
+  },
+  "slang-mmr": {
+    "text": "MMR",
+    "meaning": "매치메이킹 레이팅. 공정한 경기를 만들기 위해 쓰는 숨은 또는 표시되는 실력 점수"
+  },
+  "slang-elo": {
+    "text": "Elo",
+    "meaning": "레이팅 시스템 또는 경쟁 실력 점수를 뜻하는 일반적인 말"
+  },
+  "slang-kd": {
+    "text": "K/D",
+    "meaning": "킬/데스 비율. 킬 수와 데스 수의 비율"
+  },
+  "slang-kda": {
+    "text": "KDA",
+    "meaning": "킬, 데스, 어시스트를 합친 일반적인 성과 지표"
+  },
+  "slang-mvp": {
+    "text": "MVP",
+    "meaning": "Most valuable player. 경기에서 가장 큰 영향을 준 플레이어"
+  },
+  "slang-rng": {
+    "text": "RNG",
+    "meaning": "무작위 요소. 게임에서 운에 따라 달라지는 결과"
+  },
+  "slang-xp": {
+    "text": "XP",
+    "meaning": "경험치. 캐릭터, 계정, 배틀패스 레벨을 올리는 데 쓰는 포인트"
+  },
+  "slang-level-up": {
+    "text": "레벨 업",
+    "meaning": "진행이나 경험으로 레벨이 오르거나 실력이 향상되는 것"
+  },
+  "slang-grind": {
+    "text": "노가다/그라인드",
+    "meaning": "보상, 랭크, 진행을 위해 경기나 작업을 반복하는 것"
+  },
+  "slang-farm": {
+    "text": "파밍",
+    "meaning": "자원, 골드, XP, 쉬운 킬 등을 반복해서 모으는 것"
+  },
+  "slang-main": {
+    "text": "메인",
+    "meaning": "플레이어가 가장 많이 쓰는 캐릭터, 역할, 무기"
+  },
+  "slang-alt": {
+    "text": "부계/서브",
+    "meaning": "보조 계정 또는 다른 캐릭터"
+  },
+  "slang-party": {
+    "text": "파티",
+    "meaning": "함께 매칭을 돌리는 플레이어 그룹"
+  },
+  "slang-squad": {
+    "text": "스쿼드",
+    "meaning": "함께 협력해 움직이는 소규모 팀"
+  },
+  "slang-lobby": {
+    "text": "로비",
+    "meaning": "경기 전 대기 화면 또는 한 경기에 있는 플레이어 그룹"
+  },
+  "slang-queue": {
+    "text": "큐",
+    "meaning": "매치메이킹에서 경기를 찾기 위해 기다리는 것"
+  },
+  "slang-matchmaking": {
+    "text": "매치메이킹",
+    "meaning": "플레이어를 찾아 균형 잡힌 경기를 만드는 시스템"
+  },
+  "slang-solo-queue": {
+    "text": "솔로 큐",
+    "meaning": "고정 팀 없이 혼자 매치메이킹을 하는 것"
+  },
+  "slang-duo": {
+    "text": "듀오",
+    "meaning": "두 명이 한 조로 함께 플레이하는 것"
+  },
+  "slang-stack": {
+    "text": "스택/고정팟",
+    "meaning": "함께 큐를 돌리는 사전 구성 그룹. 보통 풀파티를 말하기도 한다"
+  },
+  "slang-comms": {
+    "text": "브리핑/콜",
+    "meaning": "보이스, 채팅, 핑으로 하는 팀 커뮤니케이션"
+  },
+  "callouts-voice-chat": {
+    "text": "보이스 채팅",
+    "meaning": "마이크를 이용한 소통"
+  },
+  "callouts-text-chat": {
+    "text": "텍스트 채팅",
+    "meaning": "타이핑으로 하는 소통"
+  },
+  "callouts-no-mic": {
+    "text": "마이크 없음",
+    "meaning": "말하는 사람이 마이크를 사용할 수 없다는 뜻"
+  },
+  "callouts-mic-muted": {
+    "text": "마이크 음소거",
+    "meaning": "마이크가 음소거된 상태"
+  },
+  "slang-dps": {
+    "text": "DPS",
+    "meaning": "초당 피해량 또는 딜을 넣는 역할"
+  },
+  "slang-tank": {
+    "text": "탱커",
+    "meaning": "높은 내구도로 피해를 받아내고 팀원을 보호하는 역할"
+  },
+  "slang-support": {
+    "text": "서포터",
+    "meaning": "회복, 유틸리티, 버프, 팀원 지원에 집중하는 역할"
+  },
+  "slang-healer": {
+    "text": "힐러",
+    "meaning": "팀원의 체력을 회복하는 데 특화된 지원 역할"
+  },
+  "slang-aoe": {
+    "text": "AOE",
+    "meaning": "범위 효과. 일정 지역에 영향을 주는 피해나 능력"
+  },
+  "slang-cc": {
+    "text": "CC",
+    "meaning": "군중 제어. 기절, 둔화, 이동 불가처럼 대상을 방해하는 능력"
+  },
+  "slang-ult": {
+    "text": "궁/궁극기",
+    "meaning": "ultimate의 줄임말. 캐릭터의 가장 강력한 능력"
+  },
+  "callouts-ultimate-ready": {
+    "text": "궁 준비됨",
+    "meaning": "말하는 사람의 궁극기가 준비됐다는 뜻"
+  },
+  "callouts-no-ultimate": {
+    "text": "궁 없음",
+    "meaning": "말하는 사람이나 적에게 궁극기가 없다는 뜻"
+  },
+  "callouts-ability-ready": {
+    "text": "스킬 준비됨",
+    "meaning": "유용한 능력을 사용할 수 있는 상태"
+  },
+  "callouts-ability-down": {
+    "text": "스킬 빠짐",
+    "meaning": "중요한 능력이 없거나 쿨다운 중인 상태"
+  },
+  "callouts-cooldown": {
+    "text": "쿨다운",
+    "meaning": "능력을 아직 사용할 수 없는 상태"
+  },
+  "callouts-enemy-spotted": {
+    "text": "적 발견",
+    "meaning": "적을 봤다는 뜻"
+  },
+  "callouts-enemy-here": {
+    "text": "여기 적",
+    "meaning": "말하는 사람의 위치에 적이 있다는 뜻"
+  },
+  "callouts-enemy-there": {
+    "text": "저기 적",
+    "meaning": "표시했거나 말한 위치에 적이 있다는 뜻"
+  },
+  "callouts-on-me": {
+    "text": "내 쪽/나한테",
+    "meaning": "적이나 교전이 말하는 사람 근처에 있다는 뜻"
+  },
+  "callouts-i-see-him": {
+    "text": "적 보여",
+    "meaning": "말하는 사람이 적을 시야로 확인했다는 뜻"
+  },
+  "callouts-i-see-them": {
+    "text": "적들 보여",
+    "meaning": "말하는 사람이 하나 이상의 적을 시야로 확인했다는 뜻"
+  },
+  "callouts-one-more": {
+    "text": "하나 더",
+    "meaning": "근처에 적이 한 명 더 있거나 한 번 더 행동이 필요하다는 뜻"
+  },
+  "callouts-last-one": {
+    "text": "마지막 한 명",
+    "meaning": "적이 한 명만 남았다는 뜻"
+  },
+  "callouts-two-enemies-here": {
+    "text": "여기 두 명",
+    "meaning": "말하는 사람 위치에 적이 두 명 있다는 뜻"
+  },
+  "callouts-three-enemies-here": {
+    "text": "여기 세 명",
+    "meaning": "말하는 사람 위치에 적이 세 명 있다는 뜻"
+  },
+  "callouts-full-team-here": {
+    "text": "여기 풀팀",
+    "meaning": "대부분 또는 모든 적이 이 구역에 모여 있다는 뜻"
+  },
+  "callouts-enemy-missing": {
+    "text": "적 안 보임",
+    "meaning": "적이 더 이상 보이지 않아 로테이트할 수 있다는 뜻"
+  },
+  "callouts-all-missing": {
+    "text": "전원 안 보임",
+    "meaning": "현재 보이는 적이 없다는 뜻"
+  },
+  "callouts-behind-you": {
+    "text": "뒤에!",
+    "meaning": "팀원 바로 뒤에 적이 있다는 경고"
+  },
+  "callouts-left-side": {
+    "text": "왼쪽!",
+    "meaning": "왼쪽에서 적 압박이 온다는 뜻"
+  },
+  "callouts-right-side": {
+    "text": "오른쪽!",
+    "meaning": "오른쪽에서 적 압박이 온다는 뜻"
+  },
+  "callouts-above-us": {
+    "text": "위에",
+    "meaning": "우리 팀보다 높은 위치에 적이 있다는 뜻"
+  },
+  "callouts-below-us": {
+    "text": "아래에",
+    "meaning": "우리 팀 위치보다 아래에 적이 있다는 뜻"
+  },
+  "callouts-in-front": {
+    "text": "앞에",
+    "meaning": "위협이 바로 앞에 있다는 뜻"
+  },
+  "callouts-mid": {
+    "text": "미드",
+    "meaning": "적이나 교전이 가운데 라인에 있다는 뜻"
+  },
+  "callouts-top-mid": {
+    "text": "탑 미드",
+    "meaning": "적이 위쪽 미드 위치에 있다는 뜻"
+  },
+  "callouts-bottom-mid": {
+    "text": "바텀 미드",
+    "meaning": "적이 아래쪽 미드 위치에 있다는 뜻"
+  },
+  "callouts-spawn": {
+    "text": "스폰",
+    "meaning": "적이나 팀이 스폰 근처에 있다는 뜻"
+  },
+  "callouts-our-spawn": {
+    "text": "우리 스폰",
+    "meaning": "상황이 우리 시작 지점 근처라는 뜻"
+  },
+  "callouts-their-spawn": {
+    "text": "적 스폰",
+    "meaning": "상황이 적 시작 지점 근처라는 뜻"
+  },
+  "callouts-flank": {
+    "text": "플랭크",
+    "meaning": "적이 옆이나 뒤에서 공격하는 것"
+  },
+  "callouts-watch-flank": {
+    "text": "뒤 봐/플랭크 봐",
+    "meaning": "누군가 팀 뒤쪽 경로를 확인해야 한다는 뜻"
+  },
+  "danger-incoming": {
+    "text": "온다!",
+    "meaning": "위협이나 공격이 지금 들어오고 있다는 경고"
+  },
+  "danger-grenade": {
+    "text": "수류탄!",
+    "meaning": "근처에 수류탄이 있다는 경고"
+  },
+  "danger-flash": {
+    "text": "플래시!",
+    "meaning": "플래시뱅이나 실명 효과가 온다는 경고"
+  },
+  "danger-sniper": {
+    "text": "스나이퍼!",
+    "meaning": "스나이퍼가 해당 구역을 위협하고 있다는 뜻"
+  },
+  "danger-trap": {
+    "text": "트랩!",
+    "meaning": "근처에 함정이 있다는 경고"
+  },
+  "danger-mine": {
+    "text": "지뢰!",
+    "meaning": "근처에 폭발 지뢰가 있다는 경고"
+  },
+  "danger-ambush": {
+    "text": "매복!",
+    "meaning": "적이 팀을 기습하려고 숨어 있다는 뜻"
+  },
+  "danger-they-are-rushing": {
+    "text": "적 러시 중",
+    "meaning": "적이 매우 빠르게 공격하고 있다는 뜻"
+  },
+  "danger-they-are-pushing": {
+    "text": "적 푸시 중",
+    "meaning": "적이 공격적으로 앞으로 밀고 들어온다는 뜻"
+  },
+  "danger-they-are-flanking": {
+    "text": "적 플랭크 중",
+    "meaning": "적이 뒤나 옆에서 공격하고 있다는 뜻"
+  },
+  "danger-they-know": {
+    "text": "적이 알아",
+    "meaning": "적이 우리 위치나 계획을 알고 있다는 뜻"
+  },
+  "danger-they-saw-me": {
+    "text": "나 들켰어",
+    "meaning": "말하는 사람이 적에게 발견됐다는 뜻"
+  },
+  "danger-i-am-exposed": {
+    "text": "나 노출됨",
+    "meaning": "말하는 사람이 위험하게 보이는 위치에 있다는 뜻"
+  },
+  "danger-no-cover": {
+    "text": "엄폐물 없음",
+    "meaning": "숨거나 버틸 안전한 엄폐물이 없다는 뜻"
+  },
+  "danger-bad-angle": {
+    "text": "불리한 각",
+    "meaning": "현재 각도가 위험하거나 불리하다는 뜻"
+  },
+  "danger-get-out": {
+    "text": "빠져",
+    "meaning": "위험한 지역에서 즉시 나가라는 뜻"
+  },
+  "danger-back-up": {
+    "text": "뒤로 빠져",
+    "meaning": "위험에서 멀어지라는 뜻"
+  },
+  "callouts-i-am-down": {
+    "text": "나 다운",
+    "meaning": "말하는 사람이 다운됐거나 죽어서 싸울 수 없다는 뜻"
+  },
+  "callouts-i-am-low": {
+    "text": "나 피 낮아",
+    "meaning": "말하는 사람의 체력이 낮아 조심하거나 도움이 필요하다는 뜻"
+  },
+  "callouts-low-hp": {
+    "text": "피 낮음",
+    "meaning": "적이나 팀원의 체력이 얼마 남지 않았다는 뜻"
+  },
+  "callouts-he-is-low": {
+    "text": "쟤 피 낮아",
+    "meaning": "남성 적이 약해서 마무리할 수 있다는 뜻"
+  },
+  "callouts-they-are-low": {
+    "text": "쟤네 피 낮아",
+    "meaning": "하나 이상의 적이 약해서 마무리할 수 있다는 뜻"
+  },
+  "callouts-one-shot": {
+    "text": "원샷",
+    "meaning": "적이 한 번만 더 맞으면 죽을 정도로 약하다는 뜻"
+  },
+  "callouts-armor-cracked": {
+    "text": "아머 깨짐",
+    "meaning": "적의 방어구가 깨졌거나 매우 약해졌다는 뜻"
+  },
+  "callouts-shield-broken": {
+    "text": "실드 깨짐",
+    "meaning": "적의 실드나 방어구가 파괴됐다는 뜻"
+  },
+  "callouts-no-shield": {
+    "text": "실드 없음",
+    "meaning": "적에게 실드나 방어구가 남아 있지 않다는 뜻"
+  },
+  "callouts-tagged-him": {
+    "text": "딜 넣었어",
+    "meaning": "말하는 사람이 적에게 피해를 줬다는 뜻"
+  },
+  "callouts-hit-for-fifty": {
+    "text": "50 딜",
+    "meaning": "적이 약 50 피해를 받았다는 뜻"
+  },
+  "callouts-hit-for-a-hundred": {
+    "text": "100 딜",
+    "meaning": "적이 약 100 피해를 받았다는 뜻"
+  },
+  "callouts-knocked-one": {
+    "text": "하나 다운",
+    "meaning": "적 한 명을 다운시켰다는 뜻"
+  },
+  "callouts-finished-one": {
+    "text": "하나 마무리",
+    "meaning": "다운된 적 한 명을 처치했다는 뜻"
+  },
+  "callouts-team-wipe": {
+    "text": "팀 와이프",
+    "meaning": "적 팀 전체를 제거했다는 뜻"
+  },
+  "instructions-push": {
+    "text": "푸시",
+    "meaning": "공격하거나 앞으로 전진하라는 뜻"
+  },
+  "instructions-rush": {
+    "text": "러시",
+    "meaning": "매우 빠르게 공격하라는 뜻"
+  },
+  "instructions-hold": {
+    "text": "홀드",
+    "meaning": "현재 위치를 지키라는 뜻"
+  },
+  "instructions-defend": {
+    "text": "수비",
+    "meaning": "사이트나 구역을 지키라는 뜻"
+  },
+  "instructions-attack": {
+    "text": "공격",
+    "meaning": "공격 압박을 시작하라는 뜻"
+  },
+  "instructions-retreat": {
+    "text": "후퇴",
+    "meaning": "안전한 곳으로 물러나라는 뜻"
+  },
+  "instructions-rotate": {
+    "text": "로테이트",
+    "meaning": "다른 라인이나 목표로 이동하라는 뜻"
+  },
+  "callouts-rotating": {
+    "text": "로테이트 중",
+    "meaning": "적이 다른 구역으로 이동 중이라는 뜻"
+  },
+  "callouts-they-rotated": {
+    "text": "적 로테이트함",
+    "meaning": "적 팀이 다른 사이트나 라인으로 이동했다는 뜻"
+  },
+  "callouts-fake-rotate": {
+    "text": "페이크 로테이트",
+    "meaning": "적이 로테이트하는 척할 수 있다는 뜻"
+  },
+  "callouts-push-now": {
+    "text": "지금 푸시",
+    "meaning": "즉시 공격하라는 뜻"
+  },
+  "callouts-go-now": {
+    "text": "지금 가",
+    "meaning": "즉시 행동하라는 뜻"
+  },
+  "callouts-fall-back": {
+    "text": "빠져",
+    "meaning": "더 안전한 위치로 후퇴하라는 뜻"
+  },
+  "callouts-group-up": {
+    "text": "모여",
+    "meaning": "다음 플레이 전에 함께 모이라는 뜻"
+  },
+  "callouts-regroup": {
+    "text": "재정비",
+    "meaning": "싸움이나 로테이트 후 다시 모이라는 뜻"
+  },
+  "callouts-need-help": {
+    "text": "도움 필요",
+    "meaning": "말하는 사람이 압박받고 있어 도움이 필요하다는 뜻"
+  },
+  "callouts-help-me": {
+    "text": "도와줘",
+    "meaning": "말하는 사람에게 즉각적인 도움이 필요하다는 뜻"
+  },
+  "callouts-need-backup": {
+    "text": "지원 필요",
+    "meaning": "말하는 사람이 팀원의 지원을 필요로 한다는 뜻"
+  },
+  "callouts-i-need-healing": {
+    "text": "힐 필요",
+    "meaning": "말하는 사람이 회복이나 지원 스킬을 원한다는 뜻"
+  },
+  "instructions-heal-me": {
+    "text": "힐 줘",
+    "meaning": "말하는 사람에게 회복 스킬이나 아이템을 사용하라는 뜻"
+  },
+  "instructions-revive-me": {
+    "text": "살려줘",
+    "meaning": "다운된 말하는 사람을 부활시키라는 뜻"
+  },
+  "instructions-res-me": {
+    "text": "레즈 해줘",
+    "meaning": "revive 또는 resurrect me의 줄임말. 부활시켜 달라는 뜻"
+  },
+  "instructions-cover-the-revive": {
+    "text": "부활 커버",
+    "meaning": "부활시키는 플레이어를 보호하라는 뜻"
+  },
+  "callouts-need-ammo": {
+    "text": "탄 필요",
+    "meaning": "말하는 사람의 탄약이 부족하다는 뜻"
+  },
+  "callouts-out-of-ammo": {
+    "text": "탄 없음",
+    "meaning": "재장전하거나 보급받기 전까지 쏠 수 없다는 뜻"
+  },
+  "callouts-reloading": {
+    "text": "장전 중",
+    "meaning": "말하는 사람이 장전 중이라 안전하게 싸우기 어렵다는 뜻"
+  },
+  "callouts-cover-me": {
+    "text": "커버해줘",
+    "meaning": "이동, 장전, 목표 수행 중 말하는 사람을 보호하라는 뜻"
+  },
+  "callouts-i-got-you": {
+    "text": "내가 봐줄게",
+    "meaning": "말하는 사람이 팀원을 지원하거나 보호하겠다는 뜻"
+  },
+  "callouts-ping-it": {
+    "text": "핑 찍어",
+    "meaning": "그 위치, 아이템, 적, 목표를 지도에 표시하라는 뜻"
+  },
+  "callouts-mark-the-enemy": {
+    "text": "적 표시해",
+    "meaning": "적에게 핑이나 마커를 찍으라는 뜻"
+  },
+  "callouts-i-marked-it": {
+    "text": "표시했어",
+    "meaning": "말하는 사람이 마커를 찍었다는 뜻"
+  },
+  "callouts-check-map": {
+    "text": "맵 봐",
+    "meaning": "미니맵이나 전술 지도를 확인하라는 뜻"
+  },
+  "callouts-look-at-ping": {
+    "text": "핑 봐",
+    "meaning": "찍힌 표시를 주의해서 보라는 뜻"
+  },
+  "instructions-follow-me": {
+    "text": "따라와",
+    "meaning": "말하는 사람과 함께 이동하라는 뜻"
+  },
+  "instructions-stay-together": {
+    "text": "같이 있어",
+    "meaning": "팀원들과 가까이 있으라는 뜻"
+  },
+  "instructions-spread-out": {
+    "text": "흩어져",
+    "meaning": "너무 가까이 붙어 있지 말라는 뜻"
+  },
+  "instructions-wait-for-me": {
+    "text": "나 기다려",
+    "meaning": "말하는 사람이 도착할 때까지 행동을 늦추라는 뜻"
+  },
+  "instructions-wait-for-cooldowns": {
+    "text": "쿨 기다려",
+    "meaning": "스킬이 준비될 때까지 싸우지 말라는 뜻"
+  },
+  "objective-plant-the-bomb": {
+    "text": "폭탄 설치",
+    "meaning": "목표 사이트에 폭탄이나 스파이크를 설치하라는 뜻"
+  },
+  "objective-bomb-planted": {
+    "text": "폭탄 설치됨",
+    "meaning": "폭탄이나 스파이크가 설치됐다는 뜻"
+  },
+  "objective-bomb-down": {
+    "text": "폭탄 떨어짐",
+    "meaning": "폭탄을 든 플레이어가 목표 아이템을 떨어뜨렸다는 뜻"
+  },
+  "objective-spike-down": {
+    "text": "스파이크 떨어짐",
+    "meaning": "스파이크가 떨어졌다는 뜻"
+  },
+  "objective-defuse-the-bomb": {
+    "text": "폭탄 해체",
+    "meaning": "설치된 폭탄이 터지기 전에 해체하라는 뜻"
+  },
+  "objective-half-defuse": {
+    "text": "반 해체",
+    "meaning": "해체를 중간 체크포인트까지 진행하라는 뜻"
+  },
+  "objective-stick-the-defuse": {
+    "text": "해체 계속해",
+    "meaning": "압박을 받아도 해체를 멈추지 말라는 뜻"
+  },
+  "objective-fake-defuse": {
+    "text": "페이크 해체",
+    "meaning": "적이 피킹하게 만들기 위해 해체를 살짝 누르는 것"
+  },
+  "objective-objective-secured": {
+    "text": "목표 확보",
+    "meaning": "팀이 목표를 점령하거나 지켜냈다는 뜻"
+  },
+  "objective-objective-lost": {
+    "text": "목표 뺏김",
+    "meaning": "적이 목표를 가져갔다는 뜻"
+  },
+  "objective-point-captured": {
+    "text": "거점 점령",
+    "meaning": "거점이 이제 우리 팀 통제에 있다는 뜻"
+  },
+  "objective-point-contested": {
+    "text": "거점 교전 중",
+    "meaning": "양 팀이 거점을 두고 싸우고 있다는 뜻"
+  },
+  "objective-payload-moving": {
+    "text": "화물 이동 중",
+    "meaning": "호위 목표가 전진하고 있다는 뜻"
+  },
+  "objective-payload-stopped": {
+    "text": "화물 멈춤",
+    "meaning": "호위 목표가 움직이지 않는다는 뜻"
+  },
+  "slang-loot": {
+    "text": "루트/파밍템",
+    "meaning": "게임 안에서 찾거나 얻는 유용한 아이템, 무기, 자원, 보상"
+  },
+  "callouts-loot-here": {
+    "text": "여기 템 있어",
+    "meaning": "이 위치에 유용한 아이템이 있다는 뜻"
+  },
+  "callouts-good-loot": {
+    "text": "좋은 템",
+    "meaning": "이 구역에 가치 있는 아이템이 많다는 뜻"
+  },
+  "callouts-need-weapon": {
+    "text": "무기 필요",
+    "meaning": "말하는 사람이 쓸 수 있는 무기가 필요하다는 뜻"
+  },
+  "callouts-need-shield": {
+    "text": "실드 필요",
+    "meaning": "말하는 사람이 방어구나 실드 아이템이 필요하다는 뜻"
+  },
+  "callouts-need-meds": {
+    "text": "힐템 필요",
+    "meaning": "말하는 사람이 회복 아이템이 필요하다는 뜻"
+  },
+  "callouts-drop-ammo": {
+    "text": "탄 줘",
+    "meaning": "팀원에게 탄약을 주라는 뜻"
+  },
+  "callouts-drop-weapon": {
+    "text": "무기 줘",
+    "meaning": "팀원에게 무기를 주라는 뜻"
+  },
+  "callouts-take-this": {
+    "text": "이거 가져",
+    "meaning": "팀원이 제안된 아이템을 주워야 한다는 뜻"
+  },
+  "callouts-do-not-take-it": {
+    "text": "그거 먹지 마",
+    "meaning": "그 아이템을 다른 사람을 위해 남겨두라는 뜻"
+  },
+  "callouts-i-will-take-it": {
+    "text": "내가 먹을게",
+    "meaning": "말하는 사람이 그 아이템을 줍고 싶다는 뜻"
+  },
+  "callouts-use-it": {
+    "text": "써",
+    "meaning": "아이템이나 능력을 활성화하거나 사용하라는 뜻"
+  },
+  "callouts-save-it": {
+    "text": "아껴",
+    "meaning": "아이템이나 능력을 아직 쓰지 말라는 뜻"
+  },
+  "strategy-default-setup": {
+    "text": "기본 세팅",
+    "meaning": "안전한 일반 포메이션으로 시작하라는 뜻"
+  },
+  "strategy-slow-push": {
+    "text": "천천히 푸시",
+    "meaning": "각 구역을 확인하며 조심스럽게 공격하는 전략"
+  },
+  "strategy-fast-push": {
+    "text": "빠른 푸시",
+    "meaning": "적이 반응하기 전에 빠르게 공격하는 전략"
+  },
+  "strategy-fake-push": {
+    "text": "페이크 푸시",
+    "meaning": "적을 끌어내기 위해 한 구역을 공격하는 척하는 전략"
+  },
+  "strategy-split-push": {
+    "text": "스플릿 푸시",
+    "meaning": "두 개 이상의 경로에서 공격하는 전략"
+  },
+  "strategy-retake": {
+    "text": "리테이크",
+    "meaning": "빼앗긴 목표를 다시 탈환하는 것"
+  },
+  "strategy-eco-round": {
+    "text": "에코 라운드",
+    "meaning": "돈을 아끼기 위해 싼 장비를 쓰는 라운드"
+  },
+  "strategy-full-buy": {
+    "text": "풀바이",
+    "meaning": "모두가 강한 장비를 구매하는 것"
+  },
+  "strategy-force-buy": {
+    "text": "포스바이",
+    "meaning": "경제가 부족해도 지금 이기기 위해 무리해서 구매하는 것"
+  },
+  "strategy-play-objective": {
+    "text": "오브젝트 플레이",
+    "meaning": "킬보다 목표를 우선하라는 뜻"
+  },
+  "strategy-play-for-picks": {
+    "text": "픽 노리기",
+    "meaning": "본격적으로 들어가기 전 안전한 한 명 처치를 노리는 전략"
+  },
+  "strategy-take-map-control": {
+    "text": "맵 장악",
+    "meaning": "맵의 중요한 구역을 확보하는 것"
+  },
+  "strategy-gather-info": {
+    "text": "정보 수집",
+    "meaning": "진입하기 전에 정찰하고 정보를 얻는 것"
+  },
+  "strategy-use-utility-first": {
+    "text": "유틸 먼저 써",
+    "meaning": "진입이나 교전 전에 스킬과 유틸리티를 먼저 사용하라는 뜻"
+  },
+  "strategy-double-peek": {
+    "text": "더블 피킹",
+    "meaning": "두 명이 같은 각을 동시에 피킹하는 것"
+  },
+  "strategy-off-angle": {
+    "text": "오프앵글",
+    "meaning": "적을 놀라게 하려고 흔하지 않은 위치를 잡는 것"
+  },
+  "strategy-late-lurk": {
+    "text": "늦은 럴크",
+    "meaning": "한 플레이어가 늦게 움직이며 뒤에서 공격하는 전략"
+  },
+  "economy-buy": {
+    "text": "구매",
+    "meaning": "무기, 장비, 아이템을 사는 것"
+  },
+  "economy-save": {
+    "text": "세이브",
+    "meaning": "다음 라운드를 위해 돈이나 자원을 아끼는 것"
+  },
+  "economy-drop-me": {
+    "text": "드롭해줘",
+    "meaning": "말하는 사람에게 무기, 아이템, 자원을 사주거나 주라는 뜻"
+  },
+  "economy-i-can-drop": {
+    "text": "드롭 가능",
+    "meaning": "말하는 사람이 팀원에게 무기, 아이템, 자원을 사주거나 줄 수 있다는 뜻"
+  },
+  "economy-need-a-drop": {
+    "text": "드롭 필요",
+    "meaning": "말하는 사람이 팀원에게 무기나 자원을 받아야 한다는 뜻"
+  },
+  "economy-full-save": {
+    "text": "풀세이브",
+    "meaning": "이번 라운드에 아무도 많이 쓰지 말아야 한다는 뜻"
+  },
+  "economy-light-buy": {
+    "text": "라이트 바이",
+    "meaning": "싼 장비나 제한된 장비만 사는 것"
+  },
+  "economy-half-buy": {
+    "text": "하프 바이",
+    "meaning": "일부 자원을 쓰되 다음 라운드에 필요한 만큼은 남기는 것"
+  },
+  "economy-full-armor": {
+    "text": "풀아머",
+    "meaning": "최대 방어구나 보호 장비를 사는 것"
+  },
+  "economy-no-armor": {
+    "text": "아머 없음",
+    "meaning": "플레이어에게 방어구가 없다는 뜻"
+  },
+  "economy-upgrade-weapon": {
+    "text": "무기 업그레이드",
+    "meaning": "더 강한 무기로 바꾸는 것"
+  },
+  "economy-keep-weapon": {
+    "text": "무기 지켜",
+    "meaning": "현재 무기를 버리지 말라는 뜻"
+  },
+  "economy-pick-up-gun": {
+    "text": "총 주워",
+    "meaning": "떨어진 무기를 가져가라는 뜻"
+  },
+  "economy-save-the-gun": {
+    "text": "총 세이브",
+    "meaning": "다음 라운드를 위해 무기를 들고 살아남으라는 뜻"
+  },
+  "economy-we-are-broke": {
+    "text": "우리 돈 없음",
+    "meaning": "팀의 돈이나 자원이 매우 부족하다는 뜻"
+  },
+  "economy-they-are-broke": {
+    "text": "쟤네 돈 없음",
+    "meaning": "적 팀의 돈이나 자원이 부족하다는 뜻"
+  },
+  "slang-skin": {
+    "text": "스킨",
+    "meaning": "캐릭터, 무기, 아이템의 외형을 바꾸는 꾸미기 요소"
+  },
+  "slang-battle-pass": {
+    "text": "배틀패스",
+    "meaning": "플레이를 통해 꾸미기 아이템이나 보상을 해금하는 보상 트랙"
+  },
+  "slang-loadout": {
+    "text": "로드아웃",
+    "meaning": "경기에서 사용하는 무기, 장비, 능력, 퍽의 선택 세트"
+  },
+  "slang-build": {
+    "text": "빌드",
+    "meaning": "아이템, 능력, 능력치, 업그레이드로 구성한 세팅"
+  },
+  "slang-perk": {
+    "text": "퍽",
+    "meaning": "플레이어가 선택하는 패시브 보너스나 특별 이점"
+  },
+  "slang-cosmetic": {
+    "text": "코스메틱",
+    "meaning": "성능을 직접 높이지 않고 외형만 바꾸는 아이템"
+  },
+  "slang-patch": {
+    "text": "패치",
+    "meaning": "버그 수정, 밸런스 조정, 콘텐츠 추가를 포함한 게임 업데이트"
+  },
+  "slang-patch-notes": {
+    "text": "패치 노트",
+    "meaning": "게임 업데이트에서 무엇이 바뀌었는지 설명하는 공식 안내"
+  },
+  "slang-hotfix": {
+    "text": "핫픽스",
+    "meaning": "긴급 문제를 빠르게 고치는 업데이트"
+  },
+  "slang-bug": {
+    "text": "버그",
+    "meaning": "게임 오류나 의도하지 않은 문제"
+  },
+  "slang-glitch": {
+    "text": "글리치",
+    "meaning": "이상하거나 의도하지 않은 게임 동작. 때로는 악용될 수 있다"
+  },
+  "slang-exploit": {
+    "text": "익스플로잇",
+    "meaning": "버그나 시스템을 악용해 부당한 이득을 얻는 것"
+  },
+  "slang-cheater": {
+    "text": "치터",
+    "meaning": "부정한 도구나 방법으로 이득을 얻는 플레이어"
+  },
+  "slang-hacker": {
+    "text": "핵 유저",
+    "meaning": "치트나 허가되지 않은 도구를 사용한다고 의심받는 플레이어"
+  },
+  "slang-ban": {
+    "text": "밴",
+    "meaning": "플레이어, 캐릭터, 맵, 계정 사용을 막는 것"
+  },
+  "slang-report": {
+    "text": "신고",
+    "meaning": "핵, 비매너, 규칙 위반에 대해 신고를 보내는 것"
+  },
+  "slang-skill-issue": {
+    "text": "실력 문제",
+    "meaning": "문제가 게임이 아니라 플레이 실력 때문이라는 놀림 표현"
+  },
+  "slang-touch-grass": {
+    "text": "현생 좀 살아",
+    "meaning": "게임이나 온라인 싸움에서 잠깐 쉬라는 농담식 표현"
+  },
+  "slang-cooked": {
+    "text": "망했다",
+    "meaning": "크게 불리하거나, 완전히 당했거나, 질 가능성이 높은 상태"
+  },
+  "slang-diffed": {
+    "text": "차이 났다",
+    "meaning": "같은 역할이나 매치업에서 상대에게 성과가 밀렸다는 뜻"
+  },
+  "slang-quest": {
+    "text": "퀘스트",
+    "meaning": "진행도나 보상을 주는 임무나 과제"
+  },
+  "slang-mission": {
+    "text": "미션",
+    "meaning": "플레이어가 완료해야 하는 목표나 과제"
+  },
+  "slang-boss": {
+    "text": "보스",
+    "meaning": "강한 적. 보통 레벨이나 전투의 마지막에 등장한다"
+  },
+  "slang-mob": {
+    "text": "몹",
+    "meaning": "일반 AI 적이나 크리처"
+  },
+  "slang-aggro": {
+    "text": "어그로",
+    "meaning": "적의 주의나 위협이 특정 플레이어에게 집중된 상태"
+  },
+  "slang-raid": {
+    "text": "레이드",
+    "meaning": "보통 보스를 상대로 하는 대규모 협동 도전"
+  },
+  "slang-dungeon": {
+    "text": "던전",
+    "meaning": "적, 목표, 보상이 있는 구조화된 PvE 구역"
+  },
+  "slang-cc-chain": {
+    "text": "CC 연계",
+    "meaning": "대상을 계속 무력화하기 위해 여러 군중 제어 효과를 순서대로 사용하는 것"
+  },
+  "slang-clutch-or-kick": {
+    "text": "클러치 못하면 강퇴",
+    "meaning": "혼자 이겨야 하는 상황에서 장난스럽게 압박하는 말"
+  },
+  "slang-diff": {
+    "text": "차이",
+    "meaning": "difference의 줄임말. 한 플레이어나 역할이 상대보다 더 잘했다는 뜻"
+  },
+  "slang-gap": {
+    "text": "격차",
+    "meaning": "플레이어나 팀 사이의 큰 실력 차이"
+  },
+  "slang-gg-ez": {
+    "text": "GG EZ",
+    "meaning": "Good game, easy의 뜻. 보통 무례하게 받아들여질 수 있다"
+  },
+  "slang-hitbox": {
+    "text": "히트박스",
+    "meaning": "공격이나 총알이 맞은 것으로 인정되는 보이지 않는 판정 영역"
+  },
+  "slang-spawn-camp": {
+    "text": "스폰 캠프",
+    "meaning": "적이 스폰하자마자 공격하는 것"
+  },
+  "slang-spawn-kill": {
+    "text": "스폰킬",
+    "meaning": "플레이어가 스폰한 직후 바로 죽이는 것"
+  },
+  "callouts-ace": {
+    "text": "에이스",
+    "meaning": "한 플레이어가 적 팀 전체를 처치한 것"
+  },
+  "callouts-back-site": {
+    "text": "사이트 뒤",
+    "meaning": "목표 사이트 뒤쪽에 적이 있다는 뜻"
+  },
+  "callouts-bad-timing": {
+    "text": "타이밍 안 좋음",
+    "meaning": "행동이 운이 없거나 좋지 않은 순간에 일어났다는 뜻"
+  },
+  "callouts-bait-and-switch": {
+    "text": "베이트 앤 스위치",
+    "meaning": "한 명이 시선을 끌고 다른 한 명이 킬을 가져가는 플레이"
+  },
+  "callouts-basement-clear": {
+    "text": "지하 클리어",
+    "meaning": "지하나 낮은 구역이 안전해 보인다는 뜻"
+  },
+  "callouts-blocked": {
+    "text": "막힘",
+    "meaning": "경로나 길이 사용할 수 없거나 안전하지 않다는 뜻"
+  },
+  "callouts-bridge-clear": {
+    "text": "다리 클리어",
+    "meaning": "다리 경로가 안전해 보인다는 뜻"
+  },
+  "callouts-careful": {
+    "text": "조심",
+    "meaning": "위험할 수 있으니 주의하라는 뜻"
+  },
+  "callouts-carry": {
+    "text": "캐리",
+    "meaning": "한 플레이어가 대부분의 일을 하거나 팀을 승리로 이끄는 것"
+  },
+  "callouts-circle-moving": {
+    "text": "서클 이동 중",
+    "meaning": "배틀로얄의 원이 위치를 바꾸고 있다는 뜻"
+  },
+  "callouts-clean-fight": {
+    "text": "깔끔한 교전",
+    "meaning": "팀이 좋은 통제로 교전을 이겼다는 뜻"
+  },
+  "callouts-clear-left": {
+    "text": "왼쪽 클리어",
+    "meaning": "왼쪽이 안전해 보인다는 뜻"
+  },
+  "callouts-clear-mid": {
+    "text": "미드 클리어",
+    "meaning": "가운데 구역이 안전해 보인다는 뜻"
+  },
+  "callouts-clear-right": {
+    "text": "오른쪽 클리어",
+    "meaning": "오른쪽이 안전해 보인다는 뜻"
+  },
+  "callouts-close-corner": {
+    "text": "가까운 코너",
+    "meaning": "가까운 모서리에 적이 숨어 있다는 뜻"
+  },
+  "callouts-close-game": {
+    "text": "박빙 게임",
+    "meaning": "경기가 매우 팽팽하다는 뜻"
+  },
+  "callouts-clutch": {
+    "text": "클러치",
+    "meaning": "한 플레이어가 압박 속에서 어려운 상황을 혼자 이긴 것"
+  },
+  "callouts-come-back": {
+    "text": "돌아와",
+    "meaning": "팀이나 더 안전한 구역으로 돌아오라는 뜻"
+  },
+  "callouts-comeback": {
+    "text": "역전 흐름",
+    "meaning": "뒤지고 있던 팀이 따라잡고 있다는 뜻"
+  },
+  "callouts-contact": {
+    "text": "접촉",
+    "meaning": "말하는 사람이 적과 마주쳤다는 뜻"
+  },
+  "callouts-corner": {
+    "text": "코너",
+    "meaning": "모서리에 적이 숨어 있다는 뜻"
+  },
+  "callouts-crossfire": {
+    "text": "크로스파이어",
+    "meaning": "두 팀원이 서로 다른 각도에서 같은 적을 커버하는 것"
+  },
+  "callouts-default-spot": {
+    "text": "기본 자리",
+    "meaning": "설치, 홀드, 수비에 가장 흔히 쓰이는 위치"
+  },
+  "callouts-do-not-chase": {
+    "text": "쫓지 마",
+    "meaning": "적을 너무 멀리 따라가지 말라는 뜻"
+  },
+  "callouts-do-not-peek": {
+    "text": "피킹하지 마",
+    "meaning": "적의 각에 몸을 노출하지 말라는 뜻"
+  },
+  "callouts-door-closed": {
+    "text": "문 닫힘",
+    "meaning": "문이나 경로가 막혀 있다는 뜻"
+  },
+  "callouts-door-open": {
+    "text": "문 열림",
+    "meaning": "문이나 경로를 사용할 수 있다는 뜻"
+  },
+  "callouts-flash-out": {
+    "text": "플래시 나감",
+    "meaning": "플래시뱅이나 실명 능력이 사용됐다는 뜻"
+  },
+  "callouts-focus-fire": {
+    "text": "포커스 파이어",
+    "meaning": "모두가 같은 대상을 쏘라는 뜻"
+  },
+  "callouts-focus-healer": {
+    "text": "힐러 먼저",
+    "meaning": "적 힐러나 서포터를 먼저 공격하라는 뜻"
+  },
+  "callouts-focus-sniper": {
+    "text": "스나 먼저",
+    "meaning": "적 스나이퍼를 먼저 공격하라는 뜻"
+  },
+  "callouts-footsteps": {
+    "text": "발소리",
+    "meaning": "말하는 사람이 적의 움직임 소리를 들었다는 뜻"
+  },
+  "callouts-free-kill": {
+    "text": "공짜 킬",
+    "meaning": "쉽게 잡을 수 있는 적이라는 뜻"
+  },
+  "callouts-free-objective": {
+    "text": "공짜 목표",
+    "meaning": "큰 저항 없이 목표를 가져갈 수 있다는 뜻"
+  },
+  "callouts-front-site": {
+    "text": "사이트 앞",
+    "meaning": "목표 사이트 앞쪽에 적이 있다는 뜻"
+  },
+  "callouts-good-timing": {
+    "text": "좋은 타이밍",
+    "meaning": "행동이 알맞은 순간에 일어났다는 뜻"
+  },
+  "callouts-grenade-out": {
+    "text": "수류탄 나감",
+    "meaning": "수류탄을 던졌다는 뜻"
+  },
+  "callouts-hallway": {
+    "text": "복도",
+    "meaning": "복도에 적이나 움직임이 있다는 뜻"
+  },
+  "callouts-hide": {
+    "text": "숨어",
+    "meaning": "보이지 않게 숨으라는 뜻"
+  },
+  "callouts-high-ground": {
+    "text": "고지대",
+    "meaning": "적보다 위에 있는 중요한 위치"
+  },
+  "callouts-hold-angle": {
+    "text": "각 잡아",
+    "meaning": "적이 올 것으로 예상되는 길을 계속 조준하라는 뜻"
+  },
+  "callouts-hold-position": {
+    "text": "자리 지켜",
+    "meaning": "지금 위치에 있고 무리하게 나가지 말라는 뜻"
+  },
+  "callouts-i-am-watching": {
+    "text": "내가 보고 있어",
+    "meaning": "말하는 사람이 각이나 구역을 보고 있다는 뜻"
+  },
+  "callouts-i-hear-steps": {
+    "text": "발소리 들림",
+    "meaning": "적 발소리가 들린다는 뜻"
+  },
+  "callouts-i-will-trade": {
+    "text": "내가 트레이드할게",
+    "meaning": "말하는 사람이 따라가서 리턴킬을 확보하겠다는 뜻"
+  },
+  "callouts-ignore-tank": {
+    "text": "탱커 무시",
+    "meaning": "지금은 단단한 적에게 딜을 낭비하지 말라는 뜻"
+  },
+  "callouts-long-range": {
+    "text": "원거리",
+    "meaning": "적이 멀리 있거나 긴 각을 잡고 있다는 뜻"
+  },
+  "callouts-low-ground": {
+    "text": "저지대",
+    "meaning": "팀이 적보다 낮은 위치에 있다는 뜻"
+  },
+  "callouts-lucky-shot": {
+    "text": "운 좋은 샷",
+    "meaning": "운도 어느 정도 작용해서 맞은 샷이라는 뜻"
+  },
+  "callouts-messy-fight": {
+    "text": "어수선한 교전",
+    "meaning": "교전이 정리되지 않았고 위험했다는 뜻"
+  },
+  "callouts-move-up": {
+    "text": "앞으로 가",
+    "meaning": "더 앞쪽 위치로 전진하라는 뜻"
+  },
+  "callouts-nice-trade": {
+    "text": "나이스 트레이드",
+    "meaning": "팀원이 성공적으로 리턴킬을 가져갔다는 뜻"
+  },
+  "callouts-no-contact": {
+    "text": "접촉 없음",
+    "meaning": "아직 적을 발견하지 못했다는 뜻"
+  },
+  "callouts-no-problem": {
+    "text": "괜찮아",
+    "meaning": "팀원이 사과했을 때 친근하게 답하는 말"
+  },
+  "callouts-not-clear": {
+    "text": "클리어 아님",
+    "meaning": "그 구역이 안전하다고 확인되지 않았다는 뜻"
+  },
+  "callouts-open-lane": {
+    "text": "라인 열림",
+    "meaning": "라인이나 길이 수비되지 않고 있다는 뜻"
+  },
+  "callouts-out-of-zone": {
+    "text": "존 밖",
+    "meaning": "누군가 안전 구역 밖에 있다는 뜻"
+  },
+  "callouts-peek-together": {
+    "text": "같이 피킹",
+    "meaning": "두 명 이상이 동시에 적을 보라는 뜻"
+  },
+  "callouts-pinched": {
+    "text": "양쪽에서 잡힘",
+    "meaning": "적이 두 방향에서 압박받고 있다는 뜻"
+  },
+  "callouts-play-fast": {
+    "text": "빠르게 플레이",
+    "meaning": "속도와 압박으로 적을 놀라게 하라는 뜻"
+  },
+  "callouts-play-safe": {
+    "text": "안전하게 플레이",
+    "meaning": "위험한 교전을 피하라는 뜻"
+  },
+  "callouts-play-slow": {
+    "text": "천천히 플레이",
+    "meaning": "조심스럽게 움직이며 정보를 모으라는 뜻"
+  },
+  "callouts-play-time": {
+    "text": "시간 끌어",
+    "meaning": "타이머가 우리 팀에 유리해질 때까지 적을 지연시키라는 뜻"
+  },
+  "callouts-reset": {
+    "text": "리셋",
+    "meaning": "난전에서 멈추고 다시 계획대로 돌아가라는 뜻"
+  },
+  "callouts-roof-clear": {
+    "text": "옥상 클리어",
+    "meaning": "옥상 구역이 안전해 보인다는 뜻"
+  },
+  "callouts-run": {
+    "text": "뛰어/도망가",
+    "meaning": "빠르게 탈출하라는 뜻"
+  },
+  "callouts-safe-zone": {
+    "text": "안전 구역",
+    "meaning": "이 구역이 안전 구역 안에 있다는 뜻"
+  },
+  "callouts-short-range": {
+    "text": "근거리",
+    "meaning": "적이 매우 가까이 있다는 뜻"
+  },
+  "callouts-shotgun-close": {
+    "text": "샷건 가까이",
+    "meaning": "샷건을 든 적이 근처에 있다는 뜻"
+  },
+  "callouts-site-clear": {
+    "text": "사이트 클리어",
+    "meaning": "목표 사이트가 지금은 안전해 보인다는 뜻"
+  },
+  "callouts-site-not-clear": {
+    "text": "사이트 클리어 아님",
+    "meaning": "목표 사이트 안에 아직 적이 있을 수 있다는 뜻"
+  },
+  "callouts-smoke-out": {
+    "text": "스모크 나감",
+    "meaning": "스모크 수류탄이나 시야 차단 능력이 사용됐다는 뜻"
+  },
+  "callouts-sniper-watching": {
+    "text": "스나가 보고 있음",
+    "meaning": "스나이퍼가 이 각을 잡고 있다는 뜻"
+  },
+  "callouts-split-up": {
+    "text": "흩어져",
+    "meaning": "더 많은 구역을 커버하거나 압박하기 위해 나뉘라는 뜻"
+  },
+  "callouts-stairs": {
+    "text": "계단",
+    "meaning": "계단 근처에 적이나 움직임이 있다는 뜻"
+  },
+  "callouts-stay-alive": {
+    "text": "살아 있어",
+    "meaning": "지금은 생존이 중요하니 죽지 말라는 뜻"
+  },
+  "callouts-stop-chasing": {
+    "text": "추격 그만",
+    "meaning": "킬을 쫓지 말고 목표로 돌아오라는 뜻"
+  },
+  "callouts-storm-coming": {
+    "text": "스톰 온다",
+    "meaning": "피해를 주는 구역이 다가오고 있다는 뜻"
+  },
+  "callouts-swing-together": {
+    "text": "같이 스윙",
+    "meaning": "함께 나가서 적과 싸우라는 뜻"
+  },
+  "callouts-target-marked": {
+    "text": "타깃 표시됨",
+    "meaning": "우선순위 대상이 표시됐다는 뜻"
+  },
+  "callouts-they-are-close": {
+    "text": "적 가까움",
+    "meaning": "적이 근처에 있다는 뜻"
+  },
+  "callouts-they-are-far": {
+    "text": "적 멀리 있음",
+    "meaning": "적이 멀리 있다는 뜻"
+  },
+  "callouts-third-party": {
+    "text": "서드파티",
+    "meaning": "다른 팀이 교전에 끼어들고 있다는 뜻"
+  },
+  "callouts-throw": {
+    "text": "던짐",
+    "meaning": "이길 수 있는 상황이나 유리함을 실수로 내주는 것"
+  },
+  "callouts-trade-him": {
+    "text": "트레이드해",
+    "meaning": "팀원이 죽거나 다운된 뒤 리턴킬을 가져가라는 뜻"
+  },
+  "callouts-trade-me": {
+    "text": "나 트레이드해",
+    "meaning": "말하는 사람을 잡은 적을 바로 잡을 준비를 하라는 뜻"
+  },
+  "callouts-trap-destroyed": {
+    "text": "트랩 제거됨",
+    "meaning": "함정이 제거됐다는 뜻"
+  },
+  "callouts-trap-here": {
+    "text": "여기 트랩",
+    "meaning": "이 위치에 함정이 있다는 뜻"
+  },
+  "callouts-tunnel-clear": {
+    "text": "터널 클리어",
+    "meaning": "터널 경로가 안전해 보인다는 뜻"
+  },
+  "callouts-unlucky": {
+    "text": "운이 없었어",
+    "meaning": "나쁜 플레이만은 아니고 결과가 불운했다는 뜻"
+  },
+  "callouts-wait": {
+    "text": "기다려",
+    "meaning": "행동하기 전에 잠깐 멈추라는 뜻"
+  },
+  "callouts-watching-left": {
+    "text": "왼쪽 보고 있음",
+    "meaning": "말하는 사람이 왼쪽을 커버하고 있다는 뜻"
+  },
+  "callouts-watching-mid": {
+    "text": "미드 보고 있음",
+    "meaning": "말하는 사람이 가운데 구역을 커버하고 있다는 뜻"
+  },
+  "callouts-watching-right": {
+    "text": "오른쪽 보고 있음",
+    "meaning": "말하는 사람이 오른쪽을 커버하고 있다는 뜻"
+  },
+  "callouts-water": {
+    "text": "물가",
+    "meaning": "물 근처에 적이나 위치가 있다는 뜻"
+  },
+  "callouts-we-are-pinched": {
+    "text": "우리 양쪽에서 물림",
+    "meaning": "팀이 적의 여러 각 사이에 갇혔다는 뜻"
+  },
+  "callouts-well-played": {
+    "text": "잘했어",
+    "meaning": "영리하거나 숙련된 플레이에 대한 존중 섞인 칭찬"
+  },
+  "callouts-window": {
+    "text": "창문",
+    "meaning": "창문에 적이나 각이 있다는 뜻"
+  },
+  "callouts-with-me": {
+    "text": "나랑 같이",
+    "meaning": "말하는 사람이 팀원들이 가까이 있어주길 원한다는 뜻"
+  },
+  "callouts-zone-closing": {
+    "text": "존 좁아짐",
+    "meaning": "안전 구역이 줄어들거나 이동하고 있다는 뜻"
+  },
+  "danger-do-not-go-there": {
+    "text": "거기 가지 마",
+    "meaning": "그 구역이 안전하지 않다는 뜻"
+  },
+  "danger-enemy-ultimate-ready": {
+    "text": "적 궁 있음",
+    "meaning": "적이 강력한 궁극기를 사용할 수 있을 가능성이 높다는 뜻"
+  },
+  "danger-it-is-a-trap": {
+    "text": "함정이야",
+    "meaning": "적이 기다리고 있을 가능성이 높다는 뜻"
+  },
+  "danger-low-cover": {
+    "text": "엄폐 약함",
+    "meaning": "엄폐물이 약하거나 완전하지 않다는 뜻"
+  },
+  "danger-they-have-sniper": {
+    "text": "적 스나 있음",
+    "meaning": "적 팀에 스나이퍼 위협이 있다는 뜻"
+  },
+  "instructions-capture-point": {
+    "text": "거점 점령",
+    "meaning": "목표 거점을 장악하라는 뜻"
+  },
+  "instructions-check-behind": {
+    "text": "뒤 확인",
+    "meaning": "팀 뒤쪽에 적이 있는지 보라는 뜻"
+  },
+  "instructions-check-left": {
+    "text": "왼쪽 확인",
+    "meaning": "왼쪽에 적이 있는지 보라는 뜻"
+  },
+  "instructions-check-right": {
+    "text": "오른쪽 확인",
+    "meaning": "오른쪽에 적이 있는지 보라는 뜻"
+  },
+  "instructions-clear-corners": {
+    "text": "코너 확인",
+    "meaning": "들어가기 전에 숨어 있는 자리를 확인하라는 뜻"
+  },
+  "instructions-contest-point": {
+    "text": "거점 비벼",
+    "meaning": "적 진행을 막기 위해 목표 위에 서라는 뜻"
+  },
+  "instructions-defuse-now": {
+    "text": "지금 해체",
+    "meaning": "즉시 해체를 시작하라는 뜻"
+  },
+  "instructions-do-not-feed": {
+    "text": "피드하지 마",
+    "meaning": "반복해서 죽거나 적에게 이득을 주지 말라는 뜻"
+  },
+  "instructions-do-not-split": {
+    "text": "갈라지지 마",
+    "meaning": "팀에서 떨어지지 말라는 뜻"
+  },
+  "instructions-do-not-waste-it": {
+    "text": "낭비하지 마",
+    "meaning": "자원을 신중하게 쓰라는 뜻"
+  },
+  "instructions-go-first": {
+    "text": "먼저 들어가",
+    "meaning": "다른 사람보다 먼저 진입하거나 교전하라는 뜻"
+  },
+  "instructions-i-go-first": {
+    "text": "내가 먼저 갈게",
+    "meaning": "말하는 사람이 먼저 진입하거나 교전하겠다는 뜻"
+  },
+  "instructions-lead-the-way": {
+    "text": "앞장서",
+    "meaning": "팀원이 먼저 가야 한다는 뜻"
+  },
+  "instructions-mute-him": {
+    "text": "음소거해",
+    "meaning": "방해되는 플레이어를 보이스나 채팅에서 음소거하라는 뜻"
+  },
+  "instructions-plant-now": {
+    "text": "지금 설치",
+    "meaning": "폭탄이나 목표를 지금 설치하라는 뜻"
+  },
+  "instructions-report-after": {
+    "text": "끝나고 신고",
+    "meaning": "라운드 중이 아니라 경기 후에 신고를 처리하라는 뜻"
+  },
+  "instructions-save-ultimate": {
+    "text": "궁 아껴",
+    "meaning": "가장 강한 능력을 아직 쓰지 말라는 뜻"
+  },
+  "instructions-stack-here": {
+    "text": "여기 모여",
+    "meaning": "여러 플레이어가 이 구역에 모이라는 뜻"
+  },
+  "instructions-stack-left": {
+    "text": "왼쪽에 모여",
+    "meaning": "왼쪽에 플레이어들이 모이라는 뜻"
+  },
+  "instructions-stack-right": {
+    "text": "오른쪽에 모여",
+    "meaning": "오른쪽에 플레이어들이 모이라는 뜻"
+  },
+  "instructions-stop-peeking": {
+    "text": "그만 피킹해",
+    "meaning": "적 조준에 몸을 계속 노출하지 말라는 뜻"
+  },
+  "instructions-touch-point": {
+    "text": "거점 터치",
+    "meaning": "타이머가 끝나기 전에 목표에 도달하라는 뜻"
+  },
+  "instructions-use-flash": {
+    "text": "플래시 써",
+    "meaning": "진입 전에 실명 능력을 사용하라는 뜻"
+  },
+  "instructions-use-grenade": {
+    "text": "수류탄 써",
+    "meaning": "폭발물이나 유틸리티 수류탄을 던지라는 뜻"
+  },
+  "instructions-use-smoke": {
+    "text": "스모크 써",
+    "meaning": "시야를 막기 위해 스모크를 깔라는 뜻"
+  },
+  "instructions-use-ultimate": {
+    "text": "궁 써",
+    "meaning": "가장 강한 능력을 지금 사용하라는 뜻"
+  },
+  "objective-capture-the-flag": {
+    "text": "깃발 뺏기",
+    "meaning": "적의 깃발 목표를 가져가라는 뜻"
+  },
+  "objective-escort-the-payload": {
+    "text": "화물 호위",
+    "meaning": "화물 근처에 있어 움직이게 하라는 뜻"
+  },
+  "objective-hold-the-point": {
+    "text": "거점 지켜",
+    "meaning": "목표 위에 머물며 방어하라는 뜻"
+  },
+  "objective-leave-the-point": {
+    "text": "거점에서 빠져",
+    "meaning": "필요할 때 목표에서 물러나라는 뜻"
+  },
+  "objective-return-the-flag": {
+    "text": "깃발 반환",
+    "meaning": "깃발을 다시 가져오거나 우리 깃발을 회수하라는 뜻"
+  },
+  "objective-stop-the-payload": {
+    "text": "화물 막아",
+    "meaning": "적이 화물을 밀지 못하게 하라는 뜻"
+  },
+  "teamwork-do-not-blame": {
+    "text": "탓하지 마",
+    "meaning": "게임 중 팀원을 비난하지 말라는 뜻"
+  },
+  "teamwork-focus-next": {
+    "text": "다음에 집중",
+    "meaning": "지나간 일은 넘기고 다음 플레이를 준비하라는 뜻"
+  },
+  "teamwork-good-effort": {
+    "text": "좋은 시도였어",
+    "meaning": "팀원의 시도에 대한 긍정적인 반응"
+  },
+  "teamwork-great-call": {
+    "text": "좋은 콜이야",
+    "meaning": "유용한 브리핑을 칭찬하는 말"
+  },
+  "teamwork-great-save": {
+    "text": "나이스 세이브",
+    "meaning": "패배나 위험을 막은 플레이를 칭찬하는 말"
+  },
+  "teamwork-great-shot": {
+    "text": "나이스 샷",
+    "meaning": "정확한 조준과 사격을 칭찬하는 말"
+  },
+  "teamwork-i-trust-you": {
+    "text": "믿을게",
+    "meaning": "플레이를 시도하는 팀원을 격려하는 말"
+  },
+  "teamwork-i-will-bait-for-you": {
+    "text": "내가 미끼할게",
+    "meaning": "말하는 사람이 시선을 끌어 팀원이 트레이드할 수 있게 하겠다는 뜻"
+  },
+  "teamwork-i-will-cover-you": {
+    "text": "내가 커버할게",
+    "meaning": "말하는 사람이 팀원을 보호하겠다는 뜻"
+  },
+  "teamwork-i-will-heal-you": {
+    "text": "내가 힐할게",
+    "meaning": "말하는 사람이 팀원에게 회복을 쓰겠다는 뜻"
+  },
+  "teamwork-i-will-watch-flank": {
+    "text": "내가 뒤 볼게",
+    "meaning": "말하는 사람이 뒤쪽 경로를 커버하겠다는 뜻"
+  },
+  "teamwork-keep-comms-clear": {
+    "text": "브리핑 깔끔하게",
+    "meaning": "지금은 유용한 정보만 말하라는 뜻"
+  },
+  "teamwork-let-me-go-first": {
+    "text": "내가 먼저 갈게",
+    "meaning": "말하는 사람이 먼저 진입하겠다는 뜻"
+  },
+  "teamwork-nice-aim": {
+    "text": "에임 좋다",
+    "meaning": "사격 실력을 칭찬하는 말"
+  },
+  "teamwork-nice-clutch": {
+    "text": "나이스 클러치",
+    "meaning": "압박 속에서 승리한 플레이를 칭찬하는 말"
+  },
+  "teamwork-nice-movement": {
+    "text": "무빙 좋다",
+    "meaning": "이동 실력을 칭찬하는 말"
+  },
+  "teamwork-nice-utility": {
+    "text": "유틸 좋았다",
+    "meaning": "스킬이나 아이템 사용이 좋았다는 칭찬"
+  },
+  "teamwork-one-round-at-a-time": {
+    "text": "한 라운드씩",
+    "meaning": "전체 경기보다 다음 라운드에 집중하자는 뜻"
+  },
+  "teamwork-play-together": {
+    "text": "같이 플레이",
+    "meaning": "그룹으로 협력하자는 뜻"
+  },
+  "teamwork-reset-mental": {
+    "text": "멘탈 리셋",
+    "meaning": "틸트하지 말고 새로 시작하자는 뜻"
+  },
+  "teamwork-stay-calm": {
+    "text": "침착해",
+    "meaning": "당황하거나 멘탈이 흔들리지 말라는 뜻"
+  },
+  "teamwork-take-my-loot": {
+    "text": "내 템 가져",
+    "meaning": "말하는 사람이 자기 아이템을 제공한다는 뜻"
+  },
+  "teamwork-take-my-weapon": {
+    "text": "내 무기 가져",
+    "meaning": "말하는 사람이 자기 무기를 제공한다는 뜻"
+  },
+  "teamwork-trade-together": {
+    "text": "같이 트레이드",
+    "meaning": "리턴킬을 위해 함께 맞춰 움직이자는 뜻"
+  },
+  "teamwork-wait-for-team": {
+    "text": "팀 기다려",
+    "meaning": "팀원이 도착하기 전에 싸우지 말라는 뜻"
+  },
+  "teamwork-we-can-win": {
+    "text": "이길 수 있어",
+    "meaning": "아직 경기에서 이길 수 있다는 격려"
+  },
+  "teamwork-we-need-everyone": {
+    "text": "다 같이 필요해",
+    "meaning": "모든 플레이어 없이 싸우면 안 된다는 뜻"
+  },
+  "teamwork-you-got-this": {
+    "text": "할 수 있어",
+    "meaning": "어려운 순간 전이나 중에 팀원을 격려하는 말"
+  },
+  "strategy-anchor-site": {
+    "text": "사이트 앵커",
+    "meaning": "목표 사이트에 남아 방어하는 것"
+  },
+  "strategy-bait-utility": {
+    "text": "유틸 빼기",
+    "meaning": "진짜 공격 전에 적이 스킬을 낭비하게 만드는 것"
+  },
+  "strategy-cancel-the-push": {
+    "text": "푸시 취소",
+    "meaning": "공격을 멈추고 계획을 바꾸라는 뜻"
+  },
+  "strategy-commit-now": {
+    "text": "지금 확실히 들어가",
+    "meaning": "팀 자원을 사용해 계획을 완전히 실행하라는 뜻"
+  },
+  "strategy-cross-setup": {
+    "text": "크로스 세팅",
+    "meaning": "서로 보완하는 두 각을 만드는 세팅"
+  },
+  "strategy-cut-rotation": {
+    "text": "로테이트 차단",
+    "meaning": "적이 사이트 사이를 이동하지 못하게 막는 것"
+  },
+  "strategy-damage-advantage": {
+    "text": "딜 우위",
+    "meaning": "적이 우리 팀보다 더 약해진 상태"
+  },
+  "strategy-deny-vision": {
+    "text": "시야 차단",
+    "meaning": "적의 정보를 막거나 제거하는 것"
+  },
+  "strategy-do-not-overcommit": {
+    "text": "무리하지 마",
+    "meaning": "위험한 플레이에 너무 많은 자원을 넣지 말라는 뜻"
+  },
+  "strategy-economy-advantage": {
+    "text": "경제 우위",
+    "meaning": "우리 팀이 더 좋은 자원이나 무기를 가진 상태"
+  },
+  "strategy-give-map-control": {
+    "text": "맵 컨트롤 양보",
+    "meaning": "의도적으로 적에게 공간을 내주는 것"
+  },
+  "strategy-hold-rotation": {
+    "text": "로테이트 길 보기",
+    "meaning": "적이 로테이트할 때 쓰는 경로를 감시하는 것"
+  },
+  "strategy-man-advantage": {
+    "text": "인원 우위",
+    "meaning": "우리 팀의 생존자가 적 팀보다 많은 상태"
+  },
+  "strategy-man-disadvantage": {
+    "text": "인원 열세",
+    "meaning": "우리 팀의 생존자가 적 팀보다 적은 상태"
+  },
+  "strategy-numbers-advantage": {
+    "text": "숫자 우위",
+    "meaning": "교전 안에서 우리 팀 인원이 더 많은 상태"
+  },
+  "strategy-play-for-late-game": {
+    "text": "후반 보고 플레이",
+    "meaning": "행동을 늦추고 마지막 단계에 대비하는 전략"
+  },
+  "strategy-play-retake": {
+    "text": "리테이크 준비",
+    "meaning": "사이트를 내주고 다시 탈환할 준비를 하는 것"
+  },
+  "strategy-pressure-side-lane": {
+    "text": "사이드 압박",
+    "meaning": "측면 경로에 위협을 만드는 것"
+  },
+  "strategy-save-round": {
+    "text": "세이브 라운드",
+    "meaning": "이번 라운드에 자원을 쓰지 않고 아끼는 것"
+  },
+  "strategy-stack-objective": {
+    "text": "목표에 모이기",
+    "meaning": "목표 근처에 여러 명을 배치하는 것"
+  },
+  "strategy-time-advantage": {
+    "text": "시간 우위",
+    "meaning": "타이머가 우리 팀에 유리한 상태"
+  },
+  "strategy-trade-setup": {
+    "text": "트레이드 세팅",
+    "meaning": "팀원이 리턴킬을 가져갈 수 있게 위치를 잡는 것"
+  },
+  "strategy-ultimate-advantage": {
+    "text": "궁극기 우위",
+    "meaning": "우리 팀이 더 강한 궁극기를 사용할 수 있는 상태"
+  },
+  "economy-do-not-force": {
+    "text": "포스하지 마",
+    "meaning": "자원이 부족한데 너무 많이 사지 말라는 뜻"
+  },
+  "economy-force-together": {
+    "text": "같이 포스",
+    "meaning": "모두가 함께 위험한 구매에 맞추자는 뜻"
+  },
+  "economy-they-have-money": {
+    "text": "쟤네 돈 있음",
+    "meaning": "적 팀이 강한 장비를 살 수 있다는 뜻"
+  },
+  "economy-we-can-buy-next": {
+    "text": "다음 라운드 살 수 있음",
+    "meaning": "다음 라운드에는 팀이 충분한 자원을 가질 가능성이 있다는 뜻"
   },
   "antiToxic-clear-comms-please": {
-    "text": "클리어 콜, 부탁",
-    "meaning": "게임 의미: 클리어 콜, 부탁"
+    "text": "브리핑만 해줘",
+    "meaning": "팀원들에게 소통을 집중하고 유용하게 해 달라고 부탁하는 말"
   },
-  "antiToxic-let-us-reset": {
-    "text": "하자 우리 리셋",
-    "meaning": "게임 의미: 하자 우리 리셋"
-  },
-  "antiToxic-play-safe-next": {
-    "text": "플레이 안전하게 다음",
-    "meaning": "게임 의미: 플레이 안전하게 다음"
-  },
-  "antiToxic-wait-for-the-team-next-time": {
-    "text": "기다려 위해 팀 다음 시간",
-    "meaning": "게임 의미: 기다려 위해 팀 다음 시간"
+  "antiToxic-focus-on-objective": {
+    "text": "목표에 집중하자",
+    "meaning": "팀을 승리 조건 쪽으로 다시 돌리는 말"
   },
   "antiToxic-good-try-next-round": {
     "text": "좋은 시도, 다음 라운드",
-    "meaning": "게임 의미: 좋은 시도, 다음 라운드"
-  },
-  "antiToxic-we-need-better-spacing": {
-    "text": "우리 필요 더 좋게 간격",
-    "meaning": "게임 의미: 우리 필요 더 좋게 간격"
-  },
-  "antiToxic-let-us-trade-better": {
-    "text": "하자 우리 트레이드 더 좋게",
-    "meaning": "게임 의미: 하자 우리 트레이드 더 좋게"
-  },
-  "antiToxic-save-your-utility": {
-    "text": "아껴 네 유틸",
-    "meaning": "게임 의미: 아껴 네 유틸"
-  },
-  "antiToxic-use-comms-not-blame": {
-    "text": "사용해 콜, 아님 비난",
-    "meaning": "게임 의미: 사용해 콜, 아님 비난"
-  },
-  "antiToxic-focus-on-objective": {
-    "text": "집중 위 목표",
-    "meaning": "게임 의미: 집중 위 목표"
-  },
-  "antiToxic-we-still-have-time": {
-    "text": "우리 아직 가지고 있음 시간",
-    "meaning": "게임 의미: 우리 아직 가지고 있음 시간"
-  },
-  "antiToxic-no-worries": {
-    "text": "없음 걱정 없음",
-    "meaning": "게임 의미: 없음 걱정 없음"
+    "meaning": "라운드를 졌을 때 팀을 격려하는 말"
   },
   "antiToxic-it-happens": {
-    "text": "그것 그럴 수 있어",
-    "meaning": "게임 의미: 그것 그럴 수 있어"
-  },
-  "antiToxic-next-one-is-ours": {
-    "text": "다음 한 명 우리 것",
-    "meaning": "게임 의미: 다음 한 명 우리 것"
+    "text": "그럴 수 있어",
+    "meaning": "실수를 자연스럽게 넘기고 계속하자는 말"
   },
   "antiToxic-keep-it-positive": {
-    "text": "유지 그것 긍정적",
-    "meaning": "게임 의미: 유지 그것 긍정적"
+    "text": "긍정적으로 하자",
+    "meaning": "팀원들에게 독성 발언을 피하자고 요청하는 말"
+  },
+  "antiToxic-let-us-reset": {
+    "text": "리셋하자",
+    "meaning": "팀의 멘탈과 집중을 차분히 다시 잡자는 말"
+  },
+  "antiToxic-let-us-trade-better": {
+    "text": "트레이드 더 잘하자",
+    "meaning": "리턴킬 팀워크를 개선하자고 제안하는 말"
+  },
+  "antiToxic-next-one-is-ours": {
+    "text": "다음 건 우리 거야",
+    "meaning": "패배 후 팀을 격려하는 말"
+  },
+  "antiToxic-no-worries": {
+    "text": "괜찮아",
+    "meaning": "팀원의 실수에 친절하게 답하는 말"
+  },
+  "antiToxic-play-safe-next": {
+    "text": "다음엔 안전하게 하자",
+    "meaning": "누구를 탓하지 않고 더 안전한 계획을 제안하는 말"
+  },
+  "antiToxic-save-your-utility": {
+    "text": "유틸 아껴줘",
+    "meaning": "모욕 없이 팀원에게 스킬을 아껴 달라고 요청하는 말"
+  },
+  "antiToxic-use-comms-not-blame": {
+    "text": "비난 말고 브리핑하자",
+    "meaning": "다투기보다 유용한 정보를 공유하자고 알려주는 말"
+  },
+  "antiToxic-wait-for-the-team-next-time": {
+    "text": "다음엔 팀 기다려줘",
+    "meaning": "더 좋은 타이밍을 존중 있게 요청하는 말"
+  },
+  "antiToxic-we-need-better-spacing": {
+    "text": "간격 더 벌리자",
+    "meaning": "포지셔닝 간격에 대한 유용한 피드백"
+  },
+  "antiToxic-we-still-have-time": {
+    "text": "아직 시간 있어",
+    "meaning": "플레이할 시간이 남아 있을 때 팀을 진정시키는 말"
   }
 }

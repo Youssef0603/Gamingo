@@ -1,1674 +1,1922 @@
 {
   "callouts-gg": {
     "text": "GG",
-    "meaning": "Significado en juego: GG"
-  },
-  "callouts-glhf": {
-    "text": "Buena suerte y diviértanse",
-    "meaning": "Significado en juego: Buena suerte y diviértanse"
-  },
-  "callouts-nice": {
-    "text": "¡Bien!",
-    "meaning": "Significado en juego: ¡Bien!"
-  },
-  "callouts-thanks": {
-    "text": "Gracias",
-    "meaning": "Significado en juego: Gracias"
-  },
-  "callouts-sorry": {
-    "text": "Perdón",
-    "meaning": "Significado en juego: Perdón"
-  },
-  "callouts-my-bad": {
-    "text": "Mi culpa",
-    "meaning": "Significado en juego: Mi culpa"
-  },
-  "callouts-one-more": {
-    "text": "un more",
-    "meaning": "Significado en juego: un more"
-  },
-  "callouts-i-am-down": {
-    "text": "i am indisponible",
-    "meaning": "Significado en juego: i am indisponible"
-  },
-  "callouts-i-am-low": {
-    "text": "i am faible",
-    "meaning": "Significado en juego: i am faible"
-  },
-  "callouts-enemy-spotted": {
-    "text": "Enemigo visto",
-    "meaning": "Significado en juego: Enemigo visto"
-  },
-  "callouts-enemy-here": {
-    "text": "enemigo aquí",
-    "meaning": "Significado en juego: enemigo aquí"
-  },
-  "callouts-enemy-there": {
-    "text": "enemigo allí",
-    "meaning": "Significado en juego: enemigo allí"
-  },
-  "callouts-two-enemies-here": {
-    "text": "deux enemigos aquí",
-    "meaning": "Significado en juego: deux enemigos aquí"
-  },
-  "callouts-three-enemies-here": {
-    "text": "trois enemigos aquí",
-    "meaning": "Significado en juego: trois enemigos aquí"
-  },
-  "callouts-full-team-here": {
-    "text": "toute équipe aquí",
-    "meaning": "Significado en juego: toute équipe aquí"
-  },
-  "callouts-behind-you": {
-    "text": "detrás you!",
-    "meaning": "Significado en juego: detrás you!"
-  },
-  "callouts-left-side": {
-    "text": "izquierda side!",
-    "meaning": "Significado en juego: izquierda side!"
-  },
-  "callouts-right-side": {
-    "text": "derecha side!",
-    "meaning": "Significado en juego: derecha side!"
-  },
-  "callouts-above-us": {
-    "text": "au-dessus us",
-    "meaning": "Significado en juego: au-dessus us"
-  },
-  "callouts-below-us": {
-    "text": "en dessous us",
-    "meaning": "Significado en juego: en dessous us"
-  },
-  "callouts-in-front": {
-    "text": "in avant",
-    "meaning": "Significado en juego: in avant"
-  },
-  "callouts-back-site": {
-    "text": "arrière sitio",
-    "meaning": "Significado en juego: arrière sitio"
-  },
-  "callouts-front-site": {
-    "text": "avant sitio",
-    "meaning": "Significado en juego: avant sitio"
-  },
-  "callouts-default-spot": {
-    "text": "standard position",
-    "meaning": "Significado en juego: standard position"
-  },
-  "callouts-corner": {
-    "text": "coin",
-    "meaning": "Significado en juego: coin"
-  },
-  "callouts-close-corner": {
-    "text": "proche coin",
-    "meaning": "Significado en juego: proche coin"
-  },
-  "callouts-long-range": {
-    "text": "longue portée",
-    "meaning": "Significado en juego: longue portée"
-  },
-  "callouts-short-range": {
-    "text": "courte portée",
-    "meaning": "Significado en juego: courte portée"
-  },
-  "callouts-mid": {
-    "text": "milieu",
-    "meaning": "Significado en juego: milieu"
-  },
-  "callouts-top-mid": {
-    "text": "haut milieu",
-    "meaning": "Significado en juego: haut milieu"
-  },
-  "callouts-bottom-mid": {
-    "text": "bas milieu",
-    "meaning": "Significado en juego: bas milieu"
-  },
-  "callouts-spawn": {
-    "text": "apparition",
-    "meaning": "Significado en juego: apparition"
-  },
-  "callouts-our-spawn": {
-    "text": "notre apparition",
-    "meaning": "Significado en juego: notre apparition"
-  },
-  "callouts-their-spawn": {
-    "text": "leur apparition",
-    "meaning": "Significado en juego: leur apparition"
-  },
-  "callouts-flank": {
-    "text": "flanco",
-    "meaning": "Significado en juego: flanco"
-  },
-  "callouts-watch-flank": {
-    "text": "surveille flanco",
-    "meaning": "Significado en juego: surveille flanco"
-  },
-  "callouts-rotating": {
-    "text": "rotation",
-    "meaning": "Significado en juego: rotation"
-  },
-  "callouts-they-rotated": {
-    "text": "they ont tourné",
-    "meaning": "Significado en juego: they ont tourné"
-  },
-  "callouts-fake-rotate": {
-    "text": "Rotación falsa",
-    "meaning": "Significado en juego: Rotación falsa"
-  },
-  "callouts-site-clear": {
-    "text": "sitio clair",
-    "meaning": "Significado en juego: sitio clair"
-  },
-  "callouts-site-not-clear": {
-    "text": "sitio pas clair",
-    "meaning": "Significado en juego: sitio pas clair"
-  },
-  "callouts-need-backup": {
-    "text": "besoin de renfort",
-    "meaning": "Significado en juego: besoin de renfort"
-  },
-  "callouts-need-help": {
-    "text": "besoin de ayuda",
-    "meaning": "Significado en juego: besoin de ayuda"
-  },
-  "callouts-help-me": {
-    "text": "ayuda me",
-    "meaning": "Significado en juego: ayuda me"
-  },
-  "callouts-i-need-healing": {
-    "text": "i besoin de soin",
-    "meaning": "Significado en juego: i besoin de soin"
-  },
-  "callouts-need-ammo": {
-    "text": "besoin de munitions",
-    "meaning": "Significado en juego: besoin de munitions"
-  },
-  "callouts-out-of-ammo": {
-    "text": "plus de of munitions",
-    "meaning": "Significado en juego: plus de of munitions"
-  },
-  "callouts-reloading": {
-    "text": "rechargement",
-    "meaning": "Significado en juego: rechargement"
-  },
-  "callouts-cover-me": {
-    "text": "couvre me",
-    "meaning": "Significado en juego: couvre me"
-  },
-  "callouts-i-got-you": {
-    "text": "i got you",
-    "meaning": "Significado en juego: i got you"
-  },
-  "callouts-i-am-watching": {
-    "text": "i am je couvre",
-    "meaning": "Significado en juego: i am je couvre"
-  },
-  "callouts-watching-left": {
-    "text": "je couvre izquierda",
-    "meaning": "Significado en juego: je couvre izquierda"
-  },
-  "callouts-watching-right": {
-    "text": "je couvre derecha",
-    "meaning": "Significado en juego: je couvre derecha"
-  },
-  "callouts-watching-mid": {
-    "text": "je couvre milieu",
-    "meaning": "Significado en juego: je couvre milieu"
-  },
-  "callouts-clear-left": {
-    "text": "clair izquierda",
-    "meaning": "Significado en juego: clair izquierda"
-  },
-  "callouts-clear-right": {
-    "text": "clair derecha",
-    "meaning": "Significado en juego: clair derecha"
-  },
-  "callouts-clear-mid": {
-    "text": "clair milieu",
-    "meaning": "Significado en juego: clair milieu"
-  },
-  "callouts-not-clear": {
-    "text": "pas clair",
-    "meaning": "Significado en juego: pas clair"
-  },
-  "callouts-contact": {
-    "text": "contact",
-    "meaning": "Significado en juego: contact"
-  },
-  "callouts-no-contact": {
-    "text": "no contact",
-    "meaning": "Significado en juego: no contact"
-  },
-  "callouts-footsteps": {
-    "text": "pas",
-    "meaning": "Significado en juego: pas"
-  },
-  "callouts-i-hear-steps": {
-    "text": "i j’entends pas",
-    "meaning": "Significado en juego: i j’entends pas"
-  },
-  "callouts-they-are-close": {
-    "text": "they are proche",
-    "meaning": "Significado en juego: they are proche"
-  },
-  "callouts-they-are-far": {
-    "text": "they are loin",
-    "meaning": "Significado en juego: they are loin"
-  },
-  "callouts-sniper-watching": {
-    "text": "sniper je couvre",
-    "meaning": "Significado en juego: sniper je couvre"
-  },
-  "callouts-shotgun-close": {
-    "text": "fusil à pompe proche",
-    "meaning": "Significado en juego: fusil à pompe proche"
-  },
-  "callouts-grenade-out": {
-    "text": "grenade plus de",
-    "meaning": "Significado en juego: grenade plus de"
-  },
-  "callouts-flash-out": {
-    "text": "flash plus de",
-    "meaning": "Significado en juego: flash plus de"
-  },
-  "callouts-smoke-out": {
-    "text": "fumigène plus de",
-    "meaning": "Significado en juego: fumigène plus de"
-  },
-  "callouts-ultimate-ready": {
-    "text": "ultime prêt",
-    "meaning": "Significado en juego: ultime prêt"
-  },
-  "callouts-no-ultimate": {
-    "text": "no ultime",
-    "meaning": "Significado en juego: no ultime"
-  },
-  "callouts-ability-ready": {
-    "text": "compétence prêt",
-    "meaning": "Significado en juego: compétence prêt"
-  },
-  "callouts-ability-down": {
-    "text": "compétence indisponible",
-    "meaning": "Significado en juego: compétence indisponible"
-  },
-  "callouts-cooldown": {
-    "text": "recharge",
-    "meaning": "Significado en juego: recharge"
-  },
-  "callouts-ping-it": {
-    "text": "ping it",
-    "meaning": "Significado en juego: ping it"
-  },
-  "callouts-mark-the-enemy": {
-    "text": "mark the enemigo",
-    "meaning": "Significado en juego: mark the enemigo"
-  },
-  "callouts-i-marked-it": {
-    "text": "i marquée it",
-    "meaning": "Significado en juego: i marquée it"
-  },
-  "callouts-check-map": {
-    "text": "vérifie carte",
-    "meaning": "Significado en juego: vérifie carte"
-  },
-  "callouts-look-at-ping": {
-    "text": "look at ping",
-    "meaning": "Significado en juego: look at ping"
-  },
-  "callouts-enemy-missing": {
-    "text": "enemigo missing",
-    "meaning": "Significado en juego: enemigo missing"
-  },
-  "callouts-all-missing": {
-    "text": "all missing",
-    "meaning": "Significado en juego: all missing"
-  },
-  "callouts-careful": {
-    "text": "cuidado",
-    "meaning": "Significado en juego: cuidado"
-  },
-  "callouts-wait": {
-    "text": "espera",
-    "meaning": "Significado en juego: espera"
-  },
-  "callouts-go-now": {
-    "text": "allez maintenant",
-    "meaning": "Significado en juego: allez maintenant"
-  },
-  "callouts-push-now": {
-    "text": "empuja maintenant",
-    "meaning": "Significado en juego: empuja maintenant"
-  },
-  "callouts-fall-back": {
-    "text": "repli arrière",
-    "meaning": "Significado en juego: repli arrière"
-  },
-  "callouts-run": {
-    "text": "corre",
-    "meaning": "Significado en juego: corre"
-  },
-  "callouts-hide": {
-    "text": "escóndete",
-    "meaning": "Significado en juego: escóndete"
-  },
-  "callouts-do-not-peek": {
-    "text": "do pas peek",
-    "meaning": "Significado en juego: do pas peek"
-  },
-  "callouts-peek-together": {
-    "text": "peek ensemble",
-    "meaning": "Significado en juego: peek ensemble"
-  },
-  "callouts-swing-together": {
-    "text": "swing ensemble",
-    "meaning": "Significado en juego: swing ensemble"
-  },
-  "callouts-hold-angle": {
-    "text": "tiens angle",
-    "meaning": "Significado en juego: tiens angle"
-  },
-  "callouts-hold-position": {
-    "text": "tiens position",
-    "meaning": "Significado en juego: tiens position"
-  },
-  "callouts-move-up": {
-    "text": "avance up",
-    "meaning": "Significado en juego: avance up"
-  },
-  "callouts-come-back": {
-    "text": "reviens arrière",
-    "meaning": "Significado en juego: reviens arrière"
-  },
-  "callouts-group-up": {
-    "text": "groupez up",
-    "meaning": "Significado en juego: groupez up"
-  },
-  "callouts-split-up": {
-    "text": "séparez up",
-    "meaning": "Significado en juego: séparez up"
-  },
-  "callouts-stay-alive": {
-    "text": "stay en vie",
-    "meaning": "Significado en juego: stay en vie"
-  },
-  "callouts-play-time": {
-    "text": "joue time",
-    "meaning": "Significado en juego: joue time"
-  },
-  "callouts-play-safe": {
-    "text": "joue prudent",
-    "meaning": "Significado en juego: joue prudent"
-  },
-  "callouts-play-slow": {
-    "text": "joue lentement",
-    "meaning": "Significado en juego: joue lentement"
-  },
-  "callouts-play-fast": {
-    "text": "joue vite",
-    "meaning": "Significado en juego: joue vite"
-  },
-  "callouts-do-not-chase": {
-    "text": "do pas poursuis",
-    "meaning": "Significado en juego: do pas poursuis"
-  },
-  "callouts-stop-chasing": {
-    "text": "stop chasing",
-    "meaning": "Significado en juego: stop chasing"
-  },
-  "callouts-trade-me": {
-    "text": "trade me",
-    "meaning": "Significado en juego: trade me"
-  },
-  "callouts-trade-him": {
-    "text": "trade him",
-    "meaning": "Significado en juego: trade him"
-  },
-  "callouts-i-will-trade": {
-    "text": "i will trade",
-    "meaning": "Significado en juego: i will trade"
-  },
-  "callouts-nice-trade": {
-    "text": "nice trade",
-    "meaning": "Significado en juego: nice trade"
-  },
-  "callouts-bait-and-switch": {
-    "text": "appât and switch",
-    "meaning": "Significado en juego: appât and switch"
-  },
-  "callouts-crossfire": {
-    "text": "feu croisé",
-    "meaning": "Significado en juego: feu croisé"
-  },
-  "callouts-pinched": {
-    "text": "pris en tenaille",
-    "meaning": "Significado en juego: pris en tenaille"
-  },
-  "callouts-we-are-pinched": {
-    "text": "we are pris en tenaille",
-    "meaning": "Significado en juego: we are pris en tenaille"
-  },
-  "callouts-third-party": {
-    "text": "troisième équipe",
-    "meaning": "Significado en juego: troisième équipe"
-  },
-  "callouts-reset": {
-    "text": "reset",
-    "meaning": "Significado en juego: reset"
-  },
-  "callouts-regroup": {
-    "text": "regroupement",
-    "meaning": "Significado en juego: regroupement"
-  },
-  "callouts-focus-fire": {
-    "text": "focus tir",
-    "meaning": "Significado en juego: focus tir"
-  },
-  "callouts-target-marked": {
-    "text": "cible marquée",
-    "meaning": "Significado en juego: cible marquée"
-  },
-  "callouts-focus-healer": {
-    "text": "focus soigneur",
-    "meaning": "Significado en juego: focus soigneur"
-  },
-  "callouts-focus-sniper": {
-    "text": "focus sniper",
-    "meaning": "Significado en juego: focus sniper"
-  },
-  "callouts-ignore-tank": {
-    "text": "ignore tank",
-    "meaning": "Significado en juego: ignore tank"
-  },
-  "callouts-shield-broken": {
-    "text": "bouclier cassé",
-    "meaning": "Significado en juego: bouclier cassé"
-  },
-  "callouts-armor-cracked": {
-    "text": "armure cassée",
-    "meaning": "Significado en juego: armure cassée"
-  },
-  "callouts-one-shot": {
-    "text": "un tir",
-    "meaning": "Significado en juego: un tir"
-  },
-  "callouts-tagged-him": {
-    "text": "touché him",
-    "meaning": "Significado en juego: touché him"
-  },
-  "callouts-hit-for-fifty": {
-    "text": "touché pour cinquante",
-    "meaning": "Significado en juego: touché pour cinquante"
-  },
-  "callouts-hit-for-a-hundred": {
-    "text": "touché pour a cent",
-    "meaning": "Significado en juego: touché pour a cent"
-  },
-  "callouts-no-shield": {
-    "text": "no bouclier",
-    "meaning": "Significado en juego: no bouclier"
-  },
-  "callouts-knocked-one": {
-    "text": "mis à terre un",
-    "meaning": "Significado en juego: mis à terre un"
-  },
-  "callouts-finished-one": {
-    "text": "achevé un",
-    "meaning": "Significado en juego: achevé un"
-  },
-  "callouts-team-wipe": {
-    "text": "équipe élimination",
-    "meaning": "Significado en juego: équipe élimination"
-  },
-  "callouts-clean-fight": {
-    "text": "propre combat",
-    "meaning": "Significado en juego: propre combat"
-  },
-  "callouts-messy-fight": {
-    "text": "désordonné combat",
-    "meaning": "Significado en juego: désordonné combat"
-  },
-  "callouts-bad-timing": {
-    "text": "mauvais timing",
-    "meaning": "Significado en juego: mauvais timing"
-  },
-  "callouts-good-timing": {
-    "text": "bon timing",
-    "meaning": "Significado en juego: bon timing"
-  },
-  "callouts-unlucky": {
-    "text": "pas de chance",
-    "meaning": "Significado en juego: pas de chance"
-  },
-  "callouts-lucky-shot": {
-    "text": "chanceux tir",
-    "meaning": "Significado en juego: chanceux tir"
-  },
-  "callouts-clutch": {
-    "text": "clutch",
-    "meaning": "Significado en juego: clutch"
-  },
-  "callouts-ace": {
-    "text": "ace",
-    "meaning": "Significado en juego: ace"
-  },
-  "callouts-carry": {
-    "text": "carry",
-    "meaning": "Significado en juego: carry"
-  },
-  "callouts-throw": {
-    "text": "throw",
-    "meaning": "Significado en juego: throw"
-  },
-  "callouts-comeback": {
-    "text": "retour",
-    "meaning": "Significado en juego: retour"
-  },
-  "callouts-close-game": {
-    "text": "proche partie",
-    "meaning": "Significado en juego: proche partie"
-  },
-  "callouts-free-kill": {
-    "text": "gratuit kill",
-    "meaning": "Significado en juego: gratuit kill"
-  },
-  "callouts-free-objective": {
-    "text": "gratuit objectif",
-    "meaning": "Significado en juego: gratuit objectif"
-  },
-  "callouts-open-lane": {
-    "text": "ouvert voie",
-    "meaning": "Significado en juego: ouvert voie"
-  },
-  "callouts-blocked": {
-    "text": "bloqué",
-    "meaning": "Significado en juego: bloqué"
-  },
-  "callouts-trap-here": {
-    "text": "piège aquí",
-    "meaning": "Significado en juego: piège aquí"
-  },
-  "callouts-trap-destroyed": {
-    "text": "piège détruit",
-    "meaning": "Significado en juego: piège détruit"
-  },
-  "callouts-door-closed": {
-    "text": "porte fermée",
-    "meaning": "Significado en juego: porte fermée"
-  },
-  "callouts-door-open": {
-    "text": "porte ouvert",
-    "meaning": "Significado en juego: porte ouvert"
-  },
-  "callouts-bridge-clear": {
-    "text": "pont clair",
-    "meaning": "Significado en juego: pont clair"
-  },
-  "callouts-tunnel-clear": {
-    "text": "tunnel clair",
-    "meaning": "Significado en juego: tunnel clair"
-  },
-  "callouts-roof-clear": {
-    "text": "toit clair",
-    "meaning": "Significado en juego: toit clair"
-  },
-  "callouts-basement-clear": {
-    "text": "sous-sol clair",
-    "meaning": "Significado en juego: sous-sol clair"
-  },
-  "callouts-window": {
-    "text": "fenêtre",
-    "meaning": "Significado en juego: fenêtre"
-  },
-  "callouts-stairs": {
-    "text": "escaliers",
-    "meaning": "Significado en juego: escaliers"
-  },
-  "callouts-hallway": {
-    "text": "couloir",
-    "meaning": "Significado en juego: couloir"
-  },
-  "callouts-water": {
-    "text": "eau",
-    "meaning": "Significado en juego: eau"
-  },
-  "callouts-high-ground": {
-    "text": "hauteur terrain",
-    "meaning": "Significado en juego: hauteur terrain"
-  },
-  "callouts-low-ground": {
-    "text": "faible terrain",
-    "meaning": "Significado en juego: faible terrain"
-  },
-  "callouts-zone-closing": {
-    "text": "zone se ferme",
-    "meaning": "Significado en juego: zone se ferme"
-  },
-  "callouts-circle-moving": {
-    "text": "cercle moving",
-    "meaning": "Significado en juego: cercle moving"
-  },
-  "callouts-storm-coming": {
-    "text": "tempête arrive",
-    "meaning": "Significado en juego: tempête arrive"
-  },
-  "callouts-safe-zone": {
-    "text": "prudent zone",
-    "meaning": "Significado en juego: prudent zone"
-  },
-  "callouts-out-of-zone": {
-    "text": "plus de of zone",
-    "meaning": "Significado en juego: plus de of zone"
-  },
-  "callouts-loot-here": {
-    "text": "butin aquí",
-    "meaning": "Significado en juego: butin aquí"
-  },
-  "callouts-good-loot": {
-    "text": "bon butin",
-    "meaning": "Significado en juego: bon butin"
-  },
-  "callouts-need-weapon": {
-    "text": "besoin de arme",
-    "meaning": "Significado en juego: besoin de arme"
-  },
-  "callouts-need-shield": {
-    "text": "besoin de bouclier",
-    "meaning": "Significado en juego: besoin de bouclier"
-  },
-  "callouts-need-meds": {
-    "text": "besoin de soins",
-    "meaning": "Significado en juego: besoin de soins"
-  },
-  "callouts-drop-ammo": {
-    "text": "donne munitions",
-    "meaning": "Significado en juego: donne munitions"
-  },
-  "callouts-drop-weapon": {
-    "text": "donne arme",
-    "meaning": "Significado en juego: donne arme"
-  },
-  "callouts-take-this": {
-    "text": "prends this",
-    "meaning": "Significado en juego: prends this"
-  },
-  "callouts-do-not-take-it": {
-    "text": "do pas prends it",
-    "meaning": "Significado en juego: do pas prends it"
-  },
-  "callouts-i-will-take-it": {
-    "text": "i will prends it",
-    "meaning": "Significado en juego: i will prends it"
-  },
-  "callouts-use-it": {
-    "text": "utilise it",
-    "meaning": "Significado en juego: utilise it"
-  },
-  "callouts-save-it": {
-    "text": "guarda it",
-    "meaning": "Significado en juego: guarda it"
-  },
-  "callouts-voice-chat": {
-    "text": "voice chat",
-    "meaning": "Significado en juego: voice chat"
-  },
-  "callouts-text-chat": {
-    "text": "text chat",
-    "meaning": "Significado en juego: text chat"
-  },
-  "callouts-good-job": {
-    "text": "Buen trabajo",
-    "meaning": "Significado en juego: Buen trabajo"
-  },
-  "callouts-well-played": {
-    "text": "Bien jugado",
-    "meaning": "Significado en juego: Bien jugado"
-  },
-  "callouts-no-problem": {
-    "text": "No hay problema",
-    "meaning": "Significado en juego: No hay problema"
-  },
-  "callouts-last-one": {
-    "text": "last un",
-    "meaning": "Significado en juego: last un"
-  },
-  "callouts-i-see-him": {
-    "text": "i see him",
-    "meaning": "Significado en juego: i see him"
-  },
-  "callouts-i-see-them": {
-    "text": "i see them",
-    "meaning": "Significado en juego: i see them"
-  },
-  "callouts-on-me": {
-    "text": "on me",
-    "meaning": "Significado en juego: on me"
-  },
-  "callouts-with-me": {
-    "text": "with me",
-    "meaning": "Significado en juego: with me"
-  },
-  "callouts-low-hp": {
-    "text": "faible HP",
-    "meaning": "Significado en juego: faible HP"
-  },
-  "callouts-he-is-low": {
-    "text": "he is faible",
-    "meaning": "Significado en juego: he is faible"
-  },
-  "callouts-they-are-low": {
-    "text": "they are faible",
-    "meaning": "Significado en juego: they are faible"
-  },
-  "callouts-no-mic": {
-    "text": "no mic",
-    "meaning": "Significado en juego: no mic"
-  },
-  "callouts-mic-muted": {
-    "text": "mic muted",
-    "meaning": "Significado en juego: mic muted"
-  },
-  "danger-incoming": {
-    "text": "incoming!",
-    "meaning": "Significado en juego: incoming!"
-  },
-  "danger-grenade": {
-    "text": "grenade!",
-    "meaning": "Significado en juego: grenade!"
-  },
-  "danger-flash": {
-    "text": "flash!",
-    "meaning": "Significado en juego: flash!"
-  },
-  "danger-sniper": {
-    "text": "sniper!",
-    "meaning": "Significado en juego: sniper!"
-  },
-  "danger-trap": {
-    "text": "piège!",
-    "meaning": "Significado en juego: piège!"
-  },
-  "danger-mine": {
-    "text": "mine!",
-    "meaning": "Significado en juego: mine!"
-  },
-  "danger-ambush": {
-    "text": "ambush!",
-    "meaning": "Significado en juego: ambush!"
-  },
-  "danger-they-are-rushing": {
-    "text": "they are rushing",
-    "meaning": "Significado en juego: they are rushing"
-  },
-  "danger-they-are-pushing": {
-    "text": "they are pushing",
-    "meaning": "Significado en juego: they are pushing"
-  },
-  "danger-they-are-flanking": {
-    "text": "they are flanking",
-    "meaning": "Significado en juego: they are flanking"
-  },
-  "danger-they-know": {
-    "text": "they know",
-    "meaning": "Significado en juego: they know"
-  },
-  "danger-they-saw-me": {
-    "text": "they saw me",
-    "meaning": "Significado en juego: they saw me"
-  },
-  "danger-i-am-exposed": {
-    "text": "i am exposed",
-    "meaning": "Significado en juego: i am exposed"
-  },
-  "danger-no-cover": {
-    "text": "no couvre",
-    "meaning": "Significado en juego: no couvre"
-  },
-  "danger-low-cover": {
-    "text": "faible couvre",
-    "meaning": "Significado en juego: faible couvre"
-  },
-  "danger-bad-angle": {
-    "text": "mauvais angle",
-    "meaning": "Significado en juego: mauvais angle"
-  },
-  "danger-get-out": {
-    "text": "get plus de",
-    "meaning": "Significado en juego: get plus de"
-  },
-  "danger-back-up": {
-    "text": "arrière up",
-    "meaning": "Significado en juego: arrière up"
-  },
-  "danger-do-not-go-there": {
-    "text": "do pas allez allí",
-    "meaning": "Significado en juego: do pas allez allí"
-  },
-  "danger-it-is-a-trap": {
-    "text": "it is a piège",
-    "meaning": "Significado en juego: it is a piège"
-  },
-  "danger-enemy-ultimate-ready": {
-    "text": "enemigo ultime prêt",
-    "meaning": "Significado en juego: enemigo ultime prêt"
-  },
-  "danger-they-have-sniper": {
-    "text": "they have sniper",
-    "meaning": "Significado en juego: they have sniper"
-  },
-  "instructions-push": {
-    "text": "empuja",
-    "meaning": "Significado en juego: empuja"
-  },
-  "instructions-rush": {
-    "text": "rush",
-    "meaning": "Significado en juego: rush"
-  },
-  "instructions-hold": {
-    "text": "tiens",
-    "meaning": "Significado en juego: tiens"
-  },
-  "instructions-defend": {
-    "text": "defiende",
-    "meaning": "Significado en juego: defiende"
-  },
-  "instructions-attack": {
-    "text": "ataca",
-    "meaning": "Significado en juego: ataca"
-  },
-  "instructions-retreat": {
-    "text": "repli",
-    "meaning": "Significado en juego: repli"
-  },
-  "instructions-rotate": {
-    "text": "rotation",
-    "meaning": "Significado en juego: rotation"
-  },
-  "instructions-stack-here": {
-    "text": "groupe aquí",
-    "meaning": "Significado en juego: groupe aquí"
-  },
-  "instructions-spread-out": {
-    "text": "écartez plus de",
-    "meaning": "Significado en juego: écartez plus de"
-  },
-  "instructions-stay-together": {
-    "text": "stay ensemble",
-    "meaning": "Significado en juego: stay ensemble"
-  },
-  "instructions-follow-me": {
-    "text": "suis-moi me",
-    "meaning": "Significado en juego: suis-moi me"
-  },
-  "instructions-lead-the-way": {
-    "text": "passe devant the way",
-    "meaning": "Significado en juego: passe devant the way"
-  },
-  "instructions-go-first": {
-    "text": "allez premier",
-    "meaning": "Significado en juego: allez premier"
-  },
-  "instructions-i-go-first": {
-    "text": "i allez premier",
-    "meaning": "Significado en juego: i allez premier"
-  },
-  "instructions-wait-for-me": {
-    "text": "espera pour me",
-    "meaning": "Significado en juego: espera pour me"
-  },
-  "instructions-wait-for-cooldowns": {
-    "text": "espera pour recharges",
-    "meaning": "Significado en juego: espera pour recharges"
-  },
-  "instructions-use-smoke": {
-    "text": "utilise fumigène",
-    "meaning": "Significado en juego: utilise fumigène"
-  },
-  "instructions-use-flash": {
-    "text": "utilise flash",
-    "meaning": "Significado en juego: utilise flash"
-  },
-  "instructions-use-grenade": {
-    "text": "utilise grenade",
-    "meaning": "Significado en juego: utilise grenade"
-  },
-  "instructions-use-ultimate": {
-    "text": "utilise ultime",
-    "meaning": "Significado en juego: utilise ultime"
-  },
-  "instructions-save-ultimate": {
-    "text": "guarda ultime",
-    "meaning": "Significado en juego: guarda ultime"
-  },
-  "instructions-heal-me": {
-    "text": "soigne me",
-    "meaning": "Significado en juego: soigne me"
-  },
-  "instructions-revive-me": {
-    "text": "réanime me",
-    "meaning": "Significado en juego: réanime me"
-  },
-  "instructions-res-me": {
-    "text": "res me",
-    "meaning": "Significado en juego: res me"
-  },
-  "instructions-cover-the-revive": {
-    "text": "couvre the réanime",
-    "meaning": "Significado en juego: couvre the réanime"
-  },
-  "instructions-plant-now": {
-    "text": "pose maintenant",
-    "meaning": "Significado en juego: pose maintenant"
-  },
-  "instructions-defuse-now": {
-    "text": "désamorce maintenant",
-    "meaning": "Significado en juego: désamorce maintenant"
-  },
-  "instructions-capture-point": {
-    "text": "capture point",
-    "meaning": "Significado en juego: capture point"
-  },
-  "instructions-contest-point": {
-    "text": "conteste point",
-    "meaning": "Significado en juego: conteste point"
-  },
-  "instructions-touch-point": {
-    "text": "touche point",
-    "meaning": "Significado en juego: touche point"
-  },
-  "instructions-clear-corners": {
-    "text": "clair corners",
-    "meaning": "Significado en juego: clair corners"
-  },
-  "instructions-check-left": {
-    "text": "vérifie izquierda",
-    "meaning": "Significado en juego: vérifie izquierda"
-  },
-  "instructions-check-right": {
-    "text": "vérifie derecha",
-    "meaning": "Significado en juego: vérifie derecha"
-  },
-  "instructions-check-behind": {
-    "text": "vérifie detrás",
-    "meaning": "Significado en juego: vérifie detrás"
-  },
-  "instructions-do-not-split": {
-    "text": "do pas séparez",
-    "meaning": "Significado en juego: do pas séparez"
-  },
-  "instructions-do-not-feed": {
-    "text": "do pas feed",
-    "meaning": "Significado en juego: do pas feed"
-  },
-  "instructions-do-not-waste-it": {
-    "text": "do pas gaspille it",
-    "meaning": "Significado en juego: do pas gaspille it"
-  },
-  "instructions-stop-peeking": {
-    "text": "stop peeking",
-    "meaning": "Significado en juego: stop peeking"
-  },
-  "instructions-mute-him": {
-    "text": "mute him",
-    "meaning": "Significado en juego: mute him"
-  },
-  "instructions-report-after": {
-    "text": "signale after",
-    "meaning": "Significado en juego: signale after"
-  },
-  "instructions-stack-left": {
-    "text": "groupe izquierda",
-    "meaning": "Significado en juego: groupe izquierda"
-  },
-  "instructions-stack-right": {
-    "text": "groupe derecha",
-    "meaning": "Significado en juego: groupe derecha"
-  },
-  "objective-plant-the-bomb": {
-    "text": "pose the bomb",
-    "meaning": "Significado en juego: pose the bomb"
-  },
-  "objective-bomb-planted": {
-    "text": "bomb planted",
-    "meaning": "Significado en juego: bomb planted"
-  },
-  "objective-bomb-down": {
-    "text": "bomb indisponible",
-    "meaning": "Significado en juego: bomb indisponible"
-  },
-  "objective-spike-down": {
-    "text": "spike indisponible",
-    "meaning": "Significado en juego: spike indisponible"
-  },
-  "objective-defuse-the-bomb": {
-    "text": "désamorce the bomb",
-    "meaning": "Significado en juego: désamorce the bomb"
-  },
-  "objective-half-defuse": {
-    "text": "half désamorce",
-    "meaning": "Significado en juego: half désamorce"
-  },
-  "objective-stick-the-defuse": {
-    "text": "stick the désamorce",
-    "meaning": "Significado en juego: stick the désamorce"
-  },
-  "objective-fake-defuse": {
-    "text": "Desactivación falsa",
-    "meaning": "Significado en juego: Desactivación falsa"
-  },
-  "objective-objective-secured": {
-    "text": "objectif secured",
-    "meaning": "Significado en juego: objectif secured"
-  },
-  "objective-objective-lost": {
-    "text": "objectif lost",
-    "meaning": "Significado en juego: objectif lost"
-  },
-  "objective-point-captured": {
-    "text": "point captured",
-    "meaning": "Significado en juego: point captured"
-  },
-  "objective-point-contested": {
-    "text": "point contested",
-    "meaning": "Significado en juego: point contested"
-  },
-  "objective-payload-moving": {
-    "text": "payload moving",
-    "meaning": "Significado en juego: payload moving"
-  },
-  "objective-payload-stopped": {
-    "text": "payload stopped",
-    "meaning": "Significado en juego: payload stopped"
-  },
-  "objective-escort-the-payload": {
-    "text": "escort the payload",
-    "meaning": "Significado en juego: escort the payload"
-  },
-  "objective-stop-the-payload": {
-    "text": "stop the payload",
-    "meaning": "Significado en juego: stop the payload"
-  },
-  "objective-capture-the-flag": {
-    "text": "capture the flag",
-    "meaning": "Significado en juego: capture the flag"
-  },
-  "objective-return-the-flag": {
-    "text": "return the flag",
-    "meaning": "Significado en juego: return the flag"
-  },
-  "objective-hold-the-point": {
-    "text": "tiens the point",
-    "meaning": "Significado en juego: tiens the point"
-  },
-  "objective-leave-the-point": {
-    "text": "leave the point",
-    "meaning": "Significado en juego: leave the point"
-  },
-  "teamwork-nice-shot": {
-    "text": "nice tir",
-    "meaning": "Significado en juego: nice tir"
-  },
-  "teamwork-nice-try": {
-    "text": "nice try",
-    "meaning": "Significado en juego: nice try"
-  },
-  "teamwork-good-comms": {
-    "text": "bon comms",
-    "meaning": "Significado en juego: bon comms"
-  },
-  "teamwork-keep-comms-clear": {
-    "text": "keep comms clair",
-    "meaning": "Significado en juego: keep comms clair"
-  },
-  "teamwork-i-trust-you": {
-    "text": "i trust you",
-    "meaning": "Significado en juego: i trust you"
-  },
-  "teamwork-you-got-this": {
-    "text": "you got this",
-    "meaning": "Significado en juego: you got this"
-  },
-  "teamwork-stay-calm": {
-    "text": "stay calm",
-    "meaning": "Significado en juego: stay calm"
-  },
-  "teamwork-we-can-win": {
-    "text": "we can win",
-    "meaning": "Significado en juego: we can win"
-  },
-  "teamwork-one-round-at-a-time": {
-    "text": "un round at a time",
-    "meaning": "Significado en juego: un round at a time"
-  },
-  "teamwork-reset-mental": {
-    "text": "reset mental",
-    "meaning": "Significado en juego: reset mental"
-  },
-  "teamwork-good-effort": {
-    "text": "bon effort",
-    "meaning": "Significado en juego: bon effort"
-  },
-  "teamwork-great-shot": {
-    "text": "great tir",
-    "meaning": "Significado en juego: great tir"
-  },
-  "teamwork-great-save": {
-    "text": "great guarda",
-    "meaning": "Significado en juego: great guarda"
-  },
-  "teamwork-great-call": {
-    "text": "great call",
-    "meaning": "Significado en juego: great call"
-  },
-  "teamwork-nice-clutch": {
-    "text": "nice clutch",
-    "meaning": "Significado en juego: nice clutch"
-  },
-  "teamwork-nice-aim": {
-    "text": "nice aim",
-    "meaning": "Significado en juego: nice aim"
-  },
-  "teamwork-nice-movement": {
-    "text": "nice movement",
-    "meaning": "Significado en juego: nice movement"
-  },
-  "teamwork-nice-utility": {
-    "text": "nice utility",
-    "meaning": "Significado en juego: nice utility"
-  },
-  "teamwork-i-will-cover-you": {
-    "text": "i will couvre you",
-    "meaning": "Significado en juego: i will couvre you"
-  },
-  "teamwork-i-will-heal-you": {
-    "text": "i will soigne you",
-    "meaning": "Significado en juego: i will soigne you"
-  },
-  "teamwork-i-will-watch-flank": {
-    "text": "i will surveille flanco",
-    "meaning": "Significado en juego: i will surveille flanco"
-  },
-  "teamwork-take-my-weapon": {
-    "text": "prends my arme",
-    "meaning": "Significado en juego: prends my arme"
-  },
-  "teamwork-take-my-loot": {
-    "text": "prends my butin",
-    "meaning": "Significado en juego: prends my butin"
-  },
-  "teamwork-let-me-go-first": {
-    "text": "let me allez premier",
-    "meaning": "Significado en juego: let me allez premier"
-  },
-  "teamwork-i-will-bait-for-you": {
-    "text": "i will appât pour you",
-    "meaning": "Significado en juego: i will appât pour you"
-  },
-  "teamwork-trade-together": {
-    "text": "trade ensemble",
-    "meaning": "Significado en juego: trade ensemble"
-  },
-  "teamwork-wait-for-team": {
-    "text": "espera pour équipe",
-    "meaning": "Significado en juego: espera pour équipe"
-  },
-  "teamwork-we-need-everyone": {
-    "text": "we besoin de everyone",
-    "meaning": "Significado en juego: we besoin de everyone"
-  },
-  "teamwork-play-together": {
-    "text": "joue ensemble",
-    "meaning": "Significado en juego: joue ensemble"
-  },
-  "teamwork-do-not-blame": {
-    "text": "do pas blame",
-    "meaning": "Significado en juego: do pas blame"
-  },
-  "teamwork-focus-next": {
-    "text": "focus next",
-    "meaning": "Significado en juego: focus next"
-  },
-  "strategy-default-setup": {
-    "text": "standard setup",
-    "meaning": "Significado en juego: standard setup"
-  },
-  "strategy-slow-push": {
-    "text": "lentement empuja",
-    "meaning": "Significado en juego: lentement empuja"
-  },
-  "strategy-fast-push": {
-    "text": "vite empuja",
-    "meaning": "Significado en juego: vite empuja"
-  },
-  "strategy-fake-push": {
-    "text": "Ataque falso",
-    "meaning": "Significado en juego: Ataque falso"
-  },
-  "strategy-split-push": {
-    "text": "séparez empuja",
-    "meaning": "Significado en juego: séparez empuja"
-  },
-  "strategy-retake": {
-    "text": "retake",
-    "meaning": "Significado en juego: retake"
-  },
-  "strategy-save-round": {
-    "text": "guarda round",
-    "meaning": "Significado en juego: guarda round"
-  },
-  "strategy-eco-round": {
-    "text": "eco round",
-    "meaning": "Significado en juego: eco round"
-  },
-  "strategy-full-buy": {
-    "text": "toute compra",
-    "meaning": "Significado en juego: toute compra"
-  },
-  "strategy-force-buy": {
-    "text": "force compra",
-    "meaning": "Significado en juego: force compra"
-  },
-  "strategy-play-for-picks": {
-    "text": "joue pour picks",
-    "meaning": "Significado en juego: joue pour picks"
-  },
-  "strategy-play-objective": {
-    "text": "joue objectif",
-    "meaning": "Significado en juego: joue objectif"
-  },
-  "strategy-play-for-late-game": {
-    "text": "joue pour late partie",
-    "meaning": "Significado en juego: joue pour late partie"
-  },
-  "strategy-take-map-control": {
-    "text": "prends carte control",
-    "meaning": "Significado en juego: prends carte control"
-  },
-  "strategy-give-map-control": {
-    "text": "give carte control",
-    "meaning": "Significado en juego: give carte control"
-  },
-  "strategy-deny-vision": {
-    "text": "deny vision",
-    "meaning": "Significado en juego: deny vision"
-  },
-  "strategy-gather-info": {
-    "text": "gather info",
-    "meaning": "Significado en juego: gather info"
-  },
-  "strategy-bait-utility": {
-    "text": "appât utility",
-    "meaning": "Significado en juego: appât utility"
-  },
-  "strategy-use-utility-first": {
-    "text": "utilise utility premier",
-    "meaning": "Significado en juego: utilise utility premier"
-  },
-  "strategy-trade-setup": {
-    "text": "trade setup",
-    "meaning": "Significado en juego: trade setup"
-  },
-  "strategy-double-peek": {
-    "text": "double peek",
-    "meaning": "Significado en juego: double peek"
-  },
-  "strategy-off-angle": {
-    "text": "off angle",
-    "meaning": "Significado en juego: off angle"
-  },
-  "strategy-cross-setup": {
-    "text": "cross setup",
-    "meaning": "Significado en juego: cross setup"
-  },
-  "strategy-late-lurk": {
-    "text": "late lurk",
-    "meaning": "Significado en juego: late lurk"
-  },
-  "strategy-anchor-site": {
-    "text": "anchor sitio",
-    "meaning": "Significado en juego: anchor sitio"
-  },
-  "strategy-play-retake": {
-    "text": "joue retake",
-    "meaning": "Significado en juego: joue retake"
-  },
-  "strategy-stack-objective": {
-    "text": "groupe objectif",
-    "meaning": "Significado en juego: groupe objectif"
-  },
-  "strategy-pressure-side-lane": {
-    "text": "pressure side voie",
-    "meaning": "Significado en juego: pressure side voie"
-  },
-  "strategy-cut-rotation": {
-    "text": "cut rotation",
-    "meaning": "Significado en juego: cut rotation"
-  },
-  "strategy-hold-rotation": {
-    "text": "tiens rotation",
-    "meaning": "Significado en juego: tiens rotation"
-  },
-  "strategy-time-advantage": {
-    "text": "time advantage",
-    "meaning": "Significado en juego: time advantage"
-  },
-  "strategy-man-advantage": {
-    "text": "man advantage",
-    "meaning": "Significado en juego: man advantage"
-  },
-  "strategy-man-disadvantage": {
-    "text": "man disadvantage",
-    "meaning": "Significado en juego: man disadvantage"
-  },
-  "strategy-numbers-advantage": {
-    "text": "numbers advantage",
-    "meaning": "Significado en juego: numbers advantage"
-  },
-  "strategy-damage-advantage": {
-    "text": "damage advantage",
-    "meaning": "Significado en juego: damage advantage"
-  },
-  "strategy-ultimate-advantage": {
-    "text": "ultime advantage",
-    "meaning": "Significado en juego: ultime advantage"
-  },
-  "strategy-economy-advantage": {
-    "text": "economy advantage",
-    "meaning": "Significado en juego: economy advantage"
-  },
-  "strategy-do-not-overcommit": {
-    "text": "do pas overcommit",
-    "meaning": "Significado en juego: do pas overcommit"
-  },
-  "strategy-commit-now": {
-    "text": "commit maintenant",
-    "meaning": "Significado en juego: commit maintenant"
-  },
-  "strategy-cancel-the-push": {
-    "text": "cancel the empuja",
-    "meaning": "Significado en juego: cancel the empuja"
-  },
-  "economy-buy": {
-    "text": "compra",
-    "meaning": "Significado en juego: compra"
-  },
-  "economy-save": {
-    "text": "guarda",
-    "meaning": "Significado en juego: guarda"
-  },
-  "economy-drop-me": {
-    "text": "donne me",
-    "meaning": "Significado en juego: donne me"
-  },
-  "economy-i-can-drop": {
-    "text": "i can donne",
-    "meaning": "Significado en juego: i can donne"
-  },
-  "economy-need-a-drop": {
-    "text": "besoin de a donne",
-    "meaning": "Significado en juego: besoin de a donne"
-  },
-  "economy-full-save": {
-    "text": "toute guarda",
-    "meaning": "Significado en juego: toute guarda"
-  },
-  "economy-light-buy": {
-    "text": "light compra",
-    "meaning": "Significado en juego: light compra"
-  },
-  "economy-half-buy": {
-    "text": "half compra",
-    "meaning": "Significado en juego: half compra"
-  },
-  "economy-full-armor": {
-    "text": "toute armure",
-    "meaning": "Significado en juego: toute armure"
-  },
-  "economy-no-armor": {
-    "text": "no armure",
-    "meaning": "Significado en juego: no armure"
-  },
-  "economy-upgrade-weapon": {
-    "text": "upgrade arme",
-    "meaning": "Significado en juego: upgrade arme"
-  },
-  "economy-keep-weapon": {
-    "text": "keep arme",
-    "meaning": "Significado en juego: keep arme"
-  },
-  "economy-pick-up-gun": {
-    "text": "pick up gun",
-    "meaning": "Significado en juego: pick up gun"
-  },
-  "economy-save-the-gun": {
-    "text": "guarda the gun",
-    "meaning": "Significado en juego: guarda the gun"
-  },
-  "economy-we-are-broke": {
-    "text": "we are broke",
-    "meaning": "Significado en juego: we are broke"
-  },
-  "economy-they-are-broke": {
-    "text": "they are broke",
-    "meaning": "Significado en juego: they are broke"
-  },
-  "economy-they-have-money": {
-    "text": "they have money",
-    "meaning": "Significado en juego: they have money"
-  },
-  "economy-we-can-buy-next": {
-    "text": "we can compra next",
-    "meaning": "Significado en juego: we can compra next"
-  },
-  "economy-do-not-force": {
-    "text": "do pas force",
-    "meaning": "Significado en juego: do pas force"
-  },
-  "economy-force-together": {
-    "text": "force ensemble",
-    "meaning": "Significado en juego: force ensemble"
-  },
-  "slang-afk": {
-    "text": "AFK",
-    "meaning": "Significado en juego: AFK"
-  },
-  "slang-brb": {
-    "text": "BRB",
-    "meaning": "Significado en juego: BRB"
-  },
-  "slang-op": {
-    "text": "OP",
-    "meaning": "Significado en juego: OP"
-  },
-  "slang-nerf": {
-    "text": "nerf",
-    "meaning": "Significado en juego: nerf"
-  },
-  "slang-buff": {
-    "text": "buff",
-    "meaning": "Significado en juego: buff"
-  },
-  "slang-meta": {
-    "text": "meta",
-    "meaning": "Significado en juego: meta"
-  },
-  "slang-main": {
-    "text": "main",
-    "meaning": "Significado en juego: main"
-  },
-  "slang-alt": {
-    "text": "alt",
-    "meaning": "Significado en juego: alt"
-  },
-  "slang-smurf": {
-    "text": "smurf",
-    "meaning": "Significado en juego: smurf"
-  },
-  "slang-noob": {
-    "text": "noob",
-    "meaning": "Significado en juego: noob"
-  },
-  "slang-camper": {
-    "text": "camper",
-    "meaning": "Significado en juego: camper"
-  },
-  "slang-sweat": {
-    "text": "sweat",
-    "meaning": "Significado en juego: sweat"
-  },
-  "slang-tryhard": {
-    "text": "tryhard",
-    "meaning": "Significado en juego: tryhard"
-  },
-  "slang-clutch-or-kick": {
-    "text": "clutch or kick",
-    "meaning": "Significado en juego: clutch or kick"
-  },
-  "slang-diff": {
-    "text": "diff",
-    "meaning": "Significado en juego: diff"
-  },
-  "slang-gap": {
-    "text": "gap",
-    "meaning": "Significado en juego: gap"
-  },
-  "slang-tilt": {
-    "text": "tilt",
-    "meaning": "Significado en juego: tilt"
-  },
-  "slang-rage-quit": {
-    "text": "rage quit",
-    "meaning": "Significado en juego: rage quit"
-  },
-  "slang-spawn-camp": {
-    "text": "apparition camp",
-    "meaning": "Significado en juego: apparition camp"
-  },
-  "slang-spawn-kill": {
-    "text": "apparition kill",
-    "meaning": "Significado en juego: apparition kill"
-  },
-  "slang-hitbox": {
-    "text": "hitbox",
-    "meaning": "Significado en juego: hitbox"
-  },
-  "slang-lag": {
-    "text": "lag",
-    "meaning": "Significado en juego: lag"
-  },
-  "slang-ping": {
-    "text": "ping",
-    "meaning": "Significado en juego: ping"
-  },
-  "slang-fps": {
-    "text": "FPS",
-    "meaning": "Significado en juego: FPS"
-  },
-  "slang-dps": {
-    "text": "DPS",
-    "meaning": "Significado en juego: DPS"
-  },
-  "slang-aoe": {
-    "text": "AOE",
-    "meaning": "Significado en juego: AOE"
-  },
-  "slang-cc": {
-    "text": "CC",
-    "meaning": "Significado en juego: CC"
-  },
-  "slang-gg-ez": {
-    "text": "GG EZ",
-    "meaning": "Significado en juego: GG EZ"
-  },
-  "slang-wp": {
-    "text": "WP",
-    "meaning": "Significado en juego: WP"
-  },
-  "slang-nt": {
-    "text": "NT",
-    "meaning": "Significado en juego: NT"
+    "meaning": "Buen juego; normalmente se dice al final de una partida para mostrar respeto."
   },
   "slang-ggwp": {
     "text": "GGWP",
-    "meaning": "Significado en juego: GGWP"
+    "meaning": "Buen juego, bien jugado."
   },
-  "slang-lag-spike": {
-    "text": "lag spike",
-    "meaning": "Significado en juego: lag spike"
+  "callouts-glhf": {
+    "text": "GLHF",
+    "meaning": "Buena suerte y diviértete; mensaje amistoso antes de empezar la partida."
   },
-  "slang-ranked": {
-    "text": "ranked",
-    "meaning": "Significado en juego: ranked"
+  "slang-wp": {
+    "text": "WP",
+    "meaning": "Bien jugado."
   },
-  "slang-casual": {
-    "text": "casual",
-    "meaning": "Significado en juego: casual"
+  "slang-nt": {
+    "text": "NT",
+    "meaning": "Buen intento; se usa para animar tras una jugada fallida."
+  },
+  "callouts-nice": {
+    "text": "¡Buena!",
+    "meaning": "Elogio rápido después de una buena jugada."
+  },
+  "teamwork-nice-try": {
+    "text": "Buen intento",
+    "meaning": "Frase de apoyo después de un intento fallido."
+  },
+  "teamwork-nice-shot": {
+    "text": "Buen tiro",
+    "meaning": "Elogio después de un buen disparo."
+  },
+  "callouts-thanks": {
+    "text": "Gracias",
+    "meaning": "Agradecimiento rápido a un compañero."
+  },
+  "callouts-sorry": {
+    "text": "Perdón",
+    "meaning": "Disculpa después de un error o daño accidental a un compañero."
+  },
+  "callouts-my-bad": {
+    "text": "Mi culpa",
+    "meaning": "El hablante admite que el error fue suyo."
+  },
+  "callouts-good-job": {
+    "text": "Buen trabajo",
+    "meaning": "Comentario positivo después de una acción útil o una ronda."
+  },
+  "teamwork-good-comms": {
+    "text": "Buenas comms",
+    "meaning": "La comunicación del equipo fue útil."
+  },
+  "slang-afk": {
+    "text": "AFK",
+    "meaning": "Away from keyboard; el jugador no está activo."
+  },
+  "slang-brb": {
+    "text": "BRB",
+    "meaning": "Be right back; vuelvo enseguida."
+  },
+  "slang-dc": {
+    "text": "DC",
+    "meaning": "Desconexión; perder la conexión con la partida."
   },
   "slang-disconnect": {
-    "text": "disconnect",
-    "meaning": "Significado en juego: disconnect"
+    "text": "Desconexión",
+    "meaning": "Un jugador pierde la conexión con la partida."
   },
   "slang-reconnect": {
-    "text": "reconnect",
-    "meaning": "Significado en juego: reconnect"
+    "text": "Reconectar",
+    "meaning": "Un jugador vuelve después de perder la conexión."
+  },
+  "slang-lag": {
+    "text": "Lag",
+    "meaning": "Retraso o problemas de conexión."
+  },
+  "slang-lag-spike": {
+    "text": "Lag spike",
+    "meaning": "Subida repentina y breve del retraso de red."
+  },
+  "slang-ping": {
+    "text": "Ping",
+    "meaning": "Marcador en el mapa o retraso de red, según el contexto."
+  },
+  "slang-fps": {
+    "text": "FPS",
+    "meaning": "First-person shooter, o fotogramas por segundo cuando se habla de rendimiento."
+  },
+  "slang-server": {
+    "text": "Servidor",
+    "meaning": "Sistema o región en línea que aloja la partida."
+  },
+  "slang-hit-reg": {
+    "text": "Hit reg",
+    "meaning": "Registro de impactos; si el juego cuenta correctamente un disparo o ataque como acierto."
+  },
+  "slang-desync": {
+    "text": "Desync",
+    "meaning": "Cuando lo que ven los jugadores no está sincronizado con el servidor o entre ellos."
+  },
+  "slang-op": {
+    "text": "OP",
+    "meaning": "Overpowered; demasiado fuerte en comparación con otras opciones."
+  },
+  "slang-meta": {
+    "text": "Meta",
+    "meaning": "La estrategia, personaje, arma o build más efectiva o popular en ese momento."
+  },
+  "slang-nerf": {
+    "text": "Nerf",
+    "meaning": "Debilitar algo mediante una actualización del juego."
+  },
+  "slang-buff": {
+    "text": "Buff",
+    "meaning": "Fortalecer algo mediante una actualización del juego."
+  },
+  "slang-noob": {
+    "text": "Noob",
+    "meaning": "Jugador nuevo o inexperto; puede usarse como insulto."
+  },
+  "slang-pro": {
+    "text": "Pro",
+    "meaning": "Jugador muy habilidoso o de nivel profesional."
+  },
+  "slang-bot": {
+    "text": "Bot",
+    "meaning": "Personaje controlado por IA, o insulto para un jugador que está jugando mal."
+  },
+  "slang-smurf": {
+    "text": "Smurf",
+    "meaning": "Jugador habilidoso que usa una cuenta de rango bajo."
+  },
+  "slang-camper": {
+    "text": "Camper",
+    "meaning": "Jugador que espera en un sitio para conseguir bajas."
+  },
+  "slang-tryhard": {
+    "text": "Tryhard",
+    "meaning": "Jugador que se toma la partida muy en serio; a veces se usa como insulto."
+  },
+  "slang-sweat": {
+    "text": "Sweat",
+    "meaning": "Jugador que se esfuerza mucho por ganar."
+  },
+  "slang-tilt": {
+    "text": "Tilt",
+    "meaning": "Frustración que hace que alguien juegue peor."
+  },
+  "slang-toxic": {
+    "text": "Tóxico",
+    "meaning": "Comportamiento grosero, abusivo o dañino en el chat o en la partida."
+  },
+  "slang-salty": {
+    "text": "Salty",
+    "meaning": "Enfadado o molesto después de perder o ser superado."
+  },
+  "slang-rage-quit": {
+    "text": "Rage quit",
+    "meaning": "Abandonar la partida por enfado."
+  },
+  "slang-pvp": {
+    "text": "PvP",
+    "meaning": "Jugador contra jugador; modo donde los jugadores luchan contra otros jugadores."
+  },
+  "slang-pve": {
+    "text": "PvE",
+    "meaning": "Jugador contra entorno; modo contra enemigos de IA o sistemas del juego."
+  },
+  "slang-ranked": {
+    "text": "Ranked",
+    "meaning": "Modo competitivo que afecta al rango."
+  },
+  "slang-casual": {
+    "text": "Casual",
+    "meaning": "Modo sin rango para jugar de forma más relajada."
+  },
+  "slang-mmr": {
+    "text": "MMR",
+    "meaning": "Matchmaking rating; valoración de habilidad, oculta o visible, usada para crear partidas equilibradas."
+  },
+  "slang-elo": {
+    "text": "Elo",
+    "meaning": "Sistema de puntuación o palabra general para referirse al nivel competitivo."
+  },
+  "slang-kd": {
+    "text": "K/D",
+    "meaning": "Ratio de bajas/muertes; bajas comparadas con muertes."
+  },
+  "slang-kda": {
+    "text": "KDA",
+    "meaning": "Bajas, muertes y asistencias; estadística común de rendimiento."
+  },
+  "slang-mvp": {
+    "text": "MVP",
+    "meaning": "Jugador más valioso; el jugador con mayor impacto."
+  },
+  "slang-rng": {
+    "text": "RNG",
+    "meaning": "Generación de números aleatorios; resultados basados en suerte dentro del juego."
+  },
+  "slang-xp": {
+    "text": "XP",
+    "meaning": "Puntos de experiencia usados para subir de nivel un personaje, cuenta o pase de batalla."
+  },
+  "slang-level-up": {
+    "text": "Subir de nivel",
+    "meaning": "Ganar un nivel o mejorar mediante progreso y experiencia."
+  },
+  "slang-grind": {
+    "text": "Grind",
+    "meaning": "Repetir partidas o tareas para conseguir recompensas, rango o progreso."
+  },
+  "slang-farm": {
+    "text": "Farmear",
+    "meaning": "Recolectar repetidamente recursos, oro, XP o bajas fáciles."
+  },
+  "slang-main": {
+    "text": "Main",
+    "meaning": "Personaje, rol o arma que un jugador usa más."
+  },
+  "slang-alt": {
+    "text": "Alt",
+    "meaning": "Cuenta secundaria o personaje alternativo."
+  },
+  "slang-party": {
+    "text": "Party",
+    "meaning": "Grupo de jugadores que entran juntos a la cola."
+  },
+  "slang-squad": {
+    "text": "Squad",
+    "meaning": "Pequeño equipo de jugadores que trabajan juntos."
+  },
+  "slang-lobby": {
+    "text": "Lobby",
+    "meaning": "Zona previa a la partida o grupo de jugadores dentro de una partida."
+  },
+  "slang-queue": {
+    "text": "Cola",
+    "meaning": "Esperar en el matchmaking para encontrar partida."
+  },
+  "slang-matchmaking": {
+    "text": "Matchmaking",
+    "meaning": "Sistema que encuentra y equilibra jugadores para una partida."
+  },
+  "slang-solo-queue": {
+    "text": "Solo queue",
+    "meaning": "Jugar matchmaking en solitario, sin equipo prehecho."
+  },
+  "slang-duo": {
+    "text": "Dúo",
+    "meaning": "Dos jugadores jugando juntos como pareja."
+  },
+  "slang-stack": {
+    "text": "Stack",
+    "meaning": "Grupo prehecho de jugadores en cola juntos, a menudo un equipo completo."
+  },
+  "slang-comms": {
+    "text": "Comms",
+    "meaning": "Comunicación del equipo por voz, texto o pings."
+  },
+  "callouts-voice-chat": {
+    "text": "Chat de voz",
+    "meaning": "Comunicación mediante micrófono."
+  },
+  "callouts-text-chat": {
+    "text": "Chat de texto",
+    "meaning": "Comunicación mediante mensajes escritos."
+  },
+  "callouts-no-mic": {
+    "text": "Sin micro",
+    "meaning": "El hablante no puede usar micrófono."
+  },
+  "callouts-mic-muted": {
+    "text": "Micro muteado",
+    "meaning": "El micrófono está silenciado."
+  },
+  "slang-dps": {
+    "text": "DPS",
+    "meaning": "Daño por segundo, o rol centrado en hacer daño."
+  },
+  "slang-tank": {
+    "text": "Tank",
+    "meaning": "Rol resistente que absorbe daño y protege a los compañeros."
+  },
+  "slang-support": {
+    "text": "Support",
+    "meaning": "Rol centrado en curar, aportar utilidad, dar buffs o ayudar al equipo."
+  },
+  "slang-healer": {
+    "text": "Healer",
+    "meaning": "Rol de apoyo centrado en restaurar la salud de los compañeros."
+  },
+  "slang-aoe": {
+    "text": "AOE",
+    "meaning": "Área de efecto; daño o habilidad que afecta una zona."
+  },
+  "slang-cc": {
+    "text": "CC",
+    "meaning": "Control de masas; habilidades que aturden, ralentizan o incapacitan."
+  },
+  "slang-ult": {
+    "text": "Ult",
+    "meaning": "Abreviatura de ultimate; la habilidad más fuerte de un personaje."
+  },
+  "callouts-ultimate-ready": {
+    "text": "Ultimate lista",
+    "meaning": "La ultimate del hablante está disponible."
+  },
+  "callouts-no-ultimate": {
+    "text": "Sin ultimate",
+    "meaning": "El hablante o el enemigo no tiene ultimate disponible."
+  },
+  "callouts-ability-ready": {
+    "text": "Habilidad lista",
+    "meaning": "Hay una habilidad útil disponible."
+  },
+  "callouts-ability-down": {
+    "text": "Habilidad en cooldown",
+    "meaning": "Una habilidad clave no está disponible o está en enfriamiento."
+  },
+  "callouts-cooldown": {
+    "text": "Cooldown",
+    "meaning": "Una habilidad todavía no puede usarse."
+  },
+  "callouts-enemy-spotted": {
+    "text": "Enemigo visto",
+    "meaning": "Se ha visto a un enemigo."
+  },
+  "callouts-enemy-here": {
+    "text": "Enemigo aquí",
+    "meaning": "Hay un enemigo en la ubicación del hablante."
+  },
+  "callouts-enemy-there": {
+    "text": "Enemigo ahí",
+    "meaning": "Hay un enemigo en la ubicación marcada o mencionada."
+  },
+  "callouts-on-me": {
+    "text": "En mí",
+    "meaning": "El enemigo o la acción está cerca del hablante."
+  },
+  "callouts-i-see-him": {
+    "text": "Lo veo",
+    "meaning": "El hablante tiene contacto visual con un enemigo."
+  },
+  "callouts-i-see-them": {
+    "text": "Los veo",
+    "meaning": "El hablante tiene contacto visual con uno o más enemigos."
+  },
+  "callouts-one-more": {
+    "text": "Uno más",
+    "meaning": "Hay un enemigo más cerca o falta una acción más."
+  },
+  "callouts-last-one": {
+    "text": "Último",
+    "meaning": "Solo queda un enemigo."
+  },
+  "callouts-two-enemies-here": {
+    "text": "Dos enemigos aquí",
+    "meaning": "Hay dos enemigos en la ubicación del hablante."
+  },
+  "callouts-three-enemies-here": {
+    "text": "Tres enemigos aquí",
+    "meaning": "Hay tres enemigos en la ubicación del hablante."
+  },
+  "callouts-full-team-here": {
+    "text": "Todo el equipo aquí",
+    "meaning": "La mayoría o todos los enemigos están agrupados en esta zona."
+  },
+  "callouts-enemy-missing": {
+    "text": "Enemigo desaparecido",
+    "meaning": "Un enemigo ya no está visible y puede rotar."
+  },
+  "callouts-all-missing": {
+    "text": "Todos desaparecidos",
+    "meaning": "No hay enemigos visibles ahora mismo."
+  },
+  "callouts-behind-you": {
+    "text": "¡Detrás de ti!",
+    "meaning": "Hay un enemigo justo detrás de un compañero."
+  },
+  "callouts-left-side": {
+    "text": "¡Lado izquierdo!",
+    "meaning": "La presión enemiga viene por la izquierda."
+  },
+  "callouts-right-side": {
+    "text": "¡Lado derecho!",
+    "meaning": "La presión enemiga viene por la derecha."
+  },
+  "callouts-above-us": {
+    "text": "Encima de nosotros",
+    "meaning": "Hay un enemigo en altura sobre el equipo."
+  },
+  "callouts-below-us": {
+    "text": "Debajo de nosotros",
+    "meaning": "Hay un enemigo debajo de la posición del equipo."
+  },
+  "callouts-in-front": {
+    "text": "Delante",
+    "meaning": "La amenaza está justo enfrente."
+  },
+  "callouts-mid": {
+    "text": "Mid",
+    "meaning": "El enemigo o la acción está en la línea central."
+  },
+  "callouts-top-mid": {
+    "text": "Top mid",
+    "meaning": "El enemigo está en la parte alta del medio."
+  },
+  "callouts-bottom-mid": {
+    "text": "Bottom mid",
+    "meaning": "El enemigo está en la parte baja del medio."
+  },
+  "callouts-spawn": {
+    "text": "Spawn",
+    "meaning": "El enemigo o el equipo está cerca del spawn."
+  },
+  "callouts-our-spawn": {
+    "text": "Nuestro spawn",
+    "meaning": "La acción está cerca de nuestra zona inicial."
+  },
+  "callouts-their-spawn": {
+    "text": "Su spawn",
+    "meaning": "La acción está cerca de la zona inicial enemiga."
+  },
+  "callouts-flank": {
+    "text": "Flanco",
+    "meaning": "Un enemigo está atacando por el lado o por detrás."
+  },
+  "callouts-watch-flank": {
+    "text": "Cuidado flanco",
+    "meaning": "Alguien debería vigilar enemigos por detrás del equipo."
+  },
+  "danger-incoming": {
+    "text": "¡Viene!",
+    "meaning": "Una amenaza o ataque está llegando ahora."
+  },
+  "danger-grenade": {
+    "text": "¡Granada!",
+    "meaning": "Hay una granada cerca."
+  },
+  "danger-flash": {
+    "text": "¡Flash!",
+    "meaning": "Viene una flashbang o efecto de ceguera."
+  },
+  "danger-sniper": {
+    "text": "¡Sniper!",
+    "meaning": "Un francotirador está amenazando la zona."
+  },
+  "danger-trap": {
+    "text": "¡Trampa!",
+    "meaning": "Hay una trampa cerca."
+  },
+  "danger-mine": {
+    "text": "¡Mina!",
+    "meaning": "Hay una mina explosiva cerca."
+  },
+  "danger-ambush": {
+    "text": "¡Emboscada!",
+    "meaning": "Los enemigos están esperando para sorprender al equipo."
+  },
+  "danger-they-are-rushing": {
+    "text": "Están rusheando",
+    "meaning": "Los enemigos están atacando muy rápido."
+  },
+  "danger-they-are-pushing": {
+    "text": "Están pusheando",
+    "meaning": "Los enemigos avanzan de forma agresiva."
+  },
+  "danger-they-are-flanking": {
+    "text": "Están flanqueando",
+    "meaning": "Los enemigos atacan por detrás o por el lado."
+  },
+  "danger-they-know": {
+    "text": "Lo saben",
+    "meaning": "Los enemigos conocen tu posición o plan."
+  },
+  "danger-they-saw-me": {
+    "text": "Me vieron",
+    "meaning": "El hablante ha sido detectado."
+  },
+  "danger-i-am-exposed": {
+    "text": "Estoy expuesto",
+    "meaning": "El hablante está en una posición visible y arriesgada."
+  },
+  "danger-no-cover": {
+    "text": "Sin cobertura",
+    "meaning": "No hay un lugar seguro donde cubrirse."
+  },
+  "danger-bad-angle": {
+    "text": "Mal ángulo",
+    "meaning": "El ángulo actual es peligroso o desfavorable."
+  },
+  "danger-get-out": {
+    "text": "Sal de ahí",
+    "meaning": "Abandona la zona peligrosa inmediatamente."
+  },
+  "danger-back-up": {
+    "text": "Retrocede",
+    "meaning": "Aléjate del peligro."
+  },
+  "callouts-i-am-down": {
+    "text": "Estoy caído",
+    "meaning": "El hablante fue derribado, abatido o eliminado y no puede pelear."
+  },
+  "callouts-i-am-low": {
+    "text": "Estoy bajo",
+    "meaning": "El hablante tiene poca vida y necesita cuidado o ayuda."
+  },
+  "callouts-low-hp": {
+    "text": "Poca vida",
+    "meaning": "Un enemigo o compañero tiene poca salud restante."
+  },
+  "callouts-he-is-low": {
+    "text": "Está bajo",
+    "meaning": "Un enemigo está débil y se puede rematar."
+  },
+  "callouts-they-are-low": {
+    "text": "Están bajos",
+    "meaning": "Uno o más enemigos están débiles y se pueden rematar."
+  },
+  "callouts-one-shot": {
+    "text": "One shot",
+    "meaning": "Un enemigo necesita solo un golpe más para morir."
+  },
+  "callouts-armor-cracked": {
+    "text": "Armadura rota",
+    "meaning": "La armadura de un enemigo está rota o muy débil."
+  },
+  "callouts-shield-broken": {
+    "text": "Escudo roto",
+    "meaning": "El escudo o la armadura de un enemigo ha sido destruido."
+  },
+  "callouts-no-shield": {
+    "text": "Sin escudo",
+    "meaning": "El enemigo ya no tiene escudo o armadura."
+  },
+  "callouts-tagged-him": {
+    "text": "Le di",
+    "meaning": "El hablante dañó al enemigo."
+  },
+  "callouts-hit-for-fifty": {
+    "text": "Le di 50",
+    "meaning": "El enemigo recibió aproximadamente cincuenta de daño."
+  },
+  "callouts-hit-for-a-hundred": {
+    "text": "Le di 100",
+    "meaning": "El enemigo recibió aproximadamente cien de daño."
+  },
+  "callouts-knocked-one": {
+    "text": "Uno knockeado",
+    "meaning": "Un enemigo ha sido derribado."
+  },
+  "callouts-finished-one": {
+    "text": "Uno rematado",
+    "meaning": "Un enemigo derribado ha sido eliminado."
+  },
+  "callouts-team-wipe": {
+    "text": "Team wipe",
+    "meaning": "Todo el equipo enemigo ha sido eliminado."
+  },
+  "instructions-push": {
+    "text": "Pushear",
+    "meaning": "Atacar o avanzar."
+  },
+  "instructions-rush": {
+    "text": "Rushear",
+    "meaning": "Atacar muy rápido."
+  },
+  "instructions-hold": {
+    "text": "Aguanta",
+    "meaning": "Mantener la posición."
+  },
+  "instructions-defend": {
+    "text": "Defiende",
+    "meaning": "Proteger el sitio o la zona."
+  },
+  "instructions-attack": {
+    "text": "Ataca",
+    "meaning": "Empezar presión ofensiva."
+  },
+  "instructions-retreat": {
+    "text": "Retírate",
+    "meaning": "Volver a una posición segura."
+  },
+  "instructions-rotate": {
+    "text": "Rota",
+    "meaning": "Moverse a otra línea u objetivo."
+  },
+  "callouts-rotating": {
+    "text": "Rotando",
+    "meaning": "Los enemigos se están moviendo a otra zona."
+  },
+  "callouts-they-rotated": {
+    "text": "Rotaron",
+    "meaning": "El equipo enemigo se movió a otro sitio o línea."
+  },
+  "callouts-fake-rotate": {
+    "text": "Fake rotate",
+    "meaning": "El enemigo puede estar fingiendo una rotación."
+  },
+  "callouts-push-now": {
+    "text": "Pushea ahora",
+    "meaning": "Ataca inmediatamente."
+  },
+  "callouts-go-now": {
+    "text": "Ahora",
+    "meaning": "Actúa inmediatamente."
+  },
+  "callouts-fall-back": {
+    "text": "Retrocede",
+    "meaning": "Retirarse a una posición más segura."
+  },
+  "callouts-group-up": {
+    "text": "Agrúpense",
+    "meaning": "Juntarse antes de la siguiente jugada."
+  },
+  "callouts-regroup": {
+    "text": "Reagruparse",
+    "meaning": "Volver a juntarse después de una pelea o rotación."
+  },
+  "callouts-need-help": {
+    "text": "Necesito ayuda",
+    "meaning": "El hablante está bajo presión y necesita asistencia."
+  },
+  "callouts-help-me": {
+    "text": "Ayúdame",
+    "meaning": "El hablante necesita ayuda inmediata."
+  },
+  "callouts-need-backup": {
+    "text": "Necesito backup",
+    "meaning": "El hablante necesita apoyo de sus compañeros."
+  },
+  "callouts-i-need-healing": {
+    "text": "Necesito cura",
+    "meaning": "El hablante quiere una cura o habilidad de apoyo."
+  },
+  "instructions-heal-me": {
+    "text": "Cúrame",
+    "meaning": "Usa una habilidad o objeto de curación en el hablante."
+  },
+  "instructions-revive-me": {
+    "text": "Revíveme",
+    "meaning": "Traer de vuelta al hablante después de ser derribado."
+  },
+  "instructions-res-me": {
+    "text": "Reséame",
+    "meaning": "Abreviatura de revivirme o resucitarme."
+  },
+  "instructions-cover-the-revive": {
+    "text": "Cubre el revive",
+    "meaning": "Protege al jugador que está reviviendo."
+  },
+  "callouts-need-ammo": {
+    "text": "Necesito munición",
+    "meaning": "El hablante tiene poca munición."
+  },
+  "callouts-out-of-ammo": {
+    "text": "Sin munición",
+    "meaning": "El hablante no puede disparar hasta recargar o reabastecerse."
+  },
+  "callouts-reloading": {
+    "text": "Recargando",
+    "meaning": "El hablante está recargando y no puede pelear con seguridad."
+  },
+  "callouts-cover-me": {
+    "text": "Cúbreme",
+    "meaning": "Protege al hablante mientras se mueve, recarga o hace un objetivo."
+  },
+  "callouts-i-got-you": {
+    "text": "Te cubro",
+    "meaning": "El hablante apoyará o protegerá a un compañero."
+  },
+  "callouts-ping-it": {
+    "text": "Pinguealo",
+    "meaning": "Marca esa ubicación, objeto, enemigo u objetivo en el mapa."
+  },
+  "callouts-mark-the-enemy": {
+    "text": "Marca al enemigo",
+    "meaning": "Pon un ping o marcador sobre el enemigo."
+  },
+  "callouts-i-marked-it": {
+    "text": "Lo marqué",
+    "meaning": "El hablante puso un marcador."
+  },
+  "callouts-check-map": {
+    "text": "Mira el mapa",
+    "meaning": "Mira el minimapa o mapa táctico."
+  },
+  "callouts-look-at-ping": {
+    "text": "Mira el ping",
+    "meaning": "Presta atención al marcador colocado."
+  },
+  "instructions-follow-me": {
+    "text": "Síganme",
+    "meaning": "Muévanse con el hablante."
+  },
+  "instructions-stay-together": {
+    "text": "Quédense juntos",
+    "meaning": "Mantenerse cerca de los compañeros."
+  },
+  "instructions-spread-out": {
+    "text": "Sepárense",
+    "meaning": "No se queden demasiado juntos."
+  },
+  "instructions-wait-for-me": {
+    "text": "Espérenme",
+    "meaning": "Retrasar la acción hasta que llegue el hablante."
+  },
+  "instructions-wait-for-cooldowns": {
+    "text": "Esperen cooldowns",
+    "meaning": "No pelear hasta que las habilidades estén listas."
+  },
+  "objective-plant-the-bomb": {
+    "text": "Planta la bomba",
+    "meaning": "Coloca la bomba o spike en el sitio del objetivo."
+  },
+  "objective-bomb-planted": {
+    "text": "Bomba plantada",
+    "meaning": "La bomba o spike ha sido colocada."
+  },
+  "objective-bomb-down": {
+    "text": "Bomba caída",
+    "meaning": "El portador de la bomba soltó el objeto de objetivo."
+  },
+  "objective-spike-down": {
+    "text": "Spike caído",
+    "meaning": "La spike ha sido soltada."
+  },
+  "objective-defuse-the-bomb": {
+    "text": "Desactiva la bomba",
+    "meaning": "Detén la bomba plantada antes de que explote."
+  },
+  "objective-half-defuse": {
+    "text": "Half defuse",
+    "meaning": "Desactivar hasta el punto de control de la mitad."
+  },
+  "objective-stick-the-defuse": {
+    "text": "Stick defuse",
+    "meaning": "Seguir desactivando incluso bajo presión."
+  },
+  "objective-fake-defuse": {
+    "text": "Fake defuse",
+    "meaning": "Tocar la desactivación para obligar a los enemigos a asomarse."
+  },
+  "objective-objective-secured": {
+    "text": "Objetivo asegurado",
+    "meaning": "El equipo ha tomado o protegido el objetivo."
+  },
+  "objective-objective-lost": {
+    "text": "Objetivo perdido",
+    "meaning": "El enemigo ha tomado el objetivo."
+  },
+  "objective-point-captured": {
+    "text": "Punto capturado",
+    "meaning": "El punto de captura ahora está controlado."
+  },
+  "objective-point-contested": {
+    "text": "Punto disputado",
+    "meaning": "Ambos equipos están peleando por el punto."
+  },
+  "objective-payload-moving": {
+    "text": "Payload avanzando",
+    "meaning": "El objetivo de escolta está avanzando."
+  },
+  "objective-payload-stopped": {
+    "text": "Payload detenido",
+    "meaning": "El objetivo de escolta no se está moviendo."
+  },
+  "slang-loot": {
+    "text": "Loot",
+    "meaning": "Objetos útiles, armas, recursos o recompensas encontrados o ganados en el juego."
+  },
+  "callouts-loot-here": {
+    "text": "Loot aquí",
+    "meaning": "Hay objetos útiles en esta ubicación."
+  },
+  "callouts-good-loot": {
+    "text": "Buen loot",
+    "meaning": "Esta zona tiene objetos valiosos."
+  },
+  "callouts-need-weapon": {
+    "text": "Necesito arma",
+    "meaning": "El hablante necesita un arma usable."
+  },
+  "callouts-need-shield": {
+    "text": "Necesito escudo",
+    "meaning": "El hablante necesita armadura u objetos de escudo."
+  },
+  "callouts-need-meds": {
+    "text": "Necesito curas",
+    "meaning": "El hablante necesita objetos de curación."
+  },
+  "callouts-drop-ammo": {
+    "text": "Tira munición",
+    "meaning": "Dale munición a un compañero."
+  },
+  "callouts-drop-weapon": {
+    "text": "Tira arma",
+    "meaning": "Dale un arma a un compañero."
+  },
+  "callouts-take-this": {
+    "text": "Toma esto",
+    "meaning": "Un compañero debería recoger el objeto ofrecido."
+  },
+  "callouts-do-not-take-it": {
+    "text": "No lo tomes",
+    "meaning": "Deja el objeto para otra persona."
+  },
+  "callouts-i-will-take-it": {
+    "text": "Yo lo tomo",
+    "meaning": "El hablante quiere recoger el objeto."
+  },
+  "callouts-use-it": {
+    "text": "Úsalo",
+    "meaning": "Activa o consume el objeto o habilidad."
+  },
+  "callouts-save-it": {
+    "text": "Guárdalo",
+    "meaning": "No uses el objeto o habilidad todavía."
+  },
+  "strategy-default-setup": {
+    "text": "Setup por defecto",
+    "meaning": "Empezar con una formación normal y segura."
+  },
+  "strategy-slow-push": {
+    "text": "Push lento",
+    "meaning": "Atacar con cuidado mientras se revisa cada zona."
+  },
+  "strategy-fast-push": {
+    "text": "Push rápido",
+    "meaning": "Atacar rápido antes de que los enemigos reaccionen."
+  },
+  "strategy-fake-push": {
+    "text": "Fake push",
+    "meaning": "Fingir atacar una zona para alejar a los enemigos."
+  },
+  "strategy-split-push": {
+    "text": "Split push",
+    "meaning": "Atacar desde dos o más rutas."
+  },
+  "strategy-retake": {
+    "text": "Retake",
+    "meaning": "Recuperar un objetivo después de perderlo."
+  },
+  "strategy-eco-round": {
+    "text": "Ronda eco",
+    "meaning": "Usar equipo barato para ahorrar dinero."
+  },
+  "strategy-full-buy": {
+    "text": "Full buy",
+    "meaning": "Todos compran equipo fuerte."
+  },
+  "strategy-force-buy": {
+    "text": "Force buy",
+    "meaning": "Comprar aunque la economía sea baja para intentar ganar ahora."
+  },
+  "strategy-play-objective": {
+    "text": "Juega objetivo",
+    "meaning": "Priorizar el objetivo por encima de las bajas."
+  },
+  "strategy-play-for-picks": {
+    "text": "Jugar por picks",
+    "meaning": "Buscar una eliminación segura antes de comprometerse."
+  },
+  "strategy-take-map-control": {
+    "text": "Tomar control del mapa",
+    "meaning": "Asegurar zonas importantes del mapa."
+  },
+  "strategy-gather-info": {
+    "text": "Conseguir info",
+    "meaning": "Explorar antes de comprometerse."
+  },
+  "strategy-use-utility-first": {
+    "text": "Usa utilidad primero",
+    "meaning": "Usar habilidades antes de entrar o pelear."
+  },
+  "strategy-double-peek": {
+    "text": "Doble peek",
+    "meaning": "Dos jugadores se asoman al mismo ángulo juntos."
+  },
+  "strategy-off-angle": {
+    "text": "Off angle",
+    "meaning": "Mantener una posición inusual para sorprender a los enemigos."
+  },
+  "strategy-late-lurk": {
+    "text": "Lurk tardío",
+    "meaning": "Un jugador espera y ataca por detrás más tarde."
+  },
+  "economy-buy": {
+    "text": "Comprar",
+    "meaning": "Comprar armas, equipo u objetos."
+  },
+  "economy-save": {
+    "text": "Save",
+    "meaning": "Guardar dinero o recursos para una ronda posterior."
+  },
+  "economy-drop-me": {
+    "text": "Dropéame",
+    "meaning": "Comprar o dar al hablante un arma, objeto o recurso."
+  },
+  "economy-i-can-drop": {
+    "text": "Puedo dropear",
+    "meaning": "El hablante puede comprar o dar un arma, objeto o recurso a un compañero."
+  },
+  "economy-need-a-drop": {
+    "text": "Necesito drop",
+    "meaning": "El hablante necesita que un compañero le compre o le dé un arma o recurso."
+  },
+  "economy-full-save": {
+    "text": "Full save",
+    "meaning": "Nadie debería gastar mucho esta ronda."
+  },
+  "economy-light-buy": {
+    "text": "Light buy",
+    "meaning": "Comprar solo equipo barato o limitado."
+  },
+  "economy-half-buy": {
+    "text": "Half buy",
+    "meaning": "Gastar algunos recursos, pero guardar suficiente para la siguiente ronda."
+  },
+  "economy-full-armor": {
+    "text": "Armadura completa",
+    "meaning": "Comprar la máxima armadura o protección."
+  },
+  "economy-no-armor": {
+    "text": "Sin armadura",
+    "meaning": "Un jugador no tiene armadura."
+  },
+  "economy-upgrade-weapon": {
+    "text": "Mejorar arma",
+    "meaning": "Cambiar a un arma más fuerte."
+  },
+  "economy-keep-weapon": {
+    "text": "Conserva el arma",
+    "meaning": "No tires el arma actual."
+  },
+  "economy-pick-up-gun": {
+    "text": "Recoge arma",
+    "meaning": "Tomar un arma caída."
+  },
+  "economy-save-the-gun": {
+    "text": "Guarda el arma",
+    "meaning": "Sobrevivir con el arma para la siguiente ronda."
+  },
+  "economy-we-are-broke": {
+    "text": "Estamos sin dinero",
+    "meaning": "El equipo tiene muy poco dinero o recursos."
+  },
+  "economy-they-are-broke": {
+    "text": "Están sin dinero",
+    "meaning": "El equipo enemigo tiene poco dinero o recursos."
+  },
+  "slang-skin": {
+    "text": "Skin",
+    "meaning": "Apariencia cosmética para un personaje, arma u objeto."
+  },
+  "slang-battle-pass": {
+    "text": "Pase de batalla",
+    "meaning": "Ruta de recompensas que desbloquea cosméticos u objetos al jugar."
+  },
+  "slang-loadout": {
+    "text": "Loadout",
+    "meaning": "Armas, equipo, habilidades o perks seleccionados para una partida."
+  },
+  "slang-build": {
+    "text": "Build",
+    "meaning": "Configuración elegida de objetos, habilidades, estadísticas o mejoras."
+  },
+  "slang-perk": {
+    "text": "Perk",
+    "meaning": "Bonificación pasiva o ventaja especial elegida por un jugador."
+  },
+  "slang-cosmetic": {
+    "text": "Cosmético",
+    "meaning": "Objeto que cambia la apariencia sin mejorar directamente el poder."
+  },
+  "slang-patch": {
+    "text": "Parche",
+    "meaning": "Actualización del juego que corrige errores, equilibra la jugabilidad o añade contenido."
+  },
+  "slang-patch-notes": {
+    "text": "Notas del parche",
+    "meaning": "Notas oficiales que explican qué cambió en una actualización del juego."
+  },
+  "slang-hotfix": {
+    "text": "Hotfix",
+    "meaning": "Actualización rápida que corrige un problema urgente."
+  },
+  "slang-bug": {
+    "text": "Bug",
+    "meaning": "Error del juego o problema no intencionado."
+  },
+  "slang-glitch": {
+    "text": "Glitch",
+    "meaning": "Comportamiento extraño o no intencionado del juego, a veces explotable."
+  },
+  "slang-exploit": {
+    "text": "Exploit",
+    "meaning": "Abusar de un bug o sistema para obtener una ventaja injusta."
+  },
+  "slang-cheater": {
+    "text": "Cheater",
+    "meaning": "Jugador que usa herramientas o métodos injustos para obtener ventaja."
+  },
+  "slang-hacker": {
+    "text": "Hacker",
+    "meaning": "Jugador acusado de usar trampas o herramientas no autorizadas."
+  },
+  "slang-ban": {
+    "text": "Ban",
+    "meaning": "Bloquear el uso de un jugador, personaje, mapa o cuenta."
+  },
+  "slang-report": {
+    "text": "Reportar",
+    "meaning": "Enviar una queja por trampas, toxicidad o incumplimiento de reglas."
+  },
+  "slang-skill-issue": {
+    "text": "Skill issue",
+    "meaning": "Frase burlona que significa que el problema es jugar mal, no el juego."
+  },
+  "slang-touch-grass": {
+    "text": "Touch grass",
+    "meaning": "Forma en broma de decirle a alguien que descanse de jugar o discutir en línea."
+  },
+  "slang-cooked": {
+    "text": "Cooked",
+    "meaning": "En graves problemas, superado o probablemente a punto de perder."
+  },
+  "slang-diffed": {
+    "text": "Diffed",
+    "meaning": "Superado por el jugador rival del mismo rol o enfrentamiento."
+  },
+  "slang-quest": {
+    "text": "Misión",
+    "meaning": "Tarea que da progreso o recompensas."
+  },
+  "slang-mission": {
+    "text": "Misión",
+    "meaning": "Objetivo o tarea que el jugador debe completar."
+  },
+  "slang-boss": {
+    "text": "Boss",
+    "meaning": "Enemigo fuerte, a menudo al final de un nivel o encuentro."
+  },
+  "slang-mob": {
+    "text": "Mob",
+    "meaning": "Enemigo o criatura de IA común."
+  },
+  "slang-aggro": {
+    "text": "Aggro",
+    "meaning": "Atención o amenaza del enemigo centrada en un jugador."
+  },
+  "slang-raid": {
+    "text": "Raid",
+    "meaning": "Desafío cooperativo grande, a menudo contra jefes."
+  },
+  "slang-dungeon": {
+    "text": "Dungeon",
+    "meaning": "Zona PvE estructurada con enemigos, objetivos y recompensas."
+  },
+  "slang-cc-chain": {
+    "text": "Cadena de CC",
+    "meaning": "Varios efectos de control de masas usados en secuencia para mantener incapacitado a un objetivo."
+  },
+  "slang-clutch-or-kick": {
+    "text": "Clutch or kick",
+    "meaning": "Frase de presión en broma cuando un jugador debe ganar solo."
+  },
+  "slang-diff": {
+    "text": "Diff",
+    "meaning": "Abreviatura de diferencia; se usa para decir que un jugador o rol rindió mejor."
+  },
+  "slang-gap": {
+    "text": "Gap",
+    "meaning": "Gran diferencia de habilidad entre jugadores o equipos."
+  },
+  "slang-gg-ez": {
+    "text": "GG EZ",
+    "meaning": "Buen juego, fácil; suele considerarse irrespetuoso."
+  },
+  "slang-hitbox": {
+    "text": "Hitbox",
+    "meaning": "Zona invisible donde los disparos cuentan como impactos."
+  },
+  "slang-spawn-camp": {
+    "text": "Spawn camp",
+    "meaning": "Atacar a enemigos inmediatamente cuando aparecen."
+  },
+  "slang-spawn-kill": {
+    "text": "Spawn kill",
+    "meaning": "Matar a un jugador justo después de que aparece."
+  },
+  "callouts-ace": {
+    "text": "Ace",
+    "meaning": "Un jugador eliminó a todo el equipo enemigo."
+  },
+  "callouts-back-site": {
+    "text": "Fondo del site",
+    "meaning": "Un enemigo está en la parte trasera del sitio del objetivo."
+  },
+  "callouts-bad-timing": {
+    "text": "Mal timing",
+    "meaning": "La acción ocurrió en un momento desafortunado o malo."
+  },
+  "callouts-bait-and-switch": {
+    "text": "Bait and switch",
+    "meaning": "Un jugador atrae la atención mientras otro consigue la baja."
+  },
+  "callouts-basement-clear": {
+    "text": "Sótano limpio",
+    "meaning": "El sótano o zona inferior parece segura."
+  },
+  "callouts-blocked": {
+    "text": "Bloqueado",
+    "meaning": "Un camino no está disponible o no es seguro."
+  },
+  "callouts-bridge-clear": {
+    "text": "Puente limpio",
+    "meaning": "La ruta del puente parece segura."
+  },
+  "callouts-careful": {
+    "text": "Cuidado",
+    "meaning": "Actúa con cautela porque puede haber peligro."
+  },
+  "callouts-carry": {
+    "text": "Carry",
+    "meaning": "Jugador que hace la mayor parte del trabajo o lleva al equipo a la victoria."
+  },
+  "callouts-circle-moving": {
+    "text": "Círculo moviéndose",
+    "meaning": "El círculo de battle royale está cambiando de posición."
+  },
+  "callouts-clean-fight": {
+    "text": "Pelea limpia",
+    "meaning": "El equipo ganó la pelea con buen control."
+  },
+  "callouts-clear-left": {
+    "text": "Izquierda limpia",
+    "meaning": "El lado izquierdo parece seguro."
+  },
+  "callouts-clear-mid": {
+    "text": "Mid limpio",
+    "meaning": "La zona central parece segura."
+  },
+  "callouts-clear-right": {
+    "text": "Derecha limpia",
+    "meaning": "El lado derecho parece seguro."
+  },
+  "callouts-close-corner": {
+    "text": "Esquina cercana",
+    "meaning": "Un enemigo está escondido en la esquina cercana."
+  },
+  "callouts-close-game": {
+    "text": "Partida cerrada",
+    "meaning": "La partida está muy igualada."
+  },
+  "callouts-clutch": {
+    "text": "Clutch",
+    "meaning": "Un jugador ganó una situación difícil solo o bajo presión."
+  },
+  "callouts-come-back": {
+    "text": "Vuelve",
+    "meaning": "Regresa con el equipo o a una zona más segura."
+  },
+  "callouts-comeback": {
+    "text": "Remontada",
+    "meaning": "El equipo se está recuperando después de ir perdiendo."
+  },
+  "callouts-contact": {
+    "text": "Contacto",
+    "meaning": "El hablante ha encontrado enemigos."
+  },
+  "callouts-corner": {
+    "text": "Esquina",
+    "meaning": "Un enemigo está escondido en una esquina."
+  },
+  "callouts-crossfire": {
+    "text": "Fuego cruzado",
+    "meaning": "Dos compañeros cubren al mismo enemigo desde ángulos diferentes."
+  },
+  "callouts-default-spot": {
+    "text": "Posición default",
+    "meaning": "La posición más común para plantar, aguantar o defender un objetivo."
+  },
+  "callouts-do-not-chase": {
+    "text": "No persigas",
+    "meaning": "No sigas a un enemigo demasiado lejos."
+  },
+  "callouts-do-not-peek": {
+    "text": "No peekeés",
+    "meaning": "No te expongas al ángulo enemigo."
+  },
+  "callouts-door-closed": {
+    "text": "Puerta cerrada",
+    "meaning": "Una puerta o camino está bloqueado."
+  },
+  "callouts-door-open": {
+    "text": "Puerta abierta",
+    "meaning": "Una puerta o camino está disponible."
+  },
+  "callouts-flash-out": {
+    "text": "Flash lanzada",
+    "meaning": "Se ha usado una flashbang o habilidad de ceguera."
+  },
+  "callouts-focus-fire": {
+    "text": "Focus fire",
+    "meaning": "Todos deberían disparar al mismo objetivo."
+  },
+  "callouts-focus-healer": {
+    "text": "Focus healer",
+    "meaning": "Atacar primero al healer o support enemigo."
+  },
+  "callouts-focus-sniper": {
+    "text": "Focus sniper",
+    "meaning": "Atacar primero al sniper enemigo."
+  },
+  "callouts-footsteps": {
+    "text": "Pasos",
+    "meaning": "El hablante oye movimiento enemigo."
+  },
+  "callouts-free-kill": {
+    "text": "Kill gratis",
+    "meaning": "Un enemigo puede ser eliminado fácilmente."
+  },
+  "callouts-free-objective": {
+    "text": "Objetivo gratis",
+    "meaning": "El objetivo puede tomarse con poca resistencia."
+  },
+  "callouts-front-site": {
+    "text": "Frente del site",
+    "meaning": "Un enemigo está en la parte delantera del sitio del objetivo."
+  },
+  "callouts-good-timing": {
+    "text": "Buen timing",
+    "meaning": "La acción ocurrió en el momento correcto."
+  },
+  "callouts-grenade-out": {
+    "text": "Granada fuera",
+    "meaning": "Se ha lanzado una granada."
+  },
+  "callouts-hallway": {
+    "text": "Pasillo",
+    "meaning": "Hay un enemigo o movimiento en el pasillo."
+  },
+  "callouts-hide": {
+    "text": "Escóndete",
+    "meaning": "Evita que te vean."
+  },
+  "callouts-high-ground": {
+    "text": "High ground",
+    "meaning": "La posición importante está por encima del enemigo."
+  },
+  "callouts-hold-angle": {
+    "text": "Aguanta el ángulo",
+    "meaning": "Mantén la mira en el camino esperado del enemigo."
+  },
+  "callouts-hold-position": {
+    "text": "Mantén posición",
+    "meaning": "Quédate donde estás y no te sobreextiendas."
+  },
+  "callouts-i-am-watching": {
+    "text": "Estoy mirando",
+    "meaning": "El hablante está cubriendo un ángulo o zona."
+  },
+  "callouts-i-hear-steps": {
+    "text": "Escucho pasos",
+    "meaning": "Se oyen pasos enemigos."
+  },
+  "callouts-i-will-trade": {
+    "text": "Yo tradeo",
+    "meaning": "El hablante seguirá la jugada y asegurará el trade."
+  },
+  "callouts-ignore-tank": {
+    "text": "Ignora al tank",
+    "meaning": "No desperdicies daño en el enemigo resistente ahora mismo."
+  },
+  "callouts-long-range": {
+    "text": "Largo rango",
+    "meaning": "El enemigo está lejos o cubriendo un ángulo largo."
+  },
+  "callouts-low-ground": {
+    "text": "Low ground",
+    "meaning": "El equipo está por debajo de la posición enemiga."
+  },
+  "callouts-lucky-shot": {
+    "text": "Tiro de suerte",
+    "meaning": "Un disparo acertó en parte por suerte."
+  },
+  "callouts-messy-fight": {
+    "text": "Pelea caótica",
+    "meaning": "La pelea fue desorganizada y arriesgada."
+  },
+  "callouts-move-up": {
+    "text": "Avancen",
+    "meaning": "Avanzar a una posición más adelantada."
+  },
+  "callouts-nice-trade": {
+    "text": "Buen trade",
+    "meaning": "Un compañero consiguió correctamente la baja de respuesta."
+  },
+  "callouts-no-contact": {
+    "text": "Sin contacto",
+    "meaning": "Todavía no se han encontrado enemigos."
+  },
+  "callouts-no-problem": {
+    "text": "No pasa nada",
+    "meaning": "Respuesta amistosa cuando un compañero se disculpa."
+  },
+  "callouts-not-clear": {
+    "text": "No está limpio",
+    "meaning": "La zona no está confirmada como segura."
+  },
+  "callouts-open-lane": {
+    "text": "Línea abierta",
+    "meaning": "Una línea o camino no está defendido."
+  },
+  "callouts-out-of-zone": {
+    "text": "Fuera de zona",
+    "meaning": "Alguien está fuera de la zona segura."
+  },
+  "callouts-peek-together": {
+    "text": "Peeken juntos",
+    "meaning": "Dos o más compañeros deberían mirar al enemigo al mismo tiempo."
+  },
+  "callouts-pinched": {
+    "text": "Pinchados",
+    "meaning": "Los enemigos están siendo atacados desde dos lados."
+  },
+  "callouts-play-fast": {
+    "text": "Juega rápido",
+    "meaning": "Usa velocidad y presión para sorprender al enemigo."
+  },
+  "callouts-play-safe": {
+    "text": "Juega seguro",
+    "meaning": "Evita peleas arriesgadas."
+  },
+  "callouts-play-slow": {
+    "text": "Juega lento",
+    "meaning": "Muévete con cuidado y consigue información."
+  },
+  "callouts-play-time": {
+    "text": "Juega tiempo",
+    "meaning": "Retrasa al enemigo hasta que el temporizador favorezca a tu equipo."
+  },
+  "callouts-reset": {
+    "text": "Reset",
+    "meaning": "Detener la pelea caótica y volver a un plan."
+  },
+  "callouts-roof-clear": {
+    "text": "Techo limpio",
+    "meaning": "La zona del techo parece segura."
+  },
+  "callouts-run": {
+    "text": "Corre",
+    "meaning": "Escapa rápido."
+  },
+  "callouts-safe-zone": {
+    "text": "Zona segura",
+    "meaning": "Esta zona está dentro del área segura."
+  },
+  "callouts-short-range": {
+    "text": "Corto rango",
+    "meaning": "El enemigo está muy cerca."
+  },
+  "callouts-shotgun-close": {
+    "text": "Escopeta cerca",
+    "meaning": "Hay un enemigo con escopeta cerca."
+  },
+  "callouts-site-clear": {
+    "text": "Site limpio",
+    "meaning": "El sitio del objetivo parece seguro por ahora."
+  },
+  "callouts-site-not-clear": {
+    "text": "Site no limpio",
+    "meaning": "Puede que todavía haya enemigos dentro del sitio del objetivo."
+  },
+  "callouts-smoke-out": {
+    "text": "Smoke lanzada",
+    "meaning": "Se ha usado una smoke o habilidad que bloquea visión."
+  },
+  "callouts-sniper-watching": {
+    "text": "Sniper mirando",
+    "meaning": "Un sniper está cubriendo este ángulo."
+  },
+  "callouts-split-up": {
+    "text": "Sepárense",
+    "meaning": "Separarse para cubrir más zonas o crear presión."
+  },
+  "callouts-stairs": {
+    "text": "Escaleras",
+    "meaning": "Hay un enemigo o movimiento cerca de las escaleras."
+  },
+  "callouts-stay-alive": {
+    "text": "Mantente vivo",
+    "meaning": "Evita morir porque sobrevivir es importante ahora."
+  },
+  "callouts-stop-chasing": {
+    "text": "Deja de perseguir",
+    "meaning": "Vuelve al objetivo en lugar de buscar kills."
+  },
+  "callouts-storm-coming": {
+    "text": "Viene la tormenta",
+    "meaning": "La zona dañina se acerca."
+  },
+  "callouts-swing-together": {
+    "text": "Swing juntos",
+    "meaning": "Salgan juntos para pelear contra el enemigo."
+  },
+  "callouts-target-marked": {
+    "text": "Objetivo marcado",
+    "meaning": "Se ha marcado un objetivo prioritario."
+  },
+  "callouts-they-are-close": {
+    "text": "Están cerca",
+    "meaning": "Los enemigos están cerca."
+  },
+  "callouts-they-are-far": {
+    "text": "Están lejos",
+    "meaning": "Los enemigos están lejos."
+  },
+  "callouts-third-party": {
+    "text": "Third party",
+    "meaning": "Otro equipo se está uniendo a la pelea."
+  },
+  "callouts-throw": {
+    "text": "Throw",
+    "meaning": "Cometer un error que entrega una ventaja o pierde una situación ganable."
+  },
+  "callouts-trade-him": {
+    "text": "Tradealo",
+    "meaning": "Consigue la baja de respuesta después de que maten o derriben a un compañero."
+  },
+  "callouts-trade-me": {
+    "text": "Tradeame",
+    "meaning": "Prepárate para matar al enemigo que mate o derribe al hablante."
+  },
+  "callouts-trap-destroyed": {
+    "text": "Trampa destruida",
+    "meaning": "Se ha eliminado una trampa."
+  },
+  "callouts-trap-here": {
+    "text": "Trampa aquí",
+    "meaning": "Hay una trampa en esta ubicación."
+  },
+  "callouts-tunnel-clear": {
+    "text": "Túnel limpio",
+    "meaning": "La ruta del túnel parece segura."
+  },
+  "callouts-unlucky": {
+    "text": "Mala suerte",
+    "meaning": "El resultado fue desafortunado, no necesariamente una mala jugada."
+  },
+  "callouts-wait": {
+    "text": "Espera",
+    "meaning": "Pausa antes de actuar."
+  },
+  "callouts-watching-left": {
+    "text": "Mirando izquierda",
+    "meaning": "El hablante está cubriendo el lado izquierdo."
+  },
+  "callouts-watching-mid": {
+    "text": "Mirando mid",
+    "meaning": "El hablante está cubriendo la zona central."
+  },
+  "callouts-watching-right": {
+    "text": "Mirando derecha",
+    "meaning": "El hablante está cubriendo el lado derecho."
+  },
+  "callouts-water": {
+    "text": "Agua",
+    "meaning": "Un enemigo o ubicación está cerca del agua."
+  },
+  "callouts-we-are-pinched": {
+    "text": "Estamos pinchados",
+    "meaning": "El equipo está atrapado entre ángulos enemigos."
+  },
+  "callouts-well-played": {
+    "text": "Bien jugado",
+    "meaning": "Elogio respetuoso por una jugada inteligente o habilidosa."
+  },
+  "callouts-window": {
+    "text": "Ventana",
+    "meaning": "Hay un enemigo o ángulo en una ventana."
+  },
+  "callouts-with-me": {
+    "text": "Conmigo",
+    "meaning": "El hablante quiere que los compañeros se mantengan cerca."
+  },
+  "callouts-zone-closing": {
+    "text": "Cierra la zona",
+    "meaning": "La zona segura se está reduciendo o moviendo."
+  },
+  "danger-do-not-go-there": {
+    "text": "No vayas ahí",
+    "meaning": "Esa zona no es segura."
+  },
+  "danger-enemy-ultimate-ready": {
+    "text": "Ultimate enemiga lista",
+    "meaning": "Es probable que un enemigo tenga disponible su habilidad más fuerte."
+  },
+  "danger-it-is-a-trap": {
+    "text": "Es una trampa",
+    "meaning": "Es probable que el enemigo te esté esperando."
+  },
+  "danger-low-cover": {
+    "text": "Cobertura baja",
+    "meaning": "La cobertura es débil o incompleta."
+  },
+  "danger-they-have-sniper": {
+    "text": "Tienen sniper",
+    "meaning": "El equipo enemigo tiene amenaza de francotirador."
+  },
+  "instructions-capture-point": {
+    "text": "Captura el punto",
+    "meaning": "Toma el control del punto objetivo."
+  },
+  "instructions-check-behind": {
+    "text": "Revisa atrás",
+    "meaning": "Busca enemigos detrás del equipo."
+  },
+  "instructions-check-left": {
+    "text": "Revisa izquierda",
+    "meaning": "Busca enemigos a la izquierda."
+  },
+  "instructions-check-right": {
+    "text": "Revisa derecha",
+    "meaning": "Busca enemigos a la derecha."
+  },
+  "instructions-clear-corners": {
+    "text": "Limpia esquinas",
+    "meaning": "Revisa escondites antes de entrar."
+  },
+  "instructions-contest-point": {
+    "text": "Contesta el punto",
+    "meaning": "Quédate en el objetivo para detener el progreso enemigo."
+  },
+  "instructions-defuse-now": {
+    "text": "Defuse ahora",
+    "meaning": "Empieza a desactivar inmediatamente."
+  },
+  "instructions-do-not-feed": {
+    "text": "No feedees",
+    "meaning": "No mueras repetidamente ni le des ventaja al enemigo."
+  },
+  "instructions-do-not-split": {
+    "text": "No se separen",
+    "meaning": "Eviten separarse del equipo."
+  },
+  "instructions-do-not-waste-it": {
+    "text": "No lo desperdicies",
+    "meaning": "Usa el recurso con cuidado."
+  },
+  "instructions-go-first": {
+    "text": "Entra primero",
+    "meaning": "Entrar o iniciar el combate antes que los demás."
+  },
+  "instructions-i-go-first": {
+    "text": "Yo entro primero",
+    "meaning": "El hablante entrará o iniciará el combate primero."
+  },
+  "instructions-lead-the-way": {
+    "text": "Lidera",
+    "meaning": "Un compañero debería ir primero."
+  },
+  "instructions-mute-him": {
+    "text": "Mutéalo",
+    "meaning": "Silencia a un jugador molesto en chat de voz o texto."
+  },
+  "instructions-plant-now": {
+    "text": "Planta ahora",
+    "meaning": "Coloca la bomba u objetivo ahora."
+  },
+  "instructions-report-after": {
+    "text": "Reporta después",
+    "meaning": "Gestiona el reporte después de la partida, no durante la ronda."
+  },
+  "instructions-save-ultimate": {
+    "text": "Guarda ultimate",
+    "meaning": "No uses la habilidad más fuerte todavía."
+  },
+  "instructions-stack-here": {
+    "text": "Stack aquí",
+    "meaning": "Agrupar varios jugadores en esta zona."
+  },
+  "instructions-stack-left": {
+    "text": "Stack izquierda",
+    "meaning": "Agrupar jugadores en el lado izquierdo."
+  },
+  "instructions-stack-right": {
+    "text": "Stack derecha",
+    "meaning": "Agrupar jugadores en el lado derecho."
+  },
+  "instructions-stop-peeking": {
+    "text": "Deja de peekear",
+    "meaning": "Deja de exponerte a la mira enemiga."
+  },
+  "instructions-touch-point": {
+    "text": "Toca punto",
+    "meaning": "Llegar al objetivo antes de que termine el temporizador."
+  },
+  "instructions-use-flash": {
+    "text": "Usa flash",
+    "meaning": "Usa una habilidad de ceguera antes de entrar."
+  },
+  "instructions-use-grenade": {
+    "text": "Usa granada",
+    "meaning": "Lanza una granada explosiva o de utilidad."
+  },
+  "instructions-use-smoke": {
+    "text": "Usa smoke",
+    "meaning": "Coloca una smoke para bloquear visión."
+  },
+  "instructions-use-ultimate": {
+    "text": "Usa ultimate",
+    "meaning": "Usa la habilidad más fuerte ahora."
+  },
+  "objective-capture-the-flag": {
+    "text": "Captura la bandera",
+    "meaning": "Toma el objetivo de bandera enemiga."
+  },
+  "objective-escort-the-payload": {
+    "text": "Escolta el payload",
+    "meaning": "Quédate cerca del payload para que avance."
+  },
+  "objective-hold-the-point": {
+    "text": "Aguanta el punto",
+    "meaning": "Quédate en el objetivo y defiéndelo."
+  },
+  "objective-leave-the-point": {
+    "text": "Sal del punto",
+    "meaning": "Aléjate del objetivo cuando sea necesario."
+  },
+  "objective-return-the-flag": {
+    "text": "Devuelve la bandera",
+    "meaning": "Lleva la bandera de vuelta o recupera la tuya."
+  },
+  "objective-stop-the-payload": {
+    "text": "Detén el payload",
+    "meaning": "Evita que el enemigo mueva el payload."
+  },
+  "teamwork-do-not-blame": {
+    "text": "No culpes",
+    "meaning": "Evita acusar a los compañeros durante la partida."
+  },
+  "teamwork-focus-next": {
+    "text": "Focus en la siguiente",
+    "meaning": "Pasa página y prepárate para la siguiente jugada."
+  },
+  "teamwork-good-effort": {
+    "text": "Buen esfuerzo",
+    "meaning": "Respuesta positiva al intento de un compañero."
+  },
+  "teamwork-great-call": {
+    "text": "Buena call",
+    "meaning": "Elogio por una comunicación útil."
+  },
+  "teamwork-great-save": {
+    "text": "Buena salvada",
+    "meaning": "Elogio por evitar una pérdida o peligro."
+  },
+  "teamwork-great-shot": {
+    "text": "Gran tiro",
+    "meaning": "Elogio por buena puntería."
+  },
+  "teamwork-i-trust-you": {
+    "text": "Confío en ti",
+    "meaning": "Ánimo para un compañero que va a hacer una jugada."
+  },
+  "teamwork-i-will-bait-for-you": {
+    "text": "Haré bait por ti",
+    "meaning": "El hablante atraerá la atención para que un compañero pueda tradear."
+  },
+  "teamwork-i-will-cover-you": {
+    "text": "Te cubro",
+    "meaning": "El hablante protegerá a un compañero."
+  },
+  "teamwork-i-will-heal-you": {
+    "text": "Te curo",
+    "meaning": "El hablante usará curación en un compañero."
+  },
+  "teamwork-i-will-watch-flank": {
+    "text": "Yo miro flanco",
+    "meaning": "El hablante cubrirá la ruta trasera."
+  },
+  "teamwork-keep-comms-clear": {
+    "text": "Comms limpias",
+    "meaning": "Decir solo información útil ahora mismo."
+  },
+  "teamwork-let-me-go-first": {
+    "text": "Déjenme ir primero",
+    "meaning": "El hablante se ofrece a entrar primero."
+  },
+  "teamwork-nice-aim": {
+    "text": "Buena aim",
+    "meaning": "Elogio por habilidad de puntería."
+  },
+  "teamwork-nice-clutch": {
+    "text": "Buen clutch",
+    "meaning": "Elogio por ganar bajo presión."
+  },
+  "teamwork-nice-movement": {
+    "text": "Buen movement",
+    "meaning": "Elogio por habilidad de movimiento."
+  },
+  "teamwork-nice-utility": {
+    "text": "Buena utilidad",
+    "meaning": "Elogio por buen uso de habilidades u objetos."
+  },
+  "teamwork-one-round-at-a-time": {
+    "text": "Ronda por ronda",
+    "meaning": "Centrarse en la siguiente ronda en vez de toda la partida."
+  },
+  "teamwork-play-together": {
+    "text": "Jueguen juntos",
+    "meaning": "Coordinarse como grupo."
+  },
+  "teamwork-reset-mental": {
+    "text": "Reseteen mental",
+    "meaning": "Dejar el tilt y empezar de nuevo."
+  },
+  "teamwork-stay-calm": {
+    "text": "Mantengan la calma",
+    "meaning": "No entren en pánico ni se tilteen."
+  },
+  "teamwork-take-my-loot": {
+    "text": "Toma mi loot",
+    "meaning": "El hablante ofrece sus objetos."
+  },
+  "teamwork-take-my-weapon": {
+    "text": "Toma mi arma",
+    "meaning": "El hablante ofrece su arma."
+  },
+  "teamwork-trade-together": {
+    "text": "Tradeen juntos",
+    "meaning": "Coordinarse para conseguir bajas de respuesta."
+  },
+  "teamwork-wait-for-team": {
+    "text": "Espera al equipo",
+    "meaning": "No pelees antes de que lleguen los compañeros."
+  },
+  "teamwork-we-can-win": {
+    "text": "Podemos ganar",
+    "meaning": "Ánimo para recordar que la partida aún se puede ganar."
+  },
+  "teamwork-we-need-everyone": {
+    "text": "Necesitamos a todos",
+    "meaning": "El equipo no debería pelear sin todos los jugadores."
+  },
+  "teamwork-you-got-this": {
+    "text": "Tú puedes",
+    "meaning": "Ánimo antes o durante un momento difícil."
+  },
+  "strategy-anchor-site": {
+    "text": "Anchor site",
+    "meaning": "Quedarse en el sitio del objetivo para defenderlo."
+  },
+  "strategy-bait-utility": {
+    "text": "Baitear utilidad",
+    "meaning": "Hacer que los enemigos gasten habilidades antes del ataque real."
+  },
+  "strategy-cancel-the-push": {
+    "text": "Cancela el push",
+    "meaning": "Detener el ataque y cambiar de plan."
+  },
+  "strategy-commit-now": {
+    "text": "Commitear ahora",
+    "meaning": "Usar los recursos del equipo y ejecutar el plan por completo."
+  },
+  "strategy-cross-setup": {
+    "text": "Setup cruzado",
+    "meaning": "Preparar dos ángulos que se cubren entre sí."
+  },
+  "strategy-cut-rotation": {
+    "text": "Cortar rotación",
+    "meaning": "Impedir que los enemigos se muevan entre sitios."
+  },
+  "strategy-damage-advantage": {
+    "text": "Ventaja de daño",
+    "meaning": "Los enemigos están más débiles que tu equipo."
+  },
+  "strategy-deny-vision": {
+    "text": "Negar visión",
+    "meaning": "Bloquear o eliminar información del enemigo."
+  },
+  "strategy-do-not-overcommit": {
+    "text": "No sobrecomitees",
+    "meaning": "Evita invertir demasiados recursos en una jugada arriesgada."
+  },
+  "strategy-economy-advantage": {
+    "text": "Ventaja económica",
+    "meaning": "Tu equipo tiene mejores recursos o armas."
+  },
+  "strategy-give-map-control": {
+    "text": "Ceder control del mapa",
+    "meaning": "Dejar que el enemigo tome espacio de forma intencional."
+  },
+  "strategy-hold-rotation": {
+    "text": "Cubrir rotación",
+    "meaning": "Vigilar el camino que usan los enemigos para rotar."
+  },
+  "strategy-man-advantage": {
+    "text": "Ventaja numérica",
+    "meaning": "Tu equipo tiene más jugadores vivos que el equipo enemigo."
+  },
+  "strategy-man-disadvantage": {
+    "text": "Desventaja numérica",
+    "meaning": "Tu equipo tiene menos jugadores vivos que el equipo enemigo."
+  },
+  "strategy-numbers-advantage": {
+    "text": "Ventaja de números",
+    "meaning": "Tu equipo tiene más jugadores en la pelea."
+  },
+  "strategy-play-for-late-game": {
+    "text": "Jugar late game",
+    "meaning": "Retrasar la acción y prepararse para la fase final."
+  },
+  "strategy-play-retake": {
+    "text": "Jugar retake",
+    "meaning": "Ceder el site y prepararse para recuperarlo."
+  },
+  "strategy-pressure-side-lane": {
+    "text": "Presionar línea lateral",
+    "meaning": "Crear amenaza en una ruta lateral."
+  },
+  "strategy-save-round": {
+    "text": "Ronda de save",
+    "meaning": "Evitar gastar recursos esta ronda."
+  },
+  "strategy-stack-objective": {
+    "text": "Stackear objetivo",
+    "meaning": "Poner muchos jugadores cerca del objetivo."
+  },
+  "strategy-time-advantage": {
+    "text": "Ventaja de tiempo",
+    "meaning": "El temporizador favorece a tu equipo."
+  },
+  "strategy-trade-setup": {
+    "text": "Setup de trade",
+    "meaning": "Posicionarse para que los compañeros puedan conseguir bajas de respuesta."
+  },
+  "strategy-ultimate-advantage": {
+    "text": "Ventaja de ultimate",
+    "meaning": "Tu equipo tiene ultimates más fuertes disponibles."
+  },
+  "economy-do-not-force": {
+    "text": "No fuerces",
+    "meaning": "No compres demasiado con pocos recursos."
+  },
+  "economy-force-together": {
+    "text": "Forzar juntos",
+    "meaning": "Todos deberían comprometerse juntos a una compra arriesgada."
+  },
+  "economy-they-have-money": {
+    "text": "Tienen dinero",
+    "meaning": "El equipo enemigo puede permitirse equipo fuerte."
+  },
+  "economy-we-can-buy-next": {
+    "text": "Podemos comprar la siguiente",
+    "meaning": "El equipo debería tener suficientes recursos en la próxima ronda."
   },
   "antiToxic-clear-comms-please": {
-    "text": "clair comms, please",
-    "meaning": "Significado en juego: clair comms, please"
-  },
-  "antiToxic-let-us-reset": {
-    "text": "let us reset",
-    "meaning": "Significado en juego: let us reset"
-  },
-  "antiToxic-play-safe-next": {
-    "text": "joue prudent next",
-    "meaning": "Significado en juego: joue prudent next"
-  },
-  "antiToxic-wait-for-the-team-next-time": {
-    "text": "espera pour the équipe next time",
-    "meaning": "Significado en juego: espera pour the équipe next time"
-  },
-  "antiToxic-good-try-next-round": {
-    "text": "bon try, next round",
-    "meaning": "Significado en juego: bon try, next round"
-  },
-  "antiToxic-we-need-better-spacing": {
-    "text": "we besoin de better spacing",
-    "meaning": "Significado en juego: we besoin de better spacing"
-  },
-  "antiToxic-let-us-trade-better": {
-    "text": "let us trade better",
-    "meaning": "Significado en juego: let us trade better"
-  },
-  "antiToxic-save-your-utility": {
-    "text": "guarda your utility",
-    "meaning": "Significado en juego: guarda your utility"
-  },
-  "antiToxic-use-comms-not-blame": {
-    "text": "utilise comms, pas blame",
-    "meaning": "Significado en juego: utilise comms, pas blame"
+    "text": "Comms limpias, por favor",
+    "meaning": "Pedir a los compañeros que mantengan la comunicación enfocada y útil."
   },
   "antiToxic-focus-on-objective": {
-    "text": "focus on objectif",
-    "meaning": "Significado en juego: focus on objectif"
+    "text": "Focus en objetivo",
+    "meaning": "Redirigir al equipo hacia las condiciones para ganar."
   },
-  "antiToxic-we-still-have-time": {
-    "text": "we still have time",
-    "meaning": "Significado en juego: we still have time"
-  },
-  "antiToxic-no-worries": {
-    "text": "no worries",
-    "meaning": "Significado en juego: no worries"
+  "antiToxic-good-try-next-round": {
+    "text": "Buen intento, siguiente ronda",
+    "meaning": "Animar al equipo después de perder una ronda."
   },
   "antiToxic-it-happens": {
-    "text": "it happens",
-    "meaning": "Significado en juego: it happens"
-  },
-  "antiToxic-next-one-is-ours": {
-    "text": "next un is ours",
-    "meaning": "Significado en juego: next un is ours"
+    "text": "Pasa",
+    "meaning": "Normalizar un error y seguir adelante."
   },
   "antiToxic-keep-it-positive": {
-    "text": "keep it positive",
-    "meaning": "Significado en juego: keep it positive"
+    "text": "Mantengan lo positivo",
+    "meaning": "Pedir a los compañeros que eviten comentarios tóxicos."
+  },
+  "antiToxic-let-us-reset": {
+    "text": "Reseteemos",
+    "meaning": "Reiniciar con calma el enfoque mental del equipo."
+  },
+  "antiToxic-let-us-trade-better": {
+    "text": "Tradeemos mejor",
+    "meaning": "Sugerir mejorar el trabajo en equipo para bajas de respuesta."
+  },
+  "antiToxic-next-one-is-ours": {
+    "text": "La siguiente es nuestra",
+    "meaning": "Animar al equipo después de una derrota."
+  },
+  "antiToxic-no-worries": {
+    "text": "No pasa nada",
+    "meaning": "Responder con amabilidad al error de un compañero."
+  },
+  "antiToxic-play-safe-next": {
+    "text": "Juguemos seguro la siguiente",
+    "meaning": "Sugerir un plan más seguro sin culpar a nadie."
+  },
+  "antiToxic-save-your-utility": {
+    "text": "Guarda tu utilidad",
+    "meaning": "Pedir a un compañero que conserve habilidades sin insultarlo."
+  },
+  "antiToxic-use-comms-not-blame": {
+    "text": "Usa comms, no culpes",
+    "meaning": "Recordar a los compañeros que den información útil en vez de discutir."
+  },
+  "antiToxic-wait-for-the-team-next-time": {
+    "text": "Espera al equipo la próxima",
+    "meaning": "Pedir mejor timing de forma respetuosa."
+  },
+  "antiToxic-we-need-better-spacing": {
+    "text": "Necesitamos mejor spacing",
+    "meaning": "Dar feedback útil sobre posicionamiento."
+  },
+  "antiToxic-we-still-have-time": {
+    "text": "Todavía tenemos tiempo",
+    "meaning": "Calmar al equipo cuando aún hay tiempo para hacer una jugada."
   }
 }

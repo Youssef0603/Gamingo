@@ -8,6 +8,7 @@ export type PhraseCategory =
   | 'danger'
   | 'economy'
   | 'teamwork'
+  | 'abbreviations'
   | 'slang'
   | 'toxic'
   | 'antiToxic'

@@ -1,7 +1,7 @@
 [
   {
     "id": "callouts-gg",
-    "category": "abbreviations",
+    "category": "callouts",
     "tags": [
       "match-end",
       "sportsmanship",
@@ -10,7 +10,7 @@
   },
   {
     "id": "callouts-glhf",
-    "category": "abbreviations",
+    "category": "callouts",
     "tags": [
       "match-start",
       "sportsmanship",
@@ -2854,32 +2854,8 @@
     ]
   },
   {
-    "id": "slang-ggwp",
-    "category": "abbreviations",
-    "tags": [
-      "sportsmanship",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-wp",
-    "category": "abbreviations",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-nt",
-    "category": "abbreviations",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
     "id": "slang-afk",
-    "category": "abbreviations",
+    "category": "slang",
     "tags": [
       "slang",
       "common"
@@ -2887,100 +2863,14 @@
   },
   {
     "id": "slang-brb",
-    "category": "abbreviations",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-dc",
-    "category": "abbreviations",
-    "tags": [
-      "network",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-disconnect",
-    "category": "slang",
-    "tags": [
-      "network"
-    ]
-  },
-  {
-    "id": "slang-reconnect",
-    "category": "slang",
-    "tags": [
-      "network"
-    ]
-  },
-  {
-    "id": "slang-lag",
     "category": "slang",
     "tags": [
       "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-lag-spike",
-    "category": "slang",
-    "tags": [
-      "network",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-ping",
-    "category": "slang",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-fps",
-    "category": "abbreviations",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-server",
-    "category": "slang",
-    "tags": [
-      "network",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-hit-reg",
-    "category": "slang",
-    "tags": [
-      "network",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-desync",
-    "category": "slang",
-    "tags": [
-      "network",
       "common"
     ]
   },
   {
     "id": "slang-op",
-    "category": "abbreviations",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-meta",
     "category": "slang",
     "tags": [
       "slang",
@@ -3004,202 +2894,10 @@
     ]
   },
   {
-    "id": "slang-noob",
+    "id": "slang-meta",
     "category": "slang",
     "tags": [
       "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-pro",
-    "category": "slang",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-bot",
-    "category": "slang",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-smurf",
-    "category": "slang",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-camper",
-    "category": "slang",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-tryhard",
-    "category": "slang",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-sweat",
-    "category": "slang",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-tilt",
-    "category": "slang",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-toxic",
-    "category": "slang",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-salty",
-    "category": "slang",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-rage-quit",
-    "category": "slang",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-pvp",
-    "category": "abbreviations",
-    "tags": [
-      "mode",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-pve",
-    "category": "abbreviations",
-    "tags": [
-      "mode",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-ranked",
-    "category": "slang",
-    "tags": [
-      "mode",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-casual",
-    "category": "slang",
-    "tags": [
-      "mode",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-mmr",
-    "category": "abbreviations",
-    "tags": [
-      "rank",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-elo",
-    "category": "slang",
-    "tags": [
-      "rank",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-kd",
-    "category": "abbreviations",
-    "tags": [
-      "stats",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-kda",
-    "category": "abbreviations",
-    "tags": [
-      "stats",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-mvp",
-    "category": "abbreviations",
-    "tags": [
-      "stats",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-rng",
-    "category": "abbreviations",
-    "tags": [
-      "gameplay",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-xp",
-    "category": "abbreviations",
-    "tags": [
-      "progression",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-level-up",
-    "category": "slang",
-    "tags": [
-      "progression",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-grind",
-    "category": "slang",
-    "tags": [
-      "progression",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-farm",
-    "category": "slang",
-    "tags": [
-      "progression",
       "common"
     ]
   },
@@ -3220,271 +2918,7 @@
     ]
   },
   {
-    "id": "slang-party",
-    "category": "slang",
-    "tags": [
-      "mode",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-squad",
-    "category": "slang",
-    "tags": [
-      "mode",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-lobby",
-    "category": "slang",
-    "tags": [
-      "mode",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-queue",
-    "category": "slang",
-    "tags": [
-      "mode",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-matchmaking",
-    "category": "slang",
-    "tags": [
-      "mode",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-solo-queue",
-    "category": "slang",
-    "tags": [
-      "mode",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-duo",
-    "category": "slang",
-    "tags": [
-      "mode",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-stack",
-    "category": "slang",
-    "tags": [
-      "mode",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-comms",
-    "category": "slang",
-    "tags": [
-      "teamplay",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-dps",
-    "category": "abbreviations",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-tank",
-    "category": "slang",
-    "tags": [
-      "role",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-support",
-    "category": "slang",
-    "tags": [
-      "role",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-healer",
-    "category": "slang",
-    "tags": [
-      "role",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-aoe",
-    "category": "abbreviations",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-cc",
-    "category": "abbreviations",
-    "tags": [
-      "slang",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-ult",
-    "category": "slang",
-    "tags": [
-      "ability",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-loot",
-    "category": "slang",
-    "tags": [
-      "gear",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-skin",
-    "category": "slang",
-    "tags": [
-      "gear",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-battle-pass",
-    "category": "slang",
-    "tags": [
-      "gear",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-loadout",
-    "category": "slang",
-    "tags": [
-      "gear",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-build",
-    "category": "slang",
-    "tags": [
-      "gear",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-perk",
-    "category": "slang",
-    "tags": [
-      "gear",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-cosmetic",
-    "category": "slang",
-    "tags": [
-      "gear",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-patch",
-    "category": "slang",
-    "tags": [
-      "update",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-patch-notes",
-    "category": "slang",
-    "tags": [
-      "update",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-hotfix",
-    "category": "slang",
-    "tags": [
-      "update",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-bug",
-    "category": "slang",
-    "tags": [
-      "update",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-glitch",
-    "category": "slang",
-    "tags": [
-      "update",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-exploit",
-    "category": "slang",
-    "tags": [
-      "update",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-cheater",
-    "category": "slang",
-    "tags": [
-      "fair-play",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-hacker",
-    "category": "slang",
-    "tags": [
-      "fair-play",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-ban",
-    "category": "slang",
-    "tags": [
-      "fair-play",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-report",
-    "category": "slang",
-    "tags": [
-      "fair-play",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-skill-issue",
+    "id": "slang-smurf",
     "category": "slang",
     "tags": [
       "slang",
@@ -3492,7 +2926,7 @@
     ]
   },
   {
-    "id": "slang-touch-grass",
+    "id": "slang-noob",
     "category": "slang",
     "tags": [
       "slang",
@@ -3500,7 +2934,7 @@
     ]
   },
   {
-    "id": "slang-cooked",
+    "id": "slang-camper",
     "category": "slang",
     "tags": [
       "slang",
@@ -3508,7 +2942,7 @@
     ]
   },
   {
-    "id": "slang-diffed",
+    "id": "slang-sweat",
     "category": "slang",
     "tags": [
       "slang",
@@ -3516,66 +2950,10 @@
     ]
   },
   {
-    "id": "slang-quest",
+    "id": "slang-tryhard",
     "category": "slang",
     "tags": [
-      "pve",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-mission",
-    "category": "slang",
-    "tags": [
-      "pve",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-boss",
-    "category": "slang",
-    "tags": [
-      "pve",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-mob",
-    "category": "slang",
-    "tags": [
-      "pve",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-aggro",
-    "category": "slang",
-    "tags": [
-      "pve",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-raid",
-    "category": "slang",
-    "tags": [
-      "pve",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-dungeon",
-    "category": "slang",
-    "tags": [
-      "pve",
-      "common"
-    ]
-  },
-  {
-    "id": "slang-cc-chain",
-    "category": "slang",
-    "tags": [
-      "ability",
+      "slang",
       "common"
     ]
   },
@@ -3604,15 +2982,15 @@
     ]
   },
   {
-    "id": "slang-gg-ez",
-    "category": "abbreviations",
+    "id": "slang-tilt",
+    "category": "slang",
     "tags": [
       "slang",
       "common"
     ]
   },
   {
-    "id": "slang-hitbox",
+    "id": "slang-rage-quit",
     "category": "slang",
     "tags": [
       "slang",
@@ -3633,6 +3011,132 @@
     "tags": [
       "slang",
       "common"
+    ]
+  },
+  {
+    "id": "slang-hitbox",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-lag",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-ping",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-fps",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-dps",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-aoe",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-cc",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-gg-ez",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-wp",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-nt",
+    "category": "slang",
+    "tags": [
+      "slang",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-ggwp",
+    "category": "slang",
+    "tags": [
+      "sportsmanship",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-lag-spike",
+    "category": "slang",
+    "tags": [
+      "network",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-ranked",
+    "category": "slang",
+    "tags": [
+      "mode",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-casual",
+    "category": "slang",
+    "tags": [
+      "mode",
+      "common"
+    ]
+  },
+  {
+    "id": "slang-disconnect",
+    "category": "slang",
+    "tags": [
+      "network"
+    ]
+  },
+  {
+    "id": "slang-reconnect",
+    "category": "slang",
+    "tags": [
+      "network"
     ]
   },
   {
