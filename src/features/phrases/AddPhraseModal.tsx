@@ -13,11 +13,15 @@ import { Icon } from '../../components/ui';
 import { categoryMetadata } from '../../data/categories';
 import {
   buildTranslatedCustomPhrase,
+  findWordBankMatch,
   translateTextWithDetectedSource,
 } from '../../services';
 import { theme, withAlpha } from '../../theme/theme';
 import { languageMetadata } from '../../types/language';
-import { getPhraseDisplayLanguages, getPhraseDisplayTranslations } from '../../utils/phraseDisplay';
+import {
+  getPhraseDisplayLanguages,
+  getPhraseDisplayTranslations,
+} from '../../utils/phraseDisplay';
 
 import type { LanguageCode } from '../../types/language';
 import type { Phrase } from '../../types/phrase';
@@ -193,7 +197,9 @@ function AddPhraseModal(props: AddPhraseModalProps) {
       setLookupFeedback(
         isFavoritesMode
           ? 'Type a word or phrase first.'
-          : `Type a word in ${languageMetadata[props.inputLanguage].label} first.`,
+          : `Type a word in ${
+              languageMetadata[props.inputLanguage].label
+            } first.`,
       );
       return;
     }
@@ -245,14 +251,45 @@ function AddPhraseModal(props: AddPhraseModalProps) {
       setLookupResult(phraseMatch);
       setLookupSource('data');
       setLookupFeedback(
-        `This word already exists in ${categoryMetadata[phraseMatch.category].title}.`,
+        `This word already exists in ${
+          categoryMetadata[phraseMatch.category].title
+        }.`,
       );
+      return;
+    }
+
+    const wordBankMatch = findWordBankMatch({
+      destinationLanguage: language,
+      sourceLanguage: props.inputLanguage,
+      text: trimmedQuery,
+    });
+
+    if (wordBankMatch) {
+      if (wordBankMatch.recommendedAction === 'block_do_not_translate') {
+        setLookupResult(null);
+        setLookupSource(null);
+        setLookupFeedback(
+          'This term is in the moderation word bank and is not translated automatically.',
+        );
+        return;
+      }
+
+      const createdPhrase = props.onCreatePhrase(
+        trimmedQuery,
+        wordBankMatch.destinationText,
+      );
+
+      resetState();
+      onClose();
+      props.onSeePhrase(createdPhrase);
       return;
     }
 
     try {
       setIsSubmitting(true);
-      setLookupFeedback(`Translating into ${languageMetadata[language].label}...`);
+      setLookupFeedback(
+        `Translating into ${languageMetadata[language].label}...`,
+      );
 
       const translationResult = await translateTextWithDetectedSource({
         destinationLanguage: language,
@@ -267,7 +304,13 @@ function AddPhraseModal(props: AddPhraseModalProps) {
         setLookupResult(null);
         setLookupSource(null);
         setLookupFeedback(
-          `This looks like ${languageMetadata[detectedSourceLanguage].label}, but your native language is set to ${languageMetadata[props.inputLanguage].label}. Switch your native language or enter the word in ${languageMetadata[props.inputLanguage].label}.`,
+          `This looks like ${
+            languageMetadata[detectedSourceLanguage].label
+          }, but your native language is set to ${
+            languageMetadata[props.inputLanguage].label
+          }. Switch your native language or enter the word in ${
+            languageMetadata[props.inputLanguage].label
+          }.`,
         );
         return;
       }
@@ -287,8 +330,8 @@ function AddPhraseModal(props: AddPhraseModalProps) {
         error instanceof Error && error.name === 'AbortError'
           ? "Couldn't translate this word right now. The request timed out."
           : error instanceof Error
-            ? `Couldn't translate this word right now. ${error.message}`
-            : "Couldn't translate this word right now.",
+          ? `Couldn't translate this word right now. ${error.message}`
+          : "Couldn't translate this word right now.",
       );
     } finally {
       setIsSubmitting(false);
@@ -298,7 +341,9 @@ function AddPhraseModal(props: AddPhraseModalProps) {
   const title = isFavoritesMode ? 'Add phrase' : 'Add word';
   const hint = isFavoritesMode
     ? `Type a phrase that already exists in your app data and add its ${languageMetadata[language].label} version to favourites.`
-    : `Type a word in your native language (${languageMetadata[props.inputLanguage].label}).`;
+    : `Type a word in your native language (${
+        languageMetadata[props.inputLanguage].label
+      }).`;
   const placeholder = isFavoritesMode
     ? 'Try: Behind you!'
     : `Type a word in ${languageMetadata[props.inputLanguage].label}`;
@@ -307,8 +352,8 @@ function AddPhraseModal(props: AddPhraseModalProps) {
       ? 'Checking...'
       : 'Find'
     : isSubmitting
-      ? 'Translating...'
-      : 'Add';
+    ? 'Translating...'
+    : 'Add';
 
   return (
     <Modal
@@ -378,7 +423,9 @@ function AddPhraseModal(props: AddPhraseModalProps) {
             <Text
               style={[
                 styles.lookupFeedback,
-                !isFavoritesMode && lookupResult && styles.lookupFeedbackHighlight,
+                !isFavoritesMode &&
+                  lookupResult &&
+                  styles.lookupFeedbackHighlight,
               ]}
             >
               {lookupFeedback}
@@ -442,27 +489,35 @@ function AddPhraseModal(props: AddPhraseModalProps) {
                 <Text style={styles.lookupResultCategory}>
                   {categoryMetadata[lookupResult.category].title}
                 </Text>
-                {lookupResult.category === 'custom' && lookupResult.customLanguages ? (
+                {lookupResult.category === 'custom' &&
+                lookupResult.customLanguages ? (
                   <Text style={styles.lookupResultSavedLanguages}>
-                    {languageMetadata[
-                      getPhraseDisplayLanguages(
-                        lookupResult,
-                        props.inputLanguage,
-                        language,
-                      ).native
-                    ].label}{' '}
+                    {
+                      languageMetadata[
+                        getPhraseDisplayLanguages(
+                          lookupResult,
+                          props.inputLanguage,
+                          language,
+                        ).native
+                      ].label
+                    }{' '}
                     {'->'}{' '}
-                    {languageMetadata[
-                      getPhraseDisplayLanguages(
-                        lookupResult,
-                        props.inputLanguage,
-                        language,
-                      ).learning
-                    ].label}
+                    {
+                      languageMetadata[
+                        getPhraseDisplayLanguages(
+                          lookupResult,
+                          props.inputLanguage,
+                          language,
+                        ).learning
+                      ].label
+                    }
                   </Text>
                 ) : null}
                 <Text style={styles.lookupResultHelper}>
-                  {languageMetadata[existingPhraseDisplay.learningLanguage].label}
+                  {
+                    languageMetadata[existingPhraseDisplay.learningLanguage]
+                      .label
+                  }
                   : {existingPhraseDisplay.translation.text}
                 </Text>
               </View>

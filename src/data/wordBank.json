@@ -1,0 +1,6228 @@
+{
+  "meta": {
+    "name": "gaming_profanity_translation_reference_direct",
+    "version": "2.0.0",
+    "purpose": "One-option direct profanity/toxicity translation reference for checking custom user-added gaming words before automatic translation.",
+    "importantNote": "Each concept has exactly one canonical term per language. The terms object uses strings, not arrays. Some gaming toxicity terms are localized rather than literally translated where literal translation would be unnatural.",
+    "sourceFix": "Rebuilt from the previous uploaded multilingual reference and corrected to one direct option per language.",
+    "structure": {
+      "languages": "Locale metadata.",
+      "concepts": "Canonical profanity/toxicity concepts with exactly one localized string per language.",
+      "byLanguage": "Flattened per-language lookup index generated from concepts."
+    },
+    "normalizationSuggestions": [
+      "Lowercase text before matching where the script supports case.",
+      "Trim spaces and normalize repeated spaces.",
+      "Normalize common leetspeak and symbols such as @->a, 0->o, 1->i/l, 3->e, 4->a, $->s, !->i.",
+      "Remove repeated punctuation and zero-width characters.",
+      "For Arabic, normalize alef/hamza forms and remove tatweel.",
+      "For Japanese/Korean/Chinese, match both full-width and half-width forms where relevant.",
+      "For Hinglish/Arabizi/Romanized input, add extra aliases in your own app-side matcher if needed."
+    ],
+    "safetyNote": "Entries marked block_do_not_translate should not be translated back to the user; show a safe moderation message instead."
+  },
+  "languages": {
+    "en": {
+      "label": "English",
+      "flag": "🇺🇸"
+    },
+    "fr": {
+      "label": "French",
+      "flag": "🇫🇷"
+    },
+    "es": {
+      "label": "Spanish",
+      "flag": "🇪🇸"
+    },
+    "de": {
+      "label": "German",
+      "flag": "🇩🇪"
+    },
+    "ar": {
+      "label": "Arabic",
+      "flag": "🇸🇦"
+    },
+    "it": {
+      "label": "Italian",
+      "flag": "🇮🇹"
+    },
+    "pt": {
+      "label": "Portuguese",
+      "flag": "🇧🇷"
+    },
+    "hi": {
+      "label": "Hindi",
+      "flag": "🇮🇳"
+    },
+    "nl": {
+      "label": "Dutch",
+      "flag": "🇳🇱"
+    },
+    "pl": {
+      "label": "Polish",
+      "flag": "🇵🇱"
+    },
+    "tr": {
+      "label": "Turkish",
+      "flag": "🇹🇷"
+    },
+    "ru": {
+      "label": "Russian",
+      "flag": "🇷🇺"
+    },
+    "ja": {
+      "label": "Japanese",
+      "flag": "🇯🇵"
+    },
+    "ko": {
+      "label": "Korean",
+      "flag": "🇰🇷"
+    },
+    "zh": {
+      "label": "Chinese",
+      "flag": "🇨🇳"
+    }
+  },
+  "concepts": [
+    {
+      "id": "damn",
+      "category": "general_profanity",
+      "severity": "mild",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "General expression of frustration or anger.",
+      "terms": {
+        "en": "damn",
+        "fr": "merde",
+        "es": "maldita sea",
+        "de": "verdammt",
+        "ar": "تباً",
+        "it": "maledizione",
+        "pt": "droga",
+        "hi": "लानत है",
+        "nl": "verdomme",
+        "pl": "cholera",
+        "tr": "kahretsin",
+        "ru": "чёрт",
+        "ja": "ちくしょう",
+        "ko": "젠장",
+        "zh": "该死"
+      }
+    },
+    {
+      "id": "fuck-exclamation",
+      "category": "sexual_profanity",
+      "severity": "high",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Strong vulgar exclamation of anger, shock, or frustration.",
+      "terms": {
+        "en": "fuck",
+        "fr": "putain",
+        "es": "joder",
+        "de": "Scheiße",
+        "ar": "كس",
+        "it": "cazzo",
+        "pt": "porra",
+        "hi": "लौड़ा",
+        "nl": "kut",
+        "pl": "kurwa",
+        "tr": "siktir",
+        "ru": "блять",
+        "ja": "クソ",
+        "ko": "씨발",
+        "zh": "操"
+      }
+    },
+    {
+      "id": "fuck-you",
+      "category": "direct_abuse",
+      "severity": "high",
+      "recommendedAction": "block_or_warn",
+      "meaning": "Direct vulgar insult aimed at another person.",
+      "terms": {
+        "en": "fuck you",
+        "fr": "va te faire foutre",
+        "es": "que te jodan",
+        "de": "fick dich",
+        "ar": "بدي نيكك",
+        "it": "vaffanculo",
+        "pt": "vai se foder",
+        "hi": "भाड़ में जा",
+        "nl": "krijg de tering",
+        "pl": "pierdol się",
+        "tr": "siktir git",
+        "ru": "иди нахуй",
+        "ja": "くたばれ",
+        "ko": "좆까",
+        "zh": "去你妈的"
+      }
+    },
+    {
+      "id": "fucking-adjective",
+      "category": "sexual_profanity",
+      "severity": "high",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Vulgar intensifier used before another word.",
+      "terms": {
+        "en": "fucking",
+        "fr": "putain de",
+        "es": "puto",
+        "de": "verfickt",
+        "ar": "خرا",
+        "it": "fottuto",
+        "pt": "do caralho",
+        "hi": "चूतिया",
+        "nl": "verdomde",
+        "pl": "pierdolony",
+        "tr": "siktiğimin",
+        "ru": "ёбаный",
+        "ja": "クソ",
+        "ko": "좆같은",
+        "zh": "他妈的"
+      }
+    },
+    {
+      "id": "shit",
+      "category": "excrement_profanity",
+      "severity": "medium",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Vulgar word for feces; also used for frustration or something bad.",
+      "terms": {
+        "en": "shit",
+        "fr": "merde",
+        "es": "mierda",
+        "de": "Scheiße",
+        "ar": "خرا",
+        "it": "merda",
+        "pt": "merda",
+        "hi": "गंदगी",
+        "nl": "schijt",
+        "pl": "gówno",
+        "tr": "bok",
+        "ru": "дерьмо",
+        "ja": "クソ",
+        "ko": "똥",
+        "zh": "屎"
+      }
+    },
+    {
+      "id": "bullshit",
+      "category": "vulgar_nonsense",
+      "severity": "medium",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Vulgar way to call something false, unfair, or nonsense.",
+      "terms": {
+        "en": "bullshit",
+        "fr": "conneries",
+        "es": "pura mierda",
+        "de": "Bullshit",
+        "ar": "كلام خرا",
+        "it": "stronzate",
+        "pt": "besteira",
+        "hi": "बकवास",
+        "nl": "gelul",
+        "pl": "bzdury",
+        "tr": "saçmalık",
+        "ru": "херня",
+        "ja": "デタラメ",
+        "ko": "개소리",
+        "zh": "扯淡"
+      }
+    },
+    {
+      "id": "asshole",
+      "category": "personal_insult",
+      "severity": "high",
+      "recommendedAction": "block_or_warn",
+      "meaning": "Insult for a rude, selfish, or annoying person.",
+      "terms": {
+        "en": "asshole",
+        "fr": "connard",
+        "es": "cabrón",
+        "de": "Arschloch",
+        "ar": "ابن كلب",
+        "it": "stronzo",
+        "pt": "cuzão",
+        "hi": "गांडू",
+        "nl": "klootzak",
+        "pl": "dupek",
+        "tr": "göt",
+        "ru": "мудак",
+        "ja": "クソ野郎",
+        "ko": "개새끼",
+        "zh": "混蛋"
+      }
+    },
+    {
+      "id": "motherfucker",
+      "category": "severe_family_insult",
+      "severity": "critical",
+      "recommendedAction": "block_or_warn",
+      "meaning": "Very severe vulgar insult, often involving the target's mother.",
+      "terms": {
+        "en": "motherfucker",
+        "fr": "nique ta mère",
+        "es": "chinga tu madre",
+        "de": "Hurensohn",
+        "ar": "انيك أمك",
+        "it": "figlio di puttana",
+        "pt": "filho da puta",
+        "hi": "मादरचोद",
+        "nl": "moederneuker",
+        "pl": "skurwysyn",
+        "tr": "ananı sikeyim",
+        "ru": "ёбаный ублюдок",
+        "ja": "クソ野郎",
+        "ko": "개새끼",
+        "zh": "操你妈"
+      }
+    },
+    {
+      "id": "bastard",
+      "category": "personal_insult",
+      "severity": "medium",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Insult for a disliked or unpleasant person.",
+      "terms": {
+        "en": "bastard",
+        "fr": "bâtard",
+        "es": "bastardo",
+        "de": "Bastard",
+        "ar": "ابن حرام",
+        "it": "bastardo",
+        "pt": "bastardo",
+        "hi": "हरामज़ादा",
+        "nl": "rotzak",
+        "pl": "drań",
+        "tr": "piç",
+        "ru": "ублюдок",
+        "ja": "ろくでなし",
+        "ko": "망할 놈",
+        "zh": "王八蛋"
+      }
+    },
+    {
+      "id": "bitch",
+      "category": "gendered_or_personal_insult",
+      "severity": "high",
+      "recommendedAction": "block_or_warn",
+      "meaning": "Offensive insult, often gendered; used broadly in toxic chat.",
+      "terms": {
+        "en": "bitch",
+        "fr": "salope",
+        "es": "perra",
+        "de": "Schlampe",
+        "ar": "شرموطة",
+        "it": "troia",
+        "pt": "vadia",
+        "hi": "कुतिया",
+        "nl": "bitch",
+        "pl": "suka",
+        "tr": "sürtük",
+        "ru": "сука",
+        "ja": "ビッチ",
+        "ko": "년",
+        "zh": "贱人"
+      }
+    },
+    {
+      "id": "dick",
+      "category": "sexual_profanity",
+      "severity": "high",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Vulgar sexual body-part profanity or insult.",
+      "terms": {
+        "en": "dick",
+        "fr": "bite",
+        "es": "polla",
+        "de": "Schwanz",
+        "ar": "زب",
+        "it": "cazzo",
+        "pt": "pau",
+        "hi": "लौड़ा",
+        "nl": "lul",
+        "pl": "chuj",
+        "tr": "yarak",
+        "ru": "хуй",
+        "ja": "ちんこ",
+        "ko": "좆",
+        "zh": "鸡巴"
+      }
+    },
+    {
+      "id": "cunt",
+      "category": "sexual_profanity",
+      "severity": "critical",
+      "recommendedAction": "block_or_warn",
+      "meaning": "Very severe vulgar sexual body-part profanity or insult.",
+      "terms": {
+        "en": "cunt",
+        "fr": "chatte",
+        "es": "coño",
+        "de": "Fotze",
+        "ar": "كس",
+        "it": "fica",
+        "pt": "buceta",
+        "hi": "चूत",
+        "nl": "kut",
+        "pl": "pizda",
+        "tr": "am",
+        "ru": "пизда",
+        "ja": "まんこ",
+        "ko": "보지",
+        "zh": "逼"
+      }
+    },
+    {
+      "id": "whore",
+      "category": "sexualized_insult",
+      "severity": "critical",
+      "recommendedAction": "block_or_warn",
+      "meaning": "Sexualized insult used to demean a person.",
+      "terms": {
+        "en": "whore",
+        "fr": "pute",
+        "es": "puta",
+        "de": "Hure",
+        "ar": "عاهرة",
+        "it": "puttana",
+        "pt": "puta",
+        "hi": "रंडी",
+        "nl": "hoer",
+        "pl": "kurwa",
+        "tr": "orospu",
+        "ru": "шлюха",
+        "ja": "売女",
+        "ko": "창녀",
+        "zh": "婊子"
+      }
+    },
+    {
+      "id": "idiot",
+      "category": "personal_insult",
+      "severity": "medium",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Insult meaning unintelligent or foolish.",
+      "terms": {
+        "en": "idiot",
+        "fr": "idiot",
+        "es": "idiota",
+        "de": "Idiot",
+        "ar": "غبي",
+        "it": "idiota",
+        "pt": "idiota",
+        "hi": "बेवकूफ",
+        "nl": "idioot",
+        "pl": "idiota",
+        "tr": "aptal",
+        "ru": "идиот",
+        "ja": "バカ",
+        "ko": "바보",
+        "zh": "白痴"
+      }
+    },
+    {
+      "id": "moron",
+      "category": "personal_insult",
+      "severity": "medium",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Insult meaning very foolish or unintelligent.",
+      "terms": {
+        "en": "moron",
+        "fr": "abruti",
+        "es": "imbécil",
+        "de": "Vollidiot",
+        "ar": "أحمق",
+        "it": "imbecille",
+        "pt": "imbecil",
+        "hi": "मूर्ख",
+        "nl": "sukkel",
+        "pl": "kretyn",
+        "tr": "salak",
+        "ru": "придурок",
+        "ja": "アホ",
+        "ko": "멍청이",
+        "zh": "蠢货"
+      }
+    },
+    {
+      "id": "stupid",
+      "category": "personal_insult",
+      "severity": "medium",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Insult meaning stupid or lacking judgment.",
+      "terms": {
+        "en": "stupid",
+        "fr": "stupide",
+        "es": "estúpido",
+        "de": "dumm",
+        "ar": "غبي",
+        "it": "stupido",
+        "pt": "burro",
+        "hi": "मूर्ख",
+        "nl": "dom",
+        "pl": "głupi",
+        "tr": "aptal",
+        "ru": "тупой",
+        "ja": "バカ",
+        "ko": "멍청한",
+        "zh": "傻"
+      }
+    },
+    {
+      "id": "dumbass",
+      "category": "personal_insult",
+      "severity": "medium",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Vulgar insult for a stupid person.",
+      "terms": {
+        "en": "dumbass",
+        "fr": "con",
+        "es": "gilipollas",
+        "de": "Dummkopf",
+        "ar": "يا حمار",
+        "it": "coglione",
+        "pt": "idiota",
+        "hi": "गधा",
+        "nl": "domkop",
+        "pl": "debil",
+        "tr": "gerizekalı",
+        "ru": "тупица",
+        "ja": "間抜け",
+        "ko": "멍청이",
+        "zh": "傻逼"
+      }
+    },
+    {
+      "id": "trash-player",
+      "category": "gaming_toxicity",
+      "severity": "medium",
+      "recommendedAction": "warn_or_filter",
+      "meaning": "Toxic gaming insult saying a player is very bad.",
+      "terms": {
+        "en": "trash",
+        "fr": "déchet",
+        "es": "basura",
+        "de": "Müll",
+        "ar": "زبالة",
+        "it": "spazzatura",
+        "pt": "lixo",
+        "hi": "कचरा",
+        "nl": "trash",
+        "pl": "śmieć",
+        "tr": "çöp",
+        "ru": "мусор",
+        "ja": "ゴミ",
+        "ko": "쓰레기",
+        "zh": "垃圾"
+      }
+    },
+    {
+      "id": "noob",
+      "category": "gaming_toxicity",
+      "severity": "low",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Gaming insult for a new or bad player.",
+      "terms": {
+        "en": "noob",
+        "fr": "noob",
+        "es": "noob",
+        "de": "Noob",
+        "ar": "نوب",
+        "it": "noob",
+        "pt": "noob",
+        "hi": "noob",
+        "nl": "noob",
+        "pl": "noob",
+        "tr": "noob",
+        "ru": "нуб",
+        "ja": "ヌーブ",
+        "ko": "누브",
+        "zh": "菜鸟"
+      }
+    },
+    {
+      "id": "loser",
+      "category": "personal_insult",
+      "severity": "medium",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Insult for someone considered weak, unsuccessful, or bad at the game.",
+      "terms": {
+        "en": "loser",
+        "fr": "loser",
+        "es": "perdedor",
+        "de": "Verlierer",
+        "ar": "فاشل",
+        "it": "perdente",
+        "pt": "perdedor",
+        "hi": "नाकारा",
+        "nl": "loser",
+        "pl": "przegryw",
+        "tr": "ezik",
+        "ru": "лузер",
+        "ja": "負け犬",
+        "ko": "루저",
+        "zh": "失败者"
+      }
+    },
+    {
+      "id": "shut-up",
+      "category": "hostile_command",
+      "severity": "medium",
+      "recommendedAction": "warn_or_filter",
+      "meaning": "Hostile command telling someone to stop talking.",
+      "terms": {
+        "en": "shut up",
+        "fr": "ta gueule",
+        "es": "cállate",
+        "de": "halt die Fresse",
+        "ar": "اخرس",
+        "it": "stai zitto",
+        "pt": "cala a boca",
+        "hi": "चुप रह",
+        "nl": "hou je bek",
+        "pl": "zamknij mordę",
+        "tr": "çeneni kapat",
+        "ru": "заткнись",
+        "ja": "黙れ",
+        "ko": "닥쳐",
+        "zh": "闭嘴"
+      }
+    },
+    {
+      "id": "go-away",
+      "category": "hostile_command",
+      "severity": "medium",
+      "recommendedAction": "warn_or_filter",
+      "meaning": "Hostile command telling someone to leave.",
+      "terms": {
+        "en": "get lost",
+        "fr": "dégage",
+        "es": "lárgate",
+        "de": "hau ab",
+        "ar": "انقلع",
+        "it": "vattene",
+        "pt": "vai embora",
+        "hi": "निकल",
+        "nl": "rot op",
+        "pl": "spadaj",
+        "tr": "defol",
+        "ru": "отвали",
+        "ja": "消えろ",
+        "ko": "꺼져",
+        "zh": "滚"
+      }
+    },
+    {
+      "id": "go-to-hell",
+      "category": "hostile_phrase",
+      "severity": "medium",
+      "recommendedAction": "warn_or_filter",
+      "meaning": "Hostile phrase wishing rejection or misfortune on someone.",
+      "terms": {
+        "en": "go to hell",
+        "fr": "va au diable",
+        "es": "vete al infierno",
+        "de": "fahr zur Hölle",
+        "ar": "روح للجحيم",
+        "it": "vai all'inferno",
+        "pt": "vai para o inferno",
+        "hi": "नर्क में जा",
+        "nl": "loop naar de hel",
+        "pl": "idź do diabła",
+        "tr": "cehenneme git",
+        "ru": "иди к чёрту",
+        "ja": "地獄へ落ちろ",
+        "ko": "지옥에나 가",
+        "zh": "下地狱吧"
+      }
+    },
+    {
+      "id": "kill-yourself",
+      "category": "self_harm_abuse",
+      "severity": "critical",
+      "recommendedAction": "block_do_not_translate",
+      "meaning": "Abusive phrase telling someone to harm themselves; should be blocked, not translated or suggested.",
+      "terms": {
+        "en": "kill yourself",
+        "fr": "suicide-toi",
+        "es": "suicídate",
+        "de": "bring dich um",
+        "ar": "اقتل نفسك",
+        "it": "ucciditi",
+        "pt": "se mata",
+        "hi": "खुद को मार",
+        "nl": "maak jezelf van kant",
+        "pl": "zabij się",
+        "tr": "kendini öldür",
+        "ru": "убей себя",
+        "ja": "自殺しろ",
+        "ko": "자살해",
+        "zh": "自杀吧"
+      }
+    },
+    {
+      "id": "go-die",
+      "category": "self_harm_abuse",
+      "severity": "critical",
+      "recommendedAction": "block_do_not_translate",
+      "meaning": "Abusive phrase telling someone to die; should be blocked, not translated or suggested.",
+      "terms": {
+        "en": "go die",
+        "fr": "va crever",
+        "es": "muérete",
+        "de": "geh sterben",
+        "ar": "روح موت",
+        "it": "muori",
+        "pt": "vai morrer",
+        "hi": "मर जा",
+        "nl": "ga dood",
+        "pl": "umrzyj",
+        "tr": "geber",
+        "ru": "сдохни",
+        "ja": "死ね",
+        "ko": "죽어",
+        "zh": "去死"
+      }
+    },
+    {
+      "id": "you-suck",
+      "category": "gaming_toxicity",
+      "severity": "medium",
+      "recommendedAction": "warn_or_filter",
+      "meaning": "Toxic phrase saying someone is bad at the game.",
+      "terms": {
+        "en": "you suck",
+        "fr": "tu es nul",
+        "es": "apestas",
+        "de": "du bist schlecht",
+        "ar": "أنت سيئ",
+        "it": "fai schifo",
+        "pt": "você é ruim",
+        "hi": "तू बहुत खराब है",
+        "nl": "je bent slecht",
+        "pl": "jesteś słaby",
+        "tr": "çok kötüsün",
+        "ru": "ты отстой",
+        "ja": "下手くそ",
+        "ko": "너 못해",
+        "zh": "你太菜了"
+      }
+    },
+    {
+      "id": "gg-ez",
+      "category": "gaming_toxicity",
+      "severity": "low",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Toxic bragging after winning, often used to disrespect opponents.",
+      "terms": {
+        "en": "GG EZ",
+        "fr": "GG EZ",
+        "es": "GG EZ",
+        "de": "GG EZ",
+        "ar": "GG EZ",
+        "it": "GG EZ",
+        "pt": "GG EZ",
+        "hi": "GG EZ",
+        "nl": "GG EZ",
+        "pl": "GG EZ",
+        "tr": "GG EZ",
+        "ru": "ГГ ИЗИ",
+        "ja": "GG EZ",
+        "ko": "GG EZ",
+        "zh": "GG EZ"
+      }
+    },
+    {
+      "id": "tilted",
+      "category": "gaming_toxicity",
+      "severity": "low",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Frustrated in a way that causes worse play.",
+      "terms": {
+        "en": "tilted",
+        "fr": "tilté",
+        "es": "tilteado",
+        "de": "tilted",
+        "ar": "متنرفز",
+        "it": "tiltato",
+        "pt": "tiltado",
+        "hi": "tilted",
+        "nl": "getilt",
+        "pl": "stiltowany",
+        "tr": "tilt olmuş",
+        "ru": "тильтанул",
+        "ja": "ティルト",
+        "ko": "멘탈 나감",
+        "zh": "心态崩了"
+      }
+    },
+    {
+      "id": "crap",
+      "category": "mild_profanity",
+      "severity": "low",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Milder vulgar word for something bad or frustrating.",
+      "terms": {
+        "en": "crap",
+        "fr": "nul",
+        "es": "porquería",
+        "de": "Mist",
+        "ar": "زفت",
+        "it": "schifo",
+        "pt": "porcaria",
+        "hi": "बेकार",
+        "nl": "rotzooi",
+        "pl": "badziewie",
+        "tr": "berbat",
+        "ru": "фигня",
+        "ja": "ひどい",
+        "ko": "구려",
+        "zh": "糟糕"
+      }
+    },
+    {
+      "id": "useless",
+      "category": "personal_insult",
+      "severity": "medium",
+      "recommendedAction": "warn_or_filter",
+      "meaning": "Insult saying someone or something has no value.",
+      "terms": {
+        "en": "useless",
+        "fr": "inutile",
+        "es": "inútil",
+        "de": "nutzlos",
+        "ar": "ما منك فائدة",
+        "it": "inutile",
+        "pt": "inútil",
+        "hi": "निकम्मा",
+        "nl": "nutteloos",
+        "pl": "bezużyteczny",
+        "tr": "işe yaramaz",
+        "ru": "бесполезный",
+        "ja": "役立たず",
+        "ko": "쓸모없어",
+        "zh": "没用"
+      }
+    },
+    {
+      "id": "bot-insult",
+      "category": "gaming_toxicity",
+      "severity": "low",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Gaming insult implying a player is as bad as an automated bot.",
+      "terms": {
+        "en": "bot",
+        "fr": "bot",
+        "es": "bot",
+        "de": "Bot",
+        "ar": "بوت",
+        "it": "bot",
+        "pt": "bot",
+        "hi": "bot",
+        "nl": "bot",
+        "pl": "bot",
+        "tr": "bot",
+        "ru": "бот",
+        "ja": "bot",
+        "ko": "봇",
+        "zh": "人机"
+      }
+    },
+    {
+      "id": "camper",
+      "category": "gaming_toxicity",
+      "severity": "low",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Gaming insult for a player who waits in one place instead of moving.",
+      "terms": {
+        "en": "camper",
+        "fr": "campeur",
+        "es": "campero",
+        "de": "Camper",
+        "ar": "كامبر",
+        "it": "camper",
+        "pt": "camper",
+        "hi": "camper",
+        "nl": "camper",
+        "pl": "kamper",
+        "tr": "camper",
+        "ru": "кемпер",
+        "ja": "芋",
+        "ko": "캠퍼",
+        "zh": "老六"
+      }
+    },
+    {
+      "id": "tryhard",
+      "category": "gaming_toxicity",
+      "severity": "low",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Insult for someone trying very hard, often too seriously.",
+      "terms": {
+        "en": "tryhard",
+        "fr": "tryhard",
+        "es": "tryhard",
+        "de": "Tryhard",
+        "ar": "تراي هارد",
+        "it": "tryhard",
+        "pt": "tryhard",
+        "hi": "tryhard",
+        "nl": "tryhard",
+        "pl": "tryhard",
+        "tr": "tryhard",
+        "ru": "трайхард",
+        "ja": "ガチ勢",
+        "ko": "빡겜러",
+        "zh": "卷狗"
+      }
+    },
+    {
+      "id": "cheater",
+      "category": "gaming_accusation",
+      "severity": "low",
+      "recommendedAction": "translate_normally",
+      "meaning": "Accusation that someone is cheating.",
+      "terms": {
+        "en": "cheater",
+        "fr": "tricheur",
+        "es": "tramposo",
+        "de": "Cheater",
+        "ar": "غشاش",
+        "it": "cheater",
+        "pt": "cheater",
+        "hi": "cheater",
+        "nl": "cheater",
+        "pl": "cheater",
+        "tr": "hileci",
+        "ru": "читер",
+        "ja": "チーター",
+        "ko": "핵쟁이",
+        "zh": "作弊者"
+      }
+    },
+    {
+      "id": "toxic-player",
+      "category": "gaming_moderation_phrase",
+      "severity": "low",
+      "recommendedAction": "translate_normally",
+      "meaning": "Description of someone behaving abusively in chat or voice.",
+      "terms": {
+        "en": "toxic player",
+        "fr": "joueur toxique",
+        "es": "jugador tóxico",
+        "de": "toxischer Spieler",
+        "ar": "لاعب سام",
+        "it": "giocatore tossico",
+        "pt": "jogador tóxico",
+        "hi": "toxic खिलाड़ी",
+        "nl": "toxic speler",
+        "pl": "toksyczny gracz",
+        "tr": "toksik oyuncu",
+        "ru": "токсичный игрок",
+        "ja": "有害プレイヤー",
+        "ko": "독성 유저",
+        "zh": "有毒玩家"
+      }
+    },
+    {
+      "id": "troll",
+      "category": "gaming_toxicity",
+      "severity": "low",
+      "recommendedAction": "translate_normally",
+      "meaning": "Someone intentionally annoying others or ruining the game.",
+      "terms": {
+        "en": "troll",
+        "fr": "troll",
+        "es": "troll",
+        "de": "Troll",
+        "ar": "ترول",
+        "it": "troll",
+        "pt": "troll",
+        "hi": "troll",
+        "nl": "troll",
+        "pl": "troll",
+        "tr": "troll",
+        "ru": "тролль",
+        "ja": "トロール",
+        "ko": "트롤",
+        "zh": "演员"
+      }
+    },
+    {
+      "id": "thrower",
+      "category": "gaming_toxicity",
+      "severity": "low",
+      "recommendedAction": "translate_normally",
+      "meaning": "Player accused of intentionally losing or making the team lose.",
+      "terms": {
+        "en": "thrower",
+        "fr": "thrower",
+        "es": "thrower",
+        "de": "Thrower",
+        "ar": "يرمي القيم",
+        "it": "thrower",
+        "pt": "thrower",
+        "hi": "thrower",
+        "nl": "thrower",
+        "pl": "thrower",
+        "tr": "maçı satan",
+        "ru": "руинер",
+        "ja": "トロール",
+        "ko": "던지는 사람",
+        "zh": "演员"
+      }
+    },
+    {
+      "id": "feeder",
+      "category": "gaming_toxicity",
+      "severity": "low",
+      "recommendedAction": "translate_normally",
+      "meaning": "Player repeatedly dying and giving the enemy an advantage.",
+      "terms": {
+        "en": "feeder",
+        "fr": "feeder",
+        "es": "feeder",
+        "de": "Feeder",
+        "ar": "يموت كثير",
+        "it": "feeder",
+        "pt": "feeder",
+        "hi": "feeder",
+        "nl": "feeder",
+        "pl": "feeder",
+        "tr": "feedleyen",
+        "ru": "фидер",
+        "ja": "フィーダー",
+        "ko": "피더",
+        "zh": "送人头"
+      }
+    },
+    {
+      "id": "uninstall",
+      "category": "gaming_toxicity",
+      "severity": "low",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Toxic phrase telling someone they are so bad they should stop playing.",
+      "terms": {
+        "en": "uninstall",
+        "fr": "désinstalle",
+        "es": "desinstala",
+        "de": "deinstallier",
+        "ar": "احذف اللعبة",
+        "it": "disinstalla",
+        "pt": "desinstala",
+        "hi": "uninstall कर",
+        "nl": "deïnstalleer",
+        "pl": "odinstaluj",
+        "tr": "oyunu sil",
+        "ru": "удали игру",
+        "ja": "アンインストールしろ",
+        "ko": "겜 지워",
+        "zh": "卸载吧"
+      }
+    },
+    {
+      "id": "brain-dead",
+      "category": "personal_insult",
+      "severity": "medium",
+      "recommendedAction": "warn_or_filter",
+      "meaning": "Insult saying someone plays without thinking.",
+      "terms": {
+        "en": "brain dead",
+        "fr": "cerveau mort",
+        "es": "sin cerebro",
+        "de": "hirntot",
+        "ar": "بدون عقل",
+        "it": "senza cervello",
+        "pt": "sem cérebro",
+        "hi": "बिना दिमाग",
+        "nl": "hersendood",
+        "pl": "bez mózgu",
+        "tr": "beyinsiz",
+        "ru": "без мозгов",
+        "ja": "脳死",
+        "ko": "노브레인",
+        "zh": "没脑子"
+      }
+    },
+    {
+      "id": "dog-insult",
+      "category": "personal_insult",
+      "severity": "medium",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Animal-based insult used to demean someone.",
+      "terms": {
+        "en": "dog",
+        "fr": "chien",
+        "es": "perro",
+        "de": "Hund",
+        "ar": "كلب",
+        "it": "cane",
+        "pt": "cachorro",
+        "hi": "कुत्ता",
+        "nl": "hond",
+        "pl": "pies",
+        "tr": "köpek",
+        "ru": "собака",
+        "ja": "犬",
+        "ko": "개",
+        "zh": "狗"
+      }
+    },
+    {
+      "id": "coward",
+      "category": "personal_insult",
+      "severity": "low",
+      "recommendedAction": "translate_with_caution",
+      "meaning": "Insult saying someone is afraid or refuses to fight.",
+      "terms": {
+        "en": "coward",
+        "fr": "lâche",
+        "es": "cobarde",
+        "de": "Feigling",
+        "ar": "جبان",
+        "it": "codardo",
+        "pt": "covarde",
+        "hi": "कायर",
+        "nl": "lafaard",
+        "pl": "tchórz",
+        "tr": "korkak",
+        "ru": "трус",
+        "ja": "臆病者",
+        "ko": "겁쟁이",
+        "zh": "胆小鬼"
+      }
+    }
+  ],
+  "byLanguage": {
+    "en": {
+      "label": "English",
+      "flag": "🇺🇸",
+      "terms": [
+        {
+          "term": "damn",
+          "normalized": "damn",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "fuck",
+          "normalized": "fuck",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "fuck you",
+          "normalized": "fuck you",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "fucking",
+          "normalized": "fucking",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "shit",
+          "normalized": "shit",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "bullshit",
+          "normalized": "bullshit",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "asshole",
+          "normalized": "asshole",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "motherfucker",
+          "normalized": "motherfucker",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "bastard",
+          "normalized": "bastard",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "bitch",
+          "normalized": "bitch",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "dick",
+          "normalized": "dick",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cunt",
+          "normalized": "cunt",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "whore",
+          "normalized": "whore",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "idiot",
+          "normalized": "idiot",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "moron",
+          "normalized": "moron",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "stupid",
+          "normalized": "stupid",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "dumbass",
+          "normalized": "dumbass",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "trash",
+          "normalized": "trash",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "noob",
+          "normalized": "noob",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "loser",
+          "normalized": "loser",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "shut up",
+          "normalized": "shut up",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "get lost",
+          "normalized": "get lost",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "go to hell",
+          "normalized": "go to hell",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "kill yourself",
+          "normalized": "kill yourself",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "go die",
+          "normalized": "go die",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "you suck",
+          "normalized": "you suck",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tilted",
+          "normalized": "tilted",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "crap",
+          "normalized": "crap",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "useless",
+          "normalized": "useless",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "bot",
+          "normalized": "bot",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "camper",
+          "normalized": "camper",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tryhard",
+          "normalized": "tryhard",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cheater",
+          "normalized": "cheater",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "toxic player",
+          "normalized": "toxic player",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "troll",
+          "normalized": "troll",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "thrower",
+          "normalized": "thrower",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "feeder",
+          "normalized": "feeder",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "uninstall",
+          "normalized": "uninstall",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "brain dead",
+          "normalized": "brain dead",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "dog",
+          "normalized": "dog",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "coward",
+          "normalized": "coward",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "fr": {
+      "label": "French",
+      "flag": "🇫🇷",
+      "terms": [
+        {
+          "term": "merde",
+          "normalized": "merde",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "putain",
+          "normalized": "putain",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "va te faire foutre",
+          "normalized": "va te faire foutre",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "putain de",
+          "normalized": "putain de",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "merde",
+          "normalized": "merde",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "conneries",
+          "normalized": "conneries",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "connard",
+          "normalized": "connard",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "nique ta mère",
+          "normalized": "nique ta mère",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "bâtard",
+          "normalized": "bâtard",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "salope",
+          "normalized": "salope",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "bite",
+          "normalized": "bite",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "chatte",
+          "normalized": "chatte",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "pute",
+          "normalized": "pute",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "idiot",
+          "normalized": "idiot",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "abruti",
+          "normalized": "abruti",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "stupide",
+          "normalized": "stupide",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "con",
+          "normalized": "con",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "déchet",
+          "normalized": "déchet",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "noob",
+          "normalized": "noob",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "loser",
+          "normalized": "loser",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "ta gueule",
+          "normalized": "ta gueule",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "dégage",
+          "normalized": "dégage",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "va au diable",
+          "normalized": "va au diable",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "suicide-toi",
+          "normalized": "suicide-toi",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "va crever",
+          "normalized": "va crever",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "tu es nul",
+          "normalized": "tu es nul",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tilté",
+          "normalized": "tilté",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "nul",
+          "normalized": "nul",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "inutile",
+          "normalized": "inutile",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "bot",
+          "normalized": "bot",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "campeur",
+          "normalized": "campeur",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tryhard",
+          "normalized": "tryhard",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tricheur",
+          "normalized": "tricheur",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "joueur toxique",
+          "normalized": "joueur toxique",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "troll",
+          "normalized": "troll",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "thrower",
+          "normalized": "thrower",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "feeder",
+          "normalized": "feeder",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "désinstalle",
+          "normalized": "désinstalle",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cerveau mort",
+          "normalized": "cerveau mort",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "chien",
+          "normalized": "chien",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "lâche",
+          "normalized": "lâche",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "es": {
+      "label": "Spanish",
+      "flag": "🇪🇸",
+      "terms": [
+        {
+          "term": "maldita sea",
+          "normalized": "maldita sea",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "joder",
+          "normalized": "joder",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "que te jodan",
+          "normalized": "que te jodan",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "puto",
+          "normalized": "puto",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "mierda",
+          "normalized": "mierda",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "pura mierda",
+          "normalized": "pura mierda",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cabrón",
+          "normalized": "cabrón",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "chinga tu madre",
+          "normalized": "chinga tu madre",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "bastardo",
+          "normalized": "bastardo",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "perra",
+          "normalized": "perra",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "polla",
+          "normalized": "polla",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "coño",
+          "normalized": "coño",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "puta",
+          "normalized": "puta",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "idiota",
+          "normalized": "idiota",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "imbécil",
+          "normalized": "imbécil",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "estúpido",
+          "normalized": "estúpido",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "gilipollas",
+          "normalized": "gilipollas",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "basura",
+          "normalized": "basura",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "noob",
+          "normalized": "noob",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "perdedor",
+          "normalized": "perdedor",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cállate",
+          "normalized": "cállate",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "lárgate",
+          "normalized": "lárgate",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "vete al infierno",
+          "normalized": "vete al infierno",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "suicídate",
+          "normalized": "suicídate",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "muérete",
+          "normalized": "muérete",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "apestas",
+          "normalized": "apestas",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tilteado",
+          "normalized": "tilteado",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "porquería",
+          "normalized": "porquería",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "inútil",
+          "normalized": "inútil",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "bot",
+          "normalized": "bot",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "campero",
+          "normalized": "campero",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tryhard",
+          "normalized": "tryhard",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tramposo",
+          "normalized": "tramposo",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "jugador tóxico",
+          "normalized": "jugador tóxico",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "troll",
+          "normalized": "troll",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "thrower",
+          "normalized": "thrower",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "feeder",
+          "normalized": "feeder",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "desinstala",
+          "normalized": "desinstala",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "sin cerebro",
+          "normalized": "sin cerebro",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "perro",
+          "normalized": "perro",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cobarde",
+          "normalized": "cobarde",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "de": {
+      "label": "German",
+      "flag": "🇩🇪",
+      "terms": [
+        {
+          "term": "verdammt",
+          "normalized": "verdammt",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Scheiße",
+          "normalized": "scheiße",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "fick dich",
+          "normalized": "fick dich",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "verfickt",
+          "normalized": "verfickt",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Scheiße",
+          "normalized": "scheiße",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Bullshit",
+          "normalized": "bullshit",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Arschloch",
+          "normalized": "arschloch",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "Hurensohn",
+          "normalized": "hurensohn",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "Bastard",
+          "normalized": "bastard",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Schlampe",
+          "normalized": "schlampe",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "Schwanz",
+          "normalized": "schwanz",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Fotze",
+          "normalized": "fotze",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "Hure",
+          "normalized": "hure",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "Idiot",
+          "normalized": "idiot",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Vollidiot",
+          "normalized": "vollidiot",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "dumm",
+          "normalized": "dumm",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Dummkopf",
+          "normalized": "dummkopf",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Müll",
+          "normalized": "müll",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "Noob",
+          "normalized": "noob",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Verlierer",
+          "normalized": "verlierer",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "halt die Fresse",
+          "normalized": "halt die fresse",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "hau ab",
+          "normalized": "hau ab",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "fahr zur Hölle",
+          "normalized": "fahr zur hölle",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "bring dich um",
+          "normalized": "bring dich um",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "geh sterben",
+          "normalized": "geh sterben",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "du bist schlecht",
+          "normalized": "du bist schlecht",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tilted",
+          "normalized": "tilted",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Mist",
+          "normalized": "mist",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "nutzlos",
+          "normalized": "nutzlos",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "Bot",
+          "normalized": "bot",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Camper",
+          "normalized": "camper",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Tryhard",
+          "normalized": "tryhard",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Cheater",
+          "normalized": "cheater",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "toxischer Spieler",
+          "normalized": "toxischer spieler",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "Troll",
+          "normalized": "troll",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "Thrower",
+          "normalized": "thrower",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "Feeder",
+          "normalized": "feeder",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "deinstallier",
+          "normalized": "deinstallier",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "hirntot",
+          "normalized": "hirntot",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "Hund",
+          "normalized": "hund",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "Feigling",
+          "normalized": "feigling",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "ar": {
+      "label": "Arabic",
+      "flag": "🇸🇦",
+      "terms": [
+        {
+          "term": "تباً",
+          "normalized": "تباً",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "كس",
+          "normalized": "كس",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "بدي نيكك",
+          "normalized": "بدي نيكك",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "خرا",
+          "normalized": "خرا",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "خرا",
+          "normalized": "خرا",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "كلام خرا",
+          "normalized": "كلام خرا",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "ابن كلب",
+          "normalized": "ابن كلب",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "انيك أمك",
+          "normalized": "انيك أمك",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "ابن حرام",
+          "normalized": "ابن حرام",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "شرموطة",
+          "normalized": "شرموطة",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "زب",
+          "normalized": "زب",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "كس",
+          "normalized": "كس",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "عاهرة",
+          "normalized": "عاهرة",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "غبي",
+          "normalized": "غبي",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "أحمق",
+          "normalized": "أحمق",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "غبي",
+          "normalized": "غبي",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "يا حمار",
+          "normalized": "يا حمار",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "زبالة",
+          "normalized": "زبالة",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "نوب",
+          "normalized": "نوب",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "فاشل",
+          "normalized": "فاشل",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "اخرس",
+          "normalized": "اخرس",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "انقلع",
+          "normalized": "انقلع",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "روح للجحيم",
+          "normalized": "روح للجحيم",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "اقتل نفسك",
+          "normalized": "اقتل نفسك",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "روح موت",
+          "normalized": "روح موت",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "أنت سيئ",
+          "normalized": "أنت سيئ",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "متنرفز",
+          "normalized": "متنرفز",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "زفت",
+          "normalized": "زفت",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "ما منك فائدة",
+          "normalized": "ما منك فائدة",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "بوت",
+          "normalized": "بوت",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "كامبر",
+          "normalized": "كامبر",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "تراي هارد",
+          "normalized": "تراي هارد",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "غشاش",
+          "normalized": "غشاش",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "لاعب سام",
+          "normalized": "لاعب سام",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "ترول",
+          "normalized": "ترول",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "يرمي القيم",
+          "normalized": "يرمي القيم",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "يموت كثير",
+          "normalized": "يموت كثير",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "احذف اللعبة",
+          "normalized": "احذف اللعبة",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "بدون عقل",
+          "normalized": "بدون عقل",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "كلب",
+          "normalized": "كلب",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "جبان",
+          "normalized": "جبان",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "it": {
+      "label": "Italian",
+      "flag": "🇮🇹",
+      "terms": [
+        {
+          "term": "maledizione",
+          "normalized": "maledizione",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cazzo",
+          "normalized": "cazzo",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "vaffanculo",
+          "normalized": "vaffanculo",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "fottuto",
+          "normalized": "fottuto",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "merda",
+          "normalized": "merda",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "stronzate",
+          "normalized": "stronzate",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "stronzo",
+          "normalized": "stronzo",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "figlio di puttana",
+          "normalized": "figlio di puttana",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "bastardo",
+          "normalized": "bastardo",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "troia",
+          "normalized": "troia",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "cazzo",
+          "normalized": "cazzo",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "fica",
+          "normalized": "fica",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "puttana",
+          "normalized": "puttana",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "idiota",
+          "normalized": "idiota",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "imbecille",
+          "normalized": "imbecille",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "stupido",
+          "normalized": "stupido",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "coglione",
+          "normalized": "coglione",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "spazzatura",
+          "normalized": "spazzatura",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "noob",
+          "normalized": "noob",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "perdente",
+          "normalized": "perdente",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "stai zitto",
+          "normalized": "stai zitto",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "vattene",
+          "normalized": "vattene",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "vai all'inferno",
+          "normalized": "vai all'inferno",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "ucciditi",
+          "normalized": "ucciditi",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "muori",
+          "normalized": "muori",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "fai schifo",
+          "normalized": "fai schifo",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tiltato",
+          "normalized": "tiltato",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "schifo",
+          "normalized": "schifo",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "inutile",
+          "normalized": "inutile",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "bot",
+          "normalized": "bot",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "camper",
+          "normalized": "camper",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tryhard",
+          "normalized": "tryhard",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cheater",
+          "normalized": "cheater",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "giocatore tossico",
+          "normalized": "giocatore tossico",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "troll",
+          "normalized": "troll",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "thrower",
+          "normalized": "thrower",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "feeder",
+          "normalized": "feeder",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "disinstalla",
+          "normalized": "disinstalla",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "senza cervello",
+          "normalized": "senza cervello",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "cane",
+          "normalized": "cane",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "codardo",
+          "normalized": "codardo",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "pt": {
+      "label": "Portuguese",
+      "flag": "🇧🇷",
+      "terms": [
+        {
+          "term": "droga",
+          "normalized": "droga",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "porra",
+          "normalized": "porra",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "vai se foder",
+          "normalized": "vai se foder",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "do caralho",
+          "normalized": "do caralho",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "merda",
+          "normalized": "merda",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "besteira",
+          "normalized": "besteira",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cuzão",
+          "normalized": "cuzão",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "filho da puta",
+          "normalized": "filho da puta",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "bastardo",
+          "normalized": "bastardo",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "vadia",
+          "normalized": "vadia",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "pau",
+          "normalized": "pau",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "buceta",
+          "normalized": "buceta",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "puta",
+          "normalized": "puta",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "idiota",
+          "normalized": "idiota",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "imbecil",
+          "normalized": "imbecil",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "burro",
+          "normalized": "burro",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "idiota",
+          "normalized": "idiota",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "lixo",
+          "normalized": "lixo",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "noob",
+          "normalized": "noob",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "perdedor",
+          "normalized": "perdedor",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cala a boca",
+          "normalized": "cala a boca",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "vai embora",
+          "normalized": "vai embora",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "vai para o inferno",
+          "normalized": "vai para o inferno",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "se mata",
+          "normalized": "se mata",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "vai morrer",
+          "normalized": "vai morrer",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "você é ruim",
+          "normalized": "você é ruim",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tiltado",
+          "normalized": "tiltado",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "porcaria",
+          "normalized": "porcaria",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "inútil",
+          "normalized": "inútil",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "bot",
+          "normalized": "bot",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "camper",
+          "normalized": "camper",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tryhard",
+          "normalized": "tryhard",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cheater",
+          "normalized": "cheater",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "jogador tóxico",
+          "normalized": "jogador tóxico",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "troll",
+          "normalized": "troll",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "thrower",
+          "normalized": "thrower",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "feeder",
+          "normalized": "feeder",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "desinstala",
+          "normalized": "desinstala",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "sem cérebro",
+          "normalized": "sem cérebro",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "cachorro",
+          "normalized": "cachorro",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "covarde",
+          "normalized": "covarde",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "hi": {
+      "label": "Hindi",
+      "flag": "🇮🇳",
+      "terms": [
+        {
+          "term": "लानत है",
+          "normalized": "लानत है",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "लौड़ा",
+          "normalized": "लौड़ा",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "भाड़ में जा",
+          "normalized": "भाड़ में जा",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "चूतिया",
+          "normalized": "चूतिया",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "गंदगी",
+          "normalized": "गंदगी",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "बकवास",
+          "normalized": "बकवास",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "गांडू",
+          "normalized": "गांडू",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "मादरचोद",
+          "normalized": "मादरचोद",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "हरामज़ादा",
+          "normalized": "हरामज़ादा",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "कुतिया",
+          "normalized": "कुतिया",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "लौड़ा",
+          "normalized": "लौड़ा",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "चूत",
+          "normalized": "चूत",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "रंडी",
+          "normalized": "रंडी",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "बेवकूफ",
+          "normalized": "बेवकूफ",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "मूर्ख",
+          "normalized": "मूर्ख",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "मूर्ख",
+          "normalized": "मूर्ख",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "गधा",
+          "normalized": "गधा",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "कचरा",
+          "normalized": "कचरा",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "noob",
+          "normalized": "noob",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "नाकारा",
+          "normalized": "नाकारा",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "चुप रह",
+          "normalized": "चुप रह",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "निकल",
+          "normalized": "निकल",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "नर्क में जा",
+          "normalized": "नर्क में जा",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "खुद को मार",
+          "normalized": "खुद को मार",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "मर जा",
+          "normalized": "मर जा",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "तू बहुत खराब है",
+          "normalized": "तू बहुत खराब है",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tilted",
+          "normalized": "tilted",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "बेकार",
+          "normalized": "बेकार",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "निकम्मा",
+          "normalized": "निकम्मा",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "bot",
+          "normalized": "bot",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "camper",
+          "normalized": "camper",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tryhard",
+          "normalized": "tryhard",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cheater",
+          "normalized": "cheater",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "toxic खिलाड़ी",
+          "normalized": "toxic खिलाड़ी",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "troll",
+          "normalized": "troll",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "thrower",
+          "normalized": "thrower",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "feeder",
+          "normalized": "feeder",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "uninstall कर",
+          "normalized": "uninstall कर",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "बिना दिमाग",
+          "normalized": "बिना दिमाग",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "कुत्ता",
+          "normalized": "कुत्ता",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "कायर",
+          "normalized": "कायर",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "nl": {
+      "label": "Dutch",
+      "flag": "🇳🇱",
+      "terms": [
+        {
+          "term": "verdomme",
+          "normalized": "verdomme",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "kut",
+          "normalized": "kut",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "krijg de tering",
+          "normalized": "krijg de tering",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "verdomde",
+          "normalized": "verdomde",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "schijt",
+          "normalized": "schijt",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "gelul",
+          "normalized": "gelul",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "klootzak",
+          "normalized": "klootzak",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "moederneuker",
+          "normalized": "moederneuker",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "rotzak",
+          "normalized": "rotzak",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "bitch",
+          "normalized": "bitch",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "lul",
+          "normalized": "lul",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "kut",
+          "normalized": "kut",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "hoer",
+          "normalized": "hoer",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "idioot",
+          "normalized": "idioot",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "sukkel",
+          "normalized": "sukkel",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "dom",
+          "normalized": "dom",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "domkop",
+          "normalized": "domkop",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "trash",
+          "normalized": "trash",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "noob",
+          "normalized": "noob",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "loser",
+          "normalized": "loser",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "hou je bek",
+          "normalized": "hou je bek",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "rot op",
+          "normalized": "rot op",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "loop naar de hel",
+          "normalized": "loop naar de hel",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "maak jezelf van kant",
+          "normalized": "maak jezelf van kant",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "ga dood",
+          "normalized": "ga dood",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "je bent slecht",
+          "normalized": "je bent slecht",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "getilt",
+          "normalized": "getilt",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "rotzooi",
+          "normalized": "rotzooi",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "nutteloos",
+          "normalized": "nutteloos",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "bot",
+          "normalized": "bot",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "camper",
+          "normalized": "camper",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tryhard",
+          "normalized": "tryhard",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cheater",
+          "normalized": "cheater",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "toxic speler",
+          "normalized": "toxic speler",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "troll",
+          "normalized": "troll",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "thrower",
+          "normalized": "thrower",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "feeder",
+          "normalized": "feeder",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "deïnstalleer",
+          "normalized": "deïnstalleer",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "hersendood",
+          "normalized": "hersendood",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "hond",
+          "normalized": "hond",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "lafaard",
+          "normalized": "lafaard",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "pl": {
+      "label": "Polish",
+      "flag": "🇵🇱",
+      "terms": [
+        {
+          "term": "cholera",
+          "normalized": "cholera",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "kurwa",
+          "normalized": "kurwa",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "pierdol się",
+          "normalized": "pierdol się",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "pierdolony",
+          "normalized": "pierdolony",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "gówno",
+          "normalized": "gówno",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "bzdury",
+          "normalized": "bzdury",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "dupek",
+          "normalized": "dupek",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "skurwysyn",
+          "normalized": "skurwysyn",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "drań",
+          "normalized": "drań",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "suka",
+          "normalized": "suka",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "chuj",
+          "normalized": "chuj",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "pizda",
+          "normalized": "pizda",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "kurwa",
+          "normalized": "kurwa",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "idiota",
+          "normalized": "idiota",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "kretyn",
+          "normalized": "kretyn",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "głupi",
+          "normalized": "głupi",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "debil",
+          "normalized": "debil",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "śmieć",
+          "normalized": "śmieć",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "noob",
+          "normalized": "noob",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "przegryw",
+          "normalized": "przegryw",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "zamknij mordę",
+          "normalized": "zamknij mordę",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "spadaj",
+          "normalized": "spadaj",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "idź do diabła",
+          "normalized": "idź do diabła",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "zabij się",
+          "normalized": "zabij się",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "umrzyj",
+          "normalized": "umrzyj",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "jesteś słaby",
+          "normalized": "jesteś słaby",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "stiltowany",
+          "normalized": "stiltowany",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "badziewie",
+          "normalized": "badziewie",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "bezużyteczny",
+          "normalized": "bezużyteczny",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "bot",
+          "normalized": "bot",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "kamper",
+          "normalized": "kamper",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tryhard",
+          "normalized": "tryhard",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "cheater",
+          "normalized": "cheater",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "toksyczny gracz",
+          "normalized": "toksyczny gracz",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "troll",
+          "normalized": "troll",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "thrower",
+          "normalized": "thrower",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "feeder",
+          "normalized": "feeder",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "odinstaluj",
+          "normalized": "odinstaluj",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "bez mózgu",
+          "normalized": "bez mózgu",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "pies",
+          "normalized": "pies",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tchórz",
+          "normalized": "tchórz",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "tr": {
+      "label": "Turkish",
+      "flag": "🇹🇷",
+      "terms": [
+        {
+          "term": "kahretsin",
+          "normalized": "kahretsin",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "siktir",
+          "normalized": "siktir",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "siktir git",
+          "normalized": "siktir git",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "siktiğimin",
+          "normalized": "siktiğimin",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "bok",
+          "normalized": "bok",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "saçmalık",
+          "normalized": "saçmalık",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "göt",
+          "normalized": "göt",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "ananı sikeyim",
+          "normalized": "ananı sikeyim",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "piç",
+          "normalized": "piç",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "sürtük",
+          "normalized": "sürtük",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "yarak",
+          "normalized": "yarak",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "am",
+          "normalized": "am",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "orospu",
+          "normalized": "orospu",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "aptal",
+          "normalized": "aptal",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "salak",
+          "normalized": "salak",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "aptal",
+          "normalized": "aptal",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "gerizekalı",
+          "normalized": "gerizekalı",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "çöp",
+          "normalized": "çöp",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "noob",
+          "normalized": "noob",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "ezik",
+          "normalized": "ezik",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "çeneni kapat",
+          "normalized": "çeneni kapat",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "defol",
+          "normalized": "defol",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "cehenneme git",
+          "normalized": "cehenneme git",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "kendini öldür",
+          "normalized": "kendini öldür",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "geber",
+          "normalized": "geber",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "çok kötüsün",
+          "normalized": "çok kötüsün",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tilt olmuş",
+          "normalized": "tilt olmuş",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "berbat",
+          "normalized": "berbat",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "işe yaramaz",
+          "normalized": "işe yaramaz",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "bot",
+          "normalized": "bot",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "camper",
+          "normalized": "camper",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "tryhard",
+          "normalized": "tryhard",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "hileci",
+          "normalized": "hileci",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "toksik oyuncu",
+          "normalized": "toksik oyuncu",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "troll",
+          "normalized": "troll",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "maçı satan",
+          "normalized": "maçı satan",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "feedleyen",
+          "normalized": "feedleyen",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "oyunu sil",
+          "normalized": "oyunu sil",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "beyinsiz",
+          "normalized": "beyinsiz",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "köpek",
+          "normalized": "köpek",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "korkak",
+          "normalized": "korkak",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "ru": {
+      "label": "Russian",
+      "flag": "🇷🇺",
+      "terms": [
+        {
+          "term": "чёрт",
+          "normalized": "чёрт",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "блять",
+          "normalized": "блять",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "иди нахуй",
+          "normalized": "иди нахуй",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "ёбаный",
+          "normalized": "ёбаный",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "дерьмо",
+          "normalized": "дерьмо",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "херня",
+          "normalized": "херня",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "мудак",
+          "normalized": "мудак",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "ёбаный ублюдок",
+          "normalized": "ёбаный ублюдок",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "ублюдок",
+          "normalized": "ублюдок",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "сука",
+          "normalized": "сука",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "хуй",
+          "normalized": "хуй",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "пизда",
+          "normalized": "пизда",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "шлюха",
+          "normalized": "шлюха",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "идиот",
+          "normalized": "идиот",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "придурок",
+          "normalized": "придурок",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "тупой",
+          "normalized": "тупой",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "тупица",
+          "normalized": "тупица",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "мусор",
+          "normalized": "мусор",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "нуб",
+          "normalized": "нуб",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "лузер",
+          "normalized": "лузер",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "заткнись",
+          "normalized": "заткнись",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "отвали",
+          "normalized": "отвали",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "иди к чёрту",
+          "normalized": "иди к чёрту",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "убей себя",
+          "normalized": "убей себя",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "сдохни",
+          "normalized": "сдохни",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "ты отстой",
+          "normalized": "ты отстой",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "ГГ ИЗИ",
+          "normalized": "гг изи",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "тильтанул",
+          "normalized": "тильтанул",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "фигня",
+          "normalized": "фигня",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "бесполезный",
+          "normalized": "бесполезный",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "бот",
+          "normalized": "бот",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "кемпер",
+          "normalized": "кемпер",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "трайхард",
+          "normalized": "трайхард",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "читер",
+          "normalized": "читер",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "токсичный игрок",
+          "normalized": "токсичный игрок",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "тролль",
+          "normalized": "тролль",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "руинер",
+          "normalized": "руинер",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "фидер",
+          "normalized": "фидер",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "удали игру",
+          "normalized": "удали игру",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "без мозгов",
+          "normalized": "без мозгов",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "собака",
+          "normalized": "собака",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "трус",
+          "normalized": "трус",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "ja": {
+      "label": "Japanese",
+      "flag": "🇯🇵",
+      "terms": [
+        {
+          "term": "ちくしょう",
+          "normalized": "ちくしょう",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "クソ",
+          "normalized": "クソ",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "くたばれ",
+          "normalized": "くたばれ",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "クソ",
+          "normalized": "クソ",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "クソ",
+          "normalized": "クソ",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "デタラメ",
+          "normalized": "デタラメ",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "クソ野郎",
+          "normalized": "クソ野郎",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "クソ野郎",
+          "normalized": "クソ野郎",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "ろくでなし",
+          "normalized": "ろくでなし",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "ビッチ",
+          "normalized": "ビッチ",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "ちんこ",
+          "normalized": "ちんこ",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "まんこ",
+          "normalized": "まんこ",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "売女",
+          "normalized": "売女",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "バカ",
+          "normalized": "バカ",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "アホ",
+          "normalized": "アホ",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "バカ",
+          "normalized": "バカ",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "間抜け",
+          "normalized": "間抜け",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "ゴミ",
+          "normalized": "ゴミ",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "ヌーブ",
+          "normalized": "ヌーブ",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "負け犬",
+          "normalized": "負け犬",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "黙れ",
+          "normalized": "黙れ",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "消えろ",
+          "normalized": "消えろ",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "地獄へ落ちろ",
+          "normalized": "地獄へ落ちろ",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "自殺しろ",
+          "normalized": "自殺しろ",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "死ね",
+          "normalized": "死ね",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "下手くそ",
+          "normalized": "下手くそ",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "ティルト",
+          "normalized": "ティルト",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "ひどい",
+          "normalized": "ひどい",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "役立たず",
+          "normalized": "役立たず",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "bot",
+          "normalized": "bot",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "芋",
+          "normalized": "芋",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "ガチ勢",
+          "normalized": "ガチ勢",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "チーター",
+          "normalized": "チーター",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "有害プレイヤー",
+          "normalized": "有害プレイヤー",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "トロール",
+          "normalized": "トロール",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "トロール",
+          "normalized": "トロール",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "フィーダー",
+          "normalized": "フィーダー",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "アンインストールしろ",
+          "normalized": "アンインストールしろ",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "脳死",
+          "normalized": "脳死",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "犬",
+          "normalized": "犬",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "臆病者",
+          "normalized": "臆病者",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "ko": {
+      "label": "Korean",
+      "flag": "🇰🇷",
+      "terms": [
+        {
+          "term": "젠장",
+          "normalized": "젠장",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "씨발",
+          "normalized": "씨발",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "좆까",
+          "normalized": "좆까",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "좆같은",
+          "normalized": "좆같은",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "똥",
+          "normalized": "똥",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "개소리",
+          "normalized": "개소리",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "개새끼",
+          "normalized": "개새끼",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "개새끼",
+          "normalized": "개새끼",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "망할 놈",
+          "normalized": "망할 놈",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "년",
+          "normalized": "년",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "좆",
+          "normalized": "좆",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "보지",
+          "normalized": "보지",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "창녀",
+          "normalized": "창녀",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "바보",
+          "normalized": "바보",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "멍청이",
+          "normalized": "멍청이",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "멍청한",
+          "normalized": "멍청한",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "멍청이",
+          "normalized": "멍청이",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "쓰레기",
+          "normalized": "쓰레기",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "누브",
+          "normalized": "누브",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "루저",
+          "normalized": "루저",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "닥쳐",
+          "normalized": "닥쳐",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "꺼져",
+          "normalized": "꺼져",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "지옥에나 가",
+          "normalized": "지옥에나 가",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "자살해",
+          "normalized": "자살해",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "죽어",
+          "normalized": "죽어",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "너 못해",
+          "normalized": "너 못해",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "멘탈 나감",
+          "normalized": "멘탈 나감",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "구려",
+          "normalized": "구려",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "쓸모없어",
+          "normalized": "쓸모없어",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "봇",
+          "normalized": "봇",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "캠퍼",
+          "normalized": "캠퍼",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "빡겜러",
+          "normalized": "빡겜러",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "핵쟁이",
+          "normalized": "핵쟁이",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "독성 유저",
+          "normalized": "독성 유저",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "트롤",
+          "normalized": "트롤",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "던지는 사람",
+          "normalized": "던지는 사람",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "피더",
+          "normalized": "피더",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "겜 지워",
+          "normalized": "겜 지워",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "노브레인",
+          "normalized": "노브레인",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "개",
+          "normalized": "개",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "겁쟁이",
+          "normalized": "겁쟁이",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    },
+    "zh": {
+      "label": "Chinese",
+      "flag": "🇨🇳",
+      "terms": [
+        {
+          "term": "该死",
+          "normalized": "该死",
+          "conceptId": "damn",
+          "category": "general_profanity",
+          "severity": "mild",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "操",
+          "normalized": "操",
+          "conceptId": "fuck-exclamation",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "去你妈的",
+          "normalized": "去你妈的",
+          "conceptId": "fuck-you",
+          "category": "direct_abuse",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "他妈的",
+          "normalized": "他妈的",
+          "conceptId": "fucking-adjective",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "屎",
+          "normalized": "屎",
+          "conceptId": "shit",
+          "category": "excrement_profanity",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "扯淡",
+          "normalized": "扯淡",
+          "conceptId": "bullshit",
+          "category": "vulgar_nonsense",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "混蛋",
+          "normalized": "混蛋",
+          "conceptId": "asshole",
+          "category": "personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "操你妈",
+          "normalized": "操你妈",
+          "conceptId": "motherfucker",
+          "category": "severe_family_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "王八蛋",
+          "normalized": "王八蛋",
+          "conceptId": "bastard",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "贱人",
+          "normalized": "贱人",
+          "conceptId": "bitch",
+          "category": "gendered_or_personal_insult",
+          "severity": "high",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "鸡巴",
+          "normalized": "鸡巴",
+          "conceptId": "dick",
+          "category": "sexual_profanity",
+          "severity": "high",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "逼",
+          "normalized": "逼",
+          "conceptId": "cunt",
+          "category": "sexual_profanity",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "婊子",
+          "normalized": "婊子",
+          "conceptId": "whore",
+          "category": "sexualized_insult",
+          "severity": "critical",
+          "recommendedAction": "block_or_warn"
+        },
+        {
+          "term": "白痴",
+          "normalized": "白痴",
+          "conceptId": "idiot",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "蠢货",
+          "normalized": "蠢货",
+          "conceptId": "moron",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "傻",
+          "normalized": "傻",
+          "conceptId": "stupid",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "傻逼",
+          "normalized": "傻逼",
+          "conceptId": "dumbass",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "垃圾",
+          "normalized": "垃圾",
+          "conceptId": "trash-player",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "菜鸟",
+          "normalized": "菜鸟",
+          "conceptId": "noob",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "失败者",
+          "normalized": "失败者",
+          "conceptId": "loser",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "闭嘴",
+          "normalized": "闭嘴",
+          "conceptId": "shut-up",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "滚",
+          "normalized": "滚",
+          "conceptId": "go-away",
+          "category": "hostile_command",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "下地狱吧",
+          "normalized": "下地狱吧",
+          "conceptId": "go-to-hell",
+          "category": "hostile_phrase",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "自杀吧",
+          "normalized": "自杀吧",
+          "conceptId": "kill-yourself",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "去死",
+          "normalized": "去死",
+          "conceptId": "go-die",
+          "category": "self_harm_abuse",
+          "severity": "critical",
+          "recommendedAction": "block_do_not_translate"
+        },
+        {
+          "term": "你太菜了",
+          "normalized": "你太菜了",
+          "conceptId": "you-suck",
+          "category": "gaming_toxicity",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "GG EZ",
+          "normalized": "gg ez",
+          "conceptId": "gg-ez",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "心态崩了",
+          "normalized": "心态崩了",
+          "conceptId": "tilted",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "糟糕",
+          "normalized": "糟糕",
+          "conceptId": "crap",
+          "category": "mild_profanity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "没用",
+          "normalized": "没用",
+          "conceptId": "useless",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "人机",
+          "normalized": "人机",
+          "conceptId": "bot-insult",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "老六",
+          "normalized": "老六",
+          "conceptId": "camper",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "卷狗",
+          "normalized": "卷狗",
+          "conceptId": "tryhard",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "作弊者",
+          "normalized": "作弊者",
+          "conceptId": "cheater",
+          "category": "gaming_accusation",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "有毒玩家",
+          "normalized": "有毒玩家",
+          "conceptId": "toxic-player",
+          "category": "gaming_moderation_phrase",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "演员",
+          "normalized": "演员",
+          "conceptId": "troll",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "演员",
+          "normalized": "演员",
+          "conceptId": "thrower",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "送人头",
+          "normalized": "送人头",
+          "conceptId": "feeder",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_normally"
+        },
+        {
+          "term": "卸载吧",
+          "normalized": "卸载吧",
+          "conceptId": "uninstall",
+          "category": "gaming_toxicity",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "没脑子",
+          "normalized": "没脑子",
+          "conceptId": "brain-dead",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "warn_or_filter"
+        },
+        {
+          "term": "狗",
+          "normalized": "狗",
+          "conceptId": "dog-insult",
+          "category": "personal_insult",
+          "severity": "medium",
+          "recommendedAction": "translate_with_caution"
+        },
+        {
+          "term": "胆小鬼",
+          "normalized": "胆小鬼",
+          "conceptId": "coward",
+          "category": "personal_insult",
+          "severity": "low",
+          "recommendedAction": "translate_with_caution"
+        }
+      ]
+    }
+  }
+}
