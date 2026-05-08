@@ -131,10 +131,15 @@ function PracticeScreen() {
 
     return categoryOrder.filter(category => availableCategorySet.has(category));
   }, [phrases]);
-  const categoryOptions = useMemo<CategoryFilter[]>(
-    () => ['all', ...availableCategories],
-    [availableCategories],
-  );
+  const categoryOptions = useMemo<CategoryFilter[]>(() => {
+    const nonCustomCategories = availableCategories.filter(
+      category => category !== 'custom',
+    );
+
+    return availableCategories.includes('custom')
+      ? ['all', 'custom', ...nonCustomCategories]
+      : ['all', ...nonCustomCategories];
+  }, [availableCategories]);
 
   const filteredPhrases = useMemo(
     () =>
