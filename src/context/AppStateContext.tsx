@@ -11,6 +11,7 @@ import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 import { categoryOrder } from '../data/categories';
 import { phrases as basePhrases } from '../data/phrases';
+import { trackFavoriteSaveAction } from '../features/ads/mobileAds';
 import { theme } from '../theme/theme';
 import { supportedLanguageCodes } from '../types/language';
 
@@ -430,6 +431,8 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     getFavoriteIdsForLanguage(language).includes(phraseId);
 
   const toggleFavorite = (phraseId: string, language = selectedLanguage) => {
+    const shouldSaveToFavorites = !isFavorite(phraseId, language);
+
     setFavoriteIdsByLanguage(current => {
       const currentLanguageFavorites = current[language] ?? [];
       const nextLanguageFavorites = currentLanguageFavorites.includes(phraseId)
@@ -449,6 +452,10 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         [language]: nextLanguageFavorites,
       };
     });
+
+    if (shouldSaveToFavorites) {
+      trackFavoriteSaveAction();
+    }
   };
 
   const addCustomPhrase = (
@@ -470,6 +477,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
   };
 
   const addPhraseToFavorites = (phrase: Phrase, language = selectedLanguage) => {
+    const isAlreadyFavorite = isFavorite(phrase.id, language);
     const staticPhraseExists = basePhrases.some(item => item.id === phrase.id);
 
     if (!staticPhraseExists) {
@@ -488,6 +496,10 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         [language]: [...currentLanguageFavorites, phrase.id],
       };
     });
+
+    if (!isAlreadyFavorite) {
+      trackFavoriteSaveAction();
+    }
   };
 
   const deleteCustomPhrase = (phraseId: string) => {

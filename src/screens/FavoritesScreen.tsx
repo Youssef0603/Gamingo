@@ -14,13 +14,13 @@ import PhraseCard from '../components/PhraseCard';
 import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
-import { showInterstitialBefore } from '../features/ads/mobileAds';
+import { showAdOnItemClick } from '../features/ads/mobileAds';
 import PracticeModal from '../features/practice/PracticeModal';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
 import { getPhraseDisplayTranslations } from '../utils/phraseDisplay';
 
-const INLINE_AD_FREQUENCY = 3;
+const INLINE_BANNER_FREQUENCY = 10;
 
 function FavoritesScreen() {
   const {
@@ -86,7 +86,7 @@ function FavoritesScreen() {
   }, [emptyStateAnimation]);
 
   const openPhrase = (phraseId: string) => {
-    showInterstitialBefore(() => {
+    showAdOnItemClick(() => {
       setActivePhraseId(phraseId);
     });
   };
@@ -227,7 +227,7 @@ function FavoritesScreen() {
                 toggleFavorite(item.id, favoriteFilterLanguage)
               }
             />
-            {(index + 1) % INLINE_AD_FREQUENCY === 0 &&
+            {(index + 1) % INLINE_BANNER_FREQUENCY === 0 &&
             index < savedPhrases.length - 1 ? (
               <InlineBannerAd />
             ) : null}

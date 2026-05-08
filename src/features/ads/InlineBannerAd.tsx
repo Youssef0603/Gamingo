@@ -3,9 +3,15 @@ import { StyleSheet, View } from 'react-native';
 import { BannerAd, BannerAdSize } from 'react-native-google-mobile-ads';
 
 import { theme } from '../../theme/theme';
-import { getBannerAdUnitId } from './mobileAds';
+import { getBannerAdUnitId, useCanShowAds } from './mobileAds';
 
 function InlineBannerAd() {
+  const canShowAds = useCanShowAds();
+
+  if (!canShowAds) {
+    return null;
+  }
+
   const adUnitId = getBannerAdUnitId();
 
   if (!adUnitId) {

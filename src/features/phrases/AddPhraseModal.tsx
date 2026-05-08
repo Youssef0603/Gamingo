@@ -11,6 +11,7 @@ import {
 import PhraseCard from '../../components/PhraseCard';
 import { Icon } from '../../components/ui';
 import { categoryMetadata } from '../../data/categories';
+import { showAdBeforeCustomWordAdd } from '../ads/mobileAds';
 import {
   buildTranslatedCustomPhrase,
   findWordBankMatch,
@@ -274,14 +275,16 @@ function AddPhraseModal(props: AddPhraseModalProps) {
         return;
       }
 
-      const createdPhrase = props.onCreatePhrase(
-        trimmedQuery,
-        wordBankMatch.destinationText,
-      );
+      showAdBeforeCustomWordAdd(() => {
+        const createdPhrase = props.onCreatePhrase(
+          trimmedQuery,
+          wordBankMatch.destinationText,
+        );
 
-      resetState();
-      onClose();
-      props.onSeePhrase(createdPhrase);
+        resetState();
+        onClose();
+        props.onSeePhrase(createdPhrase);
+      });
       return;
     }
 
@@ -315,14 +318,16 @@ function AddPhraseModal(props: AddPhraseModalProps) {
         return;
       }
 
-      const createdPhrase = props.onCreatePhrase(
-        trimmedQuery,
-        translationResult.destinationText,
-      );
+      showAdBeforeCustomWordAdd(() => {
+        const createdPhrase = props.onCreatePhrase(
+          trimmedQuery,
+          translationResult.destinationText,
+        );
 
-      resetState();
-      onClose();
-      props.onSeePhrase(createdPhrase);
+        resetState();
+        onClose();
+        props.onSeePhrase(createdPhrase);
+      });
     } catch (error) {
       setLookupResult(null);
       setLookupSource(null);

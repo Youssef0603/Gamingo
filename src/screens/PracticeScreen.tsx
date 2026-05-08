@@ -15,7 +15,10 @@ import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
 import { categoryMetadata, categoryOrder } from '../data/categories';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
-import { showInterstitialBefore } from '../features/ads/mobileAds';
+import {
+  showAdBeforeRandomPractice,
+  showAdOnItemClick,
+} from '../features/ads/mobileAds';
 import AddPhraseModal from '../features/phrases/AddPhraseModal';
 import PracticeModal from '../features/practice/PracticeModal';
 import RandomPracticeModal from '../features/practice/RandomPracticeModal';
@@ -33,7 +36,7 @@ type PhraseSection = {
   title: string;
 };
 
-const INLINE_AD_FREQUENCY = 3;
+const INLINE_BANNER_FREQUENCY = 10;
 const RANDOM_PRACTICE_COUNT = 10;
 
 type FilterChipProps = {
@@ -157,6 +160,27 @@ function PracticeScreen() {
       })),
     [availableCategories, phrases],
   );
+  const sectionedPhraseIndexById = useMemo(() => {
+    const nextValue: Record<string, number> = {};
+    let nextIndex = 0;
+
+    phraseSections.forEach(section => {
+      section.data.forEach(phrase => {
+        nextValue[phrase.id] = nextIndex;
+        nextIndex += 1;
+      });
+    });
+
+    return nextValue;
+  }, [phraseSections]);
+  const sectionedPhraseCount = useMemo(
+    () =>
+      phraseSections.reduce(
+        (totalCount, section) => totalCount + section.data.length,
+        0,
+      ),
+    [phraseSections],
+  );
   const activePhrase = useMemo(
     () => phrases.find(item => item.id === activePhraseId) ?? null,
     [activePhraseId, phrases],
@@ -213,7 +237,7 @@ function PracticeScreen() {
       });
 
       if (pendingOpenPhraseId === pendingScrollPhraseId) {
-        openPhrase(pendingOpenPhraseId);
+        setActivePhraseId(pendingOpenPhraseId);
         setPendingOpenPhraseId(null);
       }
 
@@ -269,7 +293,7 @@ function PracticeScreen() {
       });
     };
   const openPhrase = (phraseId: string) => {
-    showInterstitialBefore(() => {
+    showAdOnItemClick(() => {
       setActivePhraseId(phraseId);
     });
   };
@@ -280,18 +304,37 @@ function PracticeScreen() {
     setPendingOpenPhraseId(phrase.id);
   };
 
-  const startRandomPracticeSession = () => {
-    if (randomPracticePool.length === 0) {
-      Alert.alert(
-        'No words ready yet',
-        'Switch languages or add custom words for this language pair first.',
-      );
-      return;
-    }
+  const showNoWordsReadyAlert = () => {
+    Alert.alert(
+      'No words ready yet',
+      'Switch languages or add custom words for this language pair first.',
+    );
+  };
 
+  const openRandomPracticeSession = () => {
     setRandomPracticeSession({
       id: Date.now() + Math.random(),
       phrases: getRandomPhraseSet(randomPracticePool, RANDOM_PRACTICE_COUNT),
+    });
+  };
+
+  const beginRandomPracticeSession = () => {
+    if (randomPracticePool.length === 0) {
+      showNoWordsReadyAlert();
+      return;
+    }
+
+    openRandomPracticeSession();
+  };
+
+  const startRandomPracticeSession = () => {
+    if (randomPracticePool.length === 0) {
+      showNoWordsReadyAlert();
+      return;
+    }
+
+    showAdBeforeRandomPractice(() => {
+      openRandomPracticeSession();
     });
   };
 
@@ -455,24 +498,29 @@ function PracticeScreen() {
     </View>
   );
 
-  const renderPhraseItem = (item: Phrase, index: number, totalCount: number) => (
-    <View>
-      <PhraseCard
-        helperLanguage={nativeLanguage}
-        isFavorite={isFavorite(item.id)}
-        item={item}
-        language={selectedLanguage}
-        onDelete={
-          item.category === 'custom' ? () => confirmDeletePhrase(item) : undefined
-        }
-        onPress={() => openPhrase(item.id)}
-        onToggleFavorite={() => toggleFavorite(item.id)}
-      />
-      {(index + 1) % INLINE_AD_FREQUENCY === 0 && index < totalCount - 1 ? (
-        <InlineBannerAd />
-      ) : null}
-    </View>
-  );
+  const renderPhraseItem = (item: Phrase, index: number, totalCount: number) => {
+    const shouldShowBanner =
+      (index + 1) % INLINE_BANNER_FREQUENCY === 0 && index < totalCount - 1;
+
+    return (
+      <View>
+        <PhraseCard
+          helperLanguage={nativeLanguage}
+          isFavorite={isFavorite(item.id)}
+          item={item}
+          language={selectedLanguage}
+          onDelete={
+            item.category === 'custom'
+              ? () => confirmDeletePhrase(item)
+              : undefined
+          }
+          onPress={() => openPhrase(item.id)}
+          onToggleFavorite={() => toggleFavorite(item.id)}
+        />
+        {shouldShowBanner ? <InlineBannerAd /> : null}
+      </View>
+    );
+  };
 
   return (
     <Screen padded={false} edges={['top']}>
@@ -482,8 +530,12 @@ function PracticeScreen() {
           keyExtractor={item => item.id}
           ListEmptyComponent={renderEmptyState}
           ListHeaderComponent={renderListHeader}
-          renderItem={({ item, index, section }) =>
-            renderPhraseItem(item, index, section.data.length)
+          renderItem={({ item, index }) =>
+            renderPhraseItem(
+              item,
+              sectionedPhraseIndexById[item.id] ?? index,
+              sectionedPhraseCount,
+            )
           }
           renderSectionHeader={({ section }) => (
             <View style={styles.sectionHeader}>
@@ -560,7 +612,7 @@ function PracticeScreen() {
         isFavorite={isFavorite}
         language={selectedLanguage}
         onClose={() => setRandomPracticeSession(null)}
-        onRestart={startRandomPracticeSession}
+        onRestart={beginRandomPracticeSession}
         onToggleFavorite={phraseId => toggleFavorite(phraseId)}
         phrases={randomPracticeSession?.phrases ?? []}
         sessionId={randomPracticeSession?.id ?? 0}
