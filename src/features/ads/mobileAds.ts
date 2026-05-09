@@ -19,13 +19,13 @@ const ITEM_CLICK_INTERSTITIAL_FREQUENCY = 5;
 const FAVORITE_SAVE_INTERSTITIAL_FREQUENCY = 3;
 
 const productionBannerUnitIds = {
-  android: '',
-  ios: '',
+  android: 'ca-app-pub-2492542777972482/9535287858',
+  ios: 'ca-app-pub-2492542777972482/3486708659',
 } as const;
 
 const productionInterstitialUnitIds = {
-  android: '',
-  ios: '',
+  android: 'ca-app-pub-2492542777972482/6078808861',
+  ios: 'ca-app-pub-2492542777972482/1157654674',
 } as const;
 
 type PersistedAdsState = {
