@@ -369,7 +369,7 @@ function PracticeScreen() {
     );
   };
 
-  const renderListHeader = () => (
+  const listHeader = (
     <View style={styles.header}>
       <View style={styles.headingRow}>
         <View style={styles.heading}>
@@ -491,7 +491,7 @@ function PracticeScreen() {
     </View>
   );
 
-  const renderEmptyState = () => (
+  const emptyState = (
     <View style={styles.emptyCard}>
       <Text style={styles.emptyTitle}>No phrases</Text>
       <Text style={styles.emptyText}>Try another category.</Text>
@@ -528,8 +528,8 @@ function PracticeScreen() {
         <SectionList
           contentContainerStyle={styles.content}
           keyExtractor={item => item.id}
-          ListEmptyComponent={renderEmptyState}
-          ListHeaderComponent={renderListHeader}
+          ListEmptyComponent={emptyState}
+          ListHeaderComponent={listHeader}
           renderItem={({ item, index }) =>
             renderPhraseItem(
               item,
@@ -552,8 +552,8 @@ function PracticeScreen() {
           contentContainerStyle={styles.content}
           data={filteredPhrases}
           keyExtractor={item => item.id}
-          ListEmptyComponent={renderEmptyState}
-          ListHeaderComponent={renderListHeader}
+          ListEmptyComponent={emptyState}
+          ListHeaderComponent={listHeader}
           onScrollToIndexFailed={({ averageItemLength, index }) => {
             listRef.current?.scrollToOffset({
               animated: true,
