@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "472785553002",
+    "project_id": "gamingo-d8b24",
+    "storage_bucket": "gamingo-d8b24.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472785553002:android:e222abfcf94b66b5b82c13",
+        "android_client_info": {
+          "package_name": "com.gamingo.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA7cWUkEgm22sliDUYxVGo3UnKfpawvDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

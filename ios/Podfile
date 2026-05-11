@@ -36,6 +36,13 @@ end
 
 target 'PlayCall' do
   use_expo_modules!(exclude: ['expo'])
+
+  # Firebase Swift pods are integrated as static libraries in this project.
+  # These transitive dependencies need module maps for CocoaPods to compile them.
+  pod 'GoogleUtilities', :modular_headers => true
+  pod 'GoogleDataTransport', :modular_headers => true
+  pod 'nanopb', :modular_headers => true
+
   config = use_native_modules!
 
   use_react_native!(

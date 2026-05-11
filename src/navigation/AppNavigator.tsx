@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 import {
   NavigationContainer,
   DefaultTheme as NavigationDefaultTheme,
+  useNavigationContainerRef,
 } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import BootSplash from 'react-native-bootsplash';
@@ -11,6 +12,7 @@ import BottomSheet from '../components/BottomSheet';
 import { Icon } from '../components/ui';
 import { AppStateProvider } from '../context/AppStateContext';
 import { FavoritesScreen, PracticeScreen } from '../screens';
+import { logScreenView } from '../services/firebase';
 import { theme } from '../theme/theme';
 
 import type { RootTabParamList } from '../types/navigation';
@@ -90,13 +92,30 @@ function getScreenOptions({
 }
 
 function AppNavigator() {
+  const navigationRef = useNavigationContainerRef<RootTabParamList>();
+  const routeNameRef = React.useRef<string | undefined>(undefined);
+
+  const trackCurrentScreen = React.useCallback(() => {
+    const currentRouteName = navigationRef.getCurrentRoute()?.name;
+
+    if (!currentRouteName || routeNameRef.current === currentRouteName) {
+      return;
+    }
+
+    routeNameRef.current = currentRouteName;
+    logScreenView(currentRouteName).catch(() => undefined);
+  }, [navigationRef]);
+
   return (
     <AppStateProvider>
       <>
         <NavigationContainer
           onReady={() => {
             BootSplash.hide({ fade: true });
+            trackCurrentScreen();
           }}
+          onStateChange={trackCurrentScreen}
+          ref={navigationRef}
           theme={navigationTheme}
         >
           <Tab.Navigator
