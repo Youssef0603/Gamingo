@@ -43,6 +43,14 @@ async function stopNativeSpeechSafely() {
   await Tts.stop(false);
 }
 
+async function configureIosSpeechPlayback() {
+  if (Platform.OS !== 'ios') {
+    return;
+  }
+
+  await Tts.setIgnoreSilentSwitch('ignore');
+}
+
 export function createPlatformTextToSpeechAdapter(): TextToSpeechAdapter {
   return {
     isAvailable() {
@@ -50,6 +58,7 @@ export function createPlatformTextToSpeechAdapter(): TextToSpeechAdapter {
     },
     async speak({ language, text }: TextToSpeechRequest) {
       await Tts.getInitStatus();
+      await configureIosSpeechPlayback();
 
       if (language) {
         try {
