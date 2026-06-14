@@ -87,3 +87,34 @@ patchFile(
   'Patched expo-modules-core Promise bridge for React Native 0.85.',
   'expo-modules-core Promise bridge already patched.'
 );
+
+patchFile(
+  path.join(
+    __dirname,
+    '..',
+    'node_modules',
+    'expo-modules-core',
+    'android',
+    'build.gradle'
+  ),
+  content =>
+    content.replace(
+      `        def tokenizer = new org.apache.commons.text.StringTokenizer(commandObj.command, " ")
+        def tokens = tokenizer.tokenList
+
+        def workingDirFile = new File(commandObj.directory)
+
+        providers.exec {
+          workingDir(providers.provider { workingDirFile }.get())
+          commandLine(tokens)
+        }.getResult().get().assertNormalExitValue()`,
+      `        def workingDirFile = new File(commandObj.directory)
+
+        providers.exec {
+          workingDir(providers.provider { workingDirFile }.get())
+          commandLine("bash", "-lc", commandObj.command)
+        }.getResult().get().assertNormalExitValue()`
+    ),
+  'Patched expo-modules-core generatePCH command handling for paths with spaces.',
+  'expo-modules-core generatePCH command handling already patched.'
+);

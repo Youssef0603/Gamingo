@@ -4,6 +4,8 @@ apply plugin: "com.facebook.react"
 apply plugin: "com.google.gms.google-services"
 apply plugin: "com.google.firebase.crashlytics"
 
+import java.util.Properties
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -60,6 +62,33 @@ react {
  * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
  */
 def enableProguardInReleaseBuilds = false
+def appVersionCode = (findProperty("LAGLINGO_VERSION_CODE") ?: "14").toInteger()
+def appVersionName = (findProperty("LAGLINGO_VERSION_NAME") ?: "1.0.0").toString()
+def releaseKeystoreProperties = new Properties()
+def releaseKeystorePropertiesFile = rootProject.file("keystore.properties")
+
+if (releaseKeystorePropertiesFile.exists()) {
+    releaseKeystorePropertiesFile.withInputStream { stream ->
+        releaseKeystoreProperties.load(stream)
+    }
+}
+
+def releaseStoreFile =
+    releaseKeystoreProperties.getProperty("storeFile") ?: System.getenv("ANDROID_UPLOAD_STORE_FILE")
+def releaseStorePassword =
+    releaseKeystoreProperties.getProperty("storePassword") ?: System.getenv("ANDROID_UPLOAD_STORE_PASSWORD")
+def releaseKeyAlias =
+    releaseKeystoreProperties.getProperty("keyAlias") ?: System.getenv("ANDROID_UPLOAD_KEY_ALIAS")
+def releaseKeyPassword =
+    releaseKeystoreProperties.getProperty("keyPassword") ?: System.getenv("ANDROID_UPLOAD_KEY_PASSWORD")
+def hasReleaseSigning =
+    [releaseStoreFile, releaseStorePassword, releaseKeyAlias, releaseKeyPassword].every { value ->
+        value != null && !value.trim().isEmpty()
+    }
+def resolvedReleaseStoreFile =
+    hasReleaseSigning
+        ? (new File(releaseStoreFile).isAbsolute() ? file(releaseStoreFile) : rootProject.file(releaseStoreFile))
+        : null
 
 /**
  * The preferred build flavor of JavaScriptCore (JSC)
@@ -79,13 +108,13 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.playcall"
+    namespace "com.laglingo.app"
     defaultConfig {
-        applicationId "com.gamingo.app"
+        applicationId "com.laglingo.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 14
-        versionName "1.0.0"
+        versionCode appVersionCode
+        versionName appVersionName
     }
     signingConfigs {
         debug {
@@ -94,18 +123,40 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        if (hasReleaseSigning) {
+            release {
+                storeFile resolvedReleaseStoreFile
+                storePassword releaseStorePassword
+                keyAlias releaseKeyAlias
+                keyPassword releaseKeyPassword
+            }
+        }
     }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
+            manifestPlaceholders = [usesCleartextTraffic: "true"]
         }
         release {
-            // Caution! In production, you need to generate your own keystore file.
-            // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            if (hasReleaseSigning) {
+                signingConfig signingConfigs.release
+            }
+            manifestPlaceholders = [usesCleartextTraffic: "false"]
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
+    }
+}
+
+gradle.taskGraph.whenReady { taskGraph ->
+    def buildingRelease = taskGraph.allTasks.any { task ->
+        task.name.toLowerCase().contains("release")
+    }
+
+    if (buildingRelease && !hasReleaseSigning) {
+        throw new GradleException(
+            "Release signing is not configured. Add android/keystore.properties or set the ANDROID_UPLOAD_* environment variables before building a release."
+        )
     }
 }
 

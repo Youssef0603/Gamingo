@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>LagLingo</string>
+	<string>Laglingo</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -38,11 +38,11 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>LagLingo uses the microphone so you can practice speaking gaming phrases aloud.</string>
+	<string>Laglingo uses the microphone so you can practice speaking gaming phrases aloud.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>LagLingo may access your photo library when you choose to upload or select images in the app.</string>
+	<string>Laglingo may access your photo library when you choose to upload or select images in the app.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>LagLingo uses speech recognition to compare your spoken phrase with the target callout.</string>
+	<string>Laglingo uses speech recognition to compare your spoken phrase with the target callout.</string>
 	<key>RCTNewArchEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

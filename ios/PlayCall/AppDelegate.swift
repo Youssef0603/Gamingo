@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
 
     factory.startReactNative(
-      withModuleName: "Gamingo",
+      withModuleName: "Laglingo",
       in: window,
       launchOptions: launchOptions
     )

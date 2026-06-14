@@ -15,7 +15,7 @@ import {
 const firebaseOptions = Platform.select({
   android: {
     apiKey: 'AIzaSyCA7cWUkEgm22sliDUYxVGo3UnKfpawvDk',
-    appId: '1:472785553002:android:e222abfcf94b66b5b82c13',
+    appId: '1:472785553002:android:c1c40b13f643db69b82c13',
     databaseURL: 'https://gamingo-d8b24-default-rtdb.firebaseio.com',
     messagingSenderId: '472785553002',
     projectId: 'gamingo-d8b24',
@@ -23,7 +23,7 @@ const firebaseOptions = Platform.select({
   },
   ios: {
     apiKey: 'AIzaSyCblZpu1ncPuimBB-_cZ-Z8wVI2ToMB9OY',
-    appId: '1:472785553002:ios:358280003144c6a8b82c13',
+    appId: '1:472785553002:ios:d2305fc54db19190b82c13',
     databaseURL: 'https://gamingo-d8b24-default-rtdb.firebaseio.com',
     messagingSenderId: '472785553002',
     projectId: 'gamingo-d8b24',
