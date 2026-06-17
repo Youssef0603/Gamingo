@@ -13,6 +13,7 @@ export type IconName =
   | 'heart'
   | 'heart-outline'
   | 'play-circle'
+  | 'play-skip-forward'
   | 'search'
   | 'volume-high';
 

@@ -90,6 +90,17 @@ function RandomPracticeModal({
     }, SUCCESS_ADVANCE_DELAY_MS);
   }, []);
 
+  const handleSkipWord = useCallback(() => {
+    clearAdvanceTimeout();
+
+    Promise.allSettled([
+      stopSpeaking(),
+      stopSpeechRecognition(),
+    ]).finally(() => {
+      setCurrentIndex(previousIndex => previousIndex + 1);
+    });
+  }, [clearAdvanceTimeout]);
+
   if (!visible || phrases.length === 0) {
     return null;
   }
@@ -154,23 +165,39 @@ function RandomPracticeModal({
 
               <View style={styles.sessionBody}>
                 {activePhrase ? (
-                  <SpeakingCard
-                    autoPractice
-                    closeLabel="Stop"
-                    embedded
-                    helperLabel={
-                      languageMetadata[activePhraseTranslations!.helperLanguage].label
-                    }
-                    helperText={activePhraseTranslations!.helperTranslation.text}
-                    isFavorite={isFavorite(activePhrase.id)}
-                    locale={resolvePracticeLocale(
-                      activePhraseTranslations!.learningLanguage,
-                    )}
-                    onClose={handleClose}
-                    onSuccessfulAttempt={handleSuccessfulAttempt}
-                    onToggleFavorite={() => onToggleFavorite(activePhrase.id)}
-                    phrase={activePhraseTranslations!.translation.text}
-                  />
+                  <>
+                    <SpeakingCard
+                      autoPractice
+                      closeLabel="Stop"
+                      embedded
+                      helperLabel={
+                        languageMetadata[activePhraseTranslations!.helperLanguage].label
+                      }
+                      helperText={activePhraseTranslations!.helperTranslation.text}
+                      isFavorite={isFavorite(activePhrase.id)}
+                      locale={resolvePracticeLocale(
+                        activePhraseTranslations!.learningLanguage,
+                      )}
+                      onClose={handleClose}
+                      onSuccessfulAttempt={handleSuccessfulAttempt}
+                      onToggleFavorite={() => onToggleFavorite(activePhrase.id)}
+                      phrase={activePhraseTranslations!.translation.text}
+                    />
+                    <Pressable
+                      onPress={handleSkipWord}
+                      style={({ pressed }) => [
+                        styles.skipAction,
+                        pressed && styles.buttonPressed,
+                      ]}
+                    >
+                      <Text style={styles.skipActionText}>Skip word</Text>
+                      <Icon
+                        color={theme.colors.primary}
+                        name="play-skip-forward"
+                        size={18}
+                      />
+                    </Pressable>
+                  </>
                 ) : (
                   <View style={styles.completeCard}>
                     <View style={styles.completeIcon}>
@@ -270,6 +297,27 @@ const styles = StyleSheet.create({
     paddingBottom: theme.spacing.lg,
     paddingHorizontal: theme.spacing.lg,
     paddingTop: theme.spacing.lg,
+  },
+  skipAction: {
+    alignItems: 'center',
+    alignSelf: 'center',
+    backgroundColor: withAlpha(theme.colors.primary, 0.08),
+    borderColor: withAlpha(theme.colors.primary, 0.18),
+    borderRadius: theme.radius.md,
+    borderWidth: 1,
+    flexDirection: 'row',
+    gap: theme.spacing.sm,
+    justifyContent: 'center',
+    marginTop: theme.spacing.md,
+    minHeight: 44,
+    minWidth: 150,
+    paddingHorizontal: theme.spacing.lg,
+    paddingVertical: 11,
+  },
+  skipActionText: {
+    color: theme.colors.primary,
+    fontSize: 14,
+    fontWeight: '700',
   },
   sessionHeader: {
     alignItems: 'flex-start',
