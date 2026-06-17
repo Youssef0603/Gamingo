@@ -4,6 +4,8 @@ import {
   Pressable,
   FlatList,
   LayoutChangeEvent,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
   SectionList,
   ScrollView,
   StyleSheet,
@@ -11,6 +13,7 @@ import {
   View,
 } from 'react-native';
 import PhraseCard from '../components/PhraseCard';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
 import { categoryMetadata, categoryOrder } from '../data/categories';
@@ -38,6 +41,7 @@ type PhraseSection = {
 
 const INLINE_BANNER_FREQUENCY = 10;
 const RANDOM_PRACTICE_COUNT = 10;
+const SCROLL_TO_TOP_BUTTON_THRESHOLD = 420;
 
 type FilterChipProps = {
   label: string;
@@ -124,10 +128,13 @@ function PracticeScreen() {
   const [randomPracticeSession, setRandomPracticeSession] =
     useState<RandomPracticeSession | null>(null);
   const listRef = useRef<FlatList<Phrase>>(null);
+  const sectionListRef = useRef<SectionList<Phrase, PhraseSection>>(null);
   const categoryScrollRef = useRef<ScrollView>(null);
   const chipLayoutsRef = useRef<
     Partial<Record<CategoryFilter, { width: number; x: number }>>
   >({});
+  const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
+  const isScrollToTopButtonVisibleRef = useRef(false);
 
   const availableCategories = useMemo(() => {
     const availableCategorySet = new Set(phrases.map(item => item.category));
@@ -369,6 +376,41 @@ function PracticeScreen() {
     );
   };
 
+  const handleListScroll = (
+    event: NativeSyntheticEvent<NativeScrollEvent>,
+  ) => {
+    const shouldShowButton =
+      event.nativeEvent.contentOffset.y > SCROLL_TO_TOP_BUTTON_THRESHOLD;
+
+    if (isScrollToTopButtonVisibleRef.current === shouldShowButton) {
+      return;
+    }
+
+    isScrollToTopButtonVisibleRef.current = shouldShowButton;
+    setShowScrollToTopButton(shouldShowButton);
+  };
+
+  const scrollToTop = () => {
+    isScrollToTopButtonVisibleRef.current = false;
+    setShowScrollToTopButton(false);
+
+    if (selectedCategory === 'all') {
+      if (phraseSections.length > 0) {
+        sectionListRef.current?.scrollToLocation({
+          animated: true,
+          itemIndex: 0,
+          sectionIndex: 0,
+          viewOffset: 0,
+          viewPosition: 0,
+        });
+      }
+
+      return;
+    }
+
+    listRef.current?.scrollToOffset({ animated: true, offset: 0 });
+  };
+
   const listHeader = (
     <View style={styles.header}>
       <View style={styles.headingRow}>
@@ -526,10 +568,12 @@ function PracticeScreen() {
     <Screen padded={false} edges={['top']}>
       {selectedCategory === 'all' ? (
         <SectionList
+          ref={sectionListRef}
           contentContainerStyle={styles.content}
           keyExtractor={item => item.id}
           ListEmptyComponent={emptyState}
           ListHeaderComponent={listHeader}
+          onScroll={handleListScroll}
           renderItem={({ item, index }) =>
             renderPhraseItem(
               item,
@@ -537,6 +581,7 @@ function PracticeScreen() {
               sectionedPhraseCount,
             )
           }
+          scrollEventThrottle={16}
           renderSectionHeader={({ section }) => (
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionHeaderText}>{section.title}</Text>
@@ -554,6 +599,7 @@ function PracticeScreen() {
           keyExtractor={item => item.id}
           ListEmptyComponent={emptyState}
           ListHeaderComponent={listHeader}
+          onScroll={handleListScroll}
           onScrollToIndexFailed={({ averageItemLength, index }) => {
             listRef.current?.scrollToOffset({
               animated: true,
@@ -571,9 +617,15 @@ function PracticeScreen() {
           renderItem={({ item, index }) =>
             renderPhraseItem(item, index, filteredPhrases.length)
           }
+          scrollEventThrottle={16}
           showsVerticalScrollIndicator={false}
         />
       )}
+
+      <ScrollToTopButton
+        onPress={scrollToTop}
+        visible={showScrollToTopButton}
+      />
 
       <PracticeModal
         isFavorite={activePhrase ? isFavorite(activePhrase.id) : false}

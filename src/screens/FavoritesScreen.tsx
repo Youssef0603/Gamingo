@@ -4,6 +4,8 @@ import {
   Animated,
   Easing,
   FlatList,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
   Pressable,
   StyleSheet,
   Text,
@@ -11,6 +13,7 @@ import {
 } from 'react-native';
 
 import PhraseCard from '../components/PhraseCard';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
@@ -20,7 +23,10 @@ import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
 import { getPhraseDisplayTranslations } from '../utils/phraseDisplay';
 
+import type { Phrase } from '../types/phrase';
+
 const INLINE_BANNER_FREQUENCY = 10;
+const SCROLL_TO_TOP_BUTTON_THRESHOLD = 420;
 
 function FavoritesScreen() {
   const {
@@ -36,6 +42,9 @@ function FavoritesScreen() {
   } = useAppState();
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
   const emptyStateAnimation = useRef(new Animated.Value(0)).current;
+  const listRef = useRef<FlatList<Phrase>>(null);
+  const isScrollToTopButtonVisibleRef = useRef(false);
+  const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
   const hasSavedLanguages = favoriteLanguageOptions.length > 0;
   const favoriteIds = getFavoriteIdsForLanguage(favoriteFilterLanguage);
   const favoriteLanguageOption = hasSavedLanguages
@@ -111,6 +120,26 @@ function FavoritesScreen() {
     ]);
   };
 
+  const handleListScroll = (
+    event: NativeSyntheticEvent<NativeScrollEvent>,
+  ) => {
+    const shouldShowButton =
+      event.nativeEvent.contentOffset.y > SCROLL_TO_TOP_BUTTON_THRESHOLD;
+
+    if (isScrollToTopButtonVisibleRef.current === shouldShowButton) {
+      return;
+    }
+
+    isScrollToTopButtonVisibleRef.current = shouldShowButton;
+    setShowScrollToTopButton(shouldShowButton);
+  };
+
+  const scrollToTop = () => {
+    isScrollToTopButtonVisibleRef.current = false;
+    setShowScrollToTopButton(false);
+    listRef.current?.scrollToOffset({ animated: true, offset: 0 });
+  };
+
   const renderEmptyState = () => {
     const badgeAnimationStyle = {
       opacity: emptyStateAnimation.interpolate({
@@ -154,6 +183,7 @@ function FavoritesScreen() {
   return (
     <Screen padded={false} edges={['top']}>
       <FlatList
+        ref={listRef}
         contentContainerStyle={[
           styles.content,
           savedPhrases.length === 0 && styles.emptyContent,
@@ -210,6 +240,7 @@ function FavoritesScreen() {
             </View>
           </View>
         }
+        onScroll={handleListScroll}
         renderItem={({ item, index }) => (
           <View>
             <PhraseCard
@@ -233,7 +264,13 @@ function FavoritesScreen() {
             ) : null}
           </View>
         )}
+        scrollEventThrottle={16}
         showsVerticalScrollIndicator={false}
+      />
+
+      <ScrollToTopButton
+        onPress={scrollToTop}
+        visible={showScrollToTopButton}
       />
 
       <PracticeModal
