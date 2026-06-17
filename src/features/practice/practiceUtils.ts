@@ -138,7 +138,7 @@ export function getPracticeFeedbackLabel(score: number) {
     return 'Perfect';
   }
 
-  if (score >= 0.75) {
+  if (score >= 0.7) {
     return 'Close';
   }
 

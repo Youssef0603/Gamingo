@@ -1,6 +1,7 @@
 import {
   calculatePracticeSimilarity,
   evaluatePracticeAttempt,
+  getPracticeFeedbackLabel,
   normalizePracticeText,
 } from '../src/features/practice/practiceUtils';
 
@@ -19,9 +20,14 @@ describe('practiceUtils', () => {
   });
 
   it('returns close for a near match', () => {
-    expect(evaluatePracticeAttempt('Stop feeding', 'stop feed').label).toBe(
+    expect(evaluatePracticeAttempt('Stop feeding', 'stop feedin').label).toBe(
       'Close',
     );
+  });
+
+  it('passes attempts at a seventy percent similarity score', () => {
+    expect(getPracticeFeedbackLabel(0.7)).toBe('Close');
+    expect(getPracticeFeedbackLabel(0.699)).toBe('Try again');
   });
 
   it('returns try again for a weak match', () => {
