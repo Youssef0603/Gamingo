@@ -14,6 +14,11 @@ import { phrases as basePhrases } from '../data/phrases';
 import { trackFavoriteSaveAction } from '../features/ads/mobileAds';
 import { theme } from '../theme/theme';
 import { supportedLanguageCodes } from '../types/language';
+import {
+  getAutoSelectedLanguagePair,
+  getDeviceLocale,
+  getPreferredLearningLanguage,
+} from '../utils/languageSelection';
 
 import type { LanguageCode } from '../types/language';
 import type { Phrase, PhraseCategory, PhraseTranslation } from '../types/phrase';
@@ -298,18 +303,24 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     async function hydrateAppState() {
       try {
         const storedValue = await AsyncStorage.getItem(APP_STATE_STORAGE_KEY);
+        const autoSelectedLanguages = getAutoSelectedLanguagePair(
+          getDeviceLocale(),
+        );
 
         if (!storedValue) {
+          setNativeLanguage(autoSelectedLanguages.nativeLanguage);
+          setSelectedLanguage(autoSelectedLanguages.selectedLanguage);
+          setFavoriteFilterLanguage(autoSelectedLanguages.selectedLanguage);
           return;
         }
 
         const parsedValue: Partial<PersistedAppState> = JSON.parse(storedValue);
         const nextNativeLanguage = isLanguageCode(parsedValue.nativeLanguage)
           ? parsedValue.nativeLanguage
-          : 'en';
+          : autoSelectedLanguages.nativeLanguage;
         const nextSelectedLanguage = isLanguageCode(parsedValue.selectedLanguage)
           ? parsedValue.selectedLanguage
-          : 'en';
+          : getPreferredLearningLanguage(nextNativeLanguage);
         const nextFavoriteFilterLanguage = isLanguageCode(
           parsedValue.favoriteFilterLanguage,
         )
