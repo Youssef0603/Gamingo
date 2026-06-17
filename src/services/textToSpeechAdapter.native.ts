@@ -4,7 +4,7 @@ import Tts from 'react-native-tts';
 import type { TextToSpeechAdapter, TextToSpeechRequest } from './textToSpeech';
 
 const TTS_DEBUG_PREFIX = '[practice][tts]';
-const PRACTICE_TTS_RATE = 0.35;
+const SLOW_TTS_RATE = 0.35;
 type TtsEventName = 'tts-cancel' | 'tts-error' | 'tts-finish';
 type TtsSubscription = { remove: () => void };
 type TtsSpeakOptions = {
@@ -56,7 +56,7 @@ export function createPlatformTextToSpeechAdapter(): TextToSpeechAdapter {
     isAvailable() {
       return true;
     },
-    async speak({ language, text }: TextToSpeechRequest) {
+    async speak({ language, rate, text }: TextToSpeechRequest) {
       await Tts.getInitStatus();
       await configureIosSpeechPlayback();
 
@@ -182,13 +182,16 @@ export function createPlatformTextToSpeechAdapter(): TextToSpeechAdapter {
         ];
 
         Promise.resolve(
-          Tts.speak(text, {
-            rate: PRACTICE_TTS_RATE,
-          } as TtsSpeakOptions as never),
+          Tts.speak(
+            text,
+            (rate === 'slow'
+              ? { rate: SLOW_TTS_RATE }
+              : {}) as TtsSpeakOptions as never,
+          ),
         )
           .then(utteranceId => {
             activeUtteranceId = utteranceId;
-            logTts('speak:start', { language, text, utteranceId });
+            logTts('speak:start', { language, rate, text, utteranceId });
             flushPendingTerminalEvent();
           })
           .catch(error => {

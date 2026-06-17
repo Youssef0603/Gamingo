@@ -7,6 +7,7 @@ type WebSpeechSynthesisUtterance = {
   lang?: string;
   onend: null | (() => void);
   onerror: null | (() => void);
+  rate?: number;
 };
 
 type WebSpeechSynthesis = {
@@ -38,7 +39,7 @@ export function createPlatformTextToSpeechAdapter(): TextToSpeechAdapter {
     isAvailable() {
       return Boolean(getWebSpeechSynthesis());
     },
-    async speak({ language, text }: TextToSpeechRequest) {
+    async speak({ language, rate, text }: TextToSpeechRequest) {
       const speechSynthesis = getWebSpeechSynthesis();
       const SpeechUtterance = (
         globalThis as {
@@ -61,6 +62,7 @@ export function createPlatformTextToSpeechAdapter(): TextToSpeechAdapter {
           utterance.lang = language;
         }
 
+        utterance.rate = rate === 'slow' ? 0.72 : 1;
         utterance.onend = () => resolve();
         utterance.onerror = () => resolve();
 
