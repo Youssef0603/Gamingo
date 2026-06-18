@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.laglingo.app</string>
+	<string>com.gamingo.app</string>
 	<key>PROJECT_ID</key>
 	<string>gamingo-d8b24</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:472785553002:ios:d2305fc54db19190b82c13</string>
+	<string>1:472785553002:ios:358280003144c6a8b82c13</string>
 </dict>
 </plist>
