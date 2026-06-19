@@ -190,7 +190,7 @@ function RandomPracticeModal({
                         pressed && styles.buttonPressed,
                       ]}
                     >
-                      <Text style={styles.skipActionText}>Skip word</Text>
+                      <Text style={styles.skipActionText}>Skip</Text>
                       <Icon
                         color={theme.colors.primary}
                         name="play-skip-forward"
@@ -310,7 +310,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: theme.spacing.md,
     minHeight: 44,
-    minWidth: 150,
+    minWidth: 100,
     paddingHorizontal: theme.spacing.lg,
     paddingVertical: 11,
   },
