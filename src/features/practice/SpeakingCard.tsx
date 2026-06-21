@@ -66,7 +66,6 @@ function SpeakingCard({
   phrase,
 }: SpeakingCardProps) {
   const [practiceFlash, setPracticeFlash] = useState<PracticeFlashState | null>(null);
-  const practiceFlowIdRef = useRef(0);
   const cancellationTokenRef = useRef(cancellationToken);
 
   const handleAttemptComplete = useCallback((nextFeedback: PracticeFeedback) => {
@@ -97,17 +96,21 @@ function SpeakingCard({
   });
 
   const playInitialPhrase = useCallback(async () => {
-    practiceFlowIdRef.current += 1;
     setPracticeFlash(null);
 
     await playPhrase();
   }, [playPhrase]);
 
+  const handleReplayPhrase = useCallback(() => {
+    cancelPractice().finally(() => {
+      playInitialPhrase().catch(() => undefined);
+    });
+  }, [cancelPractice, playInitialPhrase]);
+
   useEffect(() => {
     playInitialPhrase().catch(() => undefined);
 
     return () => {
-      practiceFlowIdRef.current += 1;
       invalidatePractice();
     };
   }, [invalidatePractice, playInitialPhrase]);
@@ -118,12 +121,10 @@ function SpeakingCard({
     }
 
     cancellationTokenRef.current = cancellationToken;
-    practiceFlowIdRef.current += 1;
     invalidatePractice();
   }, [cancellationToken, invalidatePractice]);
 
   const handleClosePress = useCallback(() => {
-    practiceFlowIdRef.current += 1;
     invalidatePractice();
     onClose();
   }, [invalidatePractice, onClose]);
@@ -211,12 +212,7 @@ function SpeakingCard({
 
       <Pressable
         disabled={isBusy}
-        onPress={() => {
-          practiceFlowIdRef.current += 1;
-          cancelPractice().finally(() => {
-            playPhrase().catch(() => undefined);
-          });
-        }}
+        onPress={handleReplayPhrase}
         style={({ pressed }) => [
           styles.speakButton,
           isBusy && styles.buttonDisabled,
@@ -267,9 +263,7 @@ function SpeakingCard({
         </Pressable>
         <Pressable
           disabled={isBusy}
-          onPress={() => {
-            startPracticeFlow().catch(() => undefined);
-          }}
+          onPress={handleReplayPhrase}
           style={({ pressed }) => [
             styles.secondaryAction,
             isBusy && styles.buttonDisabled,
