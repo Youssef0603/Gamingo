@@ -9,6 +9,7 @@ export type CategoryMetadata = {
 export const categoryOrder: PhraseCategory[] = [
   'callouts',
   'instructions',
+  'toxic',
   'strategy',
   'objective',
   'danger',
@@ -16,7 +17,6 @@ export const categoryOrder: PhraseCategory[] = [
   'teamwork',
   'abbreviations',
   'slang',
-  'toxic',
   'antiToxic',
   'custom',
 ];
@@ -68,9 +68,9 @@ export const categoryMetadata: Record<PhraseCategory, CategoryMetadata> = {
     icon: '🗣️',
   },
   toxic: {
-    title: 'Toxic',
-    description: 'Harsh phrases players may hear during tilt or blame.',
-    icon: '☣️',
+    title: 'Cursing',
+    description: 'Profanity, insults, and abusive phrases sourced from the word bank.',
+    icon: '🤬',
   },
   antiToxic: {
     title: 'Anti-Toxic',

@@ -26,7 +26,29 @@ type StaticPhraseMeta = Pick<
 
 type TranslationDictionary = Record<string, PhraseTranslation>;
 
-const phraseMetadata = phraseMetadataSource as StaticPhraseMeta[];
+type WordBankRecommendedAction =
+  | 'block_do_not_translate'
+  | 'block_or_warn'
+  | 'normalize_then_match'
+  | 'translate_normally'
+  | 'translate_with_caution'
+  | 'warn_or_filter';
+
+type WordBankConcept = {
+  id: string;
+  category: string;
+  severity?: string;
+  meaning: string;
+  recommendedAction: WordBankRecommendedAction;
+  terms: Partial<Record<LanguageCode, string | string[]>>;
+};
+
+type WordBankData = {
+  concepts: WordBankConcept[];
+};
+
+const staticPhraseMetadata = phraseMetadataSource as StaticPhraseMeta[];
+const wordBank = require('./wordBank.json') as WordBankData;
 
 const translationSources = {
   ar: arTranslations,
@@ -49,7 +71,7 @@ const translationSources = {
 function validateStaticPhraseData() {
   const knownPhraseIds = new Set<string>();
 
-  phraseMetadata.forEach(({ id }) => {
+  staticPhraseMetadata.forEach(({ id }) => {
     if (knownPhraseIds.has(id)) {
       throw new Error(`Duplicate phrase id found in meta.json: ${id}`);
     }
@@ -67,6 +89,94 @@ function validateStaticPhraseData() {
         );
       }
     });
+  });
+}
+
+function getWordBankPhraseId(conceptId: string) {
+  return `toxic-${conceptId}`;
+}
+
+function getConceptTermValue(
+  termValue: string | string[] | undefined,
+): string | null {
+  if (typeof termValue === 'string') {
+    const trimmedValue = termValue.trim();
+
+    return trimmedValue || null;
+  }
+
+  if (Array.isArray(termValue)) {
+    const firstValue = termValue[0]?.trim();
+
+    return firstValue || null;
+  }
+
+  return null;
+}
+
+function buildWordBankPhraseTranslations(
+  concept: WordBankConcept,
+): Phrase['translations'] {
+  const englishText = getConceptTermValue(concept.terms.en);
+
+  if (!englishText) {
+    throw new Error(
+      `Missing English word bank term for concept "${concept.id}"`,
+    );
+  }
+
+  const translations = {
+    en: {
+      text: englishText,
+      meaning: concept.meaning,
+    },
+  } as Phrase['translations'];
+
+  supportedLanguageCodes.forEach(language => {
+    if (language === 'en') {
+      return;
+    }
+
+    const text = getConceptTermValue(concept.terms[language]);
+
+    if (!text) {
+      return;
+    }
+
+    translations[language] = {
+      text,
+      meaning: concept.meaning,
+    };
+  });
+
+  return translations;
+}
+
+function buildWordBankPhrases() {
+  const seenPhraseIds = new Set(staticPhraseMetadata.map(({ id }) => id));
+
+  return wordBank.concepts.map<Phrase>(concept => {
+    const phraseId = getWordBankPhraseId(concept.id);
+
+    if (seenPhraseIds.has(phraseId)) {
+      throw new Error(`Duplicate generated toxic phrase id: ${phraseId}`);
+    }
+
+    seenPhraseIds.add(phraseId);
+
+    return {
+      id: phraseId,
+      category: 'toxic',
+      isToxic: true,
+      tags: [
+        'wordbank',
+        'cursing',
+        concept.category,
+        concept.recommendedAction,
+        ...(concept.severity ? [concept.severity] : []),
+      ],
+      translations: buildWordBankPhraseTranslations(concept),
+    };
   });
 }
 
@@ -98,7 +208,12 @@ function buildTranslations(phraseId: string): Phrase['translations'] {
 
 validateStaticPhraseData();
 
-export const phrases: Phrase[] = phraseMetadata.map(phrase => ({
-  ...phrase,
-  translations: buildTranslations(phrase.id),
-}));
+const wordBankPhrases = buildWordBankPhrases();
+
+export const phrases: Phrase[] = [
+  ...staticPhraseMetadata.map(phrase => ({
+    ...phrase,
+    translations: buildTranslations(phrase.id),
+  })),
+  ...wordBankPhrases,
+];
