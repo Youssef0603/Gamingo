@@ -44,7 +44,10 @@ function RandomPracticeModal({
   visible,
 }: RandomPracticeModalProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [cancellationToken, setCancellationToken] = useState(0);
+  const [isSkippingWord, setIsSkippingWord] = useState(false);
   const advanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isSkipTransitionActiveRef = useRef(false);
 
   const clearAdvanceTimeout = useCallback(() => {
     if (!advanceTimeoutRef.current) {
@@ -61,7 +64,10 @@ function RandomPracticeModal({
     }
 
     clearAdvanceTimeout();
+    setCancellationToken(0);
     setCurrentIndex(0);
+    setIsSkippingWord(false);
+    isSkipTransitionActiveRef.current = false;
   }, [clearAdvanceTimeout, sessionId, visible]);
 
   useEffect(() => () => {
@@ -70,6 +76,9 @@ function RandomPracticeModal({
 
   const handleClose = useCallback(() => {
     clearAdvanceTimeout();
+    isSkipTransitionActiveRef.current = false;
+    setIsSkippingWord(false);
+    setCancellationToken(previousToken => previousToken + 1);
 
     Promise.allSettled([
       stopSpeaking(),
@@ -91,13 +100,22 @@ function RandomPracticeModal({
   }, []);
 
   const handleSkipWord = useCallback(() => {
+    if (isSkipTransitionActiveRef.current) {
+      return;
+    }
+
+    isSkipTransitionActiveRef.current = true;
+    setIsSkippingWord(true);
     clearAdvanceTimeout();
+    setCancellationToken(previousToken => previousToken + 1);
 
     Promise.allSettled([
       stopSpeaking(),
       stopSpeechRecognition(),
     ]).finally(() => {
       setCurrentIndex(previousIndex => previousIndex + 1);
+      isSkipTransitionActiveRef.current = false;
+      setIsSkippingWord(false);
     });
   }, [clearAdvanceTimeout]);
 
@@ -142,7 +160,7 @@ function RandomPracticeModal({
                         : `Word ${currentIndex + 1} of ${phrases.length}`}
                     </Text>
                     <Text style={styles.sessionSubtitle}>
-                      Listen, say it back, keep the streak moving.
+                      Listen, then practice when you are ready.
                     </Text>
                   </View>
 
@@ -167,7 +185,7 @@ function RandomPracticeModal({
                 {activePhrase ? (
                   <>
                     <SpeakingCard
-                      autoPractice
+                      cancellationToken={cancellationToken}
                       closeLabel="Stop"
                       embedded
                       helperLabel={
@@ -175,6 +193,7 @@ function RandomPracticeModal({
                       }
                       helperText={activePhraseTranslations!.helperTranslation.text}
                       isFavorite={isFavorite(activePhrase.id)}
+                      key={activePhrase.id}
                       locale={resolvePracticeLocale(
                         activePhraseTranslations!.learningLanguage,
                       )}
@@ -184,9 +203,11 @@ function RandomPracticeModal({
                       phrase={activePhraseTranslations!.translation.text}
                     />
                     <Pressable
+                      disabled={isSkippingWord}
                       onPress={handleSkipWord}
                       style={({ pressed }) => [
                         styles.skipAction,
+                        isSkippingWord && styles.buttonDisabled,
                         pressed && styles.buttonPressed,
                       ]}
                     >
@@ -430,6 +451,9 @@ const styles = StyleSheet.create({
   },
   buttonPressed: {
     opacity: 0.85,
+  },
+  buttonDisabled: {
+    opacity: 0.55,
   },
 });
 

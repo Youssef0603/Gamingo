@@ -24,6 +24,22 @@ export function createTextToSpeechService(
   adapter: TextToSpeechAdapter = createPlatformTextToSpeechAdapter(),
 ): TextToSpeechService {
   const playbackCountsByPhrase = new Map<string, number>();
+  let isSpeaking = false;
+  let stopPromise: Promise<void> | null = null;
+
+  const speakWithState = async (request: TextToSpeechRequest) => {
+    if (stopPromise) {
+      await stopPromise;
+    }
+
+    isSpeaking = true;
+
+    try {
+      await adapter.speak(request);
+    } finally {
+      isSpeaking = false;
+    }
+  };
 
   return {
     isAvailable() {
@@ -31,7 +47,7 @@ export function createTextToSpeechService(
     },
     async speak(request) {
       if (request.rate) {
-        await adapter.speak(request);
+        await speakWithState(request);
         return;
       }
 
@@ -41,10 +57,21 @@ export function createTextToSpeechService(
         previousPlaybackCount % 2 === 0 ? 'slow' : 'normal';
 
       playbackCountsByPhrase.set(playbackKey, previousPlaybackCount + 1);
-      await adapter.speak({ ...request, rate });
+      await speakWithState({ ...request, rate });
     },
     async stop() {
-      await adapter.stop();
+      if (!isSpeaking) {
+        return;
+      }
+
+      if (!stopPromise) {
+        stopPromise = adapter.stop().finally(() => {
+          isSpeaking = false;
+          stopPromise = null;
+        });
+      }
+
+      await stopPromise;
     },
   };
 }

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
 
+import { stop as stopSpeechRecognition, stopSpeaking } from '../../services';
 import { theme, withAlpha } from '../../theme/theme';
 import { languageMetadata } from '../../types/language';
 import { getPhraseDisplayTranslations } from '../../utils/phraseDisplay';
@@ -28,6 +29,15 @@ function PracticeModal({
   onClose,
   onToggleFavorite,
 }: PracticeModalProps) {
+  const handleClose = useCallback(() => {
+    Promise.allSettled([
+      stopSpeaking(),
+      stopSpeechRecognition(),
+    ]).finally(() => {
+      onClose();
+    });
+  }, [onClose]);
+
   if (!phrase) {
     return null;
   }
@@ -43,20 +53,21 @@ function PracticeModal({
   return (
     <Modal
       animationType="fade"
-      onRequestClose={onClose}
+      onRequestClose={handleClose}
       transparent
       visible={visible}
     >
       <View style={styles.overlay}>
-        <Pressable onPress={onClose} style={styles.backdrop} />
+        <Pressable onPress={handleClose} style={styles.backdrop} />
 
         <View style={styles.cardWrap}>
           <SpeakingCard
             helperLabel={helperLabel}
             helperText={helperTranslation.text}
             isFavorite={isFavorite}
+            key={phrase.id}
             locale={resolvePracticeLocale(learningLanguage)}
-            onClose={onClose}
+            onClose={handleClose}
             onToggleFavorite={onToggleFavorite}
             phrase={translation.text}
           />

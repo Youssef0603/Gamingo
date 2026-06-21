@@ -3,14 +3,14 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { Icon } from '../../components/ui';
 import { trackPositiveReviewSignal } from '../reviews/appReview';
-import { playSuccessSound, stopSpeaking } from '../../services';
+import { playSuccessSound } from '../../services';
 import { theme, withAlpha } from '../../theme/theme';
 import { usePractice } from './usePractice';
 
 import type { PracticeFeedback } from './usePractice';
 
 type SpeakingCardProps = {
-  autoPractice?: boolean;
+  cancellationToken?: number;
   closeLabel?: string;
   embedded?: boolean;
   helperLabel: string;
@@ -53,7 +53,7 @@ function getPracticeFlash(feedback: PracticeFeedback): PracticeFlashState {
 }
 
 function SpeakingCard({
-  autoPractice = false,
+  cancellationToken = 0,
   closeLabel = 'Close',
   embedded = false,
   helperLabel,
@@ -67,6 +67,7 @@ function SpeakingCard({
 }: SpeakingCardProps) {
   const [practiceFlash, setPracticeFlash] = useState<PracticeFlashState | null>(null);
   const practiceFlowIdRef = useRef(0);
+  const cancellationTokenRef = useRef(cancellationToken);
 
   const handleAttemptComplete = useCallback((nextFeedback: PracticeFeedback) => {
     const nextPracticeFlash = getPracticeFlash(nextFeedback);
@@ -85,37 +86,47 @@ function SpeakingCard({
     isListening,
     isPlaying,
     isRequestingPermission,
+    cancelPractice,
+    invalidatePractice,
     playPhrase,
     speakPhrase,
   } = usePractice({
-    autoPlay: false,
     locale,
     onAttemptComplete: handleAttemptComplete,
     phrase,
   });
 
-  const startPracticeFlow = useCallback(async () => {
-    const flowId = practiceFlowIdRef.current + 1;
-
-    practiceFlowIdRef.current = flowId;
+  const playInitialPhrase = useCallback(async () => {
+    practiceFlowIdRef.current += 1;
     setPracticeFlash(null);
 
     await playPhrase();
-
-    if (!autoPractice || flowId !== practiceFlowIdRef.current) {
-      return;
-    }
-
-    await speakPhrase();
-  }, [autoPractice, playPhrase, speakPhrase]);
+  }, [playPhrase]);
 
   useEffect(() => {
-    startPracticeFlow().catch(() => undefined);
+    playInitialPhrase().catch(() => undefined);
 
     return () => {
       practiceFlowIdRef.current += 1;
+      invalidatePractice();
     };
-  }, [startPracticeFlow]);
+  }, [invalidatePractice, playInitialPhrase]);
+
+  useEffect(() => {
+    if (cancellationToken === cancellationTokenRef.current) {
+      return;
+    }
+
+    cancellationTokenRef.current = cancellationToken;
+    practiceFlowIdRef.current += 1;
+    invalidatePractice();
+  }, [cancellationToken, invalidatePractice]);
+
+  const handleClosePress = useCallback(() => {
+    practiceFlowIdRef.current += 1;
+    invalidatePractice();
+    onClose();
+  }, [invalidatePractice, onClose]);
 
   const feedbackMutedColor = practiceFlash
     ? getPracticeMutedTone(practiceFlash.kind)
@@ -170,7 +181,7 @@ function SpeakingCard({
 
       <View style={styles.headerRow}>
         <Pressable
-          onPress={onClose}
+          onPress={handleClosePress}
           style={({ pressed }) => [
             styles.secondaryButton,
             pressed && styles.buttonPressed,
@@ -201,11 +212,10 @@ function SpeakingCard({
       <Pressable
         disabled={isBusy}
         onPress={() => {
-          stopSpeaking()
-            .catch(() => undefined)
-            .finally(() => {
-              playPhrase().catch(() => undefined);
-            });
+          practiceFlowIdRef.current += 1;
+          cancelPractice().finally(() => {
+            playPhrase().catch(() => undefined);
+          });
         }}
         style={({ pressed }) => [
           styles.speakButton,

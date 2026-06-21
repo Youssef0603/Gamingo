@@ -273,6 +273,10 @@ export function createSpeechRecognitionService(
       }
     },
     async stop() {
+      if (state === 'idle') {
+        return;
+      }
+
       await adapter.stop();
       setState('idle');
     },

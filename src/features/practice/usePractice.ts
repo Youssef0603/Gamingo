@@ -40,7 +40,6 @@ export type PracticeFeedback = PracticeEvaluation & {
 };
 
 type UsePracticeOptions = {
-  autoPlay?: boolean;
   dependencies?: Partial<PracticeDependencies>;
   locale?: string;
   onAttemptComplete?: (feedback: PracticeFeedback) => void;
@@ -150,7 +149,6 @@ function countNormalizedTokens(value: string) {
 }
 
 export function usePractice({
-  autoPlay = true,
   dependencies,
   locale,
   onAttemptComplete,
@@ -158,6 +156,8 @@ export function usePractice({
 }: UsePracticeOptions) {
   const defaultDependenciesRef = useRef<PracticeDependencies | null>(null);
   const onAttemptCompleteRef = useRef<typeof onAttemptComplete>(onAttemptComplete);
+  const playbackRequestIdRef = useRef(0);
+  const attemptRequestIdRef = useRef(0);
 
   if (!defaultDependenciesRef.current) {
     defaultDependenciesRef.current = createDefaultPracticeDependencies();
@@ -248,24 +248,51 @@ export function usePractice({
   }, [handleAttemptComplete, phrase]);
 
   const playPhrase = useCallback(async () => {
+    const playbackRequestId = playbackRequestIdRef.current + 1;
+
+    playbackRequestIdRef.current = playbackRequestId;
     logPractice('play:start', { locale, phrase });
     setError(null);
     setIsPlaying(true);
 
     try {
       await speechRecognitionRef.current.stop();
+
+      if (playbackRequestId !== playbackRequestIdRef.current) {
+        return;
+      }
+
       await textToSpeechRef.current.stop();
+
+      if (playbackRequestId !== playbackRequestIdRef.current) {
+        return;
+      }
+
       await textToSpeechRef.current.speak({ language: locale, text: phrase });
+
+      if (playbackRequestId !== playbackRequestIdRef.current) {
+        return;
+      }
+
       logPractice('play:complete', { locale, phrase });
     } catch (nextError) {
+      if (playbackRequestId !== playbackRequestIdRef.current) {
+        return;
+      }
+
       logPractice('play:error', nextError);
       setError(getPracticeErrorMessage(nextError));
     } finally {
-      setIsPlaying(false);
+      if (playbackRequestId === playbackRequestIdRef.current) {
+        setIsPlaying(false);
+      }
     }
   }, [locale, phrase]);
 
   const speakPhrase = useCallback(async () => {
+    const attemptRequestId = attemptRequestIdRef.current + 1;
+
+    attemptRequestIdRef.current = attemptRequestId;
     logPractice('attempt:start', { locale, phrase });
     setError(null);
     setFeedback(null);
@@ -276,13 +303,32 @@ export function usePractice({
     const expectedTokenCount = countNormalizedTokens(phrase);
 
     await textToSpeechRef.current.stop();
+
+    if (attemptRequestId !== attemptRequestIdRef.current) {
+      return;
+    }
+
     await speechRecognitionRef.current.stop();
+
+    if (attemptRequestId !== attemptRequestIdRef.current) {
+      return;
+    }
+
     await wait(AUDIO_TRANSITION_DELAY_MS);
+
+    if (attemptRequestId !== attemptRequestIdRef.current) {
+      return;
+    }
 
     return new Promise<void>((resolve, reject) => {
       let settled = false;
       let earlyCommitTimeout: ReturnType<typeof setTimeout> | null = null;
       let latestTranscript = '';
+      let unsubscribeError = () => undefined;
+      let unsubscribeResult = () => undefined;
+
+      const isAttemptActive = () =>
+        attemptRequestId === attemptRequestIdRef.current;
 
       const clearEarlyCommitTimeout = () => {
         if (!earlyCommitTimeout) {
@@ -300,7 +346,12 @@ export function usePractice({
       };
 
       const finalizeTranscript = (transcript: string) => {
-        if (settled) {
+        if (settled || !isAttemptActive()) {
+          if (!settled) {
+            settled = true;
+            cleanup();
+            resolve();
+          }
           return;
         }
 
@@ -329,7 +380,12 @@ export function usePractice({
       };
 
       const finalizeError = (nextError: unknown) => {
-        if (settled) {
+        if (settled || !isAttemptActive()) {
+          if (!settled) {
+            settled = true;
+            cleanup();
+            resolve();
+          }
           return;
         }
 
@@ -339,14 +395,14 @@ export function usePractice({
         reject(nextError);
       };
 
-      const unsubscribeError = speechRecognitionRef.current.onError(nextError => {
+      unsubscribeError = speechRecognitionRef.current.onError(nextError => {
         finalizeError(nextError);
       });
-      const unsubscribeResult = speechRecognitionRef.current.onResult(result => {
+      unsubscribeResult = speechRecognitionRef.current.onResult(result => {
         logPractice('attempt:result', result);
         const transcript = result.transcript.trim();
 
-        if (!transcript || settled) {
+        if (!transcript || settled || !isAttemptActive()) {
           return;
         }
 
@@ -387,6 +443,13 @@ export function usePractice({
         }, EARLY_RESULT_COMMIT_DELAY_MS);
       });
 
+      if (!isAttemptActive()) {
+        settled = true;
+        cleanup();
+        resolve();
+        return;
+      }
+
       speechRecognitionRef.current
         .start({
           contextualStrings: [phrase],
@@ -396,6 +459,21 @@ export function usePractice({
         .catch(finalizeError);
     });
   }, [applyPracticeError, handleAttemptComplete, locale, phrase]);
+
+  const invalidatePractice = useCallback(() => {
+    playbackRequestIdRef.current += 1;
+    attemptRequestIdRef.current += 1;
+    setIsPlaying(false);
+  }, []);
+
+  const cancelPractice = useCallback(async () => {
+    invalidatePractice();
+
+    await Promise.allSettled([
+      textToSpeechRef.current.stop(),
+      speechRecognitionRef.current.stop(),
+    ]);
+  }, [invalidatePractice]);
 
   useEffect(() => {
     const speechRecognition = speechRecognitionRef.current;
@@ -412,60 +490,25 @@ export function usePractice({
     );
 
     return () => {
+      invalidatePractice();
       unsubscribePermission();
       unsubscribeState();
     };
-  }, []);
+  }, [invalidatePractice]);
 
   useEffect(() => {
-    const speechRecognition = speechRecognitionRef.current;
-    const textToSpeech = textToSpeechRef.current;
-    let active = true;
-
+    invalidatePractice();
     setFeedback(null);
     setHeardText('');
     setError(null);
-
-    if (autoPlay) {
-      (async () => {
-        setIsPlaying(true);
-
-        try {
-          await speechRecognition.stop();
-          await textToSpeech.stop();
-
-          if (!active) {
-            return;
-          }
-
-          await textToSpeech.speak({ language: locale, text: phrase });
-        } catch (nextError) {
-          if (active) {
-            setError(getPracticeErrorMessage(nextError));
-          }
-        } finally {
-          if (active) {
-            setIsPlaying(false);
-          }
-        }
-      })().catch(() => {
-        if (active) {
-          setIsPlaying(false);
-        }
-      });
-    }
-
-    return () => {
-      active = false;
-      textToSpeech.stop().catch(() => undefined);
-      speechRecognition.stop().catch(() => undefined);
-    };
-  }, [autoPlay, locale, phrase]);
+  }, [invalidatePractice, locale, phrase]);
 
   return {
+    cancelPractice,
     error,
     feedback,
     heardText,
+    invalidatePractice,
     isListening,
     isPlaying,
     isRequestingPermission,

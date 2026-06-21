@@ -1,8 +1,8 @@
 import {
   SpeechRecognitionError,
-  createSpeechRecognitionService,
+  speechRecognitionService,
 } from '../../services/speechRecognition';
-import { createTextToSpeechService } from '../../services/textToSpeech';
+import { textToSpeechService } from '../../services/textToSpeech';
 
 import type {
   SpeechRecognitionStartOptions,
@@ -19,8 +19,8 @@ type TranscriptFactory = string | (() => string | Promise<string>);
 
 export function createDefaultPracticeDependencies(): PracticeDependencies {
   return {
-    speechRecognition: createSpeechRecognitionService(),
-    textToSpeech: createTextToSpeechService(),
+    speechRecognition: speechRecognitionService,
+    textToSpeech: textToSpeechService,
   };
 }
 

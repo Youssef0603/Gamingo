@@ -45,7 +45,9 @@ jest.mock('../src/services', () => ({
 }));
 jest.mock('../src/features/practice/usePractice', () => ({
   usePractice: jest.fn(() => ({
+    cancelPractice: jest.fn(() => Promise.resolve()),
     error: null,
+    invalidatePractice: jest.fn(),
     isListening: false,
     isPlaying: false,
     isRequestingPermission: false,
@@ -61,22 +63,20 @@ jest.mock('react-native-bootsplash', () => ({
   hide: jest.fn(),
 }));
 jest.mock('react-native-gesture-handler', () => {
-  const React = require('react');
-
   return {
     GestureHandlerRootView: ({ children }: { children: React.ReactNode }) =>
       children,
   };
 });
 jest.mock('@gorhom/bottom-sheet', () => {
-  const React = require('react');
+  const MockReact = require('react');
 
   return {
     BottomSheetBackdrop: () => null,
     BottomSheetHandle: () => null,
-    BottomSheetModal: React.forwardRef(
+    BottomSheetModal: MockReact.forwardRef(
       ({ children }: { children: React.ReactNode }, ref: React.Ref<unknown>) => {
-        React.useImperativeHandle(ref, () => ({
+        MockReact.useImperativeHandle(ref, () => ({
           dismiss: jest.fn(),
           present: jest.fn(),
         }));

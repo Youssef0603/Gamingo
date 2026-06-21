@@ -9,7 +9,7 @@ import {
 import mobileAds from 'react-native-google-mobile-ads';
 
 // Flip this to true when you want to test ads during development.
-const SHOW_ADS_IN_DEVELOPMENT = true;
+const SHOW_ADS_IN_DEVELOPMENT = false;
 
 export const ADS_ENABLED = !__DEV__ || SHOW_ADS_IN_DEVELOPMENT;
 

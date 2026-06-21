@@ -35,11 +35,6 @@ function addTtsListener(
 }
 
 async function stopNativeSpeechSafely() {
-  if (Platform.OS === 'ios') {
-    logTts('stop:skipped-ios');
-    return;
-  }
-
   await Tts.stop(false);
 }
 
@@ -66,10 +61,6 @@ export function createPlatformTextToSpeechAdapter(): TextToSpeechAdapter {
         } catch {
           // Fall back to the system default voice when the requested locale is unavailable.
         }
-      }
-
-      if (Platform.OS !== 'ios') {
-        await stopNativeSpeechSafely();
       }
 
       await new Promise<void>((resolve, reject) => {

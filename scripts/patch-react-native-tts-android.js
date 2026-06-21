@@ -25,6 +25,42 @@ patchFile(
     '..',
     'node_modules',
     'react-native-tts',
+    'ios',
+    'TextToSpeech',
+    'TextToSpeech.m'
+  ),
+  content =>
+    content
+      .replace(
+        'RCT_EXPORT_METHOD(stop:(BOOL *)onWordBoundary resolve:(RCTPromiseResolveBlock)resolve reject:(__unused RCTPromiseRejectBlock)reject)',
+        'RCT_EXPORT_METHOD(stop:(BOOL)onWordBoundary resolve:(RCTPromiseResolveBlock)resolve reject:(__unused RCTPromiseRejectBlock)reject)'
+      )
+      .replace(
+        'RCT_EXPORT_METHOD(pause:(BOOL *)onWordBoundary resolve:(RCTPromiseResolveBlock)resolve reject:(__unused RCTPromiseRejectBlock)reject)',
+        'RCT_EXPORT_METHOD(pause:(BOOL)onWordBoundary resolve:(RCTPromiseResolveBlock)resolve reject:(__unused RCTPromiseRejectBlock)reject)'
+      )
+      .replaceAll(
+        'if(onWordBoundary != NULL && onWordBoundary) {',
+        'if(onWordBoundary) {'
+      )
+      .replace(
+        'RCT_EXPORT_METHOD(setDucking:(BOOL *)ducking',
+        'RCT_EXPORT_METHOD(setDucking:(BOOL)ducking'
+      )
+      .replace(
+        'skipTransform:(BOOL *)skipTransform // not used, compatibility with Android native module signature',
+        'skipTransform:(BOOL)skipTransform // not used, compatibility with Android native module signature'
+      ),
+  'Patched react-native-tts iOS bridge boolean signatures.',
+  'react-native-tts iOS bridge boolean signatures already patched.'
+);
+
+patchFile(
+  path.join(
+    __dirname,
+    '..',
+    'node_modules',
+    'react-native-tts',
     'android',
     'build.gradle'
   ),
