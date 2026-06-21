@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { Icon } from '../../components/ui';
+import { trackPositiveReviewSignal } from '../reviews/appReview';
 import { playSuccessSound, stopSpeaking } from '../../services';
 import { theme, withAlpha } from '../../theme/theme';
 import { usePractice } from './usePractice';
@@ -74,6 +75,7 @@ function SpeakingCard({
 
     if (nextPracticeFlash.kind === 'success') {
       playSuccessSound().catch(() => undefined);
+      trackPositiveReviewSignal();
       onSuccessfulAttempt?.(nextFeedback);
     }
   }, [onSuccessfulAttempt]);

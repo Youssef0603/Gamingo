@@ -11,6 +11,7 @@ import BootSplash from 'react-native-bootsplash';
 import BottomSheet from '../components/BottomSheet';
 import { Icon } from '../components/ui';
 import { AppStateProvider } from '../context/AppStateContext';
+import { scheduleFirstOpenReviewPrompt } from '../features/reviews/appReview';
 import { FavoritesScreen, PracticeScreen } from '../screens';
 import { logScreenView } from '../services/firebase';
 import { theme } from '../theme/theme';
@@ -112,6 +113,7 @@ function AppNavigator() {
         <NavigationContainer
           onReady={() => {
             BootSplash.hide({ fade: true });
+            scheduleFirstOpenReviewPrompt();
             trackCurrentScreen();
           }}
           onStateChange={trackCurrentScreen}
