@@ -713,7 +713,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   randomPracticeCardPressed: {
-    opacity: 0.88,
+    transform: [{ scale: 0.99 }],
   },
   randomPracticeIconWrap: {
     alignItems: 'center',
@@ -768,7 +768,7 @@ const styles = StyleSheet.create({
     marginBottom: 1,
   },
   languageTriggerPressed: {
-    opacity: 0.9,
+    transform: [{ scale: 0.99 }],
   },
   languageTriggerValue: {
     color: theme.colors.text,
@@ -795,7 +795,7 @@ const styles = StyleSheet.create({
     borderColor: theme.colors.primary,
   },
   chipPressed: {
-    opacity: 0.85,
+    transform: [{ scale: 0.97 }],
   },
   chipText: {
     color: theme.colors.text,
@@ -817,7 +817,7 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
   lookupTogglePressed: {
-    opacity: 0.85,
+    transform: [{ scale: 0.97 }],
   },
   lookupPlus: {
     color: theme.colors.primary,

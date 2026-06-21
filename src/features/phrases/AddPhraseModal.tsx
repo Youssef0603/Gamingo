@@ -574,7 +574,7 @@ const styles = StyleSheet.create({
     width: 32,
   },
   buttonPressed: {
-    opacity: 0.85,
+    transform: [{ scale: 0.98 }],
   },
   lookupHint: {
     ...theme.typography.caption,

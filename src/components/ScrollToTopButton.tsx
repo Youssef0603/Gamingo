@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
     ...theme.shadows.card,
   },
   buttonPressed: {
-    opacity: 0.88,
     transform: [{ scale: 0.97 }],
   },
 });

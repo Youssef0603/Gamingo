@@ -367,7 +367,7 @@ const styles = StyleSheet.create({
     marginBottom: 2,
   },
   languageTriggerPressed: {
-    opacity: 0.9,
+    transform: [{ scale: 0.99 }],
   },
   languageTriggerValue: {
     color: theme.colors.text,

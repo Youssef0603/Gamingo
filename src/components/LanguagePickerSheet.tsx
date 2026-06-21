@@ -12,7 +12,7 @@ import { FlatList } from 'react-native-gesture-handler';
 
 import { bottomSheetModalRef } from './BottomSheet';
 import { Icon } from './ui';
-import { theme } from '../theme/theme';
+import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata, supportedLanguageCodes } from '../types/language';
 
 import type { LanguageCode } from '../types/language';
@@ -195,7 +195,8 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   optionPressed: {
-    opacity: 0.85,
+    backgroundColor: withAlpha(theme.colors.primary, 0.04),
+    transform: [{ scale: 0.99 }],
   },
   optionSelected: {
     borderColor: theme.colors.primary,

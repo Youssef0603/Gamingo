@@ -39,10 +39,7 @@ function PhraseCard({
     item.category === 'custom' && Boolean(item.customLanguages);
 
   return (
-    <Pressable
-      onPress={onPress}
-      style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}
-    >
+    <Pressable onPress={onPress} style={styles.card}>
       <View style={styles.topRow}>
         <View style={styles.textWrap}>
           <Text style={styles.phrase}>{translation.text}</Text>
@@ -115,9 +112,6 @@ const styles = StyleSheet.create({
     padding: theme.spacing.lg,
     ...theme.shadows.card,
   },
-  cardPressed: {
-    backgroundColor: withAlpha(theme.colors.primary, 0.03),
-  },
   topRow: {
     alignItems: 'flex-start',
     flexDirection: 'row',
@@ -164,7 +158,7 @@ const styles = StyleSheet.create({
     borderColor: withAlpha(theme.colors.accent, 0.24),
   },
   favoriteButtonPressed: {
-    opacity: 0.85,
+    transform: [{ scale: 0.96 }],
   },
   deleteButton: {
     backgroundColor: withAlpha(theme.colors.danger ?? '#D14D4D', 0.08),

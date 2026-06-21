@@ -450,7 +450,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   buttonPressed: {
-    opacity: 0.85,
+    transform: [{ scale: 0.98 }],
   },
   buttonDisabled: {
     opacity: 0.55,
