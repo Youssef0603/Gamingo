@@ -300,25 +300,6 @@ function AddPhraseModal(props: AddPhraseModalProps) {
         sourceLanguage: props.inputLanguage,
         text: trimmedQuery,
       });
-      const detectedSourceLanguage = translationResult.sourceLanguage;
-
-      if (
-        detectedSourceLanguage &&
-        detectedSourceLanguage !== props.inputLanguage
-      ) {
-        setLookupResult(null);
-        setLookupSource(null);
-        setLookupFeedback(
-          `This looks like ${
-            languageMetadata[detectedSourceLanguage].label
-          }, but your native language is set to ${
-            languageMetadata[props.inputLanguage].label
-          }. Switch your native language or enter the word in ${
-            languageMetadata[props.inputLanguage].label
-          }.`,
-        );
-        return;
-      }
 
       showAdBeforeCustomWordAdd(() => {
         const createdPhrase = props.onCreatePhrase(

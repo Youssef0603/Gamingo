@@ -61,4 +61,96 @@ describe('translateApi', () => {
       }),
     ).rejects.toThrow('Translation service daily quota is finished.');
   });
+
+  it('blocks obvious wrong-script text before calling the API', async () => {
+    await expect(
+      translateTextWithDetectedSource({
+        destinationLanguage: 'ru',
+        sourceLanguage: 'en',
+        text: 'مرحبا',
+      }),
+    ).rejects.toThrow('This does not look like English.');
+
+    expect(globalThis.fetch).not.toHaveBeenCalled();
+  });
+
+  it('blocks Latin transliteration for non-Latin source languages', async () => {
+    await expect(
+      translateTextWithDetectedSource({
+        destinationLanguage: 'ru',
+        sourceLanguage: 'ar',
+        text: 'marhaban',
+      }),
+    ).rejects.toThrow('This does not look like Arabic.');
+
+    expect(globalThis.fetch).not.toHaveBeenCalled();
+  });
+
+  it('blocks common Spanish phrases when native language is English', async () => {
+    await expect(
+      translateTextWithDetectedSource({
+        destinationLanguage: 'ru',
+        sourceLanguage: 'en',
+        text: 'hola amigo',
+      }),
+    ).rejects.toThrow('This looks like Spanish');
+
+    expect(globalThis.fetch).not.toHaveBeenCalled();
+  });
+
+  it('blocks English phrases when native language is Spanish', async () => {
+    await expect(
+      translateTextWithDetectedSource({
+        destinationLanguage: 'ru',
+        sourceLanguage: 'es',
+        text: 'hello friend',
+      }),
+    ).rejects.toThrow('This looks like English');
+
+    expect(globalThis.fetch).not.toHaveBeenCalled();
+  });
+
+  it('allows English phrases despite weak local detector noise', async () => {
+    jest.mocked(globalThis.fetch).mockResolvedValue({
+      json: () =>
+        Promise.resolve({
+          quotaFinished: false,
+          responseData: {
+            translatedText: 'привет, друг',
+          },
+          responseStatus: 200,
+        }),
+      ok: true,
+    } as Response);
+
+    await translateTextWithDetectedSource({
+      destinationLanguage: 'ru',
+      sourceLanguage: 'en',
+      text: 'hello my friend',
+    });
+
+    expect(globalThis.fetch).toHaveBeenCalledTimes(1);
+  });
+
+  it('allows accented Latin text for Latin-script source languages', async () => {
+    jest.mocked(globalThis.fetch).mockResolvedValue({
+      json: () =>
+        Promise.resolve({
+          quotaFinished: false,
+          responseData: {
+            translatedText: 'student',
+          },
+          responseStatus: 200,
+        }),
+      ok: true,
+    } as Response);
+
+    await translateTextWithDetectedSource({
+      destinationLanguage: 'en',
+      sourceLanguage: 'fr',
+      text: 'élève',
+    });
+
+    expect(globalThis.fetch).toHaveBeenCalledTimes(1);
+  });
 });
