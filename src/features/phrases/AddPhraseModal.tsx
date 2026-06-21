@@ -220,6 +220,7 @@ function AddPhraseModal(props: AddPhraseModalProps) {
       try {
         const translatedPhrase = await buildTranslatedCustomPhrase({
           destinationLanguage: language,
+          sourceLanguage: props.helperLanguage,
           text: trimmedQuery,
         });
 
@@ -296,6 +297,7 @@ function AddPhraseModal(props: AddPhraseModalProps) {
 
       const translationResult = await translateTextWithDetectedSource({
         destinationLanguage: language,
+        sourceLanguage: props.inputLanguage,
         text: trimmedQuery,
       });
       const detectedSourceLanguage = translationResult.sourceLanguage;

@@ -1,7 +1,7 @@
 import type { LanguageCode } from '../types/language';
 import type { Phrase, PhraseTranslation } from '../types/phrase';
 
-const FREE_TRANSLATE_API_BASE_URL = 'https://ftapi.pythonanywhere.com';
+const MY_MEMORY_API_BASE_URL = 'https://api.mymemory.translated.net';
 const TRANSLATE_API_LANGUAGE_CODE_MAP: Record<LanguageCode, string> = {
   en: 'en',
   fr: 'fr',
@@ -20,33 +20,13 @@ const TRANSLATE_API_LANGUAGE_CODE_MAP: Record<LanguageCode, string> = {
   zh: 'zh-cn',
 };
 
-const TRANSLATE_API_TO_APP_LANGUAGE_CODE: Partial<
-  Record<string, LanguageCode>
-> = {
-  ar: 'ar',
-  de: 'de',
-  en: 'en',
-  es: 'es',
-  fr: 'fr',
-  he: 'en',
-  hi: 'hi',
-  it: 'it',
-  ja: 'ja',
-  ko: 'ko',
-  nl: 'nl',
-  pl: 'pl',
-  pt: 'pt',
-  ru: 'ru',
-  tr: 'tr',
-  'zh-cn': 'zh',
-  'zh-tw': 'zh',
-};
-
-type FreeTranslateResponse = {
-  'destination-language'?: string;
-  'destination-text'?: string;
-  'source-language'?: string;
-  'source-text'?: string;
+type MyMemoryTranslateResponse = {
+  quotaFinished?: boolean;
+  responseData?: {
+    translatedText?: string;
+  };
+  responseDetails?: string;
+  responseStatus?: number;
 };
 
 function toPhraseTranslation(text: string): PhraseTranslation {
@@ -58,16 +38,6 @@ function toPhraseTranslation(text: string): PhraseTranslation {
 
 function toApiLanguageCode(language: LanguageCode) {
   return TRANSLATE_API_LANGUAGE_CODE_MAP[language];
-}
-
-function toAppLanguageCode(language: string | undefined) {
-  if (!language) {
-    return null;
-  }
-
-  return (
-    TRANSLATE_API_TO_APP_LANGUAGE_CODE[language.toLocaleLowerCase()] ?? null
-  );
 }
 
 function slugifyPhraseIdPart(value: string) {
@@ -89,79 +59,100 @@ async function requestTranslation({
   text,
 }: {
   destinationLanguage: LanguageCode;
-  sourceLanguage?: string;
+  sourceLanguage: LanguageCode;
   text: string;
 }) {
+  const trimmedText = text.trim();
+  const sourceApiLanguage = toApiLanguageCode(sourceLanguage);
+  const destinationApiLanguage = toApiLanguageCode(destinationLanguage);
   const params = new URLSearchParams({
-    dl: toApiLanguageCode(destinationLanguage),
-    text,
+    langpair: `${sourceApiLanguage}|${destinationApiLanguage}`,
+    q: trimmedText,
   });
 
-  if (sourceLanguage) {
-    params.set('sl', sourceLanguage);
-  }
-
   const response = await fetch(
-    `${FREE_TRANSLATE_API_BASE_URL}/translate?${params.toString()}`,
+    `${MY_MEMORY_API_BASE_URL}/get?${params.toString()}`,
   );
 
   if (!response.ok) {
     throw new Error('Translation service is unavailable right now.');
   }
 
-  const payload = (await response.json()) as FreeTranslateResponse;
+  const payload = (await response.json()) as MyMemoryTranslateResponse;
+  const translatedText = payload.responseData?.translatedText?.trim();
 
-  if (!payload['destination-text'] || !payload['source-text']) {
+  if (payload.quotaFinished) {
+    throw new Error('Translation service daily quota is finished.');
+  }
+
+  if (payload.responseStatus && payload.responseStatus >= 400) {
+    throw new Error(
+      payload.responseDetails || 'Translation service could not translate this.',
+    );
+  }
+
+  if (!translatedText) {
     throw new Error('Translation service returned an incomplete response.');
   }
 
-  return payload;
+  return {
+    destinationText: translatedText,
+    sourceLanguage,
+    sourceText: trimmedText,
+  };
 }
 
 export async function translateTextWithDetectedSource({
   destinationLanguage,
+  sourceLanguage,
   text,
 }: {
   destinationLanguage: LanguageCode;
+  sourceLanguage: LanguageCode;
   text: string;
 }) {
   const translation = await requestTranslation({
     destinationLanguage,
+    sourceLanguage,
     text,
   });
 
   return {
-    destinationText: translation['destination-text']!.trim(),
-    sourceLanguage: toAppLanguageCode(translation['source-language']),
-    sourceText: translation['source-text']!.trim(),
+    destinationText: translation.destinationText,
+    sourceLanguage: translation.sourceLanguage,
+    sourceText: translation.sourceText,
   };
 }
 
 export async function buildTranslatedCustomPhrase({
   destinationLanguage,
+  sourceLanguage,
   text,
 }: {
   destinationLanguage: LanguageCode;
+  sourceLanguage: LanguageCode;
   text: string;
 }): Promise<Phrase> {
-  const initialTranslation = await requestTranslation({ destinationLanguage, text });
-  const sourceText = initialTranslation['source-text']!.trim();
-  const destinationText = initialTranslation['destination-text']!.trim();
-  const sourceLanguageCode = initialTranslation['source-language'];
-  const sourceAppLanguage = toAppLanguageCode(sourceLanguageCode);
+  const initialTranslation = await requestTranslation({
+    destinationLanguage,
+    sourceLanguage,
+    text,
+  });
+  const sourceText = initialTranslation.sourceText;
+  const destinationText = initialTranslation.destinationText;
 
   const englishText =
     destinationLanguage === 'en'
       ? destinationText
-      : sourceAppLanguage === 'en'
+      : sourceLanguage === 'en'
         ? sourceText
         : (
             await requestTranslation({
               destinationLanguage: 'en',
-              sourceLanguage: sourceLanguageCode,
+              sourceLanguage,
               text: sourceText,
             })
-          )['destination-text']?.trim();
+          ).destinationText;
 
   if (!englishText) {
     throw new Error('Could not build an English helper translation.');
@@ -172,12 +163,8 @@ export async function buildTranslatedCustomPhrase({
     [destinationLanguage]: toPhraseTranslation(destinationText),
   };
 
-  if (sourceAppLanguage) {
-    const sourceLanguage = sourceAppLanguage as LanguageCode;
-
-    if (!translations[sourceLanguage]) {
-      translations[sourceLanguage] = toPhraseTranslation(sourceText);
-    }
+  if (!translations[sourceLanguage]) {
+    translations[sourceLanguage] = toPhraseTranslation(sourceText);
   }
 
   return {
