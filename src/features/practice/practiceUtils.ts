@@ -44,6 +44,53 @@ export function normalizePracticeText(value: string) {
     .trim();
 }
 
+function normalizePracticeTextPreservingMask(value: string) {
+  return value
+    .trim()
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^\p{L}\p{N}\s*]/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function compactPracticeText(value: string) {
+  return normalizePracticeText(value).replace(/\s+/g, '');
+}
+
+function compactMaskedPracticeText(value: string) {
+  return normalizePracticeTextPreservingMask(value).replace(/\s+/g, '');
+}
+
+function isMaskedTranscriptMatch(expectedText: string, spokenText: string) {
+  const maskedSpoken = compactMaskedPracticeText(spokenText);
+
+  if (!maskedSpoken.includes('*')) {
+    return false;
+  }
+
+  const compactExpected = compactPracticeText(expectedText);
+
+  if (!compactExpected || compactExpected.length !== maskedSpoken.length) {
+    return false;
+  }
+
+  for (let index = 0; index < compactExpected.length; index += 1) {
+    const spokenChar = maskedSpoken[index];
+
+    if (spokenChar === '*') {
+      continue;
+    }
+
+    if (spokenChar !== compactExpected[index]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 function levenshteinDistance(source: string, target: string) {
   if (source === target) {
     return 0;
@@ -118,6 +165,13 @@ export function calculatePracticeSimilarity(
     return 0;
   }
 
+  if (
+    normalizedExpected === normalizedSpoken ||
+    isMaskedTranscriptMatch(expectedText, spokenText)
+  ) {
+    return 1;
+  }
+
   const editDistance = levenshteinDistance(
     normalizedExpected,
     normalizedSpoken,
@@ -152,13 +206,14 @@ export function evaluatePracticeAttempt(
   const normalizedExpected = normalizePracticeText(expectedText);
   const normalizedSpoken = normalizePracticeText(spokenText);
   const score = calculatePracticeSimilarity(expectedText, spokenText);
+  const isExactMatch =
+    Boolean(normalizedExpected) &&
+    (normalizedExpected === normalizedSpoken ||
+      isMaskedTranscriptMatch(expectedText, spokenText));
 
   return {
     expectedText,
-    label:
-      normalizedExpected && normalizedExpected === normalizedSpoken
-        ? 'Perfect'
-        : getPracticeFeedbackLabel(score),
+    label: isExactMatch ? 'Perfect' : getPracticeFeedbackLabel(score),
     normalizedExpected,
     normalizedSpoken,
     score,

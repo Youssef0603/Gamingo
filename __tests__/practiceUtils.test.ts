@@ -19,6 +19,13 @@ describe('practiceUtils', () => {
     );
   });
 
+  it('accepts censored transcripts when the mask still matches the phrase', () => {
+    const evaluation = evaluatePracticeAttempt('иди нахуй', 'Иди на х**');
+
+    expect(evaluation.label).toBe('Perfect');
+    expect(evaluation.score).toBe(1);
+  });
+
   it('returns close for a near match', () => {
     expect(evaluatePracticeAttempt('Stop feeding', 'stop feedin').label).toBe(
       'Close',
