@@ -3754,5 +3754,112 @@
       "anti-toxic",
       "positive"
     ]
+  },
+  {
+    "id": "callouts-my-ping-is-high",
+    "category": "callouts",
+    "tags": [
+      "network",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-my-game-froze",
+    "category": "callouts",
+    "tags": [
+      "performance",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-i-crashed",
+    "category": "callouts",
+    "tags": [
+      "network",
+      "crash",
+      "real-case"
+    ]
+  },
+  {
+    "id": "callouts-no-sound",
+    "category": "callouts",
+    "tags": [
+      "audio",
+      "real-case"
+    ]
+  },
+  {
+    "id": "callouts-i-cannot-hear-you",
+    "category": "callouts",
+    "tags": [
+      "comms",
+      "audio",
+      "real-case"
+    ]
+  },
+  {
+    "id": "teamwork-push-after-my-flash",
+    "category": "teamwork",
+    "tags": [
+      "utility",
+      "coordination",
+      "real-case"
+    ]
+  },
+  {
+    "id": "teamwork-wait-for-my-smoke",
+    "category": "teamwork",
+    "tags": [
+      "utility",
+      "coordination",
+      "real-case"
+    ]
+  },
+  {
+    "id": "strategy-save-ult-for-next-fight",
+    "category": "strategy",
+    "tags": [
+      "ultimate",
+      "planning",
+      "real-case"
+    ]
+  },
+  {
+    "id": "strategy-play-for-overtime",
+    "category": "strategy",
+    "tags": [
+      "objective",
+      "planning",
+      "real-case"
+    ]
+  },
+  {
+    "id": "objective-touch-in-overtime",
+    "category": "objective",
+    "tags": [
+      "objective",
+      "urgent",
+      "real-case"
+    ]
+  },
+  {
+    "id": "danger-third-party-coming",
+    "category": "danger",
+    "tags": [
+      "warning",
+      "battle-royale",
+      "real-case"
+    ]
+  },
+  {
+    "id": "antiToxic-mute-and-play",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive",
+      "real-case"
+    ]
   }
 ]

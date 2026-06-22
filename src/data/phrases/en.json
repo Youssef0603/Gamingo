@@ -64,40 +64,40 @@
     "meaning": "Disconnect; losing connection to the match"
   },
   "slang-disconnect": {
-    "text": "Disconnect",
-    "meaning": "A player loses connection to the match"
+    "text": "I disconnected",
+    "meaning": "A real in-match way to say your connection dropped."
   },
   "slang-reconnect": {
-    "text": "Reconnect",
-    "meaning": "A player returns after losing connection"
+    "text": "I'm reconnecting",
+    "meaning": "A real in-match way to say you are returning after a connection drop."
   },
   "slang-lag": {
-    "text": "Lag",
-    "meaning": "Delay or network problems"
+    "text": "I'm lagging",
+    "meaning": "A real in-match way to say delay, stutter, or network problems are affecting you."
   },
   "slang-lag-spike": {
-    "text": "Lag spike",
-    "meaning": "A sudden short network delay"
+    "text": "Huge lag spike",
+    "meaning": "A sudden short burst of severe delay or stutter."
   },
   "slang-ping": {
-    "text": "Ping",
-    "meaning": "A map marker or network delay, depending on context"
+    "text": "My ping is high",
+    "meaning": "A real in-match way to say your network delay is high."
   },
   "slang-fps": {
-    "text": "FPS",
-    "meaning": "First-person shooter, or frames per second when talking about performance"
+    "text": "My FPS dropped",
+    "meaning": "A real in-match way to say your frame rate suddenly went down."
   },
   "slang-server": {
-    "text": "Server",
-    "meaning": "The online system or region hosting the match"
+    "text": "The server is bad",
+    "meaning": "A real in-match complaint about server quality or region problems."
   },
   "slang-hit-reg": {
-    "text": "Hit reg",
-    "meaning": "Hit registration; whether the game correctly counts a shot or attack as a hit"
+    "text": "My shots are not registering",
+    "meaning": "A real in-match way to say the game is not counting hits correctly."
   },
   "slang-desync": {
-    "text": "Desync",
-    "meaning": "When what players see is out of sync with the server or each other"
+    "text": "The game is desynced",
+    "meaning": "A real in-match way to say players are seeing different or delayed game states."
   },
   "slang-op": {
     "text": "OP",
@@ -1918,5 +1918,53 @@
   "antiToxic-we-still-have-time": {
     "text": "We still have time",
     "meaning": "Calm the team when there is time to make a play"
+  },
+  "callouts-my-ping-is-high": {
+    "text": "My ping is high",
+    "meaning": "Tell the team your network delay is high."
+  },
+  "callouts-my-game-froze": {
+    "text": "My game froze",
+    "meaning": "Tell the team your screen stopped responding."
+  },
+  "callouts-i-crashed": {
+    "text": "My game crashed",
+    "meaning": "Tell the team your app closed or crashed."
+  },
+  "callouts-no-sound": {
+    "text": "I have no sound",
+    "meaning": "Tell the team your game audio is missing."
+  },
+  "callouts-i-cannot-hear-you": {
+    "text": "I can't hear you",
+    "meaning": "Tell teammates their voice chat is not audible."
+  },
+  "teamwork-push-after-my-flash": {
+    "text": "Push after my flash",
+    "meaning": "Coordinate an entry right after your flash ability."
+  },
+  "teamwork-wait-for-my-smoke": {
+    "text": "Wait for my smoke",
+    "meaning": "Ask teammates to wait until your smoke blocks vision."
+  },
+  "strategy-save-ult-for-next-fight": {
+    "text": "Save ult for next fight",
+    "meaning": "Plan to keep the ultimate ability for the next engagement."
+  },
+  "strategy-play-for-overtime": {
+    "text": "Play for overtime",
+    "meaning": "Plan around forcing or surviving into overtime."
+  },
+  "objective-touch-in-overtime": {
+    "text": "Touch in overtime",
+    "meaning": "Urgent objective call to keep overtime active."
+  },
+  "danger-third-party-coming": {
+    "text": "Third party coming",
+    "meaning": "Warn the team that another enemy team is joining the fight."
+  },
+  "antiToxic-mute-and-play": {
+    "text": "Mute and keep playing",
+    "meaning": "Calm way to handle toxicity without derailing the match."
   }
 }

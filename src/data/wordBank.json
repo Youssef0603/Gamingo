@@ -1,10 +1,10 @@
 {
   "meta": {
     "name": "gaming_profanity_translation_reference_direct",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "purpose": "One-option direct profanity/toxicity translation reference for checking custom user-added gaming words before automatic translation.",
     "importantNote": "Each concept has exactly one canonical term per language. The terms object uses strings, not arrays. Some gaming toxicity terms are localized rather than literally translated where literal translation would be unnatural.",
-    "sourceFix": "Rebuilt from the previous uploaded multilingual reference and corrected to one direct option per language.",
+    "sourceFix": "Enhanced localization pass: refreshed lookup index, preserved concept IDs, and kept moderation-oriented toxic terms structurally consistent.",
     "structure": {
       "languages": "Locale metadata.",
       "concepts": "Canonical profanity/toxicity concepts with exactly one localized string per language.",

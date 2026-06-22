@@ -1,46 +1,46 @@
 {
   "callouts-gg": {
-    "text": "GG",
+    "text": "Goede match",
     "meaning": "Good game; meestal gezegd aan het einde van een match als sportieve afsluiting."
   },
   "slang-ggwp": {
-    "text": "GGWP",
+    "text": "Goede match, goed gespeeld",
     "meaning": "Good game, well played; sportieve afsluiting na een goede match."
   },
   "callouts-glhf": {
-    "text": "GLHF",
+    "text": "Succes en veel plezier",
     "meaning": "Good luck, have fun; vriendelijke boodschap vóór de match begint."
   },
   "slang-wp": {
-    "text": "WP",
+    "text": "Goed gespeeld",
     "meaning": "Well played; gebruikt om goed spel te prijzen."
   },
   "slang-nt": {
-    "text": "NT",
+    "text": "Goede poging",
     "meaning": "Nice try; steunende reactie na een goede poging die net niet lukte."
   },
   "callouts-nice": {
-    "text": "Nice!",
+    "text": "Netjes!",
     "meaning": "Snelle callout tijdens het spelen: Nice!."
   },
   "teamwork-nice-try": {
-    "text": "Nice try",
+    "text": "Goede poging",
     "meaning": "Teamwork- of aanmoedigingszin: Nice try."
   },
   "teamwork-nice-shot": {
-    "text": "Nice shot",
+    "text": "Mooi schot",
     "meaning": "Teamwork- of aanmoedigingszin: Nice shot."
   },
   "callouts-thanks": {
-    "text": "Thanks",
+    "text": "Bedankt",
     "meaning": "Snelle callout tijdens het spelen: Thanks."
   },
   "callouts-sorry": {
-    "text": "Sorry",
+    "text": "Sorry, mijn fout",
     "meaning": "Snelle callout tijdens het spelen: Sorry."
   },
   "callouts-my-bad": {
-    "text": "My bad",
+    "text": "Mijn fout",
     "meaning": "Snelle callout tijdens het spelen: My bad."
   },
   "callouts-good-job": {
@@ -52,155 +52,155 @@
     "meaning": "Teamwork- of aanmoedigingszin: Goede comms."
   },
   "slang-afk": {
-    "text": "AFK",
+    "text": "Ik ben even weg",
     "meaning": "Away from keyboard; de speler is even niet actief."
   },
   "slang-brb": {
-    "text": "BRB",
+    "text": "Ben zo terug",
     "meaning": "Be right back; de speler is zo terug."
   },
   "slang-dc": {
-    "text": "DC",
+    "text": "Verbinding viel weg",
     "meaning": "Disconnect; de verbinding met de match is weggevallen."
   },
   "slang-disconnect": {
-    "text": "Disconnect",
+    "text": "Ik ben uit de match gegooid",
     "meaning": "Een speler verliest de verbinding met de match."
   },
   "slang-reconnect": {
-    "text": "Reconnect",
+    "text": "Ik verbind opnieuw",
     "meaning": "Een speler komt terug nadat de verbinding wegviel."
   },
   "slang-lag": {
-    "text": "Lag",
+    "text": "Ik heb lag",
     "meaning": "Vertraging of netwerkproblemen waardoor het spel traag reageert."
   },
   "slang-lag-spike": {
-    "text": "Lag spike",
+    "text": "Erge lagpiek",
     "meaning": "Een korte, plotselinge piek in netwerkvertraging."
   },
   "slang-ping": {
-    "text": "Ping",
+    "text": "Mijn ping is hoog",
     "meaning": "Kan een marker op de map zijn of netwerkvertraging, afhankelijk van de context."
   },
   "slang-fps": {
-    "text": "FPS",
+    "text": "Mijn FPS is gezakt",
     "meaning": "First-person shooter, of frames per seconde wanneer het over prestaties gaat."
   },
   "slang-server": {
-    "text": "Server",
+    "text": "De server doet raar",
     "meaning": "Het online systeem of de regio waarop de match draait."
   },
   "slang-hit-reg": {
-    "text": "Hit reg",
+    "text": "Mijn schoten registreren niet",
     "meaning": "Hit registration; of het spel een schot of aanval correct als hit telt."
   },
   "slang-desync": {
-    "text": "Desync",
+    "text": "De game loopt niet synchroon",
     "meaning": "Wanneer wat spelers zien niet synchroon loopt met de server of met elkaar."
   },
   "slang-op": {
-    "text": "OP",
+    "text": "Dat is te sterk",
     "meaning": "Overpowered; te sterk vergeleken met andere opties."
   },
   "slang-meta": {
-    "text": "Meta",
+    "text": "Dit is nu de meta",
     "meaning": "De op dat moment sterkste of populairste strategie, character, weapon of build."
   },
   "slang-nerf": {
-    "text": "Nerf",
+    "text": "Dat is generfd",
     "meaning": "Iets zwakker maken via een game-update."
   },
   "slang-buff": {
-    "text": "Buff",
+    "text": "Dat is gebufft",
     "meaning": "Iets sterker maken via een game-update."
   },
   "slang-noob": {
-    "text": "Noob",
+    "text": "Beginnende speler",
     "meaning": "Nieuwe of onervaren speler; kan beledigend zijn."
   },
   "slang-pro": {
-    "text": "Pro",
+    "text": "Pro-speler",
     "meaning": "Een zeer vaardige of professioneel spelende speler."
   },
   "slang-bot": {
-    "text": "Bot",
+    "text": "Hij speelt als een bot",
     "meaning": "Een AI-gestuurd personage, of een belediging voor iemand die slecht speelt."
   },
   "slang-smurf": {
-    "text": "Smurf",
+    "text": "Smurf-account",
     "meaning": "Een sterke speler die op een account met lagere rank speelt."
   },
   "slang-camper": {
-    "text": "Camper",
+    "text": "Hij zit te campen",
     "meaning": "Een speler die op één plek wacht om kills te krijgen."
   },
   "slang-tryhard": {
-    "text": "Tryhard",
+    "text": "Hij tryhardt",
     "meaning": "Iemand die heel serieus speelt; soms als belediging gebruikt."
   },
   "slang-sweat": {
-    "text": "Sweat",
+    "text": "Zweetspeler",
     "meaning": "Een speler die heel hard probeert te winnen."
   },
   "slang-tilt": {
-    "text": "Tilt",
+    "text": "Ik ben tilted",
     "meaning": "Frustratie waardoor iemand slechter gaat spelen."
   },
   "slang-toxic": {
-    "text": "Toxic",
+    "text": "Toxisch gedrag",
     "meaning": "Onbeleefd, agressief of schadelijk gedrag in chat of gameplay."
   },
   "slang-salty": {
-    "text": "Salty",
+    "text": "Zuur na verlies",
     "meaning": "Boos of geïrriteerd na verliezen of outplayed worden."
   },
   "slang-rage-quit": {
-    "text": "Rage quit",
+    "text": "Uit woede geleavd",
     "meaning": "De game verlaten uit woede."
   },
   "slang-pvp": {
-    "text": "PvP",
+    "text": "Speler tegen speler",
     "meaning": "Player versus player; spelers vechten tegen andere spelers."
   },
   "slang-pve": {
-    "text": "PvE",
+    "text": "Speler tegen omgeving",
     "meaning": "Player versus environment; spelen tegen AI-vijanden of game-systemen."
   },
   "slang-ranked": {
-    "text": "Ranked",
+    "text": "Ranked-modus",
     "meaning": "Competitieve modus die je rank beïnvloedt."
   },
   "slang-casual": {
-    "text": "Casual",
+    "text": "Casual modus",
     "meaning": "Niet-ranked modus voor relaxter spelen."
   },
   "slang-mmr": {
-    "text": "MMR",
+    "text": "Matchmaking-rating",
     "meaning": "Matchmaking rating; verborgen of zichtbare skill-rating voor eerlijkere matches."
   },
   "slang-elo": {
-    "text": "Elo",
+    "text": "Skillrating",
     "meaning": "Ratingsysteem of algemene term voor competitieve skill-rating."
   },
   "slang-kd": {
-    "text": "K/D",
+    "text": "Kill/death-verhouding",
     "meaning": "Kill/death ratio; kills vergeleken met deaths."
   },
   "slang-kda": {
-    "text": "KDA",
+    "text": "Kills, deaths en assists",
     "meaning": "Kills, deaths en assists; veelgebruikte prestatiestatistiek."
   },
   "slang-mvp": {
-    "text": "MVP",
+    "text": "Meest waardevolle speler",
     "meaning": "Most valuable player; de speler met de grootste impact."
   },
   "slang-rng": {
-    "text": "RNG",
+    "text": "Willekeurige geluksfactor",
     "meaning": "Random number generation; luck-based uitkomsten in een game."
   },
   "slang-xp": {
-    "text": "XP",
+    "text": "Ervaringspunten",
     "meaning": "Experience points waarmee je een character, account of battle pass levelt."
   },
   "slang-level-up": {
@@ -276,7 +276,7 @@
     "meaning": "Snelle callout tijdens het spelen: Mic staat op mute."
   },
   "slang-dps": {
-    "text": "DPS",
+    "text": "Schade per seconde",
     "meaning": "Damage per second, of een rol die vooral damage doet."
   },
   "slang-tank": {
@@ -292,47 +292,47 @@
     "meaning": "Supportrol die vooral health van teamgenoten herstelt."
   },
   "slang-aoe": {
-    "text": "AOE",
+    "text": "Gebiedseffect",
     "meaning": "Area of effect; damage of ability die een gebied raakt."
   },
   "slang-cc": {
-    "text": "CC",
+    "text": "Crowd control",
     "meaning": "Crowd control; abilities die stunnen, vertragen of uitschakelen."
   },
   "slang-ult": {
-    "text": "Ult",
+    "text": "Ultieme vaardigheid",
     "meaning": "Afkorting van ultimate; de sterkste ability van een character."
   },
   "callouts-ultimate-ready": {
-    "text": "Ult ready",
+    "text": "Ultimate klaar",
     "meaning": "Snelle callout tijdens het spelen: Ult ready."
   },
   "callouts-no-ultimate": {
-    "text": "Geen ult",
+    "text": "Geen ultimate",
     "meaning": "Snelle callout tijdens het spelen: Geen ult."
   },
   "callouts-ability-ready": {
-    "text": "Ability ready",
+    "text": "Vaardigheid klaar",
     "meaning": "Snelle callout tijdens het spelen: Ability ready."
   },
   "callouts-ability-down": {
-    "text": "Ability down",
+    "text": "Vaardigheid op cooldown",
     "meaning": "Snelle callout tijdens het spelen: Ability down."
   },
   "callouts-cooldown": {
-    "text": "Cooldown",
+    "text": "Wacht op cooldown",
     "meaning": "Snelle callout tijdens het spelen: Cooldown."
   },
   "callouts-enemy-spotted": {
-    "text": "Enemy spotted",
+    "text": "Vijand gezien",
     "meaning": "Snelle callout tijdens het spelen: Enemy spotted."
   },
   "callouts-enemy-here": {
-    "text": "Enemy hier",
+    "text": "Vijand hier",
     "meaning": "Snelle callout tijdens het spelen: Enemy hier."
   },
   "callouts-enemy-there": {
-    "text": "Enemy daar",
+    "text": "Vijand daar",
     "meaning": "Snelle callout tijdens het spelen: Enemy daar."
   },
   "callouts-on-me": {
@@ -368,7 +368,7 @@
     "meaning": "Snelle callout tijdens het spelen: Hele team hier."
   },
   "callouts-enemy-missing": {
-    "text": "Enemy missing",
+    "text": "Vijand mist",
     "meaning": "Snelle callout tijdens het spelen: Enemy missing."
   },
   "callouts-all-missing": {
@@ -380,11 +380,11 @@
     "meaning": "Snelle callout tijdens het spelen: Achter je!."
   },
   "callouts-left-side": {
-    "text": "Links!",
+    "text": "Linkerkant",
     "meaning": "Snelle callout tijdens het spelen: Links!."
   },
   "callouts-right-side": {
-    "text": "Rechts!",
+    "text": "Rechterkant",
     "meaning": "Snelle callout tijdens het spelen: Rechts!."
   },
   "callouts-above-us": {
@@ -400,7 +400,7 @@
     "meaning": "Snelle callout tijdens het spelen: Voor ons."
   },
   "callouts-mid": {
-    "text": "Mid",
+    "text": "Midden",
     "meaning": "Snelle callout tijdens het spelen: Mid."
   },
   "callouts-top-mid": {
@@ -412,7 +412,7 @@
     "meaning": "Snelle callout tijdens het spelen: Bottom mid."
   },
   "callouts-spawn": {
-    "text": "Spawn",
+    "text": "Spawnpunt",
     "meaning": "Snelle callout tijdens het spelen: Spawn."
   },
   "callouts-our-spawn": {
@@ -428,7 +428,7 @@
     "meaning": "Snelle callout tijdens het spelen: Flank."
   },
   "callouts-watch-flank": {
-    "text": "Watch flank",
+    "text": "Let op de flank",
     "meaning": "Snelle callout tijdens het spelen: Watch flank."
   },
   "danger-incoming": {
@@ -508,7 +508,7 @@
     "meaning": "Snelle callout tijdens het spelen: Ik ben low."
   },
   "callouts-low-hp": {
-    "text": "Low HP",
+    "text": "Weinig leven",
     "meaning": "Snelle callout tijdens het spelen: Low HP."
   },
   "callouts-he-is-low": {
@@ -520,11 +520,11 @@
     "meaning": "Snelle callout tijdens het spelen: Ze zijn low."
   },
   "callouts-one-shot": {
-    "text": "One shot",
+    "text": "Nog één schot",
     "meaning": "Snelle callout tijdens het spelen: One shot."
   },
   "callouts-armor-cracked": {
-    "text": "Armor cracked",
+    "text": "Pantser gebroken",
     "meaning": "Snelle callout tijdens het spelen: Armor cracked."
   },
   "callouts-shield-broken": {
@@ -556,15 +556,15 @@
     "meaning": "Snelle callout tijdens het spelen: Eentje gefinisht."
   },
   "callouts-team-wipe": {
-    "text": "Team wipe",
+    "text": "Team gewiped",
     "meaning": "Snelle callout tijdens het spelen: Team wipe."
   },
   "instructions-push": {
-    "text": "Push",
+    "text": "Nu druk zetten",
     "meaning": "Team-instructie of korte opdracht: Push."
   },
   "instructions-rush": {
-    "text": "Rush",
+    "text": "Snel erin",
     "meaning": "Team-instructie of korte opdracht: Rush."
   },
   "instructions-hold": {
@@ -724,7 +724,7 @@
     "meaning": "Objective-term: Bom down."
   },
   "objective-spike-down": {
-    "text": "Spike down",
+    "text": "Spike ligt neer",
     "meaning": "Objective-term: Spike down."
   },
   "objective-defuse-the-bomb": {
@@ -1076,7 +1076,7 @@
     "meaning": "Veelgebruikte gamingterm: Gap."
   },
   "slang-gg-ez": {
-    "text": "GG EZ",
+    "text": "Makkelijke match",
     "meaning": "Veelgebruikte gamingterm: GG EZ."
   },
   "slang-hitbox": {
@@ -1918,5 +1918,53 @@
   "antiToxic-we-still-have-time": {
     "text": "We hebben nog tijd",
     "meaning": "Positieve zin om het team rustig en gefocust te houden: We hebben nog tijd."
+  },
+  "callouts-my-ping-is-high": {
+    "text": "Mijn ping is hoog",
+    "meaning": "Laat je team weten dat je netwerkvertraging hoog is."
+  },
+  "callouts-my-game-froze": {
+    "text": "Mijn game is vastgelopen",
+    "meaning": "Laat weten dat je scherm niet meer reageert."
+  },
+  "callouts-i-crashed": {
+    "text": "Mijn game is gecrasht",
+    "meaning": "Laat weten dat de app is afgesloten of gecrasht."
+  },
+  "callouts-no-sound": {
+    "text": "Ik heb geen geluid",
+    "meaning": "Laat weten dat je game-audio ontbreekt."
+  },
+  "callouts-i-cannot-hear-you": {
+    "text": "Ik hoor jullie niet",
+    "meaning": "Laat weten dat je voicechat niet hoort."
+  },
+  "teamwork-push-after-my-flash": {
+    "text": "Push na mijn flash",
+    "meaning": "Coördineer de entry direct na je flash."
+  },
+  "teamwork-wait-for-my-smoke": {
+    "text": "Wacht op mijn smoke",
+    "meaning": "Vraag om te wachten tot je smoke zicht blokkeert."
+  },
+  "strategy-save-ult-for-next-fight": {
+    "text": "Bewaar ult voor het volgende gevecht",
+    "meaning": "Plan om de ultimate voor de volgende fight te houden."
+  },
+  "strategy-play-for-overtime": {
+    "text": "Speel voor overtime",
+    "meaning": "Plan om overtime af te dwingen of te overleven."
+  },
+  "objective-touch-in-overtime": {
+    "text": "Raak aan in overtime",
+    "meaning": "Urgente objective-call om overtime actief te houden."
+  },
+  "danger-third-party-coming": {
+    "text": "Derde team komt eraan",
+    "meaning": "Waarschuw dat een ander vijandelijk team meevecht."
+  },
+  "antiToxic-mute-and-play": {
+    "text": "Mute en speel door",
+    "meaning": "Rustige manier om toxiciteit te negeren zonder de match te laten ontsporen."
   }
 }

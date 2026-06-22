@@ -1,22 +1,22 @@
 {
   "callouts-gg": {
-    "text": "GG",
+    "text": "いい試合だった",
     "meaning": "Good gameの略。試合終了時に「いい試合だった」という意味でよく使う"
   },
   "slang-ggwp": {
-    "text": "GGWP",
+    "text": "いい試合、ナイスプレイ",
     "meaning": "Good game, well playedの略。いい試合で、よくプレイしたという敬意を表す"
   },
   "callouts-glhf": {
-    "text": "GLHF",
+    "text": "よろしく、楽しもう",
     "meaning": "Good luck, have funの略。試合開始前の「よろしく、楽しもう」という挨拶"
   },
   "slang-wp": {
-    "text": "WP",
+    "text": "ナイスプレイ",
     "meaning": "Well playedの略。いいプレイだったという称賛"
   },
   "slang-nt": {
-    "text": "NT",
+    "text": "惜しかった",
     "meaning": "Nice tryの略。失敗しても惜しかったと励ます言葉"
   },
   "callouts-nice": {
@@ -52,91 +52,91 @@
     "meaning": "チームのコミュニケーションが役に立ったという意味"
   },
   "slang-afk": {
-    "text": "AFK",
+    "text": "少し離席する",
     "meaning": "Away from keyboardの略。プレイヤーが操作していない状態"
   },
   "slang-brb": {
-    "text": "BRB",
+    "text": "すぐ戻る",
     "meaning": "Be right backの略。すぐ戻るという意味"
   },
   "slang-dc": {
-    "text": "DC",
+    "text": "接続が切れた",
     "meaning": "Disconnectの略。試合から接続が切れること"
   },
   "slang-disconnect": {
-    "text": "切断",
+    "text": "試合から落ちた",
     "meaning": "プレイヤーが試合への接続を失うこと"
   },
   "slang-reconnect": {
-    "text": "再接続",
+    "text": "再接続してる",
     "meaning": "接続が切れた後、プレイヤーが試合に戻ること"
   },
   "slang-lag": {
-    "text": "ラグ",
+    "text": "ラグい",
     "meaning": "遅延や回線の問題で操作や表示が遅れること"
   },
   "slang-lag-spike": {
-    "text": "ラグスパイク",
+    "text": "急にめっちゃラグい",
     "meaning": "短時間だけ急に発生する大きな通信遅延"
   },
   "slang-ping": {
-    "text": "Ping",
+    "text": "ピンが高い",
     "meaning": "文脈により、マップのピンまたは通信遅延を指す"
   },
   "slang-fps": {
-    "text": "FPS",
+    "text": "フレームレートが落ちた",
     "meaning": "ファーストパーソン・シューター、または性能の話では1秒あたりのフレーム数"
   },
   "slang-server": {
-    "text": "サーバー",
+    "text": "サーバーが重い",
     "meaning": "試合をホストするオンライン環境や地域"
   },
   "slang-hit-reg": {
-    "text": "ヒットレジ",
+    "text": "弾が当たってるのに判定されない",
     "meaning": "ヒット判定。攻撃や弾が正しく当たりとして処理されたかどうか"
   },
   "slang-desync": {
-    "text": "同期ズレ",
+    "text": "ゲームが同期ズレしてる",
     "meaning": "プレイヤーが見ている状態とサーバーや他プレイヤーの状態がずれること"
   },
   "slang-op": {
-    "text": "OP",
+    "text": "強すぎる",
     "meaning": "Overpoweredの略。他と比べて強すぎる状態"
   },
   "slang-meta": {
-    "text": "メタ",
+    "text": "今の環境トップ",
     "meaning": "その時点で最も有効または流行している戦略、キャラ、武器、ビルド"
   },
   "slang-nerf": {
-    "text": "ナーフ",
+    "text": "弱体化された",
     "meaning": "アップデートでキャラ、武器、能力などを弱体化すること"
   },
   "slang-buff": {
-    "text": "バフ",
+    "text": "強化された",
     "meaning": "アップデートでキャラ、武器、能力などを強化すること"
   },
   "slang-noob": {
-    "text": "ヌーブ",
+    "text": "初心者プレイヤー",
     "meaning": "初心者や不慣れなプレイヤーを指す言葉。侮辱になることがある"
   },
   "slang-pro": {
-    "text": "プロ",
+    "text": "上手いプレイヤー",
     "meaning": "非常に上手い、またはプロレベルのプレイヤー"
   },
   "slang-bot": {
-    "text": "ボット",
+    "text": "ボットみたいな動き",
     "meaning": "AI操作のキャラ。または下手なプレイヤーへの侮辱として使われる"
   },
   "slang-smurf": {
-    "text": "スマーフ",
+    "text": "サブ垢スマーフ",
     "meaning": "上級者が低ランクのアカウントでプレイすること"
   },
   "slang-camper": {
-    "text": "キャンパー",
+    "text": "芋ってる",
     "meaning": "一か所に待ち伏せしてキルを狙うプレイヤー"
   },
   "slang-tryhard": {
-    "text": "トライハード",
+    "text": "ガチでやってる",
     "meaning": "勝つために非常に真剣にプレイする人。時に皮肉や侮辱として使う"
   },
   "slang-sweat": {
@@ -144,63 +144,63 @@
     "meaning": "勝つためにかなり本気でプレイしているプレイヤー"
   },
   "slang-tilt": {
-    "text": "ティルト",
+    "text": "メンタル崩れてる",
     "meaning": "イライラしてプレイの質が落ちる状態"
   },
   "slang-toxic": {
-    "text": "トキシック",
+    "text": "暴言・迷惑行為",
     "meaning": "チャットやプレイで失礼、攻撃的、有害な行動をすること"
   },
   "slang-salty": {
-    "text": "ソルティ",
+    "text": "負けて拗ねてる",
     "meaning": "負けたり出し抜かれたりして怒っている、または不満そうな状態"
   },
   "slang-rage-quit": {
-    "text": "レイジクイット",
+    "text": "キレ落ちした",
     "meaning": "怒って試合を途中で抜けること"
   },
   "slang-pvp": {
-    "text": "PvP",
+    "text": "対人戦",
     "meaning": "Player versus playerの略。プレイヤー同士が戦うゲームモード"
   },
   "slang-pve": {
-    "text": "PvE",
+    "text": "対コンピューター戦",
     "meaning": "Player versus environmentの略。AI敵やゲームシステムと戦うプレイ"
   },
   "slang-ranked": {
-    "text": "ランク",
+    "text": "ランク戦",
     "meaning": "ランクに影響する競技モード"
   },
   "slang-casual": {
-    "text": "カジュアル",
+    "text": "カジュアル戦",
     "meaning": "ランクに影響しない、比較的気軽なモード"
   },
   "slang-mmr": {
-    "text": "MMR",
+    "text": "マッチング内部レート",
     "meaning": "マッチメイキングレーティング。公平な試合を組むための隠しまたは表示されるスキル評価"
   },
   "slang-elo": {
-    "text": "Elo",
+    "text": "実力レート",
     "meaning": "レーティングシステム、または競技スキル評価を指す一般的な言葉"
   },
   "slang-kd": {
-    "text": "K/D",
+    "text": "キル死亡比",
     "meaning": "キルデス比。キル数とデス数の比率"
   },
   "slang-kda": {
-    "text": "KDA",
+    "text": "キル・デス・アシスト",
     "meaning": "キル、デス、アシストを合わせた一般的な成績指標"
   },
   "slang-mvp": {
-    "text": "MVP",
+    "text": "最優秀プレイヤー",
     "meaning": "Most valuable player。最も試合に貢献したプレイヤー"
   },
   "slang-rng": {
-    "text": "RNG",
+    "text": "ランダム運要素",
     "meaning": "ランダム要素。ゲーム内の運に左右される結果"
   },
   "slang-xp": {
-    "text": "XP",
+    "text": "経験値",
     "meaning": "経験値。キャラ、アカウント、バトルパスなどをレベルアップするためのポイント"
   },
   "slang-level-up": {
@@ -276,7 +276,7 @@
     "meaning": "マイクがミュートになっている状態"
   },
   "slang-dps": {
-    "text": "DPS",
+    "text": "秒間ダメージ",
     "meaning": "Damage per second。またはダメージを出す役割"
   },
   "slang-tank": {
@@ -292,15 +292,15 @@
     "meaning": "味方の体力を回復することに特化したサポートロール"
   },
   "slang-aoe": {
-    "text": "AOE",
+    "text": "範囲攻撃",
     "meaning": "Area of effectの略。範囲に影響するダメージやアビリティ"
   },
   "slang-cc": {
-    "text": "CC",
+    "text": "行動妨害",
     "meaning": "Crowd controlの略。スタン、スロー、拘束など行動を妨害する効果"
   },
   "slang-ult": {
-    "text": "ウルト",
+    "text": "アルティメット",
     "meaning": "アルティメットの略。キャラの最も強いアビリティ"
   },
   "callouts-ultimate-ready": {
@@ -308,19 +308,19 @@
     "meaning": "話し手のアルティメットが使える状態"
   },
   "callouts-no-ultimate": {
-    "text": "ウルトなし",
+    "text": "ウルトない",
     "meaning": "話し手または敵のアルティメットが使えない状態"
   },
   "callouts-ability-ready": {
-    "text": "スキルある",
+    "text": "スキル使える",
     "meaning": "有用なアビリティが使える状態"
   },
   "callouts-ability-down": {
-    "text": "スキル落ちてる",
+    "text": "スキルまだない",
     "meaning": "重要なアビリティが使えない、またはクールダウン中の状態"
   },
   "callouts-cooldown": {
-    "text": "クールダウン",
+    "text": "クールダウン待って",
     "meaning": "アビリティがまだ再使用できない状態"
   },
   "callouts-enemy-spotted": {
@@ -400,7 +400,7 @@
     "meaning": "脅威が真正面にある"
   },
   "callouts-mid": {
-    "text": "ミッド",
+    "text": "中央",
     "meaning": "敵や戦闘が中央レーンにある"
   },
   "callouts-top-mid": {
@@ -412,7 +412,7 @@
     "meaning": "敵が中央下側のポジションにいる"
   },
   "callouts-spawn": {
-    "text": "スポーン",
+    "text": "リスポーン地点",
     "meaning": "敵または味方がスポーン地点付近にいる"
   },
   "callouts-our-spawn": {
@@ -428,7 +428,7 @@
     "meaning": "敵が横や後ろから攻撃している"
   },
   "callouts-watch-flank": {
-    "text": "裏見て",
+    "text": "裏を見て",
     "meaning": "誰かがチームの後ろから来る敵を確認するべきという意味"
   },
   "danger-incoming": {
@@ -508,7 +508,7 @@
     "meaning": "話し手の体力が少なく、注意や助けが必要な状態"
   },
   "callouts-low-hp": {
-    "text": "ローHP",
+    "text": "体力少ない",
     "meaning": "敵または味方の体力が少ない状態"
   },
   "callouts-he-is-low": {
@@ -520,7 +520,7 @@
     "meaning": "1人以上の敵が弱っていて倒しやすい状態"
   },
   "callouts-one-shot": {
-    "text": "ワンショット",
+    "text": "あと一発",
     "meaning": "敵があと一発程度で倒せる状態"
   },
   "callouts-armor-cracked": {
@@ -556,15 +556,15 @@
     "meaning": "ダウンした敵を1人完全に倒した"
   },
   "callouts-team-wipe": {
-    "text": "チーム壊滅",
+    "text": "チーム全滅",
     "meaning": "敵チーム全員を倒した"
   },
   "instructions-push": {
-    "text": "プッシュ",
+    "text": "今押そう",
     "meaning": "攻める、または前に出ること"
   },
   "instructions-rush": {
-    "text": "ラッシュ",
+    "text": "一気に突っ込もう",
     "meaning": "非常に素早く攻めること"
   },
   "instructions-hold": {
@@ -1008,7 +1008,7 @@
     "meaning": "チートや不正ツールの使用を疑われているプレイヤー"
   },
   "slang-ban": {
-    "text": "BAN",
+    "text": "使用禁止",
     "meaning": "プレイヤー、キャラ、マップ、アカウントなどの使用を禁止すること"
   },
   "slang-report": {
@@ -1060,23 +1060,23 @@
     "meaning": "敵、目標、報酬がある構造化されたPvEエリア"
   },
   "slang-cc-chain": {
-    "text": "CCチェーン",
+    "text": "行動妨害の連携",
     "meaning": "複数の行動妨害効果を連続で使い、対象を動けない状態に保つこと"
   },
   "slang-clutch-or-kick": {
-    "text": "クラッチしろ、無理ならキック",
+    "text": "クラッチしないと追放",
     "meaning": "1人で勝たなければならない場面で冗談っぽく圧をかける言葉"
   },
   "slang-diff": {
-    "text": "Diff",
+    "text": "役割差",
     "meaning": "差の略。同じロールやプレイヤー同士で片方が上回ったことを表す"
   },
   "slang-gap": {
-    "text": "ギャップ",
+    "text": "実力差",
     "meaning": "プレイヤーやチーム間の大きな実力差"
   },
   "slang-gg-ez": {
-    "text": "GG EZ",
+    "text": "楽勝だった",
     "meaning": "Good game, easyの略。失礼に受け取られることが多い"
   },
   "slang-hitbox": {
@@ -1918,5 +1918,53 @@
   "antiToxic-we-still-have-time": {
     "text": "まだ時間ある",
     "meaning": "プレイする時間が残っている時にチームを落ち着かせる言葉"
+  },
+  "callouts-my-ping-is-high": {
+    "text": "ピンが高い",
+    "meaning": "通信遅延が高いことをチームに伝える。"
+  },
+  "callouts-my-game-froze": {
+    "text": "ゲームが固まった",
+    "meaning": "画面が反応しなくなったことを伝える。"
+  },
+  "callouts-i-crashed": {
+    "text": "ゲームが落ちた",
+    "meaning": "ゲームがクラッシュしたことを伝える。"
+  },
+  "callouts-no-sound": {
+    "text": "音が出ない",
+    "meaning": "ゲーム音が聞こえないことを伝える。"
+  },
+  "callouts-i-cannot-hear-you": {
+    "text": "声が聞こえない",
+    "meaning": "ボイスチャットが聞こえないことを伝える。"
+  },
+  "teamwork-push-after-my-flash": {
+    "text": "自分のフラッシュ後に押して",
+    "meaning": "自分のフラッシュ直後にエントリーする連携。"
+  },
+  "teamwork-wait-for-my-smoke": {
+    "text": "自分のスモーク待って",
+    "meaning": "スモークで射線を切るまで待ってもらう。"
+  },
+  "strategy-save-ult-for-next-fight": {
+    "text": "次のファイトまでウルト温存",
+    "meaning": "次の交戦用にアルティメットを残す判断。"
+  },
+  "strategy-play-for-overtime": {
+    "text": "延長狙いで行こう",
+    "meaning": "オーバータイムまで耐える、または持ち込む作戦。"
+  },
+  "objective-touch-in-overtime": {
+    "text": "延長中に触って",
+    "meaning": "オーバータイムを維持するための緊急コール。"
+  },
+  "danger-third-party-coming": {
+    "text": "別チーム来てる",
+    "meaning": "別の敵チームが戦闘に入ってくる警告。"
+  },
+  "antiToxic-mute-and-play": {
+    "text": "ミュートして続けよう",
+    "meaning": "暴言に引きずられず試合を続けるための落ち着いた対応。"
   }
 }

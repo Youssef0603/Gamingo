@@ -1,22 +1,22 @@
 {
   "callouts-gg": {
-    "text": "GG",
+    "text": "İyi oyundu",
     "meaning": "İyi oyun; genellikle maçın sonunda söylenir"
   },
   "slang-ggwp": {
-    "text": "GGWP",
+    "text": "İyi oyundu, iyi oynadınız",
     "meaning": "İyi oyun, iyi oynandı"
   },
   "callouts-glhf": {
-    "text": "GLHF",
+    "text": "Bol şans, iyi eğlenceler",
     "meaning": "İyi şanslar, iyi eğlenceler; maç başlamadan önce kullanılan dostça mesaj"
   },
   "slang-wp": {
-    "text": "WP",
+    "text": "İyi oynadın",
     "meaning": "İyi oynandı"
   },
   "slang-nt": {
-    "text": "NT",
+    "text": "Güzel deneme",
     "meaning": "Güzel deneme"
   },
   "callouts-nice": {
@@ -52,155 +52,155 @@
     "meaning": "Takım iletişimi faydalıydı"
   },
   "slang-afk": {
-    "text": "AFK",
+    "text": "Kısa süre yokum",
     "meaning": "Away from keyboard; oyuncu aktif değil"
   },
   "slang-brb": {
-    "text": "BRB",
+    "text": "Hemen döneceğim",
     "meaning": "Hemen döneceğim"
   },
   "slang-dc": {
-    "text": "DC",
+    "text": "Bağlantım koptu",
     "meaning": "Disconnect; maçla bağlantının kopması"
   },
   "slang-disconnect": {
-    "text": "Disconnect",
+    "text": "Maçtan düştüm",
     "meaning": "Bir oyuncunun maç bağlantısını kaybetmesi"
   },
   "slang-reconnect": {
-    "text": "Reconnect",
+    "text": "Yeniden bağlanıyorum",
     "meaning": "Bir oyuncunun bağlantı koptuktan sonra geri dönmesi"
   },
   "slang-lag": {
-    "text": "Lag",
+    "text": "Bende lag var",
     "meaning": "Gecikme veya bağlantı sorunları"
   },
   "slang-lag-spike": {
-    "text": "Lag spike",
+    "text": "Birden fena lag girdi",
     "meaning": "Ani ve kısa süreli bağlantı gecikmesi"
   },
   "slang-ping": {
-    "text": "Ping",
+    "text": "Pingim yüksek",
     "meaning": "Bağlama göre harita işareti veya ağ gecikmesi"
   },
   "slang-fps": {
-    "text": "FPS",
+    "text": "FPS’im düştü",
     "meaning": "First-person shooter; performanstan bahsederken saniyedeki kare sayısı"
   },
   "slang-server": {
-    "text": "Server",
+    "text": "Sunucu kötü",
     "meaning": "Maçı barındıran çevrim içi sistem veya bölge"
   },
   "slang-hit-reg": {
-    "text": "Hit reg",
+    "text": "Vuruşlarım sayılmıyor",
     "meaning": "Hit registration; oyunun bir atışı veya saldırıyı doğru şekilde isabet sayıp saymaması"
   },
   "slang-desync": {
-    "text": "Desync",
+    "text": "Oyun senkron dışı",
     "meaning": "Oyuncuların gördüklerinin sunucuyla veya birbirleriyle senkron olmaması"
   },
   "slang-op": {
-    "text": "OP",
+    "text": "Bu aşırı güçlü",
     "meaning": "Overpowered; diğerlerine göre aşırı güçlü"
   },
   "slang-meta": {
-    "text": "Meta",
+    "text": "Şu an meta bu",
     "meaning": "O anda en etkili veya en popüler strateji, karakter, silah ya da build"
   },
   "slang-nerf": {
-    "text": "Nerf",
+    "text": "Bunu nerflediler",
     "meaning": "Bir güncellemeyle bir şeyi zayıflatmak"
   },
   "slang-buff": {
-    "text": "Buff",
+    "text": "Bunu güçlendirdiler",
     "meaning": "Bir güncellemeyle bir şeyi güçlendirmek"
   },
   "slang-noob": {
-    "text": "Noob",
+    "text": "Yeni oyuncu",
     "meaning": "Yeni veya deneyimsiz oyuncu; hakaret olarak da kullanılabilir"
   },
   "slang-pro": {
-    "text": "Pro",
+    "text": "Profesyonel oyuncu",
     "meaning": "Çok yetenekli veya profesyonel seviyede oyuncu"
   },
   "slang-bot": {
-    "text": "Bot",
+    "text": "Bot gibi oynuyor",
     "meaning": "Yapay zekâ kontrollü karakter; kötü oynayan oyuncu için hakaret olarak da kullanılır"
   },
   "slang-smurf": {
-    "text": "Smurf",
+    "text": "Smurf hesap",
     "meaning": "Yüksek yetenekli bir oyuncunun düşük rütbeli hesap kullanması"
   },
   "slang-camper": {
-    "text": "Camper",
+    "text": "Kamp yapıyor",
     "meaning": "Kill almak için tek bir noktada bekleyen oyuncu"
   },
   "slang-tryhard": {
-    "text": "Tryhard",
+    "text": "Tryhard oynuyor",
     "meaning": "Çok ciddi oynayan oyuncu; bazen hakaret olarak kullanılır"
   },
   "slang-sweat": {
-    "text": "Sweat",
+    "text": "Terleten oyuncu",
     "meaning": "Kazanmak için çok fazla çabalayan oyuncu"
   },
   "slang-tilt": {
-    "text": "Tilt",
+    "text": "Tilt oldum",
     "meaning": "Oyuncunun daha kötü oynamasına neden olan sinir veya moral bozukluğu"
   },
   "slang-toxic": {
-    "text": "Toxic",
+    "text": "Toksik davranış",
     "meaning": "Sohbette veya oynanışta kaba, saldırgan ya da zararlı davranış"
   },
   "slang-salty": {
-    "text": "Salty",
+    "text": "Kaybedince tuzlandı",
     "meaning": "Kaybettikten veya outplay yedikten sonra kızgın ya da kırgın olmak"
   },
   "slang-rage-quit": {
-    "text": "Rage quit",
+    "text": "Sinirden çıktı",
     "meaning": "Sinirlenip oyundan çıkmak"
   },
   "slang-pvp": {
-    "text": "PvP",
+    "text": "Oyuncuya karşı oyuncu",
     "meaning": "Player versus player; oyuncuların diğer oyunculara karşı savaştığı oynanış"
   },
   "slang-pve": {
-    "text": "PvE",
+    "text": "Oyuncuya karşı çevre",
     "meaning": "Player versus environment; yapay zekâ düşmanlarına veya oyun sistemlerine karşı oynanış"
   },
   "slang-ranked": {
-    "text": "Ranked",
+    "text": "Dereceli mod",
     "meaning": "Rütbeyi etkileyen rekabetçi mod"
   },
   "slang-casual": {
-    "text": "Casual",
+    "text": "Gündelik mod",
     "meaning": "Rahat oynamak için rütbesiz mod"
   },
   "slang-mmr": {
-    "text": "MMR",
+    "text": "Eşleştirme puanı",
     "meaning": "Matchmaking rating; adil maçlar oluşturmak için kullanılan gizli veya görünür yetenek puanı"
   },
   "slang-elo": {
-    "text": "Elo",
+    "text": "Yetenek puanı",
     "meaning": "Rekabetçi yetenek puanı için kullanılan bir derecelendirme sistemi veya genel terim"
   },
   "slang-kd": {
-    "text": "K/D",
+    "text": "Öldürme/ölme oranı",
     "meaning": "Kill/death oranı; öldürmelerin ölümlere oranı"
   },
   "slang-kda": {
-    "text": "KDA",
+    "text": "Öldürme, ölüm ve asist",
     "meaning": "Kill, death ve assist; yaygın performans istatistiği"
   },
   "slang-mvp": {
-    "text": "MVP",
+    "text": "Maçın en değerli oyuncusu",
     "meaning": "Most valuable player; en büyük etkiyi yapan oyuncu"
   },
   "slang-rng": {
-    "text": "RNG",
+    "text": "Rastgele şans faktörü",
     "meaning": "Random number generation; oyundaki şansa bağlı sonuçlar"
   },
   "slang-xp": {
-    "text": "XP",
+    "text": "Deneyim puanı",
     "meaning": "Karakteri, hesabı veya battle pass'i seviye atlatmak için kullanılan deneyim puanı"
   },
   "slang-level-up": {
@@ -276,7 +276,7 @@
     "meaning": "Mikrofon sessize alınmış"
   },
   "slang-dps": {
-    "text": "DPS",
+    "text": "Saniye başı hasar",
     "meaning": "Saniye başına hasar veya hasar vermeye odaklı rol"
   },
   "slang-tank": {
@@ -292,23 +292,23 @@
     "meaning": "Takım arkadaşlarının canını yenilemeye odaklı support rolü"
   },
   "slang-aoe": {
-    "text": "AOE",
+    "text": "Alan etkisi",
     "meaning": "Area of effect; bir alanı etkileyen hasar veya yetenek"
   },
   "slang-cc": {
-    "text": "CC",
+    "text": "Kitle kontrolü",
     "meaning": "Crowd control; stun, slow veya disable veren yetenekler"
   },
   "slang-ult": {
-    "text": "Ult",
+    "text": "Ulti yetenek",
     "meaning": "Ultimate'in kısaltması; karakterin en güçlü yeteneği"
   },
   "callouts-ultimate-ready": {
-    "text": "Ultimate hazır",
+    "text": "Ultim hazır",
     "meaning": "Konuşan kişinin ultimate yeteneği hazır"
   },
   "callouts-no-ultimate": {
-    "text": "Ultimate yok",
+    "text": "Ultim yok",
     "meaning": "Konuşan kişide veya düşmanda ultimate mevcut değil"
   },
   "callouts-ability-ready": {
@@ -316,11 +316,11 @@
     "meaning": "Faydalı bir yetenek kullanılabilir durumda"
   },
   "callouts-ability-down": {
-    "text": "Yetenek yok",
+    "text": "Yetenek beklemede",
     "meaning": "Önemli bir yetenek kullanılamıyor veya cooldown'da"
   },
   "callouts-cooldown": {
-    "text": "Cooldown",
+    "text": "Bekleme süresini bekleyin",
     "meaning": "Bir yetenek henüz kullanılamıyor"
   },
   "callouts-enemy-spotted": {
@@ -400,7 +400,7 @@
     "meaning": "Tehdit doğrudan ileride"
   },
   "callouts-mid": {
-    "text": "Mid",
+    "text": "Orta",
     "meaning": "Düşman veya aksiyon orta koridorda"
   },
   "callouts-top-mid": {
@@ -412,7 +412,7 @@
     "meaning": "Düşman alt orta pozisyonda"
   },
   "callouts-spawn": {
-    "text": "Spawn",
+    "text": "Doğma noktası",
     "meaning": "Düşman veya takım spawn yakınında"
   },
   "callouts-our-spawn": {
@@ -424,11 +424,11 @@
     "meaning": "Aksiyon düşmanın başlangıç alanının yakınında"
   },
   "callouts-flank": {
-    "text": "Flank",
+    "text": "Kanat baskını",
     "meaning": "Bir düşman yandan veya arkadan saldırıyor"
   },
   "callouts-watch-flank": {
-    "text": "Flank'e bak",
+    "text": "Flanki kontrol edin",
     "meaning": "Birinin takımın arkasındaki düşmanları kontrol etmesi gerekiyor"
   },
   "danger-incoming": {
@@ -508,7 +508,7 @@
     "meaning": "Konuşan kişinin canı az ve dikkat ya da yardım gerekiyor"
   },
   "callouts-low-hp": {
-    "text": "Low HP",
+    "text": "Canım az",
     "meaning": "Bir düşmanın veya takım arkadaşının canı çok az"
   },
   "callouts-he-is-low": {
@@ -524,7 +524,7 @@
     "meaning": "Bir düşmanın ölmesi için yalnızca bir isabet daha gerekiyor"
   },
   "callouts-armor-cracked": {
-    "text": "Armor kırıldı",
+    "text": "Zırhı kırıldı",
     "meaning": "Bir düşmanın zırhı kırıldı veya çok zayıf"
   },
   "callouts-shield-broken": {
@@ -556,15 +556,15 @@
     "meaning": "Down olmuş bir düşman elendi"
   },
   "callouts-team-wipe": {
-    "text": "Team wipe",
+    "text": "Takımı sildik",
     "meaning": "Düşman takımın tamamı elendi"
   },
   "instructions-push": {
-    "text": "Push",
+    "text": "Şimdi baskı kurun",
     "meaning": "Saldır veya ileri çık"
   },
   "instructions-rush": {
-    "text": "Rush",
+    "text": "Hızlı girin",
     "meaning": "Çok hızlı saldır"
   },
   "instructions-hold": {
@@ -1076,7 +1076,7 @@
     "meaning": "Oyuncular veya takımlar arasında büyük yetenek farkı"
   },
   "slang-gg-ez": {
-    "text": "GG EZ",
+    "text": "Kolay maçtı",
     "meaning": "Good game, easy; genellikle saygısız kabul edilir"
   },
   "slang-hitbox": {
@@ -1918,5 +1918,53 @@
   "antiToxic-we-still-have-time": {
     "text": "Hâlâ vaktimiz var",
     "meaning": "Play yapmaya zaman varken takımı sakinleştir"
+  },
+  "callouts-my-ping-is-high": {
+    "text": "Pingim yüksek",
+    "meaning": "Ağa bağlı gecikmenin yüksek olduğunu takıma söyle."
+  },
+  "callouts-my-game-froze": {
+    "text": "Oyunum dondu",
+    "meaning": "Ekranın tepki vermediğini takıma söyle."
+  },
+  "callouts-i-crashed": {
+    "text": "Oyunum çöktü",
+    "meaning": "Oyunun kapandığını veya çöktüğünü söyle."
+  },
+  "callouts-no-sound": {
+    "text": "Ses gelmiyor",
+    "meaning": "Oyun sesinin olmadığını söyle."
+  },
+  "callouts-i-cannot-hear-you": {
+    "text": "Sizi duyamıyorum",
+    "meaning": "Sesli sohbeti duyamadığını söyle."
+  },
+  "teamwork-push-after-my-flash": {
+    "text": "Flashımdan sonra girin",
+    "meaning": "Flash yeteneğinden hemen sonra giriş yapmayı koordine et."
+  },
+  "teamwork-wait-for-my-smoke": {
+    "text": "Smoke’umu bekleyin",
+    "meaning": "Smoke görüşü kapatana kadar beklemelerini iste."
+  },
+  "strategy-save-ult-for-next-fight": {
+    "text": "Ultiyi sonraki savaşa sakla",
+    "meaning": "Ultimate yeteneği sonraki çatışmaya saklama planı."
+  },
+  "strategy-play-for-overtime": {
+    "text": "Uzatmaya oynayın",
+    "meaning": "Uzatmayı zorlamak veya oraya kadar dayanmak için oyna."
+  },
+  "objective-touch-in-overtime": {
+    "text": "Uzatmada noktaya değin",
+    "meaning": "Uzatmayı aktif tutmak için acil hedef çağrısı."
+  },
+  "danger-third-party-coming": {
+    "text": "Üçüncü takım geliyor",
+    "meaning": "Başka bir düşman takımının savaşa girdiğini uyar."
+  },
+  "antiToxic-mute-and-play": {
+    "text": "Sustur ve oynamaya devam et",
+    "meaning": "Toksikliği maçı bozmadan sakin şekilde yönetme yolu."
   }
 }

@@ -1,22 +1,22 @@
 {
   "callouts-gg": {
-    "text": "GG",
+    "text": "打得不错",
     "meaning": "好游戏；通常在比赛结束时说"
   },
   "slang-ggwp": {
-    "text": "GGWP",
+    "text": "打得不错，玩得漂亮",
     "meaning": "好游戏，打得漂亮"
   },
   "callouts-glhf": {
-    "text": "GLHF",
+    "text": "祝好运，玩得开心",
     "meaning": "祝好运，玩得开心；比赛开始前的友好问候"
   },
   "slang-wp": {
-    "text": "WP",
+    "text": "打得好",
     "meaning": "打得好"
   },
   "slang-nt": {
-    "text": "NT",
+    "text": "不错的尝试",
     "meaning": "不错的尝试"
   },
   "callouts-nice": {
@@ -52,91 +52,91 @@
     "meaning": "队伍沟通很有帮助"
   },
   "slang-afk": {
-    "text": "AFK",
+    "text": "我离开一下",
     "meaning": "离开键盘；玩家暂时不在或没有操作"
   },
   "slang-brb": {
-    "text": "BRB",
+    "text": "马上回来",
     "meaning": "马上回来"
   },
   "slang-dc": {
-    "text": "DC",
+    "text": "我掉线了",
     "meaning": "掉线；与比赛断开连接"
   },
   "slang-disconnect": {
-    "text": "断线",
+    "text": "我从比赛里掉线了",
     "meaning": "玩家与比赛失去连接"
   },
   "slang-reconnect": {
-    "text": "重连",
+    "text": "我正在重连",
     "meaning": "玩家掉线后重新回到比赛"
   },
   "slang-lag": {
-    "text": "卡顿",
+    "text": "我卡了",
     "meaning": "延迟或网络问题"
   },
   "slang-lag-spike": {
-    "text": "延迟飙升",
+    "text": "突然很卡",
     "meaning": "短时间内突然出现的网络延迟"
   },
   "slang-ping": {
-    "text": "Ping",
+    "text": "我的延迟很高",
     "meaning": "根据语境可指地图标记，也可指网络延迟"
   },
   "slang-fps": {
-    "text": "FPS",
+    "text": "我的帧率掉了",
     "meaning": "可指第一人称射击游戏，也可指性能中的每秒帧数"
   },
   "slang-server": {
-    "text": "服务器",
+    "text": "服务器不稳定",
     "meaning": "承载比赛的在线系统或地区服务器"
   },
   "slang-hit-reg": {
-    "text": "命中判定",
+    "text": "我的命中没算",
     "meaning": "游戏是否正确把射击或攻击计算为命中"
   },
   "slang-desync": {
-    "text": "不同步",
+    "text": "游戏不同步了",
     "meaning": "玩家看到的画面与服务器或其他玩家不同步"
   },
   "slang-op": {
-    "text": "OP",
+    "text": "这太强了",
     "meaning": "过强；相比其他选择强得不平衡"
   },
   "slang-meta": {
-    "text": "Meta",
+    "text": "版本答案",
     "meaning": "当前最有效或最流行的策略、角色、武器或配装"
   },
   "slang-nerf": {
-    "text": "削弱",
+    "text": "被削弱了",
     "meaning": "通过游戏更新让某个内容变弱"
   },
   "slang-buff": {
-    "text": "加强",
+    "text": "被加强了",
     "meaning": "通过游戏更新让某个内容变强"
   },
   "slang-noob": {
-    "text": "菜鸟",
+    "text": "新手玩家",
     "meaning": "新手或经验不足的玩家；有时带侮辱意味"
   },
   "slang-pro": {
-    "text": "高手",
+    "text": "高手玩家",
     "meaning": "技术很强或职业级别的玩家"
   },
   "slang-bot": {
-    "text": "人机",
+    "text": "打得像人机",
     "meaning": "AI 控制角色，或用来嘲讽表现很差的玩家"
   },
   "slang-smurf": {
-    "text": "炸鱼号",
+    "text": "小号炸鱼",
     "meaning": "高手使用低段位账号游玩"
   },
   "slang-camper": {
-    "text": "蹲点玩家",
+    "text": "他在蹲点",
     "meaning": "一直躲在同一个位置等待击杀的玩家"
   },
   "slang-tryhard": {
-    "text": "太认真",
+    "text": "他太拼了",
     "meaning": "非常认真想赢的玩家，有时带贬义"
   },
   "slang-sweat": {
@@ -144,63 +144,63 @@
     "meaning": "非常努力、很想赢的玩家"
   },
   "slang-tilt": {
-    "text": "心态崩了",
+    "text": "我心态崩了",
     "meaning": "因沮丧或生气而越打越差"
   },
   "slang-toxic": {
-    "text": "有毒",
+    "text": "有毒发言",
     "meaning": "聊天或游戏中粗鲁、辱骂或伤害性的行为"
   },
   "slang-salty": {
-    "text": "破防",
+    "text": "输了很酸",
     "meaning": "输了或被秀后生气、不服气"
   },
   "slang-rage-quit": {
-    "text": "气退",
+    "text": "气到退了",
     "meaning": "因为生气而直接退出游戏"
   },
   "slang-pvp": {
-    "text": "PvP",
+    "text": "玩家对战",
     "meaning": "玩家对玩家；玩家互相对战的玩法"
   },
   "slang-pve": {
-    "text": "PvE",
+    "text": "玩家对环境",
     "meaning": "玩家对环境；与 AI 敌人或游戏系统对抗的玩法"
   },
   "slang-ranked": {
-    "text": "排位",
+    "text": "排位模式",
     "meaning": "会影响段位的竞技模式"
   },
   "slang-casual": {
-    "text": "休闲",
+    "text": "休闲模式",
     "meaning": "不影响段位、偏轻松的模式"
   },
   "slang-mmr": {
-    "text": "MMR",
+    "text": "匹配评分",
     "meaning": "匹配评分；用于匹配公平对局的隐藏或可见实力分"
   },
   "slang-elo": {
-    "text": "Elo",
+    "text": "实力分",
     "meaning": "一种评分系统，也泛指竞技实力分"
   },
   "slang-kd": {
-    "text": "K/D",
+    "text": "击杀死亡比",
     "meaning": "击杀死亡比；击杀数与死亡数的比例"
   },
   "slang-kda": {
-    "text": "KDA",
+    "text": "击杀、死亡和助攻",
     "meaning": "击杀、死亡、助攻；常见的表现统计数据"
   },
   "slang-mvp": {
-    "text": "MVP",
+    "text": "最有价值玩家",
     "meaning": "最有价值玩家；对比赛影响最大的玩家"
   },
   "slang-rng": {
-    "text": "RNG",
+    "text": "随机运气因素",
     "meaning": "随机数生成；游戏中基于运气的结果"
   },
   "slang-xp": {
-    "text": "XP",
+    "text": "经验值",
     "meaning": "经验值，用来提升角色、账号或战令等级"
   },
   "slang-level-up": {
@@ -276,7 +276,7 @@
     "meaning": "麦克风处于静音状态"
   },
   "slang-dps": {
-    "text": "DPS",
+    "text": "每秒伤害",
     "meaning": "每秒伤害，或专注于造成伤害的角色定位"
   },
   "slang-tank": {
@@ -292,15 +292,15 @@
     "meaning": "专注于恢复队友生命值的辅助角色"
   },
   "slang-aoe": {
-    "text": "AOE",
+    "text": "范围效果",
     "meaning": "范围效果；影响一片区域的伤害或技能"
   },
   "slang-cc": {
-    "text": "CC",
+    "text": "控制效果",
     "meaning": "控制；眩晕、减速或限制行动的技能"
   },
   "slang-ult": {
-    "text": "大招",
+    "text": "终极技能",
     "meaning": "ultimate 的简称；角色最强的技能"
   },
   "callouts-ultimate-ready": {
@@ -308,7 +308,7 @@
     "meaning": "说话者的大招已经可以使用"
   },
   "callouts-no-ultimate": {
-    "text": "没大招",
+    "text": "没有大招",
     "meaning": "说话者或敌人没有可用的大招"
   },
   "callouts-ability-ready": {
@@ -316,11 +316,11 @@
     "meaning": "有用的技能已经可以使用"
   },
   "callouts-ability-down": {
-    "text": "技能没好",
+    "text": "技能在冷却",
     "meaning": "关键技能不可用或还在冷却"
   },
   "callouts-cooldown": {
-    "text": "冷却中",
+    "text": "等冷却",
     "meaning": "技能暂时还不能使用"
   },
   "callouts-enemy-spotted": {
@@ -428,7 +428,7 @@
     "meaning": "敌人正从侧面或后方进攻"
   },
   "callouts-watch-flank": {
-    "text": "看绕后",
+    "text": "看住绕后",
     "meaning": "需要有人检查队伍后方是否有敌人"
   },
   "danger-incoming": {
@@ -460,7 +460,7 @@
     "meaning": "敌人正在等机会突袭队伍"
   },
   "danger-they-are-rushing": {
-    "text": "他们在Rush",
+    "text": "他们在强冲",
     "meaning": "敌人正在非常快速地进攻"
   },
   "danger-they-are-pushing": {
@@ -508,7 +508,7 @@
     "meaning": "说话者血量很低，需要谨慎或支援"
   },
   "callouts-low-hp": {
-    "text": "低血量",
+    "text": "血量很低",
     "meaning": "敌人或队友剩余生命值很少"
   },
   "callouts-he-is-low": {
@@ -520,11 +520,11 @@
     "meaning": "一个或多个敌人血量很低，可以补掉"
   },
   "callouts-one-shot": {
-    "text": "一枪死",
+    "text": "一枪就倒",
     "meaning": "敌人只需要再被命中一下就会死"
   },
   "callouts-armor-cracked": {
-    "text": "护甲裂了",
+    "text": "护甲破了",
     "meaning": "敌人的护甲已破或非常弱"
   },
   "callouts-shield-broken": {
@@ -556,15 +556,15 @@
     "meaning": "一名倒地敌人已被淘汰"
   },
   "callouts-team-wipe": {
-    "text": "团灭",
+    "text": "团灭了",
     "meaning": "整支敌队已被消灭"
   },
   "instructions-push": {
-    "text": "推进",
+    "text": "现在推进",
     "meaning": "进攻或向前移动"
   },
   "instructions-rush": {
-    "text": "Rush",
+    "text": "直接冲进去",
     "meaning": "快速进攻"
   },
   "instructions-hold": {
@@ -724,7 +724,7 @@
     "meaning": "携带炸弹的玩家掉落了目标物"
   },
   "objective-spike-down": {
-    "text": "Spike掉了",
+    "text": "爆能器掉了",
     "meaning": "Spike 已掉落"
   },
   "objective-defuse-the-bomb": {
@@ -964,7 +964,7 @@
     "meaning": "比赛中选择的武器、装备、技能或特长"
   },
   "slang-build": {
-    "text": "Build",
+    "text": "配装",
     "meaning": "由物品、技能、属性或升级组成的一套配置"
   },
   "slang-perk": {
@@ -988,7 +988,7 @@
     "meaning": "用于快速修复紧急问题的小更新"
   },
   "slang-bug": {
-    "text": "Bug",
+    "text": "游戏漏洞",
     "meaning": "游戏错误或非预期问题"
   },
   "slang-glitch": {
@@ -1028,7 +1028,7 @@
     "meaning": "处境很糟、被打爆或很可能要输了"
   },
   "slang-diffed": {
-    "text": "被Diff了",
+    "text": "被压制了",
     "meaning": "在同位置或同对位中被对方表现压制"
   },
   "slang-quest": {
@@ -1040,7 +1040,7 @@
     "meaning": "玩家必须完成的目标或任务"
   },
   "slang-boss": {
-    "text": "Boss",
+    "text": "首领",
     "meaning": "强大的敌人，通常出现在关卡或战斗结尾"
   },
   "slang-mob": {
@@ -1068,15 +1068,15 @@
     "meaning": "当一个玩家必须独自取胜时的玩笑式施压"
   },
   "slang-diff": {
-    "text": "Diff",
+    "text": "实力差",
     "meaning": "difference 的简称；用来表示某个玩家或位置表现更好"
   },
   "slang-gap": {
-    "text": "差距",
+    "text": "差距很大",
     "meaning": "玩家或队伍之间明显的实力差距"
   },
   "slang-gg-ez": {
-    "text": "GG EZ",
+    "text": "轻松赢了",
     "meaning": "好游戏，太简单；通常被认为不尊重对手"
   },
   "slang-hitbox": {
@@ -1092,7 +1092,7 @@
     "meaning": "玩家刚出生就被击杀"
   },
   "callouts-ace": {
-    "text": "Ace",
+    "text": "一人团灭",
     "meaning": "一名玩家消灭了整支敌队"
   },
   "callouts-back-site": {
@@ -1124,7 +1124,7 @@
     "meaning": "可能有危险，需要谨慎"
   },
   "callouts-carry": {
-    "text": "Carry",
+    "text": "带飞",
     "meaning": "一名玩家承担了大部分工作，或带领队伍走向胜利"
   },
   "callouts-circle-moving": {
@@ -1188,7 +1188,7 @@
     "meaning": "不要追敌人追得太远"
   },
   "callouts-do-not-peek": {
-    "text": "别Peek",
+    "text": "别探头",
     "meaning": "不要把自己暴露在敌人的架枪角度里"
   },
   "callouts-door-closed": {
@@ -1320,7 +1320,7 @@
     "meaning": "有人处在安全区外"
   },
   "callouts-peek-together": {
-    "text": "一起Peek",
+    "text": "一起拉出去",
     "meaning": "两名或更多队友应该同时看敌人"
   },
   "callouts-pinched": {
@@ -1592,7 +1592,7 @@
     "meaning": "让玩家集中在右侧"
   },
   "instructions-stop-peeking": {
-    "text": "别再Peek了",
+    "text": "别再探头了",
     "meaning": "停止把自己暴露在敌人枪线里"
   },
   "instructions-touch-point": {
@@ -1918,5 +1918,53 @@
   "antiToxic-we-still-have-time": {
     "text": "我们还有时间",
     "meaning": "在还有时间做操作时安抚队伍"
+  },
+  "callouts-my-ping-is-high": {
+    "text": "我的延迟很高",
+    "meaning": "告诉队友你的网络延迟很高。"
+  },
+  "callouts-my-game-froze": {
+    "text": "我的游戏卡死了",
+    "meaning": "告诉队友你的画面停止响应了。"
+  },
+  "callouts-i-crashed": {
+    "text": "我的游戏闪退了",
+    "meaning": "告诉队友游戏崩溃或退出了。"
+  },
+  "callouts-no-sound": {
+    "text": "我没声音",
+    "meaning": "告诉队友你的游戏音频没了。"
+  },
+  "callouts-i-cannot-hear-you": {
+    "text": "我听不到你们",
+    "meaning": "告诉队友语音听不见。"
+  },
+  "teamwork-push-after-my-flash": {
+    "text": "等我闪后再冲",
+    "meaning": "配合你的闪光技能后立刻进点。"
+  },
+  "teamwork-wait-for-my-smoke": {
+    "text": "等我的烟",
+    "meaning": "让队友等你的烟雾封住视野。"
+  },
+  "strategy-save-ult-for-next-fight": {
+    "text": "大招留给下一波",
+    "meaning": "计划把终极技能留到下一次交战。"
+  },
+  "strategy-play-for-overtime": {
+    "text": "打到加时",
+    "meaning": "围绕拖进或撑到加时来打。"
+  },
+  "objective-touch-in-overtime": {
+    "text": "加时去碰点",
+    "meaning": "紧急目标指令，用来保持加时不断。"
+  },
+  "danger-third-party-coming": {
+    "text": "第三队来了",
+    "meaning": "提醒队友另一个敌队加入战斗。"
+  },
+  "antiToxic-mute-and-play": {
+    "text": "静音继续打",
+    "meaning": "不被喷子影响、继续打比赛的冷静做法。"
   }
 }

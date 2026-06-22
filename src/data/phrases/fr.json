@@ -1,22 +1,22 @@
 {
   "callouts-gg": {
-    "text": "GG",
+    "text": "Bonne partie",
     "meaning": "Bon match ; se dit généralement à la fin d’une partie pour montrer du respect."
   },
   "slang-ggwp": {
-    "text": "GGWP",
+    "text": "Bonne partie, bien joué",
     "meaning": "Good game, well played ; formule respectueuse après une partie bien jouée."
   },
   "callouts-glhf": {
-    "text": "GLHF",
+    "text": "Bonne chance, amusez-vous",
     "meaning": "Good luck, have fun ; message amical avant le début de la partie."
   },
   "slang-wp": {
-    "text": "WP",
+    "text": "Bien joué",
     "meaning": "Well played ; signifie « bien joué »."
   },
   "slang-nt": {
-    "text": "NT",
+    "text": "Bien tenté",
     "meaning": "Nice try ; se dit pour encourager après une tentative ratée."
   },
   "callouts-nice": {
@@ -40,7 +40,7 @@
     "meaning": "Excuse après une erreur ou des dégâts infligés par accident à un allié."
   },
   "callouts-my-bad": {
-    "text": "My bad",
+    "text": "Ma faute",
     "meaning": "Le joueur reconnaît que l’erreur vient de lui."
   },
   "callouts-good-job": {
@@ -52,155 +52,155 @@
     "meaning": "La communication de l’équipe a été utile."
   },
   "slang-afk": {
-    "text": "AFK",
+    "text": "Je m’absente un instant",
     "meaning": "Away from keyboard ; le joueur est absent ou inactif."
   },
   "slang-brb": {
-    "text": "BRB",
+    "text": "Je reviens tout de suite",
     "meaning": "Be right back ; le joueur revient dans un instant."
   },
   "slang-dc": {
-    "text": "DC",
+    "text": "J’ai été déco",
     "meaning": "Disconnect ; perte de connexion à la partie."
   },
   "slang-disconnect": {
-    "text": "Déconnexion",
+    "text": "J’ai été déconnecté",
     "meaning": "Un joueur perd la connexion à la partie."
   },
   "slang-reconnect": {
-    "text": "Reconnexion",
+    "text": "Je me reconnecte",
     "meaning": "Un joueur revient après avoir perdu la connexion."
   },
   "slang-lag": {
-    "text": "Lag",
+    "text": "Je lag",
     "meaning": "Retard, saccades ou problème de connexion réseau."
   },
   "slang-lag-spike": {
-    "text": "Pic de lag",
+    "text": "Gros pic de lag",
     "meaning": "Grosse montée de latence pendant un court instant."
   },
   "slang-ping": {
-    "text": "Ping",
+    "text": "Mon ping est élevé",
     "meaning": "Marqueur sur la carte ou latence réseau, selon le contexte."
   },
   "slang-fps": {
-    "text": "FPS",
+    "text": "Mes FPS ont chuté",
     "meaning": "First-person shooter ; peut aussi désigner les images par seconde quand on parle de performance."
   },
   "slang-server": {
-    "text": "Serveur",
+    "text": "Le serveur est instable",
     "meaning": "Système ou région en ligne qui héberge la partie."
   },
   "slang-hit-reg": {
-    "text": "Hit reg",
+    "text": "Mes tirs ne comptent pas",
     "meaning": "Enregistrement des coups ; indique si le jeu compte correctement un tir ou une attaque comme touché."
   },
   "slang-desync": {
-    "text": "Désync",
+    "text": "Le jeu est désynchronisé",
     "meaning": "Quand ce que voient les joueurs n’est pas synchronisé avec le serveur ou entre eux."
   },
   "slang-op": {
-    "text": "OP",
+    "text": "C’est trop fort",
     "meaning": "Overpowered ; trop fort par rapport aux autres options."
   },
   "slang-meta": {
-    "text": "Méta",
+    "text": "C’est la méta actuelle",
     "meaning": "Stratégie, personnage, arme ou build le plus efficace ou le plus populaire du moment."
   },
   "slang-nerf": {
-    "text": "Nerf",
+    "text": "Ça a été nerf",
     "meaning": "Rendre quelque chose plus faible via une mise à jour du jeu."
   },
   "slang-buff": {
-    "text": "Buff",
+    "text": "Ça a été buff",
     "meaning": "Rendre quelque chose plus fort via une mise à jour du jeu."
   },
   "slang-noob": {
-    "text": "Noob",
+    "text": "Joueur débutant",
     "meaning": "Joueur nouveau ou inexpérimenté ; peut être insultant."
   },
   "slang-pro": {
-    "text": "Pro",
+    "text": "Joueur pro",
     "meaning": "Joueur très fort ou de niveau professionnel."
   },
   "slang-bot": {
-    "text": "Bot",
+    "text": "Il joue comme un bot",
     "meaning": "Personnage contrôlé par l’IA, ou insulte pour un joueur qui joue mal."
   },
   "slang-smurf": {
-    "text": "Smurf",
+    "text": "Compte smurf",
     "meaning": "Joueur expérimenté utilisant un compte de rang plus bas."
   },
   "slang-camper": {
-    "text": "Campeur",
+    "text": "Il campe",
     "meaning": "Joueur qui attend au même endroit pour obtenir des kills."
   },
   "slang-tryhard": {
-    "text": "Tryhard",
+    "text": "Il tryhard",
     "meaning": "Joueur qui joue très sérieusement ; parfois utilisé comme insulte."
   },
   "slang-sweat": {
-    "text": "Sweat",
+    "text": "Gros tryhard",
     "meaning": "Joueur qui force beaucoup pour gagner."
   },
   "slang-tilt": {
-    "text": "Tilt",
+    "text": "Je suis tilt",
     "meaning": "Frustration qui fait jouer moins bien."
   },
   "slang-toxic": {
-    "text": "Toxique",
+    "text": "Comportement toxique",
     "meaning": "Comportement grossier, agressif ou nuisible dans le chat ou en jeu."
   },
   "slang-salty": {
-    "text": "Salty",
+    "text": "Rageux après la défaite",
     "meaning": "Énervé ou vexé après une défaite ou après avoir été dominé."
   },
   "slang-rage-quit": {
-    "text": "Rage quit",
+    "text": "Il a quitté de rage",
     "meaning": "Quitter la partie par colère."
   },
   "slang-pvp": {
-    "text": "PvP",
+    "text": "Joueur contre joueur",
     "meaning": "Player versus player ; mode où des joueurs affrontent d’autres joueurs."
   },
   "slang-pve": {
-    "text": "PvE",
+    "text": "Joueur contre environnement",
     "meaning": "Player versus environment ; mode contre l’IA, les ennemis du jeu ou les systèmes du jeu."
   },
   "slang-ranked": {
-    "text": "Classé",
+    "text": "Mode classé",
     "meaning": "Mode compétitif qui influence le rang."
   },
   "slang-casual": {
-    "text": "Casual",
+    "text": "Mode détente",
     "meaning": "Mode non classé, plus détendu."
   },
   "slang-mmr": {
-    "text": "MMR",
+    "text": "Cote de matchmaking",
     "meaning": "Matchmaking rating ; note de niveau cachée ou visible utilisée pour équilibrer les parties."
   },
   "slang-elo": {
-    "text": "Elo",
+    "text": "Cote de niveau",
     "meaning": "Système de classement ou terme général pour parler du niveau compétitif."
   },
   "slang-kd": {
-    "text": "K/D",
+    "text": "Ratio éliminations/morts",
     "meaning": "Ratio kills/morts ; nombre de kills comparé au nombre de morts."
   },
   "slang-kda": {
-    "text": "KDA",
+    "text": "Éliminations, morts et assistances",
     "meaning": "Kills, morts et assists ; statistique de performance fréquente."
   },
   "slang-mvp": {
-    "text": "MVP",
+    "text": "Joueur le plus décisif",
     "meaning": "Most valuable player ; joueur ayant eu le plus d’impact."
   },
   "slang-rng": {
-    "text": "RNG",
+    "text": "Part de hasard",
     "meaning": "Random number generation ; résultats liés au hasard dans un jeu."
   },
   "slang-xp": {
-    "text": "XP",
+    "text": "Points d’expérience",
     "meaning": "Points d’expérience utilisés pour monter un personnage, un compte ou un battle pass."
   },
   "slang-level-up": {
@@ -276,7 +276,7 @@
     "meaning": "Le microphone est coupé."
   },
   "slang-dps": {
-    "text": "DPS",
+    "text": "Dégâts par seconde",
     "meaning": "Dégâts par seconde, ou rôle spécialisé dans les dégâts."
   },
   "slang-tank": {
@@ -292,23 +292,23 @@
     "meaning": "Support spécialisé dans la restauration des points de vie des alliés."
   },
   "slang-aoe": {
-    "text": "AOE",
+    "text": "Dégâts de zone",
     "meaning": "Area of effect ; dégâts ou compétence qui affectent une zone."
   },
   "slang-cc": {
-    "text": "CC",
+    "text": "Contrôle de foule",
     "meaning": "Crowd control ; compétences qui étourdissent, ralentissent ou empêchent d’agir."
   },
   "slang-ult": {
-    "text": "Ult",
+    "text": "Capacité ultime",
     "meaning": "Abréviation d’ultimate ; compétence la plus puissante d’un personnage."
   },
   "callouts-ultimate-ready": {
-    "text": "Ult prête",
+    "text": "Ultime prête",
     "meaning": "L’ultimate du joueur est disponible."
   },
   "callouts-no-ultimate": {
-    "text": "Pas d’ult",
+    "text": "Pas d’ultime",
     "meaning": "Le joueur ou l’ennemi n’a pas son ultimate disponible."
   },
   "callouts-ability-ready": {
@@ -316,11 +316,11 @@
     "meaning": "Une compétence utile est disponible."
   },
   "callouts-ability-down": {
-    "text": "Compétence indisponible",
+    "text": "Compétence en recharge",
     "meaning": "Une compétence importante est indisponible ou en cooldown."
   },
   "callouts-cooldown": {
-    "text": "Cooldown",
+    "text": "Attendez le cooldown",
     "meaning": "Une compétence ne peut pas encore être utilisée."
   },
   "callouts-enemy-spotted": {
@@ -400,7 +400,7 @@
     "meaning": "La menace est juste en face."
   },
   "callouts-mid": {
-    "text": "Mid",
+    "text": "Milieu",
     "meaning": "L’ennemi ou l’action est dans la zone centrale."
   },
   "callouts-top-mid": {
@@ -412,7 +412,7 @@
     "meaning": "L’ennemi est dans la partie basse du mid."
   },
   "callouts-spawn": {
-    "text": "Spawn",
+    "text": "Point d’apparition",
     "meaning": "L’ennemi ou l’équipe est près du spawn."
   },
   "callouts-our-spawn": {
@@ -424,11 +424,11 @@
     "meaning": "L’action est près de la zone de départ ennemie."
   },
   "callouts-flank": {
-    "text": "Flank",
+    "text": "Flanc",
     "meaning": "Un ennemi attaque par le côté ou par derrière."
   },
   "callouts-watch-flank": {
-    "text": "Surveille le flank",
+    "text": "Surveillez le flanc",
     "meaning": "Quelqu’un doit vérifier les ennemis derrière l’équipe."
   },
   "danger-incoming": {
@@ -508,7 +508,7 @@
     "meaning": "Le joueur a peu de points de vie et doit jouer prudemment ou recevoir de l’aide."
   },
   "callouts-low-hp": {
-    "text": "Low HP",
+    "text": "Peu de vie",
     "meaning": "Un ennemi ou un coéquipier a très peu de points de vie."
   },
   "callouts-he-is-low": {
@@ -520,7 +520,7 @@
     "meaning": "Un ou plusieurs ennemis sont faibles et peuvent être finis."
   },
   "callouts-one-shot": {
-    "text": "One shot",
+    "text": "Il est à une balle",
     "meaning": "Un ennemi a besoin d’un seul coup de plus pour mourir."
   },
   "callouts-armor-cracked": {
@@ -556,15 +556,15 @@
     "meaning": "Un ennemi à terre a été éliminé."
   },
   "callouts-team-wipe": {
-    "text": "Team wipe",
+    "text": "Équipe éliminée",
     "meaning": "Toute l’équipe ennemie a été éliminée."
   },
   "instructions-push": {
-    "text": "Push",
+    "text": "Poussez maintenant",
     "meaning": "Attaquer ou avancer."
   },
   "instructions-rush": {
-    "text": "Rush",
+    "text": "On fonce",
     "meaning": "Attaquer très rapidement."
   },
   "instructions-hold": {
@@ -1076,7 +1076,7 @@
     "meaning": "Grand écart de niveau entre des joueurs ou des équipes."
   },
   "slang-gg-ez": {
-    "text": "GG EZ",
+    "text": "Partie facile",
     "meaning": "Good game, easy ; souvent considéré comme irrespectueux."
   },
   "slang-hitbox": {
@@ -1918,5 +1918,53 @@
   "antiToxic-we-still-have-time": {
     "text": "On a encore le temps",
     "meaning": "Calmer l’équipe quand il reste du temps pour faire une action."
+  },
+  "callouts-my-ping-is-high": {
+    "text": "Mon ping est élevé",
+    "meaning": "Prévenir l’équipe que ta latence réseau est élevée."
+  },
+  "callouts-my-game-froze": {
+    "text": "Mon jeu a freeze",
+    "meaning": "Prévenir que ton écran ne répond plus."
+  },
+  "callouts-i-crashed": {
+    "text": "Mon jeu a crash",
+    "meaning": "Prévenir que le jeu s’est fermé ou a planté."
+  },
+  "callouts-no-sound": {
+    "text": "Je n’ai plus de son",
+    "meaning": "Prévenir que l’audio du jeu manque."
+  },
+  "callouts-i-cannot-hear-you": {
+    "text": "Je ne vous entends pas",
+    "meaning": "Dire que tu n’entends pas le chat vocal."
+  },
+  "teamwork-push-after-my-flash": {
+    "text": "Poussez après mon flash",
+    "meaning": "Coordonner l’entrée juste après ton flash."
+  },
+  "teamwork-wait-for-my-smoke": {
+    "text": "Attendez ma smoke",
+    "meaning": "Demander d’attendre que ta smoke bloque la vision."
+  },
+  "strategy-save-ult-for-next-fight": {
+    "text": "Garde l’ult pour le prochain fight",
+    "meaning": "Prévoir de garder l’ultime pour le prochain engagement."
+  },
+  "strategy-play-for-overtime": {
+    "text": "Jouons l’overtime",
+    "meaning": "Planifier de tenir ou forcer la prolongation."
+  },
+  "objective-touch-in-overtime": {
+    "text": "Touchez en overtime",
+    "meaning": "Appel urgent pour garder la prolongation active."
+  },
+  "danger-third-party-coming": {
+    "text": "Une troisième équipe arrive",
+    "meaning": "Prévenir qu’une autre équipe ennemie rejoint le combat."
+  },
+  "antiToxic-mute-and-play": {
+    "text": "Mute et continuez à jouer",
+    "meaning": "Réponse calme à la toxicité sans faire dérailler la partie."
   }
 }

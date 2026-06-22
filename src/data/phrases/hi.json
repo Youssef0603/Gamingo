@@ -1,342 +1,342 @@
 {
   "callouts-gg": {
-    "text": "GG",
+    "text": "अच्छा मैच",
     "meaning": "अच्छा गेम; आमतौर पर मैच खत्म होने पर कहा जाता है"
   },
   "slang-ggwp": {
-    "text": "GGWP",
+    "text": "अच्छा मैच, बढ़िया खेले",
     "meaning": "अच्छा गेम, अच्छा खेला"
   },
   "callouts-glhf": {
-    "text": "GLHF",
+    "text": "शुभकामनाएँ, मज़े करो",
     "meaning": "शुभकामनाएँ, मज़े करो; मैच शुरू होने से पहले कहा जाने वाला दोस्ताना संदेश"
   },
   "slang-wp": {
-    "text": "WP",
+    "text": "बढ़िया खेले",
     "meaning": "अच्छा खेला"
   },
   "slang-nt": {
-    "text": "NT",
+    "text": "अच्छी कोशिश",
     "meaning": "अच्छी कोशिश"
   },
   "callouts-nice": {
-    "text": "Nice!",
+    "text": "बढ़िया!",
     "meaning": "अच्छे play के बाद तुरंत तारीफ़"
   },
   "teamwork-nice-try": {
-    "text": "Nice try",
+    "text": "अच्छी कोशिश",
     "meaning": "असफल कोशिश के बाद समर्थन देने वाला वाक्य"
   },
   "teamwork-nice-shot": {
-    "text": "Nice shot",
+    "text": "बढ़िया शॉट",
     "meaning": "अच्छे shot के बाद तारीफ़"
   },
   "callouts-thanks": {
-    "text": "Thanks / धन्यवाद",
+    "text": "धन्यवाद",
     "meaning": "teammate को जल्दी से धन्यवाद कहना"
   },
   "callouts-sorry": {
-    "text": "Sorry / सॉरी",
+    "text": "माफ़ करना",
     "meaning": "गलती या गलती से teammate को damage देने के बाद माफ़ी"
   },
   "callouts-my-bad": {
-    "text": "My bad / मेरी गलती",
+    "text": "मेरी गलती",
     "meaning": "बोलने वाला मानता है कि गलती उसकी थी"
   },
   "callouts-good-job": {
-    "text": "Good job",
+    "text": "अच्छा काम",
     "meaning": "किसी अच्छे action या round के बाद सकारात्मक feedback"
   },
   "teamwork-good-comms": {
-    "text": "Good comms",
+    "text": "अच्छी कम्युनिकेशन",
     "meaning": "टीम की communication उपयोगी थी"
   },
   "slang-afk": {
-    "text": "AFK",
+    "text": "मैं थोड़ी देर के लिए दूर हूँ",
     "meaning": "keyboard से दूर; player active नहीं है"
   },
   "slang-brb": {
-    "text": "BRB",
+    "text": "अभी वापस आता हूँ",
     "meaning": "अभी वापस आता हूँ"
   },
   "slang-dc": {
-    "text": "DC",
+    "text": "मेरा कनेक्शन टूट गया",
     "meaning": "disconnect; match से connection टूटना"
   },
   "slang-disconnect": {
-    "text": "Disconnect",
+    "text": "मैं मैच से डिस्कनेक्ट हो गया",
     "meaning": "player का match से connection टूट जाता है"
   },
   "slang-reconnect": {
-    "text": "Reconnect",
+    "text": "मैं फिर से कनेक्ट हो रहा हूँ",
     "meaning": "connection टूटने के बाद player वापस आता है"
   },
   "slang-lag": {
-    "text": "Lag",
+    "text": "मेरे गेम में लैग है",
     "meaning": "delay या network problem"
   },
   "slang-lag-spike": {
-    "text": "Lag spike",
+    "text": "अचानक बहुत लैग आया",
     "meaning": "अचानक थोड़ी देर का network delay"
   },
   "slang-ping": {
-    "text": "Ping",
+    "text": "मेरा पिंग बहुत हाई है",
     "meaning": "context के हिसाब से map marker या network delay"
   },
   "slang-fps": {
-    "text": "FPS",
+    "text": "मेरे फ्रेम गिर गए",
     "meaning": "first-person shooter, या performance की बात में frames per second"
   },
   "slang-server": {
-    "text": "Server",
+    "text": "सर्वर ठीक नहीं चल रहा",
     "meaning": "match host करने वाला online system या region"
   },
   "slang-hit-reg": {
-    "text": "Hit reg",
+    "text": "मेरे शॉट गिन नहीं रहे",
     "meaning": "hit registration; game shot या attack को सही hit मानता है या नहीं"
   },
   "slang-desync": {
-    "text": "Desync",
+    "text": "गेम सिंक से बाहर है",
     "meaning": "जब players जो देखते हैं वह server या एक-दूसरे से sync में नहीं होता"
   },
   "slang-op": {
-    "text": "OP",
+    "text": "यह बहुत ज़्यादा ताकतवर है",
     "meaning": "overpowered; बाकी चीज़ों से ज़्यादा strong"
   },
   "slang-meta": {
-    "text": "Meta",
+    "text": "अभी यही मेटा है",
     "meaning": "इस समय की सबसे effective या popular strategy, character, weapon या build"
   },
   "slang-nerf": {
-    "text": "Nerf",
+    "text": "इसे कमजोर कर दिया गया",
     "meaning": "game update से किसी चीज़ को कमजोर करना"
   },
   "slang-buff": {
-    "text": "Buff",
+    "text": "इसे मजबूत कर दिया गया",
     "meaning": "game update से किसी चीज़ को मजबूत करना"
   },
   "slang-noob": {
-    "text": "Noob",
+    "text": "नया खिलाड़ी",
     "meaning": "नया या inexperienced player; insult की तरह भी इस्तेमाल हो सकता है"
   },
   "slang-pro": {
-    "text": "Pro",
+    "text": "प्रो खिलाड़ी",
     "meaning": "बहुत skilled या professional level का player"
   },
   "slang-bot": {
-    "text": "Bot",
+    "text": "वह बॉट जैसा खेल रहा है",
     "meaning": "AI-controlled character, या खराब खेलने वाले player के लिए insult"
   },
   "slang-smurf": {
-    "text": "Smurf",
+    "text": "स्मर्फ अकाउंट",
     "meaning": "skilled player जो lower-rank account इस्तेमाल कर रहा हो"
   },
   "slang-camper": {
-    "text": "Camper",
+    "text": "वह कैंप कर रहा है",
     "meaning": "ऐसा player जो kills के लिए एक ही जगह इंतज़ार करता है"
   },
   "slang-tryhard": {
-    "text": "Tryhard",
+    "text": "वह बहुत ज़्यादा सीरियस खेल रहा है",
     "meaning": "बहुत serious होकर खेलने वाला player; कभी-कभी insult की तरह"
   },
   "slang-sweat": {
-    "text": "Sweat",
+    "text": "बहुत पसीना बहाने वाला खिलाड़ी",
     "meaning": "जीतने के लिए बहुत ज़्यादा try करने वाला player"
   },
   "slang-tilt": {
-    "text": "Tilt",
+    "text": "मैं टिल्ट हो गया हूँ",
     "meaning": "frustration जिससे player और खराब खेलने लगता है"
   },
   "slang-toxic": {
-    "text": "Toxic",
+    "text": "ज़हरीला व्यवहार",
     "meaning": "chat या gameplay में rude, abusive या नुकसानदेह behavior"
   },
   "slang-salty": {
-    "text": "Salty",
+    "text": "हार के बाद चिढ़ा हुआ",
     "meaning": "हारने या outplay होने के बाद गुस्सा या upset होना"
   },
   "slang-rage-quit": {
-    "text": "Rage quit",
+    "text": "गुस्से में मैच छोड़ दिया",
     "meaning": "गुस्से में game छोड़ देना"
   },
   "slang-pvp": {
-    "text": "PvP",
+    "text": "खिलाड़ी बनाम खिलाड़ी",
     "meaning": "player versus player; जहाँ players दूसरे players से लड़ते हैं"
   },
   "slang-pve": {
-    "text": "PvE",
+    "text": "खिलाड़ी बनाम गेम दुश्मन",
     "meaning": "player versus environment; AI enemies या game systems के खिलाफ gameplay"
   },
   "slang-ranked": {
-    "text": "Ranked",
+    "text": "रैंक वाला मोड",
     "meaning": "competitive mode जो rank को affect करता है"
   },
   "slang-casual": {
-    "text": "Casual",
+    "text": "कैज़ुअल मोड",
     "meaning": "relaxed play के लिए non-ranked mode"
   },
   "slang-mmr": {
-    "text": "MMR",
+    "text": "मैचमेकिंग रेटिंग",
     "meaning": "matchmaking rating; fair matches बनाने के लिए hidden या visible skill rating"
   },
   "slang-elo": {
-    "text": "Elo",
+    "text": "स्किल रेटिंग",
     "meaning": "rating system या competitive skill rating के लिए सामान्य शब्द"
   },
   "slang-kd": {
-    "text": "K/D",
+    "text": "किल/डेथ अनुपात",
     "meaning": "kill/death ratio; deaths के मुकाबले kills"
   },
   "slang-kda": {
-    "text": "KDA",
+    "text": "किल, डेथ और असिस्ट",
     "meaning": "kills, deaths और assists; common performance statistic"
   },
   "slang-mvp": {
-    "text": "MVP",
+    "text": "मैच का सबसे अहम खिलाड़ी",
     "meaning": "सबसे valuable player; सबसे बड़ा impact डालने वाला player"
   },
   "slang-rng": {
-    "text": "RNG",
+    "text": "रैंडम किस्मत",
     "meaning": "random number generation; game में luck-based results"
   },
   "slang-xp": {
-    "text": "XP",
+    "text": "अनुभव अंक",
     "meaning": "character, account या battle pass level up करने के लिए experience points"
   },
   "slang-level-up": {
-    "text": "Level up",
+    "text": "लेवल अप",
     "meaning": "progress और experience से level बढ़ाना या improve करना"
   },
   "slang-grind": {
-    "text": "Grind",
+    "text": "ग्राइंड",
     "meaning": "rewards, rank या progress के लिए matches या tasks बार-बार करना"
   },
   "slang-farm": {
-    "text": "Farm",
+    "text": "फार्म",
     "meaning": "resources, gold, XP या आसान kills बार-बार collect करना"
   },
   "slang-main": {
-    "text": "Main",
+    "text": "मेन",
     "meaning": "character, role या weapon जिसे player सबसे ज़्यादा इस्तेमाल करता है"
   },
   "slang-alt": {
-    "text": "Alt",
+    "text": "ऑल्ट",
     "meaning": "secondary account या alternate character"
   },
   "slang-party": {
-    "text": "Party",
+    "text": "पार्टी",
     "meaning": "players का group जो साथ में queue करता है"
   },
   "slang-squad": {
-    "text": "Squad",
+    "text": "स्क्वॉड",
     "meaning": "साथ काम करने वाली छोटी player team"
   },
   "slang-lobby": {
-    "text": "Lobby",
+    "text": "लॉबी",
     "meaning": "match से पहले की जगह या match में players का group"
   },
   "slang-queue": {
-    "text": "Queue",
+    "text": "क्यू",
     "meaning": "game ढूँढने के लिए matchmaking में wait करना"
   },
   "slang-matchmaking": {
-    "text": "Matchmaking",
+    "text": "मैचमेकिंग",
     "meaning": "match के लिए players ढूँढने और balance करने वाला system"
   },
   "slang-solo-queue": {
-    "text": "Solo queue",
+    "text": "सोलो क्यू",
     "meaning": "premade team के बिना अकेले matchmaking खेलना"
   },
   "slang-duo": {
-    "text": "Duo",
+    "text": "डुओ",
     "meaning": "दो players का pair बनाकर खेलना"
   },
   "slang-stack": {
-    "text": "Stack",
+    "text": "स्टैक",
     "meaning": "साथ queue किया हुआ premade group, अक्सर full team"
   },
   "slang-comms": {
-    "text": "Comms",
+    "text": "कम्युनिकेशन",
     "meaning": "voice chat, text chat या pings से team communication"
   },
   "callouts-voice-chat": {
-    "text": "Voice chat",
+    "text": "वॉइस चैट",
     "meaning": "microphone से communication"
   },
   "callouts-text-chat": {
-    "text": "Text chat",
+    "text": "टेक्स्ट चैट",
     "meaning": "typed messages से communication"
   },
   "callouts-no-mic": {
-    "text": "No mic",
+    "text": "माइक नहीं है",
     "meaning": "बोलने वाला microphone इस्तेमाल नहीं कर सकता"
   },
   "callouts-mic-muted": {
-    "text": "Mic muted",
+    "text": "माइक म्यूट है",
     "meaning": "microphone mute है"
   },
   "slang-dps": {
-    "text": "DPS",
+    "text": "प्रति सेकंड नुकसान",
     "meaning": "damage per second, या damage देने पर focused role"
   },
   "slang-tank": {
-    "text": "Tank",
+    "text": "टैंक",
     "meaning": "durable role जो damage absorb करता है और teammates को बचाता है"
   },
   "slang-support": {
-    "text": "Support",
+    "text": "सपोर्ट",
     "meaning": "healing, utility, buffs या teammates की help पर focused role"
   },
   "slang-healer": {
-    "text": "Healer",
+    "text": "हीलर",
     "meaning": "support role जो teammate health restore करने पर focused होता है"
   },
   "slang-aoe": {
-    "text": "AOE",
+    "text": "क्षेत्रीय असर",
     "meaning": "area of effect; area को affect करने वाला damage या ability"
   },
   "slang-cc": {
-    "text": "CC",
+    "text": "दुश्मन को रोकना",
     "meaning": "crowd control; stun, slow या disable करने वाली abilities"
   },
   "slang-ult": {
-    "text": "Ult",
+    "text": "अल्टिमेट क्षमता",
     "meaning": "ultimate का short form; character की सबसे strong ability"
   },
   "callouts-ultimate-ready": {
-    "text": "Ultimate ready",
+    "text": "अल्टिमेट तैयार है",
     "meaning": "speaker की ultimate ability ready है"
   },
   "callouts-no-ultimate": {
-    "text": "No ult",
+    "text": "मेरे पास अल्टिमेट नहीं है",
     "meaning": "speaker या enemy के पास ultimate available नहीं है"
   },
   "callouts-ability-ready": {
-    "text": "Ability ready",
+    "text": "स्किल तैयार है",
     "meaning": "एक उपयोगी ability available है"
   },
   "callouts-ability-down": {
-    "text": "Ability down",
+    "text": "स्किल कूलडाउन पर है",
     "meaning": "एक key ability unavailable है या cooldown पर है"
   },
   "callouts-cooldown": {
-    "text": "Cooldown",
+    "text": "कूलडाउन का इंतज़ार करो",
     "meaning": "ability अभी use नहीं की जा सकती"
   },
   "callouts-enemy-spotted": {
-    "text": "Enemy spotted",
+    "text": "दुश्मन दिखा",
     "meaning": "एक enemy दिखाई दिया है"
   },
   "callouts-enemy-here": {
-    "text": "Enemy here / दुश्मन यहाँ",
+    "text": "दुश्मन यहाँ है",
     "meaning": "enemy speaker की location पर है"
   },
   "callouts-enemy-there": {
-    "text": "Enemy there / दुश्मन वहाँ",
+    "text": "दुश्मन वहाँ है",
     "meaning": "enemy marked या बताई गई location पर है"
   },
   "callouts-on-me": {
-    "text": "On me / मेरे पास",
+    "text": "मेरे पास",
     "meaning": "enemy या action speaker के पास है"
   },
   "callouts-i-see-him": {
@@ -348,11 +348,11 @@
     "meaning": "speaker को एक या ज़्यादा enemies दिख रहे हैं"
   },
   "callouts-one-more": {
-    "text": "One more",
+    "text": "एक और",
     "meaning": "एक और enemy पास है या एक और action चाहिए"
   },
   "callouts-last-one": {
-    "text": "Last one",
+    "text": "आखिरी बचा है",
     "meaning": "सिर्फ एक enemy बचा है"
   },
   "callouts-two-enemies-here": {
@@ -368,11 +368,11 @@
     "meaning": "इस area में ज़्यादातर या सभी enemies grouped हैं"
   },
   "callouts-enemy-missing": {
-    "text": "Enemy missing",
+    "text": "दुश्मन गायब है",
     "meaning": "enemy अब दिख नहीं रहा और rotate कर सकता है"
   },
   "callouts-all-missing": {
-    "text": "All missing",
+    "text": "सभी दुश्मन गायब हैं",
     "meaning": "अभी कोई enemy visible नहीं है"
   },
   "callouts-behind-you": {
@@ -380,11 +380,11 @@
     "meaning": "enemy teammate के ठीक पीछे है"
   },
   "callouts-left-side": {
-    "text": "Left side! / बाईं तरफ",
+    "text": "बाईं तरफ",
     "meaning": "left से enemy pressure आ रहा है"
   },
   "callouts-right-side": {
-    "text": "Right side! / दाईं तरफ",
+    "text": "दाईं तरफ",
     "meaning": "right से enemy pressure आ रहा है"
   },
   "callouts-above-us": {
@@ -400,75 +400,75 @@
     "meaning": "threat सीधे सामने है"
   },
   "callouts-mid": {
-    "text": "Mid",
+    "text": "मिड",
     "meaning": "enemy या action middle lane में है"
   },
   "callouts-top-mid": {
-    "text": "Top mid",
+    "text": "ऊपरी मिड",
     "meaning": "enemy upper middle position पर है"
   },
   "callouts-bottom-mid": {
-    "text": "Bottom mid",
+    "text": "निचला मिड",
     "meaning": "enemy lower middle position पर है"
   },
   "callouts-spawn": {
-    "text": "Spawn",
+    "text": "स्पॉन पॉइंट",
     "meaning": "enemy या team spawn के पास है"
   },
   "callouts-our-spawn": {
-    "text": "हमारा spawn",
+    "text": "हमारा स्पॉन",
     "meaning": "action हमारे starting area के पास है"
   },
   "callouts-their-spawn": {
-    "text": "उनका spawn",
+    "text": "उनका स्पॉन",
     "meaning": "action enemy starting area के पास है"
   },
   "callouts-flank": {
-    "text": "Flank",
+    "text": "साइड से घुसना",
     "meaning": "enemy side या पीछे से attack कर रहा है"
   },
   "callouts-watch-flank": {
-    "text": "Flank देखो",
+    "text": "फ्लैंक देखो",
     "meaning": "किसी को team के पीछे enemies check करने चाहिए"
   },
   "danger-incoming": {
-    "text": "Incoming!",
+    "text": "आ रहा है!",
     "meaning": "threat या attack अभी आ रहा है"
   },
   "danger-grenade": {
-    "text": "Grenade!",
+    "text": "ग्रेनेड!",
     "meaning": "grenade पास में है"
   },
   "danger-flash": {
-    "text": "Flash!",
+    "text": "फ्लैश!",
     "meaning": "flashbang या blind effect आ रहा है"
   },
   "danger-sniper": {
-    "text": "Sniper!",
+    "text": "स्नाइपर!",
     "meaning": "sniper area को threaten कर रहा है"
   },
   "danger-trap": {
-    "text": "Trap!",
+    "text": "ट्रैप!",
     "meaning": "पास में trap है"
   },
   "danger-mine": {
-    "text": "Mine!",
+    "text": "माइन!",
     "meaning": "पास में explosive mine है"
   },
   "danger-ambush": {
-    "text": "Ambush!",
+    "text": "घात!",
     "meaning": "enemies team को surprise करने के लिए इंतज़ार कर रहे हैं"
   },
   "danger-they-are-rushing": {
-    "text": "वे rush कर रहे हैं",
+    "text": "वे रश कर रहे हैं",
     "meaning": "enemies बहुत जल्दी attack कर रहे हैं"
   },
   "danger-they-are-pushing": {
-    "text": "वे push कर रहे हैं",
+    "text": "वे पुश कर रहे हैं",
     "meaning": "enemies aggressively आगे बढ़ रहे हैं"
   },
   "danger-they-are-flanking": {
-    "text": "वे flank कर रहे हैं",
+    "text": "वे फ्लैंक कर रहे हैं",
     "meaning": "enemies पीछे या side से attack कर रहे हैं"
   },
   "danger-they-know": {
@@ -480,15 +480,15 @@
     "meaning": "speaker spot हो गया है"
   },
   "danger-i-am-exposed": {
-    "text": "मैं exposed हूँ",
+    "text": "मैं एक्सपोज़्ड हूँ",
     "meaning": "speaker risky visible position में है"
   },
   "danger-no-cover": {
-    "text": "Cover नहीं है",
+    "text": "कवर नहीं है",
     "meaning": "छिपने के लिए safe जगह नहीं है"
   },
   "danger-bad-angle": {
-    "text": "Bad angle",
+    "text": "गलत एंगल",
     "meaning": "current angle dangerous या unfavorable है"
   },
   "danger-get-out": {
@@ -496,111 +496,111 @@
     "meaning": "dangerous area तुरंत छोड़ो"
   },
   "danger-back-up": {
-    "text": "Back up",
+    "text": "पीछे हटो",
     "meaning": "danger से दूर जाओ"
   },
   "callouts-i-am-down": {
-    "text": "मैं down हूँ",
+    "text": "मैं गिर गया हूँ",
     "meaning": "speaker knocked, downed या killed है और fight नहीं कर सकता"
   },
   "callouts-i-am-low": {
-    "text": "मैं low हूँ",
+    "text": "मेरी हेल्थ कम है",
     "meaning": "speaker की health low है और सावधानी या help चाहिए"
   },
   "callouts-low-hp": {
-    "text": "Low HP",
+    "text": "मेरी हेल्थ कम है",
     "meaning": "enemy या teammate की health बहुत कम बची है"
   },
   "callouts-he-is-low": {
-    "text": "वह low है",
+    "text": "उसकी हेल्थ कम है",
     "meaning": "male enemy weak है और finish हो सकता है"
   },
   "callouts-they-are-low": {
-    "text": "वे low हैं",
+    "text": "उनकी हेल्थ कम है",
     "meaning": "एक या ज़्यादा enemies weak हैं और finish हो सकते हैं"
   },
   "callouts-one-shot": {
-    "text": "One shot",
+    "text": "एक गोली में डाउन होगा",
     "meaning": "enemy को मरने के लिए सिर्फ एक hit और चाहिए"
   },
   "callouts-armor-cracked": {
-    "text": "Armor cracked",
+    "text": "उसकी आर्मर टूट गई",
     "meaning": "enemy की armor broken या बहुत weak है"
   },
   "callouts-shield-broken": {
-    "text": "Shield broken",
+    "text": "शील्ड टूट गई",
     "meaning": "enemy की shield या armor destroy हो गई है"
   },
   "callouts-no-shield": {
-    "text": "No shield",
+    "text": "शील्ड नहीं है",
     "meaning": "enemy के पास shield या armor नहीं बची"
   },
   "callouts-tagged-him": {
-    "text": "Tagged him",
+    "text": "उसे हिट किया",
     "meaning": "speaker ने enemy को damage दिया"
   },
   "callouts-hit-for-fifty": {
-    "text": "50 hit किया",
+    "text": "50 डैमेज दिया",
     "meaning": "enemy ने लगभग 50 damage लिया"
   },
   "callouts-hit-for-a-hundred": {
-    "text": "100 hit किया",
+    "text": "100 डैमेज दिया",
     "meaning": "enemy ने लगभग 100 damage लिया"
   },
   "callouts-knocked-one": {
-    "text": "एक knock",
+    "text": "एक को गिराया",
     "meaning": "एक enemy down हुआ है"
   },
   "callouts-finished-one": {
-    "text": "एक finish",
+    "text": "एक को खत्म किया",
     "meaning": "downed enemy eliminate हो गया है"
   },
   "callouts-team-wipe": {
-    "text": "Team wipe",
+    "text": "पूरी टीम साफ",
     "meaning": "पूरी enemy team eliminate हो गई है"
   },
   "instructions-push": {
-    "text": "Push",
+    "text": "अब धक्का दो",
     "meaning": "attack करो या move करना forward"
   },
   "instructions-rush": {
-    "text": "Rush",
+    "text": "तेज़ी से अंदर चलो",
     "meaning": "attack करो very quickly"
   },
   "instructions-hold": {
-    "text": "Hold करो",
+    "text": "होल्ड करो",
     "meaning": "रहो in position"
   },
   "instructions-defend": {
-    "text": "Defend करो",
+    "text": "डिफेंड करो",
     "meaning": "site या area को protect करो"
   },
   "instructions-attack": {
-    "text": "Attack करो",
+    "text": "अटैक करो",
     "meaning": "start करो offensive pressure"
   },
   "instructions-retreat": {
-    "text": "Retreat करो",
+    "text": "पीछे हटो करो",
     "meaning": "move करना करो back को safety"
   },
   "instructions-rotate": {
-    "text": "Rotate करो",
+    "text": "रोटेट करो",
     "meaning": "move करना करो को another lane या objective"
   },
   "callouts-rotating": {
-    "text": "Rotate कर रहे हैं",
+    "text": "रोटेट कर रहे हैं",
     "meaning": "enemies दूसरे area में move कर रहे हैं"
   },
   "callouts-they-rotated": {
-    "text": "वे rotate हो गए",
+    "text": "वे रोटेट हो गए",
     "meaning": "enemy team दूसरे site या lane पर चली गई है"
   },
   "callouts-fake-rotate": {
-    "text": "Fake rotate",
+    "text": "फेक रोटेट",
     "meaning": "enemy may be pretending को rotate"
   },
   "callouts-push-now": {
-    "text": "अब push करो",
+    "text": "अब पुश करो",
     "meaning": "तुरंत attack करो"
   },
   "callouts-go-now": {
@@ -608,19 +608,19 @@
     "meaning": "तुरंत action लो"
   },
   "callouts-fall-back": {
-    "text": "Fall back",
+    "text": "पीछे हटो",
     "meaning": "safe position पर retreat करो"
   },
   "callouts-group-up": {
-    "text": "Group up",
+    "text": "साथ आओ",
     "meaning": "अगले play से पहले साथ इकट्ठा हो जाओ"
   },
   "callouts-regroup": {
-    "text": "Regroup",
+    "text": "फिर से इकट्ठा हो",
     "meaning": "fight या rotation के बाद फिर साथ आओ"
   },
   "callouts-need-help": {
-    "text": "Help चाहिए",
+    "text": "मदद चाहिए",
     "meaning": "speaker pressure में है और help चाहिए"
   },
   "callouts-help-me": {
@@ -628,67 +628,67 @@
     "meaning": "speaker चाहिए immediate help"
   },
   "callouts-need-backup": {
-    "text": "Backup चाहिए",
+    "text": "बैकअप चाहिए",
     "meaning": "speaker चाहिए teammate support"
   },
   "callouts-i-need-healing": {
-    "text": "Heal चाहिए",
+    "text": "हील चाहिए",
     "meaning": "speaker चाहता है कि a heal या support ability"
   },
   "instructions-heal-me": {
-    "text": "मुझे heal करो",
+    "text": "मुझे हील करो",
     "meaning": "speaker पर healing ability या item use करो"
   },
   "instructions-revive-me": {
-    "text": "मुझे revive करो",
+    "text": "मुझे रिवाइव करो",
     "meaning": "down होने के बाद speaker को वापस fight में लाओ"
   },
   "instructions-res-me": {
-    "text": "Res me",
+    "text": "मुझे रिवाइव करो",
     "meaning": "Short के लिए revive या resurrect me"
   },
   "instructions-cover-the-revive": {
-    "text": "Revive cover करो",
+    "text": "रिवाइव कवर करो",
     "meaning": "revive कर रहे player को protect करो"
   },
   "callouts-need-ammo": {
-    "text": "Ammo चाहिए",
+    "text": "अमो चाहिए",
     "meaning": "speaker है low on ammunition"
   },
   "callouts-out-of-ammo": {
-    "text": "Ammo खत्म",
+    "text": "अमो खत्म",
     "meaning": "speaker नहीं कर सकता shoot जब तक reloaded या resupplied"
   },
   "callouts-reloading": {
-    "text": "Reloading",
+    "text": "रीलोड कर रहा हूँ",
     "meaning": "speaker reload कर रहा है और सुरक्षित fight नहीं कर सकता"
   },
   "callouts-cover-me": {
-    "text": "Cover करो",
+    "text": "कवर करो",
     "meaning": "speaker को protect करो जब वह move, reload या objective कर रहा हो"
   },
   "callouts-i-got-you": {
-    "text": "मैं cover कर रहा हूँ",
+    "text": "मैं कवर कर रहा हूँ",
     "meaning": "speaker teammate को support या protect करेगा"
   },
   "callouts-ping-it": {
-    "text": "Ping करो",
+    "text": "पिंग करो",
     "meaning": "map पर location mark करो"
   },
   "callouts-mark-the-enemy": {
-    "text": "Enemy mark करो",
+    "text": "दुश्मन मार्क करो",
     "meaning": "enemy पर ping या marker लगाओ"
   },
   "callouts-i-marked-it": {
-    "text": "मैंने mark किया",
+    "text": "मैंने मार्क किया",
     "meaning": "speaker ने marker लगा दिया है"
   },
   "callouts-check-map": {
-    "text": "Map देखो",
+    "text": "मैप देखो",
     "meaning": "minimap या tactical map देखो"
   },
   "callouts-look-at-ping": {
-    "text": "Ping देखो",
+    "text": "पिंग देखो",
     "meaning": "लगाए गए marker पर ध्यान दो"
   },
   "instructions-follow-me": {
@@ -700,7 +700,7 @@
     "meaning": "Keep close को teammates"
   },
   "instructions-spread-out": {
-    "text": "Spread out",
+    "text": "फैल जाओ",
     "meaning": "मत stand too close साथ में"
   },
   "instructions-wait-for-me": {
@@ -708,95 +708,95 @@
     "meaning": "speaker आने तक action delay करो"
   },
   "instructions-wait-for-cooldowns": {
-    "text": "Cooldowns का wait करो",
+    "text": "कूलडाउन का इंतज़ार करो",
     "meaning": "abilities ready होने तक fight मत करो"
   },
   "objective-plant-the-bomb": {
-    "text": "Bomb plant करो",
+    "text": "बम लगाओ",
     "meaning": "bomb या spike को objective site पर place करो"
   },
   "objective-bomb-planted": {
-    "text": "Bomb planted",
+    "text": "बम प्लांट हो गया",
     "meaning": "bomb या spike plant हो चुका है"
   },
   "objective-bomb-down": {
-    "text": "Bomb down",
+    "text": "बम गिरा है",
     "meaning": "bomb carrier ने objective item गिरा दिया है"
   },
   "objective-spike-down": {
-    "text": "Spike down",
+    "text": "स्पाइक गिरा है",
     "meaning": "spike गिर गया है"
   },
   "objective-defuse-the-bomb": {
-    "text": "Bomb defuse करो",
+    "text": "बम डिफ्यूज़ करो",
     "meaning": "planted bomb फटने से पहले उसे defuse करो"
   },
   "objective-half-defuse": {
-    "text": "Half defuse",
+    "text": "आधा डिफ्यूज़",
     "meaning": "defuse को halfway checkpoint तक करो"
   },
   "objective-stick-the-defuse": {
-    "text": "Stick the defuse",
+    "text": "डिफ्यूज़ पकड़े रहो",
     "meaning": "pressure में भी defuse जारी रखो"
   },
   "objective-fake-defuse": {
-    "text": "Fake defuse",
+    "text": "फेक डिफ्यूज़",
     "meaning": "enemies को peek कराने के लिए defuse tap करो"
   },
   "objective-objective-secured": {
-    "text": "Objective secured",
+    "text": "ऑब्जेक्टिव सुरक्षित",
     "meaning": "team ने objective ले लिया या protect कर लिया है"
   },
   "objective-objective-lost": {
-    "text": "Objective lost",
+    "text": "ऑब्जेक्टिव गया",
     "meaning": "enemy ने objective ले लिया है"
   },
   "objective-point-captured": {
-    "text": "Point captured",
+    "text": "पॉइंट कब्ज़ा",
     "meaning": "capture point अब control में है"
   },
   "objective-point-contested": {
-    "text": "Point contested",
+    "text": "पॉइंट पर लड़ाई",
     "meaning": "दोनों teams point के लिए fight कर रही हैं"
   },
   "objective-payload-moving": {
-    "text": "Payload चल रहा है",
+    "text": "पेलोड चल रहा है",
     "meaning": "escort objective आगे बढ़ रहा है"
   },
   "objective-payload-stopped": {
-    "text": "Payload रुका है",
+    "text": "पेलोड रुका है",
     "meaning": "escort objective move नहीं कर रहा है"
   },
   "slang-loot": {
-    "text": "Loot",
+    "text": "लूट",
     "meaning": "Useful items, weapons, resources, या rewards found या earned in game"
   },
   "callouts-loot-here": {
-    "text": "Loot यहाँ",
+    "text": "लूट यहाँ",
     "meaning": "इस location पर useful items हैं"
   },
   "callouts-good-loot": {
-    "text": "Good loot",
+    "text": "अच्छा लूट",
     "meaning": "इस area में valuable items हैं"
   },
   "callouts-need-weapon": {
-    "text": "Weapon चाहिए",
+    "text": "हथियार चाहिए",
     "meaning": "speaker को usable weapon चाहिए"
   },
   "callouts-need-shield": {
-    "text": "Shield चाहिए",
+    "text": "शील्ड चाहिए",
     "meaning": "speaker को armor या shield items चाहिए"
   },
   "callouts-need-meds": {
-    "text": "Meds चाहिए",
+    "text": "मेड्स चाहिए",
     "meaning": "speaker को healing items चाहिए"
   },
   "callouts-drop-ammo": {
-    "text": "Ammo drop करो",
+    "text": "अमो ड्रॉप करो",
     "meaning": "teammate को ammo दो"
   },
   "callouts-drop-weapon": {
-    "text": "Weapon drop करो",
+    "text": "हथियार ड्रॉप करो",
     "meaning": "teammate को weapon दो"
   },
   "callouts-take-this": {
@@ -812,351 +812,351 @@
     "meaning": "speaker item उठाना चाहता है"
   },
   "callouts-use-it": {
-    "text": "Use करो",
+    "text": "यूज़ करो",
     "meaning": "item या ability activate/consume करो"
   },
   "callouts-save-it": {
-    "text": "Save करो",
+    "text": "सेव करो करो",
     "meaning": "item या ability अभी use मत करो"
   },
   "strategy-default-setup": {
-    "text": "Default setup",
+    "text": "डिफॉल्ट सेटअप",
     "meaning": "start करो के साथ a normal safe formation"
   },
   "strategy-slow-push": {
-    "text": "Slow push",
+    "text": "धीमा पुश",
     "meaning": "attack करो carefully जब checking each area"
   },
   "strategy-fast-push": {
-    "text": "Fast push",
+    "text": "तेज़ पुश",
     "meaning": "attack करो quickly से पहले enemies कर सकता है react"
   },
   "strategy-fake-push": {
-    "text": "Fake push",
+    "text": "फेक पुश",
     "meaning": "Pretend को attack one area को pull enemies away"
   },
   "strategy-split-push": {
-    "text": "Split push",
+    "text": "स्प्लिट पुश",
     "meaning": "attack करो से two या more routes"
   },
   "strategy-retake": {
-    "text": "Retake",
+    "text": "रीटेक",
     "meaning": "objective खोने के बाद उसे वापस लेना"
   },
   "strategy-eco-round": {
-    "text": "Eco round",
+    "text": "ईको राउंड",
     "meaning": "use करो cheap equipment को save money"
   },
   "strategy-full-buy": {
-    "text": "Full buy",
+    "text": "फुल बाय",
     "meaning": "Everyone buys strong equipment"
   },
   "strategy-force-buy": {
-    "text": "Force buy",
+    "text": "फोर्स बाय",
     "meaning": "Buy despite low economy को try को win अभी"
   },
   "strategy-play-objective": {
-    "text": "Objective खेलो",
+    "text": "ऑब्जेक्टिव खेलो",
     "meaning": "kills से ज़्यादा objective को priority दो"
   },
   "strategy-play-for-picks": {
-    "text": "Play for picks",
+    "text": "पिक के लिए खेलो",
     "meaning": "commit करने से पहले एक safe elimination ढूँढना"
   },
   "strategy-take-map-control": {
-    "text": "Map control लो",
+    "text": "मैप कंट्रोल लो",
     "meaning": "map के important areas secure करो"
   },
   "strategy-gather-info": {
-    "text": "Gather info",
+    "text": "जानकारी लो",
     "meaning": "Scout से पहले committing"
   },
   "strategy-use-utility-first": {
-    "text": "Use utility first",
+    "text": "पहले यूटिलिटी इस्तेमाल करो",
     "meaning": "enter करने या fight से पहले abilities use करो"
   },
   "strategy-double-peek": {
-    "text": "Double peek",
+    "text": "डबल पीक",
     "meaning": "दो players same angle को साथ में peek करते हैं"
   },
   "strategy-off-angle": {
-    "text": "Off angle",
+    "text": "ऑफ एंगल",
     "meaning": "Hold an unusual position को surprise enemies"
   },
   "strategy-late-lurk": {
-    "text": "Late lurk",
+    "text": "लेट लर्क",
     "meaning": "One player delays और attacks से पीछे later"
   },
   "economy-buy": {
-    "text": "Buy",
+    "text": "खरीदो",
     "meaning": "Purchase weapons, gear, या items"
   },
   "economy-save": {
-    "text": "Save",
+    "text": "सेव करो",
     "meaning": "Keep money या resources के लिए a later round"
   },
   "economy-drop-me": {
-    "text": "Drop दे दो",
+    "text": "ड्रॉप दे दो",
     "meaning": "speaker को weapon, item या resource buy करके दो या दे दो"
   },
   "economy-i-can-drop": {
-    "text": "मैं drop दे सकता हूँ",
+    "text": "मैं ड्रॉप दे सकता हूँ",
     "meaning": "speaker कर सकता है buy या give a weapon, item, या resource को a teammate"
   },
   "economy-need-a-drop": {
-    "text": "Drop चाहिए",
+    "text": "ड्रॉप चाहिए",
     "meaning": "speaker चाहिए a teammate को buy या give them a weapon या resource"
   },
   "economy-full-save": {
-    "text": "Full save",
+    "text": "पूरा सेव",
     "meaning": "Nobody को चाहिए spend much this round"
   },
   "economy-light-buy": {
-    "text": "Light buy",
+    "text": "लाइट बाय",
     "meaning": "Buy only cheap या limited gear"
   },
   "economy-half-buy": {
-    "text": "Half buy",
+    "text": "हाफ बाय",
     "meaning": "Spend some resources but keep enough के लिए अगले round"
   },
   "economy-full-armor": {
-    "text": "Full armor",
+    "text": "फुल आर्मर",
     "meaning": "Buy maximum armor या protection"
   },
   "economy-no-armor": {
-    "text": "No armor",
+    "text": "आर्मर नहीं है",
     "meaning": "player के पास armor नहीं है"
   },
   "economy-upgrade-weapon": {
-    "text": "Upgrade weapon",
+    "text": "हथियार अपग्रेड करो",
     "meaning": "Switch को a stronger weapon"
   },
   "economy-keep-weapon": {
-    "text": "Keep weapon",
+    "text": "हथियार बचाओ",
     "meaning": "current weapon मत फेंको"
   },
   "economy-pick-up-gun": {
-    "text": "Gun उठा लो",
+    "text": "गन उठा लो",
     "meaning": "गिरा हुआ weapon उठाओ"
   },
   "economy-save-the-gun": {
-    "text": "Gun save करो",
+    "text": "गन सेव करो",
     "meaning": "weapon के साथ survive करो ताकि next round में use हो सके"
   },
   "economy-we-are-broke": {
-    "text": "हम broke हैं",
+    "text": "हमारे पास पैसे नहीं हैं",
     "meaning": "team के पास बहुत कम money या resources हैं"
   },
   "economy-they-are-broke": {
-    "text": "वे broke हैं",
+    "text": "उनके पास पैसे नहीं हैं",
     "meaning": "enemy team के पास कम money या resources हैं"
   },
   "slang-skin": {
-    "text": "Skin",
+    "text": "स्किन",
     "meaning": "A cosmetic look के लिए a character, weapon, या item"
   },
   "slang-battle-pass": {
-    "text": "Battle pass",
+    "text": "बैटल पास",
     "meaning": "reward track जो play करके cosmetics या items unlock करता है"
   },
   "slang-loadout": {
-    "text": "Loadout",
+    "text": "लोडआउट",
     "meaning": "match में selected weapons, gear, abilities या perks का setup"
   },
   "slang-build": {
-    "text": "Build",
+    "text": "बिल्ड",
     "meaning": "A chosen setup of items, abilities, stats, या upgrades"
   },
   "slang-perk": {
-    "text": "Perk",
+    "text": "पर्क",
     "meaning": "A passive bonus या special advantage selected by a player"
   },
   "slang-cosmetic": {
-    "text": "Cosmetic",
+    "text": "कॉस्मेटिक",
     "meaning": "An item that changes appearance बिना सीधे improving power"
   },
   "slang-patch": {
-    "text": "Patch",
+    "text": "पैच",
     "meaning": "A game update that fixes bugs, balances gameplay, या adds content"
   },
   "slang-patch-notes": {
-    "text": "Patch notes",
+    "text": "पैच नोट्स",
     "meaning": "Official notes explaining what changed in a game update"
   },
   "slang-hotfix": {
-    "text": "Hotfix",
+    "text": "हॉटफिक्स",
     "meaning": "A quick update that fixes an urgent issue"
   },
   "slang-bug": {
-    "text": "Bug",
+    "text": "बग",
     "meaning": "A game error या unintended problem"
   },
   "slang-glitch": {
-    "text": "Glitch",
+    "text": "ग्लिच",
     "meaning": "A strange या unintended game behavior, sometimes exploitable"
   },
   "slang-exploit": {
-    "text": "Exploit",
+    "text": "एक्सप्लॉइट",
     "meaning": "Abusing a bug या system के लिए an unfair advantage"
   },
   "slang-cheater": {
-    "text": "Cheater",
+    "text": "चीटर",
     "meaning": "A player use करते हुए unfair tools या methods को gain advantage"
   },
   "slang-hacker": {
-    "text": "Hacker",
+    "text": "हैकर",
     "meaning": "A player accused of use करते हुए cheats या unauthorized tools"
   },
   "slang-ban": {
-    "text": "Ban",
+    "text": "बैन",
     "meaning": "Block a player, character, map, या account से use करो"
   },
   "slang-report": {
-    "text": "Report",
+    "text": "रिपोर्ट",
     "meaning": "Send a complaint about cheating, toxicity, या rule breaking"
   },
   "slang-skill-issue": {
-    "text": "Skill issue",
+    "text": "स्किल इश्यू",
     "meaning": "teasing phrase; मतलब problem game में नहीं, poor play में है"
   },
   "slang-touch-grass": {
-    "text": "Touch grass",
+    "text": "ब्रेक ले लो",
     "meaning": "gaming या online arguing से break लेने को मज़ाक में कहना"
   },
   "slang-cooked": {
-    "text": "Cooked",
+    "text": "फँस गए",
     "meaning": "In serious trouble, outplayed, या likely को lose"
   },
   "slang-diffed": {
-    "text": "Diffed",
+    "text": "रोल में पीछे रह गए",
     "meaning": "same role या matchup में opposing player ने बेहतर performance दी"
   },
   "slang-quest": {
-    "text": "Quest",
+    "text": "क्वेस्ट",
     "meaning": "A mission या task that gives progress या rewards"
   },
   "slang-mission": {
-    "text": "Mission",
+    "text": "मिशन",
     "meaning": "goal या task जिसे player को complete करना होता है"
   },
   "slang-boss": {
-    "text": "Boss",
+    "text": "बॉस",
     "meaning": "strong enemy, अक्सर level या encounter के end में"
   },
   "slang-mob": {
-    "text": "Mob",
+    "text": "साधारण दुश्मन",
     "meaning": "A regular AI enemy या creature"
   },
   "slang-aggro": {
-    "text": "Aggro",
+    "text": "एग्रो",
     "meaning": "Enemy attention या threat focused on a player"
   },
   "slang-raid": {
-    "text": "Raid",
+    "text": "रेड",
     "meaning": "large cooperative challenge, अक्सर bosses के खिलाफ"
   },
   "slang-dungeon": {
-    "text": "Dungeon",
+    "text": "डंजन",
     "meaning": "A structured PvE area के साथ enemies, objectives, और rewards"
   },
   "slang-cc-chain": {
-    "text": "CC chain",
+    "text": "लगातार रोकने वाली स्किलें",
     "meaning": "Multiple crowd-control effects use किया गया in sequence को keep a target disabled"
   },
   "slang-clutch-or-kick": {
-    "text": "Clutch or kick",
+    "text": "क्लच करो वरना किक",
     "meaning": "मज़ाकिया pressure phrase जब एक player को अकेले clutch करना होता है"
   },
   "slang-diff": {
-    "text": "Diff",
+    "text": "रोल डिफ",
     "meaning": "Short के लिए difference; use किया गया को say one player या role performed better"
   },
   "slang-gap": {
-    "text": "Gap",
+    "text": "स्किल गैप",
     "meaning": "players या teams के बीच बड़ा skill difference"
   },
   "slang-gg-ez": {
-    "text": "GG EZ",
+    "text": "आसान मैच था",
     "meaning": "Good game, easy; often considered disrespectful"
   },
   "slang-hitbox": {
-    "text": "Hitbox",
+    "text": "हिटबॉक्स",
     "meaning": "invisible area जहाँ shots hit के रूप में count होते हैं"
   },
   "slang-spawn-camp": {
-    "text": "Spawn camp",
+    "text": "स्पॉन कैंप",
     "meaning": "attack करो enemies तुरंत as they spawn"
   },
   "slang-spawn-kill": {
-    "text": "Spawn kill",
+    "text": "स्पॉन किल",
     "meaning": "kill करो a player तुरंत के बाद they spawn"
   },
   "callouts-ace": {
-    "text": "Ace",
+    "text": "ऐस",
     "meaning": "एक player ने पूरी enemy team eliminate की"
   },
   "callouts-back-site": {
-    "text": "Back site",
+    "text": "साइट के पीछे",
     "meaning": "enemy objective site के back में है"
   },
   "callouts-bad-timing": {
-    "text": "Bad timing",
+    "text": "खराब टाइमिंग",
     "meaning": "action unlucky या poor moment पर हुआ"
   },
   "callouts-bait-and-switch": {
-    "text": "Bait and switch",
+    "text": "बैट और स्विच",
     "meaning": "एक player attention खींचता है और दूसरा kill लेता है"
   },
   "callouts-basement-clear": {
-    "text": "Basement clear",
+    "text": "बेसमेंट साफ़",
     "meaning": "basement या lower area safe लगता है"
   },
   "callouts-blocked": {
-    "text": "Blocked",
+    "text": "ब्लॉक है",
     "meaning": "path unavailable या unsafe है"
   },
   "callouts-bridge-clear": {
-    "text": "Bridge clear",
+    "text": "ब्रिज साफ़",
     "meaning": "bridge route safe लगता है"
   },
   "callouts-careful": {
-    "text": "Careful",
+    "text": "सावधान",
     "meaning": "सावधान रहो, danger हो सकता है"
   },
   "callouts-carry": {
-    "text": "Carry",
+    "text": "कैरी",
     "meaning": "एक player team का ज़्यादातर काम कर रहा है"
   },
   "callouts-circle-moving": {
-    "text": "Circle moving",
+    "text": "सर्कल चल रहा है",
     "meaning": "battle royale circle position बदल रहा है"
   },
   "callouts-clean-fight": {
-    "text": "Clean fight",
+    "text": "साफ़ फाइट",
     "meaning": "team ने fight अच्छे control के साथ जीती"
   },
   "callouts-clear-left": {
-    "text": "Left clear",
+    "text": "बायाँ साफ़",
     "meaning": "left side safe लगती है"
   },
   "callouts-clear-mid": {
-    "text": "Mid clear",
+    "text": "मिड साफ़",
     "meaning": "middle area safe लगता है"
   },
   "callouts-clear-right": {
-    "text": "Right clear",
+    "text": "दायाँ साफ़",
     "meaning": "right side safe लगती है"
   },
   "callouts-close-corner": {
-    "text": "Close corner",
+    "text": "पास वाला कोना",
     "meaning": "enemy पास वाले corner में छिपा है"
   },
   "callouts-close-game": {
-    "text": "Close game",
+    "text": "करीबी मैच",
     "meaning": "match बहुत even है"
   },
   "callouts-clutch": {
-    "text": "Clutch",
+    "text": "क्लच",
     "meaning": "player ने pressure में मुश्किल situation अकेले जीती"
   },
   "callouts-come-back": {
@@ -1164,131 +1164,131 @@
     "meaning": "team या safe area में वापस आओ"
   },
   "callouts-comeback": {
-    "text": "Comeback",
+    "text": "वापसी",
     "meaning": "team पीछे होने के बाद recover कर रही है"
   },
   "callouts-contact": {
-    "text": "Contact",
+    "text": "संपर्क हुआ",
     "meaning": "speaker enemies से भिड़ गया है"
   },
   "callouts-corner": {
-    "text": "Corner",
+    "text": "कोना",
     "meaning": "enemy है hiding in a corner"
   },
   "callouts-crossfire": {
-    "text": "Crossfire",
+    "text": "क्रॉसफायर",
     "meaning": "दो teammates अलग angles से same enemy को cover करते हैं"
   },
   "callouts-default-spot": {
-    "text": "Default spot",
+    "text": "डिफॉल्ट जगह",
     "meaning": "objective plant, hold या defend करने की सबसे common position"
   },
   "callouts-do-not-chase": {
-    "text": "Chase मत करो",
+    "text": "चेस मत करो",
     "meaning": "enemy को बहुत दूर तक follow मत करो"
   },
   "callouts-do-not-peek": {
-    "text": "Peek मत करो",
+    "text": "पीक मत करो",
     "meaning": "enemy angle में खुद को expose मत करो"
   },
   "callouts-door-closed": {
-    "text": "Door closed",
+    "text": "दरवाज़ा बंद",
     "meaning": "doorway या path blocked है"
   },
   "callouts-door-open": {
-    "text": "Door open",
+    "text": "दरवाज़ा खुला",
     "meaning": "doorway या path available है"
   },
   "callouts-flash-out": {
-    "text": "Flash out",
+    "text": "फ्लैश फेंक रहा हूँ",
     "meaning": "flashbang या blind ability use की गई है"
   },
   "callouts-focus-fire": {
-    "text": "Focus fire",
+    "text": "एक ही टारगेट मारो",
     "meaning": "सब same target पर shoot करें"
   },
   "callouts-focus-healer": {
-    "text": "Healer focus करो",
+    "text": "हीलर फोकस करो",
     "meaning": "पहले enemy healer या support को attack करो"
   },
   "callouts-focus-sniper": {
-    "text": "Sniper focus करो",
+    "text": "स्नाइपर फोकस करो",
     "meaning": "पहले enemy sniper को attack करो"
   },
   "callouts-footsteps": {
-    "text": "Footsteps",
+    "text": "कदमों की आवाज़",
     "meaning": "speaker को enemy movement की आवाज़ सुनाई दे रही है"
   },
   "callouts-free-kill": {
-    "text": "Free kill",
+    "text": "फ्री किल",
     "meaning": "enemy को आसानी से kill किया जा सकता है"
   },
   "callouts-free-objective": {
-    "text": "Free objective",
+    "text": "फ्री ऑब्जेक्टिव",
     "meaning": "objective कम resistance के साथ लिया जा सकता है"
   },
   "callouts-front-site": {
-    "text": "Front site",
+    "text": "साइट के आगे",
     "meaning": "enemy objective site के front में है"
   },
   "callouts-good-timing": {
-    "text": "Good timing",
+    "text": "अच्छी टाइमिंग",
     "meaning": "action सही moment पर हुआ"
   },
   "callouts-grenade-out": {
-    "text": "Grenade out",
+    "text": "ग्रेनेड फेंक रहा हूँ",
     "meaning": "grenade throw किया गया है"
   },
   "callouts-hallway": {
-    "text": "Hallway",
+    "text": "हॉलवे",
     "meaning": "enemy या movement hallway में है"
   },
   "callouts-hide": {
-    "text": "Hide",
+    "text": "छिपो",
     "meaning": "दिखाई देने से बचो"
   },
   "callouts-high-ground": {
-    "text": "High ground",
+    "text": "ऊँची जगह",
     "meaning": "important position enemy से ऊपर है"
   },
   "callouts-hold-angle": {
-    "text": "Angle hold करो",
+    "text": "एंगल पकड़े रखो",
     "meaning": "expected enemy path पर aim रखो"
   },
   "callouts-hold-position": {
-    "text": "Position hold करो",
+    "text": "पोज़िशन पकड़े रखो",
     "meaning": "जहाँ हो वहीं रहो और overextend मत करो"
   },
   "callouts-i-am-watching": {
-    "text": "I am watching",
+    "text": "मैं देख रहा हूँ",
     "meaning": "speaker किसी angle या area को hold कर रहा है"
   },
   "callouts-i-hear-steps": {
-    "text": "Steps सुनाई दे रहे हैं",
+    "text": "कदमों की आवाज़ आ रही है",
     "meaning": "enemy footsteps सुनाई दे रहे हैं"
   },
   "callouts-i-will-trade": {
-    "text": "मैं trade करूँगा",
+    "text": "मैं ट्रेड करूँगा",
     "meaning": "speaker follow करके return kill secure करेगा"
   },
   "callouts-ignore-tank": {
-    "text": "Tank ignore करो",
+    "text": "टैंक को छोड़ो",
     "meaning": "अभी tanky enemy पर damage waste मत करो"
   },
   "callouts-long-range": {
-    "text": "Long range",
+    "text": "लंबी रेंज",
     "meaning": "enemy है दूर या holding a long angle"
   },
   "callouts-low-ground": {
-    "text": "Low ground",
+    "text": "नीची जगह",
     "meaning": "team enemy position से नीचे है"
   },
   "callouts-lucky-shot": {
-    "text": "Lucky shot",
+    "text": "लकी शॉट",
     "meaning": "shot partly luck से लगा"
   },
   "callouts-messy-fight": {
-    "text": "Messy fight",
+    "text": "गंदी फाइट",
     "meaning": "fight disorganized और risky थी"
   },
   "callouts-move-up": {
@@ -1296,579 +1296,579 @@
     "meaning": "आगे वाली position पर जाओ"
   },
   "callouts-nice-trade": {
-    "text": "Nice trade",
+    "text": "बढ़िया ट्रेड",
     "meaning": "teammate ने successful return kill लिया"
   },
   "callouts-no-contact": {
-    "text": "No contact",
+    "text": "कोई संपर्क नहीं",
     "meaning": "No enemies have been found yet"
   },
   "callouts-no-problem": {
-    "text": "No problem",
+    "text": "कोई बात नहीं",
     "meaning": "जब teammate sorry बोले तो friendly response"
   },
   "callouts-not-clear": {
-    "text": "Clear नहीं है",
+    "text": "साफ़ नहीं है",
     "meaning": "area safe confirm नहीं है"
   },
   "callouts-open-lane": {
-    "text": "Open lane",
+    "text": "खुली लेन",
     "meaning": "lane या path defend नहीं है"
   },
   "callouts-out-of-zone": {
-    "text": "Zone से बाहर",
+    "text": "ज़ोन से बाहर",
     "meaning": "कोई safe area से बाहर है"
   },
   "callouts-peek-together": {
-    "text": "साथ में peek करो",
+    "text": "साथ में पीक करो",
     "meaning": "दो या ज़्यादा teammates एक साथ enemy को peek करें"
   },
   "callouts-pinched": {
-    "text": "Pinched",
+    "text": "बीच में फँसे",
     "meaning": "enemies पर दो sides से attack हो रहा है"
   },
   "callouts-play-fast": {
-    "text": "Fast खेलो",
+    "text": "तेज़ खेलो",
     "meaning": "speed और pressure से enemy को surprise करो"
   },
   "callouts-play-safe": {
-    "text": "Safe खेलो",
+    "text": "सेफ खेलो",
     "meaning": "risky fights avoid करो"
   },
   "callouts-play-slow": {
-    "text": "Slow खेलो",
+    "text": "धीमा खेलो",
     "meaning": "carefully move करो और information gather करो"
   },
   "callouts-play-time": {
-    "text": "Play time",
+    "text": "टाइम खेलो",
     "meaning": "timer को अपने team के favor में करने के लिए enemy को delay करो"
   },
   "callouts-reset": {
-    "text": "Reset",
+    "text": "रीसेट",
     "meaning": "messy fight रोककर plan पर वापस आओ"
   },
   "callouts-roof-clear": {
-    "text": "Roof clear",
+    "text": "छत साफ़",
     "meaning": "roof area safe लगता है"
   },
   "callouts-run": {
-    "text": "Run",
+    "text": "भागो",
     "meaning": "जल्दी escape करो"
   },
   "callouts-safe-zone": {
-    "text": "Safe zone",
+    "text": "सेफ ज़ोन",
     "meaning": "यह area safe zone के अंदर है"
   },
   "callouts-short-range": {
-    "text": "Short range",
+    "text": "छोटी रेंज",
     "meaning": "enemy है very close"
   },
   "callouts-shotgun-close": {
-    "text": "Shotgun close",
+    "text": "शॉटगन पास है",
     "meaning": "shotgun वाला enemy पास है"
   },
   "callouts-site-clear": {
-    "text": "Site clear",
+    "text": "साइट साफ़",
     "meaning": "objective site अभी safe लगती है"
   },
   "callouts-site-not-clear": {
-    "text": "Site clear नहीं",
+    "text": "साइट साफ़ नहीं",
     "meaning": "objective site के अंदर अभी भी enemies हो सकते हैं"
   },
   "callouts-smoke-out": {
-    "text": "Smoke out",
+    "text": "स्मोक डाल रहा हूँ",
     "meaning": "smoke grenade या vision-blocking ability use की गई है"
   },
   "callouts-sniper-watching": {
-    "text": "Sniper watching",
+    "text": "स्नाइपर देख रहा है",
     "meaning": "sniper इस angle को hold कर रहा है"
   },
   "callouts-split-up": {
-    "text": "Split up",
+    "text": "अलग हो जाओ",
     "meaning": "ज़्यादा areas cover करने या pressure बनाने के लिए अलग हो जाओ"
   },
   "callouts-stairs": {
-    "text": "Stairs",
+    "text": "सीढ़ियाँ",
     "meaning": "enemy या movement stairs के पास है"
   },
   "callouts-stay-alive": {
-    "text": "Stay alive",
+    "text": "ज़िंदा रहो",
     "meaning": "survive करना अभी बहुत important है"
   },
   "callouts-stop-chasing": {
-    "text": "Chase करना बंद करो",
+    "text": "चेस करना बंद करो",
     "meaning": "kills chase करने के बजाय objective पर वापस आओ"
   },
   "callouts-storm-coming": {
-    "text": "Storm आ रहा है",
+    "text": "स्टॉर्म आ रहा है",
     "meaning": "damaging zone पास आ रहा है"
   },
   "callouts-swing-together": {
-    "text": "साथ में swing करो",
+    "text": "साथ में स्विंग करो",
     "meaning": "enemy से fight करने के लिए साथ में बाहर निकलो"
   },
   "callouts-target-marked": {
-    "text": "Target marked",
+    "text": "टारगेट मार्क है",
     "meaning": "priority target mark हो गया है"
   },
   "callouts-they-are-close": {
-    "text": "वे close हैं",
+    "text": "वे पास हैं",
     "meaning": "enemies पास में हैं"
   },
   "callouts-they-are-far": {
-    "text": "वे far हैं",
+    "text": "वे दूर हैं",
     "meaning": "enemies दूर हैं"
   },
   "callouts-third-party": {
-    "text": "Third party",
+    "text": "तीसरी टीम",
     "meaning": "fight में कोई तीसरी team शामिल हो रही है"
   },
   "callouts-throw": {
-    "text": "Throw",
+    "text": "थ्रो",
     "meaning": "mistake की वजह से advantage चला गया"
   },
   "callouts-trade-him": {
-    "text": "उसका trade लो",
+    "text": "उसका ट्रेड लो",
     "meaning": "teammate के मरने के बाद return kill लो"
   },
   "callouts-trade-me": {
-    "text": "मेरा trade लेना",
+    "text": "मेरा ट्रेड लेना",
     "meaning": "speaker को मारने वाले enemy को तुरंत मारो"
   },
   "callouts-trap-destroyed": {
-    "text": "Trap destroyed",
+    "text": "ट्रैप टूट गया",
     "meaning": "trap remove हो गया है"
   },
   "callouts-trap-here": {
-    "text": "Trap here",
+    "text": "ट्रैप यहाँ है",
     "meaning": "इस location पर trap है"
   },
   "callouts-tunnel-clear": {
-    "text": "Tunnel clear",
+    "text": "टनल साफ़",
     "meaning": "tunnel route safe लगता है"
   },
   "callouts-unlucky": {
-    "text": "Unlucky",
+    "text": "किस्मत खराब",
     "meaning": "result unfortunate था, जरूरी नहीं कि play खराब था"
   },
   "callouts-wait": {
-    "text": "Wait",
+    "text": "रुको",
     "meaning": "action से पहले रुकना"
   },
   "callouts-watching-left": {
-    "text": "Watching left",
+    "text": "बाएँ देख रहा हूँ",
     "meaning": "speaker left side cover कर रहा है"
   },
   "callouts-watching-mid": {
-    "text": "Watching mid",
+    "text": "मिड देख रहा हूँ",
     "meaning": "speaker middle area cover कर रहा है"
   },
   "callouts-watching-right": {
-    "text": "Watching right",
+    "text": "दाएँ देख रहा हूँ",
     "meaning": "speaker right side cover कर रहा है"
   },
   "callouts-water": {
-    "text": "Water",
+    "text": "पानी",
     "meaning": "enemy या location water के पास है"
   },
   "callouts-we-are-pinched": {
-    "text": "We are pinched",
+    "text": "हम बीच में फँसे हैं",
     "meaning": "team enemy angles के बीच फँसी हुई है"
   },
   "callouts-well-played": {
-    "text": "Well played",
+    "text": "बढ़िया खेले",
     "meaning": "Respectful praise के लिए smart या skilled play"
   },
   "callouts-window": {
-    "text": "Window",
+    "text": "खिड़की",
     "meaning": "enemy या angle window पर है"
   },
   "callouts-with-me": {
-    "text": "With me",
+    "text": "मेरे साथ",
     "meaning": "speaker चाहता है कि teammates को रहना close"
   },
   "callouts-zone-closing": {
-    "text": "Zone closing",
+    "text": "ज़ोन बंद हो रहा है",
     "meaning": "safe zone shrink या move हो रहा है"
   },
   "danger-do-not-go-there": {
-    "text": "Do not go there",
+    "text": "वहाँ मत जाओ",
     "meaning": "वह area unsafe है"
   },
   "danger-enemy-ultimate-ready": {
-    "text": "Enemy ultimate ready",
+    "text": "दुश्मन की अल्टिमेट तैयार है",
     "meaning": "enemy के पास शायद strongest ability available है"
   },
   "danger-it-is-a-trap": {
-    "text": "It is a trap",
+    "text": "यह जाल है",
     "meaning": "enemy है likely waiting के लिए you"
   },
   "danger-low-cover": {
-    "text": "Low cover",
+    "text": "कम कवर",
     "meaning": "cover कमजोर या अधूरा है"
   },
   "danger-they-have-sniper": {
-    "text": "They have a sniper",
+    "text": "उनके पास स्नाइपर है",
     "meaning": "enemy team के पास sniper threat है"
   },
   "instructions-capture-point": {
-    "text": "Point capture करो",
+    "text": "पॉइंट कब्ज़ा करो",
     "meaning": "objective point का control लो"
   },
   "instructions-check-behind": {
-    "text": "पीछे check करो",
+    "text": "पीछे देखो",
     "meaning": "team के पीछे enemies check करो"
   },
   "instructions-check-left": {
-    "text": "Left check करो",
+    "text": "बाएँ देखो",
     "meaning": "left side पर enemies check करो"
   },
   "instructions-check-right": {
-    "text": "Right check करो",
+    "text": "दाएँ देखो",
     "meaning": "right side पर enemies check करो"
   },
   "instructions-clear-corners": {
-    "text": "Corners clear करो",
+    "text": "कोनाs साफ़ करो",
     "meaning": "enter करने से पहले hiding spots check करो"
   },
   "instructions-contest-point": {
-    "text": "Point contest करो",
+    "text": "पॉइंट पर लड़ो",
     "meaning": "enemy progress रोकने के लिए objective पर खड़े रहो"
   },
   "instructions-defuse-now": {
-    "text": "अब defuse करो",
+    "text": "अब डिफ्यूज़ करो",
     "meaning": "start करो defusing तुरंत"
   },
   "instructions-do-not-feed": {
-    "text": "Feed मत करो",
+    "text": "फीड मत करो",
     "meaning": "बार-बार मत मरो और enemy को advantage मत दो"
   },
   "instructions-do-not-split": {
-    "text": "Split मत करो",
+    "text": "अलग मत हो",
     "meaning": "team से अलग मत हो"
   },
   "instructions-do-not-waste-it": {
-    "text": "Waste मत करो",
+    "text": "बर्बाद मत करो",
     "meaning": "resource को carefully use करो"
   },
   "instructions-go-first": {
-    "text": "Go first",
+    "text": "पहले जाओ",
     "meaning": "Enter या engage से पहले others"
   },
   "instructions-i-go-first": {
-    "text": "I go first",
+    "text": "मैं पहले जाऊँगा",
     "meaning": "speaker enter या engage first करेगा"
   },
   "instructions-lead-the-way": {
-    "text": "Lead the way",
+    "text": "आगे चलो",
     "meaning": "teammate को चाहिए जाना first"
   },
   "instructions-mute-him": {
-    "text": "उसे mute करो",
+    "text": "उसे म्यूट करो",
     "meaning": "Silence a disruptive player in voice या text chat"
   },
   "instructions-plant-now": {
-    "text": "अब plant करो",
+    "text": "अब प्लांट करो",
     "meaning": "bomb या objective अभी place करो"
   },
   "instructions-report-after": {
-    "text": "बाद में report करो",
+    "text": "बाद में रिपोर्ट करो",
     "meaning": "reporting match के बाद करो, round के दौरान नहीं"
   },
   "instructions-save-ultimate": {
-    "text": "Ult save करो",
+    "text": "अल्टिमेट बचाओ",
     "meaning": "strongest ability अभी use मत करो"
   },
   "instructions-stack-here": {
-    "text": "Stack here",
+    "text": "यहाँ स्टैक करो",
     "meaning": "इस area में कई players group करो"
   },
   "instructions-stack-left": {
-    "text": "Stack left",
+    "text": "लेफ्ट स्टैक करो",
     "meaning": "players को left side पर group करो"
   },
   "instructions-stack-right": {
-    "text": "Stack right",
+    "text": "राइट स्टैक करो",
     "meaning": "players को right side पर group करो"
   },
   "instructions-stop-peeking": {
-    "text": "Peek करना बंद करो",
+    "text": "पीक करना बंद करो",
     "meaning": "बंद करो exposing yourself को enemy aim"
   },
   "instructions-touch-point": {
-    "text": "Point touch करो",
+    "text": "पॉइंट छूओ",
     "meaning": "timer खत्म होने से पहले objective तक पहुँचो"
   },
   "instructions-use-flash": {
-    "text": "Flash use करो",
+    "text": "फ्लैश यूज़ करो",
     "meaning": "enter करने से पहले blinding ability use करो"
   },
   "instructions-use-grenade": {
-    "text": "Grenade use करो",
+    "text": "ग्रेनेड यूज़ करो",
     "meaning": "Throw an explosive या utility grenade"
   },
   "instructions-use-smoke": {
-    "text": "Smoke use करो",
+    "text": "स्मोक इस्तेमाल करो",
     "meaning": "vision block करने के लिए smoke लगाओ"
   },
   "instructions-use-ultimate": {
-    "text": "Ult use करो",
+    "text": "अल्टिमेट इस्तेमाल करो",
     "meaning": "strongest ability अभी use करो"
   },
   "objective-capture-the-flag": {
-    "text": "Flag capture करो",
+    "text": "झंडा कब्ज़ा करो",
     "meaning": "enemy flag objective लो"
   },
   "objective-escort-the-payload": {
-    "text": "Payload escort करो",
+    "text": "पेलोड को साथ ले जाओ",
     "meaning": "payload के पास रहो ताकि वह move करे"
   },
   "objective-hold-the-point": {
-    "text": "Point hold करो",
+    "text": "पॉइंट पकड़े रखो",
     "meaning": "objective पर रहो और उसे defend करो"
   },
   "objective-leave-the-point": {
-    "text": "Point छोड़ो",
+    "text": "पॉइंट छोड़ो",
     "meaning": "ज़रूरत पड़ने पर objective से दूर move करो"
   },
   "objective-return-the-flag": {
-    "text": "Flag return करो",
+    "text": "झंडा वापस लाओ",
     "meaning": "flag वापस लाओ या अपना flag recover करो"
   },
   "objective-stop-the-payload": {
-    "text": "Payload रोक दो",
+    "text": "पेलोड रोक दो",
     "meaning": "enemy को payload move करने से रोकना"
   },
   "teamwork-do-not-blame": {
-    "text": "Blame मत करो",
+    "text": "ब्लेम मत करो",
     "meaning": "game के दौरान teammates पर blame लगाने से बचो"
   },
   "teamwork-focus-next": {
-    "text": "Next पर focus करो",
+    "text": "अगला पर फोकस करो",
     "meaning": "आगे बढ़ो और next play के लिए prepare करो"
   },
   "teamwork-good-effort": {
-    "text": "Good effort",
+    "text": "अच्छी कोशिश",
     "meaning": "a teammate की attempt पर positive response"
   },
   "teamwork-great-call": {
-    "text": "Great call",
+    "text": "शानदार कॉल",
     "meaning": "useful communication के लिए तारीफ़"
   },
   "teamwork-great-save": {
-    "text": "Great save",
+    "text": "शानदार बचाव",
     "meaning": "preventing a loss या danger के लिए तारीफ़"
   },
   "teamwork-great-shot": {
-    "text": "Great shot",
+    "text": "शानदार शॉट",
     "meaning": "accurate aim के लिए तारीफ़"
   },
   "teamwork-i-trust-you": {
-    "text": "I trust you",
+    "text": "मुझे तुम पर भरोसा है",
     "meaning": "encouragement के लिए a teammate making a play"
   },
   "teamwork-i-will-bait-for-you": {
-    "text": "I will bait for you",
+    "text": "मैं तुम्हारे लिए बैट करूँगा",
     "meaning": "speaker draw attention so a teammate कर सकता है trade करेगा"
   },
   "teamwork-i-will-cover-you": {
-    "text": "I will cover you",
+    "text": "मैं तुम्हें कवर दूँगा",
     "meaning": "speaker protect करना a teammate करेगा"
   },
   "teamwork-i-will-heal-you": {
-    "text": "I will heal you",
+    "text": "मैं तुम्हें हील करूँगा",
     "meaning": "speaker use करो healing on a teammate करेगा"
   },
   "teamwork-i-will-watch-flank": {
-    "text": "I will watch flank",
+    "text": "मैं फ्लैंक देखूँगा",
     "meaning": "speaker rear path cover करेगा"
   },
   "teamwork-keep-comms-clear": {
-    "text": "Keep comms clear",
+    "text": "कम्युनिकेशन साफ़ रखो",
     "meaning": "Only say useful information right अभी"
   },
   "teamwork-let-me-go-first": {
-    "text": "Let me go first",
+    "text": "मुझे पहले जाने दो",
     "meaning": "speaker volunteers को enter first"
   },
   "teamwork-nice-aim": {
-    "text": "Nice aim",
+    "text": "बढ़िया ऐम",
     "meaning": "shooting skill के लिए तारीफ़"
   },
   "teamwork-nice-clutch": {
-    "text": "Nice clutch",
+    "text": "बढ़िया क्लच",
     "meaning": "pressure में जीतने के लिए तारीफ़"
   },
   "teamwork-nice-movement": {
-    "text": "Nice movement",
+    "text": "बढ़िया मूवमेंट",
     "meaning": "movement skill के लिए तारीफ़"
   },
   "teamwork-nice-utility": {
-    "text": "Nice utility",
+    "text": "बढ़िया यूटिलिटी",
     "meaning": "अच्छा ability या item usage के लिए तारीफ़"
   },
   "teamwork-one-round-at-a-time": {
-    "text": "One round at a time",
+    "text": "एक बार में एक राउंड",
     "meaning": "पूरे match की बजाय next round पर focus करो"
   },
   "teamwork-play-together": {
-    "text": "Play together",
+    "text": "साथ खेलो",
     "meaning": "Coordinate as a group"
   },
   "teamwork-reset-mental": {
-    "text": "Reset mental",
+    "text": "मानसिक रीसेट करो",
     "meaning": "बंद करो tilting और start करो fresh"
   },
   "teamwork-stay-calm": {
-    "text": "Stay calm",
+    "text": "शांत रहो",
     "meaning": "मत panic या tilt"
   },
   "teamwork-take-my-loot": {
-    "text": "Take my loot",
+    "text": "मेरा लूट ले लो",
     "meaning": "speaker offers their items"
   },
   "teamwork-take-my-weapon": {
-    "text": "Take my weapon",
+    "text": "मेरा हथियार ले लो",
     "meaning": "speaker offers their weapon"
   },
   "teamwork-trade-together": {
-    "text": "Trade together",
+    "text": "साथ में ट्रेड करो",
     "meaning": "Coordinate के लिए वापस आना kills"
   },
   "teamwork-wait-for-team": {
-    "text": "Wait for team",
+    "text": "टीम का इंतज़ार करो",
     "meaning": "मत fight से पहले teammates arrive"
   },
   "teamwork-we-can-win": {
-    "text": "We can win",
+    "text": "हम जीत सकते हैं",
     "meaning": "encouragement कि match अभी भी winnable है"
   },
   "teamwork-we-need-everyone": {
-    "text": "We need everyone",
+    "text": "हमें सबकी ज़रूरत है",
     "meaning": "team को चाहिए not fight बिना all players"
   },
   "teamwork-you-got-this": {
-    "text": "You got this",
+    "text": "तुम कर लोगे",
     "meaning": "encouragement से पहले या during difficult moment"
   },
   "strategy-anchor-site": {
-    "text": "Anchor site",
+    "text": "साइट पर टिके रहो",
     "meaning": "objective site पर रहकर उसे defend करो"
   },
   "strategy-bait-utility": {
-    "text": "Bait utility",
+    "text": "बैट यूटिलिटी",
     "meaning": "real attack से पहले enemies की abilities waste कराओ"
   },
   "strategy-cancel-the-push": {
-    "text": "Push cancel करो",
+    "text": "पुश रोक दो",
     "meaning": "attack रोककर plan बदलो"
   },
   "strategy-commit-now": {
-    "text": "अब commit करो",
+    "text": "अब कमिट करो",
     "meaning": "team resources use करके plan को पूरी तरह execute करो"
   },
   "strategy-cross-setup": {
-    "text": "Cross setup",
+    "text": "क्रॉस सेटअप",
     "meaning": "Set up two angles that support each other"
   },
   "strategy-cut-rotation": {
-    "text": "Cut rotation",
+    "text": "रोटेशन काटो",
     "meaning": "enemies को sites के बीच move करने से रोकना"
   },
   "strategy-damage-advantage": {
-    "text": "Damage advantage",
+    "text": "डैमेज में बढ़त",
     "meaning": "enemies आपकी team से ज़्यादा weak हैं"
   },
   "strategy-deny-vision": {
-    "text": "Deny vision",
+    "text": "विज़न रोक दो",
     "meaning": "Block या remove enemy information"
   },
   "strategy-do-not-overcommit": {
-    "text": "Do not overcommit",
+    "text": "ज़्यादा कमिट मत करो",
     "meaning": "risky play में बहुत ज़्यादा resources मत लगाओ"
   },
   "strategy-economy-advantage": {
-    "text": "Economy advantage",
+    "text": "इकॉनमी में बढ़त",
     "meaning": "आपकी team के पास बेहतर resources या weapons हैं"
   },
   "strategy-give-map-control": {
-    "text": "Map control छोड़ो",
+    "text": "मैप कंट्रोल छोड़ो",
     "meaning": "enemy को जानबूझकर space लेने देना"
   },
   "strategy-hold-rotation": {
-    "text": "Hold rotation",
+    "text": "रोटेशन पकड़ो",
     "meaning": "enemies जिस path से rotate करते हैं उसे watch करो"
   },
   "strategy-man-advantage": {
-    "text": "Man advantage",
+    "text": "एक खिलाड़ी की बढ़त",
     "meaning": "आपकी team में enemy team से ज़्यादा alive players हैं"
   },
   "strategy-man-disadvantage": {
-    "text": "Numbers disadvantage",
+    "text": "खिलाड़ियों में कमी",
     "meaning": "आपकी team में enemy team से कम alive players हैं"
   },
   "strategy-numbers-advantage": {
-    "text": "Numbers advantage",
+    "text": "संख्या में बढ़त",
     "meaning": "fight में आपकी team के पास ज़्यादा players हैं"
   },
   "strategy-play-for-late-game": {
-    "text": "Play for late game",
+    "text": "लेट गेम के लिए खेलो",
     "meaning": "action delay करके final phase के लिए prepare करो"
   },
   "strategy-play-retake": {
-    "text": "Play retake",
+    "text": "रीटेक खेलो",
     "meaning": "site छोड़कर उसे वापस लेने के लिए prepare करो"
   },
   "strategy-pressure-side-lane": {
-    "text": "Pressure side lane",
+    "text": "साइड लेन पर दबाव डालो",
     "meaning": "Create threat on a side route"
   },
   "strategy-save-round": {
-    "text": "Save round",
+    "text": "राउंड सेव करो",
     "meaning": "avoid करो spending resources this round"
   },
   "strategy-stack-objective": {
-    "text": "Stack objective",
+    "text": "स्टैक ऑब्जेक्टिव",
     "meaning": "objective के पास कई players रखो"
   },
   "strategy-time-advantage": {
-    "text": "Time advantage",
+    "text": "समय की बढ़त",
     "meaning": "timer आपकी team के favor में है"
   },
   "strategy-trade-setup": {
-    "text": "Trade setup",
+    "text": "ट्रेड सेटअप",
     "meaning": "Position so teammates कर सकता है get वापस आना kills"
   },
   "strategy-ultimate-advantage": {
-    "text": "Ultimate advantage",
+    "text": "अल्टिमेट की बढ़त",
     "meaning": "आपकी team के पास stronger ultimate abilities available हैं"
   },
   "economy-do-not-force": {
-    "text": "Do not force",
+    "text": "फोर्स मत करो",
     "meaning": "मत buy too much के साथ low resources"
   },
   "economy-force-together": {
-    "text": "Force together",
+    "text": "साथ में फोर्स करो",
     "meaning": "सबको commit को a risky buy साथ में चाहिए"
   },
   "economy-they-have-money": {
-    "text": "उनके पास money है",
+    "text": "उनके पास पैसे है",
     "meaning": "enemy team कर सकता है afford strong gear"
   },
   "economy-we-can-buy-next": {
-    "text": "We can buy next",
+    "text": "अगले राउंड खरीद सकते हैं",
     "meaning": "team को चाहिए have enough resources अगले round"
   },
   "antiToxic-clear-comms-please": {
-    "text": "Clear comms, please",
+    "text": "कृपया कम्युनिकेशन साफ़ रखें",
     "meaning": "teammates से keep communication focused और useful कहें"
   },
   "antiToxic-focus-on-objective": {
-    "text": "Focus on objective",
+    "text": "ऑब्जेक्टिव पर ध्यान दो",
     "meaning": "team को winning conditions और objective पर वापस focus कराओ"
   },
   "antiToxic-good-try-next-round": {
-    "text": "Good try, next round",
+    "text": "अच्छी कोशिश, अगला राउंड",
     "meaning": "round हारने के बाद team को encourage करो"
   },
   "antiToxic-it-happens": {
@@ -1876,47 +1876,95 @@
     "meaning": "Normalize mistake और move करना on"
   },
   "antiToxic-keep-it-positive": {
-    "text": "Positive रहो",
+    "text": "पॉज़िटिव रहो",
     "meaning": "teammates से avoid toxic comments कहें"
   },
   "antiToxic-let-us-reset": {
-    "text": "Reset करते हैं",
+    "text": "रीसेट करते हैं",
     "meaning": "team का mental focus शांत तरीके से restart करो"
   },
   "antiToxic-let-us-trade-better": {
-    "text": "Let us trade better",
+    "text": "हम बेहतर ट्रेड करें",
     "meaning": "improving वापस आना-kill teamwork suggest करना"
   },
   "antiToxic-next-one-is-ours": {
-    "text": "Next round हमारा है",
+    "text": "अगला राउंड हमारा है",
     "meaning": "loss के बाद team को encourage करना"
   },
   "antiToxic-no-worries": {
-    "text": "No worries",
+    "text": "कोई बात नहीं",
     "meaning": "Respond kindly को a teammate की mistake"
   },
   "antiToxic-play-safe-next": {
-    "text": "Next safe खेलते हैं",
+    "text": "अगला सेफ खेलते हैं",
     "meaning": "a safer plan बिना blaming anyone suggest करना"
   },
   "antiToxic-save-your-utility": {
-    "text": "Save your utility",
+    "text": "अपनी यूटिलिटी बचाकर रखो",
     "meaning": "teammate से preserve abilities बिना insulting them कहें"
   },
   "antiToxic-use-comms-not-blame": {
-    "text": "Comms दो, blame नहीं",
+    "text": "कम्युनिकेशन दो, ब्लेम नहीं",
     "meaning": "teammates को याद दिलाओ कि blame की जगह useful comms दें"
   },
   "antiToxic-wait-for-the-team-next-time": {
-    "text": "Wait for the team next time",
+    "text": "अगली बार टीम का इंतज़ार करो",
     "meaning": "Ask के लिए better timing in a respectful way"
   },
   "antiToxic-we-need-better-spacing": {
-    "text": "We need better spacing",
+    "text": "हमें बेहतर दूरी रखनी है",
     "meaning": "Give useful feedback about positioning"
   },
   "antiToxic-we-still-have-time": {
-    "text": "We still have time",
+    "text": "हमारे पास अभी समय है",
     "meaning": "जब play बनाने का time हो तो team को शांत करना"
+  },
+  "callouts-my-ping-is-high": {
+    "text": "मेरा पिंग बहुत हाई है",
+    "meaning": "टीम को बताने के लिए कि नेटवर्क देरी ज़्यादा है।"
+  },
+  "callouts-my-game-froze": {
+    "text": "मेरा गेम फ्रीज़ हो गया",
+    "meaning": "टीम को बताने के लिए कि स्क्रीन रुक गई है।"
+  },
+  "callouts-i-crashed": {
+    "text": "मेरा गेम क्रैश हो गया",
+    "meaning": "टीम को बताने के लिए कि ऐप बंद या क्रैश हो गया।"
+  },
+  "callouts-no-sound": {
+    "text": "मेरे पास आवाज़ नहीं आ रही",
+    "meaning": "टीम को बताने के लिए कि गेम ऑडियो नहीं आ रहा।"
+  },
+  "callouts-i-cannot-hear-you": {
+    "text": "मैं तुम्हें सुन नहीं पा रहा",
+    "meaning": "टीम को बताने के लिए कि वॉइस चैट सुनाई नहीं दे रही।"
+  },
+  "teamwork-push-after-my-flash": {
+    "text": "मेरे फ्लैश के बाद पुश करना",
+    "meaning": "अपने फ्लैश के तुरंत बाद एंट्री कराने के लिए।"
+  },
+  "teamwork-wait-for-my-smoke": {
+    "text": "मेरे स्मोक का इंतज़ार करो",
+    "meaning": "टीम से कहने के लिए कि स्मोक लगने तक रुके।"
+  },
+  "strategy-save-ult-for-next-fight": {
+    "text": "अगली फाइट के लिए अल्ट बचाओ",
+    "meaning": "अल्टिमेट क्षमता अगली लड़ाई के लिए रखने की योजना।"
+  },
+  "strategy-play-for-overtime": {
+    "text": "ओवरटाइम के लिए खेलो",
+    "meaning": "ओवरटाइम तक टिकने या मजबूर करने की योजना।"
+  },
+  "objective-touch-in-overtime": {
+    "text": "ओवरटाइम में पॉइंट छूओ",
+    "meaning": "ओवरटाइम जारी रखने के लिए तुरंत ऑब्जेक्टिव छूने का कॉल।"
+  },
+  "danger-third-party-coming": {
+    "text": "तीसरी टीम आ रही है",
+    "meaning": "टीम को चेतावनी कि एक और दुश्मन टीम लड़ाई में आ रही है।"
+  },
+  "antiToxic-mute-and-play": {
+    "text": "म्यूट करो और खेलते रहो",
+    "meaning": "टॉक्सिक व्यवहार को शांत तरीके से संभालने के लिए।"
   }
 }
