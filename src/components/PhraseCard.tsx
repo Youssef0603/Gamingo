@@ -39,7 +39,13 @@ function PhraseCard({
     item.category === 'custom' && Boolean(item.customLanguages);
 
   return (
-    <Pressable onPress={onPress} style={styles.card}>
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [
+        styles.card,
+        pressed && styles.cardPressed,
+      ]}
+    >
       <View style={styles.topRow}>
         <View style={styles.textWrap}>
           <Text style={styles.phrase}>{translation.text}</Text>
@@ -111,6 +117,9 @@ const styles = StyleSheet.create({
     marginBottom: theme.spacing.md,
     padding: theme.spacing.lg,
     ...theme.shadows.card,
+  },
+  cardPressed: {
+    backgroundColor: withAlpha(theme.colors.primary, 0.03),
   },
   topRow: {
     alignItems: 'flex-start',
