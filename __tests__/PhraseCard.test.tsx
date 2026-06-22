@@ -3,10 +3,10 @@ import ReactTestRenderer from 'react-test-renderer';
 import { StyleSheet } from 'react-native';
 
 import PhraseCard from '../src/components/PhraseCard';
-import { theme, withAlpha } from '../src/theme/theme';
+import { theme } from '../src/theme/theme';
 
 describe('PhraseCard', () => {
-  test('keeps visible feedback on card press', async () => {
+  test('keeps the card surface opaque while pressed', async () => {
     let tree: ReactTestRenderer.ReactTestRenderer;
 
     await ReactTestRenderer.act(() => {
@@ -37,13 +37,15 @@ describe('PhraseCard', () => {
         StyleSheet.flatten(node.props.style({ pressed: false })).padding ===
           theme.spacing.lg,
     );
-    const style = rootPressable.props.style as (
-      state: { pressed: boolean }
-    ) => unknown;
 
-    expect(typeof style).toBe('function');
     expect(
-      StyleSheet.flatten(style({ pressed: true })).backgroundColor,
-    ).toBe(withAlpha(theme.colors.primary, 0.03));
+      StyleSheet.flatten(rootPressable.props.style({ pressed: true })),
+    ).toMatchObject({
+      backgroundColor: theme.colors.card,
+      borderRadius: theme.radius.lg,
+      borderWidth: 1,
+      overflow: 'hidden',
+      padding: theme.spacing.lg,
+    });
   });
 });

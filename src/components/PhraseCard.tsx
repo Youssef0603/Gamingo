@@ -1,7 +1,12 @@
 import React from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 
-import { Icon } from './ui';
+import { CardPressable, Icon } from './ui';
 import { categoryMetadata } from '../data/categories';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
@@ -39,12 +44,10 @@ function PhraseCard({
     item.category === 'custom' && Boolean(item.customLanguages);
 
   return (
-    <Pressable
+    <CardPressable
+      containerStyle={styles.cardShell}
+      contentStyle={styles.card}
       onPress={onPress}
-      style={({ pressed }) => [
-        styles.card,
-        pressed && styles.cardPressed,
-      ]}
     >
       <View style={styles.topRow}>
         <View style={styles.textWrap}>
@@ -104,22 +107,16 @@ function PhraseCard({
           </Text>
         </View>
       </View>
-    </Pressable>
+    </CardPressable>
   );
 }
 
 const styles = StyleSheet.create({
-  card: {
-    backgroundColor: theme.colors.card,
-    borderColor: theme.colors.border,
-    borderRadius: theme.radius.lg,
-    borderWidth: 1,
+  cardShell: {
     marginBottom: theme.spacing.md,
-    padding: theme.spacing.lg,
-    ...theme.shadows.card,
   },
-  cardPressed: {
-    backgroundColor: withAlpha(theme.colors.primary, 0.03),
+  card: {
+    padding: theme.spacing.lg,
   },
   topRow: {
     alignItems: 'flex-start',
