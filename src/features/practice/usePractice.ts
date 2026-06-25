@@ -324,8 +324,8 @@ export function usePractice({
       let settled = false;
       let earlyCommitTimeout: ReturnType<typeof setTimeout> | null = null;
       let latestTranscript = '';
-      let unsubscribeError = () => undefined;
-      let unsubscribeResult = () => undefined;
+      let unsubscribeError: () => void = () => undefined;
+      let unsubscribeResult: () => void = () => undefined;
 
       const isAttemptActive = () =>
         attemptRequestId === attemptRequestIdRef.current;

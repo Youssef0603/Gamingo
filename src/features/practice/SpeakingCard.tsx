@@ -21,6 +21,7 @@ type SpeakingCardProps = {
   onSuccessfulAttempt?: (feedback: PracticeFeedback) => void;
   onToggleFavorite: () => void;
   phrase: string;
+  showCloseAction?: boolean;
 };
 
 type PracticeFlashState = {
@@ -64,6 +65,7 @@ function SpeakingCard({
   onSuccessfulAttempt,
   onToggleFavorite,
   phrase,
+  showCloseAction = true,
 }: SpeakingCardProps) {
   const [practiceFlash, setPracticeFlash] = useState<PracticeFlashState | null>(null);
   const cancellationTokenRef = useRef(cancellationToken);
@@ -180,16 +182,23 @@ function SpeakingCard({
         </View>
       ) : null}
 
-      <View style={styles.headerRow}>
-        <Pressable
-          onPress={handleClosePress}
-          style={({ pressed }) => [
-            styles.secondaryButton,
-            pressed && styles.buttonPressed,
-          ]}
-        >
-          <Text style={styles.secondaryButtonText}>{closeLabel}</Text>
-        </Pressable>
+      <View
+        style={[
+          styles.headerRow,
+          !showCloseAction && styles.headerRowWithoutClose,
+        ]}
+      >
+        {showCloseAction ? (
+          <Pressable
+            onPress={handleClosePress}
+            style={({ pressed }) => [
+              styles.secondaryButton,
+              pressed && styles.buttonPressed,
+            ]}
+          >
+            <Text style={styles.secondaryButtonText}>{closeLabel}</Text>
+          </Pressable>
+        ) : null}
 
         <Pressable
           onPress={onToggleFavorite}
@@ -316,6 +325,9 @@ const styles = StyleSheet.create({
     gap: theme.spacing.sm,
     justifyContent: 'space-between',
     marginBottom: theme.spacing.md,
+  },
+  headerRowWithoutClose: {
+    justifyContent: 'flex-end',
   },
   feedbackBadge: {
     alignItems: 'center',

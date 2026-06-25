@@ -7,6 +7,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import type { GestureResponderEvent } from 'react-native';
 
 import { Icon } from '../../components/ui';
 import { stop as stopSpeechRecognition, stopSpeaking } from '../../services';
@@ -19,6 +20,7 @@ import { resolvePracticeLocale } from './practiceUtils';
 import SpeakingCard from './SpeakingCard';
 
 const SUCCESS_ADVANCE_DELAY_MS = 950;
+const OUTSIDE_TAP_MOVEMENT_THRESHOLD = 8;
 
 type RandomPracticeModalProps = {
   helperLanguage: LanguageCode;
@@ -47,7 +49,15 @@ function RandomPracticeModal({
   const [cancellationToken, setCancellationToken] = useState(0);
   const [isSkippingWord, setIsSkippingWord] = useState(false);
   const advanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const cardRef = useRef<View>(null);
+  const dialogFrameRef = useRef<{
+    height: number;
+    width: number;
+    x: number;
+    y: number;
+  } | null>(null);
   const isSkipTransitionActiveRef = useRef(false);
+  const touchStartRef = useRef<{ pageX: number; pageY: number } | null>(null);
 
   const clearAdvanceTimeout = useCallback(() => {
     if (!advanceTimeoutRef.current) {
@@ -87,6 +97,60 @@ function RandomPracticeModal({
       onClose();
     });
   }, [clearAdvanceTimeout, onClose]);
+
+  const measureDialogFrame = useCallback(() => {
+    cardRef.current?.measureInWindow((x, y, width, height) => {
+      dialogFrameRef.current = {
+        height,
+        width,
+        x,
+        y,
+      };
+    });
+  }, []);
+
+  const handleOverlayTouchStart = useCallback((event: GestureResponderEvent) => {
+    const { pageX, pageY } = event.nativeEvent;
+
+    touchStartRef.current = { pageX, pageY };
+    measureDialogFrame();
+  }, [measureDialogFrame]);
+
+  const handleOverlayTouchEnd = useCallback((event: GestureResponderEvent) => {
+    const touchStart = touchStartRef.current;
+
+    touchStartRef.current = null;
+
+    if (!touchStart) {
+      return;
+    }
+
+    const { pageX, pageY } = event.nativeEvent;
+    const movedDistance = Math.max(
+      Math.abs(pageX - touchStart.pageX),
+      Math.abs(pageY - touchStart.pageY),
+    );
+
+    if (movedDistance > OUTSIDE_TAP_MOVEMENT_THRESHOLD) {
+      return;
+    }
+
+    const dialogFrame = dialogFrameRef.current;
+
+    if (!dialogFrame) {
+      return;
+    }
+
+    const isInsideDialog =
+      pageX >= dialogFrame.x
+      && pageX <= dialogFrame.x + dialogFrame.width
+      && pageY >= dialogFrame.y
+      && pageY <= dialogFrame.y + dialogFrame.height;
+
+    if (!isInsideDialog) {
+      handleClose();
+    }
+  }, [handleClose]);
 
   const handleSuccessfulAttempt = useCallback(() => {
     if (advanceTimeoutRef.current) {
@@ -145,10 +209,18 @@ function RandomPracticeModal({
         <ScrollView
           alwaysBounceVertical={false}
           contentContainerStyle={styles.scrollContent}
+          onContentSizeChange={measureDialogFrame}
+          onLayout={measureDialogFrame}
+          onTouchEnd={handleOverlayTouchEnd}
+          onTouchStart={handleOverlayTouchStart}
           showsVerticalScrollIndicator={false}
           style={styles.scrollView}
         >
-          <View style={styles.cardWrap}>
+          <View
+            ref={cardRef}
+            onLayout={measureDialogFrame}
+            style={styles.cardWrap}
+          >
             <View style={styles.sessionShell}>
               <View style={styles.sessionChrome}>
                 <View style={styles.sessionHeader}>
@@ -164,9 +236,21 @@ function RandomPracticeModal({
                     </Text>
                   </View>
 
-                  <View style={styles.sessionBadge}>
-                    <Text style={styles.sessionBadgeText}>{phrases.length}</Text>
-                  </View>
+                  <Pressable
+                    accessibilityHint="Closes random practice."
+                    accessibilityLabel="Close random practice"
+                    onPress={handleClose}
+                    style={({ pressed }) => [
+                      styles.sessionCloseButton,
+                      pressed && styles.buttonPressed,
+                    ]}
+                  >
+                    <Icon
+                      color={theme.colors.primary}
+                      name="close"
+                      size={22}
+                    />
+                  </Pressable>
                 </View>
 
                 <View style={styles.progressTrack}>
@@ -186,7 +270,6 @@ function RandomPracticeModal({
                   <>
                     <SpeakingCard
                       cancellationToken={cancellationToken}
-                      closeLabel="Stop"
                       embedded
                       helperLabel={
                         languageMetadata[activePhraseTranslations!.helperLanguage].label
@@ -201,6 +284,7 @@ function RandomPracticeModal({
                       onSuccessfulAttempt={handleSuccessfulAttempt}
                       onToggleFavorite={() => onToggleFavorite(activePhrase.id)}
                       phrase={activePhraseTranslations!.translation.text}
+                      showCloseAction={false}
                     />
                     <Pressable
                       disabled={isSkippingWord}
@@ -300,7 +384,6 @@ const styles = StyleSheet.create({
     borderColor: withAlpha(theme.colors.primary, 0.18),
     borderRadius: theme.radius.lg,
     borderWidth: 1,
-    minHeight: 560,
     overflow: 'visible',
     ...theme.shadows.surface,
   },
@@ -313,11 +396,9 @@ const styles = StyleSheet.create({
     marginHorizontal: theme.spacing.md,
   },
   sessionBody: {
-    flex: 1,
-    justifyContent: 'center',
     paddingBottom: theme.spacing.lg,
     paddingHorizontal: theme.spacing.lg,
-    paddingTop: theme.spacing.lg,
+    paddingTop: theme.spacing.md,
   },
   skipAction: {
     alignItems: 'center',
@@ -368,21 +449,15 @@ const styles = StyleSheet.create({
     ...theme.typography.caption,
     color: theme.colors.mutedText,
   },
-  sessionBadge: {
+  sessionCloseButton: {
     alignItems: 'center',
     backgroundColor: theme.colors.surface,
     borderColor: withAlpha(theme.colors.primary, 0.16),
     borderRadius: theme.radius.pill,
     borderWidth: 1,
+    height: 44,
     justifyContent: 'center',
-    minWidth: 42,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-  },
-  sessionBadgeText: {
-    color: theme.colors.primary,
-    fontSize: 15,
-    fontWeight: '700',
+    width: 44,
   },
   progressTrack: {
     backgroundColor: withAlpha(theme.colors.primary, 0.12),

@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   pressedOverlay: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     borderRadius: theme.radius.lg,
   },
 });
