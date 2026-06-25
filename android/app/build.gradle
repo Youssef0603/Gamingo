@@ -62,8 +62,8 @@ react {
  * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
  */
 def enableProguardInReleaseBuilds = false
-def appVersionCode = (findProperty("LAGLINGO_VERSION_CODE") ?: "14").toInteger()
-def appVersionName = (findProperty("LAGLINGO_VERSION_NAME") ?: "1.0.0").toString()
+def appVersionCode = (findProperty("LAGLINGO_VERSION_CODE") ?: "16").toInteger()
+def appVersionName = (findProperty("LAGLINGO_VERSION_NAME") ?: "1.0.1").toString()
 def releaseKeystoreProperties = new Properties()
 def releaseKeystorePropertiesFile = rootProject.file("keystore.properties")
 
