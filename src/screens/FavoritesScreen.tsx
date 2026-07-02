@@ -9,6 +9,7 @@ import {
   Pressable,
   StyleSheet,
   Text,
+  TextInput,
   View,
 } from 'react-native';
 
@@ -22,6 +23,7 @@ import PracticeModal from '../features/practice/PracticeModal';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
 import { getPhraseDisplayTranslations } from '../utils/phraseDisplay';
+import { phraseMatchesSearch } from '../utils/phraseSearch';
 
 import type { Phrase } from '../types/phrase';
 
@@ -41,6 +43,7 @@ function FavoritesScreen() {
     toggleFavorite,
   } = useAppState();
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const emptyStateAnimation = useRef(new Animated.Value(0)).current;
   const listRef = useRef<FlatList<Phrase>>(null);
   const isScrollToTopButtonVisibleRef = useRef(false);
@@ -57,6 +60,18 @@ function FavoritesScreen() {
         .map(phraseId => getPhraseById(phraseId))
         .filter((phrase): phrase is NonNullable<typeof phrase> => Boolean(phrase)),
     [favoriteIds, getPhraseById],
+  );
+  const filteredSavedPhrases = useMemo(
+    () =>
+      savedPhrases.filter(phrase =>
+        phraseMatchesSearch(
+          phrase,
+          searchQuery,
+          nativeLanguage,
+          favoriteFilterLanguage,
+        ),
+      ),
+    [favoriteFilterLanguage, nativeLanguage, savedPhrases, searchQuery],
   );
   const activePhrase = useMemo(
     () => (activePhraseId ? getPhraseById(activePhraseId) : null),
@@ -141,6 +156,7 @@ function FavoritesScreen() {
   };
 
   const renderEmptyState = () => {
+    const hasSearchQuery = Boolean(searchQuery.trim());
     const badgeAnimationStyle = {
       opacity: emptyStateAnimation.interpolate({
         inputRange: [0, 1],
@@ -166,15 +182,25 @@ function FavoritesScreen() {
       <View style={styles.emptyStateWrap}>
         <View style={styles.emptyGlow} />
         <Animated.View style={[styles.emptyBadge, badgeAnimationStyle]}>
-          <Icon color={theme.colors.primary} name="heart-outline" size={34} />
+          <Icon
+            color={theme.colors.primary}
+            name={hasSearchQuery ? 'search' : 'heart-outline'}
+            size={34}
+          />
         </Animated.View>
         <Text style={styles.emptyTitle}>
-          {hasSavedLanguages ? 'No favourites in this language' : 'No favourites yet'}
+          {hasSearchQuery
+            ? 'No words found'
+            : hasSavedLanguages
+              ? 'No favourites in this language'
+              : 'No favourites yet'}
         </Text>
         <Text style={styles.emptyText}>
-          {hasSavedLanguages
-            ? 'Pick another saved language or keep exploring Practice to fill this space.'
-            : 'Save phrases from Practice and they will show up here.'}
+          {hasSearchQuery
+            ? `No saved words match "${searchQuery.trim()}".`
+            : hasSavedLanguages
+              ? 'Pick another saved language or keep exploring Practice to fill this space.'
+              : 'Save phrases from Practice and they will show up here.'}
         </Text>
       </View>
     );
@@ -186,15 +212,42 @@ function FavoritesScreen() {
         ref={listRef}
         contentContainerStyle={[
           styles.content,
-          savedPhrases.length === 0 && styles.emptyContent,
+          filteredSavedPhrases.length === 0 && styles.emptyContent,
         ]}
-        data={savedPhrases}
+        data={filteredSavedPhrases}
         keyExtractor={item => item.id}
         ListEmptyComponent={renderEmptyState}
         ListHeaderComponent={
           <View style={styles.header}>
             <View style={styles.heading}>
               <Text style={styles.title}>Favourites</Text>
+            </View>
+
+            <View style={styles.searchBar}>
+              <Icon color={theme.colors.mutedText} name="search" size={20} />
+              <TextInput
+                autoCapitalize="none"
+                autoCorrect={false}
+                onChangeText={setSearchQuery}
+                placeholder="Search saved words"
+                placeholderTextColor={theme.colors.mutedText}
+                returnKeyType="search"
+                style={styles.searchInput}
+                value={searchQuery}
+              />
+              {searchQuery.length > 0 ? (
+                <Pressable
+                  accessibilityLabel="Clear search"
+                  hitSlop={10}
+                  onPress={() => setSearchQuery('')}
+                  style={({ pressed }) => [
+                    styles.clearSearchButton,
+                    pressed && styles.clearSearchButtonPressed,
+                  ]}
+                >
+                  <Icon color={theme.colors.mutedText} name="close" size={18} />
+                </Pressable>
+              ) : null}
             </View>
 
             <View style={styles.filterBlock}>
@@ -235,11 +288,18 @@ function FavoritesScreen() {
 
             <View style={styles.languageBadge}>
               <Text style={styles.languageText}>
-                {savedPhrases.length} saved phrase{savedPhrases.length === 1 ? '' : 's'}
+                {searchQuery.trim()
+                  ? `${filteredSavedPhrases.length} result${
+                      filteredSavedPhrases.length === 1 ? '' : 's'
+                    }`
+                  : `${savedPhrases.length} saved phrase${
+                      savedPhrases.length === 1 ? '' : 's'
+                    }`}
               </Text>
             </View>
           </View>
         }
+        keyboardShouldPersistTaps="handled"
         onScroll={handleListScroll}
         renderItem={({ item, index }) => (
           <View>
@@ -259,7 +319,7 @@ function FavoritesScreen() {
               }
             />
             {(index + 1) % INLINE_BANNER_FREQUENCY === 0 &&
-            index < savedPhrases.length - 1 ? (
+            index < filteredSavedPhrases.length - 1 ? (
               <InlineBannerAd />
             ) : null}
           </View>
@@ -312,6 +372,33 @@ const styles = StyleSheet.create({
   title: {
     ...theme.typography.title,
     marginBottom: theme.spacing.xs,
+  },
+  searchBar: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.card,
+    borderColor: theme.colors.border,
+    borderRadius: theme.radius.md,
+    borderWidth: 1,
+    flexDirection: 'row',
+    gap: theme.spacing.sm,
+    marginBottom: theme.spacing.md,
+    minHeight: 48,
+    paddingHorizontal: theme.spacing.md,
+  },
+  searchInput: {
+    color: theme.colors.text,
+    flex: 1,
+    fontSize: 15,
+    paddingVertical: 12,
+  },
+  clearSearchButton: {
+    alignItems: 'center',
+    height: 32,
+    justifyContent: 'center',
+    width: 32,
+  },
+  clearSearchButtonPressed: {
+    opacity: 0.6,
   },
   filterBlock: {
     marginBottom: theme.spacing.md,

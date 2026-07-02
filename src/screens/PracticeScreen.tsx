@@ -10,6 +10,7 @@ import {
   ScrollView,
   StyleSheet,
   Text,
+  TextInput,
   View,
 } from 'react-native';
 import PhraseCard from '../components/PhraseCard';
@@ -28,6 +29,7 @@ import RandomPracticeModal from '../features/practice/RandomPracticeModal';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
 import { getPhraseDisplayTranslations } from '../utils/phraseDisplay';
+import { phraseMatchesSearch } from '../utils/phraseSearch';
 
 import type { LanguageCode } from '../types/language';
 import type { Phrase, PhraseCategory } from '../types/phrase';
@@ -116,6 +118,7 @@ function PracticeScreen() {
   } = useAppState();
   const [selectedCategory, setSelectedCategory] =
     useState<CategoryFilter>('all');
+  const [searchQuery, setSearchQuery] = useState('');
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
   const [isLookupModalVisible, setIsLookupModalVisible] = useState(false);
   const [categoryViewportWidth, setCategoryViewportWidth] = useState(0);
@@ -151,21 +154,37 @@ function PracticeScreen() {
       : ['all', ...nonCustomCategories];
   }, [availableCategories]);
 
+  const searchMatchedPhrases = useMemo(
+    () =>
+      phrases.filter(phrase =>
+        phraseMatchesSearch(
+          phrase,
+          searchQuery,
+          nativeLanguage,
+          selectedLanguage,
+        ),
+      ),
+    [nativeLanguage, phrases, searchQuery, selectedLanguage],
+  );
   const filteredPhrases = useMemo(
     () =>
       selectedCategory === 'all'
-        ? phrases
-        : phrases.filter(item => item.category === selectedCategory),
-    [phrases, selectedCategory],
+        ? searchMatchedPhrases
+        : searchMatchedPhrases.filter(
+            item => item.category === selectedCategory,
+          ),
+    [searchMatchedPhrases, selectedCategory],
   );
   const phraseSections = useMemo<PhraseSection[]>(
     () =>
-      availableCategories.map(category => ({
-        data: phrases.filter(item => item.category === category),
-        key: category,
-        title: categoryMetadata[category].title,
-      })),
-    [availableCategories, phrases],
+      availableCategories
+        .map(category => ({
+          data: searchMatchedPhrases.filter(item => item.category === category),
+          key: category,
+          title: categoryMetadata[category].title,
+        }))
+        .filter(section => section.data.length > 0),
+    [availableCategories, searchMatchedPhrases],
   );
   const sectionedPhraseIndexById = useMemo(() => {
     const nextValue: Record<string, number> = {};
@@ -306,6 +325,7 @@ function PracticeScreen() {
   };
 
   const showPhraseInList = (phrase: Phrase) => {
+    setSearchQuery('');
     setSelectedCategory(phrase.category);
     setPendingScrollPhraseId(phrase.id);
     setPendingOpenPhraseId(phrase.id);
@@ -364,7 +384,7 @@ function PracticeScreen() {
           onPress: () => {
             if (
               selectedCategory === 'custom' &&
-              filteredPhrases.length === 1
+              phrases.filter(item => item.category === 'custom').length === 1
             ) {
               setSelectedCategory('all');
             }
@@ -428,6 +448,33 @@ function PracticeScreen() {
           <Text style={styles.lookupPlus}>+</Text>
           <Text style={styles.lookupToggleText}>Add</Text>
         </Pressable>
+      </View>
+
+      <View style={styles.searchBar}>
+        <Icon color={theme.colors.mutedText} name="search" size={20} />
+        <TextInput
+          autoCapitalize="none"
+          autoCorrect={false}
+          onChangeText={setSearchQuery}
+          placeholder="Search words"
+          placeholderTextColor={theme.colors.mutedText}
+          returnKeyType="search"
+          style={styles.searchInput}
+          value={searchQuery}
+        />
+        {searchQuery.length > 0 ? (
+          <Pressable
+            accessibilityLabel="Clear search"
+            hitSlop={10}
+            onPress={() => setSearchQuery('')}
+            style={({ pressed }) => [
+              styles.clearSearchButton,
+              pressed && styles.clearSearchButtonPressed,
+            ]}
+          >
+            <Icon color={theme.colors.mutedText} name="close" size={18} />
+          </Pressable>
+        ) : null}
       </View>
 
       <View style={styles.filterBlock}>
@@ -535,8 +582,14 @@ function PracticeScreen() {
 
   const emptyState = (
     <View style={styles.emptyCard}>
-      <Text style={styles.emptyTitle}>No phrases</Text>
-      <Text style={styles.emptyText}>Try another category.</Text>
+      <Text style={styles.emptyTitle}>
+        {searchQuery.trim() ? 'No words found' : 'No phrases'}
+      </Text>
+      <Text style={styles.emptyText}>
+        {searchQuery.trim()
+          ? `No results for "${searchQuery.trim()}".`
+          : 'Try another category.'}
+      </Text>
     </View>
   );
 
@@ -573,6 +626,7 @@ function PracticeScreen() {
           keyExtractor={item => item.id}
           ListEmptyComponent={emptyState}
           ListHeaderComponent={listHeader}
+          keyboardShouldPersistTaps="handled"
           onScroll={handleListScroll}
           renderItem={({ item, index }) =>
             renderPhraseItem(
@@ -599,6 +653,7 @@ function PracticeScreen() {
           keyExtractor={item => item.id}
           ListEmptyComponent={emptyState}
           ListHeaderComponent={listHeader}
+          keyboardShouldPersistTaps="handled"
           onScroll={handleListScroll}
           onScrollToIndexFailed={({ averageItemLength, index }) => {
             listRef.current?.scrollToOffset({
@@ -696,6 +751,33 @@ const styles = StyleSheet.create({
   title: {
     ...theme.typography.title,
     marginBottom: theme.spacing.xs,
+  },
+  searchBar: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.card,
+    borderColor: theme.colors.border,
+    borderRadius: theme.radius.md,
+    borderWidth: 1,
+    flexDirection: 'row',
+    gap: theme.spacing.sm,
+    marginBottom: theme.spacing.md,
+    minHeight: 48,
+    paddingHorizontal: theme.spacing.md,
+  },
+  searchInput: {
+    color: theme.colors.text,
+    flex: 1,
+    fontSize: 15,
+    paddingVertical: 12,
+  },
+  clearSearchButton: {
+    alignItems: 'center',
+    height: 32,
+    justifyContent: 'center',
+    width: 32,
+  },
+  clearSearchButtonPressed: {
+    opacity: 0.6,
   },
   filterBlock: {
     marginBottom: theme.spacing.md,
