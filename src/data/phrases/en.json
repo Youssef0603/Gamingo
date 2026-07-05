@@ -1966,5 +1966,277 @@
   "antiToxic-mute-and-play": {
     "text": "Mute and keep playing",
     "meaning": "Calm way to handle toxicity without derailing the match."
+  },
+  "strategy-why-are-you-picking-that": {
+    "text": "Why are you picking that?",
+    "meaning": "Question about a teammate's hero, agent, or role selection."
+  },
+  "strategy-why-did-you-pick-that": {
+    "text": "Why did you pick that?",
+    "meaning": "Question about a teammate's hero, agent, or role selection."
+  },
+  "instructions-dont-pick-that": {
+    "text": "Don't pick that",
+    "meaning": "Draft-phase command about picking a hero, agent, or role."
+  },
+  "strategy-pick-smoker": {
+    "text": "Pick a smoker",
+    "meaning": "Draft-phase command about picking a hero, agent, or role."
+  },
+  "strategy-pick-healer": {
+    "text": "Pick a healer",
+    "meaning": "Draft-phase command about picking a hero, agent, or role."
+  },
+  "strategy-pick-tank": {
+    "text": "Pick a tank",
+    "meaning": "Draft-phase command about picking a hero, agent, or role."
+  },
+  "strategy-pick-support": {
+    "text": "Pick support",
+    "meaning": "Draft-phase command about picking a hero, agent, or role."
+  },
+  "strategy-pick-entry": {
+    "text": "Pick entry",
+    "meaning": "Draft-phase command about picking a hero, agent, or role."
+  },
+  "strategy-pick-sniper": {
+    "text": "Pick sniper",
+    "meaning": "Draft-phase command about picking a hero, agent, or role."
+  },
+  "strategy-we-need-smokes": {
+    "text": "We need smokes",
+    "meaning": "Draft-phase command about picking a hero, agent, or role."
+  },
+  "strategy-we-need-heals": {
+    "text": "We need heals",
+    "meaning": "Draft-phase command about picking a hero, agent, or role."
+  },
+  "strategy-fill-last-role": {
+    "text": "Fill the last role",
+    "meaning": "Draft-phase command about picking a hero, agent, or role."
+  },
+  "instructions-let-me-pick-first": {
+    "text": "Let me pick first",
+    "meaning": "Draft-phase command about picking a hero, agent, or role."
+  },
+  "instructions-dont-instalock": {
+    "text": "Don't instalock",
+    "meaning": "Draft-phase command about picking a hero, agent, or role."
+  },
+  "objective-take-bomb-and-rotate": {
+    "text": "Take bomb and rotate",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-take-the-bomb": {
+    "text": "Take the bomb",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-drop-the-bomb": {
+    "text": "Drop the bomb",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-who-has-bomb": {
+    "text": "Who has bomb?",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-dont-go-alone-with-bomb": {
+    "text": "Don't go alone with bomb",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-bomb-carrier-come-with-us": {
+    "text": "Bomb carrier, come with us",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-smoke-and-plant": {
+    "text": "Smoke and plant",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-plant-safe": {
+    "text": "Plant safe",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-plant-for-long": {
+    "text": "Plant for long",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-plant-for-short": {
+    "text": "Plant for short",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-plant-default": {
+    "text": "Plant default",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-cover-the-plant": {
+    "text": "Cover the plant",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-cover-the-defuse": {
+    "text": "Cover the defuse",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-dont-peek-after-plant": {
+    "text": "Don't peek after plant",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-play-post-plant": {
+    "text": "Play post-plant",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "objective-they-are-sticking-defuse": {
+    "text": "They're sticking the defuse",
+    "meaning": "Objective call for bomb, spike, plant, or defuse situations."
+  },
+  "teamwork-smoke-cross": {
+    "text": "Smoke the cross",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "teamwork-smoke-window": {
+    "text": "Smoke window",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "teamwork-smoke-heaven": {
+    "text": "Smoke heaven",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "teamwork-flash-me-in": {
+    "text": "Flash me in",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "teamwork-flash-through-smoke": {
+    "text": "Flash through smoke",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "teamwork-dont-flash-team": {
+    "text": "Don't flash the team",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "teamwork-molly-corner": {
+    "text": "Molly the corner",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "teamwork-break-utility": {
+    "text": "Break their utility",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "instructions-wait-for-utility": {
+    "text": "Wait for utility",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "instructions-use-ult-now": {
+    "text": "Use ult now",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "instructions-dont-waste-ult": {
+    "text": "Don't waste ult",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "callouts-smoke-fading": {
+    "text": "Smoke fading",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "danger-flash-coming": {
+    "text": "Flash coming",
+    "meaning": "Utility or ability coordination call used before an execute or fight."
+  },
+  "instructions-dont-rotate-yet": {
+    "text": "Don't rotate yet",
+    "meaning": "Rotation or positioning call for moving the team."
+  },
+  "instructions-rotate-now": {
+    "text": "Rotate now",
+    "meaning": "Rotation or positioning call for moving the team."
+  },
+  "strategy-fake-then-rotate": {
+    "text": "Fake then rotate",
+    "meaning": "Rotation or positioning call for moving the team."
+  },
+  "strategy-rotate-quietly": {
+    "text": "Rotate quietly",
+    "meaning": "Rotation or positioning call for moving the team."
+  },
+  "callouts-they-faked": {
+    "text": "They faked",
+    "meaning": "Rotation or positioning call for moving the team."
+  },
+  "callouts-they-are-saving": {
+    "text": "They are saving",
+    "meaning": "Rotation or positioning call for moving the team."
+  },
+  "strategy-stack-a": {
+    "text": "Stack A",
+    "meaning": "Rotation or positioning call for moving the team."
+  },
+  "strategy-stack-b": {
+    "text": "Stack B",
+    "meaning": "Rotation or positioning call for moving the team."
+  },
+  "instructions-play-your-life": {
+    "text": "Play your life",
+    "meaning": "Teamplay command used to coordinate safely."
+  },
+  "toxic-are-you-stupid": {
+    "text": "Are you stupid?",
+    "meaning": "Toxic or blaming phrase; useful for recognition, but not recommended for respectful comms."
+  },
+  "toxic-what-are-you-doing": {
+    "text": "What are you doing?",
+    "meaning": "Toxic or blaming phrase; useful for recognition, but not recommended for respectful comms."
+  },
+  "toxic-why-are-you-trolling": {
+    "text": "Why are you trolling?",
+    "meaning": "Toxic or blaming phrase; useful for recognition, but not recommended for respectful comms."
+  },
+  "toxic-stop-trolling": {
+    "text": "Stop trolling",
+    "meaning": "Toxic or blaming phrase; useful for recognition, but not recommended for respectful comms."
+  },
+  "toxic-you-are-throwing": {
+    "text": "You're throwing",
+    "meaning": "Toxic or blaming phrase; useful for recognition, but not recommended for respectful comms."
+  },
+  "toxic-you-threw-the-round": {
+    "text": "You threw the round",
+    "meaning": "Toxic or blaming phrase; useful for recognition, but not recommended for respectful comms."
+  },
+  "toxic-are-you-blind": {
+    "text": "Are you blind?",
+    "meaning": "Toxic or blaming phrase; useful for recognition, but not recommended for respectful comms."
+  },
+  "toxic-uninstall-the-game": {
+    "text": "Uninstall the game",
+    "meaning": "Toxic or blaming phrase; useful for recognition, but not recommended for respectful comms."
+  },
+  "antiToxic-please-ask-before-picking": {
+    "text": "Please ask before picking",
+    "meaning": "Calmer alternative that keeps team communication useful and respectful."
+  },
+  "antiToxic-we-need-better-comms": {
+    "text": "We need better comms",
+    "meaning": "Calmer alternative that keeps team communication useful and respectful."
+  },
+  "antiToxic-reset-mental": {
+    "text": "Reset mental",
+    "meaning": "Calmer alternative that keeps team communication useful and respectful."
+  },
+  "antiToxic-play-together-next-round": {
+    "text": "Let's play together next round",
+    "meaning": "Calmer alternative that keeps team communication useful and respectful."
+  },
+  "antiToxic-dont-blame-just-call": {
+    "text": "Don't blame, just call",
+    "meaning": "Calmer alternative that keeps team communication useful and respectful."
+  },
+  "antiToxic-focus-next-round": {
+    "text": "Focus next round",
+    "meaning": "Calmer alternative that keeps team communication useful and respectful."
+  },
+  "antiToxic-good-try-reset": {
+    "text": "Good try, reset",
+    "meaning": "Calmer alternative that keeps team communication useful and respectful."
+  },
+  "antiToxic-keep-comms-calm": {
+    "text": "Keep comms calm",
+    "meaning": "Calmer alternative that keeps team communication useful and respectful."
   }
 }

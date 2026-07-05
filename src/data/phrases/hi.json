@@ -585,7 +585,7 @@
   },
   "instructions-rotate": {
     "text": "रोटेट करो",
-    "meaning": "move करना करो को another lane या objective"
+    "meaning": "टीम के साथ दूसरी लेन या उद्देश्य की ओर जाओ."
   },
   "callouts-rotating": {
     "text": "रोटेट कर रहे हैं",
@@ -713,11 +713,11 @@
   },
   "objective-plant-the-bomb": {
     "text": "बम लगाओ",
-    "meaning": "bomb या spike को objective site पर place करो"
+    "meaning": "बम या स्पाइक को लक्ष्य साइट पर लगाओ."
   },
   "objective-bomb-planted": {
     "text": "बम प्लांट हो गया",
-    "meaning": "bomb या spike plant हो चुका है"
+    "meaning": "बम या स्पाइक लक्ष्य साइट पर लगाया जा चुका है."
   },
   "objective-bomb-down": {
     "text": "बम गिरा है",
@@ -725,7 +725,7 @@
   },
   "objective-spike-down": {
     "text": "स्पाइक गिरा है",
-    "meaning": "spike गिर गया है"
+    "meaning": "स्पाइक ज़मीन पर गिर गया है."
   },
   "objective-defuse-the-bomb": {
     "text": "बम डिफ्यूज़ करो",
@@ -861,7 +861,7 @@
   },
   "strategy-play-for-picks": {
     "text": "पिक के लिए खेलो",
-    "meaning": "commit करने से पहले एक safe elimination ढूँढना"
+    "meaning": "पूरी तरह जाने से पहले एक सुरक्षित एलिमिनेशन खोजो."
   },
   "strategy-take-map-control": {
     "text": "मैप कंट्रोल लो",
@@ -1528,8 +1528,8 @@
     "meaning": "right side पर enemies check करो"
   },
   "instructions-clear-corners": {
-    "text": "कोनाs साफ़ करो",
-    "meaning": "enter करने से पहले hiding spots check करो"
+    "text": "कोने साफ़ करो",
+    "meaning": "अंदर जाने से पहले छिपने वाली जगहें जाँचो."
   },
   "instructions-contest-point": {
     "text": "पॉइंट पर लड़ो",
@@ -1609,7 +1609,7 @@
   },
   "instructions-use-smoke": {
     "text": "स्मोक इस्तेमाल करो",
-    "meaning": "vision block करने के लिए smoke लगाओ"
+    "meaning": "दुश्मन की दृष्टि रोकने के लिए स्मोक डालो."
   },
   "instructions-use-ultimate": {
     "text": "अल्टिमेट इस्तेमाल करो",
@@ -1966,5 +1966,277 @@
   "antiToxic-mute-and-play": {
     "text": "म्यूट करो और खेलते रहो",
     "meaning": "टॉक्सिक व्यवहार को शांत तरीके से संभालने के लिए।"
+  },
+  "strategy-why-are-you-picking-that": {
+    "text": "तुम यह क्यों चुन रहे हो?",
+    "meaning": "हीरो, एजेंट या रोल चुनते समय पूछा जाने वाला सवाल."
+  },
+  "strategy-why-did-you-pick-that": {
+    "text": "तुमने यह क्यों चुना?",
+    "meaning": "हीरो, एजेंट या रोल चुनते समय पूछा जाने वाला सवाल."
+  },
+  "instructions-dont-pick-that": {
+    "text": "यह मत चुनो",
+    "meaning": "हीरो, एजेंट या रोल चुनने से जुड़ा छोटा निर्देश."
+  },
+  "strategy-pick-smoker": {
+    "text": "स्मोकर चुनो",
+    "meaning": "हीरो, एजेंट या रोल चुनने से जुड़ा छोटा निर्देश."
+  },
+  "strategy-pick-healer": {
+    "text": "हीलर चुनो",
+    "meaning": "हीरो, एजेंट या रोल चुनने से जुड़ा छोटा निर्देश."
+  },
+  "strategy-pick-tank": {
+    "text": "टैंक चुनो",
+    "meaning": "हीरो, एजेंट या रोल चुनने से जुड़ा छोटा निर्देश."
+  },
+  "strategy-pick-support": {
+    "text": "सपोर्ट चुनो",
+    "meaning": "हीरो, एजेंट या रोल चुनने से जुड़ा छोटा निर्देश."
+  },
+  "strategy-pick-entry": {
+    "text": "एंट्री चुनो",
+    "meaning": "हीरो, एजेंट या रोल चुनने से जुड़ा छोटा निर्देश."
+  },
+  "strategy-pick-sniper": {
+    "text": "स्नाइपर चुनो",
+    "meaning": "हीरो, एजेंट या रोल चुनने से जुड़ा छोटा निर्देश."
+  },
+  "strategy-we-need-smokes": {
+    "text": "हमें स्मोक चाहिए",
+    "meaning": "हीरो, एजेंट या रोल चुनने से जुड़ा छोटा निर्देश."
+  },
+  "strategy-we-need-heals": {
+    "text": "हमें हील चाहिए",
+    "meaning": "हीरो, एजेंट या रोल चुनने से जुड़ा छोटा निर्देश."
+  },
+  "strategy-fill-last-role": {
+    "text": "आख़िरी रोल भरो",
+    "meaning": "हीरो, एजेंट या रोल चुनने से जुड़ा छोटा निर्देश."
+  },
+  "instructions-let-me-pick-first": {
+    "text": "पहले मुझे चुनने दो",
+    "meaning": "हीरो, एजेंट या रोल चुनने से जुड़ा छोटा निर्देश."
+  },
+  "instructions-dont-instalock": {
+    "text": "इंस्टा-लॉक मत करो",
+    "meaning": "हीरो, एजेंट या रोल चुनने से जुड़ा छोटा निर्देश."
+  },
+  "objective-take-bomb-and-rotate": {
+    "text": "बम लेकर रोटेट करो",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-take-the-bomb": {
+    "text": "बम लो",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-drop-the-bomb": {
+    "text": "बम गिरा दो",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-who-has-bomb": {
+    "text": "बम किसके पास है?",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-dont-go-alone-with-bomb": {
+    "text": "बम लेकर अकेले मत जाओ",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-bomb-carrier-come-with-us": {
+    "text": "बम कैरियर, हमारे साथ आओ",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-smoke-and-plant": {
+    "text": "स्मोक डालो और प्लांट करो",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-plant-safe": {
+    "text": "सुरक्षित जगह प्लांट करो",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-plant-for-long": {
+    "text": "लॉन्ग के लिए प्लांट करो",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-plant-for-short": {
+    "text": "शॉर्ट के लिए प्लांट करो",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-plant-default": {
+    "text": "डिफ़ॉल्ट पर प्लांट करो",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-cover-the-plant": {
+    "text": "प्लांट को कवर करो",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-cover-the-defuse": {
+    "text": "डिफ्यूज़ को कवर करो",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-dont-peek-after-plant": {
+    "text": "प्लांट के बाद पीक मत करो",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-play-post-plant": {
+    "text": "पोस्ट-प्लांट खेलो",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "objective-they-are-sticking-defuse": {
+    "text": "वे डिफ्यूज़ छोड़ नहीं रहे",
+    "meaning": "बम, प्लांट या डिफ्यूज़ से जुड़ा उद्देश्य कॉल."
+  },
+  "teamwork-smoke-cross": {
+    "text": "क्रॉस पर स्मोक डालो",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "teamwork-smoke-window": {
+    "text": "विंडो पर स्मोक डालो",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "teamwork-smoke-heaven": {
+    "text": "हेवन पर स्मोक डालो",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "teamwork-flash-me-in": {
+    "text": "मुझे अंदर फ्लैश दो",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "teamwork-flash-through-smoke": {
+    "text": "स्मोक के पार फ्लैश दो",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "teamwork-dont-flash-team": {
+    "text": "टीम को फ्लैश मत करो",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "teamwork-molly-corner": {
+    "text": "कोने में मॉली डालो",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "teamwork-break-utility": {
+    "text": "उनकी यूटिलिटी तोड़ो",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "instructions-wait-for-utility": {
+    "text": "यूटिलिटी का इंतज़ार करो",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "instructions-use-ult-now": {
+    "text": "अभी अल्ट इस्तेमाल करो",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "instructions-dont-waste-ult": {
+    "text": "अल्ट बर्बाद मत करो",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "callouts-smoke-fading": {
+    "text": "स्मोक हट रही है",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "danger-flash-coming": {
+    "text": "फ्लैश आ रही है",
+    "meaning": "एबिलिटी या यूटिलिटी के तालमेल के लिए कॉल."
+  },
+  "instructions-dont-rotate-yet": {
+    "text": "अभी रोटेट मत करो",
+    "meaning": "टीम को दूसरी जगह ले जाने या पोज़िशन बदलने का कॉल."
+  },
+  "instructions-rotate-now": {
+    "text": "अब रोटेट करो",
+    "meaning": "टीम को दूसरी जगह ले जाने या पोज़िशन बदलने का कॉल."
+  },
+  "strategy-fake-then-rotate": {
+    "text": "फेक करो, फिर रोटेट करो",
+    "meaning": "टीम को दूसरी जगह ले जाने या पोज़िशन बदलने का कॉल."
+  },
+  "strategy-rotate-quietly": {
+    "text": "चुपचाप रोटेट करो",
+    "meaning": "टीम को दूसरी जगह ले जाने या पोज़िशन बदलने का कॉल."
+  },
+  "callouts-they-faked": {
+    "text": "उन्होंने फेक किया",
+    "meaning": "टीम को दूसरी जगह ले जाने या पोज़िशन बदलने का कॉल."
+  },
+  "callouts-they-are-saving": {
+    "text": "वे सेव कर रहे हैं",
+    "meaning": "टीम को दूसरी जगह ले जाने या पोज़िशन बदलने का कॉल."
+  },
+  "strategy-stack-a": {
+    "text": "ए साइट पर स्टैक करो",
+    "meaning": "टीम को दूसरी जगह ले जाने या पोज़िशन बदलने का कॉल."
+  },
+  "strategy-stack-b": {
+    "text": "बी साइट पर स्टैक करो",
+    "meaning": "टीम को दूसरी जगह ले जाने या पोज़िशन बदलने का कॉल."
+  },
+  "instructions-play-your-life": {
+    "text": "अपनी जान बचाकर खेलो",
+    "meaning": "सुरक्षित और साथ मिलकर खेलने का टीम निर्देश."
+  },
+  "toxic-are-you-stupid": {
+    "text": "क्या तुम बेवकूफ़ हो?",
+    "meaning": "टॉक्सिक या दोष देने वाला वाक्य; सम्मानजनक कॉम्स में इसका उपयोग न करें."
+  },
+  "toxic-what-are-you-doing": {
+    "text": "तुम क्या कर रहे हो?",
+    "meaning": "टॉक्सिक या दोष देने वाला वाक्य; सम्मानजनक कॉम्स में इसका उपयोग न करें."
+  },
+  "toxic-why-are-you-trolling": {
+    "text": "तुम ट्रोल क्यों कर रहे हो?",
+    "meaning": "टॉक्सिक या दोष देने वाला वाक्य; सम्मानजनक कॉम्स में इसका उपयोग न करें."
+  },
+  "toxic-stop-trolling": {
+    "text": "ट्रोल करना बंद करो",
+    "meaning": "टॉक्सिक या दोष देने वाला वाक्य; सम्मानजनक कॉम्स में इसका उपयोग न करें."
+  },
+  "toxic-you-are-throwing": {
+    "text": "तुम मैच फेंक रहे हो",
+    "meaning": "टॉक्सिक या दोष देने वाला वाक्य; सम्मानजनक कॉम्स में इसका उपयोग न करें."
+  },
+  "toxic-you-threw-the-round": {
+    "text": "तुमने राउंड फेंक दिया",
+    "meaning": "टॉक्सिक या दोष देने वाला वाक्य; सम्मानजनक कॉम्स में इसका उपयोग न करें."
+  },
+  "toxic-are-you-blind": {
+    "text": "क्या तुम अंधे हो?",
+    "meaning": "टॉक्सिक या दोष देने वाला वाक्य; सम्मानजनक कॉम्स में इसका उपयोग न करें."
+  },
+  "toxic-uninstall-the-game": {
+    "text": "गेम अनइंस्टॉल कर दो",
+    "meaning": "टॉक्सिक या दोष देने वाला वाक्य; सम्मानजनक कॉम्स में इसका उपयोग न करें."
+  },
+  "antiToxic-please-ask-before-picking": {
+    "text": "कृपया चुनने से पहले पूछो",
+    "meaning": "शांत विकल्प, जिससे टीम कॉम्स उपयोगी और सम्मानजनक रहती है."
+  },
+  "antiToxic-we-need-better-comms": {
+    "text": "हमें बेहतर कॉम्स चाहिए",
+    "meaning": "शांत विकल्प, जिससे टीम कॉम्स उपयोगी और सम्मानजनक रहती है."
+  },
+  "antiToxic-reset-mental": {
+    "text": "मानसिकता रीसेट करो",
+    "meaning": "शांत विकल्प, जिससे टीम कॉम्स उपयोगी और सम्मानजनक रहती है."
+  },
+  "antiToxic-play-together-next-round": {
+    "text": "अगले राउंड साथ खेलते हैं",
+    "meaning": "शांत विकल्प, जिससे टीम कॉम्स उपयोगी और सम्मानजनक रहती है."
+  },
+  "antiToxic-dont-blame-just-call": {
+    "text": "दोष मत दो, बस कॉल दो",
+    "meaning": "शांत विकल्प, जिससे टीम कॉम्स उपयोगी और सम्मानजनक रहती है."
+  },
+  "antiToxic-focus-next-round": {
+    "text": "अगले राउंड पर ध्यान दो",
+    "meaning": "शांत विकल्प, जिससे टीम कॉम्स उपयोगी और सम्मानजनक रहती है."
+  },
+  "antiToxic-good-try-reset": {
+    "text": "अच्छी कोशिश, रीसेट",
+    "meaning": "शांत विकल्प, जिससे टीम कॉम्स उपयोगी और सम्मानजनक रहती है."
+  },
+  "antiToxic-keep-comms-calm": {
+    "text": "कॉम्स शांत रखो",
+    "meaning": "शांत विकल्प, जिससे टीम कॉम्स उपयोगी और सम्मानजनक रहती है."
   }
 }

@@ -1966,5 +1966,277 @@
   "antiToxic-mute-and-play": {
     "text": "Wycisz i graj dalej",
     "meaning": "Spokojny sposób na toksyczność bez psucia meczu."
+  },
+  "strategy-why-are-you-picking-that": {
+    "text": "Dlaczego to wybierasz?",
+    "meaning": "Pytanie podczas wyboru bohatera, agenta lub roli."
+  },
+  "strategy-why-did-you-pick-that": {
+    "text": "Dlaczego to wybrałeś?",
+    "meaning": "Pytanie podczas wyboru bohatera, agenta lub roli."
+  },
+  "instructions-dont-pick-that": {
+    "text": "Nie wybieraj tego",
+    "meaning": "Polecenie draftowe dotyczące wyboru bohatera, agenta lub roli."
+  },
+  "strategy-pick-smoker": {
+    "text": "Wybierz smokera",
+    "meaning": "Polecenie draftowe dotyczące wyboru bohatera, agenta lub roli."
+  },
+  "strategy-pick-healer": {
+    "text": "Wybierz healera",
+    "meaning": "Polecenie draftowe dotyczące wyboru bohatera, agenta lub roli."
+  },
+  "strategy-pick-tank": {
+    "text": "Wybierz tanka",
+    "meaning": "Polecenie draftowe dotyczące wyboru bohatera, agenta lub roli."
+  },
+  "strategy-pick-support": {
+    "text": "Wybierz supporta",
+    "meaning": "Polecenie draftowe dotyczące wyboru bohatera, agenta lub roli."
+  },
+  "strategy-pick-entry": {
+    "text": "Wybierz entry",
+    "meaning": "Polecenie draftowe dotyczące wyboru bohatera, agenta lub roli."
+  },
+  "strategy-pick-sniper": {
+    "text": "Wybierz snajpera",
+    "meaning": "Polecenie draftowe dotyczące wyboru bohatera, agenta lub roli."
+  },
+  "strategy-we-need-smokes": {
+    "text": "Potrzebujemy smoke'ów",
+    "meaning": "Polecenie draftowe dotyczące wyboru bohatera, agenta lub roli."
+  },
+  "strategy-we-need-heals": {
+    "text": "Potrzebujemy healów",
+    "meaning": "Polecenie draftowe dotyczące wyboru bohatera, agenta lub roli."
+  },
+  "strategy-fill-last-role": {
+    "text": "Uzupełnij ostatnią rolę",
+    "meaning": "Polecenie draftowe dotyczące wyboru bohatera, agenta lub roli."
+  },
+  "instructions-let-me-pick-first": {
+    "text": "Daj mi wybrać pierwszemu",
+    "meaning": "Polecenie draftowe dotyczące wyboru bohatera, agenta lub roli."
+  },
+  "instructions-dont-instalock": {
+    "text": "Nie instalockuj",
+    "meaning": "Polecenie draftowe dotyczące wyboru bohatera, agenta lub roli."
+  },
+  "objective-take-bomb-and-rotate": {
+    "text": "Weź bombę i zrotuj",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-take-the-bomb": {
+    "text": "Weź bombę",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-drop-the-bomb": {
+    "text": "Dropnij bombę",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-who-has-bomb": {
+    "text": "Kto ma bombę?",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-dont-go-alone-with-bomb": {
+    "text": "Nie idź sam z bombą",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-bomb-carrier-come-with-us": {
+    "text": "Niosący bombę, chodź z nami",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-smoke-and-plant": {
+    "text": "Zasmokuj i podłóż",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-plant-safe": {
+    "text": "Podłóż bezpiecznie",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-plant-for-long": {
+    "text": "Podłóż pod longa",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-plant-for-short": {
+    "text": "Podłóż pod shorta",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-plant-default": {
+    "text": "Podłóż default",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-cover-the-plant": {
+    "text": "Osłaniaj planta",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-cover-the-defuse": {
+    "text": "Osłaniaj defuse",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-dont-peek-after-plant": {
+    "text": "Nie peekuj po podłożeniu",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-play-post-plant": {
+    "text": "Grajcie post-plant",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "objective-they-are-sticking-defuse": {
+    "text": "Stickują defuse",
+    "meaning": "Call dotyczący bomby, podłożenia lub defuse’a."
+  },
+  "teamwork-smoke-cross": {
+    "text": "Zasmokuj cross",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "teamwork-smoke-window": {
+    "text": "Zasmokuj okno",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "teamwork-smoke-heaven": {
+    "text": "Zasmokuj heaven",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "teamwork-flash-me-in": {
+    "text": "Daj mi flasha na wejście",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "teamwork-flash-through-smoke": {
+    "text": "Flash przez smoke'a",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "teamwork-dont-flash-team": {
+    "text": "Nie flashuj drużyny",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "teamwork-molly-corner": {
+    "text": "Molly w róg",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "teamwork-break-utility": {
+    "text": "Zniszcz ich utility",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "instructions-wait-for-utility": {
+    "text": "Czekaj na utility",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "instructions-use-ult-now": {
+    "text": "Użyj ulta teraz",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "instructions-dont-waste-ult": {
+    "text": "Nie marnuj ulta",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "callouts-smoke-fading": {
+    "text": "Smoke schodzi",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "danger-flash-coming": {
+    "text": "Nadchodzi flash",
+    "meaning": "Call do koordynacji utility lub umiejętności przed wejściem albo walką."
+  },
+  "instructions-dont-rotate-yet": {
+    "text": "Jeszcze nie rotuj",
+    "meaning": "Call rotacji lub pozycjonowania do przesunięcia drużyny."
+  },
+  "instructions-rotate-now": {
+    "text": "Rotuj teraz",
+    "meaning": "Call rotacji lub pozycjonowania do przesunięcia drużyny."
+  },
+  "strategy-fake-then-rotate": {
+    "text": "Zafejkuj, potem rotuj",
+    "meaning": "Call rotacji lub pozycjonowania do przesunięcia drużyny."
+  },
+  "strategy-rotate-quietly": {
+    "text": "Rotuj po cichu",
+    "meaning": "Call rotacji lub pozycjonowania do przesunięcia drużyny."
+  },
+  "callouts-they-faked": {
+    "text": "Zafejkowali",
+    "meaning": "Call rotacji lub pozycjonowania do przesunięcia drużyny."
+  },
+  "callouts-they-are-saving": {
+    "text": "Save'ują",
+    "meaning": "Call rotacji lub pozycjonowania do przesunięcia drużyny."
+  },
+  "strategy-stack-a": {
+    "text": "Stack A",
+    "meaning": "Call rotacji lub pozycjonowania do przesunięcia drużyny."
+  },
+  "strategy-stack-b": {
+    "text": "Stack B",
+    "meaning": "Call rotacji lub pozycjonowania do przesunięcia drużyny."
+  },
+  "instructions-play-your-life": {
+    "text": "Graj na przeżycie",
+    "meaning": "Polecenie drużynowe do bezpiecznej współpracy."
+  },
+  "toxic-are-you-stupid": {
+    "text": "Jesteś głupi?",
+    "meaning": "Toksyczna lub oskarżająca fraza; przydatna do rozpoznania, ale niewskazana w spokojnych commsach."
+  },
+  "toxic-what-are-you-doing": {
+    "text": "Co ty robisz?",
+    "meaning": "Toksyczna lub oskarżająca fraza; przydatna do rozpoznania, ale niewskazana w spokojnych commsach."
+  },
+  "toxic-why-are-you-trolling": {
+    "text": "Dlaczego trollujesz?",
+    "meaning": "Toksyczna lub oskarżająca fraza; przydatna do rozpoznania, ale niewskazana w spokojnych commsach."
+  },
+  "toxic-stop-trolling": {
+    "text": "Przestań trollować",
+    "meaning": "Toksyczna lub oskarżająca fraza; przydatna do rozpoznania, ale niewskazana w spokojnych commsach."
+  },
+  "toxic-you-are-throwing": {
+    "text": "Throwujesz",
+    "meaning": "Toksyczna lub oskarżająca fraza; przydatna do rozpoznania, ale niewskazana w spokojnych commsach."
+  },
+  "toxic-you-threw-the-round": {
+    "text": "Rzuciłeś rundę",
+    "meaning": "Toksyczna lub oskarżająca fraza; przydatna do rozpoznania, ale niewskazana w spokojnych commsach."
+  },
+  "toxic-are-you-blind": {
+    "text": "Jesteś ślepy?",
+    "meaning": "Toksyczna lub oskarżająca fraza; przydatna do rozpoznania, ale niewskazana w spokojnych commsach."
+  },
+  "toxic-uninstall-the-game": {
+    "text": "Odinstaluj grę",
+    "meaning": "Toksyczna lub oskarżająca fraza; przydatna do rozpoznania, ale niewskazana w spokojnych commsach."
+  },
+  "antiToxic-please-ask-before-picking": {
+    "text": "Proszę zapytaj przed wyborem",
+    "meaning": "Spokojniejsza alternatywa, która utrzymuje commsy użyteczne i pełne szacunku."
+  },
+  "antiToxic-we-need-better-comms": {
+    "text": "Potrzebujemy lepszych commsów",
+    "meaning": "Spokojniejsza alternatywa, która utrzymuje commsy użyteczne i pełne szacunku."
+  },
+  "antiToxic-reset-mental": {
+    "text": "Zresetuj mental",
+    "meaning": "Spokojniejsza alternatywa, która utrzymuje commsy użyteczne i pełne szacunku."
+  },
+  "antiToxic-play-together-next-round": {
+    "text": "Zagrajmy razem w następnej rundzie",
+    "meaning": "Spokojniejsza alternatywa, która utrzymuje commsy użyteczne i pełne szacunku."
+  },
+  "antiToxic-dont-blame-just-call": {
+    "text": "Nie obwiniaj, tylko calluj",
+    "meaning": "Spokojniejsza alternatywa, która utrzymuje commsy użyteczne i pełne szacunku."
+  },
+  "antiToxic-focus-next-round": {
+    "text": "Skup się na następnej rundzie",
+    "meaning": "Spokojniejsza alternatywa, która utrzymuje commsy użyteczne i pełne szacunku."
+  },
+  "antiToxic-good-try-reset": {
+    "text": "Dobra próba, reset",
+    "meaning": "Spokojniejsza alternatywa, która utrzymuje commsy użyteczne i pełne szacunku."
+  },
+  "antiToxic-keep-comms-calm": {
+    "text": "Trzymajmy spokojne commsy",
+    "meaning": "Spokojniejsza alternatywa, która utrzymuje commsy użyteczne i pełne szacunku."
   }
 }

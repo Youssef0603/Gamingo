@@ -3861,5 +3861,751 @@
       "positive",
       "real-case"
     ]
+  },
+  {
+    "id": "strategy-why-are-you-picking-that",
+    "category": "strategy",
+    "tags": [
+      "draft",
+      "pick",
+      "role",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-why-did-you-pick-that",
+    "category": "strategy",
+    "tags": [
+      "draft",
+      "pick",
+      "role",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-dont-pick-that",
+    "category": "instructions",
+    "tags": [
+      "draft",
+      "pick",
+      "role",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-pick-smoker",
+    "category": "strategy",
+    "tags": [
+      "draft",
+      "role",
+      "utility",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-pick-healer",
+    "category": "strategy",
+    "tags": [
+      "draft",
+      "role",
+      "support",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-pick-tank",
+    "category": "strategy",
+    "tags": [
+      "draft",
+      "role",
+      "frontline",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-pick-support",
+    "category": "strategy",
+    "tags": [
+      "draft",
+      "role",
+      "support",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-pick-entry",
+    "category": "strategy",
+    "tags": [
+      "draft",
+      "role",
+      "entry",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-pick-sniper",
+    "category": "strategy",
+    "tags": [
+      "draft",
+      "role",
+      "sniper",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-we-need-smokes",
+    "category": "strategy",
+    "tags": [
+      "draft",
+      "utility",
+      "smoke",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-we-need-heals",
+    "category": "strategy",
+    "tags": [
+      "draft",
+      "support",
+      "healing",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-fill-last-role",
+    "category": "strategy",
+    "tags": [
+      "draft",
+      "role",
+      "team-comp",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-let-me-pick-first",
+    "category": "instructions",
+    "tags": [
+      "draft",
+      "pick",
+      "turn-taking",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-dont-instalock",
+    "category": "instructions",
+    "tags": [
+      "draft",
+      "pick",
+      "instalock",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-take-bomb-and-rotate",
+    "category": "objective",
+    "tags": [
+      "bomb",
+      "rotate",
+      "tactical-fps",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-take-the-bomb",
+    "category": "objective",
+    "tags": [
+      "bomb",
+      "objective",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-drop-the-bomb",
+    "category": "objective",
+    "tags": [
+      "bomb",
+      "objective",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-who-has-bomb",
+    "category": "objective",
+    "tags": [
+      "bomb",
+      "objective",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-dont-go-alone-with-bomb",
+    "category": "objective",
+    "tags": [
+      "bomb",
+      "objective",
+      "safety",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-bomb-carrier-come-with-us",
+    "category": "objective",
+    "tags": [
+      "bomb",
+      "objective",
+      "teamwork",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-smoke-and-plant",
+    "category": "objective",
+    "tags": [
+      "smoke",
+      "plant",
+      "objective",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-plant-safe",
+    "category": "objective",
+    "tags": [
+      "plant",
+      "objective",
+      "post-plant",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-plant-for-long",
+    "category": "objective",
+    "tags": [
+      "plant",
+      "objective",
+      "lineup",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-plant-for-short",
+    "category": "objective",
+    "tags": [
+      "plant",
+      "objective",
+      "lineup",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-plant-default",
+    "category": "objective",
+    "tags": [
+      "plant",
+      "objective",
+      "default",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-cover-the-plant",
+    "category": "objective",
+    "tags": [
+      "plant",
+      "cover",
+      "teamwork",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-cover-the-defuse",
+    "category": "objective",
+    "tags": [
+      "defuse",
+      "cover",
+      "teamwork",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-dont-peek-after-plant",
+    "category": "objective",
+    "tags": [
+      "plant",
+      "post-plant",
+      "discipline",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-play-post-plant",
+    "category": "objective",
+    "tags": [
+      "plant",
+      "post-plant",
+      "strategy",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "objective-they-are-sticking-defuse",
+    "category": "objective",
+    "tags": [
+      "defuse",
+      "warning",
+      "post-plant",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "teamwork-smoke-cross",
+    "category": "teamwork",
+    "tags": [
+      "smoke",
+      "utility",
+      "execute",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "teamwork-smoke-window",
+    "category": "teamwork",
+    "tags": [
+      "smoke",
+      "utility",
+      "map-control",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "teamwork-smoke-heaven",
+    "category": "teamwork",
+    "tags": [
+      "smoke",
+      "utility",
+      "map-control",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "teamwork-flash-me-in",
+    "category": "teamwork",
+    "tags": [
+      "flash",
+      "utility",
+      "entry",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "teamwork-flash-through-smoke",
+    "category": "teamwork",
+    "tags": [
+      "flash",
+      "smoke",
+      "utility",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "teamwork-dont-flash-team",
+    "category": "teamwork",
+    "tags": [
+      "flash",
+      "utility",
+      "teamwork",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "teamwork-molly-corner",
+    "category": "teamwork",
+    "tags": [
+      "molly",
+      "utility",
+      "clear",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "teamwork-break-utility",
+    "category": "teamwork",
+    "tags": [
+      "utility",
+      "counterplay",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-wait-for-utility",
+    "category": "instructions",
+    "tags": [
+      "utility",
+      "coordination",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-use-ult-now",
+    "category": "instructions",
+    "tags": [
+      "ultimate",
+      "ability",
+      "urgent",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-dont-waste-ult",
+    "category": "instructions",
+    "tags": [
+      "ultimate",
+      "ability",
+      "economy",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-smoke-fading",
+    "category": "callouts",
+    "tags": [
+      "smoke",
+      "timing",
+      "warning",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "danger-flash-coming",
+    "category": "danger",
+    "tags": [
+      "flash",
+      "warning",
+      "urgent",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-dont-rotate-yet",
+    "category": "instructions",
+    "tags": [
+      "rotate",
+      "map-control",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-rotate-now",
+    "category": "instructions",
+    "tags": [
+      "rotate",
+      "urgent",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-fake-then-rotate",
+    "category": "strategy",
+    "tags": [
+      "fake",
+      "rotate",
+      "strategy",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-rotate-quietly",
+    "category": "strategy",
+    "tags": [
+      "rotate",
+      "stealth",
+      "strategy",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-they-faked",
+    "category": "callouts",
+    "tags": [
+      "fake",
+      "enemy-info",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "callouts-they-are-saving",
+    "category": "callouts",
+    "tags": [
+      "economy",
+      "enemy-info",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-stack-a",
+    "category": "strategy",
+    "tags": [
+      "site",
+      "stack",
+      "defense",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "strategy-stack-b",
+    "category": "strategy",
+    "tags": [
+      "site",
+      "stack",
+      "defense",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "instructions-play-your-life",
+    "category": "instructions",
+    "tags": [
+      "survival",
+      "discipline",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "toxic-are-you-stupid",
+    "category": "toxic",
+    "tags": [
+      "toxic",
+      "insult",
+      "blame",
+      "real-case",
+      "common"
+    ],
+    "isToxic": true
+  },
+  {
+    "id": "toxic-what-are-you-doing",
+    "category": "toxic",
+    "tags": [
+      "toxic",
+      "blame",
+      "frustration",
+      "real-case",
+      "common"
+    ],
+    "isToxic": true
+  },
+  {
+    "id": "toxic-why-are-you-trolling",
+    "category": "toxic",
+    "tags": [
+      "toxic",
+      "trolling",
+      "blame",
+      "real-case",
+      "common"
+    ],
+    "isToxic": true
+  },
+  {
+    "id": "toxic-stop-trolling",
+    "category": "toxic",
+    "tags": [
+      "toxic",
+      "trolling",
+      "command",
+      "real-case",
+      "common"
+    ],
+    "isToxic": true
+  },
+  {
+    "id": "toxic-you-are-throwing",
+    "category": "toxic",
+    "tags": [
+      "toxic",
+      "throwing",
+      "blame",
+      "real-case",
+      "common"
+    ],
+    "isToxic": true
+  },
+  {
+    "id": "toxic-you-threw-the-round",
+    "category": "toxic",
+    "tags": [
+      "toxic",
+      "throwing",
+      "blame",
+      "real-case",
+      "common"
+    ],
+    "isToxic": true
+  },
+  {
+    "id": "toxic-are-you-blind",
+    "category": "toxic",
+    "tags": [
+      "toxic",
+      "insult",
+      "blame",
+      "real-case",
+      "common"
+    ],
+    "isToxic": true
+  },
+  {
+    "id": "toxic-uninstall-the-game",
+    "category": "toxic",
+    "tags": [
+      "toxic",
+      "insult",
+      "harassment",
+      "real-case",
+      "common"
+    ],
+    "isToxic": true
+  },
+  {
+    "id": "antiToxic-please-ask-before-picking",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "draft",
+      "positive",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "antiToxic-we-need-better-comms",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "comms",
+      "positive",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "antiToxic-reset-mental",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "mental",
+      "positive",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "antiToxic-play-together-next-round",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "teamwork",
+      "positive",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "antiToxic-dont-blame-just-call",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "comms",
+      "positive",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "antiToxic-focus-next-round",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "focus",
+      "positive",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "antiToxic-good-try-reset",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "positive",
+      "reset",
+      "real-case",
+      "common"
+    ]
+  },
+  {
+    "id": "antiToxic-keep-comms-calm",
+    "category": "antiToxic",
+    "tags": [
+      "anti-toxic",
+      "comms",
+      "positive",
+      "real-case",
+      "common"
+    ]
   }
 ]

@@ -1966,5 +1966,277 @@
   "antiToxic-mute-and-play": {
     "text": "Mute en speel door",
     "meaning": "Rustige manier om toxiciteit te negeren zonder de match te laten ontsporen."
+  },
+  "strategy-why-are-you-picking-that": {
+    "text": "Waarom kies je dat?",
+    "meaning": "Vraag tijdens het kiezen van een held, agent of rol."
+  },
+  "strategy-why-did-you-pick-that": {
+    "text": "Waarom heb je dat gekozen?",
+    "meaning": "Vraag tijdens het kiezen van een held, agent of rol."
+  },
+  "instructions-dont-pick-that": {
+    "text": "Kies dat niet",
+    "meaning": "Draft-instructie over het kiezen van een held, agent of rol."
+  },
+  "strategy-pick-smoker": {
+    "text": "Kies een smoker",
+    "meaning": "Draft-instructie over het kiezen van een held, agent of rol."
+  },
+  "strategy-pick-healer": {
+    "text": "Kies een healer",
+    "meaning": "Draft-instructie over het kiezen van een held, agent of rol."
+  },
+  "strategy-pick-tank": {
+    "text": "Kies een tank",
+    "meaning": "Draft-instructie over het kiezen van een held, agent of rol."
+  },
+  "strategy-pick-support": {
+    "text": "Kies support",
+    "meaning": "Draft-instructie over het kiezen van een held, agent of rol."
+  },
+  "strategy-pick-entry": {
+    "text": "Kies entry",
+    "meaning": "Draft-instructie over het kiezen van een held, agent of rol."
+  },
+  "strategy-pick-sniper": {
+    "text": "Kies sniper",
+    "meaning": "Draft-instructie over het kiezen van een held, agent of rol."
+  },
+  "strategy-we-need-smokes": {
+    "text": "We hebben smokes nodig",
+    "meaning": "Draft-instructie over het kiezen van een held, agent of rol."
+  },
+  "strategy-we-need-heals": {
+    "text": "We hebben heals nodig",
+    "meaning": "Draft-instructie over het kiezen van een held, agent of rol."
+  },
+  "strategy-fill-last-role": {
+    "text": "Vul de laatste rol",
+    "meaning": "Draft-instructie over het kiezen van een held, agent of rol."
+  },
+  "instructions-let-me-pick-first": {
+    "text": "Laat mij eerst kiezen",
+    "meaning": "Draft-instructie over het kiezen van een held, agent of rol."
+  },
+  "instructions-dont-instalock": {
+    "text": "Niet instalocken",
+    "meaning": "Draft-instructie over het kiezen van een held, agent of rol."
+  },
+  "objective-take-bomb-and-rotate": {
+    "text": "Pak de bom en roteer",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-take-the-bomb": {
+    "text": "Pak de bom",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-drop-the-bomb": {
+    "text": "Drop de bom",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-who-has-bomb": {
+    "text": "Wie heeft de bom?",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-dont-go-alone-with-bomb": {
+    "text": "Ga niet alleen met de bom",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-bomb-carrier-come-with-us": {
+    "text": "Bomdrager, kom met ons mee",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-smoke-and-plant": {
+    "text": "Smoke en plant",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-plant-safe": {
+    "text": "Plant safe",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-plant-for-long": {
+    "text": "Plant voor long",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-plant-for-short": {
+    "text": "Plant voor short",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-plant-default": {
+    "text": "Plant default",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-cover-the-plant": {
+    "text": "Cover de plant",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-cover-the-defuse": {
+    "text": "Cover de defuse",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-dont-peek-after-plant": {
+    "text": "Peek niet na de plant",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-play-post-plant": {
+    "text": "Speel post-plant",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "objective-they-are-sticking-defuse": {
+    "text": "Ze sticken de defuse",
+    "meaning": "Objective-call voor bom-, plant- of defuse-situaties."
+  },
+  "teamwork-smoke-cross": {
+    "text": "Smoke de cross",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "teamwork-smoke-window": {
+    "text": "Smoke window",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "teamwork-smoke-heaven": {
+    "text": "Smoke heaven",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "teamwork-flash-me-in": {
+    "text": "Flash me naar binnen",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "teamwork-flash-through-smoke": {
+    "text": "Flash door de smoke",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "teamwork-dont-flash-team": {
+    "text": "Flash het team niet",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "teamwork-molly-corner": {
+    "text": "Molly de hoek",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "teamwork-break-utility": {
+    "text": "Breek hun utility",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "instructions-wait-for-utility": {
+    "text": "Wacht op utility",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "instructions-use-ult-now": {
+    "text": "Gebruik ult nu",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "instructions-dont-waste-ult": {
+    "text": "Verspil je ult niet",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "callouts-smoke-fading": {
+    "text": "Smoke verdwijnt",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "danger-flash-coming": {
+    "text": "Flash komt eraan",
+    "meaning": "Call om utility of abilities te coördineren voor een execute of fight."
+  },
+  "instructions-dont-rotate-yet": {
+    "text": "Nog niet roteren",
+    "meaning": "Rotatie- of positioneringscall om het team te verplaatsen."
+  },
+  "instructions-rotate-now": {
+    "text": "Roteer nu",
+    "meaning": "Rotatie- of positioneringscall om het team te verplaatsen."
+  },
+  "strategy-fake-then-rotate": {
+    "text": "Fake en roteer daarna",
+    "meaning": "Rotatie- of positioneringscall om het team te verplaatsen."
+  },
+  "strategy-rotate-quietly": {
+    "text": "Roteer stil",
+    "meaning": "Rotatie- of positioneringscall om het team te verplaatsen."
+  },
+  "callouts-they-faked": {
+    "text": "Ze hebben gefaket",
+    "meaning": "Rotatie- of positioneringscall om het team te verplaatsen."
+  },
+  "callouts-they-are-saving": {
+    "text": "Ze saven",
+    "meaning": "Rotatie- of positioneringscall om het team te verplaatsen."
+  },
+  "strategy-stack-a": {
+    "text": "Stack A",
+    "meaning": "Rotatie- of positioneringscall om het team te verplaatsen."
+  },
+  "strategy-stack-b": {
+    "text": "Stack B",
+    "meaning": "Rotatie- of positioneringscall om het team te verplaatsen."
+  },
+  "instructions-play-your-life": {
+    "text": "Speel je leven",
+    "meaning": "Teamplay-instructie om veilig samen te werken."
+  },
+  "toxic-are-you-stupid": {
+    "text": "Ben je dom?",
+    "meaning": "Toxische of beschuldigende zin; nuttig om te herkennen, maar niet aanbevolen voor respectvolle comms."
+  },
+  "toxic-what-are-you-doing": {
+    "text": "Wat doe je?",
+    "meaning": "Toxische of beschuldigende zin; nuttig om te herkennen, maar niet aanbevolen voor respectvolle comms."
+  },
+  "toxic-why-are-you-trolling": {
+    "text": "Waarom ben je aan het trollen?",
+    "meaning": "Toxische of beschuldigende zin; nuttig om te herkennen, maar niet aanbevolen voor respectvolle comms."
+  },
+  "toxic-stop-trolling": {
+    "text": "Stop met trollen",
+    "meaning": "Toxische of beschuldigende zin; nuttig om te herkennen, maar niet aanbevolen voor respectvolle comms."
+  },
+  "toxic-you-are-throwing": {
+    "text": "Je bent aan het throwen",
+    "meaning": "Toxische of beschuldigende zin; nuttig om te herkennen, maar niet aanbevolen voor respectvolle comms."
+  },
+  "toxic-you-threw-the-round": {
+    "text": "Je hebt de ronde gegooid",
+    "meaning": "Toxische of beschuldigende zin; nuttig om te herkennen, maar niet aanbevolen voor respectvolle comms."
+  },
+  "toxic-are-you-blind": {
+    "text": "Ben je blind?",
+    "meaning": "Toxische of beschuldigende zin; nuttig om te herkennen, maar niet aanbevolen voor respectvolle comms."
+  },
+  "toxic-uninstall-the-game": {
+    "text": "Verwijder de game",
+    "meaning": "Toxische of beschuldigende zin; nuttig om te herkennen, maar niet aanbevolen voor respectvolle comms."
+  },
+  "antiToxic-please-ask-before-picking": {
+    "text": "Vraag alsjeblieft voor je kiest",
+    "meaning": "Rustiger alternatief dat teamcommunicatie nuttig en respectvol houdt."
+  },
+  "antiToxic-we-need-better-comms": {
+    "text": "We hebben betere comms nodig",
+    "meaning": "Rustiger alternatief dat teamcommunicatie nuttig en respectvol houdt."
+  },
+  "antiToxic-reset-mental": {
+    "text": "Reset je mental",
+    "meaning": "Rustiger alternatief dat teamcommunicatie nuttig en respectvol houdt."
+  },
+  "antiToxic-play-together-next-round": {
+    "text": "Laten we volgende ronde samen spelen",
+    "meaning": "Rustiger alternatief dat teamcommunicatie nuttig en respectvol houdt."
+  },
+  "antiToxic-dont-blame-just-call": {
+    "text": "Geef geen schuld, geef alleen info",
+    "meaning": "Rustiger alternatief dat teamcommunicatie nuttig en respectvol houdt."
+  },
+  "antiToxic-focus-next-round": {
+    "text": "Focus op de volgende ronde",
+    "meaning": "Rustiger alternatief dat teamcommunicatie nuttig en respectvol houdt."
+  },
+  "antiToxic-good-try-reset": {
+    "text": "Goede poging, reset",
+    "meaning": "Rustiger alternatief dat teamcommunicatie nuttig en respectvol houdt."
+  },
+  "antiToxic-keep-comms-calm": {
+    "text": "Houd de comms rustig",
+    "meaning": "Rustiger alternatief dat teamcommunicatie nuttig en respectvol houdt."
   }
 }

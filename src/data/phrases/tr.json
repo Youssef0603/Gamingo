@@ -1966,5 +1966,277 @@
   "antiToxic-mute-and-play": {
     "text": "Sustur ve oynamaya devam et",
     "meaning": "Toksikliği maçı bozmadan sakin şekilde yönetme yolu."
+  },
+  "strategy-why-are-you-picking-that": {
+    "text": "Bunu neden seçiyorsun?",
+    "meaning": "Kahraman, ajan veya rol seçimi sırasında sorulan soru."
+  },
+  "strategy-why-did-you-pick-that": {
+    "text": "Bunu neden seçtin?",
+    "meaning": "Kahraman, ajan veya rol seçimi sırasında sorulan soru."
+  },
+  "instructions-dont-pick-that": {
+    "text": "Bunu seçme",
+    "meaning": "Kahraman, ajan veya rol seçimiyle ilgili kısa draft komutu."
+  },
+  "strategy-pick-smoker": {
+    "text": "Smoker seç",
+    "meaning": "Kahraman, ajan veya rol seçimiyle ilgili kısa draft komutu."
+  },
+  "strategy-pick-healer": {
+    "text": "Healer seç",
+    "meaning": "Kahraman, ajan veya rol seçimiyle ilgili kısa draft komutu."
+  },
+  "strategy-pick-tank": {
+    "text": "Tank seç",
+    "meaning": "Kahraman, ajan veya rol seçimiyle ilgili kısa draft komutu."
+  },
+  "strategy-pick-support": {
+    "text": "Support seç",
+    "meaning": "Kahraman, ajan veya rol seçimiyle ilgili kısa draft komutu."
+  },
+  "strategy-pick-entry": {
+    "text": "Entry seç",
+    "meaning": "Kahraman, ajan veya rol seçimiyle ilgili kısa draft komutu."
+  },
+  "strategy-pick-sniper": {
+    "text": "Sniper seç",
+    "meaning": "Kahraman, ajan veya rol seçimiyle ilgili kısa draft komutu."
+  },
+  "strategy-we-need-smokes": {
+    "text": "Smoke lazım",
+    "meaning": "Kahraman, ajan veya rol seçimiyle ilgili kısa draft komutu."
+  },
+  "strategy-we-need-heals": {
+    "text": "Heal lazım",
+    "meaning": "Kahraman, ajan veya rol seçimiyle ilgili kısa draft komutu."
+  },
+  "strategy-fill-last-role": {
+    "text": "Son rolü doldur",
+    "meaning": "Kahraman, ajan veya rol seçimiyle ilgili kısa draft komutu."
+  },
+  "instructions-let-me-pick-first": {
+    "text": "Önce ben seçeyim",
+    "meaning": "Kahraman, ajan veya rol seçimiyle ilgili kısa draft komutu."
+  },
+  "instructions-dont-instalock": {
+    "text": "Instalock yapma",
+    "meaning": "Kahraman, ajan veya rol seçimiyle ilgili kısa draft komutu."
+  },
+  "objective-take-bomb-and-rotate": {
+    "text": "Bombayı al ve rotate ol",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-take-the-bomb": {
+    "text": "Bombayı al",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-drop-the-bomb": {
+    "text": "Bombayı bırak",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-who-has-bomb": {
+    "text": "Bomba kimde?",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-dont-go-alone-with-bomb": {
+    "text": "Bombayla yalnız gitme",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-bomb-carrier-come-with-us": {
+    "text": "Bomba taşıyan, bizimle gel",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-smoke-and-plant": {
+    "text": "Smoke at ve kur",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-plant-safe": {
+    "text": "Güvenli kur",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-plant-for-long": {
+    "text": "Long için kur",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-plant-for-short": {
+    "text": "Short için kur",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-plant-default": {
+    "text": "Default kur",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-cover-the-plant": {
+    "text": "Plantı koru",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-cover-the-defuse": {
+    "text": "Defuse'u koru",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-dont-peek-after-plant": {
+    "text": "Plantten sonra peekleme",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-play-post-plant": {
+    "text": "Post-plant oynayın",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "objective-they-are-sticking-defuse": {
+    "text": "Defuse'u stickliyorlar",
+    "meaning": "Bomba, kurma veya defuse durumları için hedef call’u."
+  },
+  "teamwork-smoke-cross": {
+    "text": "Cross'a smoke at",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "teamwork-smoke-window": {
+    "text": "Window'a smoke at",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "teamwork-smoke-heaven": {
+    "text": "Heaven'a smoke at",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "teamwork-flash-me-in": {
+    "text": "Beni içeri flashla",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "teamwork-flash-through-smoke": {
+    "text": "Smoke içinden flash at",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "teamwork-dont-flash-team": {
+    "text": "Takımı flashlama",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "teamwork-molly-corner": {
+    "text": "Köşeye molly at",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "teamwork-break-utility": {
+    "text": "Utilitylerini kır",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "instructions-wait-for-utility": {
+    "text": "Utility bekleyin",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "instructions-use-ult-now": {
+    "text": "Ultiyi şimdi kullan",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "instructions-dont-waste-ult": {
+    "text": "Ultiyi boşa harcama",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "callouts-smoke-fading": {
+    "text": "Smoke dağılıyor",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "danger-flash-coming": {
+    "text": "Flash geliyor",
+    "meaning": "Execute veya fight öncesi utility ya da yetenek koordinasyonu call’u."
+  },
+  "instructions-dont-rotate-yet": {
+    "text": "Henüz rotate olma",
+    "meaning": "Takımı hareket ettirmek için rotate veya pozisyon call’u."
+  },
+  "instructions-rotate-now": {
+    "text": "Şimdi rotate ol",
+    "meaning": "Takımı hareket ettirmek için rotate veya pozisyon call’u."
+  },
+  "strategy-fake-then-rotate": {
+    "text": "Fake at, sonra rotate ol",
+    "meaning": "Takımı hareket ettirmek için rotate veya pozisyon call’u."
+  },
+  "strategy-rotate-quietly": {
+    "text": "Sessiz rotate ol",
+    "meaning": "Takımı hareket ettirmek için rotate veya pozisyon call’u."
+  },
+  "callouts-they-faked": {
+    "text": "Fake attılar",
+    "meaning": "Takımı hareket ettirmek için rotate veya pozisyon call’u."
+  },
+  "callouts-they-are-saving": {
+    "text": "Save yapıyorlar",
+    "meaning": "Takımı hareket ettirmek için rotate veya pozisyon call’u."
+  },
+  "strategy-stack-a": {
+    "text": "A'ya stack yapın",
+    "meaning": "Takımı hareket ettirmek için rotate veya pozisyon call’u."
+  },
+  "strategy-stack-b": {
+    "text": "B'ye stack yapın",
+    "meaning": "Takımı hareket ettirmek için rotate veya pozisyon call’u."
+  },
+  "instructions-play-your-life": {
+    "text": "Hayatta kalmaya oyna",
+    "meaning": "Güvenli şekilde birlikte oynamak için takım komutu."
+  },
+  "toxic-are-you-stupid": {
+    "text": "Aptal mısın?",
+    "meaning": "Toksik veya suçlayıcı ifade; tanımak için yararlı, saygılı comms için önerilmez."
+  },
+  "toxic-what-are-you-doing": {
+    "text": "Ne yapıyorsun?",
+    "meaning": "Toksik veya suçlayıcı ifade; tanımak için yararlı, saygılı comms için önerilmez."
+  },
+  "toxic-why-are-you-trolling": {
+    "text": "Neden trollüyorsun?",
+    "meaning": "Toksik veya suçlayıcı ifade; tanımak için yararlı, saygılı comms için önerilmez."
+  },
+  "toxic-stop-trolling": {
+    "text": "Trollemeyi bırak",
+    "meaning": "Toksik veya suçlayıcı ifade; tanımak için yararlı, saygılı comms için önerilmez."
+  },
+  "toxic-you-are-throwing": {
+    "text": "Oyunu satıyorsun",
+    "meaning": "Toksik veya suçlayıcı ifade; tanımak için yararlı, saygılı comms için önerilmez."
+  },
+  "toxic-you-threw-the-round": {
+    "text": "Roundu sattın",
+    "meaning": "Toksik veya suçlayıcı ifade; tanımak için yararlı, saygılı comms için önerilmez."
+  },
+  "toxic-are-you-blind": {
+    "text": "Kör müsün?",
+    "meaning": "Toksik veya suçlayıcı ifade; tanımak için yararlı, saygılı comms için önerilmez."
+  },
+  "toxic-uninstall-the-game": {
+    "text": "Oyunu sil",
+    "meaning": "Toksik veya suçlayıcı ifade; tanımak için yararlı, saygılı comms için önerilmez."
+  },
+  "antiToxic-please-ask-before-picking": {
+    "text": "Lütfen seçmeden önce sor",
+    "meaning": "Takım iletişimini yararlı ve saygılı tutan daha sakin alternatif."
+  },
+  "antiToxic-we-need-better-comms": {
+    "text": "Daha iyi comms lazım",
+    "meaning": "Takım iletişimini yararlı ve saygılı tutan daha sakin alternatif."
+  },
+  "antiToxic-reset-mental": {
+    "text": "Mentali resetle",
+    "meaning": "Takım iletişimini yararlı ve saygılı tutan daha sakin alternatif."
+  },
+  "antiToxic-play-together-next-round": {
+    "text": "Sonraki round birlikte oynayalım",
+    "meaning": "Takım iletişimini yararlı ve saygılı tutan daha sakin alternatif."
+  },
+  "antiToxic-dont-blame-just-call": {
+    "text": "Suçlama, sadece call ver",
+    "meaning": "Takım iletişimini yararlı ve saygılı tutan daha sakin alternatif."
+  },
+  "antiToxic-focus-next-round": {
+    "text": "Sonraki rounda odaklan",
+    "meaning": "Takım iletişimini yararlı ve saygılı tutan daha sakin alternatif."
+  },
+  "antiToxic-good-try-reset": {
+    "text": "İyi denemeydi, reset",
+    "meaning": "Takım iletişimini yararlı ve saygılı tutan daha sakin alternatif."
+  },
+  "antiToxic-keep-comms-calm": {
+    "text": "Comms'u sakin tutun",
+    "meaning": "Takım iletişimini yararlı ve saygılı tutan daha sakin alternatif."
   }
 }

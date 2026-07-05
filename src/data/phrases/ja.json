@@ -1966,5 +1966,277 @@
   "antiToxic-mute-and-play": {
     "text": "ミュートして続けよう",
     "meaning": "暴言に引きずられず試合を続けるための落ち着いた対応。"
+  },
+  "strategy-why-are-you-picking-that": {
+    "text": "なんでそれを選ぶの？",
+    "meaning": "ヒーロー、エージェント、ロール選択中に使う質問。"
+  },
+  "strategy-why-did-you-pick-that": {
+    "text": "なんでそれを選んだの？",
+    "meaning": "ヒーロー、エージェント、ロール選択中に使う質問。"
+  },
+  "instructions-dont-pick-that": {
+    "text": "それは選ばないで",
+    "meaning": "ヒーロー、エージェント、ロール選択に関する短い指示。"
+  },
+  "strategy-pick-smoker": {
+    "text": "スモーク役を選んで",
+    "meaning": "ヒーロー、エージェント、ロール選択に関する短い指示。"
+  },
+  "strategy-pick-healer": {
+    "text": "ヒーラーを選んで",
+    "meaning": "ヒーロー、エージェント、ロール選択に関する短い指示。"
+  },
+  "strategy-pick-tank": {
+    "text": "タンクを選んで",
+    "meaning": "ヒーロー、エージェント、ロール選択に関する短い指示。"
+  },
+  "strategy-pick-support": {
+    "text": "サポートを選んで",
+    "meaning": "ヒーロー、エージェント、ロール選択に関する短い指示。"
+  },
+  "strategy-pick-entry": {
+    "text": "エントリー役を選んで",
+    "meaning": "ヒーロー、エージェント、ロール選択に関する短い指示。"
+  },
+  "strategy-pick-sniper": {
+    "text": "スナイパーを選んで",
+    "meaning": "ヒーロー、エージェント、ロール選択に関する短い指示。"
+  },
+  "strategy-we-need-smokes": {
+    "text": "スモークが必要",
+    "meaning": "ヒーロー、エージェント、ロール選択に関する短い指示。"
+  },
+  "strategy-we-need-heals": {
+    "text": "ヒールが必要",
+    "meaning": "ヒーロー、エージェント、ロール選択に関する短い指示。"
+  },
+  "strategy-fill-last-role": {
+    "text": "最後のロールを埋めて",
+    "meaning": "ヒーロー、エージェント、ロール選択に関する短い指示。"
+  },
+  "instructions-let-me-pick-first": {
+    "text": "先に選ばせて",
+    "meaning": "ヒーロー、エージェント、ロール選択に関する短い指示。"
+  },
+  "instructions-dont-instalock": {
+    "text": "即ロックしないで",
+    "meaning": "ヒーロー、エージェント、ロール選択に関する短い指示。"
+  },
+  "objective-take-bomb-and-rotate": {
+    "text": "ボムを持ってローテートして",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-take-the-bomb": {
+    "text": "ボムを持って",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-drop-the-bomb": {
+    "text": "ボムを落として",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-who-has-bomb": {
+    "text": "ボム誰が持ってる？",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-dont-go-alone-with-bomb": {
+    "text": "ボムを持って一人で行かないで",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-bomb-carrier-come-with-us": {
+    "text": "ボム持ち、一緒に来て",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-smoke-and-plant": {
+    "text": "スモークして設置して",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-plant-safe": {
+    "text": "安全に設置して",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-plant-for-long": {
+    "text": "ロング用に設置して",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-plant-for-short": {
+    "text": "ショート用に設置して",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-plant-default": {
+    "text": "デフォルトに設置して",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-cover-the-plant": {
+    "text": "設置をカバーして",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-cover-the-defuse": {
+    "text": "解除をカバーして",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-dont-peek-after-plant": {
+    "text": "設置後にピークしないで",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-play-post-plant": {
+    "text": "ポストプラントで守ろう",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "objective-they-are-sticking-defuse": {
+    "text": "解除を押し切ってる",
+    "meaning": "ボム、設置、解除に関する目標コール。"
+  },
+  "teamwork-smoke-cross": {
+    "text": "クロスにスモークして",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "teamwork-smoke-window": {
+    "text": "ウィンドウにスモークして",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "teamwork-smoke-heaven": {
+    "text": "ヘブンにスモークして",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "teamwork-flash-me-in": {
+    "text": "入るからフラッシュして",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "teamwork-flash-through-smoke": {
+    "text": "スモーク越しにフラッシュして",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "teamwork-dont-flash-team": {
+    "text": "味方をフラッシュしないで",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "teamwork-molly-corner": {
+    "text": "角にモロトフ入れて",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "teamwork-break-utility": {
+    "text": "相手のユーティリティを壊して",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "instructions-wait-for-utility": {
+    "text": "ユーティリティを待って",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "instructions-use-ult-now": {
+    "text": "今ウルト使って",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "instructions-dont-waste-ult": {
+    "text": "ウルトを無駄にしないで",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "callouts-smoke-fading": {
+    "text": "スモークが消える",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "danger-flash-coming": {
+    "text": "フラッシュ来る",
+    "meaning": "攻めや戦闘前にユーティリティやアビリティを合わせるためのコール。"
+  },
+  "instructions-dont-rotate-yet": {
+    "text": "まだローテートしないで",
+    "meaning": "チームを動かすためのローテートやポジション調整のコール。"
+  },
+  "instructions-rotate-now": {
+    "text": "今ローテート",
+    "meaning": "チームを動かすためのローテートやポジション調整のコール。"
+  },
+  "strategy-fake-then-rotate": {
+    "text": "フェイクしてからローテート",
+    "meaning": "チームを動かすためのローテートやポジション調整のコール。"
+  },
+  "strategy-rotate-quietly": {
+    "text": "静かにローテートして",
+    "meaning": "チームを動かすためのローテートやポジション調整のコール。"
+  },
+  "callouts-they-faked": {
+    "text": "相手フェイクした",
+    "meaning": "チームを動かすためのローテートやポジション調整のコール。"
+  },
+  "callouts-they-are-saving": {
+    "text": "相手はセーブしてる",
+    "meaning": "チームを動かすためのローテートやポジション調整のコール。"
+  },
+  "strategy-stack-a": {
+    "text": "Ａに固まって",
+    "meaning": "チームを動かすためのローテートやポジション調整のコール。"
+  },
+  "strategy-stack-b": {
+    "text": "Ｂに固まって",
+    "meaning": "チームを動かすためのローテートやポジション調整のコール。"
+  },
+  "instructions-play-your-life": {
+    "text": "生き残ること優先",
+    "meaning": "安全に連携するためのチーム向け指示。"
+  },
+  "toxic-are-you-stupid": {
+    "text": "バカなの？",
+    "meaning": "味方を責める攻撃的な表現。認識用として扱い、敬意あるコミュニケーションでは推奨しない。"
+  },
+  "toxic-what-are-you-doing": {
+    "text": "何してるの？",
+    "meaning": "味方を責める攻撃的な表現。認識用として扱い、敬意あるコミュニケーションでは推奨しない。"
+  },
+  "toxic-why-are-you-trolling": {
+    "text": "なんでトロールしてるの？",
+    "meaning": "味方を責める攻撃的な表現。認識用として扱い、敬意あるコミュニケーションでは推奨しない。"
+  },
+  "toxic-stop-trolling": {
+    "text": "トロールやめて",
+    "meaning": "味方を責める攻撃的な表現。認識用として扱い、敬意あるコミュニケーションでは推奨しない。"
+  },
+  "toxic-you-are-throwing": {
+    "text": "試合を投げてる",
+    "meaning": "味方を責める攻撃的な表現。認識用として扱い、敬意あるコミュニケーションでは推奨しない。"
+  },
+  "toxic-you-threw-the-round": {
+    "text": "ラウンドを投げた",
+    "meaning": "味方を責める攻撃的な表現。認識用として扱い、敬意あるコミュニケーションでは推奨しない。"
+  },
+  "toxic-are-you-blind": {
+    "text": "目ついてる？",
+    "meaning": "味方を責める攻撃的な表現。認識用として扱い、敬意あるコミュニケーションでは推奨しない。"
+  },
+  "toxic-uninstall-the-game": {
+    "text": "ゲーム消せ",
+    "meaning": "味方を責める攻撃的な表現。認識用として扱い、敬意あるコミュニケーションでは推奨しない。"
+  },
+  "antiToxic-please-ask-before-picking": {
+    "text": "選ぶ前に聞いてください",
+    "meaning": "チームコミュニケーションを有用で敬意あるものに保つ落ち着いた代替表現。"
+  },
+  "antiToxic-we-need-better-comms": {
+    "text": "もっと良いコミュニケーションが必要",
+    "meaning": "チームコミュニケーションを有用で敬意あるものに保つ落ち着いた代替表現。"
+  },
+  "antiToxic-reset-mental": {
+    "text": "メンタルを切り替えよう",
+    "meaning": "チームコミュニケーションを有用で敬意あるものに保つ落ち着いた代替表現。"
+  },
+  "antiToxic-play-together-next-round": {
+    "text": "次のラウンドは一緒に動こう",
+    "meaning": "チームコミュニケーションを有用で敬意あるものに保つ落ち着いた代替表現。"
+  },
+  "antiToxic-dont-blame-just-call": {
+    "text": "責めずに情報だけ出そう",
+    "meaning": "チームコミュニケーションを有用で敬意あるものに保つ落ち着いた代替表現。"
+  },
+  "antiToxic-focus-next-round": {
+    "text": "次のラウンドに集中",
+    "meaning": "チームコミュニケーションを有用で敬意あるものに保つ落ち着いた代替表現。"
+  },
+  "antiToxic-good-try-reset": {
+    "text": "惜しかった、切り替えよう",
+    "meaning": "チームコミュニケーションを有用で敬意あるものに保つ落ち着いた代替表現。"
+  },
+  "antiToxic-keep-comms-calm": {
+    "text": "落ち着いたコミュニケーションでいこう",
+    "meaning": "チームコミュニケーションを有用で敬意あるものに保つ落ち着いた代替表現。"
   }
 }

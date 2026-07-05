@@ -1966,5 +1966,277 @@
   "antiToxic-mute-and-play": {
     "text": "뮤트하고 계속 하자",
     "meaning": "비매너에 흔들리지 않고 경기를 이어가는 차분한 대응."
+  },
+  "strategy-why-are-you-picking-that": {
+    "text": "왜 그걸 고르는 거야?",
+    "meaning": "영웅, 요원 또는 역할 선택 중에 쓰는 질문."
+  },
+  "strategy-why-did-you-pick-that": {
+    "text": "왜 그걸 골랐어?",
+    "meaning": "영웅, 요원 또는 역할 선택 중에 쓰는 질문."
+  },
+  "instructions-dont-pick-that": {
+    "text": "그거 고르지 마",
+    "meaning": "영웅, 요원 또는 역할 선택에 관한 짧은 지시."
+  },
+  "strategy-pick-smoker": {
+    "text": "스모커 골라",
+    "meaning": "영웅, 요원 또는 역할 선택에 관한 짧은 지시."
+  },
+  "strategy-pick-healer": {
+    "text": "힐러 골라",
+    "meaning": "영웅, 요원 또는 역할 선택에 관한 짧은 지시."
+  },
+  "strategy-pick-tank": {
+    "text": "탱커 골라",
+    "meaning": "영웅, 요원 또는 역할 선택에 관한 짧은 지시."
+  },
+  "strategy-pick-support": {
+    "text": "서포터 골라",
+    "meaning": "영웅, 요원 또는 역할 선택에 관한 짧은 지시."
+  },
+  "strategy-pick-entry": {
+    "text": "엔트리 골라",
+    "meaning": "영웅, 요원 또는 역할 선택에 관한 짧은 지시."
+  },
+  "strategy-pick-sniper": {
+    "text": "스나이퍼 골라",
+    "meaning": "영웅, 요원 또는 역할 선택에 관한 짧은 지시."
+  },
+  "strategy-we-need-smokes": {
+    "text": "스모크 필요해",
+    "meaning": "영웅, 요원 또는 역할 선택에 관한 짧은 지시."
+  },
+  "strategy-we-need-heals": {
+    "text": "힐 필요해",
+    "meaning": "영웅, 요원 또는 역할 선택에 관한 짧은 지시."
+  },
+  "strategy-fill-last-role": {
+    "text": "마지막 역할 채워줘",
+    "meaning": "영웅, 요원 또는 역할 선택에 관한 짧은 지시."
+  },
+  "instructions-let-me-pick-first": {
+    "text": "내가 먼저 고르게 해줘",
+    "meaning": "영웅, 요원 또는 역할 선택에 관한 짧은 지시."
+  },
+  "instructions-dont-instalock": {
+    "text": "인스타락 하지 마",
+    "meaning": "영웅, 요원 또는 역할 선택에 관한 짧은 지시."
+  },
+  "objective-take-bomb-and-rotate": {
+    "text": "폭탄 들고 로테이트해",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-take-the-bomb": {
+    "text": "폭탄 가져가",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-drop-the-bomb": {
+    "text": "폭탄 내려놔",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-who-has-bomb": {
+    "text": "폭탄 누구한테 있어?",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-dont-go-alone-with-bomb": {
+    "text": "폭탄 들고 혼자 가지 마",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-bomb-carrier-come-with-us": {
+    "text": "폭탄 든 사람, 같이 와",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-smoke-and-plant": {
+    "text": "스모크 치고 설치해",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-plant-safe": {
+    "text": "안전하게 설치해",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-plant-for-long": {
+    "text": "롱 보이게 설치해",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-plant-for-short": {
+    "text": "숏 보이게 설치해",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-plant-default": {
+    "text": "디폴트로 설치해",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-cover-the-plant": {
+    "text": "설치 커버해",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-cover-the-defuse": {
+    "text": "해체 커버해",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-dont-peek-after-plant": {
+    "text": "설치 후에 피킹하지 마",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-play-post-plant": {
+    "text": "포스트 플랜트 하자",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "objective-they-are-sticking-defuse": {
+    "text": "해체를 계속 붙고 있어",
+    "meaning": "폭탄, 설치 또는 해체 상황에서 쓰는 목표 콜."
+  },
+  "teamwork-smoke-cross": {
+    "text": "크로스에 스모크 쳐",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "teamwork-smoke-window": {
+    "text": "윈도우에 스모크 쳐",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "teamwork-smoke-heaven": {
+    "text": "헤븐에 스모크 쳐",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "teamwork-flash-me-in": {
+    "text": "나 들어가게 플래시 줘",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "teamwork-flash-through-smoke": {
+    "text": "스모크 너머로 플래시 줘",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "teamwork-dont-flash-team": {
+    "text": "팀한테 플래시 던지지 마",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "teamwork-molly-corner": {
+    "text": "코너에 몰리 던져",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "teamwork-break-utility": {
+    "text": "상대 유틸 부숴",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "instructions-wait-for-utility": {
+    "text": "유틸 기다려",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "instructions-use-ult-now": {
+    "text": "지금 궁 써",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "instructions-dont-waste-ult": {
+    "text": "궁 낭비하지 마",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "callouts-smoke-fading": {
+    "text": "스모크 사라진다",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "danger-flash-coming": {
+    "text": "플래시 온다",
+    "meaning": "진입이나 교전 전에 유틸 또는 스킬 타이밍을 맞추는 콜."
+  },
+  "instructions-dont-rotate-yet": {
+    "text": "아직 로테이트하지 마",
+    "meaning": "팀을 이동시키거나 위치를 바꾸기 위한 로테이트 콜."
+  },
+  "instructions-rotate-now": {
+    "text": "지금 로테이트해",
+    "meaning": "팀을 이동시키거나 위치를 바꾸기 위한 로테이트 콜."
+  },
+  "strategy-fake-then-rotate": {
+    "text": "페이크하고 로테이트해",
+    "meaning": "팀을 이동시키거나 위치를 바꾸기 위한 로테이트 콜."
+  },
+  "strategy-rotate-quietly": {
+    "text": "조용히 로테이트해",
+    "meaning": "팀을 이동시키거나 위치를 바꾸기 위한 로테이트 콜."
+  },
+  "callouts-they-faked": {
+    "text": "상대가 페이크했어",
+    "meaning": "팀을 이동시키거나 위치를 바꾸기 위한 로테이트 콜."
+  },
+  "callouts-they-are-saving": {
+    "text": "상대가 세이브해",
+    "meaning": "팀을 이동시키거나 위치를 바꾸기 위한 로테이트 콜."
+  },
+  "strategy-stack-a": {
+    "text": "Ａ에 스택해",
+    "meaning": "팀을 이동시키거나 위치를 바꾸기 위한 로테이트 콜."
+  },
+  "strategy-stack-b": {
+    "text": "Ｂ에 스택해",
+    "meaning": "팀을 이동시키거나 위치를 바꾸기 위한 로테이트 콜."
+  },
+  "instructions-play-your-life": {
+    "text": "살아서 플레이해",
+    "meaning": "안전하게 협동하기 위한 팀 지시."
+  },
+  "toxic-are-you-stupid": {
+    "text": "너 멍청해?",
+    "meaning": "팀원을 공격하거나 탓하는 표현. 인식용으로는 유용하지만 존중하는 콜에는 권장되지 않음."
+  },
+  "toxic-what-are-you-doing": {
+    "text": "뭐 하는 거야?",
+    "meaning": "팀원을 공격하거나 탓하는 표현. 인식용으로는 유용하지만 존중하는 콜에는 권장되지 않음."
+  },
+  "toxic-why-are-you-trolling": {
+    "text": "왜 트롤해?",
+    "meaning": "팀원을 공격하거나 탓하는 표현. 인식용으로는 유용하지만 존중하는 콜에는 권장되지 않음."
+  },
+  "toxic-stop-trolling": {
+    "text": "트롤 그만해",
+    "meaning": "팀원을 공격하거나 탓하는 표현. 인식용으로는 유용하지만 존중하는 콜에는 권장되지 않음."
+  },
+  "toxic-you-are-throwing": {
+    "text": "너 던지고 있어",
+    "meaning": "팀원을 공격하거나 탓하는 표현. 인식용으로는 유용하지만 존중하는 콜에는 권장되지 않음."
+  },
+  "toxic-you-threw-the-round": {
+    "text": "네가 라운드 던졌어",
+    "meaning": "팀원을 공격하거나 탓하는 표현. 인식용으로는 유용하지만 존중하는 콜에는 권장되지 않음."
+  },
+  "toxic-are-you-blind": {
+    "text": "눈 없어?",
+    "meaning": "팀원을 공격하거나 탓하는 표현. 인식용으로는 유용하지만 존중하는 콜에는 권장되지 않음."
+  },
+  "toxic-uninstall-the-game": {
+    "text": "게임 지워",
+    "meaning": "팀원을 공격하거나 탓하는 표현. 인식용으로는 유용하지만 존중하는 콜에는 권장되지 않음."
+  },
+  "antiToxic-please-ask-before-picking": {
+    "text": "고르기 전에 물어봐 줘",
+    "meaning": "팀 소통을 유용하고 존중 있게 유지하는 더 차분한 대체 표현."
+  },
+  "antiToxic-we-need-better-comms": {
+    "text": "더 좋은 콜이 필요해",
+    "meaning": "팀 소통을 유용하고 존중 있게 유지하는 더 차분한 대체 표현."
+  },
+  "antiToxic-reset-mental": {
+    "text": "멘탈 리셋하자",
+    "meaning": "팀 소통을 유용하고 존중 있게 유지하는 더 차분한 대체 표현."
+  },
+  "antiToxic-play-together-next-round": {
+    "text": "다음 라운드는 같이 하자",
+    "meaning": "팀 소통을 유용하고 존중 있게 유지하는 더 차분한 대체 표현."
+  },
+  "antiToxic-dont-blame-just-call": {
+    "text": "탓하지 말고 콜만 하자",
+    "meaning": "팀 소통을 유용하고 존중 있게 유지하는 더 차분한 대체 표현."
+  },
+  "antiToxic-focus-next-round": {
+    "text": "다음 라운드에 집중하자",
+    "meaning": "팀 소통을 유용하고 존중 있게 유지하는 더 차분한 대체 표현."
+  },
+  "antiToxic-good-try-reset": {
+    "text": "좋은 시도였어, 리셋하자",
+    "meaning": "팀 소통을 유용하고 존중 있게 유지하는 더 차분한 대체 표현."
+  },
+  "antiToxic-keep-comms-calm": {
+    "text": "콜은 차분하게 하자",
+    "meaning": "팀 소통을 유용하고 존중 있게 유지하는 더 차분한 대체 표현."
   }
 }

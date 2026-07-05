@@ -713,11 +713,11 @@
   },
   "objective-plant-the-bomb": {
     "text": "安装炸弹",
-    "meaning": "在目标点放置炸弹或 Spike"
+    "meaning": "在目标点放置炸弹或爆能器。"
   },
   "objective-bomb-planted": {
     "text": "炸弹已安装",
-    "meaning": "炸弹或 Spike 已经放下"
+    "meaning": "炸弹或爆能器已经放下。"
   },
   "objective-bomb-down": {
     "text": "炸弹掉了",
@@ -725,7 +725,7 @@
   },
   "objective-spike-down": {
     "text": "爆能器掉了",
-    "meaning": "Spike 已掉落"
+    "meaning": "爆能器已经掉落。"
   },
   "objective-defuse-the-bomb": {
     "text": "拆炸弹",
@@ -1966,5 +1966,277 @@
   "antiToxic-mute-and-play": {
     "text": "静音继续打",
     "meaning": "不被喷子影响、继续打比赛的冷静做法。"
+  },
+  "strategy-why-are-you-picking-that": {
+    "text": "你为什么选这个？",
+    "meaning": "角色、英雄或位置选择阶段的问题。"
+  },
+  "strategy-why-did-you-pick-that": {
+    "text": "你为什么选了这个？",
+    "meaning": "角色、英雄或位置选择阶段的问题。"
+  },
+  "instructions-dont-pick-that": {
+    "text": "别选这个",
+    "meaning": "关于选择角色、英雄或位置的简短指令。"
+  },
+  "strategy-pick-smoker": {
+    "text": "选个烟位",
+    "meaning": "关于选择角色、英雄或位置的简短指令。"
+  },
+  "strategy-pick-healer": {
+    "text": "选个奶妈",
+    "meaning": "关于选择角色、英雄或位置的简短指令。"
+  },
+  "strategy-pick-tank": {
+    "text": "选个坦克",
+    "meaning": "关于选择角色、英雄或位置的简短指令。"
+  },
+  "strategy-pick-support": {
+    "text": "选辅助",
+    "meaning": "关于选择角色、英雄或位置的简短指令。"
+  },
+  "strategy-pick-entry": {
+    "text": "选突破位",
+    "meaning": "关于选择角色、英雄或位置的简短指令。"
+  },
+  "strategy-pick-sniper": {
+    "text": "选狙击手",
+    "meaning": "关于选择角色、英雄或位置的简短指令。"
+  },
+  "strategy-we-need-smokes": {
+    "text": "我们需要烟",
+    "meaning": "关于选择角色、英雄或位置的简短指令。"
+  },
+  "strategy-we-need-heals": {
+    "text": "我们需要治疗",
+    "meaning": "关于选择角色、英雄或位置的简短指令。"
+  },
+  "strategy-fill-last-role": {
+    "text": "补最后一个位置",
+    "meaning": "关于选择角色、英雄或位置的简短指令。"
+  },
+  "instructions-let-me-pick-first": {
+    "text": "让我先选",
+    "meaning": "关于选择角色、英雄或位置的简短指令。"
+  },
+  "instructions-dont-instalock": {
+    "text": "别秒锁",
+    "meaning": "关于选择角色、英雄或位置的简短指令。"
+  },
+  "objective-take-bomb-and-rotate": {
+    "text": "拿包转点",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-take-the-bomb": {
+    "text": "拿包",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-drop-the-bomb": {
+    "text": "丢包",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-who-has-bomb": {
+    "text": "包在谁身上？",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-dont-go-alone-with-bomb": {
+    "text": "别一个人带包走",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-bomb-carrier-come-with-us": {
+    "text": "拿包的，跟我们走",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-smoke-and-plant": {
+    "text": "封烟然后下包",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-plant-safe": {
+    "text": "安全下包",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-plant-for-long": {
+    "text": "下包给长点",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-plant-for-short": {
+    "text": "下包给短点",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-plant-default": {
+    "text": "默认位下包",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-cover-the-plant": {
+    "text": "掩护下包",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-cover-the-defuse": {
+    "text": "掩护拆包",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-dont-peek-after-plant": {
+    "text": "下包后别露头",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-play-post-plant": {
+    "text": "打下包后",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "objective-they-are-sticking-defuse": {
+    "text": "他们在硬拆",
+    "meaning": "炸弹、下包或拆包场景中的目标呼叫。"
+  },
+  "teamwork-smoke-cross": {
+    "text": "封过点烟",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "teamwork-smoke-window": {
+    "text": "封窗口烟",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "teamwork-smoke-heaven": {
+    "text": "封天堂烟",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "teamwork-flash-me-in": {
+    "text": "给我闪进点",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "teamwork-flash-through-smoke": {
+    "text": "穿烟给闪",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "teamwork-dont-flash-team": {
+    "text": "别闪到队友",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "teamwork-molly-corner": {
+    "text": "给角落火",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "teamwork-break-utility": {
+    "text": "拆掉他们的道具",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "instructions-wait-for-utility": {
+    "text": "等道具",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "instructions-use-ult-now": {
+    "text": "现在开大",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "instructions-dont-waste-ult": {
+    "text": "别浪费大招",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "callouts-smoke-fading": {
+    "text": "烟快散了",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "danger-flash-coming": {
+    "text": "闪来了",
+    "meaning": "用于配合道具或技能时机的呼叫。"
+  },
+  "instructions-dont-rotate-yet": {
+    "text": "先别转点",
+    "meaning": "用于团队转点或调整站位的呼叫。"
+  },
+  "instructions-rotate-now": {
+    "text": "现在转点",
+    "meaning": "用于团队转点或调整站位的呼叫。"
+  },
+  "strategy-fake-then-rotate": {
+    "text": "假打再转点",
+    "meaning": "用于团队转点或调整站位的呼叫。"
+  },
+  "strategy-rotate-quietly": {
+    "text": "静步转点",
+    "meaning": "用于团队转点或调整站位的呼叫。"
+  },
+  "callouts-they-faked": {
+    "text": "他们假打了",
+    "meaning": "用于团队转点或调整站位的呼叫。"
+  },
+  "callouts-they-are-saving": {
+    "text": "他们在保枪",
+    "meaning": "用于团队转点或调整站位的呼叫。"
+  },
+  "strategy-stack-a": {
+    "text": "堆Ａ点",
+    "meaning": "用于团队转点或调整站位的呼叫。"
+  },
+  "strategy-stack-b": {
+    "text": "堆Ｂ点",
+    "meaning": "用于团队转点或调整站位的呼叫。"
+  },
+  "instructions-play-your-life": {
+    "text": "保命打",
+    "meaning": "用于安全配合团队行动的指令。"
+  },
+  "toxic-are-you-stupid": {
+    "text": "你傻吗？",
+    "meaning": "带有攻击或甩锅意味的表达，只建议用于识别，不建议在友好沟通中使用。"
+  },
+  "toxic-what-are-you-doing": {
+    "text": "你在干什么？",
+    "meaning": "带有攻击或甩锅意味的表达，只建议用于识别，不建议在友好沟通中使用。"
+  },
+  "toxic-why-are-you-trolling": {
+    "text": "你为什么在乱玩？",
+    "meaning": "带有攻击或甩锅意味的表达，只建议用于识别，不建议在友好沟通中使用。"
+  },
+  "toxic-stop-trolling": {
+    "text": "别乱玩了",
+    "meaning": "带有攻击或甩锅意味的表达，只建议用于识别，不建议在友好沟通中使用。"
+  },
+  "toxic-you-are-throwing": {
+    "text": "你在送",
+    "meaning": "带有攻击或甩锅意味的表达，只建议用于识别，不建议在友好沟通中使用。"
+  },
+  "toxic-you-threw-the-round": {
+    "text": "你把这回合送了",
+    "meaning": "带有攻击或甩锅意味的表达，只建议用于识别，不建议在友好沟通中使用。"
+  },
+  "toxic-are-you-blind": {
+    "text": "你瞎吗？",
+    "meaning": "带有攻击或甩锅意味的表达，只建议用于识别，不建议在友好沟通中使用。"
+  },
+  "toxic-uninstall-the-game": {
+    "text": "把游戏卸载了",
+    "meaning": "带有攻击或甩锅意味的表达，只建议用于识别，不建议在友好沟通中使用。"
+  },
+  "antiToxic-please-ask-before-picking": {
+    "text": "选之前请先问一下",
+    "meaning": "更冷静的替代表达，让团队沟通保持有用和尊重。"
+  },
+  "antiToxic-we-need-better-comms": {
+    "text": "我们需要更好的沟通",
+    "meaning": "更冷静的替代表达，让团队沟通保持有用和尊重。"
+  },
+  "antiToxic-reset-mental": {
+    "text": "调整心态",
+    "meaning": "更冷静的替代表达，让团队沟通保持有用和尊重。"
+  },
+  "antiToxic-play-together-next-round": {
+    "text": "下一回合一起打",
+    "meaning": "更冷静的替代表达，让团队沟通保持有用和尊重。"
+  },
+  "antiToxic-dont-blame-just-call": {
+    "text": "别甩锅，只报信息",
+    "meaning": "更冷静的替代表达，让团队沟通保持有用和尊重。"
+  },
+  "antiToxic-focus-next-round": {
+    "text": "专注下一回合",
+    "meaning": "更冷静的替代表达，让团队沟通保持有用和尊重。"
+  },
+  "antiToxic-good-try-reset": {
+    "text": "打得不错，调整一下",
+    "meaning": "更冷静的替代表达，让团队沟通保持有用和尊重。"
+  },
+  "antiToxic-keep-comms-calm": {
+    "text": "保持冷静沟通",
+    "meaning": "更冷静的替代表达，让团队沟通保持有用和尊重。"
   }
 }

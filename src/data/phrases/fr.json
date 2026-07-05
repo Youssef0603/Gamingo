@@ -1966,5 +1966,277 @@
   "antiToxic-mute-and-play": {
     "text": "Mute et continuez à jouer",
     "meaning": "Réponse calme à la toxicité sans faire dérailler la partie."
+  },
+  "strategy-why-are-you-picking-that": {
+    "text": "Pourquoi tu choisis ça ?",
+    "meaning": "Question posée pendant le choix d’un héros, agent ou rôle."
+  },
+  "strategy-why-did-you-pick-that": {
+    "text": "Pourquoi tu as choisi ça ?",
+    "meaning": "Question posée pendant le choix d’un héros, agent ou rôle."
+  },
+  "instructions-dont-pick-that": {
+    "text": "Ne choisis pas ça",
+    "meaning": "Consigne de draft sur le choix d’un héros, agent ou rôle."
+  },
+  "strategy-pick-smoker": {
+    "text": "Prends un agent à smokes",
+    "meaning": "Consigne de draft sur le choix d’un héros, agent ou rôle."
+  },
+  "strategy-pick-healer": {
+    "text": "Prends un healer",
+    "meaning": "Consigne de draft sur le choix d’un héros, agent ou rôle."
+  },
+  "strategy-pick-tank": {
+    "text": "Prends un tank",
+    "meaning": "Consigne de draft sur le choix d’un héros, agent ou rôle."
+  },
+  "strategy-pick-support": {
+    "text": "Prends support",
+    "meaning": "Consigne de draft sur le choix d’un héros, agent ou rôle."
+  },
+  "strategy-pick-entry": {
+    "text": "Prends entry",
+    "meaning": "Consigne de draft sur le choix d’un héros, agent ou rôle."
+  },
+  "strategy-pick-sniper": {
+    "text": "Prends sniper",
+    "meaning": "Consigne de draft sur le choix d’un héros, agent ou rôle."
+  },
+  "strategy-we-need-smokes": {
+    "text": "Il nous faut des smokes",
+    "meaning": "Consigne de draft sur le choix d’un héros, agent ou rôle."
+  },
+  "strategy-we-need-heals": {
+    "text": "Il nous faut des heals",
+    "meaning": "Consigne de draft sur le choix d’un héros, agent ou rôle."
+  },
+  "strategy-fill-last-role": {
+    "text": "Complète le dernier rôle",
+    "meaning": "Consigne de draft sur le choix d’un héros, agent ou rôle."
+  },
+  "instructions-let-me-pick-first": {
+    "text": "Laisse-moi choisir en premier",
+    "meaning": "Consigne de draft sur le choix d’un héros, agent ou rôle."
+  },
+  "instructions-dont-instalock": {
+    "text": "Ne instalock pas",
+    "meaning": "Consigne de draft sur le choix d’un héros, agent ou rôle."
+  },
+  "objective-take-bomb-and-rotate": {
+    "text": "Prends la bombe et rotate",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-take-the-bomb": {
+    "text": "Prends la bombe",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-drop-the-bomb": {
+    "text": "Lâche la bombe",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-who-has-bomb": {
+    "text": "Qui a la bombe ?",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-dont-go-alone-with-bomb": {
+    "text": "Ne pars pas seul avec la bombe",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-bomb-carrier-come-with-us": {
+    "text": "Porteur de bombe, viens avec nous",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-smoke-and-plant": {
+    "text": "Smoke et plante",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-plant-safe": {
+    "text": "Plante safe",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-plant-for-long": {
+    "text": "Plante pour long",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-plant-for-short": {
+    "text": "Plante pour short",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-plant-default": {
+    "text": "Plante default",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-cover-the-plant": {
+    "text": "Couvre le plant",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-cover-the-defuse": {
+    "text": "Couvre le defuse",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-dont-peek-after-plant": {
+    "text": "Ne peek pas après le plant",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-play-post-plant": {
+    "text": "Jouez post-plant",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "objective-they-are-sticking-defuse": {
+    "text": "Ils stickent le defuse",
+    "meaning": "Call d’objectif pour les situations de bombe, plant ou defuse."
+  },
+  "teamwork-smoke-cross": {
+    "text": "Smoke le cross",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "teamwork-smoke-window": {
+    "text": "Smoke window",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "teamwork-smoke-heaven": {
+    "text": "Smoke heaven",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "teamwork-flash-me-in": {
+    "text": "Flash-moi pour entrer",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "teamwork-flash-through-smoke": {
+    "text": "Flash à travers la smoke",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "teamwork-dont-flash-team": {
+    "text": "Ne flash pas l’équipe",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "teamwork-molly-corner": {
+    "text": "Molly le coin",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "teamwork-break-utility": {
+    "text": "Casse leur utilitaire",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "instructions-wait-for-utility": {
+    "text": "Attends les utilitaires",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "instructions-use-ult-now": {
+    "text": "Utilise ton ult maintenant",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "instructions-dont-waste-ult": {
+    "text": "Ne gaspille pas ton ult",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "callouts-smoke-fading": {
+    "text": "La smoke se dissipe",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "danger-flash-coming": {
+    "text": "Flash arrive",
+    "meaning": "Call de coordination pour les utilitaires ou les compétences."
+  },
+  "instructions-dont-rotate-yet": {
+    "text": "Ne rotate pas encore",
+    "meaning": "Call de rotation ou de positionnement pour déplacer l’équipe."
+  },
+  "instructions-rotate-now": {
+    "text": "Rotate maintenant",
+    "meaning": "Call de rotation ou de positionnement pour déplacer l’équipe."
+  },
+  "strategy-fake-then-rotate": {
+    "text": "Fake puis rotate",
+    "meaning": "Call de rotation ou de positionnement pour déplacer l’équipe."
+  },
+  "strategy-rotate-quietly": {
+    "text": "Rotate discrètement",
+    "meaning": "Call de rotation ou de positionnement pour déplacer l’équipe."
+  },
+  "callouts-they-faked": {
+    "text": "Ils ont fake",
+    "meaning": "Call de rotation ou de positionnement pour déplacer l’équipe."
+  },
+  "callouts-they-are-saving": {
+    "text": "Ils save",
+    "meaning": "Call de rotation ou de positionnement pour déplacer l’équipe."
+  },
+  "strategy-stack-a": {
+    "text": "Stack A",
+    "meaning": "Call de rotation ou de positionnement pour déplacer l’équipe."
+  },
+  "strategy-stack-b": {
+    "text": "Stack B",
+    "meaning": "Call de rotation ou de positionnement pour déplacer l’équipe."
+  },
+  "instructions-play-your-life": {
+    "text": "Joue ta vie",
+    "meaning": "Consigne d’équipe pour coordonner le jeu en sécurité."
+  },
+  "toxic-are-you-stupid": {
+    "text": "T'es stupide ?",
+    "meaning": "Phrase toxique ou accusatrice à reconnaître, mais à éviter en comms respectueuses."
+  },
+  "toxic-what-are-you-doing": {
+    "text": "Tu fais quoi ?",
+    "meaning": "Phrase toxique ou accusatrice à reconnaître, mais à éviter en comms respectueuses."
+  },
+  "toxic-why-are-you-trolling": {
+    "text": "Pourquoi tu troll ?",
+    "meaning": "Phrase toxique ou accusatrice à reconnaître, mais à éviter en comms respectueuses."
+  },
+  "toxic-stop-trolling": {
+    "text": "Arrête de troll",
+    "meaning": "Phrase toxique ou accusatrice à reconnaître, mais à éviter en comms respectueuses."
+  },
+  "toxic-you-are-throwing": {
+    "text": "Tu throw",
+    "meaning": "Phrase toxique ou accusatrice à reconnaître, mais à éviter en comms respectueuses."
+  },
+  "toxic-you-threw-the-round": {
+    "text": "Tu as throw le round",
+    "meaning": "Phrase toxique ou accusatrice à reconnaître, mais à éviter en comms respectueuses."
+  },
+  "toxic-are-you-blind": {
+    "text": "T'es aveugle ?",
+    "meaning": "Phrase toxique ou accusatrice à reconnaître, mais à éviter en comms respectueuses."
+  },
+  "toxic-uninstall-the-game": {
+    "text": "Désinstalle le jeu",
+    "meaning": "Phrase toxique ou accusatrice à reconnaître, mais à éviter en comms respectueuses."
+  },
+  "antiToxic-please-ask-before-picking": {
+    "text": "Demande avant de choisir, s'il te plaît",
+    "meaning": "Alternative plus calme pour garder des comms utiles et respectueuses."
+  },
+  "antiToxic-we-need-better-comms": {
+    "text": "Il nous faut de meilleures comms",
+    "meaning": "Alternative plus calme pour garder des comms utiles et respectueuses."
+  },
+  "antiToxic-reset-mental": {
+    "text": "Reset le mental",
+    "meaning": "Alternative plus calme pour garder des comms utiles et respectueuses."
+  },
+  "antiToxic-play-together-next-round": {
+    "text": "Jouons ensemble au prochain round",
+    "meaning": "Alternative plus calme pour garder des comms utiles et respectueuses."
+  },
+  "antiToxic-dont-blame-just-call": {
+    "text": "Ne blame pas, donne juste l’info",
+    "meaning": "Alternative plus calme pour garder des comms utiles et respectueuses."
+  },
+  "antiToxic-focus-next-round": {
+    "text": "Concentre-toi sur le prochain round",
+    "meaning": "Alternative plus calme pour garder des comms utiles et respectueuses."
+  },
+  "antiToxic-good-try-reset": {
+    "text": "Bien essayé, reset",
+    "meaning": "Alternative plus calme pour garder des comms utiles et respectueuses."
+  },
+  "antiToxic-keep-comms-calm": {
+    "text": "Gardez des comms calmes",
+    "meaning": "Alternative plus calme pour garder des comms utiles et respectueuses."
   }
 }
