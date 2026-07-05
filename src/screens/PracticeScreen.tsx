@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Alert,
+  Animated,
   Pressable,
   FlatList,
   LayoutChangeEvent,
@@ -119,6 +120,7 @@ function PracticeScreen() {
   const [selectedCategory, setSelectedCategory] =
     useState<CategoryFilter>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
   const [isLookupModalVisible, setIsLookupModalVisible] = useState(false);
   const [categoryViewportWidth, setCategoryViewportWidth] = useState(0);
@@ -133,11 +135,13 @@ function PracticeScreen() {
   const listRef = useRef<FlatList<Phrase>>(null);
   const sectionListRef = useRef<SectionList<Phrase, PhraseSection>>(null);
   const categoryScrollRef = useRef<ScrollView>(null);
+  const searchInputRef = useRef<TextInput>(null);
   const chipLayoutsRef = useRef<
     Partial<Record<CategoryFilter, { width: number; x: number }>>
   >({});
   const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
   const isScrollToTopButtonVisibleRef = useRef(false);
+  const searchRevealAnimation = useRef(new Animated.Value(0)).current;
 
   const availableCategories = useMemo(() => {
     const availableCategorySet = new Set(phrases.map(item => item.category));
@@ -274,6 +278,24 @@ function PracticeScreen() {
   }, [filteredPhrases, pendingOpenPhraseId, pendingScrollPhraseId]);
 
   useEffect(() => {
+    Animated.timing(searchRevealAnimation, {
+      duration: 220,
+      toValue: isSearchVisible ? 1 : 0,
+      useNativeDriver: false,
+    }).start();
+
+    if (isSearchVisible) {
+      const timeoutId = setTimeout(() => {
+        searchInputRef.current?.focus();
+      }, 120);
+
+      return () => clearTimeout(timeoutId);
+    }
+
+    searchInputRef.current?.blur();
+  }, [isSearchVisible, searchRevealAnimation]);
+
+  useEffect(() => {
     const selectedChipLayout = chipLayoutsRef.current[selectedCategory];
 
     if (!selectedChipLayout) {
@@ -324,8 +346,23 @@ function PracticeScreen() {
     });
   };
 
+  const hideSearch = () => {
+    setSearchQuery('');
+    setIsSearchVisible(false);
+  };
+
+  const toggleSearch = () => {
+    if (isSearchVisible) {
+      hideSearch();
+      return;
+    }
+
+    setIsSearchVisible(true);
+  };
+
   const showPhraseInList = (phrase: Phrase) => {
     setSearchQuery('');
+    setIsSearchVisible(false);
     setSelectedCategory(phrase.category);
     setPendingScrollPhraseId(phrase.id);
     setPendingOpenPhraseId(phrase.id);
@@ -450,33 +487,6 @@ function PracticeScreen() {
         </Pressable>
       </View>
 
-      <View style={styles.searchBar}>
-        <Icon color={theme.colors.mutedText} name="search" size={20} />
-        <TextInput
-          autoCapitalize="none"
-          autoCorrect={false}
-          onChangeText={setSearchQuery}
-          placeholder="Search words"
-          placeholderTextColor={theme.colors.mutedText}
-          returnKeyType="search"
-          style={styles.searchInput}
-          value={searchQuery}
-        />
-        {searchQuery.length > 0 ? (
-          <Pressable
-            accessibilityLabel="Clear search"
-            hitSlop={10}
-            onPress={() => setSearchQuery('')}
-            style={({ pressed }) => [
-              styles.clearSearchButton,
-              pressed && styles.clearSearchButtonPressed,
-            ]}
-          >
-            <Icon color={theme.colors.mutedText} name="close" size={18} />
-          </Pressable>
-        ) : null}
-      </View>
-
       <View style={styles.filterBlock}>
         <Text style={styles.filterLabel}>Languages</Text>
         <View style={styles.languageRow}>
@@ -554,7 +564,31 @@ function PracticeScreen() {
       </Pressable>
 
       <View style={styles.filterBlock}>
-        <Text style={styles.filterLabel}>Category</Text>
+        <View style={styles.filterHeaderRow}>
+          <Text style={[styles.filterLabel, styles.filterHeaderLabel]}>
+            Category
+          </Text>
+          <Pressable
+            accessibilityLabel={
+              isSearchVisible ? 'Close search' : 'Open search'
+            }
+            hitSlop={8}
+            onPress={toggleSearch}
+            style={({ pressed }) => [
+              styles.searchToggleButton,
+              isSearchVisible && styles.searchToggleButtonActive,
+              pressed && styles.searchToggleButtonPressed,
+            ]}
+          >
+            <Icon
+              color={
+                isSearchVisible ? theme.colors.primary : theme.colors.mutedText
+              }
+              name="search"
+              size={18}
+            />
+          </Pressable>
+        </View>
         <ScrollView
           onLayout={event =>
             setCategoryViewportWidth(event.nativeEvent.layout.width)
@@ -576,6 +610,54 @@ function PracticeScreen() {
             />
           ))}
         </ScrollView>
+
+        <Animated.View
+          pointerEvents={isSearchVisible ? 'auto' : 'none'}
+          style={[
+            styles.searchReveal,
+            {
+              height: searchRevealAnimation.interpolate({
+                inputRange: [0, 1],
+                outputRange: [0, 56],
+              }),
+              opacity: searchRevealAnimation,
+              transform: [
+                {
+                  translateY: searchRevealAnimation.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [-8, 0],
+                  }),
+                },
+              ],
+            },
+          ]}
+        >
+          <View style={[styles.searchBar, styles.categorySearchBar]}>
+            <Icon color={theme.colors.mutedText} name="search" size={20} />
+            <TextInput
+              ref={searchInputRef}
+              autoCapitalize="none"
+              autoCorrect={false}
+              onChangeText={setSearchQuery}
+              placeholder="Search words"
+              placeholderTextColor={theme.colors.mutedText}
+              returnKeyType="search"
+              style={styles.searchInput}
+              value={searchQuery}
+            />
+            <Pressable
+              accessibilityLabel="Close search"
+              hitSlop={10}
+              onPress={hideSearch}
+              style={({ pressed }) => [
+                styles.clearSearchButton,
+                pressed && styles.clearSearchButtonPressed,
+              ]}
+            >
+              <Icon color={theme.colors.mutedText} name="close" size={18} />
+            </Pressable>
+          </View>
+        </Animated.View>
       </View>
     </View>
   );
@@ -764,6 +846,10 @@ const styles = StyleSheet.create({
     minHeight: 48,
     paddingHorizontal: theme.spacing.md,
   },
+  categorySearchBar: {
+    marginBottom: 0,
+    marginTop: theme.spacing.sm,
+  },
   searchInput: {
     color: theme.colors.text,
     flex: 1,
@@ -781,6 +867,12 @@ const styles = StyleSheet.create({
   },
   filterBlock: {
     marginBottom: theme.spacing.md,
+  },
+  filterHeaderRow: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: theme.spacing.sm,
   },
   randomPracticeCard: {
     alignItems: 'center',
@@ -815,6 +907,9 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     marginBottom: theme.spacing.sm,
+  },
+  filterHeaderLabel: {
+    marginBottom: 0,
   },
   languageFlag: {
     fontSize: 20,
@@ -859,6 +954,27 @@ const styles = StyleSheet.create({
   },
   languageTextWrap: {
     flex: 1,
+  },
+  searchReveal: {
+    overflow: 'hidden',
+  },
+  searchToggleButton: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.card,
+    borderColor: theme.colors.border,
+    borderRadius: theme.radius.pill,
+    borderWidth: 1,
+    height: 34,
+    justifyContent: 'center',
+    width: 34,
+  },
+  searchToggleButtonActive: {
+    backgroundColor: withAlpha(theme.colors.primary, 0.08),
+    borderColor: withAlpha(theme.colors.primary, 0.18),
+  },
+  searchToggleButtonPressed: {
+    opacity: 0.72,
+    transform: [{ scale: 0.96 }],
   },
   chipRow: {
     gap: theme.spacing.sm,
