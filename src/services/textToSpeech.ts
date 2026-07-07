@@ -1,9 +1,13 @@
 import { createPlatformTextToSpeechAdapter } from './textToSpeechAdapter';
 
+import type { LanguageCode } from '../types/language';
+
 export type TextToSpeechRate = 'slow' | 'normal';
 
 export type TextToSpeechRequest = {
   language?: string;
+  languageCode?: LanguageCode;
+  phraseId?: string;
   rate?: TextToSpeechRate;
   text: string;
 };

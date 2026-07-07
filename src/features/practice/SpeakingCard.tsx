@@ -8,6 +8,7 @@ import { theme, withAlpha } from '../../theme/theme';
 import { usePractice } from './usePractice';
 
 import type { PracticeFeedback } from './usePractice';
+import type { LanguageCode } from '../../types/language';
 
 type SpeakingCardProps = {
   cancellationToken?: number;
@@ -16,10 +17,12 @@ type SpeakingCardProps = {
   helperLabel: string;
   helperText: string;
   isFavorite: boolean;
+  languageCode?: LanguageCode;
   locale?: string;
   onClose: () => void;
   onSuccessfulAttempt?: (feedback: PracticeFeedback) => void;
   onToggleFavorite: () => void;
+  phraseId?: string;
   phrase: string;
   showCloseAction?: boolean;
 };
@@ -60,10 +63,12 @@ function SpeakingCard({
   helperLabel,
   helperText,
   isFavorite,
+  languageCode,
   locale,
   onClose,
   onSuccessfulAttempt,
   onToggleFavorite,
+  phraseId,
   phrase,
   showCloseAction = true,
 }: SpeakingCardProps) {
@@ -92,8 +97,10 @@ function SpeakingCard({
     playPhrase,
     speakPhrase,
   } = usePractice({
+    languageCode,
     locale,
     onAttemptComplete: handleAttemptComplete,
+    phraseId,
     phrase,
   });
 

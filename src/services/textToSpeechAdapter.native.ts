@@ -1,6 +1,8 @@
 import { Platform } from 'react-native';
 import Tts from 'react-native-tts';
 
+import { phraseAudioPlaybackService } from './phraseAudioPlayback.native';
+
 import type { TextToSpeechAdapter, TextToSpeechRequest } from './textToSpeech';
 
 const TTS_DEBUG_PREFIX = '[practice][tts]';
@@ -51,7 +53,24 @@ export function createPlatformTextToSpeechAdapter(): TextToSpeechAdapter {
     isAvailable() {
       return true;
     },
-    async speak({ language, rate, text }: TextToSpeechRequest) {
+    async speak({
+      language,
+      languageCode,
+      phraseId,
+      rate,
+      text,
+    }: TextToSpeechRequest) {
+      const handledByPhraseAudio = await phraseAudioPlaybackService.play({
+        languageCode,
+        phraseId,
+        rate,
+      });
+
+      if (handledByPhraseAudio) {
+        logTts('speak:phrase-audio', { languageCode, phraseId, rate, text });
+        return;
+      }
+
       await Tts.getInitStatus();
       await configureIosSpeechPlayback();
 
@@ -198,7 +217,10 @@ export function createPlatformTextToSpeechAdapter(): TextToSpeechAdapter {
     },
     async stop() {
       logTts('stop');
-      await stopNativeSpeechSafely();
+      await Promise.allSettled([
+        phraseAudioPlaybackService.stop(),
+        stopNativeSpeechSafely(),
+      ]);
     },
   };
 }

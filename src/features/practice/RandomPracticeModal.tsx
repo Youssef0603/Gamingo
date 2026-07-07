@@ -277,12 +277,18 @@ function RandomPracticeModal({
                       helperText={activePhraseTranslations!.helperTranslation.text}
                       isFavorite={isFavorite(activePhrase.id)}
                       key={activePhrase.id}
+                      languageCode={activePhraseTranslations!.learningLanguage}
                       locale={resolvePracticeLocale(
                         activePhraseTranslations!.learningLanguage,
                       )}
                       onClose={handleClose}
                       onSuccessfulAttempt={handleSuccessfulAttempt}
                       onToggleFavorite={() => onToggleFavorite(activePhrase.id)}
+                      phraseId={
+                        activePhrase.category === 'custom'
+                          ? undefined
+                          : activePhrase.id
+                      }
                       phrase={activePhraseTranslations!.translation.text}
                       showCloseAction={false}
                     />

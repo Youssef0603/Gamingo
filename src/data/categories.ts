@@ -68,8 +68,9 @@ export const categoryMetadata: Record<PhraseCategory, CategoryMetadata> = {
     icon: '🗣️',
   },
   toxic: {
-    title: 'Cursing',
-    description: 'Profanity, insults, and abusive phrases sourced from the word bank.',
+    title: 'Toxic',
+    description:
+      'Profanity, insults, and abusive phrases sourced from the word bank.',
     icon: '🤬',
   },
   antiToxic: {

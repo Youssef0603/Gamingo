@@ -39,6 +39,8 @@ target 'PlayCall' do
 
   # Firebase Swift pods are integrated as static libraries in this project.
   # These transitive dependencies need module maps for CocoaPods to compile them.
+  pod 'FirebaseAppCheckInterop', :modular_headers => true
+  pod 'FirebaseAuthInterop', :modular_headers => true
   pod 'GoogleUtilities', :modular_headers => true
   pod 'GoogleDataTransport', :modular_headers => true
   pod 'nanopb', :modular_headers => true

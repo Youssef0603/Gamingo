@@ -66,9 +66,11 @@ function PracticeModal({
             helperText={helperTranslation.text}
             isFavorite={isFavorite}
             key={phrase.id}
+            languageCode={learningLanguage}
             locale={resolvePracticeLocale(learningLanguage)}
             onClose={handleClose}
             onToggleFavorite={onToggleFavorite}
+            phraseId={phrase.category === 'custom' ? undefined : phrase.id}
             phrase={translation.text}
           />
         </View>

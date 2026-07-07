@@ -42,6 +42,7 @@ android/keystore.properties
 node_modules/
 npm-debug.log
 yarn-error.log
+audios/
 
 # fastlane
 #

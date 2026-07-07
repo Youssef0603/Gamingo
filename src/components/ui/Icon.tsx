@@ -3,6 +3,7 @@ import React from 'react';
 import { Ionicons } from '@react-native-vector-icons/ionicons/static';
 
 export type IconName =
+  | 'alert-circle'
   | 'arrow-up'
   | 'checkmark-circle'
   | 'checkmark'

@@ -33,7 +33,7 @@ const firebaseOptions = Platform.select({
 
 let firebaseReadyPromise: Promise<void> | undefined;
 
-async function ensureFirebaseReady() {
+export async function ensureFirebaseReady() {
   if (!firebaseReadyPromise) {
     firebaseReadyPromise = (async () => {
       if (getApps().length === 0 && firebaseOptions) {

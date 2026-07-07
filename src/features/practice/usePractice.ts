@@ -15,6 +15,7 @@ import type {
 } from '../../services';
 import type { PracticeDependencies } from './practiceServices';
 import type { PracticeEvaluation } from './practiceUtils';
+import type { LanguageCode } from '../../types/language';
 
 const PRACTICE_DEBUG_PREFIX = '[practice]';
 const AUDIO_TRANSITION_DELAY_MS = 180;
@@ -41,8 +42,10 @@ export type PracticeFeedback = PracticeEvaluation & {
 
 type UsePracticeOptions = {
   dependencies?: Partial<PracticeDependencies>;
+  languageCode?: LanguageCode;
   locale?: string;
   onAttemptComplete?: (feedback: PracticeFeedback) => void;
+  phraseId?: string;
   phrase: string;
 };
 
@@ -150,8 +153,10 @@ function countNormalizedTokens(value: string) {
 
 export function usePractice({
   dependencies,
+  languageCode,
   locale,
   onAttemptComplete,
+  phraseId,
   phrase,
 }: UsePracticeOptions) {
   const defaultDependenciesRef = useRef<PracticeDependencies | null>(null);
@@ -268,7 +273,12 @@ export function usePractice({
         return;
       }
 
-      await textToSpeechRef.current.speak({ language: locale, text: phrase });
+      await textToSpeechRef.current.speak({
+        language: locale,
+        languageCode,
+        phraseId,
+        text: phrase,
+      });
 
       if (playbackRequestId !== playbackRequestIdRef.current) {
         return;
@@ -287,7 +297,7 @@ export function usePractice({
         setIsPlaying(false);
       }
     }
-  }, [locale, phrase]);
+  }, [languageCode, locale, phrase, phraseId]);
 
   const speakPhrase = useCallback(async () => {
     const attemptRequestId = attemptRequestIdRef.current + 1;

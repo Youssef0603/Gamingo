@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { BlurView } from 'expo-blur';
 import {
   Alert,
   Animated,
@@ -142,6 +143,10 @@ function PracticeScreen() {
   const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
   const isScrollToTopButtonVisibleRef = useRef(false);
   const searchRevealAnimation = useRef(new Animated.Value(0)).current;
+  const [
+    isToxicCategoryDisclosureDismissed,
+    setIsToxicCategoryDisclosureDismissed,
+  ] = useState(false);
 
   const availableCategories = useMemo(() => {
     const availableCategorySet = new Set(phrases.map(item => item.category));
@@ -322,6 +327,10 @@ function PracticeScreen() {
 
   const nativeLanguageOption = languageMetadata[nativeLanguage];
   const selectedLanguageOption = languageMetadata[selectedLanguage];
+  const shouldMaskToxicCategoryContent =
+    selectedCategory === 'toxic' && !isToxicCategoryDisclosureDismissed;
+  const shouldShowToxicListOverlay =
+    shouldMaskToxicCategoryContent && filteredPhrases.length > 0;
   const handleCategoryChipLayout =
     (category: CategoryFilter) => (event: LayoutChangeEvent) => {
       chipLayoutsRef.current[category] = event.nativeEvent.layout;
@@ -359,6 +368,16 @@ function PracticeScreen() {
 
     setIsSearchVisible(true);
   };
+
+  const acknowledgeToxicCategoryDisclosure = () => {
+    setIsToxicCategoryDisclosureDismissed(true);
+  };
+
+  useEffect(() => {
+    if (selectedCategory !== 'toxic') {
+      setIsToxicCategoryDisclosureDismissed(false);
+    }
+  }, [selectedCategory]);
 
   const showPhraseInList = (phrase: Phrase) => {
     setSearchQuery('');
@@ -728,35 +747,82 @@ function PracticeScreen() {
           stickySectionHeadersEnabled={false}
         />
       ) : (
-        <FlatList
-          ref={listRef}
-          contentContainerStyle={styles.content}
-          data={filteredPhrases}
-          keyExtractor={item => item.id}
-          ListEmptyComponent={emptyState}
-          ListHeaderComponent={listHeader}
-          keyboardShouldPersistTaps="handled"
-          onScroll={handleListScroll}
-          onScrollToIndexFailed={({ averageItemLength, index }) => {
-            listRef.current?.scrollToOffset({
-              animated: true,
-              offset: averageItemLength * index,
-            });
+        <View style={styles.filteredCategoryWrap}>
+          {shouldShowToxicListOverlay ? (
+            <View style={styles.filteredCategoryHeaderWrap}>{listHeader}</View>
+          ) : null}
+          {shouldShowToxicListOverlay ? (
+            <View style={styles.filteredListWrap}>
+              <View style={styles.toxicListOverlay}>
+                <BlurView
+                  intensity={42}
+                  style={StyleSheet.absoluteFill}
+                  tint="dark"
+                />
+                <View style={styles.toxicListOverlayTint} />
+                <View style={styles.toxicDisclosureCard}>
+                  <View style={styles.toxicDisclosureIconWrap}>
+                    <Icon
+                      color={theme.colors.primary}
+                      name="alert-circle"
+                      size={22}
+                    />
+                  </View>
+                  <Text style={styles.toxicDisclosureTitle}>
+                    Toxic content warning
+                  </Text>
+                  <Text style={styles.toxicDisclosureText}>
+                    This category includes abusive and toxic phrases. Use it
+                    only to recognize harmful language, and do not use these
+                    phrases in a real game.
+                  </Text>
+                  <Pressable
+                    accessibilityLabel="See toxic phrases"
+                    onPress={acknowledgeToxicCategoryDisclosure}
+                    style={({ pressed }) => [
+                      styles.toxicDisclosureButton,
+                      pressed && styles.toxicDisclosureButtonPressed,
+                    ]}
+                  >
+                    <Text style={styles.toxicDisclosureButtonText}>See</Text>
+                  </Pressable>
+                </View>
+              </View>
+            </View>
+          ) : (
+            <View style={styles.filteredListWrap}>
+              <FlatList
+                ref={listRef}
+                contentContainerStyle={styles.content}
+                data={filteredPhrases}
+                keyExtractor={item => item.id}
+                ListEmptyComponent={emptyState}
+                ListHeaderComponent={listHeader}
+                keyboardShouldPersistTaps="handled"
+                onScroll={handleListScroll}
+                onScrollToIndexFailed={({ averageItemLength, index }) => {
+                  listRef.current?.scrollToOffset({
+                    animated: true,
+                    offset: averageItemLength * index,
+                  });
 
-            setTimeout(() => {
-              listRef.current?.scrollToIndex({
-                animated: true,
-                index,
-                viewPosition: 0.2,
-              });
-            }, 120);
-          }}
-          renderItem={({ item, index }) =>
-            renderPhraseItem(item, index, filteredPhrases.length)
-          }
-          scrollEventThrottle={16}
-          showsVerticalScrollIndicator={false}
-        />
+                  setTimeout(() => {
+                    listRef.current?.scrollToIndex({
+                      animated: true,
+                      index,
+                      viewPosition: 0.2,
+                    });
+                  }, 120);
+                }}
+                renderItem={({ item, index }) =>
+                  renderPhraseItem(item, index, filteredPhrases.length)
+                }
+                scrollEventThrottle={16}
+                showsVerticalScrollIndicator={false}
+              />
+            </View>
+          )}
+        </View>
       )}
 
       <ScrollToTopButton
@@ -816,6 +882,9 @@ const styles = StyleSheet.create({
     paddingBottom: theme.spacing.xxl,
     paddingHorizontal: theme.spacing.lg,
     paddingTop: theme.spacing.lg,
+  },
+  contentWithoutHeader: {
+    paddingTop: 0,
   },
   header: {
     marginBottom: theme.spacing.lg,
@@ -1035,6 +1104,87 @@ const styles = StyleSheet.create({
   sectionHeaderText: {
     color: theme.colors.primary,
     fontSize: 14,
+    fontWeight: '700',
+  },
+  filteredCategoryWrap: {
+    flex: 1,
+  },
+  filteredCategoryHeaderWrap: {
+    paddingHorizontal: theme.spacing.lg,
+    paddingTop: theme.spacing.lg,
+  },
+  filteredListWrap: {
+    flex: 1,
+    position: 'relative',
+  },
+  toxicListOverlay: {
+    alignItems: 'center',
+    flex: 1,
+    elevation: 20,
+    justifyContent: 'center',
+    overflow: 'hidden',
+    paddingHorizontal: theme.spacing.lg,
+    paddingTop: theme.spacing.lg,
+    width: '100%',
+    zIndex: 20,
+  },
+  toxicListOverlayTint: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: withAlpha(theme.colors.primary, 0.08),
+  },
+  toxicDisclosureCard: {
+    alignItems: 'center',
+    backgroundColor: withAlpha(theme.colors.card, 0.88),
+    borderColor: withAlpha(theme.colors.primary, 0.2),
+    borderRadius: theme.radius.lg,
+    borderWidth: 1,
+    elevation: 21,
+    maxWidth: 520,
+    paddingHorizontal: theme.spacing.xl,
+    paddingVertical: theme.spacing.xl,
+    width: '100%',
+    zIndex: 21,
+  },
+  toxicDisclosureIconWrap: {
+    alignItems: 'center',
+    backgroundColor: withAlpha(theme.colors.primary, 0.12),
+    borderRadius: theme.radius.pill,
+    height: 48,
+    justifyContent: 'center',
+    marginBottom: theme.spacing.md,
+    width: 48,
+  },
+  toxicDisclosureTitle: {
+    color: theme.colors.text,
+    fontSize: 16,
+    fontWeight: '700',
+    marginBottom: theme.spacing.sm,
+    textAlign: 'center',
+  },
+  toxicDisclosureText: {
+    color: theme.colors.mutedText,
+    fontSize: 15,
+    lineHeight: 22,
+    marginBottom: theme.spacing.lg,
+    textAlign: 'center',
+  },
+  toxicDisclosureButton: {
+    alignItems: 'center',
+    alignSelf: 'center',
+    backgroundColor: theme.colors.primary,
+    borderRadius: theme.radius.pill,
+    justifyContent: 'center',
+    minHeight: 44,
+    minWidth: 96,
+    paddingHorizontal: 24,
+  },
+  toxicDisclosureButtonPressed: {
+    opacity: 0.82,
+    transform: [{ scale: 0.97 }],
+  },
+  toxicDisclosureButtonText: {
+    color: '#FFFFFF',
+    fontSize: 13,
     fontWeight: '700',
   },
   emptyCard: {
