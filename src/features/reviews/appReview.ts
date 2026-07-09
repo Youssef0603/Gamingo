@@ -3,36 +3,43 @@ import { AppState } from 'react-native';
 import * as StoreReview from 'react-native-store-review';
 
 const REVIEW_STATE_STORAGE_KEY = 'playcall.review-state';
-const INITIAL_REVIEW_PROMPT_DELAY_MS = 3500;
 const REVIEW_RETRY_COOLDOWN_MS = 14 * 24 * 60 * 60 * 1000;
-const POSITIVE_SIGNALS_BEFORE_RETRY = 3;
 const MAX_REVIEW_ATTEMPTS = 3;
+const PRACTICE_SUCCESSES_BEFORE_PROMPT = 5;
+const FAVORITE_SAVE_SUPPORT_CAP = 2;
+const MIN_PRACTICE_SUCCESSES_BEFORE_PROMPT = 3;
 
-type ReviewPromptReason = 'first-open' | 'positive-signal';
+export type ReviewMilestone =
+  | 'favorite-save'
+  | 'practice-success'
+  | 'random-practice-complete';
 
 type PersistedReviewState = {
   attemptCount?: number;
-  hasHandledFirstOpen?: boolean;
+  favoriteSaveCount?: number;
   lastAttemptedAtMs?: number;
   positiveSignalCount?: number;
+  practiceSuccessCount?: number;
+  randomPracticeCompletionCount?: number;
 };
 
 type ReviewState = {
   attemptCount: number;
-  hasHandledFirstOpen: boolean;
+  favoriteSaveCount: number;
   lastAttemptedAtMs: number | null;
-  positiveSignalCount: number;
+  practiceSuccessCount: number;
+  randomPracticeCompletionCount: number;
 };
 
 let reviewState: ReviewState = {
   attemptCount: 0,
-  hasHandledFirstOpen: false,
+  favoriteSaveCount: 0,
   lastAttemptedAtMs: null,
-  positiveSignalCount: 0,
+  practiceSuccessCount: 0,
+  randomPracticeCompletionCount: 0,
 };
 let hydrationPromise: Promise<void> | null = null;
 let persistPromise: Promise<void> = Promise.resolve();
-let firstOpenTimeout: ReturnType<typeof setTimeout> | null = null;
 let requestInFlight = false;
 
 function sanitizeCount(value: unknown) {
@@ -56,12 +63,17 @@ async function hydrateReviewState() {
     }
 
     const parsedValue: PersistedReviewState = JSON.parse(storedValue);
+    const migratedPracticeSuccessCount =
+      parsedValue.practiceSuccessCount ?? parsedValue.positiveSignalCount;
 
     reviewState = {
       attemptCount: sanitizeCount(parsedValue.attemptCount),
-      hasHandledFirstOpen: Boolean(parsedValue.hasHandledFirstOpen),
+      favoriteSaveCount: sanitizeCount(parsedValue.favoriteSaveCount),
       lastAttemptedAtMs: sanitizeTimestamp(parsedValue.lastAttemptedAtMs),
-      positiveSignalCount: sanitizeCount(parsedValue.positiveSignalCount),
+      practiceSuccessCount: sanitizeCount(migratedPracticeSuccessCount),
+      randomPracticeCompletionCount: sanitizeCount(
+        parsedValue.randomPracticeCompletionCount,
+      ),
     };
   } catch (error) {
     console.warn('Failed to hydrate review prompt state.', error);
@@ -79,9 +91,10 @@ function ensureReviewStateHydrated() {
 function queueReviewStatePersist() {
   const snapshot: PersistedReviewState = {
     attemptCount: reviewState.attemptCount,
-    hasHandledFirstOpen: reviewState.hasHandledFirstOpen,
+    favoriteSaveCount: reviewState.favoriteSaveCount,
     lastAttemptedAtMs: reviewState.lastAttemptedAtMs ?? undefined,
-    positiveSignalCount: reviewState.positiveSignalCount,
+    practiceSuccessCount: reviewState.practiceSuccessCount,
+    randomPracticeCompletionCount: reviewState.randomPracticeCompletionCount,
   };
 
   persistPromise = persistPromise
@@ -96,23 +109,27 @@ function queueReviewStatePersist() {
   return persistPromise;
 }
 
-function canRetryAfterPositiveSignal(now: number) {
-  if (reviewState.attemptCount === 0) {
-    return false;
-  }
+function getPracticeSuccessRequirement() {
+  const favoriteSaveSupport = Math.min(
+    reviewState.favoriteSaveCount,
+    FAVORITE_SAVE_SUPPORT_CAP,
+  );
 
-  if (reviewState.positiveSignalCount < POSITIVE_SIGNALS_BEFORE_RETRY) {
-    return false;
-  }
+  return Math.max(
+    MIN_PRACTICE_SUCCESSES_BEFORE_PROMPT,
+    PRACTICE_SUCCESSES_BEFORE_PROMPT - favoriteSaveSupport,
+  );
+}
 
-  if (!reviewState.lastAttemptedAtMs) {
+function hasEarnedReviewOpportunity() {
+  if (reviewState.randomPracticeCompletionCount > 0) {
     return true;
   }
 
-  return now - reviewState.lastAttemptedAtMs >= REVIEW_RETRY_COOLDOWN_MS;
+  return reviewState.practiceSuccessCount >= getPracticeSuccessRequirement();
 }
 
-async function requestNativeReview(now: number) {
+function canRequestReview(now: number) {
   if (
     requestInFlight ||
     (AppState.currentState && AppState.currentState !== 'active') ||
@@ -121,13 +138,49 @@ async function requestNativeReview(now: number) {
     return false;
   }
 
+  if (!hasEarnedReviewOpportunity()) {
+    return false;
+  }
+
+  if (
+    reviewState.attemptCount > 0 &&
+    reviewState.lastAttemptedAtMs &&
+    now - reviewState.lastAttemptedAtMs < REVIEW_RETRY_COOLDOWN_MS
+  ) {
+    return false;
+  }
+
+  return true;
+}
+
+function applyReviewMilestone(milestone: ReviewMilestone) {
+  switch (milestone) {
+    case 'favorite-save':
+      reviewState.favoriteSaveCount += 1;
+      break;
+    case 'practice-success':
+      reviewState.practiceSuccessCount += 1;
+      break;
+    case 'random-practice-complete':
+      reviewState.randomPracticeCompletionCount += 1;
+      break;
+  }
+}
+
+async function requestNativeReview(now: number) {
+  if (!canRequestReview(now)) {
+    return false;
+  }
+
   requestInFlight = true;
 
   try {
     StoreReview.requestReview();
     reviewState.attemptCount += 1;
+    reviewState.favoriteSaveCount = 0;
     reviewState.lastAttemptedAtMs = now;
-    reviewState.positiveSignalCount = 0;
+    reviewState.practiceSuccessCount = 0;
+    reviewState.randomPracticeCompletionCount = 0;
     await queueReviewStatePersist();
     return true;
   } catch (error) {
@@ -138,24 +191,13 @@ async function requestNativeReview(now: number) {
   }
 }
 
-async function maybeRequestReview(reason: ReviewPromptReason) {
+async function maybeRequestReview(milestone: ReviewMilestone) {
   await ensureReviewStateHydrated();
+  applyReviewMilestone(milestone);
 
   const now = Date.now();
 
-  if (reason === 'first-open') {
-    if (reviewState.hasHandledFirstOpen) {
-      return false;
-    }
-
-    reviewState.hasHandledFirstOpen = true;
-    await queueReviewStatePersist();
-    return requestNativeReview(now);
-  }
-
-  reviewState.positiveSignalCount += 1;
-
-  if (!canRetryAfterPositiveSignal(now)) {
+  if (!canRequestReview(now)) {
     await queueReviewStatePersist();
     return false;
   }
@@ -163,17 +205,6 @@ async function maybeRequestReview(reason: ReviewPromptReason) {
   return requestNativeReview(now);
 }
 
-export function scheduleFirstOpenReviewPrompt() {
-  if (firstOpenTimeout) {
-    return;
-  }
-
-  firstOpenTimeout = setTimeout(() => {
-    firstOpenTimeout = null;
-    maybeRequestReview('first-open').catch(() => undefined);
-  }, INITIAL_REVIEW_PROMPT_DELAY_MS);
-}
-
-export function trackPositiveReviewSignal() {
-  maybeRequestReview('positive-signal').catch(() => undefined);
+export function trackReviewMilestone(milestone: ReviewMilestone) {
+  maybeRequestReview(milestone).catch(() => undefined);
 }

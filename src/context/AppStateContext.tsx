@@ -12,7 +12,7 @@ import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { categoryOrder } from '../data/categories';
 import { phrases as basePhrases } from '../data/phrases';
 import { trackFavoriteSaveAction } from '../features/ads/mobileAds';
-import { trackPositiveReviewSignal } from '../features/reviews/appReview';
+import { trackReviewMilestone } from '../features/reviews/appReview';
 import { theme } from '../theme/theme';
 import { supportedLanguageCodes } from '../types/language';
 import {
@@ -467,7 +467,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
 
     if (shouldSaveToFavorites) {
       trackFavoriteSaveAction();
-      trackPositiveReviewSignal();
+      trackReviewMilestone('favorite-save');
     }
   };
 
@@ -512,7 +512,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
 
     if (!isAlreadyFavorite) {
       trackFavoriteSaveAction();
-      trackPositiveReviewSignal();
+      trackReviewMilestone('favorite-save');
     }
   };
 

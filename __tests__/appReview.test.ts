@@ -20,7 +20,6 @@ jest.mock('react-native-store-review', () => ({
 }));
 
 const REVIEW_STATE_STORAGE_KEY = 'playcall.review-state';
-const INITIAL_REVIEW_PROMPT_DELAY_MS = 3500;
 const REVIEW_RETRY_COOLDOWN_MS = 14 * 24 * 60 * 60 * 1000;
 
 async function flushPromises() {
@@ -41,43 +40,72 @@ describe('appReview', () => {
     jest.useRealTimers();
   });
 
-  it('requests a native review after the first app open delay', async () => {
+  it('requests a native review after a completed random practice session', async () => {
     const StoreReview = require('react-native-store-review');
-    const {
-      scheduleFirstOpenReviewPrompt,
-    } = require('../src/features/reviews/appReview');
+    const { trackReviewMilestone } = require('../src/features/reviews/appReview');
 
-    scheduleFirstOpenReviewPrompt();
-
-    await jest.advanceTimersByTimeAsync(INITIAL_REVIEW_PROMPT_DELAY_MS - 1);
-    expect(StoreReview.requestReview).not.toHaveBeenCalled();
-
-    await jest.advanceTimersByTimeAsync(1);
+    trackReviewMilestone('random-practice-complete');
     await flushPromises();
 
     expect(StoreReview.requestReview).toHaveBeenCalledTimes(1);
   });
 
-  it('retries after enough positive signals and cooldown time', async () => {
+  it('requests a review after enough successful practice reps', async () => {
+    const StoreReview = require('react-native-store-review');
+    const { trackReviewMilestone } = require('../src/features/reviews/appReview');
+
+    for (let index = 0; index < 4; index += 1) {
+      trackReviewMilestone('practice-success');
+    }
+
+    await flushPromises();
+
+    expect(StoreReview.requestReview).not.toHaveBeenCalled();
+
+    trackReviewMilestone('practice-success');
+    await flushPromises();
+
+    expect(StoreReview.requestReview).toHaveBeenCalledTimes(1);
+  });
+
+  it('lets favorite saves support the practice threshold without triggering alone', async () => {
+    const StoreReview = require('react-native-store-review');
+    const { trackReviewMilestone } = require('../src/features/reviews/appReview');
+
+    trackReviewMilestone('favorite-save');
+    trackReviewMilestone('favorite-save');
+    await flushPromises();
+
+    expect(StoreReview.requestReview).not.toHaveBeenCalled();
+
+    trackReviewMilestone('practice-success');
+    trackReviewMilestone('practice-success');
+    await flushPromises();
+
+    expect(StoreReview.requestReview).not.toHaveBeenCalled();
+
+    trackReviewMilestone('practice-success');
+    await flushPromises();
+
+    expect(StoreReview.requestReview).toHaveBeenCalledTimes(1);
+  });
+
+  it('retries after cooldown and new earned milestones', async () => {
     await mockAsyncStorage.setItem(
       REVIEW_STATE_STORAGE_KEY,
       JSON.stringify({
         attemptCount: 1,
-        hasHandledFirstOpen: true,
         lastAttemptedAtMs: Date.now() - REVIEW_RETRY_COOLDOWN_MS,
-        positiveSignalCount: 0,
+        practiceSuccessCount: 0,
+        randomPracticeCompletionCount: 0,
+        favoriteSaveCount: 0,
       }),
     );
 
     const StoreReview = require('react-native-store-review');
-    const { trackPositiveReviewSignal } = require('../src/features/reviews/appReview');
+    const { trackReviewMilestone } = require('../src/features/reviews/appReview');
 
-    trackPositiveReviewSignal();
-    trackPositiveReviewSignal();
-    await flushPromises();
-    expect(StoreReview.requestReview).not.toHaveBeenCalled();
-
-    trackPositiveReviewSignal();
+    trackReviewMilestone('random-practice-complete');
     await flushPromises();
 
     expect(StoreReview.requestReview).toHaveBeenCalledTimes(1);
@@ -88,16 +116,17 @@ describe('appReview', () => {
       REVIEW_STATE_STORAGE_KEY,
       JSON.stringify({
         attemptCount: 3,
-        hasHandledFirstOpen: true,
         lastAttemptedAtMs: Date.now() - REVIEW_RETRY_COOLDOWN_MS,
-        positiveSignalCount: 3,
+        practiceSuccessCount: 5,
+        randomPracticeCompletionCount: 0,
+        favoriteSaveCount: 0,
       }),
     );
 
     const StoreReview = require('react-native-store-review');
-    const { trackPositiveReviewSignal } = require('../src/features/reviews/appReview');
+    const { trackReviewMilestone } = require('../src/features/reviews/appReview');
 
-    trackPositiveReviewSignal();
+    trackReviewMilestone('random-practice-complete');
     await flushPromises();
 
     expect(StoreReview.requestReview).not.toHaveBeenCalled();

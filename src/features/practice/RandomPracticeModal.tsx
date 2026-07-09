@@ -10,6 +10,7 @@ import {
 import type { GestureResponderEvent } from 'react-native';
 
 import { Icon } from '../../components/ui';
+import { trackReviewMilestone } from '../reviews/appReview';
 import { stop as stopSpeechRecognition, stopSpeaking } from '../../services';
 import { theme, withAlpha } from '../../theme/theme';
 import { languageMetadata } from '../../types/language';
@@ -57,6 +58,8 @@ function RandomPracticeModal({
     y: number;
   } | null>(null);
   const isSkipTransitionActiveRef = useRef(false);
+  const hasTrackedCompletionRef = useRef(false);
+  const successfulAttemptCountRef = useRef(0);
   const touchStartRef = useRef<{ pageX: number; pageY: number } | null>(null);
 
   const clearAdvanceTimeout = useCallback(() => {
@@ -77,6 +80,8 @@ function RandomPracticeModal({
     setCancellationToken(0);
     setCurrentIndex(0);
     setIsSkippingWord(false);
+    hasTrackedCompletionRef.current = false;
+    successfulAttemptCountRef.current = 0;
     isSkipTransitionActiveRef.current = false;
   }, [clearAdvanceTimeout, sessionId, visible]);
 
@@ -157,6 +162,7 @@ function RandomPracticeModal({
       return;
     }
 
+    successfulAttemptCountRef.current += 1;
     advanceTimeoutRef.current = setTimeout(() => {
       advanceTimeoutRef.current = null;
       setCurrentIndex(previousIndex => previousIndex + 1);
@@ -183,10 +189,6 @@ function RandomPracticeModal({
     });
   }, [clearAdvanceTimeout]);
 
-  if (!visible || phrases.length === 0) {
-    return null;
-  }
-
   const isComplete = currentIndex >= phrases.length;
   const activePhrase = isComplete ? null : phrases[currentIndex];
   const activePhraseTranslations = activePhrase
@@ -195,6 +197,25 @@ function RandomPracticeModal({
   const progressRatio = isComplete
     ? 1
     : Math.min((currentIndex + 1) / phrases.length, 1);
+
+  useEffect(() => {
+    if (
+      !visible ||
+      phrases.length === 0 ||
+      !isComplete ||
+      successfulAttemptCountRef.current !== phrases.length ||
+      hasTrackedCompletionRef.current
+    ) {
+      return;
+    }
+
+    hasTrackedCompletionRef.current = true;
+    trackReviewMilestone('random-practice-complete');
+  }, [isComplete, phrases.length, visible]);
+
+  if (!visible || phrases.length === 0) {
+    return null;
+  }
 
   return (
     <Modal
@@ -291,6 +312,7 @@ function RandomPracticeModal({
                       }
                       phrase={activePhraseTranslations!.translation.text}
                       showCloseAction={false}
+                      trackReviewSuccess={false}
                     />
                     <Pressable
                       disabled={isSkippingWord}

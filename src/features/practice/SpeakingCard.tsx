@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { Icon } from '../../components/ui';
-import { trackPositiveReviewSignal } from '../reviews/appReview';
+import { trackReviewMilestone } from '../reviews/appReview';
 import { playSuccessSound } from '../../services';
 import { theme, withAlpha } from '../../theme/theme';
 import { usePractice } from './usePractice';
@@ -25,6 +25,7 @@ type SpeakingCardProps = {
   phraseId?: string;
   phrase: string;
   showCloseAction?: boolean;
+  trackReviewSuccess?: boolean;
 };
 
 type PracticeFlashState = {
@@ -71,6 +72,7 @@ function SpeakingCard({
   phraseId,
   phrase,
   showCloseAction = true,
+  trackReviewSuccess = true,
 }: SpeakingCardProps) {
   const [practiceFlash, setPracticeFlash] = useState<PracticeFlashState | null>(null);
   const cancellationTokenRef = useRef(cancellationToken);
@@ -82,10 +84,12 @@ function SpeakingCard({
 
     if (nextPracticeFlash.kind === 'success') {
       playSuccessSound().catch(() => undefined);
-      trackPositiveReviewSignal();
+      if (trackReviewSuccess) {
+        trackReviewMilestone('practice-success');
+      }
       onSuccessfulAttempt?.(nextFeedback);
     }
-  }, [onSuccessfulAttempt]);
+  }, [onSuccessfulAttempt, trackReviewSuccess]);
 
   const {
     error,
