@@ -230,13 +230,12 @@ function SpeakingCard({
         disabled={isBusy}
         onPress={handleReplayPhrase}
         style={({ pressed }) => [
-          styles.speakButton,
+          styles.phraseButton,
           isBusy && styles.buttonDisabled,
           pressed && styles.buttonPressed,
         ]}
       >
         <Text style={styles.phrase}>{phrase}</Text>
-        <Icon color={theme.colors.primary} name="volume-high" size={20} />
       </Pressable>
       <Text style={styles.translation}>
         {helperLabel}: {helperText}
@@ -286,7 +285,15 @@ function SpeakingCard({
             pressed && styles.buttonPressed,
           ]}
         >
-          <Text style={styles.secondaryActionText}>Play again</Text>
+          <View style={styles.secondaryActionContent}>
+            <View style={[styles.secondaryActionIconSlot, styles.secondaryActionIconGhost]}>
+              <Icon color={theme.colors.primary} name="volume-high" size={16} />
+            </View>
+            <Text style={styles.secondaryActionText}>Play again</Text>
+            <View style={styles.secondaryActionIconSlot}>
+              <Icon color={theme.colors.primary} name="volume-high" size={16} />
+            </View>
+          </View>
         </Pressable>
       </View>
     </View>
@@ -417,12 +424,10 @@ const styles = StyleSheet.create({
     lineHeight: 38,
     textAlign: 'center',
   },
-  speakButton: {
-    alignItems: 'center',
-    alignSelf: 'center',
-    flexDirection: 'row',
-    gap: theme.spacing.sm,
+  phraseButton: {
+    alignSelf: 'stretch',
     marginBottom: theme.spacing.sm,
+    paddingHorizontal: theme.spacing.sm,
   },
   translation: {
     ...theme.typography.body,
@@ -492,6 +497,20 @@ const styles = StyleSheet.create({
     color: theme.colors.text,
     fontSize: 14,
     fontWeight: '600',
+  },
+  secondaryActionContent: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    gap: theme.spacing.xs,
+    justifyContent: 'center',
+  },
+  secondaryActionIconSlot: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 16,
+  },
+  secondaryActionIconGhost: {
+    opacity: 0,
   },
 });
 
