@@ -1,8 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AppState } from 'react-native';
 import * as StoreReview from 'react-native-store-review';
+import { getItemWithMigration, STORAGE_KEYS } from '../../storage/asyncStorageKeys';
 
-const REVIEW_STATE_STORAGE_KEY = 'playcall.review-state';
 const REVIEW_RETRY_COOLDOWN_MS = 14 * 24 * 60 * 60 * 1000;
 const MAX_REVIEW_ATTEMPTS = 3;
 const PRACTICE_SUCCESSES_BEFORE_PROMPT = 5;
@@ -56,7 +56,7 @@ function sanitizeTimestamp(value: unknown) {
 
 async function hydrateReviewState() {
   try {
-    const storedValue = await AsyncStorage.getItem(REVIEW_STATE_STORAGE_KEY);
+    const storedValue = await getItemWithMigration('reviewState');
 
     if (!storedValue) {
       return;
@@ -100,7 +100,7 @@ function queueReviewStatePersist() {
   persistPromise = persistPromise
     .catch(() => undefined)
     .then(() =>
-      AsyncStorage.setItem(REVIEW_STATE_STORAGE_KEY, JSON.stringify(snapshot)),
+      AsyncStorage.setItem(STORAGE_KEYS.reviewState, JSON.stringify(snapshot)),
     )
     .catch(error => {
       console.warn('Failed to persist review prompt state.', error);
@@ -207,4 +207,8 @@ async function maybeRequestReview(milestone: ReviewMilestone) {
 
 export function trackReviewMilestone(milestone: ReviewMilestone) {
   maybeRequestReview(milestone).catch(() => undefined);
+}
+
+export function initializeAppReviewState() {
+  return ensureReviewStateHydrated();
 }

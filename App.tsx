@@ -6,10 +6,17 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import AppNavigator from './src/navigation/AppNavigator';
 import { initializeGoogleMobileAds } from './src/features/ads/mobileAds';
+import { initializeAppReviewState } from './src/features/reviews/appReview';
 import { theme } from './src/theme/theme';
 
 function App() {
   useEffect(() => {
+    initializeAppReviewState().catch(error => {
+      if (__DEV__) {
+        console.warn('App review state failed to initialize', error);
+      }
+    });
+
     initializeGoogleMobileAds().catch(error => {
       if (__DEV__) {
         console.warn('Google Mobile Ads failed to initialize', error);

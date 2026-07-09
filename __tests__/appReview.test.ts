@@ -1,15 +1,25 @@
+export {};
+
 const mockStorage = new Map<string, string>();
 const mockAsyncStorage = {
   getItem: jest.fn((key: string) =>
     Promise.resolve(mockStorage.get(key) ?? null),
   ),
+  removeItem: jest.fn((key: string) => {
+    mockStorage.delete(key);
+    return Promise.resolve();
+  }),
   setItem: jest.fn((key: string, value: string) => {
     mockStorage.set(key, value);
     return Promise.resolve();
   }),
 };
 
-jest.mock('@react-native-async-storage/async-storage', () => mockAsyncStorage);
+jest.mock('@react-native-async-storage/async-storage', () => ({
+  __esModule: true,
+  default: mockAsyncStorage,
+  ...mockAsyncStorage,
+}));
 jest.mock('react-native', () => ({
   AppState: {
     currentState: 'active',
@@ -19,7 +29,8 @@ jest.mock('react-native-store-review', () => ({
   requestReview: jest.fn(),
 }));
 
-const REVIEW_STATE_STORAGE_KEY = 'playcall.review-state';
+const REVIEW_STATE_STORAGE_KEY = 'reviewState';
+const LEGACY_REVIEW_STATE_STORAGE_KEY = 'com.gamingo.app.review-state';
 const REVIEW_RETRY_COOLDOWN_MS = 14 * 24 * 60 * 60 * 1000;
 
 async function flushPromises() {
@@ -38,6 +49,26 @@ describe('appReview', () => {
 
   afterEach(() => {
     jest.useRealTimers();
+  });
+
+  it('migrates the legacy review storage key to the new namespace', async () => {
+    mockStorage.set(
+      LEGACY_REVIEW_STATE_STORAGE_KEY,
+      JSON.stringify({
+        attemptCount: 1,
+        favoriteSaveCount: 0,
+        lastAttemptedAtMs: Date.now() - REVIEW_RETRY_COOLDOWN_MS,
+        practiceSuccessCount: 0,
+        randomPracticeCompletionCount: 0,
+      }),
+    );
+
+    const { initializeAppReviewState } = require('../src/features/reviews/appReview');
+
+    await initializeAppReviewState();
+
+    expect(mockStorage.get(REVIEW_STATE_STORAGE_KEY)).toBeTruthy();
+    expect(mockStorage.has(LEGACY_REVIEW_STATE_STORAGE_KEY)).toBe(false);
   });
 
   it('requests a native review after a completed random practice session', async () => {

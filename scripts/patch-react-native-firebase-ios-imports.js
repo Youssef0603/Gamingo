@@ -82,6 +82,26 @@ patchFile(
     projectRoot,
     'node_modules',
     '@react-native-firebase',
+    'remote-config',
+    'ios',
+    'RNFBConfig',
+    'RNFBConfigModule.m',
+  ),
+  content =>
+    replaceAnyImport(
+      content,
+      ['#import <Firebase/Firebase.h>'],
+      '@import FirebaseCore;\n@import FirebaseRemoteConfig;',
+    ),
+  'Patched RNFBConfigModule.m to use direct Firebase imports.',
+  'RNFBConfigModule.m direct Firebase imports already patched.',
+);
+
+patchFile(
+  path.join(
+    projectRoot,
+    'node_modules',
+    '@react-native-firebase',
     'storage',
     'ios',
     'RNFBStorage',

@@ -11,8 +11,18 @@ import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 import { categoryOrder } from '../data/categories';
 import { phrases as basePhrases } from '../data/phrases';
+import {
+  initializeAdsPolicy,
+  subscribeToAdsPolicyUpdates,
+} from '../features/ads/adsPolicy';
 import { trackFavoriteSaveAction } from '../features/ads/mobileAds';
 import { trackReviewMilestone } from '../features/reviews/appReview';
+import { getItemWithMigration, STORAGE_KEYS } from '../storage/asyncStorageKeys';
+import {
+  getAppRemoteConfigState,
+  sanitizeAppRemoteConfig,
+  setAppRemoteConfigState,
+} from '../state/appRemoteConfigStore';
 import { theme } from '../theme/theme';
 import { supportedLanguageCodes } from '../types/language';
 import {
@@ -23,6 +33,8 @@ import {
 
 import type { LanguageCode } from '../types/language';
 import type { Phrase, PhraseCategory, PhraseTranslation } from '../types/phrase';
+import type { AdsPolicy } from '../features/ads/adsPolicy';
+import type { AppRemoteConfig } from '../state/appRemoteConfigStore';
 
 export type LanguagePickerTarget = 'favorites' | 'learning' | 'native';
 
@@ -53,11 +65,26 @@ type AppStateContextValue = {
   nativeLanguage: LanguageCode;
   openLanguagePicker: (target: LanguagePickerTarget) => void;
   phrases: Phrase[];
+  remoteConfig: AppRemoteConfig;
   selectedLanguage: LanguageCode;
   setFavoriteFilterLanguage: (language: LanguageCode) => void;
   setNativeLanguage: (language: LanguageCode) => void;
   setSelectedLanguage: (language: LanguageCode) => void;
+  debugSnapshot: AppStateDebugSnapshot;
   toggleFavorite: (phraseId: string, language?: LanguageCode) => void;
+};
+
+export type AppStateDebugSnapshot = {
+  bottomSheetContent: BottomSheetContent;
+  customPhraseCount: number;
+  favoriteFilterLanguage: LanguageCode;
+  favoriteIds: string[];
+  favoriteIdsByLanguage: FavoriteIdsByLanguage;
+  favoriteLanguageOptions: LanguageCode[];
+  isHydrated: boolean;
+  nativeLanguage: LanguageCode;
+  remoteConfig: AppRemoteConfig;
+  selectedLanguage: LanguageCode;
 };
 
 type PersistedAppState = {
@@ -66,10 +93,9 @@ type PersistedAppState = {
   favoriteIds?: string[];
   favoriteIdsByLanguage: FavoriteIdsByLanguage;
   nativeLanguage: LanguageCode;
+  remoteConfig?: AppRemoteConfig;
   selectedLanguage: LanguageCode;
 };
-
-const APP_STATE_STORAGE_KEY = 'playcall.app-state';
 
 const phraseCategories: PhraseCategory[] = categoryOrder;
 
@@ -295,15 +321,22 @@ export function AppStateProvider({ children }: PropsWithChildren) {
   const [favoriteFilterLanguage, setFavoriteFilterLanguage] =
     useState<LanguageCode>('en');
   const [nativeLanguage, setNativeLanguage] = useState<LanguageCode>('en');
+  const [remoteConfig, setRemoteConfig] = useState<AppRemoteConfig>(
+    getAppRemoteConfigState(),
+  );
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>('en');
   const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
+    if (isHydrated) {
+      return;
+    }
+
     let isMounted = true;
 
     async function hydrateAppState() {
       try {
-        const storedValue = await AsyncStorage.getItem(APP_STATE_STORAGE_KEY);
+        const storedValue = await getItemWithMigration('appState');
         const autoSelectedLanguages = getAutoSelectedLanguagePair(
           getDeviceLocale(),
         );
@@ -333,10 +366,12 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         const nextCustomPhrases = sanitizeCustomPhrases(
           parsedValue.customPhrases,
         );
+        const nextRemoteConfig = sanitizeAppRemoteConfig(parsedValue.remoteConfig);
         const migratedFavoriteIds = sanitizeFavoriteIds(parsedValue.favoriteIds);
 
         setCustomPhrases(nextCustomPhrases);
         setNativeLanguage(nextNativeLanguage);
+        setRemoteConfig(nextRemoteConfig);
         setSelectedLanguage(nextSelectedLanguage);
         setFavoriteFilterLanguage(nextFavoriteFilterLanguage);
 
@@ -361,7 +396,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [isHydrated]);
 
   useEffect(() => {
     if (!isHydrated) {
@@ -371,12 +406,13 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     const persistAppState = async () => {
       try {
         await AsyncStorage.setItem(
-          APP_STATE_STORAGE_KEY,
+          STORAGE_KEYS.appState,
           JSON.stringify({
             customPhrases,
             favoriteFilterLanguage,
             favoriteIdsByLanguage,
             nativeLanguage,
+            remoteConfig,
             selectedLanguage,
           } satisfies PersistedAppState),
         );
@@ -392,8 +428,45 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     favoriteIdsByLanguage,
     isHydrated,
     nativeLanguage,
+    remoteConfig,
     selectedLanguage,
   ]);
+
+  useEffect(() => {
+    setAppRemoteConfigState(remoteConfig);
+  }, [remoteConfig]);
+
+  useEffect(() => {
+    if (!isHydrated) {
+      return;
+    }
+
+    let isMounted = true;
+
+    const syncAdsPolicy = (adsPolicy: AdsPolicy) => {
+      if (!isMounted) {
+        return;
+      }
+
+      setRemoteConfig(current => ({
+        ...current,
+        adsPolicy,
+      }));
+    };
+
+    const unsubscribeFromAdsPolicy = subscribeToAdsPolicyUpdates(syncAdsPolicy);
+
+    initializeAdsPolicy()
+      .then(syncAdsPolicy)
+      .catch(error => {
+        console.warn('Failed to initialize remote config app state.', error);
+      });
+
+    return () => {
+      isMounted = false;
+      unsubscribeFromAdsPolicy();
+    };
+  }, [isHydrated]);
 
   useEffect(() => {
     const availableLanguages = getFavoriteLanguageOptions(favoriteIdsByLanguage);
@@ -422,7 +495,10 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     () => [...basePhrases, ...customPhrases],
     [customPhrases],
   );
-  const favoriteIds = favoriteIdsByLanguage[selectedLanguage] ?? [];
+  const favoriteIds = useMemo(
+    () => favoriteIdsByLanguage[selectedLanguage] ?? [],
+    [favoriteIdsByLanguage, selectedLanguage],
+  );
   const favoriteLanguageOptions = getFavoriteLanguageOptions(favoriteIdsByLanguage);
   const phraseMap = useMemo(() => {
     const nextValue: Record<string, Phrase> = {};
@@ -543,6 +619,33 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     setBottomSheetContent(null);
   };
 
+  const debugSnapshot = useMemo<AppStateDebugSnapshot>(
+    () => ({
+      bottomSheetContent,
+      customPhraseCount: customPhrases.length,
+      favoriteFilterLanguage,
+      favoriteIds,
+      favoriteIdsByLanguage,
+      favoriteLanguageOptions,
+      isHydrated,
+      nativeLanguage,
+      remoteConfig,
+      selectedLanguage,
+    }),
+    [
+      bottomSheetContent,
+      customPhrases.length,
+      favoriteFilterLanguage,
+      favoriteIds,
+      favoriteIdsByLanguage,
+      favoriteLanguageOptions,
+      isHydrated,
+      nativeLanguage,
+      remoteConfig,
+      selectedLanguage,
+    ],
+  );
+
   if (!isHydrated) {
     return (
       <View style={styles.loadingContainer}>
@@ -558,6 +661,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         addPhraseToFavorites,
         bottomSheetContent,
         closeBottomSheet,
+        debugSnapshot,
         deleteCustomPhrase,
         favoriteIds,
         favoriteFilterLanguage,
@@ -568,6 +672,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         nativeLanguage,
         openLanguagePicker,
         phrases,
+        remoteConfig,
         selectedLanguage,
         setFavoriteFilterLanguage,
         setNativeLanguage,
@@ -597,4 +702,8 @@ export function useAppState() {
   }
 
   return context;
+}
+
+export function useAppStateDebugSnapshot(): AppStateDebugSnapshot {
+  return useAppState().debugSnapshot;
 }

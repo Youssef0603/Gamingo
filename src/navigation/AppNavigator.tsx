@@ -11,7 +11,7 @@ import BootSplash from 'react-native-bootsplash';
 import BottomSheet from '../components/BottomSheet';
 import { Icon } from '../components/ui';
 import { AppStateProvider } from '../context/AppStateContext';
-import { FavoritesScreen, PracticeScreen } from '../screens';
+import { DebugScreen, FavoritesScreen, PracticeScreen } from '../screens';
 import { logScreenView } from '../services/firebase';
 import { theme } from '../theme/theme';
 
@@ -33,6 +33,10 @@ const navigationTheme = {
 };
 
 const tabIcons = {
+  Debug: {
+    active: 'alert-circle',
+    inactive: 'alert-circle',
+  },
   Favourites: {
     active: 'heart',
     inactive: 'heart-outline',
@@ -124,6 +128,9 @@ function AppNavigator() {
           >
             <Tab.Screen component={PracticeScreen} name="Practice" />
             <Tab.Screen component={FavoritesScreen} name="Favourites" />
+            {__DEV__ ? (
+              <Tab.Screen component={DebugScreen} name="Debug" />
+            ) : null}
           </Tab.Navigator>
         </NavigationContainer>
         <BottomSheet />

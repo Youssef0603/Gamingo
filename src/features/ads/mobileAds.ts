@@ -8,15 +8,19 @@ import {
 } from 'react-native-google-mobile-ads';
 import mobileAds from 'react-native-google-mobile-ads';
 
+import {
+  initializeAdsPolicy,
+} from './adsPolicy';
+import { getItemWithMigration, STORAGE_KEYS } from '../../storage/asyncStorageKeys';
+import {
+  getAppAdsPolicy,
+  subscribeToAppRemoteConfigState,
+} from '../../state/appRemoteConfigStore';
+
 // Flip this to true when you want to test ads during development.
-const SHOW_ADS_IN_DEVELOPMENT = false;
+const SHOW_ADS_IN_DEVELOPMENT = true;
 
 export const ADS_ENABLED = !__DEV__ || SHOW_ADS_IN_DEVELOPMENT;
-
-const ADS_STATE_STORAGE_KEY = 'gamingo.ads-state';
-const FIRST_LAUNCH_AD_GRACE_PERIOD_MS = 10 * 60 * 1000;
-const ITEM_CLICK_INTERSTITIAL_FREQUENCY = 5;
-const FAVORITE_SAVE_INTERSTITIAL_FREQUENCY = 3;
 
 const productionBannerUnitIds = {
   android: 'ca-app-pub-2492542777972482/9535287858',
@@ -32,6 +36,7 @@ type PersistedAdsState = {
   hasSkippedFirstCustomWordAddAd?: boolean;
   favoriteSaveCount?: number;
   itemClickCount?: number;
+  randomPracticeStartCount?: number;
 };
 
 let initializationPromise: Promise<unknown> | null = null;
@@ -44,6 +49,7 @@ let firstLaunchForegroundStartedAtMs: number | null = null;
 let hasSkippedFirstCustomWordAddAd = false;
 let itemClickCount = 0;
 let favoriteSaveCount = 0;
+let randomPracticeStartCount = 0;
 let interstitialListenersAttached = false;
 let interstitialLoaded = false;
 let interstitialShowing = false;
@@ -51,6 +57,7 @@ let pendingInterstitialAction: (() => void) | null = null;
 let adAvailabilityTimeout: ReturnType<typeof setTimeout> | null = null;
 let appStateListenerAttached = false;
 let currentAppState = AppState.currentState;
+let interstitialAd: ReturnType<typeof InterstitialAd.createForAdRequest> | null = null;
 
 const adAvailabilityListeners = new Set<() => void>();
 
@@ -65,12 +72,13 @@ function queueAdStatePersist() {
     hasSkippedFirstCustomWordAddAd,
     favoriteSaveCount,
     itemClickCount,
+    randomPracticeStartCount,
   };
 
   adStatePersistPromise = adStatePersistPromise
     .catch(() => undefined)
     .then(() =>
-      AsyncStorage.setItem(ADS_STATE_STORAGE_KEY, JSON.stringify(snapshot)),
+      AsyncStorage.setItem(STORAGE_KEYS.adsState, JSON.stringify(snapshot)),
     )
     .catch(error => {
       console.warn('Failed to persist ad state.', error);
@@ -109,10 +117,11 @@ function getFirstLaunchAdGraceRemainingMs(now = Date.now()) {
     return 0;
   }
 
+  const { firstLaunchGracePeriodMs } = getAppAdsPolicy();
   const usedMs =
     firstLaunchAccumulatedUsageMs + getCurrentFirstLaunchUsageMs(now);
 
-  return Math.max(0, FIRST_LAUNCH_AD_GRACE_PERIOD_MS - usedMs);
+  return Math.max(0, firstLaunchGracePeriodMs - usedMs);
 }
 
 function scheduleAdAvailabilityUpdate() {
@@ -178,7 +187,7 @@ async function hydrateAdState() {
   }
 
   try {
-    const storedValue = await AsyncStorage.getItem(ADS_STATE_STORAGE_KEY);
+    const storedValue = await getItemWithMigration('adsState');
 
     if (!storedValue) {
       isFirstLaunchSession = true;
@@ -188,6 +197,7 @@ async function hydrateAdState() {
       hasSkippedFirstCustomWordAddAd = false;
       itemClickCount = 0;
       favoriteSaveCount = 0;
+      randomPracticeStartCount = 0;
       await queueAdStatePersist();
       return;
     }
@@ -202,6 +212,9 @@ async function hydrateAdState() {
     );
     itemClickCount = sanitizePersistedCount(parsedValue.itemClickCount);
     favoriteSaveCount = sanitizePersistedCount(parsedValue.favoriteSaveCount);
+    randomPracticeStartCount = sanitizePersistedCount(
+      parsedValue.randomPracticeStartCount,
+    );
   } catch (error) {
     isFirstLaunchSession = false;
     firstLaunchAccumulatedUsageMs = 0;
@@ -209,6 +222,7 @@ async function hydrateAdState() {
     hasSkippedFirstCustomWordAddAd = false;
     itemClickCount = 0;
     favoriteSaveCount = 0;
+    randomPracticeStartCount = 0;
     console.warn('Failed to hydrate ad state.', error);
   } finally {
     adStateHydrated = true;
@@ -227,7 +241,26 @@ function ensureAdStateHydrated() {
 }
 
 function canShowAdsNow() {
-  return ADS_ENABLED && adStateHydrated && getFirstLaunchAdGraceRemainingMs() === 0;
+  const adsPolicy = getAppAdsPolicy();
+
+  return (
+    ADS_ENABLED
+    && adsPolicy.adsEnabled
+    && adStateHydrated
+    && getFirstLaunchAdGraceRemainingMs() === 0
+  );
+}
+
+function canShowBannerAdsNow() {
+  const adsPolicy = getAppAdsPolicy();
+
+  return canShowAdsNow() && adsPolicy.bannerEnabled;
+}
+
+function canShowInterstitialAdsNow() {
+  const adsPolicy = getAppAdsPolicy();
+
+  return canShowAdsNow() && adsPolicy.interstitialsEnabled;
 }
 
 function getProductionBannerAdUnitId() {
@@ -249,7 +282,7 @@ function getProductionInterstitialAdUnitId() {
 }
 
 export function getBannerAdUnitId() {
-  if (!canShowAdsNow()) {
+  if (!canShowBannerAdsNow()) {
     return null;
   }
 
@@ -272,12 +305,23 @@ function getInterstitialAdUnitId() {
   return getProductionInterstitialAdUnitId();
 }
 
-const interstitialAdUnitId = getInterstitialAdUnitId();
-const interstitialAd = interstitialAdUnitId
-  ? InterstitialAd.createForAdRequest(interstitialAdUnitId, {
-      requestNonPersonalizedAdsOnly: true,
-    })
-  : null;
+function getInterstitialAd() {
+  if (interstitialAd) {
+    return interstitialAd;
+  }
+
+  const interstitialAdUnitId = getInterstitialAdUnitId();
+
+  if (!interstitialAdUnitId) {
+    return null;
+  }
+
+  interstitialAd = InterstitialAd.createForAdRequest(interstitialAdUnitId, {
+    requestNonPersonalizedAdsOnly: true,
+  });
+
+  return interstitialAd;
+}
 
 function runPendingInterstitialAction() {
   const action = pendingInterstitialAction;
@@ -287,50 +331,60 @@ function runPendingInterstitialAction() {
 }
 
 function attachInterstitialListeners() {
-  if (!interstitialAd || interstitialListenersAttached) {
+  const nextInterstitialAd = getInterstitialAd();
+
+  if (!nextInterstitialAd || interstitialListenersAttached) {
     return;
   }
 
   interstitialListenersAttached = true;
 
-  interstitialAd.addAdEventListener(AdEventType.LOADED, () => {
+  nextInterstitialAd.addAdEventListener(AdEventType.LOADED, () => {
     interstitialLoaded = true;
   });
 
-  interstitialAd.addAdEventListener(AdEventType.CLOSED, () => {
+  nextInterstitialAd.addAdEventListener(AdEventType.CLOSED, () => {
     interstitialLoaded = false;
     interstitialShowing = false;
     runPendingInterstitialAction();
-    interstitialAd.load();
+    nextInterstitialAd.load();
   });
 
-  interstitialAd.addAdEventListener(AdEventType.ERROR, () => {
+  nextInterstitialAd.addAdEventListener(AdEventType.ERROR, () => {
     interstitialLoaded = false;
     interstitialShowing = false;
     runPendingInterstitialAction();
-    interstitialAd.load();
+    nextInterstitialAd.load();
   });
 }
 
 export function preloadInterstitialAd() {
-  if (!interstitialAd) {
+  if (!canShowInterstitialAdsNow()) {
+    return;
+  }
+
+  const nextInterstitialAd = getInterstitialAd();
+
+  if (!nextInterstitialAd) {
     return;
   }
 
   attachInterstitialListeners();
 
   if (!interstitialLoaded && !interstitialShowing) {
-    interstitialAd.load();
+    nextInterstitialAd.load();
   }
 }
 
 function tryShowInterstitialBefore(action: () => void) {
-  if (!canShowAdsNow()) {
+  if (!canShowInterstitialAdsNow()) {
     action();
     return false;
   }
 
-  if (!interstitialAd) {
+  const nextInterstitialAd = getInterstitialAd();
+
+  if (!nextInterstitialAd) {
     action();
     return false;
   }
@@ -345,7 +399,7 @@ function tryShowInterstitialBefore(action: () => void) {
 
   pendingInterstitialAction = action;
   interstitialShowing = true;
-  interstitialAd.show();
+  nextInterstitialAd.show();
 
   return true;
 }
@@ -367,22 +421,18 @@ export function showInterstitialBefore(action: () => void) {
 export function showAdOnItemClick(action: () => void) {
   ensureAdStateHydrated()
     .then(() => {
-      if (!canShowAdsNow()) {
+      const { itemClick } = getAppAdsPolicy();
+
+      if (!itemClick.enabled || !canShowInterstitialAdsNow()) {
         action();
         return;
       }
 
       const nextItemClickCount = itemClickCount + 1;
+      const itemClickFrequency = itemClick.frequency;
 
-      if (nextItemClickCount < ITEM_CLICK_INTERSTITIAL_FREQUENCY) {
+      if (nextItemClickCount < itemClickFrequency) {
         itemClickCount = nextItemClickCount;
-        queueAdStatePersist();
-        action();
-        return;
-      }
-
-      if (!interstitialAd) {
-        itemClickCount = 0;
         queueAdStatePersist();
         action();
         return;
@@ -390,7 +440,7 @@ export function showAdOnItemClick(action: () => void) {
 
       const didShowAd = tryShowInterstitialBefore(action);
 
-      itemClickCount = didShowAd ? 0 : ITEM_CLICK_INTERSTITIAL_FREQUENCY - 1;
+      itemClickCount = didShowAd ? 0 : itemClickFrequency - 1;
       queueAdStatePersist();
     })
     .catch(() => {
@@ -401,7 +451,14 @@ export function showAdOnItemClick(action: () => void) {
 export function showAdBeforeCustomWordAdd(action: () => void) {
   ensureAdStateHydrated()
     .then(() => {
-      if (!hasSkippedFirstCustomWordAddAd) {
+      const { customWordAdd } = getAppAdsPolicy();
+
+      if (!customWordAdd.enabled || !canShowInterstitialAdsNow()) {
+        action();
+        return;
+      }
+
+      if (customWordAdd.skipFirstInterstitial && !hasSkippedFirstCustomWordAddAd) {
         hasSkippedFirstCustomWordAddAd = true;
         queueAdStatePersist();
         action();
@@ -416,26 +473,49 @@ export function showAdBeforeCustomWordAdd(action: () => void) {
 }
 
 export function showAdBeforeRandomPractice(action: () => void) {
-  showInterstitialBefore(action);
+  ensureAdStateHydrated()
+    .then(() => {
+      const { randomPractice } = getAppAdsPolicy();
+
+      if (!randomPractice.enabled || !canShowInterstitialAdsNow()) {
+        action();
+        return;
+      }
+
+      const nextRandomPracticeStartCount = randomPracticeStartCount + 1;
+      const randomPracticeFrequency = randomPractice.frequency;
+
+      if (nextRandomPracticeStartCount < randomPracticeFrequency) {
+        randomPracticeStartCount = nextRandomPracticeStartCount;
+        queueAdStatePersist();
+        action();
+        return;
+      }
+
+      const didShowAd = tryShowInterstitialBefore(action);
+
+      randomPracticeStartCount = didShowAd ? 0 : randomPracticeFrequency - 1;
+      queueAdStatePersist();
+    })
+    .catch(() => {
+      action();
+    });
 }
 
 export function trackFavoriteSaveAction() {
   ensureAdStateHydrated()
     .then(() => {
-      if (!canShowAdsNow()) {
+      const { favoriteSave } = getAppAdsPolicy();
+
+      if (!favoriteSave.enabled || !canShowInterstitialAdsNow()) {
         return;
       }
 
       const nextFavoriteSaveCount = favoriteSaveCount + 1;
+      const favoriteSaveFrequency = favoriteSave.frequency;
 
-      if (nextFavoriteSaveCount < FAVORITE_SAVE_INTERSTITIAL_FREQUENCY) {
+      if (nextFavoriteSaveCount < favoriteSaveFrequency) {
         favoriteSaveCount = nextFavoriteSaveCount;
-        queueAdStatePersist();
-        return;
-      }
-
-      if (!interstitialAd) {
-        favoriteSaveCount = 0;
         queueAdStatePersist();
         return;
       }
@@ -444,32 +524,37 @@ export function trackFavoriteSaveAction() {
 
       favoriteSaveCount = didShowAd
         ? 0
-        : FAVORITE_SAVE_INTERSTITIAL_FREQUENCY - 1;
+        : favoriteSaveFrequency - 1;
       queueAdStatePersist();
     })
     .catch(() => undefined);
 }
 
 export function useCanShowAds() {
-  const [canShowAds, setCanShowAds] = useState(canShowAdsNow());
+  const [canShowAds, setCanShowAds] = useState(canShowBannerAdsNow());
 
   useEffect(() => {
     let isMounted = true;
 
     const syncVisibility = () => {
       if (isMounted) {
-        setCanShowAds(canShowAdsNow());
+        setCanShowAds(canShowBannerAdsNow());
       }
     };
 
     syncVisibility();
-    ensureAdStateHydrated().then(syncVisibility).catch(syncVisibility);
+    Promise.all([
+      ensureAdStateHydrated(),
+      initializeAdsPolicy(),
+    ]).then(syncVisibility).catch(syncVisibility);
 
     adAvailabilityListeners.add(syncVisibility);
+    const unsubscribeFromAdsPolicy = subscribeToAppRemoteConfigState(syncVisibility);
 
     return () => {
       isMounted = false;
       adAvailabilityListeners.delete(syncVisibility);
+      unsubscribeFromAdsPolicy();
     };
   }, []);
 
@@ -477,13 +562,22 @@ export function useCanShowAds() {
 }
 
 export function initializeGoogleMobileAds() {
-  if (!ADS_ENABLED) {
-    return ensureAdStateHydrated().then(() => null);
-  }
-
   if (!initializationPromise) {
-    initializationPromise = ensureAdStateHydrated().then(() =>
-      mobileAds()
+    initializationPromise = Promise.all([
+      ensureAdStateHydrated(),
+      initializeAdsPolicy(),
+    ]).then(([, adsPolicy]) => {
+      notifyAdAvailabilityListeners();
+
+      if (
+        !ADS_ENABLED ||
+        !adsPolicy.adsEnabled ||
+        (!adsPolicy.bannerEnabled && !adsPolicy.interstitialsEnabled)
+      ) {
+        return null;
+      }
+
+      return mobileAds()
         .setRequestConfiguration({
           testDeviceIdentifiers: __DEV__ ? ['EMULATOR'] : [],
         })
@@ -491,9 +585,14 @@ export function initializeGoogleMobileAds() {
         .then(result => {
           preloadInterstitialAd();
           return result;
-        }),
-    );
+        });
+    });
   }
 
   return initializationPromise;
 }
+
+subscribeToAppRemoteConfigState(() => {
+  scheduleAdAvailabilityUpdate();
+  notifyAdAvailabilityListeners();
+});

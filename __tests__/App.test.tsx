@@ -2,6 +2,8 @@
  * @format
  */
 
+export {};
+
 import React from 'react';
 import ReactTestRenderer from 'react-test-renderer';
 import App from '../App';
@@ -11,13 +13,21 @@ const mockAsyncStorage = {
   getItem: jest.fn((key: string) =>
     Promise.resolve(mockStorage.get(key) ?? null),
   ),
+  removeItem: jest.fn((key: string) => {
+    mockStorage.delete(key);
+    return Promise.resolve();
+  }),
   setItem: jest.fn((key: string, value: string) => {
     mockStorage.set(key, value);
     return Promise.resolve();
   }),
 };
 
-jest.mock('@react-native-async-storage/async-storage', () => mockAsyncStorage);
+jest.mock('@react-native-async-storage/async-storage', () => ({
+  __esModule: true,
+  default: mockAsyncStorage,
+  ...mockAsyncStorage,
+}));
 jest.mock('../src/features/ads/mobileAds', () => ({
   getBannerAdUnitId: jest.fn(() => null),
   initializeGoogleMobileAds: jest.fn(() => Promise.resolve(null)),
@@ -59,6 +69,23 @@ jest.mock('../src/services/firebase', () => ({
   initializeFirebaseServices: jest.fn(),
   logScreenView: jest.fn(() => Promise.resolve()),
 }));
+jest.mock('../src/features/reviews/appReview', () => ({
+  initializeAppReviewState: jest.fn(() => Promise.resolve()),
+  trackReviewMilestone: jest.fn(),
+}));
+jest.mock('@react-native-firebase/remote-config', () => ({
+  activate: jest.fn(() => Promise.resolve(true)),
+  ensureInitialized: jest.fn(() => Promise.resolve()),
+  fetchAndActivate: jest.fn(() => Promise.resolve(true)),
+  getRemoteConfig: jest.fn(() => ({
+    defaultConfig: undefined,
+    settings: undefined,
+  })),
+  getValue: jest.fn(() => ({
+    asString: () => '',
+  })),
+  onConfigUpdate: jest.fn(() => jest.fn()),
+}));
 jest.mock('react-native-bootsplash', () => ({
   hide: jest.fn(),
 }));
@@ -93,6 +120,10 @@ jest.mock('@gorhom/bottom-sheet', () => {
 });
 jest.mock('react-native-store-review', () => ({
   requestReview: jest.fn(),
+}));
+jest.mock('react-native-json-tree', () => () => null);
+jest.mock('expo-blur', () => ({
+  BlurView: ({ children }: { children?: React.ReactNode }) => children ?? null,
 }));
 
 test('renders correctly', async () => {

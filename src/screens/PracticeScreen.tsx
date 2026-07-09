@@ -1129,7 +1129,7 @@ const styles = StyleSheet.create({
     zIndex: 20,
   },
   toxicListOverlayTint: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     backgroundColor: withAlpha(theme.colors.primary, 0.08),
   },
   toxicDisclosureCard: {
