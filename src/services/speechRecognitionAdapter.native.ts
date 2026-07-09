@@ -1,3 +1,4 @@
+import { Platform } from 'react-native';
 import {
   AVAudioSessionCategory,
   AVAudioSessionCategoryOptions,
@@ -95,8 +96,21 @@ function mapNativeError(
   }
 }
 
+function shouldUseMutedAndroidPromptWorkaround() {
+  if (Platform.OS !== 'android') {
+    return false;
+  }
+
+  try {
+    return ExpoSpeechRecognitionModule.supportsRecording();
+  } catch {
+    return false;
+  }
+}
+
 function toNativeStartOptions(startOptions?: SpeechRecognitionStartOptions) {
   const isShortUtterance = startOptions?.promptType === 'short-utterance';
+  const shouldMutePromptSounds = shouldUseMutedAndroidPromptWorkaround();
 
   return {
     androidIntentOptions: isShortUtterance
@@ -105,7 +119,7 @@ function toNativeStartOptions(startOptions?: SpeechRecognitionStartOptions) {
         }
       : undefined,
     contextualStrings: startOptions?.contextualStrings,
-    continuous: false,
+    continuous: shouldMutePromptSounds,
     interimResults: true,
     iosCategory: {
       category: AVAudioSessionCategory.playAndRecord,
@@ -128,12 +142,24 @@ function toNativeStartOptions(startOptions?: SpeechRecognitionStartOptions) {
 
 export function createPlatformSpeechRecognitionAdapter(): SpeechRecognitionAdapter {
   let activeSubscriptions: Array<{ remove: () => void }> = [];
+  let shouldAbortRecognitionOnStop = false;
 
   const clearSubscriptions = () => {
     activeSubscriptions.forEach(subscription => {
       subscription.remove();
     });
     activeSubscriptions = [];
+  };
+
+  const stopNativeRecognition = () => {
+    if (shouldAbortRecognitionOnStop) {
+      logSpeech('abort');
+      ExpoSpeechRecognitionModule.abort();
+      return;
+    }
+
+    logSpeech('stop');
+    ExpoSpeechRecognitionModule.stop();
   };
 
   return {
@@ -177,6 +203,7 @@ export function createPlatformSpeechRecognitionAdapter(): SpeechRecognitionAdapt
         let lastTranscript = '';
         const isShortUtterance = startOptions?.promptType === 'short-utterance';
         const nativeStartOptions = toNativeStartOptions(startOptions);
+        shouldAbortRecognitionOnStop = nativeStartOptions.continuous === true;
 
         const finalizeError = (event: ExpoSpeechRecognitionErrorEvent) => {
           if (isSettled) {
@@ -195,6 +222,7 @@ export function createPlatformSpeechRecognitionAdapter(): SpeechRecognitionAdapt
 
           isSettled = true;
           clearSubscriptions();
+          shouldAbortRecognitionOnStop = false;
           emitStateChange('idle');
           const nextError = mapNativeError(event);
           logSpeech('event:error', event);
@@ -254,7 +282,7 @@ export function createPlatformSpeechRecognitionAdapter(): SpeechRecognitionAdapt
               logSpeech('result:auto-stop-short-utterance', { transcript });
 
               try {
-                ExpoSpeechRecognitionModule.stop();
+                stopNativeRecognition();
               } catch (error) {
                 logSpeech('result:auto-stop-short-utterance:error', error);
               }
@@ -290,6 +318,7 @@ export function createPlatformSpeechRecognitionAdapter(): SpeechRecognitionAdapt
 
             logSpeech('event:end', { hasStarted, lastTranscript });
             clearSubscriptions();
+            shouldAbortRecognitionOnStop = false;
             emitStateChange('idle');
 
             if (!hasResolved) {
@@ -307,6 +336,7 @@ export function createPlatformSpeechRecognitionAdapter(): SpeechRecognitionAdapt
           ExpoSpeechRecognitionModule.start(nativeStartOptions);
         } catch (error) {
           clearSubscriptions();
+          shouldAbortRecognitionOnStop = false;
           logSpeech('start:throw', error);
           reject(
             error instanceof Error
@@ -320,9 +350,18 @@ export function createPlatformSpeechRecognitionAdapter(): SpeechRecognitionAdapt
       });
     },
     async stop() {
+      const shouldAbort = shouldAbortRecognitionOnStop;
+
       clearSubscriptions();
+      shouldAbortRecognitionOnStop = false;
 
       try {
+        if (shouldAbort) {
+          logSpeech('abort');
+          ExpoSpeechRecognitionModule.abort();
+          return;
+        }
+
         logSpeech('stop');
         ExpoSpeechRecognitionModule.stop();
       } catch {

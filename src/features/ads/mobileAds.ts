@@ -35,15 +35,19 @@ const productionInterstitialUnitIds = {
 type PersistedAdsState = {
   hasSkippedFirstCustomWordAddAd?: boolean;
   favoriteSaveCount?: number;
+  firstLaunchGraceConsumedMs?: number;
+  firstLaunchGraceStartedAtMs?: number;
   itemClickCount?: number;
   randomPracticeStartCount?: number;
 };
+
+const FIRST_LAUNCH_USAGE_PERSIST_INTERVAL_MS = 30 * 1000;
 
 let initializationPromise: Promise<unknown> | null = null;
 let adStateHydrationPromise: Promise<void> | null = null;
 let adStatePersistPromise: Promise<void> = Promise.resolve();
 let adStateHydrated = false;
-let isFirstLaunchSession = false;
+let hasTrackedFirstLaunchGraceState = false;
 let firstLaunchAccumulatedUsageMs = 0;
 let firstLaunchForegroundStartedAtMs: number | null = null;
 let hasSkippedFirstCustomWordAddAd = false;
@@ -58,6 +62,7 @@ let adAvailabilityTimeout: ReturnType<typeof setTimeout> | null = null;
 let appStateListenerAttached = false;
 let currentAppState = AppState.currentState;
 let interstitialAd: ReturnType<typeof InterstitialAd.createForAdRequest> | null = null;
+let firstLaunchUsagePersistInterval: ReturnType<typeof setInterval> | null = null;
 
 const adAvailabilityListeners = new Set<() => void>();
 
@@ -67,10 +72,22 @@ function sanitizePersistedCount(value: unknown) {
     : 0;
 }
 
+function sanitizePersistedTimestamp(value: unknown) {
+  return typeof value === 'number' && Number.isFinite(value) && value >= 0
+    ? Math.floor(value)
+    : null;
+}
+
 function queueAdStatePersist() {
   const snapshot: PersistedAdsState = {
     hasSkippedFirstCustomWordAddAd,
     favoriteSaveCount,
+    firstLaunchGraceConsumedMs: hasTrackedFirstLaunchGraceState
+      ? firstLaunchAccumulatedUsageMs
+      : undefined,
+    firstLaunchGraceStartedAtMs: hasTrackedFirstLaunchGraceState
+      ? firstLaunchForegroundStartedAtMs ?? undefined
+      : undefined,
     itemClickCount,
     randomPracticeStartCount,
   };
@@ -100,9 +117,38 @@ function clearScheduledAdAvailabilityUpdate() {
   }
 }
 
+function clearFirstLaunchUsagePersistInterval() {
+  if (firstLaunchUsagePersistInterval) {
+    clearInterval(firstLaunchUsagePersistInterval);
+    firstLaunchUsagePersistInterval = null;
+  }
+}
+
+function accumulateFirstLaunchUsage(
+  now: number,
+  nextForegroundStartedAtMs: number | null,
+) {
+  if (
+    !hasTrackedFirstLaunchGraceState ||
+    firstLaunchForegroundStartedAtMs === null
+  ) {
+    firstLaunchForegroundStartedAtMs = nextForegroundStartedAtMs;
+    return false;
+  }
+
+  const delta = Math.max(0, now - firstLaunchForegroundStartedAtMs);
+
+  if (delta > 0) {
+    firstLaunchAccumulatedUsageMs += delta;
+  }
+
+  firstLaunchForegroundStartedAtMs = nextForegroundStartedAtMs;
+  return delta > 0;
+}
+
 function getCurrentFirstLaunchUsageMs(now = Date.now()) {
   if (
-    !isFirstLaunchSession ||
+    !hasTrackedFirstLaunchGraceState ||
     currentAppState !== 'active' ||
     firstLaunchForegroundStartedAtMs === null
   ) {
@@ -113,7 +159,7 @@ function getCurrentFirstLaunchUsageMs(now = Date.now()) {
 }
 
 function getFirstLaunchAdGraceRemainingMs(now = Date.now()) {
-  if (!isFirstLaunchSession) {
+  if (!hasTrackedFirstLaunchGraceState) {
     return 0;
   }
 
@@ -124,8 +170,34 @@ function getFirstLaunchAdGraceRemainingMs(now = Date.now()) {
   return Math.max(0, firstLaunchGracePeriodMs - usedMs);
 }
 
+function syncFirstLaunchUsagePersistInterval() {
+  clearFirstLaunchUsagePersistInterval();
+
+  if (
+    !hasTrackedFirstLaunchGraceState ||
+    currentAppState !== 'active' ||
+    firstLaunchForegroundStartedAtMs === null ||
+    getFirstLaunchAdGraceRemainingMs() <= 0
+  ) {
+    return;
+  }
+
+  firstLaunchUsagePersistInterval = setInterval(() => {
+    const now = Date.now();
+    const didAccumulateUsage = accumulateFirstLaunchUsage(now, now);
+
+    if (didAccumulateUsage) {
+      queueAdStatePersist();
+    }
+
+    scheduleAdAvailabilityUpdate();
+    notifyAdAvailabilityListeners();
+  }, FIRST_LAUNCH_USAGE_PERSIST_INTERVAL_MS);
+}
+
 function scheduleAdAvailabilityUpdate() {
   clearScheduledAdAvailabilityUpdate();
+  syncFirstLaunchUsagePersistInterval();
 
   const remainingMs = getFirstLaunchAdGraceRemainingMs();
 
@@ -152,30 +224,30 @@ function attachAppStateListener() {
 
   AppState.addEventListener('change', nextAppState => {
     const now = Date.now();
+    let shouldPersistAdState = false;
 
     if (
-      isFirstLaunchSession &&
+      hasTrackedFirstLaunchGraceState &&
       currentAppState === 'active' &&
-      nextAppState !== 'active' &&
-      firstLaunchForegroundStartedAtMs !== null
+      nextAppState !== 'active'
     ) {
-      firstLaunchAccumulatedUsageMs += Math.max(
-        0,
-        now - firstLaunchForegroundStartedAtMs,
-      );
-      firstLaunchForegroundStartedAtMs = null;
+      shouldPersistAdState = accumulateFirstLaunchUsage(now, null);
     }
 
     if (
-      isFirstLaunchSession &&
+      hasTrackedFirstLaunchGraceState &&
       currentAppState !== 'active' &&
       nextAppState === 'active' &&
       firstLaunchForegroundStartedAtMs === null
     ) {
       firstLaunchForegroundStartedAtMs = now;
+      shouldPersistAdState = true;
     }
 
     currentAppState = nextAppState;
+    if (shouldPersistAdState) {
+      queueAdStatePersist();
+    }
     scheduleAdAvailabilityUpdate();
     notifyAdAvailabilityListeners();
   });
@@ -188,12 +260,13 @@ async function hydrateAdState() {
 
   try {
     const storedValue = await getItemWithMigration('adsState');
+    const now = Date.now();
 
     if (!storedValue) {
-      isFirstLaunchSession = true;
+      hasTrackedFirstLaunchGraceState = true;
       firstLaunchAccumulatedUsageMs = 0;
       firstLaunchForegroundStartedAtMs =
-        currentAppState === 'active' ? Date.now() : null;
+        currentAppState === 'active' ? now : null;
       hasSkippedFirstCustomWordAddAd = false;
       itemClickCount = 0;
       favoriteSaveCount = 0;
@@ -204,9 +277,30 @@ async function hydrateAdState() {
 
     const parsedValue: PersistedAdsState = JSON.parse(storedValue);
 
-    isFirstLaunchSession = false;
-    firstLaunchAccumulatedUsageMs = 0;
-    firstLaunchForegroundStartedAtMs = null;
+    hasTrackedFirstLaunchGraceState =
+      parsedValue.firstLaunchGraceConsumedMs !== undefined ||
+      parsedValue.firstLaunchGraceStartedAtMs !== undefined;
+    firstLaunchAccumulatedUsageMs = hasTrackedFirstLaunchGraceState
+      ? sanitizePersistedCount(parsedValue.firstLaunchGraceConsumedMs)
+      : 0;
+    firstLaunchForegroundStartedAtMs = hasTrackedFirstLaunchGraceState &&
+      currentAppState === 'active'
+      ? now
+      : null;
+
+    if (hasTrackedFirstLaunchGraceState) {
+      const persistedStartedAtMs = sanitizePersistedTimestamp(
+        parsedValue.firstLaunchGraceStartedAtMs,
+      );
+
+      if (persistedStartedAtMs !== null) {
+        firstLaunchAccumulatedUsageMs += Math.min(
+          FIRST_LAUNCH_USAGE_PERSIST_INTERVAL_MS,
+          Math.max(0, now - persistedStartedAtMs),
+        );
+      }
+    }
+
     hasSkippedFirstCustomWordAddAd = Boolean(
       parsedValue.hasSkippedFirstCustomWordAddAd,
     );
@@ -215,8 +309,12 @@ async function hydrateAdState() {
     randomPracticeStartCount = sanitizePersistedCount(
       parsedValue.randomPracticeStartCount,
     );
+
+    if (hasTrackedFirstLaunchGraceState && currentAppState === 'active') {
+      queueAdStatePersist();
+    }
   } catch (error) {
-    isFirstLaunchSession = false;
+    hasTrackedFirstLaunchGraceState = false;
     firstLaunchAccumulatedUsageMs = 0;
     firstLaunchForegroundStartedAtMs = null;
     hasSkippedFirstCustomWordAddAd = false;
