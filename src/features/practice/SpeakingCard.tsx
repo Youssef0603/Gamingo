@@ -458,13 +458,8 @@ function SpeakingCard({
           ]}
         >
           <View style={styles.secondaryActionContent}>
-            <View style={[styles.secondaryActionIconSlot, styles.secondaryActionIconGhost]}>
-              <Icon color={theme.colors.primary} name="volume-high" size={16} />
-            </View>
             <Text style={styles.secondaryActionText}>Play again</Text>
-            <View style={styles.secondaryActionIconSlot}>
-              <Icon color={theme.colors.primary} name="volume-high" size={16} />
-            </View>
+            <Icon color={theme.colors.primary} name="volume-high" size={16} />
           </View>
         </Pressable>
       </View>
@@ -711,24 +706,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: theme.spacing.lg,
     paddingVertical: theme.spacing.md,
   },
-  secondaryActionText: {
-    color: theme.colors.text,
-    fontSize: 14,
-    fontWeight: '600',
-  },
   secondaryActionContent: {
     alignItems: 'center',
     flexDirection: 'row',
     gap: theme.spacing.xs,
     justifyContent: 'center',
   },
-  secondaryActionIconSlot: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 16,
-  },
-  secondaryActionIconGhost: {
-    opacity: 0,
+  secondaryActionText: {
+    color: theme.colors.text,
+    fontSize: 14,
+    fontWeight: '600',
   },
 });
 
