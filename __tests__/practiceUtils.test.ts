@@ -32,6 +32,16 @@ describe('practiceUtils', () => {
     );
   });
 
+  it('passes close orthographic variants that keep the spoken meaning intact', () => {
+    const evaluation = evaluatePracticeAttempt(
+      'المنطقة الآمنة',
+      'المنطقه الامنه',
+    );
+
+    expect(evaluation.label).toBe('Close');
+    expect(evaluation.score).toBeGreaterThanOrEqual(0.7);
+  });
+
   it('passes attempts at a seventy percent similarity score', () => {
     expect(getPracticeFeedbackLabel(0.7)).toBe('Close');
     expect(getPracticeFeedbackLabel(0.699)).toBe('Try again');

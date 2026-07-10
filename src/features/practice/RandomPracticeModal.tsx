@@ -290,8 +290,10 @@ function RandomPracticeModal({
                 {activePhrase ? (
                   <>
                     <SpeakingCard
+                      autoStartListeningAfterPlayback
                       cancellationToken={cancellationToken}
                       embedded
+                      embeddedFeedbackStyle="inline"
                       helperLabel={
                         languageMetadata[activePhraseTranslations!.helperLanguage].label
                       }
@@ -311,6 +313,7 @@ function RandomPracticeModal({
                           : activePhrase.id
                       }
                       phrase={activePhraseTranslations!.translation.text}
+                      reserveFeedbackSpace
                       showCloseAction={false}
                       trackReviewSuccess={false}
                     />
@@ -438,7 +441,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: theme.spacing.sm,
     justifyContent: 'center',
-    marginTop: theme.spacing.md,
+    marginTop: theme.spacing.lg,
     minHeight: 44,
     minWidth: 100,
     paddingHorizontal: theme.spacing.lg,

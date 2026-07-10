@@ -122,6 +122,7 @@ jest.mock('react-native-store-review', () => ({
   requestReview: jest.fn(),
 }));
 jest.mock('react-native-json-tree', () => () => null);
+jest.mock('lottie-react-native', () => 'LottieView');
 jest.mock('expo-blur', () => ({
   BlurView: ({ children }: { children?: React.ReactNode }) => children ?? null,
 }));

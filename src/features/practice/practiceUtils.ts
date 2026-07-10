@@ -38,7 +38,7 @@ export function normalizePracticeText(value: string) {
     .trim()
     .toLowerCase()
     .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\p{M}/gu, '')
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .replace(/\s+/g, ' ')
     .trim();
@@ -49,7 +49,7 @@ function normalizePracticeTextPreservingMask(value: string) {
     .trim()
     .toLowerCase()
     .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\p{M}/gu, '')
     .replace(/[^\p{L}\p{N}\s*]/gu, ' ')
     .replace(/\s+/g, ' ')
     .trim();
@@ -132,6 +132,23 @@ function levenshteinDistance(source: string, target: string) {
   return previous[target.length];
 }
 
+function characterSimilarityScore(source: string, target: string) {
+  if (!source.length || !target.length) {
+    return 0;
+  }
+
+  if (source === target) {
+    return 1;
+  }
+
+  const editDistance = levenshteinDistance(source, target);
+
+  return Math.max(
+    0,
+    1 - editDistance / Math.max(source.length, target.length),
+  );
+}
+
 function tokenSimilarityScore(expected: string, spoken: string) {
   const expectedTokens = expected.split(' ').filter(Boolean);
   const spokenTokens = spoken.split(' ').filter(Boolean);
@@ -140,18 +157,34 @@ function tokenSimilarityScore(expected: string, spoken: string) {
     return 0;
   }
 
-  const expectedSet = new Set(expectedTokens);
-  const spokenSet = new Set(spokenTokens);
+  const matchedSpokenIndexes = new Set<number>();
+  let totalSimilarity = 0;
 
-  let overlap = 0;
+  expectedTokens.forEach(expectedToken => {
+    let bestSpokenIndex = -1;
+    let bestSimilarity = 0;
 
-  expectedSet.forEach(token => {
-    if (spokenSet.has(token)) {
-      overlap += 1;
+    spokenTokens.forEach((spokenToken, spokenIndex) => {
+      if (matchedSpokenIndexes.has(spokenIndex)) {
+        return;
+      }
+
+      const similarity = characterSimilarityScore(expectedToken, spokenToken);
+
+      if (similarity > bestSimilarity) {
+        bestSimilarity = similarity;
+        bestSpokenIndex = spokenIndex;
+      }
+    });
+
+    if (bestSpokenIndex !== -1) {
+      matchedSpokenIndexes.add(bestSpokenIndex);
     }
+
+    totalSimilarity += bestSimilarity;
   });
 
-  return overlap / expectedSet.size;
+  return Number((totalSimilarity / expectedTokens.length).toFixed(3));
 }
 
 export function calculatePracticeSimilarity(
@@ -172,19 +205,16 @@ export function calculatePracticeSimilarity(
     return 1;
   }
 
-  const editDistance = levenshteinDistance(
+  const charSimilarity = characterSimilarityScore(
     normalizedExpected,
     normalizedSpoken,
   );
-  const charSimilarity =
-    1 -
-    editDistance / Math.max(normalizedExpected.length, normalizedSpoken.length);
   const tokenSimilarity = tokenSimilarityScore(
     normalizedExpected,
     normalizedSpoken,
   );
 
-  return Number((charSimilarity * 0.7 + tokenSimilarity * 0.3).toFixed(3));
+  return Number((charSimilarity * 0.8 + tokenSimilarity * 0.2).toFixed(3));
 }
 
 export function getPracticeFeedbackLabel(score: number) {

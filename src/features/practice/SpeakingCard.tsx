@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import LottieView from 'lottie-react-native';
 
 import { Icon } from '../../components/ui';
 import { trackReviewMilestone } from '../reviews/appReview';
@@ -10,10 +11,15 @@ import { usePractice } from './usePractice';
 import type { PracticeFeedback } from './usePractice';
 import type { LanguageCode } from '../../types/language';
 
+const successCheckmarkAnimation = require('../../assets/animations/Checkmark.json');
+const INLINE_FEEDBACK_SLOT_HEIGHT = 56;
+
 type SpeakingCardProps = {
+  autoStartListeningAfterPlayback?: boolean;
   cancellationToken?: number;
   closeLabel?: string;
   embedded?: boolean;
+  embeddedFeedbackStyle?: 'floating' | 'inline';
   helperLabel: string;
   helperText: string;
   isFavorite: boolean;
@@ -24,6 +30,7 @@ type SpeakingCardProps = {
   onToggleFavorite: () => void;
   phraseId?: string;
   phrase: string;
+  reserveFeedbackSpace?: boolean;
   showCloseAction?: boolean;
   trackReviewSuccess?: boolean;
 };
@@ -57,10 +64,28 @@ function getPracticeFlash(feedback: PracticeFeedback): PracticeFlashState {
   };
 }
 
+function SuccessCheckmark({
+  compact = false,
+}: {
+  compact?: boolean;
+}) {
+  return (
+    <LottieView
+      autoPlay
+      loop={false}
+      resizeMode="contain"
+      source={successCheckmarkAnimation}
+      style={compact ? styles.successAnimationCompact : styles.successAnimation}
+    />
+  );
+}
+
 function SpeakingCard({
+  autoStartListeningAfterPlayback = false,
   cancellationToken = 0,
   closeLabel = 'Close',
   embedded = false,
+  embeddedFeedbackStyle = 'floating',
   helperLabel,
   helperText,
   isFavorite,
@@ -71,11 +96,22 @@ function SpeakingCard({
   onToggleFavorite,
   phraseId,
   phrase,
+  reserveFeedbackSpace = false,
   showCloseAction = true,
   trackReviewSuccess = true,
 }: SpeakingCardProps) {
   const [practiceFlash, setPracticeFlash] = useState<PracticeFlashState | null>(null);
+  const [isSequencingPractice, setIsSequencingPractice] = useState(false);
   const cancellationTokenRef = useRef(cancellationToken);
+  const practiceSequenceRequestIdRef = useRef(0);
+  const shouldUseInlineEmbeddedFeedback =
+    embedded && embeddedFeedbackStyle === 'inline';
+  const shouldReserveFloatingFeedbackSpace =
+    practiceFlash?.kind === 'failure' || reserveFeedbackSpace;
+  const shouldRenderFeedbackArea =
+    shouldUseInlineEmbeddedFeedback ||
+    reserveFeedbackSpace ||
+    practiceFlash?.kind === 'failure';
 
   const handleAttemptComplete = useCallback((nextFeedback: PracticeFeedback) => {
     const nextPracticeFlash = getPracticeFlash(nextFeedback);
@@ -90,6 +126,11 @@ function SpeakingCard({
       onSuccessfulAttempt?.(nextFeedback);
     }
   }, [onSuccessfulAttempt, trackReviewSuccess]);
+
+  const invalidatePracticeSequence = useCallback(() => {
+    practiceSequenceRequestIdRef.current += 1;
+    setIsSequencingPractice(false);
+  }, []);
 
   const {
     error,
@@ -108,25 +149,76 @@ function SpeakingCard({
     phrase,
   });
 
+  const handlePracticePress = useCallback(() => {
+    invalidatePracticeSequence();
+    setPracticeFlash(null);
+    speakPhrase().catch(() => undefined);
+  }, [invalidatePracticeSequence, speakPhrase]);
+
   const playInitialPhrase = useCallback(async () => {
     setPracticeFlash(null);
 
     await playPhrase();
   }, [playPhrase]);
 
+  const playPhraseThenListen = useCallback(async () => {
+    const nextSequenceRequestId = practiceSequenceRequestIdRef.current + 1;
+
+    practiceSequenceRequestIdRef.current = nextSequenceRequestId;
+    setPracticeFlash(null);
+    setIsSequencingPractice(true);
+
+    try {
+      await playPhrase();
+
+      if (nextSequenceRequestId !== practiceSequenceRequestIdRef.current) {
+        return;
+      }
+
+      await speakPhrase();
+    } catch {
+      return;
+    } finally {
+      if (nextSequenceRequestId === practiceSequenceRequestIdRef.current) {
+        setIsSequencingPractice(false);
+      }
+    }
+  }, [playPhrase, speakPhrase]);
+
   const handleReplayPhrase = useCallback(() => {
     cancelPractice().finally(() => {
+      if (autoStartListeningAfterPlayback) {
+        playPhraseThenListen().catch(() => undefined);
+        return;
+      }
+
       playInitialPhrase().catch(() => undefined);
     });
-  }, [cancelPractice, playInitialPhrase]);
+  }, [
+    autoStartListeningAfterPlayback,
+    cancelPractice,
+    playInitialPhrase,
+    playPhraseThenListen,
+  ]);
 
   useEffect(() => {
-    playInitialPhrase().catch(() => undefined);
+    if (autoStartListeningAfterPlayback) {
+      playPhraseThenListen().catch(() => undefined);
+    } else {
+      playInitialPhrase().catch(() => undefined);
+    }
 
     return () => {
+      invalidatePracticeSequence();
       invalidatePractice();
     };
-  }, [invalidatePractice, playInitialPhrase]);
+  }, [
+    autoStartListeningAfterPlayback,
+    invalidatePractice,
+    invalidatePracticeSequence,
+    playInitialPhrase,
+    playPhraseThenListen,
+  ]);
 
   useEffect(() => {
     if (cancellationToken === cancellationTokenRef.current) {
@@ -134,26 +226,40 @@ function SpeakingCard({
     }
 
     cancellationTokenRef.current = cancellationToken;
+    invalidatePracticeSequence();
     invalidatePractice();
-  }, [cancellationToken, invalidatePractice]);
+  }, [cancellationToken, invalidatePractice, invalidatePracticeSequence]);
 
   const handleClosePress = useCallback(() => {
+    invalidatePracticeSequence();
     invalidatePractice();
     onClose();
-  }, [invalidatePractice, onClose]);
+  }, [invalidatePractice, invalidatePracticeSequence, onClose]);
 
   const feedbackMutedColor = practiceFlash
     ? getPracticeMutedTone(practiceFlash.kind)
     : null;
-  const isBusy = isPlaying || isListening || isRequestingPermission;
+  const isBusy =
+    isPlaying || isListening || isRequestingPermission || isSequencingPractice;
+  const primaryActionLabel =
+    isListening || isRequestingPermission
+      ? 'Listening...'
+      : isPlaying || isSequencingPractice
+        ? 'Playing...'
+        : 'Practice';
 
   return (
     <View
       style={[
         styles.card,
         embedded && styles.cardEmbedded,
-        practiceFlash && styles.cardWithFeedback,
-        practiceFlash && embedded && styles.cardEmbeddedWithFeedback,
+        shouldReserveFloatingFeedbackSpace &&
+          !shouldUseInlineEmbeddedFeedback &&
+          styles.cardWithFeedback,
+        shouldReserveFloatingFeedbackSpace &&
+          embedded &&
+          !shouldUseInlineEmbeddedFeedback &&
+          styles.cardEmbeddedWithFeedback,
         practiceFlash && !embedded && styles.cardWithFeedbackState,
         practiceFlash && embedded && styles.cardEmbeddedWithFeedbackState,
         practiceFlash && {
@@ -167,7 +273,7 @@ function SpeakingCard({
         },
       ]}
     >
-      {practiceFlash ? (
+      {practiceFlash && !shouldUseInlineEmbeddedFeedback ? (
         <View
           pointerEvents="none"
           style={[
@@ -184,11 +290,15 @@ function SpeakingCard({
               },
             ]}
           >
-            <Icon
-              color={feedbackMutedColor ?? theme.colors.accent}
-              name={practiceFlash.kind === 'success' ? 'checkmark' : 'close'}
-              size={38}
-            />
+            {practiceFlash.kind === 'success' ? (
+              <SuccessCheckmark key="floating-success-checkmark" />
+            ) : (
+              <Icon
+                color={feedbackMutedColor ?? theme.colors.accent}
+                name="close"
+                size={38}
+              />
+            )}
           </View>
         </View>
       ) : null}
@@ -245,16 +355,77 @@ function SpeakingCard({
         {helperLabel}: {helperText}
       </Text>
 
-      {practiceFlash ? (
-        <View style={styles.feedbackWrap}>
-          <Text
-            style={[
-              styles.feedbackTitle,
-              { color: feedbackMutedColor ?? theme.colors.accent },
-            ]}
-          >
-            {practiceFlash.kind === 'success' ? 'Success' : 'Try again'}
-          </Text>
+      {shouldRenderFeedbackArea ? (
+        <View
+          style={[
+            styles.feedbackWrap,
+            reserveFeedbackSpace && styles.feedbackWrapReserved,
+            shouldUseInlineEmbeddedFeedback && styles.feedbackWrapInlineEmbedded,
+          ]}
+        >
+          {shouldUseInlineEmbeddedFeedback && practiceFlash?.kind === 'success' ? (
+            <View style={styles.feedbackInlineSuccessWrap}>
+              <SuccessCheckmark
+                compact
+                key={`inline-success-checkmark-${phraseId ?? phrase}`}
+              />
+            </View>
+          ) : shouldUseInlineEmbeddedFeedback ? (
+            <View style={styles.feedbackInlineRow}>
+              <View
+                style={[
+                  styles.feedbackInlineIconWrap,
+                  !practiceFlash && styles.feedbackInlineIconWrapHidden,
+                  practiceFlash && {
+                    backgroundColor: withAlpha(
+                      feedbackMutedColor ?? theme.colors.border,
+                      0.1,
+                    ),
+                    borderColor: withAlpha(
+                      feedbackMutedColor ?? theme.colors.border,
+                      0.28,
+                    ),
+                  },
+                ]}
+              >
+                <Icon
+                  color={feedbackMutedColor ?? theme.colors.accent}
+                  name={practiceFlash?.kind === 'failure' ? 'close' : 'checkmark'}
+                  size={16}
+                />
+              </View>
+              <Text
+                style={[
+                  styles.feedbackTitle,
+                  styles.feedbackTitleInline,
+                  practiceFlash?.kind === 'success' && styles.feedbackTitleHidden,
+                  !practiceFlash && styles.feedbackTitleHidden,
+                  { color: feedbackMutedColor ?? theme.colors.accent },
+                ]}
+              >
+                {practiceFlash
+                  ? practiceFlash.kind === 'success'
+                    ? 'Success'
+                    : 'Try again'
+                  : 'Success'}
+              </Text>
+            </View>
+          ) : (
+            <Text
+              style={[
+                styles.feedbackTitle,
+                practiceFlash?.kind === 'success' && styles.feedbackTitleHidden,
+                !practiceFlash && styles.feedbackTitleHidden,
+                { color: feedbackMutedColor ?? theme.colors.accent },
+              ]}
+            >
+              {practiceFlash
+                ? practiceFlash.kind === 'success'
+                  ? 'Success'
+                  : 'Try again'
+                : 'Success'}
+            </Text>
+          )}
           {/* <Text style={styles.feedbackText}>{practiceFlash.message}</Text> */}
         </View>
       ) : null}
@@ -267,8 +438,7 @@ function SpeakingCard({
         <Pressable
           disabled={isBusy}
           onPress={() => {
-            setPracticeFlash(null);
-            speakPhrase().catch(() => undefined);
+            handlePracticePress();
           }}
           style={({ pressed }) => [
             styles.primaryAction,
@@ -276,9 +446,7 @@ function SpeakingCard({
             pressed && styles.buttonPressed,
           ]}
         >
-          <Text style={styles.primaryActionText}>
-            {isListening || isRequestingPermission ? 'Listening...' : 'Practice'}
-          </Text>
+          <Text style={styles.primaryActionText}>{primaryActionLabel}</Text>
         </Pressable>
         <Pressable
           disabled={isBusy}
@@ -444,11 +612,57 @@ const styles = StyleSheet.create({
     marginBottom: theme.spacing.md,
     paddingHorizontal: theme.spacing.md,
   },
+  feedbackWrapReserved: {
+    minHeight: INLINE_FEEDBACK_SLOT_HEIGHT,
+  },
+  feedbackWrapInlineEmbedded: {
+    marginBottom: theme.spacing.lg,
+  },
+  feedbackInlineSuccessWrap: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: INLINE_FEEDBACK_SLOT_HEIGHT,
+    width: '100%',
+  },
   feedbackTitle: {
     fontSize: 18,
     fontWeight: '700',
     marginBottom: theme.spacing.sm,
     textAlign: 'center',
+  },
+  feedbackTitleHidden: {
+    opacity: 0,
+  },
+  feedbackTitleInline: {
+    marginBottom: 0,
+  },
+  feedbackInlineRow: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    gap: theme.spacing.sm,
+    justifyContent: 'center',
+    minHeight: INLINE_FEEDBACK_SLOT_HEIGHT,
+  },
+  feedbackInlineIconWrap: {
+    alignItems: 'center',
+    backgroundColor: withAlpha(theme.colors.border, 0.08),
+    borderColor: withAlpha(theme.colors.border, 0.18),
+    borderRadius: theme.radius.pill,
+    borderWidth: 1,
+    height: 28,
+    justifyContent: 'center',
+    width: 28,
+  },
+  feedbackInlineIconWrapHidden: {
+    opacity: 0,
+  },
+  successAnimation: {
+    height: 92,
+    width: 92,
+  },
+  successAnimationCompact: {
+    height: INLINE_FEEDBACK_SLOT_HEIGHT,
+    width: INLINE_FEEDBACK_SLOT_HEIGHT,
   },
   feedbackText: {
     ...theme.typography.body,
