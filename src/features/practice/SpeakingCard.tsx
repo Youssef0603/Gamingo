@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import LottieView from 'lottie-react-native';
 
 import { Icon } from '../../components/ui';
@@ -13,6 +13,12 @@ import type { LanguageCode } from '../../types/language';
 
 const successCheckmarkAnimation = require('../../assets/animations/Checkmark.json');
 const INLINE_FEEDBACK_SLOT_HEIGHT = 56;
+const androidCardTextStyle = Platform.select({
+  android: {
+    includeFontPadding: true,
+  },
+  default: {},
+});
 
 type SpeakingCardProps = {
   autoStartListeningAfterPlayback?: boolean;
@@ -585,10 +591,11 @@ const styles = StyleSheet.create({
     opacity: 0.55,
   },
   phrase: {
+    ...androidCardTextStyle,
     color: theme.colors.text,
     fontSize: 32,
     fontWeight: '700',
-    lineHeight: 38,
+    lineHeight: Platform.OS === 'android' ? 48 : 38,
     textAlign: 'center',
   },
   phraseButton: {
@@ -598,7 +605,9 @@ const styles = StyleSheet.create({
   },
   translation: {
     ...theme.typography.body,
+    ...androidCardTextStyle,
     color: theme.colors.mutedText,
+    lineHeight: Platform.OS === 'android' ? 24 : theme.typography.body.lineHeight,
     marginBottom: theme.spacing.lg,
     textAlign: 'center',
   },

@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -14,6 +15,13 @@ import { getPhraseDisplayLanguages, getPhraseDisplayTranslations } from '../util
 
 import type { LanguageCode } from '../types/language';
 import type { Phrase } from '../types/phrase';
+
+const androidCardTextStyle = Platform.select({
+  android: {
+    includeFontPadding: true,
+  },
+  default: {},
+});
 
 type PhraseCardProps = {
   helperLanguage: LanguageCode;
@@ -134,19 +142,25 @@ const styles = StyleSheet.create({
     gap: theme.spacing.xs,
   },
   phrase: {
+    ...androidCardTextStyle,
     fontSize: 18,
     fontWeight: '700',
     color: theme.colors.text,
+    lineHeight: Platform.OS === 'android' ? 28 : 24,
     marginBottom: theme.spacing.xs,
   },
   translation: {
     ...theme.typography.caption,
+    ...androidCardTextStyle,
     color: theme.colors.mutedText,
+    lineHeight: Platform.OS === 'android' ? 20 : theme.typography.caption.lineHeight,
   },
   languageSummary: {
+    ...androidCardTextStyle,
     color: theme.colors.primary,
     fontSize: 12,
     fontWeight: '600',
+    lineHeight: Platform.OS === 'android' ? 18 : 16,
     marginBottom: theme.spacing.xs,
   },
   favoriteButton: {
