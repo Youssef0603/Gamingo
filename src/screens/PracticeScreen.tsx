@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { BlurView } from 'expo-blur';
 import {
   Alert,
   Animated,
@@ -754,11 +753,6 @@ function PracticeScreen() {
           {shouldShowToxicListOverlay ? (
             <View style={styles.filteredListWrap}>
               <View style={styles.toxicListOverlay}>
-                <BlurView
-                  intensity={42}
-                  style={StyleSheet.absoluteFill}
-                  tint="dark"
-                />
                 <View style={styles.toxicListOverlayTint} />
                 <View style={styles.toxicDisclosureCard}>
                   <View style={styles.toxicDisclosureIconWrap}>
