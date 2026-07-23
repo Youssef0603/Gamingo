@@ -46,6 +46,7 @@ export type BottomSheetContent = {
 } | null;
 
 type AppStateContextValue = {
+  acknowledgeToxicCategoryDisclosure: () => void;
   addCustomPhrase: (
     nativeText: string,
     learningText: string,
@@ -61,6 +62,7 @@ type AppStateContextValue = {
   favoriteLanguageOptions: LanguageCode[];
   getFavoriteIdsForLanguage: (language: LanguageCode) => string[];
   getPhraseById: (phraseId: string) => Phrase | null;
+  hasAcknowledgedToxicCategoryDisclosure: boolean;
   isFavorite: (phraseId: string, language?: LanguageCode) => boolean;
   nativeLanguage: LanguageCode;
   openLanguagePicker: (target: LanguagePickerTarget) => void;
@@ -92,6 +94,7 @@ type PersistedAppState = {
   favoriteFilterLanguage: LanguageCode;
   favoriteIds?: string[];
   favoriteIdsByLanguage: FavoriteIdsByLanguage;
+  hasAcknowledgedToxicCategoryDisclosure?: boolean;
   nativeLanguage: LanguageCode;
   remoteConfig?: AppRemoteConfig;
   selectedLanguage: LanguageCode;
@@ -313,6 +316,10 @@ function upsertCustomPhrase(current: Phrase[], nextPhrase: Phrase): Phrase[] {
 }
 
 export function AppStateProvider({ children }: PropsWithChildren) {
+  const [
+    hasAcknowledgedToxicCategoryDisclosure,
+    setHasAcknowledgedToxicCategoryDisclosure,
+  ] = useState(false);
   const [bottomSheetContent, setBottomSheetContent] =
     useState<BottomSheetContent>(null);
   const [customPhrases, setCustomPhrases] = useState<Phrase[]>([]);
@@ -363,6 +370,8 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         const nextFavoriteIdsByLanguage = sanitizeFavoriteIdsByLanguage(
           parsedValue.favoriteIdsByLanguage,
         );
+        const nextHasAcknowledgedToxicCategoryDisclosure =
+          parsedValue.hasAcknowledgedToxicCategoryDisclosure === true;
         const nextCustomPhrases = sanitizeCustomPhrases(
           parsedValue.customPhrases,
         );
@@ -374,6 +383,9 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         setRemoteConfig(nextRemoteConfig);
         setSelectedLanguage(nextSelectedLanguage);
         setFavoriteFilterLanguage(nextFavoriteFilterLanguage);
+        setHasAcknowledgedToxicCategoryDisclosure(
+          nextHasAcknowledgedToxicCategoryDisclosure,
+        );
 
         if (Object.keys(nextFavoriteIdsByLanguage).length > 0) {
           setFavoriteIdsByLanguage(nextFavoriteIdsByLanguage);
@@ -411,6 +423,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
             customPhrases,
             favoriteFilterLanguage,
             favoriteIdsByLanguage,
+            hasAcknowledgedToxicCategoryDisclosure,
             nativeLanguage,
             remoteConfig,
             selectedLanguage,
@@ -426,6 +439,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     customPhrases,
     favoriteFilterLanguage,
     favoriteIdsByLanguage,
+    hasAcknowledgedToxicCategoryDisclosure,
     isHydrated,
     nativeLanguage,
     remoteConfig,
@@ -619,6 +633,10 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     setBottomSheetContent(null);
   };
 
+  const acknowledgeToxicCategoryDisclosure = () => {
+    setHasAcknowledgedToxicCategoryDisclosure(true);
+  };
+
   const debugSnapshot = useMemo<AppStateDebugSnapshot>(
     () => ({
       bottomSheetContent,
@@ -657,6 +675,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
   return (
     <AppStateContext.Provider
       value={{
+        acknowledgeToxicCategoryDisclosure,
         addCustomPhrase,
         addPhraseToFavorites,
         bottomSheetContent,
@@ -668,6 +687,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         favoriteLanguageOptions,
         getFavoriteIdsForLanguage,
         getPhraseById,
+        hasAcknowledgedToxicCategoryDisclosure,
         isFavorite,
         nativeLanguage,
         openLanguagePicker,

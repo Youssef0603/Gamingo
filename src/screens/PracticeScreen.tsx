@@ -108,9 +108,11 @@ function FilterChip({ label, onLayout, selected, onPress }: FilterChipProps) {
 
 function PracticeScreen() {
   const {
+    acknowledgeToxicCategoryDisclosure,
     addCustomPhrase,
     deleteCustomPhrase,
     isFavorite,
+    hasAcknowledgedToxicCategoryDisclosure,
     nativeLanguage,
     openLanguagePicker,
     phrases,
@@ -142,10 +144,6 @@ function PracticeScreen() {
   const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
   const isScrollToTopButtonVisibleRef = useRef(false);
   const searchRevealAnimation = useRef(new Animated.Value(0)).current;
-  const [
-    isToxicCategoryDisclosureDismissed,
-    setIsToxicCategoryDisclosureDismissed,
-  ] = useState(false);
 
   const availableCategories = useMemo(() => {
     const availableCategorySet = new Set(phrases.map(item => item.category));
@@ -327,7 +325,7 @@ function PracticeScreen() {
   const nativeLanguageOption = languageMetadata[nativeLanguage];
   const selectedLanguageOption = languageMetadata[selectedLanguage];
   const shouldMaskToxicCategoryContent =
-    selectedCategory === 'toxic' && !isToxicCategoryDisclosureDismissed;
+    selectedCategory === 'toxic' && !hasAcknowledgedToxicCategoryDisclosure;
   const shouldShowToxicListOverlay =
     shouldMaskToxicCategoryContent && filteredPhrases.length > 0;
   const handleCategoryChipLayout =
@@ -367,16 +365,6 @@ function PracticeScreen() {
 
     setIsSearchVisible(true);
   };
-
-  const acknowledgeToxicCategoryDisclosure = () => {
-    setIsToxicCategoryDisclosureDismissed(true);
-  };
-
-  useEffect(() => {
-    if (selectedCategory !== 'toxic') {
-      setIsToxicCategoryDisclosureDismissed(false);
-    }
-  }, [selectedCategory]);
 
   const showPhraseInList = (phrase: Phrase) => {
     setSearchQuery('');
@@ -753,7 +741,6 @@ function PracticeScreen() {
           {shouldShowToxicListOverlay ? (
             <View style={styles.filteredListWrap}>
               <View style={styles.toxicListOverlay}>
-                <View style={styles.toxicListOverlayTint} />
                 <View style={styles.toxicDisclosureCard}>
                   <View style={styles.toxicDisclosureIconWrap}>
                     <Icon
@@ -1113,31 +1100,23 @@ const styles = StyleSheet.create({
   },
   toxicListOverlay: {
     alignItems: 'center',
+    backgroundColor: withAlpha(theme.colors.primary, 0.08),
     flex: 1,
-    elevation: 20,
     justifyContent: 'center',
-    overflow: 'hidden',
     paddingHorizontal: theme.spacing.lg,
     paddingTop: theme.spacing.lg,
     width: '100%',
-    zIndex: 20,
-  },
-  toxicListOverlayTint: {
-    ...StyleSheet.absoluteFill,
-    backgroundColor: withAlpha(theme.colors.primary, 0.08),
   },
   toxicDisclosureCard: {
     alignItems: 'center',
-    backgroundColor: withAlpha(theme.colors.card, 0.88),
+    backgroundColor: theme.colors.card,
     borderColor: withAlpha(theme.colors.primary, 0.2),
     borderRadius: theme.radius.lg,
     borderWidth: 1,
-    elevation: 21,
     maxWidth: 520,
     paddingHorizontal: theme.spacing.xl,
     paddingVertical: theme.spacing.xl,
     width: '100%',
-    zIndex: 21,
   },
   toxicDisclosureIconWrap: {
     alignItems: 'center',
