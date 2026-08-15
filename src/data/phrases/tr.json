@@ -2207,6 +2207,10 @@
     "text": "Oyunu sil",
     "meaning": "Toksik veya suçlayıcı ifade; tanımak için yararlı, saygılı comms için önerilmez."
   },
+  "toxic-go-to-kitchen": {
+    "text": "Mutfağa git",
+    "meaning": "Cinsiyetçi veya taciz edici ifade; tanımak için yararlı, saygılı comms için önerilmez."
+  },
   "antiToxic-please-ask-before-picking": {
     "text": "Lütfen seçmeden önce sor",
     "meaning": "Takım iletişimini yararlı ve saygılı tutan daha sakin alternatif."

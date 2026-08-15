@@ -2207,6 +2207,10 @@
     "text": "Deinstallier das Spiel",
     "meaning": "Toxische oder beschuldigende Phrase; zum Erkennen nützlich, aber nicht für respektvolle Comms empfohlen."
   },
+  "toxic-go-to-kitchen": {
+    "text": "Geh in die Küche",
+    "meaning": "Sexistische oder belästigende Phrase; zum Erkennen nützlich, aber nicht für respektvolle Comms empfohlen."
+  },
   "antiToxic-please-ask-before-picking": {
     "text": "Bitte frag, bevor du wählst",
     "meaning": "Ruhigere Alternative, die Teamkommunikation hilfreich und respektvoll hält."

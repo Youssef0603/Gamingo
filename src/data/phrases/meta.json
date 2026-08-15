@@ -4521,6 +4521,19 @@
     "isToxic": true
   },
   {
+    "id": "toxic-go-to-kitchen",
+    "category": "toxic",
+    "tags": [
+      "toxic",
+      "sexist",
+      "harassment",
+      "command",
+      "real-case",
+      "common"
+    ],
+    "isToxic": true
+  },
+  {
     "id": "antiToxic-please-ask-before-picking",
     "category": "antiToxic",
     "tags": [

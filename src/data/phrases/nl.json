@@ -2207,6 +2207,10 @@
     "text": "Verwijder de game",
     "meaning": "Toxische of beschuldigende zin; nuttig om te herkennen, maar niet aanbevolen voor respectvolle comms."
   },
+  "toxic-go-to-kitchen": {
+    "text": "Ga naar de keuken",
+    "meaning": "Seksistische of intimiderende zin; nuttig om te herkennen, maar niet aanbevolen voor respectvolle comms."
+  },
   "antiToxic-please-ask-before-picking": {
     "text": "Vraag alsjeblieft voor je kiest",
     "meaning": "Rustiger alternatief dat teamcommunicatie nuttig en respectvol houdt."

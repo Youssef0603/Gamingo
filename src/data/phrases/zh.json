@@ -2207,6 +2207,10 @@
     "text": "把游戏卸载了",
     "meaning": "带有攻击或甩锅意味的表达，只建议用于识别，不建议在友好沟通中使用。"
   },
+  "toxic-go-to-kitchen": {
+    "text": "去厨房",
+    "meaning": "带有性别歧视或骚扰意味的表达，只建议用于识别，不建议在友好沟通中使用。"
+  },
   "antiToxic-please-ask-before-picking": {
     "text": "选之前请先问一下",
     "meaning": "更冷静的替代表达，让团队沟通保持有用和尊重。"
