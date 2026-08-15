@@ -20,6 +20,12 @@ import { useAppState } from '../context/AppStateContext';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
 import { showAdOnItemClick } from '../features/ads/mobileAds';
 import PracticeModal from '../features/practice/PracticeModal';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  getPhraseAnalyticsParams,
+  trackAnalyticsEvent,
+} from '../services/analytics';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
 import { getPhraseDisplayTranslations } from '../utils/phraseDisplay';
@@ -45,6 +51,7 @@ function FavoritesScreen() {
   const [activePhraseId, setActivePhraseId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const emptyStateAnimation = useRef(new Animated.Value(0)).current;
+  const emptyStateKeyRef = useRef<string | null>(null);
   const listRef = useRef<FlatList<Phrase>>(null);
   const isScrollToTopButtonVisibleRef = useRef(false);
   const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
@@ -78,6 +85,46 @@ function FavoritesScreen() {
     [activePhraseId, getPhraseById],
   );
 
+  const getSearchResultCountForQuery = (query: string) =>
+    savedPhrases.filter(phrase =>
+      phraseMatchesSearch(
+        phrase,
+        query,
+        nativeLanguage,
+        favoriteFilterLanguage,
+      ),
+    ).length;
+
+  useEffect(() => {
+    if (filteredSavedPhrases.length > 0) {
+      emptyStateKeyRef.current = null;
+      return;
+    }
+
+    const normalizedQuery = searchQuery.trim();
+    const nextEmptyStateKey = `${favoriteFilterLanguage}:${normalizedQuery}`;
+
+    if (emptyStateKeyRef.current === nextEmptyStateKey) {
+      return;
+    }
+
+    emptyStateKeyRef.current = nextEmptyStateKey;
+    trackAnalyticsEvent(ANALYTICS_EVENTS.EMPTY_STATE_VIEWED, {
+      [ANALYTICS_PARAMS.FAVORITE_COUNT]: savedPhrases.length,
+      [ANALYTICS_PARAMS.FAVORITE_LANG]: favoriteFilterLanguage,
+      [ANALYTICS_PARAMS.HAS_QUERY]: normalizedQuery ? 'true' : 'false',
+      [ANALYTICS_PARAMS.ORIGIN]: 'favorites_screen',
+      [ANALYTICS_PARAMS.QUERY_LENGTH]: normalizedQuery.length,
+      [ANALYTICS_PARAMS.RESULT_COUNT]: 0,
+      [ANALYTICS_PARAMS.SCREEN]: 'Favourites',
+    }).catch(() => undefined);
+  }, [
+    favoriteFilterLanguage,
+    filteredSavedPhrases.length,
+    savedPhrases.length,
+    searchQuery,
+  ]);
+
   useEffect(() => {
     if (activePhraseId && !favoriteIds.includes(activePhraseId)) {
       setActivePhraseId(null);
@@ -109,10 +156,47 @@ function FavoritesScreen() {
     };
   }, [emptyStateAnimation]);
 
-  const openPhrase = (phraseId: string) => {
+  const openPhrase = (phraseId: string, itemIndex?: number) => {
+    const phrase = getPhraseById(phraseId);
+
+    trackAnalyticsEvent(ANALYTICS_EVENTS.PHRASE_SELECTED, {
+      ...getPhraseAnalyticsParams(
+        phrase,
+        nativeLanguage,
+        favoriteFilterLanguage,
+      ),
+      [ANALYTICS_PARAMS.FAVORITE_LANG]: favoriteFilterLanguage,
+      [ANALYTICS_PARAMS.ITEM_INDEX]: itemIndex,
+      [ANALYTICS_PARAMS.ORIGIN]: 'favorites_list',
+      [ANALYTICS_PARAMS.SCREEN]: 'Favourites',
+    }).catch(() => undefined);
+
     showAdOnItemClick(() => {
       setActivePhraseId(phraseId);
     });
+  };
+
+  const handleSearchQueryChange = (query: string) => {
+    setSearchQuery(query);
+    trackAnalyticsEvent(ANALYTICS_EVENTS.SEARCH_CHANGED, {
+      [ANALYTICS_PARAMS.FAVORITE_LANG]: favoriteFilterLanguage,
+      [ANALYTICS_PARAMS.ORIGIN]: 'favorites_screen',
+      [ANALYTICS_PARAMS.QUERY_LENGTH]: query.trim().length,
+      [ANALYTICS_PARAMS.RESULT_COUNT]: getSearchResultCountForQuery(query),
+      [ANALYTICS_PARAMS.SCREEN]: 'Favourites',
+      [ANALYTICS_PARAMS.SEARCH_CONTEXT]: 'saved_phrases',
+    }).catch(() => undefined);
+  };
+
+  const clearSearch = () => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.SEARCH_CLEARED, {
+      [ANALYTICS_PARAMS.FAVORITE_LANG]: favoriteFilterLanguage,
+      [ANALYTICS_PARAMS.ORIGIN]: 'favorites_screen',
+      [ANALYTICS_PARAMS.QUERY_LENGTH]: searchQuery.trim().length,
+      [ANALYTICS_PARAMS.RESULT_COUNT]: filteredSavedPhrases.length,
+      [ANALYTICS_PARAMS.SCREEN]: 'Favourites',
+    }).catch(() => undefined);
+    setSearchQuery('');
   };
 
   const confirmDeletePhrase = (phrase: (typeof savedPhrases)[number]) => {
@@ -122,6 +206,16 @@ function FavoritesScreen() {
       favoriteFilterLanguage,
     );
     const phraseLabel = helperTranslation.text;
+
+    trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_MODAL_OPENED, {
+      ...getPhraseAnalyticsParams(
+        phrase,
+        nativeLanguage,
+        favoriteFilterLanguage,
+      ),
+      [ANALYTICS_PARAMS.MODAL]: 'delete_custom_phrase',
+      [ANALYTICS_PARAMS.ORIGIN]: 'favorites_screen',
+    }).catch(() => undefined);
 
     Alert.alert('Delete custom word?', `Remove "${phraseLabel}" from Custom?`, [
       { text: 'Cancel', style: 'cancel' },
@@ -147,9 +241,23 @@ function FavoritesScreen() {
 
     isScrollToTopButtonVisibleRef.current = shouldShowButton;
     setShowScrollToTopButton(shouldShowButton);
+
+    if (shouldShowButton) {
+      trackAnalyticsEvent(ANALYTICS_EVENTS.SCROLL_DEPTH_REACHED, {
+        [ANALYTICS_PARAMS.FAVORITE_LANG]: favoriteFilterLanguage,
+        [ANALYTICS_PARAMS.ORIGIN]: 'favorites_list',
+        [ANALYTICS_PARAMS.SCREEN]: 'Favourites',
+      }).catch(() => undefined);
+    }
   };
 
   const scrollToTop = () => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.SCROLL_TO_TOP_PRESSED, {
+      [ANALYTICS_PARAMS.FAVORITE_LANG]: favoriteFilterLanguage,
+      [ANALYTICS_PARAMS.ORIGIN]: 'favorites_list',
+      [ANALYTICS_PARAMS.SCREEN]: 'Favourites',
+    }).catch(() => undefined);
+
     isScrollToTopButtonVisibleRef.current = false;
     setShowScrollToTopButton(false);
     listRef.current?.scrollToOffset({ animated: true, offset: 0 });
@@ -228,7 +336,7 @@ function FavoritesScreen() {
               <TextInput
                 autoCapitalize="none"
                 autoCorrect={false}
-                onChangeText={setSearchQuery}
+                onChangeText={handleSearchQueryChange}
                 placeholder="Search saved words"
                 placeholderTextColor={theme.colors.mutedText}
                 returnKeyType="search"
@@ -239,7 +347,7 @@ function FavoritesScreen() {
                 <Pressable
                   accessibilityLabel="Clear search"
                   hitSlop={10}
-                  onPress={() => setSearchQuery('')}
+                  onPress={clearSearch}
                   style={({ pressed }) => [
                     styles.clearSearchButton,
                     pressed && styles.clearSearchButtonPressed,
@@ -313,7 +421,7 @@ function FavoritesScreen() {
                   ? () => confirmDeletePhrase(item)
                   : undefined
               }
-              onPress={() => openPhrase(item.id)}
+              onPress={() => openPhrase(item.id, index)}
               onToggleFavorite={() =>
                 toggleFavorite(item.id, favoriteFilterLanguage)
               }

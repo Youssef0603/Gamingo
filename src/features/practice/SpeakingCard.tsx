@@ -1,10 +1,16 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import LottieView from 'lottie-react-native';
 
 import { Icon } from '../../components/ui';
 import { trackReviewMilestone } from '../reviews/appReview';
 import { playSuccessSound } from '../../services';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  type AnalyticsParams,
+  trackAnalyticsEvent,
+} from '../../services/analytics';
 import { theme, withAlpha } from '../../theme/theme';
 import { usePractice } from './usePractice';
 
@@ -21,6 +27,7 @@ const androidCardTextStyle = Platform.select({
 });
 
 type SpeakingCardProps = {
+  analyticsContext?: AnalyticsParams;
   autoStartListeningAfterPlayback?: boolean;
   cancellationToken?: number;
   closeLabel?: string;
@@ -87,6 +94,7 @@ function SuccessCheckmark({
 }
 
 function SpeakingCard({
+  analyticsContext,
   autoStartListeningAfterPlayback = false,
   cancellationToken = 0,
   closeLabel = 'Close',
@@ -118,6 +126,15 @@ function SpeakingCard({
     shouldUseInlineEmbeddedFeedback ||
     reserveFeedbackSpace ||
     practiceFlash?.kind === 'failure';
+  const practiceAnalyticsContext = useMemo(
+    () => ({
+      ...analyticsContext,
+      [ANALYTICS_PARAMS.AUTO_LISTEN]: autoStartListeningAfterPlayback
+        ? 'true'
+        : 'false',
+    }),
+    [analyticsContext, autoStartListeningAfterPlayback],
+  );
 
   const handleAttemptComplete = useCallback((nextFeedback: PracticeFeedback) => {
     const nextPracticeFlash = getPracticeFlash(nextFeedback);
@@ -148,6 +165,7 @@ function SpeakingCard({
     playPhrase,
     speakPhrase,
   } = usePractice({
+    analyticsContext: practiceAnalyticsContext,
     languageCode,
     locale,
     onAttemptComplete: handleAttemptComplete,
@@ -237,10 +255,19 @@ function SpeakingCard({
   }, [cancellationToken, invalidatePractice, invalidatePracticeSequence]);
 
   const handleClosePress = useCallback(() => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.PRACTICE_CANCELED, {
+      ...practiceAnalyticsContext,
+      [ANALYTICS_PARAMS.UI_ACTION]: 'close',
+    }).catch(() => undefined);
     invalidatePracticeSequence();
     invalidatePractice();
     onClose();
-  }, [invalidatePractice, invalidatePracticeSequence, onClose]);
+  }, [
+    invalidatePractice,
+    invalidatePracticeSequence,
+    onClose,
+    practiceAnalyticsContext,
+  ]);
 
   const feedbackMutedColor = practiceFlash
     ? getPracticeMutedTone(practiceFlash.kind)

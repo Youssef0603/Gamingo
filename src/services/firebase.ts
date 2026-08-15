@@ -5,6 +5,8 @@ import {
   logAppOpen,
   logEvent,
   setAnalyticsCollectionEnabled,
+  setDefaultEventParameters,
+  setUserProperties,
 } from '@react-native-firebase/analytics';
 import {
   getCrashlytics,
@@ -66,4 +68,29 @@ export async function logScreenView(screenName: string) {
     screen_class: screenName,
     screen_name: screenName,
   });
+}
+
+export async function logAnalyticsEvent(
+  eventName: string,
+  params?: Record<string, string | number>,
+) {
+  await ensureFirebaseReady();
+
+  return logEvent(getAnalytics(), eventName, params);
+}
+
+export async function setAnalyticsDefaultEventParameters(
+  params?: Record<string, string | number> | null,
+) {
+  await ensureFirebaseReady();
+
+  return setDefaultEventParameters(getAnalytics(), params ?? undefined);
+}
+
+export async function setAnalyticsUserProperties(
+  properties: Record<string, string>,
+) {
+  await ensureFirebaseReady();
+
+  return setUserProperties(getAnalytics(), properties);
 }

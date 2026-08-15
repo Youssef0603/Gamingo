@@ -8,6 +8,12 @@ import {
 } from '@react-native-firebase/remote-config';
 
 import { ensureFirebaseReady } from '../../services/firebase';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  getErrorAnalyticsParams,
+  trackAnalyticsEvent,
+} from '../../services/analytics';
 
 export const ADS_POLICY_REMOTE_CONFIG_KEY = 'ads_policy_v1';
 
@@ -187,17 +193,32 @@ function applyAdsPolicy(rawValue: string | null | undefined) {
   if (!rawValue) {
     adsPolicy = DEFAULT_ADS_POLICY;
     notifyAdsPolicyListeners();
+    trackAnalyticsEvent(ANALYTICS_EVENTS.REMOTE_CONFIG_UPDATED, {
+      [ANALYTICS_PARAMS.POLICY_VERSION]: adsPolicy.version,
+      [ANALYTICS_PARAMS.REMOTE_CONFIG_KEY]: ADS_POLICY_REMOTE_CONFIG_KEY,
+      [ANALYTICS_PARAMS.RESULT]: 'default_policy',
+    }).catch(() => undefined);
     return adsPolicy;
   }
 
   try {
     adsPolicy = sanitizeAdsPolicy(JSON.parse(rawValue));
   } catch (error) {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.REMOTE_CONFIG_FAILED, {
+      ...getErrorAnalyticsParams(error),
+      [ANALYTICS_PARAMS.REMOTE_CONFIG_KEY]: ADS_POLICY_REMOTE_CONFIG_KEY,
+      [ANALYTICS_PARAMS.RESULT]: 'parse_failed',
+    }).catch(() => undefined);
     console.warn('Failed to parse remote ads policy. Falling back to defaults.', error);
     adsPolicy = DEFAULT_ADS_POLICY;
   }
 
   notifyAdsPolicyListeners();
+  trackAnalyticsEvent(ANALYTICS_EVENTS.REMOTE_CONFIG_UPDATED, {
+    [ANALYTICS_PARAMS.POLICY_VERSION]: adsPolicy.version,
+    [ANALYTICS_PARAMS.REMOTE_CONFIG_KEY]: ADS_POLICY_REMOTE_CONFIG_KEY,
+    [ANALYTICS_PARAMS.RESULT]: 'policy_applied',
+  }).catch(() => undefined);
   return adsPolicy;
 }
 
@@ -240,11 +261,26 @@ function attachRealtimeAdsPolicyListener() {
         applyAdsPolicy(
           getValue(remoteConfig, ADS_POLICY_REMOTE_CONFIG_KEY).asString(),
         );
+        trackAnalyticsEvent(ANALYTICS_EVENTS.REMOTE_CONFIG_UPDATED, {
+          [ANALYTICS_PARAMS.POLICY_VERSION]: adsPolicy.version,
+          [ANALYTICS_PARAMS.REMOTE_CONFIG_KEY]: ADS_POLICY_REMOTE_CONFIG_KEY,
+          [ANALYTICS_PARAMS.SOURCE]: 'realtime',
+        }).catch(() => undefined);
       } catch (error) {
+        trackAnalyticsEvent(ANALYTICS_EVENTS.REMOTE_CONFIG_FAILED, {
+          ...getErrorAnalyticsParams(error),
+          [ANALYTICS_PARAMS.REMOTE_CONFIG_KEY]: ADS_POLICY_REMOTE_CONFIG_KEY,
+          [ANALYTICS_PARAMS.SOURCE]: 'realtime',
+        }).catch(() => undefined);
         console.warn('Failed to activate realtime remote ads policy update.', error);
       }
     },
     error: error => {
+      trackAnalyticsEvent(ANALYTICS_EVENTS.REMOTE_CONFIG_FAILED, {
+        ...getErrorAnalyticsParams(error),
+        [ANALYTICS_PARAMS.REMOTE_CONFIG_KEY]: ADS_POLICY_REMOTE_CONFIG_KEY,
+        [ANALYTICS_PARAMS.SOURCE]: 'realtime_listener',
+      }).catch(() => undefined);
       console.warn('Remote ads policy listener failed.', error);
     },
     complete: () => undefined,
@@ -267,6 +303,11 @@ export async function initializeAdsPolicy() {
         try {
           await fetchAndActivate(remoteConfig);
         } catch (error) {
+          trackAnalyticsEvent(ANALYTICS_EVENTS.REMOTE_CONFIG_FAILED, {
+            ...getErrorAnalyticsParams(error),
+            [ANALYTICS_PARAMS.REMOTE_CONFIG_KEY]: ADS_POLICY_REMOTE_CONFIG_KEY,
+            [ANALYTICS_PARAMS.SOURCE]: 'fetch_and_activate',
+          }).catch(() => undefined);
           console.warn('Failed to fetch remote ads policy.', error);
         }
 
@@ -275,9 +316,18 @@ export async function initializeAdsPolicy() {
         );
 
         attachRealtimeAdsPolicyListener();
+        trackAnalyticsEvent(ANALYTICS_EVENTS.REMOTE_CONFIG_INITIALIZED, {
+          [ANALYTICS_PARAMS.POLICY_VERSION]: nextAdsPolicy.version,
+          [ANALYTICS_PARAMS.REMOTE_CONFIG_KEY]: ADS_POLICY_REMOTE_CONFIG_KEY,
+        }).catch(() => undefined);
 
         return nextAdsPolicy;
       } catch (error) {
+        trackAnalyticsEvent(ANALYTICS_EVENTS.REMOTE_CONFIG_FAILED, {
+          ...getErrorAnalyticsParams(error),
+          [ANALYTICS_PARAMS.REMOTE_CONFIG_KEY]: ADS_POLICY_REMOTE_CONFIG_KEY,
+          [ANALYTICS_PARAMS.SOURCE]: 'initialize',
+        }).catch(() => undefined);
         console.warn('Failed to initialize remote ads policy.', error);
         return applyAdsPolicy(safeStringifyAdsPolicy(DEFAULT_ADS_POLICY));
       }

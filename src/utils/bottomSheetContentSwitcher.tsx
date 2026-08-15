@@ -47,6 +47,7 @@ export function bottomSheetContentSwitcher(
                 ? props.favoriteFilterLanguage
                 : props.selectedLanguage
           }
+          target={content.target}
           subtitle={
             content.target === 'native'
               ? 'Pick the language the user speaks natively.'

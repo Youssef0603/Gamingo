@@ -1,7 +1,13 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
 
 import { stop as stopSpeechRecognition, stopSpeaking } from '../../services';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  getPhraseAnalyticsParams,
+  trackAnalyticsEvent,
+} from '../../services/analytics';
 import { theme, withAlpha } from '../../theme/theme';
 import { languageMetadata } from '../../types/language';
 import { getPhraseDisplayTranslations } from '../../utils/phraseDisplay';
@@ -30,13 +36,32 @@ function PracticeModal({
   onToggleFavorite,
 }: PracticeModalProps) {
   const handleClose = useCallback(() => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.PHRASE_MODAL_CLOSED, {
+      ...getPhraseAnalyticsParams(phrase, helperLanguage, language),
+      [ANALYTICS_PARAMS.MODAL]: 'practice_phrase',
+      [ANALYTICS_PARAMS.PRACTICE_MODE]: 'single',
+    }).catch(() => undefined);
+
     Promise.allSettled([
       stopSpeaking(),
       stopSpeechRecognition(),
     ]).finally(() => {
       onClose();
     });
-  }, [onClose]);
+  }, [helperLanguage, language, onClose, phrase]);
+
+  useEffect(() => {
+    if (!visible || !phrase) {
+      return;
+    }
+
+    trackAnalyticsEvent(ANALYTICS_EVENTS.PHRASE_MODAL_OPENED, {
+      ...getPhraseAnalyticsParams(phrase, helperLanguage, language),
+      [ANALYTICS_PARAMS.IS_FAVORITE]: isFavorite ? 'true' : 'false',
+      [ANALYTICS_PARAMS.MODAL]: 'practice_phrase',
+      [ANALYTICS_PARAMS.PRACTICE_MODE]: 'single',
+    }).catch(() => undefined);
+  }, [helperLanguage, isFavorite, language, phrase, visible]);
 
   if (!phrase) {
     return null;
@@ -68,6 +93,11 @@ function PracticeModal({
             key={phrase.id}
             languageCode={learningLanguage}
             locale={resolvePracticeLocale(learningLanguage)}
+            analyticsContext={{
+              ...getPhraseAnalyticsParams(phrase, helperLanguage, language),
+              [ANALYTICS_PARAMS.MODAL]: 'practice_phrase',
+              [ANALYTICS_PARAMS.PRACTICE_MODE]: 'single',
+            }}
             onClose={handleClose}
             onToggleFavorite={onToggleFavorite}
             phraseId={phrase.category === 'custom' ? undefined : phrase.id}

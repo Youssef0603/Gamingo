@@ -27,6 +27,12 @@ import {
 import AddPhraseModal from '../features/phrases/AddPhraseModal';
 import PracticeModal from '../features/practice/PracticeModal';
 import RandomPracticeModal from '../features/practice/RandomPracticeModal';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  getPhraseAnalyticsParams,
+  trackAnalyticsEvent,
+} from '../services/analytics';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata } from '../types/language';
 import { getPhraseDisplayTranslations } from '../utils/phraseDisplay';
@@ -137,7 +143,9 @@ function PracticeScreen() {
   const listRef = useRef<FlatList<Phrase>>(null);
   const sectionListRef = useRef<SectionList<Phrase, PhraseSection>>(null);
   const categoryScrollRef = useRef<ScrollView>(null);
+  const emptyStateKeyRef = useRef<string | null>(null);
   const searchInputRef = useRef<TextInput>(null);
+  const toxicDisclosureViewedRef = useRef(false);
   const chipLayoutsRef = useRef<
     Partial<Record<CategoryFilter, { width: number; x: number }>>
   >({});
@@ -228,6 +236,43 @@ function PracticeScreen() {
       ),
     [nativeLanguage, phrases, selectedLanguage],
   );
+
+  const getSearchResultCountForQuery = (
+    query: string,
+    category: CategoryFilter = selectedCategory,
+  ) => {
+    const matchedPhrases = phrases.filter(phrase =>
+      phraseMatchesSearch(phrase, query, nativeLanguage, selectedLanguage),
+    );
+
+    return category === 'all'
+      ? matchedPhrases.length
+      : matchedPhrases.filter(phrase => phrase.category === category).length;
+  };
+
+  useEffect(() => {
+    if (filteredPhrases.length > 0) {
+      emptyStateKeyRef.current = null;
+      return;
+    }
+
+    const normalizedQuery = searchQuery.trim();
+    const nextEmptyStateKey = `${selectedCategory}:${normalizedQuery}`;
+
+    if (emptyStateKeyRef.current === nextEmptyStateKey) {
+      return;
+    }
+
+    emptyStateKeyRef.current = nextEmptyStateKey;
+    trackAnalyticsEvent(ANALYTICS_EVENTS.EMPTY_STATE_VIEWED, {
+      [ANALYTICS_PARAMS.CATEGORY]: selectedCategory,
+      [ANALYTICS_PARAMS.HAS_QUERY]: normalizedQuery ? 'true' : 'false',
+      [ANALYTICS_PARAMS.ORIGIN]: 'practice_screen',
+      [ANALYTICS_PARAMS.QUERY_LENGTH]: normalizedQuery.length,
+      [ANALYTICS_PARAMS.RESULT_COUNT]: 0,
+      [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+    }).catch(() => undefined);
+  }, [filteredPhrases.length, searchQuery, selectedCategory]);
 
   useEffect(() => {
     if (
@@ -328,6 +373,20 @@ function PracticeScreen() {
     selectedCategory === 'toxic' && !hasAcknowledgedToxicCategoryDisclosure;
   const shouldShowToxicListOverlay =
     shouldMaskToxicCategoryContent && filteredPhrases.length > 0;
+
+  useEffect(() => {
+    if (!shouldShowToxicListOverlay || toxicDisclosureViewedRef.current) {
+      return;
+    }
+
+    toxicDisclosureViewedRef.current = true;
+    trackAnalyticsEvent(ANALYTICS_EVENTS.TOXIC_DISCLOSURE_VIEWED, {
+      [ANALYTICS_PARAMS.CATEGORY]: 'toxic',
+      [ANALYTICS_PARAMS.PHRASE_COUNT]: filteredPhrases.length,
+      [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+    }).catch(() => undefined);
+  }, [filteredPhrases.length, shouldShowToxicListOverlay]);
+
   const handleCategoryChipLayout =
     (category: CategoryFilter) => (event: LayoutChangeEvent) => {
       chipLayoutsRef.current[category] = event.nativeEvent.layout;
@@ -346,13 +405,46 @@ function PracticeScreen() {
         y: 0,
       });
     };
-  const openPhrase = (phraseId: string) => {
+  const selectCategory = (category: CategoryFilter) => {
+    if (category !== selectedCategory) {
+      trackAnalyticsEvent(ANALYTICS_EVENTS.CATEGORY_SELECTED, {
+        [ANALYTICS_PARAMS.CATEGORY]: category,
+        [ANALYTICS_PARAMS.RESULT_COUNT]: getSearchResultCountForQuery(
+          searchQuery,
+          category,
+        ),
+        [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+        [ANALYTICS_PARAMS.SOURCE]: selectedCategory,
+      }).catch(() => undefined);
+    }
+
+    setSelectedCategory(category);
+  };
+
+  const openPhrase = (phraseId: string, itemIndex?: number) => {
+    const phrase = phrases.find(item => item.id === phraseId) ?? null;
+
+    trackAnalyticsEvent(ANALYTICS_EVENTS.PHRASE_SELECTED, {
+      ...getPhraseAnalyticsParams(phrase, nativeLanguage, selectedLanguage),
+      [ANALYTICS_PARAMS.CATEGORY]: selectedCategory,
+      [ANALYTICS_PARAMS.ITEM_INDEX]: itemIndex,
+      [ANALYTICS_PARAMS.ORIGIN]: 'practice_list',
+      [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+    }).catch(() => undefined);
+
     showAdOnItemClick(() => {
       setActivePhraseId(phraseId);
     });
   };
 
   const hideSearch = () => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.SEARCH_CLOSED, {
+      [ANALYTICS_PARAMS.CATEGORY]: selectedCategory,
+      [ANALYTICS_PARAMS.ORIGIN]: 'practice_screen',
+      [ANALYTICS_PARAMS.QUERY_LENGTH]: searchQuery.trim().length,
+      [ANALYTICS_PARAMS.RESULT_COUNT]: filteredPhrases.length,
+      [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+    }).catch(() => undefined);
     setSearchQuery('');
     setIsSearchVisible(false);
   };
@@ -363,10 +455,32 @@ function PracticeScreen() {
       return;
     }
 
+    trackAnalyticsEvent(ANALYTICS_EVENTS.SEARCH_OPENED, {
+      [ANALYTICS_PARAMS.CATEGORY]: selectedCategory,
+      [ANALYTICS_PARAMS.ORIGIN]: 'practice_screen',
+      [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+    }).catch(() => undefined);
     setIsSearchVisible(true);
   };
 
+  const handleSearchQueryChange = (query: string) => {
+    setSearchQuery(query);
+    trackAnalyticsEvent(ANALYTICS_EVENTS.SEARCH_CHANGED, {
+      [ANALYTICS_PARAMS.CATEGORY]: selectedCategory,
+      [ANALYTICS_PARAMS.ORIGIN]: 'practice_screen',
+      [ANALYTICS_PARAMS.QUERY_LENGTH]: query.trim().length,
+      [ANALYTICS_PARAMS.RESULT_COUNT]: getSearchResultCountForQuery(query),
+      [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+      [ANALYTICS_PARAMS.SEARCH_CONTEXT]: 'practice_phrases',
+    }).catch(() => undefined);
+  };
+
   const showPhraseInList = (phrase: Phrase) => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_EXISTING_OPENED, {
+      ...getPhraseAnalyticsParams(phrase, nativeLanguage, selectedLanguage),
+      [ANALYTICS_PARAMS.ORIGIN]: 'add_phrase_modal',
+      [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+    }).catch(() => undefined);
     setSearchQuery('');
     setIsSearchVisible(false);
     setSelectedCategory(phrase.category);
@@ -374,37 +488,68 @@ function PracticeScreen() {
     setPendingOpenPhraseId(phrase.id);
   };
 
-  const showNoWordsReadyAlert = () => {
+  const showNoWordsReadyAlert = (origin: string) => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.RANDOM_PRACTICE_REQUESTED, {
+      [ANALYTICS_PARAMS.AVAILABLE_COUNT]: 0,
+      [ANALYTICS_PARAMS.ORIGIN]: origin,
+      [ANALYTICS_PARAMS.RESULT]: 'no_words_ready',
+      [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+    }).catch(() => undefined);
     Alert.alert(
       'No words ready yet',
       'Switch languages or add custom words for this language pair first.',
     );
   };
 
-  const openRandomPracticeSession = () => {
+  const openRandomPracticeSession = (origin: string) => {
+    const sessionPhrases = getRandomPhraseSet(
+      randomPracticePool,
+      RANDOM_PRACTICE_COUNT,
+    );
+
+    trackAnalyticsEvent(ANALYTICS_EVENTS.RANDOM_PRACTICE_STARTED, {
+      [ANALYTICS_PARAMS.AVAILABLE_COUNT]: randomPracticePool.length,
+      [ANALYTICS_PARAMS.ORIGIN]: origin,
+      [ANALYTICS_PARAMS.PHRASE_COUNT]: sessionPhrases.length,
+      [ANALYTICS_PARAMS.PRACTICE_MODE]: 'random',
+      [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+    }).catch(() => undefined);
+
     setRandomPracticeSession({
       id: Date.now() + Math.random(),
-      phrases: getRandomPhraseSet(randomPracticePool, RANDOM_PRACTICE_COUNT),
+      phrases: sessionPhrases,
     });
   };
 
   const beginRandomPracticeSession = () => {
     if (randomPracticePool.length === 0) {
-      showNoWordsReadyAlert();
+      showNoWordsReadyAlert('random_practice_restart');
       return;
     }
 
-    openRandomPracticeSession();
+    trackAnalyticsEvent(ANALYTICS_EVENTS.RANDOM_PRACTICE_RESTARTED, {
+      [ANALYTICS_PARAMS.AVAILABLE_COUNT]: randomPracticePool.length,
+      [ANALYTICS_PARAMS.PRACTICE_MODE]: 'random',
+      [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+    }).catch(() => undefined);
+    openRandomPracticeSession('random_practice_restart');
   };
 
   const startRandomPracticeSession = () => {
     if (randomPracticePool.length === 0) {
-      showNoWordsReadyAlert();
+      showNoWordsReadyAlert('random_practice_card');
       return;
     }
 
+    trackAnalyticsEvent(ANALYTICS_EVENTS.RANDOM_PRACTICE_REQUESTED, {
+      [ANALYTICS_PARAMS.AVAILABLE_COUNT]: randomPracticePool.length,
+      [ANALYTICS_PARAMS.ORIGIN]: 'random_practice_card',
+      [ANALYTICS_PARAMS.PRACTICE_MODE]: 'random',
+      [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+    }).catch(() => undefined);
+
     showAdBeforeRandomPractice(() => {
-      openRandomPracticeSession();
+      openRandomPracticeSession('random_practice_card');
     });
   };
 
@@ -415,6 +560,12 @@ function PracticeScreen() {
       selectedLanguage,
     );
     const phraseLabel = helperTranslation.text;
+
+    trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_MODAL_OPENED, {
+      ...getPhraseAnalyticsParams(phrase, nativeLanguage, selectedLanguage),
+      [ANALYTICS_PARAMS.MODAL]: 'delete_custom_phrase',
+      [ANALYTICS_PARAMS.ORIGIN]: 'practice_screen',
+    }).catch(() => undefined);
 
     Alert.alert(
       'Delete custom word?',
@@ -451,9 +602,23 @@ function PracticeScreen() {
 
     isScrollToTopButtonVisibleRef.current = shouldShowButton;
     setShowScrollToTopButton(shouldShowButton);
+
+    if (shouldShowButton) {
+      trackAnalyticsEvent(ANALYTICS_EVENTS.SCROLL_DEPTH_REACHED, {
+        [ANALYTICS_PARAMS.CATEGORY]: selectedCategory,
+        [ANALYTICS_PARAMS.ORIGIN]: 'practice_list',
+        [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+      }).catch(() => undefined);
+    }
   };
 
   const scrollToTop = () => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.SCROLL_TO_TOP_PRESSED, {
+      [ANALYTICS_PARAMS.CATEGORY]: selectedCategory,
+      [ANALYTICS_PARAMS.ORIGIN]: 'practice_list',
+      [ANALYTICS_PARAMS.SCREEN]: 'Practice',
+    }).catch(() => undefined);
+
     isScrollToTopButtonVisibleRef.current = false;
     setShowScrollToTopButton(false);
 
@@ -611,7 +776,7 @@ function PracticeScreen() {
                 category === 'all' ? 'All' : categoryMetadata[category].title
               }
               onLayout={handleCategoryChipLayout(category)}
-              onPress={() => setSelectedCategory(category)}
+              onPress={() => selectCategory(category)}
               selected={category === selectedCategory}
             />
           ))}
@@ -644,7 +809,7 @@ function PracticeScreen() {
               ref={searchInputRef}
               autoCapitalize="none"
               autoCorrect={false}
-              onChangeText={setSearchQuery}
+              onChangeText={handleSearchQueryChange}
               placeholder="Search words"
               placeholderTextColor={theme.colors.mutedText}
               returnKeyType="search"
@@ -697,7 +862,7 @@ function PracticeScreen() {
               ? () => confirmDeletePhrase(item)
               : undefined
           }
-          onPress={() => openPhrase(item.id)}
+          onPress={() => openPhrase(item.id, index)}
           onToggleFavorite={() => toggleFavorite(item.id)}
         />
         {shouldShowBanner ? <InlineBannerAd /> : null}

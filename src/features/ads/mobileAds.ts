@@ -13,6 +13,12 @@ import {
 } from './adsPolicy';
 import { getItemWithMigration, STORAGE_KEYS } from '../../storage/asyncStorageKeys';
 import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  getErrorAnalyticsParams,
+  trackAnalyticsEvent,
+} from '../../services/analytics';
+import {
   getAppAdsPolicy,
   subscribeToAppRemoteConfigState,
 } from '../../state/appRemoteConfigStore';
@@ -58,6 +64,7 @@ let interstitialListenersAttached = false;
 let interstitialLoaded = false;
 let interstitialShowing = false;
 let pendingInterstitialAction: (() => void) | null = null;
+let pendingInterstitialPlacement: string | null = null;
 let adAvailabilityTimeout: ReturnType<typeof setTimeout> | null = null;
 let appStateListenerAttached = false;
 let currentAppState = AppState.currentState;
@@ -65,6 +72,18 @@ let interstitialAd: ReturnType<typeof InterstitialAd.createForAdRequest> | null 
 let firstLaunchUsagePersistInterval: ReturnType<typeof setInterval> | null = null;
 
 const adAvailabilityListeners = new Set<() => void>();
+
+function trackAdLifecycleEvent(
+  eventName: string,
+  placement: string,
+  params: Record<string, string | number | boolean | null | undefined> = {},
+) {
+  trackAnalyticsEvent(eventName, {
+    [ANALYTICS_PARAMS.AD_FORMAT]: 'interstitial',
+    [ANALYTICS_PARAMS.AD_PLACEMENT]: placement,
+    ...params,
+  }).catch(() => undefined);
+}
 
 function sanitizePersistedCount(value: unknown) {
   return typeof value === 'number' && Number.isFinite(value) && value >= 0
@@ -425,6 +444,7 @@ function runPendingInterstitialAction() {
   const action = pendingInterstitialAction;
 
   pendingInterstitialAction = null;
+  pendingInterstitialPlacement = null;
   action?.();
 }
 
@@ -439,43 +459,78 @@ function attachInterstitialListeners() {
 
   nextInterstitialAd.addAdEventListener(AdEventType.LOADED, () => {
     interstitialLoaded = true;
+    trackAdLifecycleEvent(
+      ANALYTICS_EVENTS.AD_LOADED,
+      pendingInterstitialPlacement ?? 'preload',
+      {
+        [ANALYTICS_PARAMS.AD_RESULT]: 'loaded',
+      },
+    );
   });
 
   nextInterstitialAd.addAdEventListener(AdEventType.CLOSED, () => {
+    const placement = pendingInterstitialPlacement ?? 'unknown';
+
     interstitialLoaded = false;
     interstitialShowing = false;
+    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_CLOSED, placement, {
+      [ANALYTICS_PARAMS.AD_RESULT]: 'closed',
+    });
     runPendingInterstitialAction();
     nextInterstitialAd.load();
   });
 
-  nextInterstitialAd.addAdEventListener(AdEventType.ERROR, () => {
+  nextInterstitialAd.addAdEventListener(AdEventType.ERROR, error => {
+    const placement = pendingInterstitialPlacement ?? 'unknown';
+
     interstitialLoaded = false;
     interstitialShowing = false;
+    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_FAILED, placement, {
+      ...getErrorAnalyticsParams(error),
+      [ANALYTICS_PARAMS.AD_RESULT]: 'failed',
+    });
     runPendingInterstitialAction();
     nextInterstitialAd.load();
   });
 }
 
-export function preloadInterstitialAd() {
+export function preloadInterstitialAd(placement = 'preload') {
   if (!canShowInterstitialAdsNow()) {
+    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_SKIPPED, placement, {
+      [ANALYTICS_PARAMS.AD_GATE_REASON]: 'not_eligible',
+      [ANALYTICS_PARAMS.AD_RESULT]: 'skipped',
+      [ANALYTICS_PARAMS.GRACE_REMAINING_MS]: getFirstLaunchAdGraceRemainingMs(),
+    });
     return;
   }
 
   const nextInterstitialAd = getInterstitialAd();
 
   if (!nextInterstitialAd) {
+    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_SKIPPED, placement, {
+      [ANALYTICS_PARAMS.AD_GATE_REASON]: 'missing_unit_id',
+      [ANALYTICS_PARAMS.AD_RESULT]: 'skipped',
+    });
     return;
   }
 
   attachInterstitialListeners();
 
   if (!interstitialLoaded && !interstitialShowing) {
+    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_LOAD_STARTED, placement, {
+      [ANALYTICS_PARAMS.AD_RESULT]: 'loading',
+    });
     nextInterstitialAd.load();
   }
 }
 
-function tryShowInterstitialBefore(action: () => void) {
+function tryShowInterstitialBefore(action: () => void, placement = 'manual') {
   if (!canShowInterstitialAdsNow()) {
+    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_SKIPPED, placement, {
+      [ANALYTICS_PARAMS.AD_GATE_REASON]: 'not_eligible',
+      [ANALYTICS_PARAMS.AD_RESULT]: 'skipped',
+      [ANALYTICS_PARAMS.GRACE_REMAINING_MS]: getFirstLaunchAdGraceRemainingMs(),
+    });
     action();
     return false;
   }
@@ -483,6 +538,10 @@ function tryShowInterstitialBefore(action: () => void) {
   const nextInterstitialAd = getInterstitialAd();
 
   if (!nextInterstitialAd) {
+    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_SKIPPED, placement, {
+      [ANALYTICS_PARAMS.AD_GATE_REASON]: 'missing_unit_id',
+      [ANALYTICS_PARAMS.AD_RESULT]: 'skipped',
+    });
     action();
     return false;
   }
@@ -490,26 +549,36 @@ function tryShowInterstitialBefore(action: () => void) {
   attachInterstitialListeners();
 
   if (!interstitialLoaded || interstitialShowing) {
-    preloadInterstitialAd();
+    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_SKIPPED, placement, {
+      [ANALYTICS_PARAMS.AD_GATE_REASON]: interstitialShowing
+        ? 'already_showing'
+        : 'not_loaded',
+      [ANALYTICS_PARAMS.AD_RESULT]: 'skipped',
+    });
+    preloadInterstitialAd(placement);
     action();
     return false;
   }
 
   pendingInterstitialAction = action;
+  pendingInterstitialPlacement = placement;
   interstitialShowing = true;
+  trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_SHOWN, placement, {
+    [ANALYTICS_PARAMS.AD_RESULT]: 'shown',
+  });
   nextInterstitialAd.show();
 
   return true;
 }
 
 function tryShowInterstitial() {
-  return tryShowInterstitialBefore(() => undefined);
+  return tryShowInterstitialBefore(() => undefined, 'favorite_save');
 }
 
 export function showInterstitialBefore(action: () => void) {
   ensureAdStateHydrated()
     .then(() => {
-      tryShowInterstitialBefore(action);
+      tryShowInterstitialBefore(action, 'manual');
     })
     .catch(() => {
       action();
@@ -522,6 +591,12 @@ export function showAdOnItemClick(action: () => void) {
       const { itemClick } = getAppAdsPolicy();
 
       if (!itemClick.enabled || !canShowInterstitialAdsNow()) {
+        trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_GATE_EVALUATED, 'item_click', {
+          [ANALYTICS_PARAMS.AD_GATE_REASON]: !itemClick.enabled
+            ? 'policy_disabled'
+            : 'not_eligible',
+          [ANALYTICS_PARAMS.AD_RESULT]: 'bypassed',
+        });
         action();
         return;
       }
@@ -532,11 +607,16 @@ export function showAdOnItemClick(action: () => void) {
       if (nextItemClickCount < itemClickFrequency) {
         itemClickCount = nextItemClickCount;
         queueAdStatePersist();
+        trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_GATE_EVALUATED, 'item_click', {
+          [ANALYTICS_PARAMS.AD_FREQUENCY]: itemClickFrequency,
+          [ANALYTICS_PARAMS.AD_GATE_REASON]: 'frequency_not_reached',
+          [ANALYTICS_PARAMS.AD_RESULT]: 'bypassed',
+        });
         action();
         return;
       }
 
-      const didShowAd = tryShowInterstitialBefore(action);
+      const didShowAd = tryShowInterstitialBefore(action, 'item_click');
 
       itemClickCount = didShowAd ? 0 : itemClickFrequency - 1;
       queueAdStatePersist();
@@ -552,6 +632,16 @@ export function showAdBeforeCustomWordAdd(action: () => void) {
       const { customWordAdd } = getAppAdsPolicy();
 
       if (!customWordAdd.enabled || !canShowInterstitialAdsNow()) {
+        trackAdLifecycleEvent(
+          ANALYTICS_EVENTS.AD_GATE_EVALUATED,
+          'custom_word_add',
+          {
+            [ANALYTICS_PARAMS.AD_GATE_REASON]: !customWordAdd.enabled
+              ? 'policy_disabled'
+              : 'not_eligible',
+            [ANALYTICS_PARAMS.AD_RESULT]: 'bypassed',
+          },
+        );
         action();
         return;
       }
@@ -559,11 +649,19 @@ export function showAdBeforeCustomWordAdd(action: () => void) {
       if (customWordAdd.skipFirstInterstitial && !hasSkippedFirstCustomWordAddAd) {
         hasSkippedFirstCustomWordAddAd = true;
         queueAdStatePersist();
+        trackAdLifecycleEvent(
+          ANALYTICS_EVENTS.AD_GATE_EVALUATED,
+          'custom_word_add',
+          {
+            [ANALYTICS_PARAMS.AD_GATE_REASON]: 'first_add_skip',
+            [ANALYTICS_PARAMS.AD_RESULT]: 'bypassed',
+          },
+        );
         action();
         return;
       }
 
-      tryShowInterstitialBefore(action);
+      tryShowInterstitialBefore(action, 'custom_word_add');
     })
     .catch(() => {
       action();
@@ -576,6 +674,16 @@ export function showAdBeforeRandomPractice(action: () => void) {
       const { randomPractice } = getAppAdsPolicy();
 
       if (!randomPractice.enabled || !canShowInterstitialAdsNow()) {
+        trackAdLifecycleEvent(
+          ANALYTICS_EVENTS.AD_GATE_EVALUATED,
+          'random_practice',
+          {
+            [ANALYTICS_PARAMS.AD_GATE_REASON]: !randomPractice.enabled
+              ? 'policy_disabled'
+              : 'not_eligible',
+            [ANALYTICS_PARAMS.AD_RESULT]: 'bypassed',
+          },
+        );
         action();
         return;
       }
@@ -586,11 +694,20 @@ export function showAdBeforeRandomPractice(action: () => void) {
       if (nextRandomPracticeStartCount < randomPracticeFrequency) {
         randomPracticeStartCount = nextRandomPracticeStartCount;
         queueAdStatePersist();
+        trackAdLifecycleEvent(
+          ANALYTICS_EVENTS.AD_GATE_EVALUATED,
+          'random_practice',
+          {
+            [ANALYTICS_PARAMS.AD_FREQUENCY]: randomPracticeFrequency,
+            [ANALYTICS_PARAMS.AD_GATE_REASON]: 'frequency_not_reached',
+            [ANALYTICS_PARAMS.AD_RESULT]: 'bypassed',
+          },
+        );
         action();
         return;
       }
 
-      const didShowAd = tryShowInterstitialBefore(action);
+      const didShowAd = tryShowInterstitialBefore(action, 'random_practice');
 
       randomPracticeStartCount = didShowAd ? 0 : randomPracticeFrequency - 1;
       queueAdStatePersist();
@@ -606,6 +723,16 @@ export function trackFavoriteSaveAction() {
       const { favoriteSave } = getAppAdsPolicy();
 
       if (!favoriteSave.enabled || !canShowInterstitialAdsNow()) {
+        trackAdLifecycleEvent(
+          ANALYTICS_EVENTS.AD_GATE_EVALUATED,
+          'favorite_save',
+          {
+            [ANALYTICS_PARAMS.AD_GATE_REASON]: !favoriteSave.enabled
+              ? 'policy_disabled'
+              : 'not_eligible',
+            [ANALYTICS_PARAMS.AD_RESULT]: 'bypassed',
+          },
+        );
         return;
       }
 
@@ -615,6 +742,15 @@ export function trackFavoriteSaveAction() {
       if (nextFavoriteSaveCount < favoriteSaveFrequency) {
         favoriteSaveCount = nextFavoriteSaveCount;
         queueAdStatePersist();
+        trackAdLifecycleEvent(
+          ANALYTICS_EVENTS.AD_GATE_EVALUATED,
+          'favorite_save',
+          {
+            [ANALYTICS_PARAMS.AD_FREQUENCY]: favoriteSaveFrequency,
+            [ANALYTICS_PARAMS.AD_GATE_REASON]: 'frequency_not_reached',
+            [ANALYTICS_PARAMS.AD_RESULT]: 'bypassed',
+          },
+        );
         return;
       }
 

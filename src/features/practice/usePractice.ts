@@ -2,6 +2,14 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { createDefaultPracticeDependencies } from './practiceServices';
 import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  type AnalyticsParams,
+  countAnalyticsTokens,
+  getErrorAnalyticsParams,
+  trackAnalyticsEvent,
+} from '../../services/analytics';
+import {
   type PracticeFeedbackLabel,
   evaluatePracticeAttempt,
   getPracticeFeedbackMessage,
@@ -20,6 +28,7 @@ import type { LanguageCode } from '../../types/language';
 const PRACTICE_DEBUG_PREFIX = '[practice]';
 const AUDIO_TRANSITION_DELAY_MS = 180;
 const EARLY_RESULT_COMMIT_DELAY_MS = 650;
+const EMPTY_ANALYTICS_CONTEXT: AnalyticsParams = {};
 
 function logPractice(message: string, payload?: unknown) {
   if (payload === undefined) {
@@ -41,6 +50,7 @@ export type PracticeFeedback = PracticeEvaluation & {
 };
 
 type UsePracticeOptions = {
+  analyticsContext?: AnalyticsParams;
   dependencies?: Partial<PracticeDependencies>;
   languageCode?: LanguageCode;
   locale?: string;
@@ -152,6 +162,7 @@ function countNormalizedTokens(value: string) {
 }
 
 export function usePractice({
+  analyticsContext = EMPTY_ANALYTICS_CONTEXT,
   dependencies,
   languageCode,
   locale,
@@ -254,9 +265,17 @@ export function usePractice({
 
   const playPhrase = useCallback(async () => {
     const playbackRequestId = playbackRequestIdRef.current + 1;
+    const startedAt = Date.now();
 
     playbackRequestIdRef.current = playbackRequestId;
     logPractice('play:start', { locale, phrase });
+    trackAnalyticsEvent(ANALYTICS_EVENTS.PRACTICE_AUDIO_REQUESTED, {
+      ...analyticsContext,
+      [ANALYTICS_PARAMS.AUDIO_SOURCE]: 'phrase_playback',
+      [ANALYTICS_PARAMS.INPUT_LENGTH]: phrase.length,
+      [ANALYTICS_PARAMS.LEARNING_LANG]: languageCode,
+      [ANALYTICS_PARAMS.TTS_ENGINE]: 'app_tts',
+    }).catch(() => undefined);
     setError(null);
     setIsPlaying(true);
 
@@ -285,22 +304,38 @@ export function usePractice({
       }
 
       logPractice('play:complete', { locale, phrase });
+      trackAnalyticsEvent(ANALYTICS_EVENTS.PRACTICE_AUDIO_COMPLETED, {
+        ...analyticsContext,
+        [ANALYTICS_PARAMS.AUDIO_SOURCE]: 'phrase_playback',
+        [ANALYTICS_PARAMS.DURATION_MS]: Date.now() - startedAt,
+        [ANALYTICS_PARAMS.LEARNING_LANG]: languageCode,
+        [ANALYTICS_PARAMS.TTS_ENGINE]: 'app_tts',
+      }).catch(() => undefined);
     } catch (nextError) {
       if (playbackRequestId !== playbackRequestIdRef.current) {
         return;
       }
 
       logPractice('play:error', nextError);
+      trackAnalyticsEvent(ANALYTICS_EVENTS.PRACTICE_AUDIO_FAILED, {
+        ...analyticsContext,
+        ...getErrorAnalyticsParams(nextError),
+        [ANALYTICS_PARAMS.AUDIO_SOURCE]: 'phrase_playback',
+        [ANALYTICS_PARAMS.DURATION_MS]: Date.now() - startedAt,
+        [ANALYTICS_PARAMS.LEARNING_LANG]: languageCode,
+        [ANALYTICS_PARAMS.TTS_ENGINE]: 'app_tts',
+      }).catch(() => undefined);
       setError(getPracticeErrorMessage(nextError));
     } finally {
       if (playbackRequestId === playbackRequestIdRef.current) {
         setIsPlaying(false);
       }
     }
-  }, [languageCode, locale, phrase, phraseId]);
+  }, [analyticsContext, languageCode, locale, phrase, phraseId]);
 
   const speakPhrase = useCallback(async () => {
     const attemptRequestId = attemptRequestIdRef.current + 1;
+    const startedAt = Date.now();
 
     attemptRequestIdRef.current = attemptRequestId;
     logPractice('attempt:start', { locale, phrase });
@@ -311,6 +346,15 @@ export function usePractice({
     const shouldCommitEarly = shouldUseEarlyResultCommit(phrase);
     const normalizedExpectedPhrase = normalizePracticeText(phrase);
     const expectedTokenCount = countNormalizedTokens(phrase);
+
+    trackAnalyticsEvent(ANALYTICS_EVENTS.PRACTICE_LISTEN_STARTED, {
+      ...analyticsContext,
+      [ANALYTICS_PARAMS.EXPECTED_TOKEN_COUNT]: expectedTokenCount,
+      [ANALYTICS_PARAMS.INPUT_LENGTH]: phrase.length,
+      [ANALYTICS_PARAMS.LEARNING_LANG]: languageCode,
+      [ANALYTICS_PARAMS.PERMISSION_STATUS]: permissionStatus,
+      [ANALYTICS_PARAMS.PROMPT_TYPE]: promptType,
+    }).catch(() => undefined);
 
     await textToSpeechRef.current.stop();
 
@@ -371,6 +415,7 @@ export function usePractice({
         speechRecognitionRef.current.stop().catch(() => undefined);
 
         const evaluation = evaluatePracticeAttempt(phrase, transcript);
+        const spokenTokenCount = countAnalyticsTokens(transcript);
 
         setPermissionStatus('granted');
         setError(null);
@@ -385,6 +430,19 @@ export function usePractice({
         });
 
         setFeedback(nextFeedback);
+        trackAnalyticsEvent(ANALYTICS_EVENTS.PRACTICE_ATTEMPT_COMPLETED, {
+          ...analyticsContext,
+          [ANALYTICS_PARAMS.ATTEMPT_RESULT]: nextFeedback.label
+            .toLowerCase()
+            .replace(/\s+/g, '_'),
+          [ANALYTICS_PARAMS.ATTEMPT_SCORE]: nextFeedback.score,
+          [ANALYTICS_PARAMS.DURATION_MS]: Date.now() - startedAt,
+          [ANALYTICS_PARAMS.EXPECTED_TOKEN_COUNT]: expectedTokenCount,
+          [ANALYTICS_PARAMS.FEEDBACK_LABEL]: nextFeedback.label,
+          [ANALYTICS_PARAMS.LEARNING_LANG]: languageCode,
+          [ANALYTICS_PARAMS.PERMISSION_STATUS]: 'granted',
+          [ANALYTICS_PARAMS.SPOKEN_TOKEN_COUNT]: spokenTokenCount,
+        }).catch(() => undefined);
         handleAttemptComplete(nextFeedback.label, nextFeedback);
         resolve();
       };
@@ -401,6 +459,15 @@ export function usePractice({
 
         settled = true;
         cleanup();
+        trackAnalyticsEvent(ANALYTICS_EVENTS.PRACTICE_ATTEMPT_FAILED, {
+          ...analyticsContext,
+          ...getErrorAnalyticsParams(nextError),
+          [ANALYTICS_PARAMS.DURATION_MS]: Date.now() - startedAt,
+          [ANALYTICS_PARAMS.EXPECTED_TOKEN_COUNT]: expectedTokenCount,
+          [ANALYTICS_PARAMS.LEARNING_LANG]: languageCode,
+          [ANALYTICS_PARAMS.PERMISSION_STATUS]: permissionStatus,
+          [ANALYTICS_PARAMS.PROMPT_TYPE]: promptType,
+        }).catch(() => undefined);
         applyPracticeError(nextError);
         reject(nextError);
       };
@@ -468,7 +535,15 @@ export function usePractice({
         })
         .catch(finalizeError);
     });
-  }, [applyPracticeError, handleAttemptComplete, locale, phrase]);
+  }, [
+    analyticsContext,
+    applyPracticeError,
+    handleAttemptComplete,
+    languageCode,
+    locale,
+    permissionStatus,
+    phrase,
+  ]);
 
   const invalidatePractice = useCallback(() => {
     playbackRequestIdRef.current += 1;

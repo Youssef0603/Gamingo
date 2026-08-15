@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   Modal,
   Pressable,
@@ -17,6 +17,13 @@ import {
   findWordBankMatch,
   translateTextWithDetectedSource,
 } from '../../services';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  getErrorAnalyticsParams,
+  getPhraseAnalyticsParams,
+  trackAnalyticsEvent,
+} from '../../services/analytics';
 import { theme, withAlpha } from '../../theme/theme';
 import { languageMetadata } from '../../types/language';
 import {
@@ -152,6 +159,31 @@ function AddPhraseModal(props: AddPhraseModalProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [lookupSource, setLookupSource] = useState<'api' | 'data' | null>(null);
   const isFavoritesMode = props.mode === 'favorites';
+  const analyticsModal = isFavoritesMode
+    ? 'favorites_add_phrase'
+    : 'custom_add_phrase';
+  const analyticsInputLanguage = isFavoritesMode
+    ? props.helperLanguage
+    : props.inputLanguage;
+  const analyticsBaseParams = useMemo(
+    () => ({
+      [ANALYTICS_PARAMS.LEARNING_LANG]: language,
+      [ANALYTICS_PARAMS.MODAL]: analyticsModal,
+      [ANALYTICS_PARAMS.NATIVE_LANG]: analyticsInputLanguage,
+      [ANALYTICS_PARAMS.SOURCE]: props.mode,
+    }),
+    [analyticsInputLanguage, analyticsModal, language, props.mode],
+  );
+
+  useEffect(() => {
+    if (!visible) {
+      return;
+    }
+
+    trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_MODAL_OPENED, {
+      ...analyticsBaseParams,
+    }).catch(() => undefined);
+  }, [analyticsBaseParams, visible]);
 
   const isFoundPhraseSaved = useMemo(
     () =>
@@ -185,6 +217,11 @@ function AddPhraseModal(props: AddPhraseModalProps) {
       return;
     }
 
+    trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_MODAL_CLOSED, {
+      ...analyticsBaseParams,
+      [ANALYTICS_PARAMS.INPUT_LENGTH]: lookupQuery.trim().length,
+      [ANALYTICS_PARAMS.RESULT]: lookupResult ? 'has_result' : 'no_result',
+    }).catch(() => undefined);
     resetState();
     onClose();
   };
@@ -192,9 +229,20 @@ function AddPhraseModal(props: AddPhraseModalProps) {
   const handleSubmit = async () => {
     const trimmedQuery = lookupQuery.trim();
 
+    trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_SUBMITTED, {
+      ...analyticsBaseParams,
+      [ANALYTICS_PARAMS.INPUT_LENGTH]: trimmedQuery.length,
+      [ANALYTICS_PARAMS.METHOD]: isFavoritesMode ? 'find_phrase' : 'add_word',
+    }).catch(() => undefined);
+
     if (!trimmedQuery) {
       setLookupResult(null);
       setLookupSource(null);
+      trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_BLOCKED, {
+        ...analyticsBaseParams,
+        [ANALYTICS_PARAMS.INPUT_LENGTH]: 0,
+        [ANALYTICS_PARAMS.REASON]: 'empty_input',
+      }).catch(() => undefined);
       setLookupFeedback(
         isFavoritesMode
           ? 'Type a word or phrase first.'
@@ -212,6 +260,13 @@ function AddPhraseModal(props: AddPhraseModalProps) {
         setLookupResult(phraseMatch);
         setLookupFeedback(null);
         setLookupSource('data');
+        trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_LOOKUP_COMPLETED, {
+          ...analyticsBaseParams,
+          ...getPhraseAnalyticsParams(phraseMatch, props.helperLanguage, language),
+          [ANALYTICS_PARAMS.INPUT_LENGTH]: trimmedQuery.length,
+          [ANALYTICS_PARAMS.RESULT]: 'found_existing',
+          [ANALYTICS_PARAMS.SOURCE]: 'data',
+        }).catch(() => undefined);
         return;
       }
 
@@ -227,9 +282,28 @@ function AddPhraseModal(props: AddPhraseModalProps) {
         setLookupResult(translatedPhrase);
         setLookupFeedback(null);
         setLookupSource('api');
+        trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_LOOKUP_COMPLETED, {
+          ...analyticsBaseParams,
+          ...getPhraseAnalyticsParams(
+            translatedPhrase,
+            props.helperLanguage,
+            language,
+          ),
+          [ANALYTICS_PARAMS.INPUT_LENGTH]: trimmedQuery.length,
+          [ANALYTICS_PARAMS.RESULT]: 'translated',
+          [ANALYTICS_PARAMS.SOURCE]: 'api',
+          [ANALYTICS_PARAMS.TRANSLATED_LENGTH]:
+            translatedPhrase.translations[language]?.text.length,
+        }).catch(() => undefined);
       } catch (error) {
         setLookupResult(null);
         setLookupSource(null);
+        trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_FAILED, {
+          ...analyticsBaseParams,
+          ...getErrorAnalyticsParams(error),
+          [ANALYTICS_PARAMS.INPUT_LENGTH]: trimmedQuery.length,
+          [ANALYTICS_PARAMS.SOURCE]: 'api',
+        }).catch(() => undefined);
         setLookupFeedback(
           error instanceof Error
             ? error.message
@@ -252,6 +326,13 @@ function AddPhraseModal(props: AddPhraseModalProps) {
     if (phraseMatch) {
       setLookupResult(phraseMatch);
       setLookupSource('data');
+      trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_BLOCKED, {
+        ...analyticsBaseParams,
+        ...getPhraseAnalyticsParams(phraseMatch, props.inputLanguage, language),
+        [ANALYTICS_PARAMS.INPUT_LENGTH]: trimmedQuery.length,
+        [ANALYTICS_PARAMS.REASON]: 'existing_phrase',
+        [ANALYTICS_PARAMS.SOURCE]: 'data',
+      }).catch(() => undefined);
       setLookupFeedback(
         `This word already exists in ${
           categoryMetadata[phraseMatch.category].title
@@ -270,6 +351,12 @@ function AddPhraseModal(props: AddPhraseModalProps) {
       if (wordBankMatch.recommendedAction === 'block_do_not_translate') {
         setLookupResult(null);
         setLookupSource(null);
+        trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_BLOCKED, {
+          ...analyticsBaseParams,
+          [ANALYTICS_PARAMS.INPUT_LENGTH]: trimmedQuery.length,
+          [ANALYTICS_PARAMS.REASON]: wordBankMatch.recommendedAction,
+          [ANALYTICS_PARAMS.SOURCE]: 'word_bank',
+        }).catch(() => undefined);
         setLookupFeedback(
           'This term is in the moderation word bank and is not translated automatically.',
         );
@@ -282,6 +369,18 @@ function AddPhraseModal(props: AddPhraseModalProps) {
           wordBankMatch.destinationText,
         );
 
+        trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_CREATED, {
+          ...analyticsBaseParams,
+          ...getPhraseAnalyticsParams(
+            createdPhrase,
+            props.inputLanguage,
+            language,
+          ),
+          [ANALYTICS_PARAMS.INPUT_LENGTH]: trimmedQuery.length,
+          [ANALYTICS_PARAMS.SOURCE]: 'word_bank',
+          [ANALYTICS_PARAMS.TRANSLATED_LENGTH]:
+            wordBankMatch.destinationText.length,
+        }).catch(() => undefined);
         resetState();
         onClose();
         props.onSeePhrase(createdPhrase);
@@ -307,6 +406,18 @@ function AddPhraseModal(props: AddPhraseModalProps) {
           translationResult.destinationText,
         );
 
+        trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_CREATED, {
+          ...analyticsBaseParams,
+          ...getPhraseAnalyticsParams(
+            createdPhrase,
+            props.inputLanguage,
+            language,
+          ),
+          [ANALYTICS_PARAMS.INPUT_LENGTH]: trimmedQuery.length,
+          [ANALYTICS_PARAMS.SOURCE]: 'api',
+          [ANALYTICS_PARAMS.TRANSLATED_LENGTH]:
+            translationResult.destinationText.length,
+        }).catch(() => undefined);
         resetState();
         onClose();
         props.onSeePhrase(createdPhrase);
@@ -314,6 +425,12 @@ function AddPhraseModal(props: AddPhraseModalProps) {
     } catch (error) {
       setLookupResult(null);
       setLookupSource(null);
+      trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_FAILED, {
+        ...analyticsBaseParams,
+        ...getErrorAnalyticsParams(error),
+        [ANALYTICS_PARAMS.INPUT_LENGTH]: trimmedQuery.length,
+        [ANALYTICS_PARAMS.SOURCE]: 'api',
+      }).catch(() => undefined);
       setLookupFeedback(
         error instanceof Error && error.name === 'AbortError'
           ? "Couldn't translate this word right now. The request timed out."
@@ -377,6 +494,10 @@ function AddPhraseModal(props: AddPhraseModalProps) {
                 return;
               }
 
+              trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_INPUT_CHANGED, {
+                ...analyticsBaseParams,
+                [ANALYTICS_PARAMS.INPUT_LENGTH]: text.trim().length,
+              }).catch(() => undefined);
               setLookupQuery(text);
               if (lookupResult) {
                 setLookupResult(null);
@@ -434,6 +555,18 @@ function AddPhraseModal(props: AddPhraseModalProps) {
                 language={language}
                 onPress={() => {
                   if (lookupSource === 'data') {
+                    trackAnalyticsEvent(
+                      ANALYTICS_EVENTS.CUSTOM_PHRASE_EXISTING_OPENED,
+                      {
+                        ...analyticsBaseParams,
+                        ...getPhraseAnalyticsParams(
+                          lookupResult,
+                          props.helperLanguage,
+                          language,
+                        ),
+                        [ANALYTICS_PARAMS.SOURCE]: lookupSource,
+                      },
+                    ).catch(() => undefined);
                     props.onOpenPhrase(lookupResult.id);
                   }
                 }}
@@ -512,6 +645,18 @@ function AddPhraseModal(props: AddPhraseModalProps) {
 
               <Pressable
                 onPress={() => {
+                  trackAnalyticsEvent(
+                    ANALYTICS_EVENTS.CUSTOM_PHRASE_EXISTING_OPENED,
+                    {
+                      ...analyticsBaseParams,
+                      ...getPhraseAnalyticsParams(
+                        lookupResult,
+                        props.inputLanguage,
+                        language,
+                      ),
+                      [ANALYTICS_PARAMS.SOURCE]: 'existing_word_card',
+                    },
+                  ).catch(() => undefined);
                   handleClose();
                   props.onSeePhrase(lookupResult);
                 }}

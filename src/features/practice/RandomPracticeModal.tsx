@@ -12,6 +12,12 @@ import type { GestureResponderEvent } from 'react-native';
 import { Icon } from '../../components/ui';
 import { trackReviewMilestone } from '../reviews/appReview';
 import { stop as stopSpeechRecognition, stopSpeaking } from '../../services';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  getPhraseAnalyticsParams,
+  trackAnalyticsEvent,
+} from '../../services/analytics';
 import { theme, withAlpha } from '../../theme/theme';
 import { languageMetadata } from '../../types/language';
 import { getPhraseDisplayTranslations } from '../../utils/phraseDisplay';
@@ -59,6 +65,7 @@ function RandomPracticeModal({
   } | null>(null);
   const isSkipTransitionActiveRef = useRef(false);
   const hasTrackedCompletionRef = useRef(false);
+  const skippedWordCountRef = useRef(0);
   const successfulAttemptCountRef = useRef(0);
   const touchStartRef = useRef<{ pageX: number; pageY: number } | null>(null);
 
@@ -81,6 +88,7 @@ function RandomPracticeModal({
     setCurrentIndex(0);
     setIsSkippingWord(false);
     hasTrackedCompletionRef.current = false;
+    skippedWordCountRef.current = 0;
     successfulAttemptCountRef.current = 0;
     isSkipTransitionActiveRef.current = false;
   }, [clearAdvanceTimeout, sessionId, visible]);
@@ -90,6 +98,16 @@ function RandomPracticeModal({
   }, [clearAdvanceTimeout]);
 
   const handleClose = useCallback(() => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.RANDOM_PRACTICE_CLOSED, {
+      [ANALYTICS_PARAMS.PRACTICE_MODE]: 'random',
+      [ANALYTICS_PARAMS.PROGRESS_PCT]:
+        phrases.length > 0
+          ? Math.round((Math.min(currentIndex, phrases.length) / phrases.length) * 100)
+          : 0,
+      [ANALYTICS_PARAMS.SKIPPED_COUNT]: skippedWordCountRef.current,
+      [ANALYTICS_PARAMS.SUCCESSFUL_COUNT]: successfulAttemptCountRef.current,
+      [ANALYTICS_PARAMS.TOTAL_COUNT]: phrases.length,
+    }).catch(() => undefined);
     clearAdvanceTimeout();
     isSkipTransitionActiveRef.current = false;
     setIsSkippingWord(false);
@@ -101,7 +119,7 @@ function RandomPracticeModal({
     ]).finally(() => {
       onClose();
     });
-  }, [clearAdvanceTimeout, onClose]);
+  }, [clearAdvanceTimeout, currentIndex, onClose, phrases.length]);
 
   const measureDialogFrame = useCallback(() => {
     cardRef.current?.measureInWindow((x, y, width, height) => {
@@ -174,7 +192,16 @@ function RandomPracticeModal({
       return;
     }
 
+    const skippedPhrase = phrases[currentIndex] ?? null;
+
     isSkipTransitionActiveRef.current = true;
+    skippedWordCountRef.current += 1;
+    trackAnalyticsEvent(ANALYTICS_EVENTS.RANDOM_PRACTICE_WORD_SKIPPED, {
+      ...getPhraseAnalyticsParams(skippedPhrase, helperLanguage, language),
+      [ANALYTICS_PARAMS.ITEM_INDEX]: currentIndex + 1,
+      [ANALYTICS_PARAMS.PRACTICE_MODE]: 'random',
+      [ANALYTICS_PARAMS.TOTAL_COUNT]: phrases.length,
+    }).catch(() => undefined);
     setIsSkippingWord(true);
     clearAdvanceTimeout();
     setCancellationToken(previousToken => previousToken + 1);
@@ -187,7 +214,7 @@ function RandomPracticeModal({
       isSkipTransitionActiveRef.current = false;
       setIsSkippingWord(false);
     });
-  }, [clearAdvanceTimeout]);
+  }, [clearAdvanceTimeout, currentIndex, helperLanguage, language, phrases]);
 
   const isComplete = currentIndex >= phrases.length;
   const activePhrase = isComplete ? null : phrases[currentIndex];
@@ -203,14 +230,26 @@ function RandomPracticeModal({
       !visible ||
       phrases.length === 0 ||
       !isComplete ||
-      successfulAttemptCountRef.current !== phrases.length ||
       hasTrackedCompletionRef.current
     ) {
       return;
     }
 
     hasTrackedCompletionRef.current = true;
-    trackReviewMilestone('random-practice-complete');
+    trackAnalyticsEvent(ANALYTICS_EVENTS.RANDOM_PRACTICE_COMPLETED, {
+      [ANALYTICS_PARAMS.PRACTICE_MODE]: 'random',
+      [ANALYTICS_PARAMS.RESULT]:
+        successfulAttemptCountRef.current === phrases.length
+          ? 'all_successful'
+          : 'completed_with_skips',
+      [ANALYTICS_PARAMS.SKIPPED_COUNT]: skippedWordCountRef.current,
+      [ANALYTICS_PARAMS.SUCCESSFUL_COUNT]: successfulAttemptCountRef.current,
+      [ANALYTICS_PARAMS.TOTAL_COUNT]: phrases.length,
+    }).catch(() => undefined);
+
+    if (successfulAttemptCountRef.current === phrases.length) {
+      trackReviewMilestone('random-practice-complete');
+    }
   }, [isComplete, phrases.length, visible]);
 
   if (!visible || phrases.length === 0) {
@@ -304,6 +343,17 @@ function RandomPracticeModal({
                       locale={resolvePracticeLocale(
                         activePhraseTranslations!.learningLanguage,
                       )}
+                      analyticsContext={{
+                        ...getPhraseAnalyticsParams(
+                          activePhrase,
+                          helperLanguage,
+                          language,
+                        ),
+                        [ANALYTICS_PARAMS.ITEM_INDEX]: currentIndex + 1,
+                        [ANALYTICS_PARAMS.MODAL]: 'random_practice',
+                        [ANALYTICS_PARAMS.PRACTICE_MODE]: 'random',
+                        [ANALYTICS_PARAMS.TOTAL_COUNT]: phrases.length,
+                      }}
                       onClose={handleClose}
                       onSuccessfulAttempt={handleSuccessfulAttempt}
                       onToggleFavorite={() => onToggleFavorite(activePhrase.id)}
@@ -351,7 +401,17 @@ function RandomPracticeModal({
 
                     <View style={styles.completeActions}>
                       <Pressable
-                        onPress={onRestart}
+                        onPress={() => {
+                          trackAnalyticsEvent(
+                            ANALYTICS_EVENTS.RANDOM_PRACTICE_RESTARTED,
+                            {
+                              [ANALYTICS_PARAMS.ORIGIN]: 'complete_card',
+                              [ANALYTICS_PARAMS.PRACTICE_MODE]: 'random',
+                              [ANALYTICS_PARAMS.TOTAL_COUNT]: phrases.length,
+                            },
+                          ).catch(() => undefined);
+                          onRestart();
+                        }}
                         style={({ pressed }) => [
                           styles.completePrimaryAction,
                           pressed && styles.buttonPressed,

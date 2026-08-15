@@ -14,6 +14,12 @@ import {
 
 import { Screen } from '../components/ui';
 import { useAppStateDebugSnapshot } from '../context/AppStateContext';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  getErrorAnalyticsParams,
+  trackAnalyticsEvent,
+} from '../services/analytics';
 import { theme, withAlpha } from '../theme/theme';
 
 type JsonTreeValue =
@@ -203,12 +209,22 @@ function DebugScreen() {
   }, [isFocused]);
 
   const refreshAsyncStorageEntries = async () => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.DEBUG_STORAGE_REFRESHED, {
+      [ANALYTICS_PARAMS.SCREEN]: 'Debug',
+      [ANALYTICS_PARAMS.UI_ACTION]: 'refresh_storage',
+      [ANALYTICS_PARAMS.UI_ELEMENT]: 'debug_refresh',
+    }).catch(() => undefined);
     setIsRefreshing(true);
 
     try {
       setAsyncStorageSnapshot(await loadAsyncStorageSnapshot());
       setLoadError(null);
     } catch (error) {
+      trackAnalyticsEvent(ANALYTICS_EVENTS.APP_HYDRATED, {
+        ...getErrorAnalyticsParams(error),
+        [ANALYTICS_PARAMS.RESULT]: 'debug_refresh_failed',
+        [ANALYTICS_PARAMS.SCREEN]: 'Debug',
+      }).catch(() => undefined);
       setLoadError(
         error instanceof Error
           ? error.message

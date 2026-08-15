@@ -8,6 +8,11 @@ import {
 import { StyleSheet } from 'react-native';
 
 import { useAppState } from '../context/AppStateContext';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  trackAnalyticsEvent,
+} from '../services/analytics';
 import { theme } from '../theme/theme';
 import { bottomSheetContentSwitcher } from '../utils/bottomSheetContentSwitcher';
 
@@ -28,6 +33,13 @@ function BottomSheet() {
 
   useEffect(() => {
     if (bottomSheetContent) {
+      trackAnalyticsEvent(ANALYTICS_EVENTS.BOTTOM_SHEET_OPENED, {
+        [ANALYTICS_PARAMS.MODAL]: bottomSheetContent.type,
+        [ANALYTICS_PARAMS.SOURCE]:
+          bottomSheetContent.type === 'language-picker'
+            ? bottomSheetContent.target
+            : undefined,
+      }).catch(() => undefined);
       bottomSheetModalRef.current?.present();
       return;
     }
@@ -67,7 +79,16 @@ function BottomSheet() {
       enablePanDownToClose
       handleComponent={renderHandle}
       index={1}
-      onDismiss={closeBottomSheet}
+      onDismiss={() => {
+        trackAnalyticsEvent(ANALYTICS_EVENTS.BOTTOM_SHEET_DISMISSED, {
+          [ANALYTICS_PARAMS.MODAL]: bottomSheetContent?.type,
+          [ANALYTICS_PARAMS.SOURCE]:
+            bottomSheetContent?.type === 'language-picker'
+              ? bottomSheetContent.target
+              : undefined,
+        }).catch(() => undefined);
+        closeBottomSheet();
+      }}
       snapPoints={[1]}
     >
       {bottomSheetContentSwitcher(bottomSheetContent, {

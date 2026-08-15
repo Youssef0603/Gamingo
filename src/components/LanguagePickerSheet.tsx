@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { BottomSheetView } from '@gorhom/bottom-sheet';
 import {
   Pressable,
@@ -12,9 +12,15 @@ import { FlatList } from 'react-native-gesture-handler';
 
 import { bottomSheetModalRef } from './BottomSheet';
 import { Icon } from './ui';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  trackAnalyticsEvent,
+} from '../services/analytics';
 import { theme, withAlpha } from '../theme/theme';
 import { languageMetadata, supportedLanguageCodes } from '../types/language';
 
+import type { LanguagePickerTarget } from '../context/AppStateContext';
 import type { LanguageCode } from '../types/language';
 
 type LanguagePickerSheetProps = {
@@ -22,6 +28,7 @@ type LanguagePickerSheetProps = {
   emptyStateText?: string;
   subtitle: string;
   selectedLanguage: LanguageCode;
+  target: LanguagePickerTarget;
   title: string;
   onSelect: (language: LanguageCode) => void;
 };
@@ -31,6 +38,7 @@ function LanguagePickerSheet({
   emptyStateText = 'Try a different name or language code.',
   subtitle,
   selectedLanguage,
+  target,
   title,
   onSelect,
 }: LanguagePickerSheetProps) {
@@ -55,6 +63,19 @@ function LanguagePickerSheet({
   }, [availableLanguages, searchQuery]);
 
   const contentHeight = height * 0.8;
+
+  useEffect(() => {
+    if (!searchQuery.trim()) {
+      return;
+    }
+
+    trackAnalyticsEvent(ANALYTICS_EVENTS.LANGUAGE_PICKER_SEARCH_CHANGED, {
+      [ANALYTICS_PARAMS.AVAILABLE_COUNT]: availableLanguages.length,
+      [ANALYTICS_PARAMS.LANGUAGE_TARGET]: target,
+      [ANALYTICS_PARAMS.QUERY_LENGTH]: searchQuery.trim().length,
+      [ANALYTICS_PARAMS.RESULT_COUNT]: filteredLanguages.length,
+    }).catch(() => undefined);
+  }, [availableLanguages.length, filteredLanguages.length, searchQuery, target]);
 
   return (
     <BottomSheetView style={[styles.container, { height: contentHeight }]}>
@@ -102,6 +123,20 @@ function LanguagePickerSheet({
             return (
               <Pressable
                 onPress={() => {
+                  trackAnalyticsEvent(
+                    ANALYTICS_EVENTS.LANGUAGE_PICKER_OPTION_SELECTED,
+                    {
+                      [ANALYTICS_PARAMS.LANGUAGE_TARGET]: target,
+                      [ANALYTICS_PARAMS.NEXT_LANG]: language,
+                      [ANALYTICS_PARAMS.PREVIOUS_LANG]: selectedLanguage,
+                      [ANALYTICS_PARAMS.RESULT]: isSelected
+                        ? 'same_language'
+                        : 'changed',
+                      [ANALYTICS_PARAMS.SEARCH_CONTEXT]: searchQuery.trim()
+                        ? 'filtered'
+                        : 'unfiltered',
+                    },
+                  ).catch(() => undefined);
                   onSelect(language);
                   bottomSheetModalRef.current?.dismiss();
                 }}

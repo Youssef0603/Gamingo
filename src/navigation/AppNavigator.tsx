@@ -12,7 +12,12 @@ import BottomSheet from '../components/BottomSheet';
 import { Icon } from '../components/ui';
 import { AppStateProvider } from '../context/AppStateContext';
 import { DebugScreen, FavoritesScreen, PracticeScreen } from '../screens';
-import { logScreenView } from '../services/firebase';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  trackAnalyticsEvent,
+  trackScreenView,
+} from '../services/analytics';
 import { theme } from '../theme/theme';
 
 import type { RootTabParamList } from '../types/navigation';
@@ -106,9 +111,23 @@ function AppNavigator() {
       return;
     }
 
+    const previousRouteName = routeNameRef.current;
+
     routeNameRef.current = currentRouteName;
-    logScreenView(currentRouteName).catch(() => undefined);
+    trackScreenView(currentRouteName, previousRouteName);
   }, [navigationRef]);
+
+  const screenListeners = React.useCallback(
+    ({ route }: { route: { name: keyof RootTabParamList } }) => ({
+      tabPress: () => {
+        trackAnalyticsEvent(ANALYTICS_EVENTS.TAB_PRESSED, {
+          [ANALYTICS_PARAMS.SCREEN]: route.name,
+          [ANALYTICS_PARAMS.UI_ELEMENT]: 'bottom_tab',
+        }).catch(() => undefined);
+      },
+    }),
+    [],
+  );
 
   return (
     <AppStateProvider>
@@ -124,6 +143,7 @@ function AppNavigator() {
         >
           <Tab.Navigator
             initialRouteName="Practice"
+            screenListeners={screenListeners}
             screenOptions={getScreenOptions}
           >
             <Tab.Screen component={PracticeScreen} name="Practice" />

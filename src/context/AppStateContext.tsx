@@ -17,6 +17,15 @@ import {
 } from '../features/ads/adsPolicy';
 import { trackFavoriteSaveAction } from '../features/ads/mobileAds';
 import { trackReviewMilestone } from '../features/reviews/appReview';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  getErrorAnalyticsParams,
+  getPhraseAnalyticsParams,
+  setAnalyticsContext,
+  toAnalyticsBoolean,
+  trackAnalyticsEvent,
+} from '../services/analytics';
 import { getItemWithMigration, STORAGE_KEYS } from '../storage/asyncStorageKeys';
 import {
   getAppRemoteConfigState,
@@ -302,6 +311,13 @@ function getFavoriteLanguageOptions(
   );
 }
 
+function getFavoriteTotalCount(favoriteIdsByLanguage: FavoriteIdsByLanguage) {
+  return Object.values(favoriteIdsByLanguage).reduce(
+    (totalCount, favoriteIds) => totalCount + (favoriteIds?.length ?? 0),
+    0,
+  );
+}
+
 function upsertCustomPhrase(current: Phrase[], nextPhrase: Phrase): Phrase[] {
   const existingIndex = current.findIndex(phrase => phrase.id === nextPhrase.id);
 
@@ -352,6 +368,14 @@ export function AppStateProvider({ children }: PropsWithChildren) {
           setNativeLanguage(autoSelectedLanguages.nativeLanguage);
           setSelectedLanguage(autoSelectedLanguages.selectedLanguage);
           setFavoriteFilterLanguage(autoSelectedLanguages.selectedLanguage);
+          trackAnalyticsEvent(ANALYTICS_EVENTS.APP_HYDRATED, {
+            [ANALYTICS_PARAMS.LEARNING_LANG]:
+              autoSelectedLanguages.selectedLanguage,
+            [ANALYTICS_PARAMS.NATIVE_LANG]:
+              autoSelectedLanguages.nativeLanguage,
+            [ANALYTICS_PARAMS.RESULT]: 'fresh_state',
+            [ANALYTICS_PARAMS.SOURCE]: 'async_storage',
+          }).catch(() => undefined);
           return;
         }
 
@@ -394,7 +418,28 @@ export function AppStateProvider({ children }: PropsWithChildren) {
             [nextSelectedLanguage]: migratedFavoriteIds,
           });
         }
+
+        trackAnalyticsEvent(ANALYTICS_EVENTS.APP_HYDRATED, {
+          [ANALYTICS_PARAMS.CUSTOM_PHRASE_COUNT]: nextCustomPhrases.length,
+          [ANALYTICS_PARAMS.FAVORITE_COUNT]: getFavoriteTotalCount(
+            Object.keys(nextFavoriteIdsByLanguage).length > 0
+              ? nextFavoriteIdsByLanguage
+              : migratedFavoriteIds.length > 0
+                ? { [nextSelectedLanguage]: migratedFavoriteIds }
+                : {},
+          ),
+          [ANALYTICS_PARAMS.FAVORITE_LANG]: nextFavoriteFilterLanguage,
+          [ANALYTICS_PARAMS.LEARNING_LANG]: nextSelectedLanguage,
+          [ANALYTICS_PARAMS.NATIVE_LANG]: nextNativeLanguage,
+          [ANALYTICS_PARAMS.RESULT]: 'restored_state',
+          [ANALYTICS_PARAMS.SOURCE]: 'async_storage',
+        }).catch(() => undefined);
       } catch (error) {
+        trackAnalyticsEvent(ANALYTICS_EVENTS.APP_HYDRATED, {
+          ...getErrorAnalyticsParams(error),
+          [ANALYTICS_PARAMS.RESULT]: 'failed',
+          [ANALYTICS_PARAMS.SOURCE]: 'async_storage',
+        }).catch(() => undefined);
         console.warn('Failed to load persisted app state.', error);
       } finally {
         if (isMounted) {
@@ -430,6 +475,10 @@ export function AppStateProvider({ children }: PropsWithChildren) {
           } satisfies PersistedAppState),
         );
       } catch (error) {
+        trackAnalyticsEvent(ANALYTICS_EVENTS.APP_PERSIST_FAILED, {
+          ...getErrorAnalyticsParams(error),
+          [ANALYTICS_PARAMS.SOURCE]: 'async_storage',
+        }).catch(() => undefined);
         console.warn('Failed to persist app state.', error);
       }
     };
@@ -514,6 +563,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     [favoriteIdsByLanguage, selectedLanguage],
   );
   const favoriteLanguageOptions = getFavoriteLanguageOptions(favoriteIdsByLanguage);
+  const favoriteTotalCount = getFavoriteTotalCount(favoriteIdsByLanguage);
   const phraseMap = useMemo(() => {
     const nextValue: Record<string, Phrase> = {};
 
@@ -524,6 +574,32 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     return nextValue;
   }, [phrases]);
 
+  useEffect(() => {
+    if (!isHydrated) {
+      return;
+    }
+
+    setAnalyticsContext({
+      adsPolicy: remoteConfig.adsPolicy,
+      customPhraseCount: customPhrases.length,
+      deviceLocale: getDeviceLocale(),
+      favoriteCount: favoriteTotalCount,
+      favoriteFilterLanguage,
+      hasAcknowledgedToxicCategoryDisclosure,
+      nativeLanguage,
+      selectedLanguage,
+    });
+  }, [
+    customPhrases.length,
+    favoriteFilterLanguage,
+    favoriteTotalCount,
+    hasAcknowledgedToxicCategoryDisclosure,
+    isHydrated,
+    nativeLanguage,
+    remoteConfig.adsPolicy,
+    selectedLanguage,
+  ]);
+
   const getFavoriteIdsForLanguage = (language: LanguageCode) =>
     favoriteIdsByLanguage[language] ?? [];
 
@@ -533,13 +609,27 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     getFavoriteIdsForLanguage(language).includes(phraseId);
 
   const toggleFavorite = (phraseId: string, language = selectedLanguage) => {
+    const phrase = getPhraseById(phraseId);
+    const currentLanguageFavorites = getFavoriteIdsForLanguage(language);
     const shouldSaveToFavorites = !isFavorite(phraseId, language);
+    const nextFavoriteCount = shouldSaveToFavorites
+      ? currentLanguageFavorites.length + 1
+      : Math.max(0, currentLanguageFavorites.length - 1);
+
+    trackAnalyticsEvent(ANALYTICS_EVENTS.FAVORITE_TOGGLED, {
+      ...getPhraseAnalyticsParams(phrase, nativeLanguage, language),
+      [ANALYTICS_PARAMS.FAVORITE_COUNT]: nextFavoriteCount,
+      [ANALYTICS_PARAMS.IS_FAVORITE]: toAnalyticsBoolean(shouldSaveToFavorites),
+      [ANALYTICS_PARAMS.LEARNING_LANG]: language,
+      [ANALYTICS_PARAMS.ORIGIN]: 'favorite_toggle',
+      [ANALYTICS_PARAMS.UI_ACTION]: shouldSaveToFavorites ? 'save' : 'remove',
+    }).catch(() => undefined);
 
     setFavoriteIdsByLanguage(current => {
-      const currentLanguageFavorites = current[language] ?? [];
-      const nextLanguageFavorites = currentLanguageFavorites.includes(phraseId)
-        ? currentLanguageFavorites.filter(id => id !== phraseId)
-        : [...currentLanguageFavorites, phraseId];
+      const storedLanguageFavorites = current[language] ?? [];
+      const nextLanguageFavorites = storedLanguageFavorites.includes(phraseId)
+        ? storedLanguageFavorites.filter(id => id !== phraseId)
+        : [...storedLanguageFavorites, phraseId];
 
       if (nextLanguageFavorites.length === 0) {
         const rest = { ...current };
@@ -601,12 +691,28 @@ export function AppStateProvider({ children }: PropsWithChildren) {
     });
 
     if (!isAlreadyFavorite) {
+      trackAnalyticsEvent(ANALYTICS_EVENTS.FAVORITE_TOGGLED, {
+        ...getPhraseAnalyticsParams(phrase, nativeLanguage, language),
+        [ANALYTICS_PARAMS.IS_FAVORITE]: 'true',
+        [ANALYTICS_PARAMS.LEARNING_LANG]: language,
+        [ANALYTICS_PARAMS.ORIGIN]: 'add_phrase_modal',
+        [ANALYTICS_PARAMS.UI_ACTION]: 'save',
+      }).catch(() => undefined);
       trackFavoriteSaveAction();
       trackReviewMilestone('favorite-save');
     }
   };
 
   const deleteCustomPhrase = (phraseId: string) => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.CUSTOM_PHRASE_DELETED, {
+      ...getPhraseAnalyticsParams(
+        getPhraseById(phraseId),
+        nativeLanguage,
+        selectedLanguage,
+      ),
+      [ANALYTICS_PARAMS.ORIGIN]: 'app_state',
+    }).catch(() => undefined);
+
     setCustomPhrases(current => current.filter(phrase => phrase.id !== phraseId));
     setFavoriteIdsByLanguage(current => {
       const nextValue: FavoriteIdsByLanguage = {};
@@ -626,6 +732,14 @@ export function AppStateProvider({ children }: PropsWithChildren) {
   };
 
   const openLanguagePicker = (target: LanguagePickerTarget) => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.LANGUAGE_PICKER_OPENED, {
+      [ANALYTICS_PARAMS.FAVORITE_LANG]: favoriteFilterLanguage,
+      [ANALYTICS_PARAMS.LANGUAGE_TARGET]: target,
+      [ANALYTICS_PARAMS.LEARNING_LANG]: selectedLanguage,
+      [ANALYTICS_PARAMS.NATIVE_LANG]: nativeLanguage,
+      [ANALYTICS_PARAMS.ORIGIN]: 'app_state',
+    }).catch(() => undefined);
+
     setBottomSheetContent({ type: 'language-picker', target });
   };
 
@@ -634,7 +748,47 @@ export function AppStateProvider({ children }: PropsWithChildren) {
   };
 
   const acknowledgeToxicCategoryDisclosure = () => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.TOXIC_DISCLOSURE_ACCEPTED, {
+      [ANALYTICS_PARAMS.CATEGORY]: 'toxic',
+      [ANALYTICS_PARAMS.ORIGIN]: 'practice_screen',
+    }).catch(() => undefined);
     setHasAcknowledgedToxicCategoryDisclosure(true);
+  };
+
+  const updateFavoriteFilterLanguage = (language: LanguageCode) => {
+    if (favoriteFilterLanguage !== language) {
+      trackAnalyticsEvent(ANALYTICS_EVENTS.LANGUAGE_CHANGED, {
+        [ANALYTICS_PARAMS.LANGUAGE_TARGET]: 'favorites',
+        [ANALYTICS_PARAMS.NEXT_LANG]: language,
+        [ANALYTICS_PARAMS.PREVIOUS_LANG]: favoriteFilterLanguage,
+      }).catch(() => undefined);
+    }
+
+    setFavoriteFilterLanguage(language);
+  };
+
+  const updateNativeLanguage = (language: LanguageCode) => {
+    if (nativeLanguage !== language) {
+      trackAnalyticsEvent(ANALYTICS_EVENTS.LANGUAGE_CHANGED, {
+        [ANALYTICS_PARAMS.LANGUAGE_TARGET]: 'native',
+        [ANALYTICS_PARAMS.NEXT_LANG]: language,
+        [ANALYTICS_PARAMS.PREVIOUS_LANG]: nativeLanguage,
+      }).catch(() => undefined);
+    }
+
+    setNativeLanguage(language);
+  };
+
+  const updateSelectedLanguage = (language: LanguageCode) => {
+    if (selectedLanguage !== language) {
+      trackAnalyticsEvent(ANALYTICS_EVENTS.LANGUAGE_CHANGED, {
+        [ANALYTICS_PARAMS.LANGUAGE_TARGET]: 'learning',
+        [ANALYTICS_PARAMS.NEXT_LANG]: language,
+        [ANALYTICS_PARAMS.PREVIOUS_LANG]: selectedLanguage,
+      }).catch(() => undefined);
+    }
+
+    setSelectedLanguage(language);
   };
 
   const debugSnapshot = useMemo<AppStateDebugSnapshot>(
@@ -694,9 +848,9 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         phrases,
         remoteConfig,
         selectedLanguage,
-        setFavoriteFilterLanguage,
-        setNativeLanguage,
-        setSelectedLanguage,
+        setFavoriteFilterLanguage: updateFavoriteFilterLanguage,
+        setNativeLanguage: updateNativeLanguage,
+        setSelectedLanguage: updateSelectedLanguage,
         toggleFavorite,
       }}
     >

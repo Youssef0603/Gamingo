@@ -1,6 +1,12 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AppState } from 'react-native';
 import * as StoreReview from 'react-native-store-review';
+import {
+  ANALYTICS_EVENTS,
+  ANALYTICS_PARAMS,
+  getErrorAnalyticsParams,
+  trackAnalyticsEvent,
+} from '../../services/analytics';
 import { getItemWithMigration, STORAGE_KEYS } from '../../storage/asyncStorageKeys';
 
 const REVIEW_RETRY_COOLDOWN_MS = 14 * 24 * 60 * 60 * 1000;
@@ -76,6 +82,10 @@ async function hydrateReviewState() {
       ),
     };
   } catch (error) {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.REVIEW_PROMPT_RESULT, {
+      ...getErrorAnalyticsParams(error),
+      [ANALYTICS_PARAMS.RESULT]: 'hydrate_failed',
+    }).catch(() => undefined);
     console.warn('Failed to hydrate review prompt state.', error);
   }
 }
@@ -103,6 +113,10 @@ function queueReviewStatePersist() {
       AsyncStorage.setItem(STORAGE_KEYS.reviewState, JSON.stringify(snapshot)),
     )
     .catch(error => {
+      trackAnalyticsEvent(ANALYTICS_EVENTS.REVIEW_PROMPT_RESULT, {
+        ...getErrorAnalyticsParams(error),
+        [ANALYTICS_PARAMS.RESULT]: 'persist_failed',
+      }).catch(() => undefined);
       console.warn('Failed to persist review prompt state.', error);
     });
 
@@ -173,6 +187,10 @@ async function requestNativeReview(now: number) {
   }
 
   requestInFlight = true;
+  trackAnalyticsEvent(ANALYTICS_EVENTS.REVIEW_PROMPT_RESULT, {
+    [ANALYTICS_PARAMS.RESULT]: 'requested',
+    [ANALYTICS_PARAMS.TOTAL_COUNT]: reviewState.attemptCount + 1,
+  }).catch(() => undefined);
 
   try {
     StoreReview.requestReview();
@@ -182,8 +200,17 @@ async function requestNativeReview(now: number) {
     reviewState.practiceSuccessCount = 0;
     reviewState.randomPracticeCompletionCount = 0;
     await queueReviewStatePersist();
+    trackAnalyticsEvent(ANALYTICS_EVENTS.REVIEW_PROMPT_RESULT, {
+      [ANALYTICS_PARAMS.RESULT]: 'request_succeeded',
+      [ANALYTICS_PARAMS.TOTAL_COUNT]: reviewState.attemptCount,
+    }).catch(() => undefined);
     return true;
   } catch (error) {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.REVIEW_PROMPT_RESULT, {
+      ...getErrorAnalyticsParams(error),
+      [ANALYTICS_PARAMS.RESULT]: 'request_failed',
+      [ANALYTICS_PARAMS.TOTAL_COUNT]: reviewState.attemptCount,
+    }).catch(() => undefined);
     console.warn('Failed to request native app review.', error);
     return false;
   } finally {
@@ -194,10 +221,32 @@ async function requestNativeReview(now: number) {
 async function maybeRequestReview(milestone: ReviewMilestone) {
   await ensureReviewStateHydrated();
   applyReviewMilestone(milestone);
+  trackAnalyticsEvent(ANALYTICS_EVENTS.REVIEW_MILESTONE, {
+    [ANALYTICS_PARAMS.METHOD]: milestone,
+    [ANALYTICS_PARAMS.RESULT]: hasEarnedReviewOpportunity()
+      ? 'eligible_signal'
+      : 'signal_recorded',
+    [ANALYTICS_PARAMS.SUCCESSFUL_COUNT]: reviewState.practiceSuccessCount,
+    [ANALYTICS_PARAMS.TOTAL_COUNT]: reviewState.attemptCount,
+  }).catch(() => undefined);
 
   const now = Date.now();
 
   if (!canRequestReview(now)) {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.REVIEW_PROMPT_RESULT, {
+      [ANALYTICS_PARAMS.METHOD]: milestone,
+      [ANALYTICS_PARAMS.REASON]: requestInFlight
+        ? 'request_in_flight'
+        : reviewState.attemptCount >= MAX_REVIEW_ATTEMPTS
+          ? 'max_attempts'
+          : AppState.currentState && AppState.currentState !== 'active'
+            ? 'app_not_active'
+            : !hasEarnedReviewOpportunity()
+              ? 'not_enough_signals'
+              : 'cooldown',
+      [ANALYTICS_PARAMS.RESULT]: 'not_requested',
+      [ANALYTICS_PARAMS.TOTAL_COUNT]: reviewState.attemptCount,
+    }).catch(() => undefined);
     await queueReviewStatePersist();
     return false;
   }
