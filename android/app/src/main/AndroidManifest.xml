@@ -1,4 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools">
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.RECORD_AUDIO" />
   <queries>
@@ -17,10 +18,8 @@
     android:enableOnBackInvokedCallback="false"
     android:theme="@style/AppTheme"
     android:usesCleartextTraffic="${usesCleartextTraffic}"
-    android:supportsRtl="true">
-    <meta-data
-      android:name="com.google.android.gms.ads.APPLICATION_ID"
-      android:value="ca-app-pub-2492542777972482~2875031229" />
+    android:supportsRtl="true"
+    tools:replace="android:allowBackup">
     <activity
       android:name=".MainActivity"
       android:label="@string/app_name"

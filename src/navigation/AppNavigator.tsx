@@ -12,7 +12,8 @@ import BottomSheet from '../components/BottomSheet';
 import { Icon } from '../components/ui';
 import { AppStateProvider } from '../context/AppStateContext';
 import { subscribeToPracticeReminderOpened } from '../features/notifications';
-import { DebugScreen, FavoritesScreen, PracticeScreen } from '../screens';
+import FavoritesScreen from '../screens/FavoritesScreen';
+import PracticeScreen from '../screens/PracticeScreen';
 import {
   ANALYTICS_EVENTS,
   ANALYTICS_PARAMS,
@@ -24,6 +25,11 @@ import { theme } from '../theme/theme';
 import type { RootTabParamList } from '../types/navigation';
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
+
+const DebugScreen = __DEV__
+  ? (require('../screens/DebugScreen')
+      .default as typeof import('../screens/DebugScreen').default)
+  : null;
 
 const navigationTheme = {
   ...NavigationDefaultTheme,
@@ -159,7 +165,7 @@ function AppNavigator() {
           >
             <Tab.Screen component={PracticeScreen} name="Practice" />
             <Tab.Screen component={FavoritesScreen} name="Favourites" />
-            {__DEV__ ? (
+            {DebugScreen ? (
               <Tab.Screen component={DebugScreen} name="Debug" />
             ) : null}
           </Tab.Navigator>

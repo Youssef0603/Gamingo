@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { BannerAd, BannerAdSize } from 'react-native-google-mobile-ads';
+import { AppodealBanner } from 'react-native-appodeal';
 
 import {
   ANALYTICS_EVENTS,
@@ -9,27 +9,18 @@ import {
   trackAnalyticsEvent,
 } from '../../services/analytics';
 import { theme } from '../../theme/theme';
-import { getBannerAdUnitId, useCanShowAds } from './mobileAds';
+import { getBannerAdsGateReason, useCanShowAds } from './mobileAds';
 
 function InlineBannerAd() {
   const canShowAds = useCanShowAds();
-  const adUnitId = canShowAds ? getBannerAdUnitId() : null;
+  const bannerGateReason = getBannerAdsGateReason();
 
   useEffect(() => {
     if (!canShowAds) {
       trackAnalyticsEvent(ANALYTICS_EVENTS.AD_GATE_EVALUATED, {
         [ANALYTICS_PARAMS.AD_FORMAT]: 'banner',
-        [ANALYTICS_PARAMS.AD_GATE_REASON]: 'not_eligible',
-        [ANALYTICS_PARAMS.AD_PLACEMENT]: 'inline_banner',
-        [ANALYTICS_PARAMS.AD_RESULT]: 'hidden',
-      }).catch(() => undefined);
-      return;
-    }
-
-    if (!adUnitId) {
-      trackAnalyticsEvent(ANALYTICS_EVENTS.AD_GATE_EVALUATED, {
-        [ANALYTICS_PARAMS.AD_FORMAT]: 'banner',
-        [ANALYTICS_PARAMS.AD_GATE_REASON]: 'missing_unit_id',
+        [ANALYTICS_PARAMS.AD_GATE_REASON]:
+          bannerGateReason ?? 'not_eligible',
         [ANALYTICS_PARAMS.AD_PLACEMENT]: 'inline_banner',
         [ANALYTICS_PARAMS.AD_RESULT]: 'hidden',
       }).catch(() => undefined);
@@ -41,22 +32,16 @@ function InlineBannerAd() {
       [ANALYTICS_PARAMS.AD_PLACEMENT]: 'inline_banner',
       [ANALYTICS_PARAMS.AD_RESULT]: 'loading',
     }).catch(() => undefined);
-  }, [adUnitId, canShowAds]);
+  }, [bannerGateReason, canShowAds]);
 
-  if (!canShowAds || !adUnitId) {
+  if (!canShowAds) {
     return null;
   }
 
   return (
     <View style={styles.container}>
-      <BannerAd
-        onAdImpression={() => {
-          trackAnalyticsEvent(ANALYTICS_EVENTS.AD_IMPRESSION_RECORDED, {
-            [ANALYTICS_PARAMS.AD_FORMAT]: 'banner',
-            [ANALYTICS_PARAMS.AD_PLACEMENT]: 'inline_banner',
-            [ANALYTICS_PARAMS.AD_RESULT]: 'impression',
-          }).catch(() => undefined);
-        }}
+      <AppodealBanner
+        adSize="phone"
         onAdFailedToLoad={error => {
           trackAnalyticsEvent(ANALYTICS_EVENTS.AD_FAILED, {
             ...getErrorAnalyticsParams(error),
@@ -76,18 +61,24 @@ function InlineBannerAd() {
             [ANALYTICS_PARAMS.AD_RESULT]: 'loaded',
           }).catch(() => undefined);
         }}
-        onAdOpened={() => {
+        onAdClicked={() => {
           trackAnalyticsEvent(ANALYTICS_EVENTS.AD_OPENED, {
             [ANALYTICS_PARAMS.AD_FORMAT]: 'banner',
             [ANALYTICS_PARAMS.AD_PLACEMENT]: 'inline_banner',
             [ANALYTICS_PARAMS.AD_RESULT]: 'opened',
           }).catch(() => undefined);
         }}
-        requestOptions={{
-          requestNonPersonalizedAdsOnly: true,
+        onAdExpired={() => {
+          trackAnalyticsEvent(ANALYTICS_EVENTS.AD_SKIPPED, {
+            [ANALYTICS_PARAMS.AD_FORMAT]: 'banner',
+            [ANALYTICS_PARAMS.AD_GATE_REASON]: 'expired',
+            [ANALYTICS_PARAMS.AD_PLACEMENT]: 'inline_banner',
+            [ANALYTICS_PARAMS.AD_RESULT]: 'skipped',
+          }).catch(() => undefined);
         }}
-        size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-        unitId={adUnitId}
+        placement="inline_banner"
+        style={styles.banner}
+        usesSmartSizing
       />
     </View>
   );
@@ -98,6 +89,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginVertical: theme.spacing.lg,
     minHeight: 60,
+  },
+  banner: {
+    alignSelf: 'stretch',
+    width: '100%',
   },
 });
 

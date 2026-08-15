@@ -5,7 +5,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import AppNavigator from './src/navigation/AppNavigator';
-import { initializeGoogleMobileAds } from './src/features/ads/mobileAds';
+import { initializeAppodealAds } from './src/features/ads/mobileAds';
 import { initializePracticeReminders } from './src/features/notifications';
 import { initializeAppReviewState } from './src/features/reviews/appReview';
 import {
@@ -42,22 +42,22 @@ function App() {
         }
       });
 
-    initializeGoogleMobileAds()
-      .then(() => {
+    initializeAppodealAds()
+      .then(result => {
         trackAnalyticsEvent(ANALYTICS_EVENTS.AD_GATE_EVALUATED, {
           [ANALYTICS_PARAMS.AD_PLACEMENT]: 'app_start',
-          [ANALYTICS_PARAMS.AD_RESULT]: 'mobile_ads_initialized',
+          [ANALYTICS_PARAMS.AD_RESULT]: result,
         }).catch(() => undefined);
       })
       .catch(error => {
         trackAnalyticsEvent(ANALYTICS_EVENTS.AD_GATE_EVALUATED, {
           ...getErrorAnalyticsParams(error),
           [ANALYTICS_PARAMS.AD_PLACEMENT]: 'app_start',
-          [ANALYTICS_PARAMS.AD_RESULT]: 'mobile_ads_failed',
+          [ANALYTICS_PARAMS.AD_RESULT]: 'appodeal_failed',
         }).catch(() => undefined);
 
         if (__DEV__) {
-          console.warn('Google Mobile Ads failed to initialize', error);
+          console.warn('Appodeal ads failed to initialize', error);
         }
       });
 

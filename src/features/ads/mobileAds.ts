@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AppState, Platform } from 'react-native';
 import {
-  AdEventType,
-  InterstitialAd,
-  TestIds,
-} from 'react-native-google-mobile-ads';
-import mobileAds from 'react-native-google-mobile-ads';
+  AppodealAdType,
+  AppodealBannerEvents,
+  AppodealInterstitialEvents,
+  AppodealLogLevel,
+  AppodealSdkEvents,
+} from 'react-native-appodeal';
+import Appodeal from 'react-native-appodeal';
 
 import {
   initializeAdsPolicy,
@@ -22,20 +24,16 @@ import {
   getAppAdsPolicy,
   subscribeToAppRemoteConfigState,
 } from '../../state/appRemoteConfigStore';
+import { requestAppTrackingTransparencyForAds } from './appTrackingTransparency';
 
 // Flip this to true when you want to test ads during development.
 const SHOW_ADS_IN_DEVELOPMENT = true;
 
 export const ADS_ENABLED = !__DEV__ || SHOW_ADS_IN_DEVELOPMENT;
 
-const productionBannerUnitIds = {
-  android: 'ca-app-pub-2492542777972482/9535287858',
-  ios: 'ca-app-pub-2492542777972482/3486708659',
-} as const;
-
-const productionInterstitialUnitIds = {
-  android: 'ca-app-pub-2492542777972482/6078808861',
-  ios: 'ca-app-pub-2492542777972482/1157654674',
+const appodealAppKeys = {
+  android: '',
+  ios: 'fcd4631968342d89579fba045dccb1533ce606c6f81a27ef',
 } as const;
 
 type PersistedAdsState = {
@@ -48,11 +46,30 @@ type PersistedAdsState = {
 };
 
 const FIRST_LAUNCH_USAGE_PERSIST_INTERVAL_MS = 30 * 1000;
+const APPODEAL_AD_TYPES =
+  // Appodeal combines requested ad formats with a numeric bitmask.
+  // eslint-disable-next-line no-bitwise
+  AppodealAdType.INTERSTITIAL | AppodealAdType.BANNER;
+const APPODEAL_INTERSTITIAL_AD_TYPE = AppodealAdType.INTERSTITIAL;
+const APPODEAL_BANNER_AD_TYPE = AppodealAdType.BANNER;
+const INLINE_BANNER_PLACEMENT = 'inline_banner';
+const DEBUG_INTERSTITIAL_PLACEMENT = 'debug_appodeal_interstitial';
+const DEBUG_INTERSTITIAL_LISTENER_TIMEOUT_MS = 60 * 1000;
+const DEBUG_APPODEAL_LOG_PREFIX = '[AppodealDebug]';
 
-let initializationPromise: Promise<unknown> | null = null;
+type AppodealInitializationResult =
+  | 'appodeal_initialize_requested'
+  | 'ads_disabled'
+  | 'missing_app_key';
+type AppodealEventSubscription = {
+  remove: () => void;
+};
+
+let initializationPromise: Promise<AppodealInitializationResult> | null = null;
 let adStateHydrationPromise: Promise<void> | null = null;
 let adStatePersistPromise: Promise<void> = Promise.resolve();
 let adStateHydrated = false;
+let appodealInitialized = false;
 let hasTrackedFirstLaunchGraceState = false;
 let firstLaunchAccumulatedUsageMs = 0;
 let firstLaunchForegroundStartedAtMs: number | null = null;
@@ -60,7 +77,8 @@ let hasSkippedFirstCustomWordAddAd = false;
 let itemClickCount = 0;
 let favoriteSaveCount = 0;
 let randomPracticeStartCount = 0;
-let interstitialListenersAttached = false;
+let appodealListenersAttached = false;
+let appodealInitializationRequested = false;
 let interstitialLoaded = false;
 let interstitialShowing = false;
 let pendingInterstitialAction: (() => void) | null = null;
@@ -68,8 +86,10 @@ let pendingInterstitialPlacement: string | null = null;
 let adAvailabilityTimeout: ReturnType<typeof setTimeout> | null = null;
 let appStateListenerAttached = false;
 let currentAppState = AppState.currentState;
-let interstitialAd: ReturnType<typeof InterstitialAd.createForAdRequest> | null = null;
 let firstLaunchUsagePersistInterval: ReturnType<typeof setInterval> | null = null;
+let debugInterstitialListeners: AppodealEventSubscription[] | null = null;
+let debugInterstitialCleanupTimeout: ReturnType<typeof setTimeout> | null = null;
+let shouldShowDebugInterstitialWhenLoaded = false;
 
 const adAvailabilityListeners = new Set<() => void>();
 
@@ -83,6 +103,32 @@ function trackAdLifecycleEvent(
     [ANALYTICS_PARAMS.AD_PLACEMENT]: placement,
     ...params,
   }).catch(() => undefined);
+}
+
+function logAppodealDebug(message: string, params?: unknown) {
+  if (!__DEV__) {
+    return;
+  }
+
+  if (params === undefined) {
+    console.log(`${DEBUG_APPODEAL_LOG_PREFIX} ${message}`);
+    return;
+  }
+
+  console.log(`${DEBUG_APPODEAL_LOG_PREFIX} ${message}`, params);
+}
+
+function warnAppodealDebug(message: string, error?: unknown) {
+  if (!__DEV__) {
+    return;
+  }
+
+  if (error === undefined) {
+    console.warn(`${DEBUG_APPODEAL_LOG_PREFIX} ${message}`);
+    return;
+  }
+
+  console.warn(`${DEBUG_APPODEAL_LOG_PREFIX} ${message}`, error);
 }
 
 function sanitizePersistedCount(value: unknown) {
@@ -368,76 +414,53 @@ function canShowAdsNow() {
   );
 }
 
-function canShowBannerAdsNow() {
+function getAppodealAppKey() {
+  const appKey =
+    Platform.OS === 'ios' ? appodealAppKeys.ios : appodealAppKeys.android;
+
+  return appKey.trim().length > 0 ? appKey : null;
+}
+
+export function isAppodealAdsConfigured() {
+  return getAppodealAppKey() !== null;
+}
+
+export function isAppodealAdsInitialized() {
+  return appodealInitialized;
+}
+
+export function getBannerAdsGateReason() {
   const adsPolicy = getAppAdsPolicy();
 
-  return canShowAdsNow() && adsPolicy.bannerEnabled;
+  if (
+    !ADS_ENABLED ||
+    !adsPolicy.adsEnabled ||
+    !adsPolicy.bannerEnabled ||
+    !adStateHydrated ||
+    getFirstLaunchAdGraceRemainingMs() > 0
+  ) {
+    return 'not_eligible';
+  }
+
+  if (!isAppodealAdsConfigured()) {
+    return 'missing_app_key';
+  }
+
+  if (!isAppodealAdsInitialized()) {
+    return 'not_initialized';
+  }
+
+  return null;
+}
+
+function canShowBannerAdsNow() {
+  return getBannerAdsGateReason() === null;
 }
 
 function canShowInterstitialAdsNow() {
   const adsPolicy = getAppAdsPolicy();
 
   return canShowAdsNow() && adsPolicy.interstitialsEnabled;
-}
-
-function getProductionBannerAdUnitId() {
-  const unitId =
-    Platform.OS === 'ios'
-      ? productionBannerUnitIds.ios
-      : productionBannerUnitIds.android;
-
-  return unitId.trim().length > 0 ? unitId : null;
-}
-
-function getProductionInterstitialAdUnitId() {
-  const unitId =
-    Platform.OS === 'ios'
-      ? productionInterstitialUnitIds.ios
-      : productionInterstitialUnitIds.android;
-
-  return unitId.trim().length > 0 ? unitId : null;
-}
-
-export function getBannerAdUnitId() {
-  if (!canShowBannerAdsNow()) {
-    return null;
-  }
-
-  if (__DEV__) {
-    return TestIds.ADAPTIVE_BANNER;
-  }
-
-  return getProductionBannerAdUnitId();
-}
-
-function getInterstitialAdUnitId() {
-  if (!ADS_ENABLED) {
-    return null;
-  }
-
-  if (__DEV__) {
-    return TestIds.INTERSTITIAL;
-  }
-
-  return getProductionInterstitialAdUnitId();
-}
-
-function getInterstitialAd() {
-  if (interstitialAd) {
-    return interstitialAd;
-  }
-
-  const interstitialAdUnitId = getInterstitialAdUnitId();
-
-  if (!interstitialAdUnitId) {
-    return null;
-  }
-
-  interstitialAd = InterstitialAd.createForAdRequest(interstitialAdUnitId, {
-    requestNonPersonalizedAdsOnly: true,
-  });
-
-  return interstitialAd;
 }
 
 function runPendingInterstitialAction() {
@@ -448,16 +471,123 @@ function runPendingInterstitialAction() {
   action?.();
 }
 
-function attachInterstitialListeners() {
-  const nextInterstitialAd = getInterstitialAd();
-
-  if (!nextInterstitialAd || interstitialListenersAttached) {
+function setAppodealInitialized(nextValue: boolean) {
+  if (appodealInitialized === nextValue) {
     return;
   }
 
-  interstitialListenersAttached = true;
+  appodealInitialized = nextValue;
+  notifyAdAvailabilityListeners();
+}
 
-  nextInterstitialAd.addAdEventListener(AdEventType.LOADED, () => {
+function refreshAppodealInitialized() {
+  if (!isAppodealAdsConfigured()) {
+    setAppodealInitialized(false);
+    return false;
+  }
+
+  try {
+    setAppodealInitialized(
+      appodealInitialized || Appodeal.isInitialized(APPODEAL_AD_TYPES),
+    );
+  } catch {
+    return appodealInitialized;
+  }
+
+  return appodealInitialized;
+}
+
+function trackInterstitialSkipped(
+  placement: string,
+  reason: string,
+  params: Record<string, string | number | boolean | null | undefined> = {},
+) {
+  trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_SKIPPED, placement, {
+    [ANALYTICS_PARAMS.AD_GATE_REASON]: reason,
+    [ANALYTICS_PARAMS.AD_RESULT]: 'skipped',
+    ...params,
+  });
+}
+
+function getAppodealProviderGateReason() {
+  if (!isAppodealAdsConfigured()) {
+    return 'missing_app_key';
+  }
+
+  if (!refreshAppodealInitialized()) {
+    return 'not_initialized';
+  }
+
+  return null;
+}
+
+function configureAppodealBeforeInitialization() {
+  if (__DEV__) {
+    Appodeal.setLogLevel(AppodealLogLevel.DEBUG);
+  }
+
+  Appodeal.setTesting(__DEV__);
+  Appodeal.setAutoCache(APPODEAL_INTERSTITIAL_AD_TYPE, true);
+  Appodeal.setAutoCache(APPODEAL_BANNER_AD_TYPE, true);
+  Appodeal.setSmartBanners(true);
+
+  try {
+    Appodeal.disableNetwork('admob', APPODEAL_AD_TYPES);
+  } catch (error) {
+    if (__DEV__) {
+      console.warn('Failed to disable Appodeal AdMob network', error);
+    }
+  }
+}
+
+async function initializeAppodealSdk(appKey: string) {
+  if (appodealInitialized || appodealInitializationRequested) {
+    return false;
+  }
+
+  const trackingAuthorizationStatus =
+    await requestAppTrackingTransparencyForAds();
+
+  if (__DEV__ && Platform.OS === 'ios') {
+    logAppodealDebug(
+      `ATT authorization status before Appodeal initialization: ${trackingAuthorizationStatus}`,
+    );
+  }
+
+  if (appodealInitialized || appodealInitializationRequested) {
+    return false;
+  }
+
+  attachAppodealListeners();
+  configureAppodealBeforeInitialization();
+  appodealInitializationRequested = true;
+  Appodeal.initialize(appKey, APPODEAL_AD_TYPES);
+  refreshAppodealInitialized();
+
+  return true;
+}
+
+function attachAppodealListeners() {
+  if (appodealListenersAttached) {
+    return;
+  }
+
+  appodealListenersAttached = true;
+
+  Appodeal.addEventListener(AppodealSdkEvents.INITIALIZED, () => {
+    setAppodealInitialized(true);
+    preloadInterstitialAd();
+  });
+
+  Appodeal.addEventListener(AppodealBannerEvents.SHOWN, () => {
+    trackAnalyticsEvent(ANALYTICS_EVENTS.AD_IMPRESSION_RECORDED, {
+      [ANALYTICS_PARAMS.AD_FORMAT]: 'banner',
+      [ANALYTICS_PARAMS.AD_PLACEMENT]: INLINE_BANNER_PLACEMENT,
+      [ANALYTICS_PARAMS.AD_RESULT]: 'impression',
+    }).catch(() => undefined);
+  });
+
+  Appodeal.addEventListener(AppodealInterstitialEvents.LOADED, () => {
     interstitialLoaded = true;
     trackAdLifecycleEvent(
       ANALYTICS_EVENTS.AD_LOADED,
@@ -468,19 +598,45 @@ function attachInterstitialListeners() {
     );
   });
 
-  nextInterstitialAd.addAdEventListener(AdEventType.CLOSED, () => {
-    const placement = pendingInterstitialPlacement ?? 'unknown';
-
+  Appodeal.addEventListener(AppodealInterstitialEvents.FAILED_TO_LOAD, error => {
     interstitialLoaded = false;
-    interstitialShowing = false;
-    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_CLOSED, placement, {
-      [ANALYTICS_PARAMS.AD_RESULT]: 'closed',
-    });
-    runPendingInterstitialAction();
-    nextInterstitialAd.load();
+    trackAdLifecycleEvent(
+      ANALYTICS_EVENTS.AD_FAILED,
+      pendingInterstitialPlacement ?? 'preload',
+      {
+        ...getErrorAnalyticsParams(error),
+        [ANALYTICS_PARAMS.AD_RESULT]: 'failed',
+      },
+    );
   });
 
-  nextInterstitialAd.addAdEventListener(AdEventType.ERROR, error => {
+  Appodeal.addEventListener(AppodealInterstitialEvents.EXPIRED, () => {
+    const placement = pendingInterstitialPlacement ?? 'preload';
+
+    interstitialLoaded = false;
+    trackInterstitialSkipped(placement, 'expired');
+
+    if (interstitialShowing) {
+      interstitialShowing = false;
+      runPendingInterstitialAction();
+    }
+
+    preloadInterstitialAd();
+  });
+
+  Appodeal.addEventListener(AppodealInterstitialEvents.SHOWN, () => {
+    interstitialLoaded = false;
+    interstitialShowing = true;
+    trackAdLifecycleEvent(
+      ANALYTICS_EVENTS.AD_SHOWN,
+      pendingInterstitialPlacement ?? 'unknown',
+      {
+        [ANALYTICS_PARAMS.AD_RESULT]: 'shown',
+      },
+    );
+  });
+
+  Appodeal.addEventListener(AppodealInterstitialEvents.FAILED_TO_SHOW, error => {
     const placement = pendingInterstitialPlacement ?? 'unknown';
 
     interstitialLoaded = false;
@@ -490,7 +646,29 @@ function attachInterstitialListeners() {
       [ANALYTICS_PARAMS.AD_RESULT]: 'failed',
     });
     runPendingInterstitialAction();
-    nextInterstitialAd.load();
+    preloadInterstitialAd();
+  });
+
+  Appodeal.addEventListener(AppodealInterstitialEvents.CLICKED, () => {
+    trackAdLifecycleEvent(
+      ANALYTICS_EVENTS.AD_OPENED,
+      pendingInterstitialPlacement ?? 'unknown',
+      {
+        [ANALYTICS_PARAMS.AD_RESULT]: 'opened',
+      },
+    );
+  });
+
+  Appodeal.addEventListener(AppodealInterstitialEvents.CLOSED, () => {
+    const placement = pendingInterstitialPlacement ?? 'unknown';
+
+    interstitialLoaded = false;
+    interstitialShowing = false;
+    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_CLOSED, placement, {
+      [ANALYTICS_PARAMS.AD_RESULT]: 'closed',
+    });
+    runPendingInterstitialAction();
+    preloadInterstitialAd();
   });
 }
 
@@ -504,23 +682,26 @@ export function preloadInterstitialAd(placement = 'preload') {
     return;
   }
 
-  const nextInterstitialAd = getInterstitialAd();
+  const providerGateReason = getAppodealProviderGateReason();
 
-  if (!nextInterstitialAd) {
-    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_SKIPPED, placement, {
-      [ANALYTICS_PARAMS.AD_GATE_REASON]: 'missing_unit_id',
-      [ANALYTICS_PARAMS.AD_RESULT]: 'skipped',
-    });
+  if (providerGateReason) {
+    trackInterstitialSkipped(placement, providerGateReason);
     return;
   }
-
-  attachInterstitialListeners();
 
   if (!interstitialLoaded && !interstitialShowing) {
     trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_LOAD_STARTED, placement, {
       [ANALYTICS_PARAMS.AD_RESULT]: 'loading',
     });
-    nextInterstitialAd.load();
+
+    try {
+      Appodeal.cache(APPODEAL_INTERSTITIAL_AD_TYPE);
+    } catch (error) {
+      trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_FAILED, placement, {
+        ...getErrorAnalyticsParams(error),
+        [ANALYTICS_PARAMS.AD_RESULT]: 'failed',
+      });
+    }
   }
 }
 
@@ -535,20 +716,30 @@ function tryShowInterstitialBefore(action: () => void, placement = 'manual') {
     return false;
   }
 
-  const nextInterstitialAd = getInterstitialAd();
+  const providerGateReason = getAppodealProviderGateReason();
 
-  if (!nextInterstitialAd) {
-    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_SKIPPED, placement, {
-      [ANALYTICS_PARAMS.AD_GATE_REASON]: 'missing_unit_id',
-      [ANALYTICS_PARAMS.AD_RESULT]: 'skipped',
+  if (providerGateReason) {
+    trackInterstitialSkipped(placement, providerGateReason);
+    action();
+    return false;
+  }
+
+  let isLoaded = interstitialLoaded;
+  let canShow = false;
+
+  try {
+    isLoaded = isLoaded || Appodeal.isLoaded(APPODEAL_INTERSTITIAL_AD_TYPE);
+    canShow = Appodeal.canShow(APPODEAL_INTERSTITIAL_AD_TYPE, placement);
+  } catch (error) {
+    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_FAILED, placement, {
+      ...getErrorAnalyticsParams(error),
+      [ANALYTICS_PARAMS.AD_RESULT]: 'failed',
     });
     action();
     return false;
   }
 
-  attachInterstitialListeners();
-
-  if (!interstitialLoaded || interstitialShowing) {
+  if (!isLoaded || !canShow || interstitialShowing) {
     trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_SKIPPED, placement, {
       [ANALYTICS_PARAMS.AD_GATE_REASON]: interstitialShowing
         ? 'already_showing'
@@ -563,10 +754,18 @@ function tryShowInterstitialBefore(action: () => void, placement = 'manual') {
   pendingInterstitialAction = action;
   pendingInterstitialPlacement = placement;
   interstitialShowing = true;
-  trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_SHOWN, placement, {
-    [ANALYTICS_PARAMS.AD_RESULT]: 'shown',
-  });
-  nextInterstitialAd.show();
+
+  try {
+    Appodeal.show(APPODEAL_INTERSTITIAL_AD_TYPE, placement);
+  } catch (error) {
+    interstitialShowing = false;
+    trackAdLifecycleEvent(ANALYTICS_EVENTS.AD_FAILED, placement, {
+      ...getErrorAnalyticsParams(error),
+      [ANALYTICS_PARAMS.AD_RESULT]: 'failed',
+    });
+    runPendingInterstitialAction();
+    return false;
+  }
 
   return true;
 }
@@ -795,12 +994,200 @@ export function useCanShowAds() {
   return canShowAds;
 }
 
-export function initializeGoogleMobileAds() {
+function cleanupDebugInterstitialListeners() {
+  if (debugInterstitialCleanupTimeout) {
+    clearTimeout(debugInterstitialCleanupTimeout);
+    debugInterstitialCleanupTimeout = null;
+  }
+
+  debugInterstitialListeners?.forEach(listener => {
+    listener.remove();
+  });
+  debugInterstitialListeners = null;
+  shouldShowDebugInterstitialWhenLoaded = false;
+}
+
+function debugShowLoadedAppodealInterstitial() {
+  if (!__DEV__ || Platform.OS !== 'ios') {
+    return false;
+  }
+
+  let canShow = false;
+
+  try {
+    canShow = Appodeal.canShow(
+      APPODEAL_INTERSTITIAL_AD_TYPE,
+      DEBUG_INTERSTITIAL_PLACEMENT,
+    );
+    logAppodealDebug(`Interstitial canShow status: ${canShow}`);
+  } catch (error) {
+    warnAppodealDebug('Failed to read interstitial canShow status.', error);
+    cleanupDebugInterstitialListeners();
+    return false;
+  }
+
+  if (!canShow) {
+    warnAppodealDebug('Interstitial show skipped: canShow=false.');
+    cleanupDebugInterstitialListeners();
+    return false;
+  }
+
+  try {
+    shouldShowDebugInterstitialWhenLoaded = false;
+    Appodeal.show(APPODEAL_INTERSTITIAL_AD_TYPE, DEBUG_INTERSTITIAL_PLACEMENT);
+    logAppodealDebug('Interstitial show requested.');
+    return true;
+  } catch (error) {
+    warnAppodealDebug('Interstitial show request failed.', error);
+    cleanupDebugInterstitialListeners();
+    return false;
+  }
+}
+
+function debugCacheAppodealInterstitial() {
+  shouldShowDebugInterstitialWhenLoaded = true;
+
+  try {
+    Appodeal.cache(APPODEAL_INTERSTITIAL_AD_TYPE);
+    logAppodealDebug('Interstitial cache requested.');
+  } catch (error) {
+    warnAppodealDebug('Interstitial cache request failed.', error);
+    cleanupDebugInterstitialListeners();
+  }
+}
+
+function debugLoadOrShowAppodealInterstitial() {
+  let isLoaded = false;
+
+  try {
+    isLoaded = Appodeal.isLoaded(APPODEAL_INTERSTITIAL_AD_TYPE);
+    logAppodealDebug(`Interstitial loaded status: ${isLoaded}`);
+  } catch (error) {
+    warnAppodealDebug('Failed to read interstitial loaded status.', error);
+    cleanupDebugInterstitialListeners();
+    return;
+  }
+
+  if (isLoaded) {
+    interstitialLoaded = true;
+    debugShowLoadedAppodealInterstitial();
+    return;
+  }
+
+  debugCacheAppodealInterstitial();
+}
+
+function attachDebugInterstitialListeners() {
+  cleanupDebugInterstitialListeners();
+
+  debugInterstitialListeners = [
+    Appodeal.addEventListener(AppodealSdkEvents.INITIALIZED, () => {
+      setAppodealInitialized(true);
+      logAppodealDebug('SDK initialized event received.');
+      debugLoadOrShowAppodealInterstitial();
+    }),
+    Appodeal.addEventListener(AppodealInterstitialEvents.LOADED, () => {
+      interstitialLoaded = true;
+      logAppodealDebug('Interstitial loaded.');
+
+      if (shouldShowDebugInterstitialWhenLoaded) {
+        debugShowLoadedAppodealInterstitial();
+      }
+    }),
+    Appodeal.addEventListener(AppodealInterstitialEvents.FAILED_TO_LOAD, error => {
+      interstitialLoaded = false;
+      warnAppodealDebug('Interstitial failed to load.', error);
+      cleanupDebugInterstitialListeners();
+    }),
+    Appodeal.addEventListener(AppodealInterstitialEvents.EXPIRED, () => {
+      interstitialLoaded = false;
+      logAppodealDebug('Interstitial expired.');
+      cleanupDebugInterstitialListeners();
+    }),
+    Appodeal.addEventListener(AppodealInterstitialEvents.SHOWN, () => {
+      interstitialLoaded = false;
+      interstitialShowing = true;
+      logAppodealDebug('Interstitial shown.');
+    }),
+    Appodeal.addEventListener(AppodealInterstitialEvents.FAILED_TO_SHOW, error => {
+      interstitialLoaded = false;
+      interstitialShowing = false;
+      warnAppodealDebug('Interstitial failed to show.', error);
+      cleanupDebugInterstitialListeners();
+    }),
+    Appodeal.addEventListener(AppodealInterstitialEvents.CLOSED, () => {
+      interstitialLoaded = false;
+      interstitialShowing = false;
+      logAppodealDebug('Interstitial closed.');
+      cleanupDebugInterstitialListeners();
+    }),
+  ];
+
+  debugInterstitialCleanupTimeout = setTimeout(() => {
+    logAppodealDebug('Debug interstitial listener cleanup timeout reached.');
+    cleanupDebugInterstitialListeners();
+  }, DEBUG_INTERSTITIAL_LISTENER_TIMEOUT_MS);
+}
+
+export async function debugShowAppodealInterstitial() {
+  if (!__DEV__) {
+    return;
+  }
+
+  logAppodealDebug('Test button pressed.');
+
+  if (Platform.OS !== 'ios') {
+    logAppodealDebug(
+      'Skipped: Appodeal interstitial debug test is iOS-only.',
+    );
+    return;
+  }
+
+  const appKey = getAppodealAppKey();
+
+  if (!appKey) {
+    warnAppodealDebug('Skipped: missing Appodeal iOS app key.');
+    return;
+  }
+
+  attachAppodealListeners();
+  attachDebugInterstitialListeners();
+
+  let sdkInitialized = false;
+
+  try {
+    sdkInitialized = Appodeal.isInitialized(APPODEAL_INTERSTITIAL_AD_TYPE);
+    logAppodealDebug(`SDK initialized status: ${sdkInitialized}`);
+  } catch (error) {
+    warnAppodealDebug('Failed to read Appodeal SDK initialized status.', error);
+  }
+
+  if (!sdkInitialized) {
+    const didRequestInitialization = await initializeAppodealSdk(appKey);
+
+    if (didRequestInitialization) {
+      logAppodealDebug(
+        'SDK initialization requested for interstitial and banner test types.',
+      );
+    }
+
+    if (refreshAppodealInitialized()) {
+      debugLoadOrShowAppodealInterstitial();
+    }
+
+    return;
+  }
+
+  setAppodealInitialized(true);
+  debugLoadOrShowAppodealInterstitial();
+}
+
+export function initializeAppodealAds() {
   if (!initializationPromise) {
     initializationPromise = Promise.all([
       ensureAdStateHydrated(),
       initializeAdsPolicy(),
-    ]).then(([, adsPolicy]) => {
+    ]).then(async ([, adsPolicy]) => {
       notifyAdAvailabilityListeners();
 
       if (
@@ -808,18 +1195,23 @@ export function initializeGoogleMobileAds() {
         !adsPolicy.adsEnabled ||
         (!adsPolicy.bannerEnabled && !adsPolicy.interstitialsEnabled)
       ) {
-        return null;
+        return 'ads_disabled';
       }
 
-      return mobileAds()
-        .setRequestConfiguration({
-          testDeviceIdentifiers: __DEV__ ? ['EMULATOR'] : [],
-        })
-        .then(() => mobileAds().initialize())
-        .then(result => {
-          preloadInterstitialAd();
-          return result;
-        });
+      const appKey = getAppodealAppKey();
+
+      if (!appKey) {
+        trackInterstitialSkipped('app_start', 'missing_app_key');
+        return 'missing_app_key';
+      }
+
+      await initializeAppodealSdk(appKey);
+
+      if (appodealInitialized) {
+        preloadInterstitialAd();
+      }
+
+      return 'appodeal_initialize_requested';
     });
   }
 

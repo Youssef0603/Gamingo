@@ -1,3 +1,7 @@
+source 'https://github.com/appodeal/CocoaPods.git'
+source 'https://github.com/bidon-io/CocoaPods-Specs.git'
+source 'https://cdn.cocoapods.org'
+
 # Resolve react_native_pods.rb with node to allow for hoisting
 require Pod::Executable.execute_command('node', ['-p',
   'require.resolve(
@@ -28,11 +32,10 @@ end
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
-linkage = ENV['USE_FRAMEWORKS']
-if linkage != nil
-  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
-  use_frameworks! :linkage => linkage.to_sym
-end
+linkage = ENV['USE_FRAMEWORKS'] || 'static'
+Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+use_frameworks! :linkage => linkage.to_sym
+$RNFirebaseAsStaticFramework = true
 
 target 'PlayCall' do
   use_expo_modules!(exclude: ['expo'])
@@ -68,6 +71,38 @@ target 'PlayCall' do
     )
 
     installer.pods_project.targets.each do |target|
+      if target.name.start_with?('RNFB')
+        target.build_configurations.each do |config|
+          config.build_settings['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
+        end
+
+        prefix_header_path = File.join(__dir__, 'Pods', 'Target Support Files', target.name, "#{target.name}-prefix.pch")
+        if File.exist?(prefix_header_path)
+          prefix_header = File.read(prefix_header_path)
+          required_imports = [
+            '#import <React/RCTBridgeModule.h>',
+            '#import <React/RCTEventEmitter.h>'
+          ]
+          missing_imports = required_imports.reject { |line| prefix_header.include?(line) }
+
+          unless missing_imports.empty?
+            File.open(prefix_header_path, 'a') do |file|
+              file.puts
+              missing_imports.each { |line| file.puts(line) }
+            end
+          end
+        end
+      end
+
+      if target.name == 'RNStoreReview'
+        target.build_configurations.each do |config|
+          header_search_paths = config.build_settings['HEADER_SEARCH_PATHS'] ||= ['$(inherited)']
+          header_search_paths = [header_search_paths] unless header_search_paths.is_a?(Array)
+          header_search_paths << '$(OBJECT_FILE_DIR_normal)/$(CURRENT_ARCH)'
+          config.build_settings['HEADER_SEARCH_PATHS'] = header_search_paths.uniq
+        end
+      end
+
       next unless target.name == 'EXConstants'
 
       target.shell_script_build_phases.each do |phase|
