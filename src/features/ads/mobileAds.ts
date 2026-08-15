@@ -33,7 +33,7 @@ export const ADS_ENABLED = !__DEV__ || SHOW_ADS_IN_DEVELOPMENT;
 
 const appodealAppKeys = {
   android: '',
-  ios: 'fcd4631968342d89579fba045dccb1533ce606c6f81a27ef',
+  ios: 'c0d618218a515459ca73f9c17198480092749772c045247d',
 } as const;
 
 type PersistedAdsState = {

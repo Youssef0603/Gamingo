@@ -274,7 +274,7 @@ describe('mobileAds', () => {
     expect(mobileAds.isAppodealAdsConfigured()).toBe(true);
     expect(mobileAds.getBannerAdsGateReason()).toBeNull();
     expect(mockAppodeal.initialize).toHaveBeenCalledWith(
-      'fcd4631968342d89579fba045dccb1533ce606c6f81a27ef',
+      'c0d618218a515459ca73f9c17198480092749772c045247d',
       5,
     );
     expect(mockAppodeal.setLogLevel).toHaveBeenCalledWith('debug');
@@ -309,7 +309,7 @@ describe('mobileAds', () => {
       mockAppTrackingTransparency.requestTrackingAuthorization,
     ).not.toHaveBeenCalled();
     expect(mockAppodeal.initialize).toHaveBeenCalledWith(
-      'fcd4631968342d89579fba045dccb1533ce606c6f81a27ef',
+      'c0d618218a515459ca73f9c17198480092749772c045247d',
       5,
     );
   });
@@ -358,7 +358,7 @@ describe('mobileAds', () => {
     expect(mockAppodeal.setLogLevel).toHaveBeenCalledWith('debug');
     expect(mockAppodeal.setTesting).toHaveBeenCalledWith(true);
     expect(mockAppodeal.initialize).toHaveBeenCalledWith(
-      'fcd4631968342d89579fba045dccb1533ce606c6f81a27ef',
+      'c0d618218a515459ca73f9c17198480092749772c045247d',
       5,
     );
     expect(
