@@ -63,7 +63,7 @@ react {
  */
 def enableProguardInReleaseBuilds = false
 def appVersionCode = (findProperty("LAGLINGO_VERSION_CODE") ?: "25").toInteger()
-def appVersionName = (findProperty("LAGLINGO_VERSION_NAME") ?: "1.0.4").toString()
+def appVersionName = (findProperty("LAGLINGO_VERSION_NAME") ?: "1.0.5").toString()
 def releaseKeystoreProperties = new Properties()
 def releaseKeystorePropertiesFile = rootProject.file("keystore.properties")
 
