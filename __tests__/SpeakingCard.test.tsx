@@ -21,6 +21,10 @@ jest.mock('../src/features/reviews/appReview', () => ({
   trackReviewMilestone: jest.fn(),
 }));
 
+jest.mock('../src/features/notifications', () => ({
+  trackPracticeReminderMilestone: jest.fn(),
+}));
+
 jest.mock('../src/features/practice/usePractice', () => ({
   usePractice: jest.fn(() => ({
     cancelPractice: mockCancelPractice,

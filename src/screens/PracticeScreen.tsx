@@ -24,6 +24,7 @@ import {
   showAdBeforeRandomPractice,
   showAdOnItemClick,
 } from '../features/ads/mobileAds';
+import { PracticeReminderPrompt } from '../features/notifications';
 import AddPhraseModal from '../features/phrases/AddPhraseModal';
 import PracticeModal from '../features/practice/PracticeModal';
 import RandomPracticeModal from '../features/practice/RandomPracticeModal';
@@ -116,6 +117,7 @@ function PracticeScreen() {
   const {
     acknowledgeToxicCategoryDisclosure,
     addCustomPhrase,
+    bottomSheetContent,
     deleteCustomPhrase,
     isFavorite,
     hasAcknowledgedToxicCategoryDisclosure,
@@ -373,6 +375,12 @@ function PracticeScreen() {
     selectedCategory === 'toxic' && !hasAcknowledgedToxicCategoryDisclosure;
   const shouldShowToxicListOverlay =
     shouldMaskToxicCategoryContent && filteredPhrases.length > 0;
+  const isReminderPromptInteractionBlocking = Boolean(
+    activePhrase ||
+      bottomSheetContent ||
+      isLookupModalVisible ||
+      randomPracticeSession,
+  );
 
   useEffect(() => {
     if (!shouldShowToxicListOverlay || toxicDisclosureViewedRef.current) {
@@ -1018,6 +1026,9 @@ function PracticeScreen() {
         phrases={randomPracticeSession?.phrases ?? []}
         sessionId={randomPracticeSession?.id ?? 0}
         visible={Boolean(randomPracticeSession)}
+      />
+      <PracticeReminderPrompt
+        isInteractionBlocking={isReminderPromptInteractionBlocking}
       />
     </Screen>
   );

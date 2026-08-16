@@ -3,12 +3,17 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 export const STORAGE_KEYS = {
   adsState: 'adsState',
   appState: 'appState',
+  practiceReminderState: 'practiceReminderState',
   reviewState: 'reviewState',
 } as const;
 
 const LEGACY_STORAGE_KEYS = {
   adsState: ['com.gamingo.app.ads-state', 'gamingo.ads-state'],
   appState: ['com.gamingo.app.app-state', 'playcall.app-state'],
+  practiceReminderState: [
+    'com.gamingo.app.practice-reminder-state',
+    'playcall.practice-reminder-state',
+  ],
   reviewState: ['com.gamingo.app.review-state', 'playcall.review-state'],
 } as const satisfies Record<keyof typeof STORAGE_KEYS, readonly string[]>;
 

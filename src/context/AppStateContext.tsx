@@ -16,6 +16,7 @@ import {
   subscribeToAdsPolicyUpdates,
 } from '../features/ads/adsPolicy';
 import { trackFavoriteSaveAction } from '../features/ads/mobileAds';
+import { trackPracticeReminderMilestone } from '../features/notifications';
 import { trackReviewMilestone } from '../features/reviews/appReview';
 import {
   ANALYTICS_EVENTS,
@@ -647,6 +648,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
 
     if (shouldSaveToFavorites) {
       trackFavoriteSaveAction();
+      trackPracticeReminderMilestone('favorite-save');
       trackReviewMilestone('favorite-save');
     }
   };
@@ -699,6 +701,7 @@ export function AppStateProvider({ children }: PropsWithChildren) {
         [ANALYTICS_PARAMS.UI_ACTION]: 'save',
       }).catch(() => undefined);
       trackFavoriteSaveAction();
+      trackPracticeReminderMilestone('favorite-save');
       trackReviewMilestone('favorite-save');
     }
   };

@@ -10,6 +10,7 @@ import {
 import type { GestureResponderEvent } from 'react-native';
 
 import { Icon } from '../../components/ui';
+import { trackPracticeReminderMilestone } from '../notifications';
 import { trackReviewMilestone } from '../reviews/appReview';
 import { stop as stopSpeechRecognition, stopSpeaking } from '../../services';
 import {
@@ -248,6 +249,7 @@ function RandomPracticeModal({
     }).catch(() => undefined);
 
     if (successfulAttemptCountRef.current === phrases.length) {
+      trackPracticeReminderMilestone('random-practice-complete');
       trackReviewMilestone('random-practice-complete');
     }
   }, [isComplete, phrases.length, visible]);

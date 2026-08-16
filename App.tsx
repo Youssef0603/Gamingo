@@ -6,6 +6,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import AppNavigator from './src/navigation/AppNavigator';
 import { initializeGoogleMobileAds } from './src/features/ads/mobileAds';
+import { initializePracticeReminders } from './src/features/notifications';
 import { initializeAppReviewState } from './src/features/reviews/appReview';
 import {
   ANALYTICS_EVENTS,
@@ -59,6 +60,12 @@ function App() {
           console.warn('Google Mobile Ads failed to initialize', error);
         }
       });
+
+    initializePracticeReminders().catch(error => {
+      if (__DEV__) {
+        console.warn('Practice reminders failed to initialize', error);
+      }
+    });
 
     const subscription = AppState.addEventListener('change', nextAppState => {
       trackAnalyticsEvent(ANALYTICS_EVENTS.APP_STATE_CHANGED, {

@@ -11,6 +11,7 @@ import BootSplash from 'react-native-bootsplash';
 import BottomSheet from '../components/BottomSheet';
 import { Icon } from '../components/ui';
 import { AppStateProvider } from '../context/AppStateContext';
+import { subscribeToPracticeReminderOpened } from '../features/notifications';
 import { DebugScreen, FavoritesScreen, PracticeScreen } from '../screens';
 import {
   ANALYTICS_EVENTS,
@@ -103,6 +104,16 @@ function getScreenOptions({
 function AppNavigator() {
   const navigationRef = useNavigationContainerRef<RootTabParamList>();
   const routeNameRef = React.useRef<string | undefined>(undefined);
+
+  React.useEffect(
+    () =>
+      subscribeToPracticeReminderOpened(() => {
+        if (navigationRef.isReady()) {
+          navigationRef.navigate('Practice');
+        }
+      }),
+    [navigationRef],
+  );
 
   const trackCurrentScreen = React.useCallback(() => {
     const currentRouteName = navigationRef.getCurrentRoute()?.name;

@@ -73,6 +73,12 @@ jest.mock('../src/features/reviews/appReview', () => ({
   initializeAppReviewState: jest.fn(() => Promise.resolve()),
   trackReviewMilestone: jest.fn(),
 }));
+jest.mock('../src/features/notifications', () => ({
+  initializePracticeReminders: jest.fn(() => Promise.resolve()),
+  PracticeReminderPrompt: () => null,
+  subscribeToPracticeReminderOpened: jest.fn(() => jest.fn()),
+  trackPracticeReminderMilestone: jest.fn(),
+}));
 jest.mock('@react-native-firebase/remote-config', () => ({
   activate: jest.fn(() => Promise.resolve(true)),
   ensureInitialized: jest.fn(() => Promise.resolve()),

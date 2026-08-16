@@ -4,16 +4,19 @@ import { useIsFocused } from '@react-navigation/native';
 import JSONTree from 'react-native-json-tree';
 import {
   ActivityIndicator,
+  Alert,
   Pressable,
   RefreshControl,
   ScrollView,
   StyleSheet,
   Text,
+  TextInput,
   View,
 } from 'react-native';
 
 import { Screen } from '../components/ui';
 import { useAppStateDebugSnapshot } from '../context/AppStateContext';
+import { scheduleDebugPracticeReminderNotification } from '../features/notifications';
 import {
   ANALYTICS_EVENTS,
   ANALYTICS_PARAMS,
@@ -115,6 +118,13 @@ function getTreeData(value: JsonTreeValue) {
   };
 }
 
+function formatDebugNotificationTime(triggerAtMs: number) {
+  return new Date(triggerAtMs).toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+}
+
 function DebugSectionCard({
   title,
   value,
@@ -148,8 +158,14 @@ function DebugScreen() {
     Record<string, unknown>
   >({});
   const [isLoading, setIsLoading] = useState(true);
+  const [isNotificationScheduling, setIsNotificationScheduling] =
+    useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const [notificationDelayMinutes, setNotificationDelayMinutes] = useState('1');
+  const [notificationStatus, setNotificationStatus] = useState<string | null>(
+    null,
+  );
 
   const globalStateSnapshot = useMemo(
     () => ({
@@ -235,6 +251,48 @@ function DebugScreen() {
     }
   };
 
+  const scheduleDebugNotification = async (delayMinutes: number) => {
+    setIsNotificationScheduling(true);
+    setNotificationStatus(null);
+
+    try {
+      const result = await scheduleDebugPracticeReminderNotification({
+        delayMinutes,
+        source: 'debug_screen',
+      });
+      const statusText =
+        delayMinutes === 0
+          ? 'Notification sent.'
+          : `Notification scheduled for ${formatDebugNotificationTime(
+              result.triggerAtMs,
+            )}.`;
+
+      setNotificationStatus(statusText);
+      await refreshAsyncStorageEntries();
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : 'Failed to schedule notification.';
+
+      setNotificationStatus(errorMessage);
+      Alert.alert('Notification test failed', errorMessage);
+    } finally {
+      setIsNotificationScheduling(false);
+    }
+  };
+
+  const scheduleDelayedDebugNotification = () => {
+    const delayMinutes = Number(notificationDelayMinutes.trim());
+
+    if (!Number.isFinite(delayMinutes) || delayMinutes < 0) {
+      Alert.alert('Invalid delay', 'Enter a number of minutes, like 1.');
+      return;
+    }
+
+    scheduleDebugNotification(delayMinutes).catch(() => undefined);
+  };
+
   return (
     <Screen padded={false} edges={['top']}>
       <ScrollView
@@ -265,6 +323,63 @@ function DebugScreen() {
           >
             <Text style={styles.refreshButtonText}>Refresh</Text>
           </Pressable>
+        </View>
+
+        <View style={styles.section}>
+          <View style={styles.sectionHeader}>
+            <Text style={styles.sectionTitle}>Notifications</Text>
+            <Text style={styles.sectionMeta}>local test</Text>
+          </View>
+
+          <View style={styles.itemCard}>
+            <Text style={styles.itemLabel}>Practice Reminder</Text>
+            <View style={styles.notificationActions}>
+              <Pressable
+                disabled={isNotificationScheduling}
+                onPress={() => scheduleDebugNotification(0)}
+                style={({ pressed }) => [
+                  styles.debugActionButton,
+                  isNotificationScheduling && styles.debugActionButtonDisabled,
+                  pressed && styles.debugActionButtonPressed,
+                ]}
+              >
+                <Text style={styles.debugActionButtonText}>Send Now</Text>
+              </Pressable>
+
+              <View style={styles.delayRow}>
+                <View style={styles.delayInputWrap}>
+                  <Text style={styles.delayInputLabel}>Minutes</Text>
+                  <TextInput
+                    keyboardType="decimal-pad"
+                    onChangeText={setNotificationDelayMinutes}
+                    placeholder="1"
+                    placeholderTextColor={theme.colors.mutedText}
+                    style={styles.delayInput}
+                    value={notificationDelayMinutes}
+                  />
+                </View>
+
+                <Pressable
+                  disabled={isNotificationScheduling}
+                  onPress={scheduleDelayedDebugNotification}
+                  style={({ pressed }) => [
+                    styles.debugActionButton,
+                    isNotificationScheduling &&
+                      styles.debugActionButtonDisabled,
+                    pressed && styles.debugActionButtonPressed,
+                  ]}
+                >
+                  <Text style={styles.debugActionButtonText}>Schedule</Text>
+                </Pressable>
+              </View>
+            </View>
+
+            {notificationStatus ? (
+              <Text style={styles.notificationStatus}>
+                {notificationStatus}
+              </Text>
+            ) : null}
+          </View>
         </View>
 
         <View style={styles.section}>
@@ -351,6 +466,65 @@ const styles = StyleSheet.create({
     color: theme.colors.primary,
     fontSize: 14,
     fontWeight: '700',
+  },
+  debugActionButton: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.primary,
+    borderRadius: theme.radius.md,
+    minHeight: 46,
+    justifyContent: 'center',
+    paddingHorizontal: theme.spacing.lg,
+    paddingVertical: theme.spacing.sm,
+  },
+  debugActionButtonDisabled: {
+    opacity: 0.52,
+  },
+  debugActionButtonPressed: {
+    opacity: 0.82,
+  },
+  debugActionButtonText: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '800',
+  },
+  delayInput: {
+    color: theme.colors.text,
+    flex: 1,
+    fontSize: 16,
+    fontWeight: '700',
+    minWidth: 64,
+    padding: 0,
+  },
+  delayInputLabel: {
+    color: theme.colors.mutedText,
+    fontSize: 12,
+    fontWeight: '700',
+    marginBottom: 2,
+    textTransform: 'uppercase',
+  },
+  delayInputWrap: {
+    backgroundColor: withAlpha(theme.colors.background, 0.76),
+    borderColor: theme.colors.border,
+    borderRadius: theme.radius.md,
+    borderWidth: 1,
+    flex: 1,
+    minHeight: 56,
+    minWidth: 110,
+    paddingHorizontal: theme.spacing.md,
+    paddingVertical: theme.spacing.sm,
+  },
+  delayRow: {
+    alignItems: 'stretch',
+    flexDirection: 'row',
+    gap: theme.spacing.sm,
+  },
+  notificationActions: {
+    gap: theme.spacing.md,
+  },
+  notificationStatus: {
+    ...theme.typography.caption,
+    color: theme.colors.mutedText,
+    marginTop: theme.spacing.md,
   },
   section: {
     marginBottom: theme.spacing.xl,

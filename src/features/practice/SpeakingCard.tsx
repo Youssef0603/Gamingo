@@ -3,6 +3,7 @@ import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import LottieView from 'lottie-react-native';
 
 import { Icon } from '../../components/ui';
+import { trackPracticeReminderMilestone } from '../notifications';
 import { trackReviewMilestone } from '../reviews/appReview';
 import { playSuccessSound } from '../../services';
 import {
@@ -143,6 +144,7 @@ function SpeakingCard({
 
     if (nextPracticeFlash.kind === 'success') {
       playSuccessSound().catch(() => undefined);
+      trackPracticeReminderMilestone('practice-success');
       if (trackReviewSuccess) {
         trackReviewMilestone('practice-success');
       }
