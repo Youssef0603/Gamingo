@@ -52,11 +52,14 @@ const mockAppodeal = {
   initialize: jest.fn(),
   isInitialized: jest.fn(() => true),
   isLoaded: jest.fn(() => false),
+  privacyOptionsRequirementStatus: jest.fn(() => 2),
+  requestConsentInfoUpdate: jest.fn(() => Promise.resolve(2)),
   setAutoCache: jest.fn(),
   setLogLevel: jest.fn(),
   setSmartBanners: jest.fn(),
   setTesting: jest.fn(),
   show: jest.fn(),
+  showPrivacyOptionsForm: jest.fn(() => Promise.resolve()),
 };
 
 const TEST_ADS_POLICY = {
@@ -120,6 +123,11 @@ jest.mock('react-native-appodeal', () => ({
     DEBUG: 'debug',
     NONE: 'none',
     VERBOSE: 'verbose',
+  },
+  AppodealPrivacyOptionsStatus: {
+    NOT_REQUIRED: 2,
+    REQUIRED: 1,
+    UNKNOWN: 0,
   },
   AppodealBanner: () => null,
   AppodealBannerEvents: {
@@ -198,6 +206,9 @@ describe('mobileAds', () => {
     mockAppodeal.canShow.mockReturnValue(false);
     mockAppodeal.isInitialized.mockReturnValue(true);
     mockAppodeal.isLoaded.mockReturnValue(false);
+    mockAppodeal.privacyOptionsRequirementStatus.mockReturnValue(2);
+    mockAppodeal.requestConsentInfoUpdate.mockResolvedValue(2);
+    mockAppodeal.showPrivacyOptionsForm.mockResolvedValue(undefined);
     mockAppTrackingTransparency.getTrackingAuthorizationStatus.mockResolvedValue(
       'unavailable',
     );
@@ -330,6 +341,95 @@ describe('mobileAds', () => {
     expect(mobileAds.isAppodealAdsConfigured()).toBe(false);
     expect(mobileAds.getBannerAdsGateReason()).toBe('missing_app_key');
     expect(mockAppodeal.initialize).not.toHaveBeenCalled();
+  });
+
+  it('keeps the Privacy Choices entry unavailable on Android', async () => {
+    const mobileAds = require('../src/features/ads/mobileAds');
+
+    await expect(
+      mobileAds.refreshAppodealPrivacyChoicesRequirement(),
+    ).resolves.toBe('unavailable');
+
+    expect(mockAppodeal.requestConsentInfoUpdate).not.toHaveBeenCalled();
+    expect(mockAppodeal.showPrivacyOptionsForm).not.toHaveBeenCalled();
+  });
+
+  it('reports Privacy Choices as required only after consent info update completes on iOS', async () => {
+    mockPlatformOS = 'ios';
+    mockStorage.set(
+      'adsState',
+      JSON.stringify({
+        favoriteSaveCount: 1,
+        hasSkippedFirstCustomWordAddAd: true,
+        itemClickCount: 2,
+        randomPracticeStartCount: 1,
+      }),
+    );
+    mockAppodeal.requestConsentInfoUpdate.mockResolvedValue(3);
+    mockAppodeal.privacyOptionsRequirementStatus.mockReturnValue(1);
+    const mobileAds = await loadMobileAdsModule();
+
+    await expect(
+      mobileAds.refreshAppodealPrivacyChoicesRequirement(),
+    ).resolves.toBe('required');
+
+    expect(mockAppodeal.requestConsentInfoUpdate).toHaveBeenCalledWith(
+      'c0d618218a515459ca73f9c17198480092749772c045247d',
+    );
+    expect(mockAppodeal.privacyOptionsRequirementStatus).toHaveBeenCalled();
+    expect(
+      mockAppodeal.requestConsentInfoUpdate.mock.invocationCallOrder[0],
+    ).toBeLessThan(
+      mockAppodeal.privacyOptionsRequirementStatus.mock.invocationCallOrder[0],
+    );
+    expect(mockAppodeal.showPrivacyOptionsForm).not.toHaveBeenCalled();
+  });
+
+  it('does not show Privacy Choices form when the status is unknown', async () => {
+    mockPlatformOS = 'ios';
+    mockStorage.set(
+      'adsState',
+      JSON.stringify({
+        favoriteSaveCount: 1,
+        hasSkippedFirstCustomWordAddAd: true,
+        itemClickCount: 2,
+        randomPracticeStartCount: 1,
+      }),
+    );
+    mockAppodeal.privacyOptionsRequirementStatus.mockReturnValue(0);
+    const mobileAds = await loadMobileAdsModule();
+
+    await expect(mobileAds.showAppodealPrivacyChoicesForm()).resolves.toBe(
+      false,
+    );
+
+    expect(mockAppodeal.showPrivacyOptionsForm).not.toHaveBeenCalled();
+  });
+
+  it('opens Privacy Choices form only from the explicit helper when required', async () => {
+    mockPlatformOS = 'ios';
+    mockStorage.set(
+      'adsState',
+      JSON.stringify({
+        favoriteSaveCount: 1,
+        hasSkippedFirstCustomWordAddAd: true,
+        itemClickCount: 2,
+        randomPracticeStartCount: 1,
+      }),
+    );
+    mockAppodeal.privacyOptionsRequirementStatus.mockReturnValue(1);
+    const mobileAds = await loadMobileAdsModule();
+
+    await expect(
+      mobileAds.refreshAppodealPrivacyChoicesRequirement(),
+    ).resolves.toBe('required');
+    expect(mockAppodeal.showPrivacyOptionsForm).not.toHaveBeenCalled();
+
+    await expect(mobileAds.showAppodealPrivacyChoicesForm()).resolves.toBe(
+      true,
+    );
+
+    expect(mockAppodeal.showPrivacyOptionsForm).toHaveBeenCalledTimes(1);
   });
 
   it('keeps the temporary Appodeal interstitial debug test inert on Android', async () => {

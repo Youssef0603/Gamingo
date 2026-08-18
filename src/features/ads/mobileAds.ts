@@ -6,6 +6,7 @@ import {
   AppodealBannerEvents,
   AppodealInterstitialEvents,
   AppodealLogLevel,
+  AppodealPrivacyOptionsStatus,
   AppodealSdkEvents,
 } from 'react-native-appodeal';
 import Appodeal from 'react-native-appodeal';
@@ -61,6 +62,11 @@ type AppodealInitializationResult =
   | 'appodeal_initialize_requested'
   | 'ads_disabled'
   | 'missing_app_key';
+type AppodealPrivacyChoicesRequirement =
+  | 'required'
+  | 'not_required'
+  | 'unknown'
+  | 'unavailable';
 type AppodealEventSubscription = {
   remove: () => void;
 };
@@ -90,8 +96,12 @@ let firstLaunchUsagePersistInterval: ReturnType<typeof setInterval> | null = nul
 let debugInterstitialListeners: AppodealEventSubscription[] | null = null;
 let debugInterstitialCleanupTimeout: ReturnType<typeof setTimeout> | null = null;
 let shouldShowDebugInterstitialWhenLoaded = false;
+let privacyChoicesRequirementStatus = AppodealPrivacyOptionsStatus.UNKNOWN;
+let privacyChoicesRefreshPromise: Promise<AppodealPrivacyChoicesRequirement> | null =
+  null;
 
 const adAvailabilityListeners = new Set<() => void>();
+const privacyChoicesRequirementListeners = new Set<() => void>();
 
 function trackAdLifecycleEvent(
   eventName: string,
@@ -173,6 +183,59 @@ function notifyAdAvailabilityListeners() {
   adAvailabilityListeners.forEach(listener => {
     listener();
   });
+}
+
+function notifyPrivacyChoicesRequirementListeners() {
+  privacyChoicesRequirementListeners.forEach(listener => {
+    listener();
+  });
+}
+
+function setPrivacyChoicesRequirementStatus(
+  nextStatus: AppodealPrivacyOptionsStatus,
+) {
+  if (privacyChoicesRequirementStatus === nextStatus) {
+    return;
+  }
+
+  privacyChoicesRequirementStatus = nextStatus;
+  notifyPrivacyChoicesRequirementListeners();
+}
+
+function getPrivacyChoicesRequirementLabel(
+  status: AppodealPrivacyOptionsStatus,
+) {
+  switch (status) {
+    case AppodealPrivacyOptionsStatus.REQUIRED:
+      return 'REQUIRED';
+    case AppodealPrivacyOptionsStatus.NOT_REQUIRED:
+      return 'NOT_REQUIRED';
+    case AppodealPrivacyOptionsStatus.UNKNOWN:
+    default:
+      return 'UNKNOWN';
+  }
+}
+
+function mapPrivacyChoicesRequirementStatus(
+  status: AppodealPrivacyOptionsStatus,
+): AppodealPrivacyChoicesRequirement {
+  switch (status) {
+    case AppodealPrivacyOptionsStatus.REQUIRED:
+      return 'required';
+    case AppodealPrivacyOptionsStatus.NOT_REQUIRED:
+      return 'not_required';
+    case AppodealPrivacyOptionsStatus.UNKNOWN:
+    default:
+      return 'unknown';
+  }
+}
+
+function getCurrentPrivacyChoicesRequirement() {
+  if (Platform.OS !== 'ios' || !isAppodealAdsConfigured()) {
+    return 'unavailable';
+  }
+
+  return mapPrivacyChoicesRequirementStatus(privacyChoicesRequirementStatus);
 }
 
 function clearScheduledAdAvailabilityUpdate() {
@@ -451,6 +514,123 @@ export function getBannerAdsGateReason() {
   }
 
   return null;
+}
+
+export async function refreshAppodealPrivacyChoicesRequirement(): Promise<AppodealPrivacyChoicesRequirement> {
+  if (Platform.OS !== 'ios') {
+    setPrivacyChoicesRequirementStatus(AppodealPrivacyOptionsStatus.UNKNOWN);
+    return 'unavailable';
+  }
+
+  const appKey = getAppodealAppKey();
+
+  if (!appKey) {
+    setPrivacyChoicesRequirementStatus(AppodealPrivacyOptionsStatus.UNKNOWN);
+    return 'unavailable';
+  }
+
+  if (privacyChoicesRefreshPromise) {
+    return privacyChoicesRefreshPromise;
+  }
+
+  const nextRefreshPromise: Promise<AppodealPrivacyChoicesRequirement> =
+    initializeAppodealAds()
+    .then(async initializationResult => {
+      if (
+        initializationResult !== 'appodeal_initialize_requested' &&
+        !refreshAppodealInitialized()
+      ) {
+        setPrivacyChoicesRequirementStatus(AppodealPrivacyOptionsStatus.UNKNOWN);
+        logAppodealDebug(
+          `Privacy options status skipped: Appodeal initialization result is ${initializationResult}.`,
+        );
+        return 'unavailable';
+      }
+
+      const consentStatus = await Appodeal.requestConsentInfoUpdate(appKey);
+
+      logAppodealDebug(
+        `Consent info update completed with status: ${consentStatus}`,
+      );
+
+      const requirementStatus = Appodeal.privacyOptionsRequirementStatus();
+
+      setPrivacyChoicesRequirementStatus(requirementStatus);
+      logAppodealDebug(
+        `Privacy options requirement status: ${getPrivacyChoicesRequirementLabel(
+          requirementStatus,
+        )}`,
+      );
+
+      return mapPrivacyChoicesRequirementStatus(requirementStatus);
+    })
+    .catch(error => {
+      setPrivacyChoicesRequirementStatus(AppodealPrivacyOptionsStatus.UNKNOWN);
+      warnAppodealDebug('Consent info update failed.', error);
+      return 'unknown' as AppodealPrivacyChoicesRequirement;
+    })
+    .finally(() => {
+      privacyChoicesRefreshPromise = null;
+    });
+
+  privacyChoicesRefreshPromise = nextRefreshPromise;
+  return privacyChoicesRefreshPromise;
+}
+
+export async function showAppodealPrivacyChoicesForm() {
+  if (Platform.OS !== 'ios') {
+    return false;
+  }
+
+  if (getCurrentPrivacyChoicesRequirement() !== 'required') {
+    const requirement = await refreshAppodealPrivacyChoicesRequirement();
+
+    if (requirement !== 'required') {
+      logAppodealDebug(
+        `Privacy options form skipped: requirement status is ${requirement}.`,
+      );
+      return false;
+    }
+  }
+
+  try {
+    logAppodealDebug('Privacy options form opened.');
+    await Appodeal.showPrivacyOptionsForm();
+    logAppodealDebug('Privacy options form dismissed.');
+    refreshAppodealPrivacyChoicesRequirement().catch(() => undefined);
+    return true;
+  } catch (error) {
+    warnAppodealDebug('Privacy options form error.', error);
+    return false;
+  }
+}
+
+export function useShouldShowAppodealPrivacyChoices() {
+  const [shouldShow, setShouldShow] = useState(
+    () => getCurrentPrivacyChoicesRequirement() === 'required',
+  );
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const syncState = () => {
+      if (isMounted) {
+        setShouldShow(getCurrentPrivacyChoicesRequirement() === 'required');
+      }
+    };
+
+    privacyChoicesRequirementListeners.add(syncState);
+    refreshAppodealPrivacyChoicesRequirement()
+      .then(syncState)
+      .catch(() => undefined);
+
+    return () => {
+      isMounted = false;
+      privacyChoicesRequirementListeners.delete(syncState);
+    };
+  }, []);
+
+  return shouldShow;
 }
 
 function canShowBannerAdsNow() {
