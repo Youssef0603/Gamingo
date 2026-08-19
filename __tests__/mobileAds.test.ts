@@ -49,6 +49,7 @@ const mockAppodeal = {
   cache: jest.fn(),
   canShow: jest.fn(() => false),
   disableNetwork: jest.fn(),
+  hide: jest.fn(),
   initialize: jest.fn(),
   isInitialized: jest.fn(() => true),
   isLoaded: jest.fn(() => false),
@@ -290,6 +291,7 @@ describe('mobileAds', () => {
     );
     expect(mockAppodeal.setLogLevel).toHaveBeenCalledWith('debug');
     expect(mockAppodeal.setTesting).toHaveBeenCalledWith(true);
+    expect(mockAppodeal.setSmartBanners).toHaveBeenCalledWith(true);
     expect(
       mockAppTrackingTransparency.requestTrackingAuthorization.mock
         .invocationCallOrder[0],
@@ -325,7 +327,7 @@ describe('mobileAds', () => {
     );
   });
 
-  it('leaves Android ads unavailable until an Appodeal key is configured', async () => {
+  it('initializes Android Appodeal with the Android app key', async () => {
     mockStorage.set(
       'adsState',
       JSON.stringify({
@@ -338,19 +340,31 @@ describe('mobileAds', () => {
 
     const mobileAds = await loadMobileAdsModule();
 
-    expect(mobileAds.isAppodealAdsConfigured()).toBe(false);
-    expect(mobileAds.getBannerAdsGateReason()).toBe('missing_app_key');
-    expect(mockAppodeal.initialize).not.toHaveBeenCalled();
+    expect(mobileAds.isAppodealAdsConfigured()).toBe(true);
+    expect(mobileAds.getBannerAdsGateReason()).toBeNull();
+    expect(
+      mockAppTrackingTransparency.requestTrackingAuthorization,
+    ).not.toHaveBeenCalled();
+    expect(mockAppodeal.setLogLevel).toHaveBeenCalledWith('debug');
+    expect(mockAppodeal.setTesting).toHaveBeenCalledWith(true);
+    expect(mockAppodeal.setSmartBanners).toHaveBeenCalledWith(false);
+    expect(mockAppodeal.initialize).toHaveBeenCalledWith(
+      'ae83f5206ce5de67cc6de2662adc8fdb62217b2f5a190eb6',
+      5,
+    );
   });
 
-  it('keeps the Privacy Choices entry unavailable on Android', async () => {
+  it('checks the Privacy Choices requirement with the Android app key', async () => {
     const mobileAds = require('../src/features/ads/mobileAds');
 
     await expect(
       mobileAds.refreshAppodealPrivacyChoicesRequirement(),
-    ).resolves.toBe('unavailable');
+    ).resolves.toBe('not_required');
 
-    expect(mockAppodeal.requestConsentInfoUpdate).not.toHaveBeenCalled();
+    expect(mockAppodeal.requestConsentInfoUpdate).toHaveBeenCalledWith(
+      'ae83f5206ce5de67cc6de2662adc8fdb62217b2f5a190eb6',
+    );
+    expect(mockAppodeal.privacyOptionsRequirementStatus).toHaveBeenCalled();
     expect(mockAppodeal.showPrivacyOptionsForm).not.toHaveBeenCalled();
   });
 
@@ -432,14 +446,156 @@ describe('mobileAds', () => {
     expect(mockAppodeal.showPrivacyOptionsForm).toHaveBeenCalledTimes(1);
   });
 
-  it('keeps the temporary Appodeal interstitial debug test inert on Android', async () => {
+  it('uses the Appodeal interstitial debug test on Android without ads policy gates', async () => {
+    mockAppodeal.isInitialized.mockReturnValue(false);
     const mobileAds = require('../src/features/ads/mobileAds');
 
     await mobileAds.debugShowAppodealInterstitial();
 
-    expect(mockAppodeal.initialize).not.toHaveBeenCalled();
-    expect(mockAppodeal.cache).not.toHaveBeenCalled();
+    expect(mockAppodeal.setLogLevel).toHaveBeenCalledWith('debug');
+    expect(mockAppodeal.setTesting).toHaveBeenCalledWith(true);
+    expect(mockAppodeal.initialize).toHaveBeenCalledWith(
+      'ae83f5206ce5de67cc6de2662adc8fdb62217b2f5a190eb6',
+      5,
+    );
+    expect(
+      mockAppTrackingTransparency.requestTrackingAuthorization,
+    ).not.toHaveBeenCalled();
     expect(mockAppodeal.show).not.toHaveBeenCalled();
+
+    mockAppodealEventHandlers
+      .get('onAppodealInitialized')
+      ?.forEach(handler => handler());
+
+    expect(mockAppodeal.cache).toHaveBeenCalledWith(1);
+
+    mockAppodealEventHandlers
+      .get('onInterstitialFailedToLoad')
+      ?.forEach(handler => handler(new Error('debug load failed')));
+  });
+
+  it('shows one Android bottom banner after SDK initialization when a screen is eligible', async () => {
+    mockAppodeal.isInitialized.mockReturnValue(false);
+    mockStorage.set(
+      'adsState',
+      JSON.stringify({
+        favoriteSaveCount: 1,
+        hasSkippedFirstCustomWordAddAd: true,
+        itemClickCount: 2,
+        randomPracticeStartCount: 1,
+      }),
+    );
+    const mobileAds = await loadMobileAdsModule();
+    const ReactForTest = require('react');
+    const ReactTestRendererForTest = require('react-test-renderer');
+
+    expect(mockAppodeal.initialize).toHaveBeenCalledWith(
+      'ae83f5206ce5de67cc6de2662adc8fdb62217b2f5a190eb6',
+      5,
+    );
+
+    function EligibleAndroidBannerScreen() {
+      mobileAds.useAndroidBottomBannerAd(true);
+      return null;
+    }
+
+    let renderer: import('react-test-renderer').ReactTestRenderer | null = null;
+
+    ReactTestRendererForTest.act(() => {
+      renderer = ReactTestRendererForTest.create(
+        ReactForTest.createElement(EligibleAndroidBannerScreen),
+      );
+    });
+
+    expect(mockAppodeal.show).not.toHaveBeenCalled();
+
+    mockAppodeal.isInitialized.mockReturnValue(true);
+    await ReactTestRendererForTest.act(async () => {
+      mockAppodealEventHandlers
+        .get('onAppodealInitialized')
+        ?.forEach(handler => handler());
+    });
+
+    expect(mockAppodeal.show).toHaveBeenCalledWith(8);
+    expect(mockAppodeal.show).toHaveBeenCalledTimes(1);
+
+    ReactTestRendererForTest.act(() => {
+      renderer?.unmount();
+    });
+  });
+
+  it('hides the Android bottom banner when the eligible screen unmounts', async () => {
+    mockStorage.set(
+      'adsState',
+      JSON.stringify({
+        favoriteSaveCount: 1,
+        hasSkippedFirstCustomWordAddAd: true,
+        itemClickCount: 2,
+        randomPracticeStartCount: 1,
+      }),
+    );
+    const mobileAds = await loadMobileAdsModule();
+    const ReactForTest = require('react');
+    const ReactTestRendererForTest = require('react-test-renderer');
+    mockAppodeal.show.mockClear();
+
+    function EligibleAndroidBannerScreen() {
+      mobileAds.useAndroidBottomBannerAd(true);
+      return null;
+    }
+
+    let renderer: import('react-test-renderer').ReactTestRenderer | null = null;
+
+    ReactTestRendererForTest.act(() => {
+      renderer = ReactTestRendererForTest.create(
+        ReactForTest.createElement(EligibleAndroidBannerScreen),
+      );
+    });
+
+    expect(mockAppodeal.show).toHaveBeenCalledWith(8);
+
+    ReactTestRendererForTest.act(() => {
+      renderer?.unmount();
+    });
+
+    expect(mockAppodeal.hide).toHaveBeenCalledWith(8);
+  });
+
+  it('does not duplicate Android bottom banner show requests for repeated eligible hooks', async () => {
+    mockStorage.set(
+      'adsState',
+      JSON.stringify({
+        favoriteSaveCount: 1,
+        hasSkippedFirstCustomWordAddAd: true,
+        itemClickCount: 2,
+        randomPracticeStartCount: 1,
+      }),
+    );
+    const mobileAds = await loadMobileAdsModule();
+    const ReactForTest = require('react');
+    const ReactTestRendererForTest = require('react-test-renderer');
+    mockAppodeal.show.mockClear();
+
+    function EligibleAndroidBannerScreen() {
+      mobileAds.useAndroidBottomBannerAd(true);
+      mobileAds.useAndroidBottomBannerAd(true);
+      return null;
+    }
+
+    let renderer: import('react-test-renderer').ReactTestRenderer | null = null;
+
+    ReactTestRendererForTest.act(() => {
+      renderer = ReactTestRendererForTest.create(
+        ReactForTest.createElement(EligibleAndroidBannerScreen),
+      );
+    });
+
+    expect(mockAppodeal.show).toHaveBeenCalledWith(8);
+    expect(mockAppodeal.show).toHaveBeenCalledTimes(1);
+
+    ReactTestRendererForTest.act(() => {
+      renderer?.unmount();
+    });
   });
 
   it('uses the temporary Appodeal interstitial debug test to initialize iOS without ads policy gates', async () => {

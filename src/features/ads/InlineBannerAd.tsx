@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import {
+  Platform,
+  StyleSheet,
+  View,
+} from 'react-native';
 import { AppodealBanner } from 'react-native-appodeal';
 
 import {
@@ -11,7 +15,7 @@ import {
 import { theme } from '../../theme/theme';
 import { getBannerAdsGateReason, useCanShowAds } from './mobileAds';
 
-function InlineBannerAd() {
+function IOSInlineBannerAd() {
   const canShowAds = useCanShowAds();
   const bannerGateReason = getBannerAdsGateReason();
 
@@ -82,6 +86,14 @@ function InlineBannerAd() {
       />
     </View>
   );
+}
+
+function InlineBannerAd() {
+  if (Platform.OS === 'android') {
+    return null;
+  }
+
+  return <IOSInlineBannerAd />;
 }
 
 const styles = StyleSheet.create({

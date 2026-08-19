@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { useIsFocused } from '@react-navigation/native';
 import {
   Alert,
   Animated,
@@ -6,6 +7,7 @@ import {
   FlatList,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -18,7 +20,11 @@ import ScrollToTopButton from '../components/ScrollToTopButton';
 import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
-import { showAdOnItemClick } from '../features/ads/mobileAds';
+import {
+  ANDROID_BOTTOM_BANNER_RESERVED_HEIGHT,
+  showAdOnItemClick,
+  useAndroidBottomBannerAd,
+} from '../features/ads/mobileAds';
 import PracticeModal from '../features/practice/PracticeModal';
 import {
   ANALYTICS_EVENTS,
@@ -37,6 +43,7 @@ const INLINE_BANNER_FREQUENCY = 10;
 const SCROLL_TO_TOP_BUTTON_THRESHOLD = 420;
 
 function FavoritesScreen() {
+  const isFocused = useIsFocused();
   const {
     deleteCustomPhrase,
     favoriteFilterLanguage,
@@ -84,6 +91,13 @@ function FavoritesScreen() {
     () => (activePhraseId ? getPhraseById(activePhraseId) : null),
     [activePhraseId, getPhraseById],
   );
+  const shouldShowAndroidBottomBanner =
+    Platform.OS === 'android' &&
+    isFocused &&
+    filteredSavedPhrases.length > INLINE_BANNER_FREQUENCY &&
+    !activePhrase;
+
+  useAndroidBottomBannerAd(shouldShowAndroidBottomBanner);
 
   const getSearchResultCountForQuery = (query: string) =>
     savedPhrases.filter(phrase =>
@@ -320,6 +334,9 @@ function FavoritesScreen() {
         ref={listRef}
         contentContainerStyle={[
           styles.content,
+          shouldShowAndroidBottomBanner
+            ? styles.androidBottomBannerContent
+            : null,
           filteredSavedPhrases.length === 0 && styles.emptyContent,
         ]}
         data={filteredSavedPhrases}
@@ -467,6 +484,9 @@ const styles = StyleSheet.create({
     paddingBottom: theme.spacing.xxl,
     paddingHorizontal: theme.spacing.lg,
     paddingTop: theme.spacing.lg,
+  },
+  androidBottomBannerContent: {
+    paddingBottom: theme.spacing.xxl + ANDROID_BOTTOM_BANNER_RESERVED_HEIGHT,
   },
   emptyContent: {
     flexGrow: 1,

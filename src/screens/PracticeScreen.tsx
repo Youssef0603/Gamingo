@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { useIsFocused } from '@react-navigation/native';
 import {
   Alert,
   Animated,
@@ -7,6 +8,7 @@ import {
   LayoutChangeEvent,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  Platform,
   SectionList,
   ScrollView,
   StyleSheet,
@@ -21,9 +23,11 @@ import { useAppState } from '../context/AppStateContext';
 import { categoryMetadata, categoryOrder } from '../data/categories';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
 import {
+  ANDROID_BOTTOM_BANNER_RESERVED_HEIGHT,
   showAdBeforeRandomPractice,
   showAdOnItemClick,
   showAppodealPrivacyChoicesForm,
+  useAndroidBottomBannerAd,
   useShouldShowAppodealPrivacyChoices,
 } from '../features/ads/mobileAds';
 import { PracticeReminderPrompt } from '../features/notifications';
@@ -116,6 +120,7 @@ function FilterChip({ label, onLayout, selected, onPress }: FilterChipProps) {
 }
 
 function PracticeScreen() {
+  const isFocused = useIsFocused();
   const {
     acknowledgeToxicCategoryDisclosure,
     addCustomPhrase,
@@ -384,6 +389,22 @@ function PracticeScreen() {
       isLookupModalVisible ||
       randomPracticeSession,
   );
+  const androidBottomBannerEligibleItemCount =
+    selectedCategory === 'all'
+      ? sectionedPhraseCount
+      : shouldShowToxicListOverlay
+        ? 0
+        : filteredPhrases.length;
+  const shouldShowAndroidBottomBanner =
+    Platform.OS === 'android' &&
+    isFocused &&
+    androidBottomBannerEligibleItemCount > INLINE_BANNER_FREQUENCY &&
+    !activePhrase &&
+    !bottomSheetContent &&
+    !isLookupModalVisible &&
+    !randomPracticeSession;
+
+  useAndroidBottomBannerAd(shouldShowAndroidBottomBanner);
 
   useEffect(() => {
     if (!shouldShowToxicListOverlay || toxicDisclosureViewedRef.current) {
@@ -910,7 +931,12 @@ function PracticeScreen() {
       {selectedCategory === 'all' ? (
         <SectionList
           ref={sectionListRef}
-          contentContainerStyle={styles.content}
+          contentContainerStyle={[
+            styles.content,
+            shouldShowAndroidBottomBanner
+              ? styles.androidBottomBannerContent
+              : null,
+          ]}
           keyExtractor={item => item.id}
           ListEmptyComponent={emptyState}
           ListHeaderComponent={listHeader}
@@ -974,7 +1000,12 @@ function PracticeScreen() {
             <View style={styles.filteredListWrap}>
               <FlatList
                 ref={listRef}
-                contentContainerStyle={styles.content}
+                contentContainerStyle={[
+                  styles.content,
+                  shouldShowAndroidBottomBanner
+                    ? styles.androidBottomBannerContent
+                    : null,
+                ]}
                 data={filteredPhrases}
                 keyExtractor={item => item.id}
                 ListEmptyComponent={emptyState}
@@ -1066,6 +1097,9 @@ const styles = StyleSheet.create({
     paddingBottom: theme.spacing.xxl,
     paddingHorizontal: theme.spacing.lg,
     paddingTop: theme.spacing.lg,
+  },
+  androidBottomBannerContent: {
+    paddingBottom: theme.spacing.xxl + ANDROID_BOTTOM_BANNER_RESERVED_HEIGHT,
   },
   contentWithoutHeader: {
     paddingTop: 0,

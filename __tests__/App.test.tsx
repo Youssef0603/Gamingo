@@ -29,13 +29,17 @@ jest.mock('@react-native-async-storage/async-storage', () => ({
   ...mockAsyncStorage,
 }));
 jest.mock('../src/features/ads/mobileAds', () => ({
+  ANDROID_BOTTOM_BANNER_HEIGHT: 50,
+  ANDROID_BOTTOM_BANNER_RESERVED_HEIGHT: 66,
   debugShowAppodealInterstitial: jest.fn(),
   getBannerAdsGateReason: jest.fn(() => 'not_eligible'),
   initializeAppodealAds: jest.fn(() => Promise.resolve('ads_disabled')),
   isAppodealAdsConfigured: jest.fn(() => false),
   isAppodealAdsInitialized: jest.fn(() => false),
   trackFavoriteSaveAction: jest.fn(),
+  useAndroidBottomBannerAd: jest.fn(),
   useCanShowAds: jest.fn(() => false),
+  useIsAndroidBottomBannerVisible: jest.fn(() => false),
 }));
 jest.mock('react-native-appodeal', () => ({
   __esModule: true,
