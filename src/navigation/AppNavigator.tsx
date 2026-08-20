@@ -7,6 +7,7 @@ import {
 } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import BootSplash from 'react-native-bootsplash';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import BottomSheet from '../components/BottomSheet';
 import { Icon } from '../components/ui';
@@ -25,6 +26,9 @@ import { theme } from '../theme/theme';
 import type { RootTabParamList } from '../types/navigation';
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
+
+const TAB_BAR_HEIGHT = 74;
+const TAB_BAR_BOTTOM_PADDING = 10;
 
 const DebugScreen = __DEV__
   ? (require('../screens/DebugScreen')
@@ -82,11 +86,14 @@ function getTabBarIcon(
   );
 }
 
-function getScreenOptions({
-  route,
-}: {
-  route: { name: keyof RootTabParamList };
-}) {
+function getScreenOptions(
+  {
+    route,
+  }: {
+    route: { name: keyof RootTabParamList };
+  },
+  tabBarBottomInset: number,
+) {
   return {
     headerShown: false,
     sceneStyle: styles.scene,
@@ -103,13 +110,20 @@ function getScreenOptions({
     tabBarInactiveTintColor: theme.colors.mutedText,
     tabBarItemStyle: styles.tabBarItem,
     tabBarLabelStyle: styles.tabBarLabel,
-    tabBarStyle: styles.tabBar,
+    tabBarStyle: [
+      styles.tabBar,
+      {
+        height: TAB_BAR_HEIGHT + tabBarBottomInset,
+        paddingBottom: TAB_BAR_BOTTOM_PADDING + tabBarBottomInset,
+      },
+    ],
   };
 }
 
 function AppNavigator() {
   const navigationRef = useNavigationContainerRef<RootTabParamList>();
   const routeNameRef = React.useRef<string | undefined>(undefined);
+  const insets = useSafeAreaInsets();
 
   React.useEffect(
     () =>
@@ -146,6 +160,12 @@ function AppNavigator() {
     [],
   );
 
+  const screenOptions = React.useCallback(
+    (options: { route: { name: keyof RootTabParamList } }) =>
+      getScreenOptions(options, insets.bottom),
+    [insets.bottom],
+  );
+
   return (
     <AppStateProvider>
       <>
@@ -161,7 +181,7 @@ function AppNavigator() {
           <Tab.Navigator
             initialRouteName="Practice"
             screenListeners={screenListeners}
-            screenOptions={getScreenOptions}
+            screenOptions={screenOptions}
           >
             <Tab.Screen component={PracticeScreen} name="Practice" />
             <Tab.Screen component={FavoritesScreen} name="Favourites" />
@@ -184,8 +204,6 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.card,
     borderTopColor: theme.colors.border,
     borderTopWidth: 1,
-    height: 74,
-    paddingBottom: 10,
   },
   tabBarItem: {
     paddingVertical: 2,

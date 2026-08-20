@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
 
 import { stop as stopSpeechRecognition, stopSpeaking } from '../../services';
@@ -63,6 +63,20 @@ function PracticeModal({
     }).catch(() => undefined);
   }, [helperLanguage, isFavorite, language, phrase, visible]);
 
+  // Memoized so identity stays stable across re-renders that don't change
+  // the underlying phrase (e.g. toggling favorite) — SpeakingCard's
+  // auto-play effect depends on this transitively via usePractice, and an
+  // unstable reference here would replay the phrase's audio on every
+  // unrelated prop change.
+  const analyticsContext = useMemo(
+    () => ({
+      ...getPhraseAnalyticsParams(phrase, helperLanguage, language),
+      [ANALYTICS_PARAMS.MODAL]: 'practice_phrase',
+      [ANALYTICS_PARAMS.PRACTICE_MODE]: 'single',
+    }),
+    [helperLanguage, language, phrase],
+  );
+
   if (!phrase) {
     return null;
   }
@@ -93,11 +107,7 @@ function PracticeModal({
             key={phrase.id}
             languageCode={learningLanguage}
             locale={resolvePracticeLocale(learningLanguage)}
-            analyticsContext={{
-              ...getPhraseAnalyticsParams(phrase, helperLanguage, language),
-              [ANALYTICS_PARAMS.MODAL]: 'practice_phrase',
-              [ANALYTICS_PARAMS.PRACTICE_MODE]: 'single',
-            }}
+            analyticsContext={analyticsContext}
             onClose={handleClose}
             onToggleFavorite={onToggleFavorite}
             phraseId={phrase.category === 'custom' ? undefined : phrase.id}
