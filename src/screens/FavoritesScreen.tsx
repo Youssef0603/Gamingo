@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { useIsFocused } from '@react-navigation/native';
 import {
   Alert,
   Animated,
@@ -20,11 +19,7 @@ import ScrollToTopButton from '../components/ScrollToTopButton';
 import { Icon, Screen } from '../components/ui';
 import { useAppState } from '../context/AppStateContext';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
-import {
-  ANDROID_BOTTOM_BANNER_RESERVED_HEIGHT,
-  showAdOnItemClick,
-  useAndroidBottomBannerAd,
-} from '../features/ads/mobileAds';
+import { showAdOnItemClick } from '../features/ads/mobileAds';
 import PracticeModal from '../features/practice/PracticeModal';
 import {
   ANALYTICS_EVENTS,
@@ -42,8 +37,18 @@ import type { Phrase } from '../types/phrase';
 const INLINE_BANNER_FREQUENCY = 10;
 const SCROLL_TO_TOP_BUTTON_THRESHOLD = 420;
 
+// Android's Appodeal SDK has a single process-wide inline banner ad slot
+// (unlike iOS, which loads an independent ad per mounted instance), so
+// rendering one every INLINE_BANNER_FREQUENCY items leaves most of them
+// blank as they compete for that one slot. Cap Android to a single,
+// reliably-populated placement; iOS keeps its normal repeating cadence.
+function shouldShowInlineBanner(index: number, totalCount: number) {
+  return Platform.OS === 'android'
+    ? index === INLINE_BANNER_FREQUENCY - 1 && index < totalCount - 1
+    : (index + 1) % INLINE_BANNER_FREQUENCY === 0 && index < totalCount - 1;
+}
+
 function FavoritesScreen() {
-  const isFocused = useIsFocused();
   const {
     deleteCustomPhrase,
     favoriteFilterLanguage,
@@ -91,13 +96,6 @@ function FavoritesScreen() {
     () => (activePhraseId ? getPhraseById(activePhraseId) : null),
     [activePhraseId, getPhraseById],
   );
-  const shouldShowAndroidBottomBanner =
-    Platform.OS === 'android' &&
-    isFocused &&
-    filteredSavedPhrases.length > INLINE_BANNER_FREQUENCY &&
-    !activePhrase;
-
-  useAndroidBottomBannerAd(shouldShowAndroidBottomBanner);
 
   const getSearchResultCountForQuery = (query: string) =>
     savedPhrases.filter(phrase =>
@@ -334,9 +332,6 @@ function FavoritesScreen() {
         ref={listRef}
         contentContainerStyle={[
           styles.content,
-          shouldShowAndroidBottomBanner
-            ? styles.androidBottomBannerContent
-            : null,
           filteredSavedPhrases.length === 0 && styles.emptyContent,
         ]}
         data={filteredSavedPhrases}
@@ -443,8 +438,7 @@ function FavoritesScreen() {
                 toggleFavorite(item.id, favoriteFilterLanguage)
               }
             />
-            {(index + 1) % INLINE_BANNER_FREQUENCY === 0 &&
-            index < filteredSavedPhrases.length - 1 ? (
+            {shouldShowInlineBanner(index, filteredSavedPhrases.length) ? (
               <InlineBannerAd />
             ) : null}
           </View>
@@ -484,9 +478,6 @@ const styles = StyleSheet.create({
     paddingBottom: theme.spacing.xxl,
     paddingHorizontal: theme.spacing.lg,
     paddingTop: theme.spacing.lg,
-  },
-  androidBottomBannerContent: {
-    paddingBottom: theme.spacing.xxl + ANDROID_BOTTOM_BANNER_RESERVED_HEIGHT,
   },
   emptyContent: {
     flexGrow: 1,

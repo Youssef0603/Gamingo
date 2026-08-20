@@ -37,10 +37,15 @@ jest.mock('../src/services/analytics', () => {
 describe('InlineBannerAd', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    jest.useFakeTimers();
     mockPlatformOS = 'android';
   });
 
-  it('does not mount AppodealBanner on Android', () => {
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  it('mounts the inline AppodealBanner on Android, matching iOS, after the mount-settle delay', () => {
     const InlineBannerAd = require('../src/features/ads/InlineBannerAd').default;
 
     ReactTestRenderer.act(() => {
@@ -48,14 +53,31 @@ describe('InlineBannerAd', () => {
     });
 
     expect(mockAppodealBanner).not.toHaveBeenCalled();
+
+    ReactTestRenderer.act(() => {
+      jest.runAllTimers();
+    });
+
+    expect(mockAppodealBanner).toHaveBeenCalledWith(
+      expect.objectContaining({
+        adSize: 'phone',
+        placement: 'inline_banner',
+        usesSmartSizing: true,
+      }),
+      undefined,
+    );
   });
 
-  it('keeps the existing inline AppodealBanner on iOS', () => {
+  it('keeps the existing inline AppodealBanner on iOS, after the mount-settle delay', () => {
     mockPlatformOS = 'ios';
     const InlineBannerAd = require('../src/features/ads/InlineBannerAd').default;
 
     ReactTestRenderer.act(() => {
       ReactTestRenderer.create(React.createElement(InlineBannerAd));
+    });
+
+    ReactTestRenderer.act(() => {
+      jest.runAllTimers();
     });
 
     expect(mockAppodealBanner).toHaveBeenCalledWith(

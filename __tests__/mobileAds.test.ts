@@ -347,7 +347,7 @@ describe('mobileAds', () => {
     ).not.toHaveBeenCalled();
     expect(mockAppodeal.setLogLevel).toHaveBeenCalledWith('debug');
     expect(mockAppodeal.setTesting).toHaveBeenCalledWith(true);
-    expect(mockAppodeal.setSmartBanners).toHaveBeenCalledWith(false);
+    expect(mockAppodeal.setSmartBanners).toHaveBeenCalledWith(true);
     expect(mockAppodeal.initialize).toHaveBeenCalledWith(
       'ae83f5206ce5de67cc6de2662adc8fdb62217b2f5a190eb6',
       5,
@@ -472,130 +472,6 @@ describe('mobileAds', () => {
     mockAppodealEventHandlers
       .get('onInterstitialFailedToLoad')
       ?.forEach(handler => handler(new Error('debug load failed')));
-  });
-
-  it('shows one Android bottom banner after SDK initialization when a screen is eligible', async () => {
-    mockAppodeal.isInitialized.mockReturnValue(false);
-    mockStorage.set(
-      'adsState',
-      JSON.stringify({
-        favoriteSaveCount: 1,
-        hasSkippedFirstCustomWordAddAd: true,
-        itemClickCount: 2,
-        randomPracticeStartCount: 1,
-      }),
-    );
-    const mobileAds = await loadMobileAdsModule();
-    const ReactForTest = require('react');
-    const ReactTestRendererForTest = require('react-test-renderer');
-
-    expect(mockAppodeal.initialize).toHaveBeenCalledWith(
-      'ae83f5206ce5de67cc6de2662adc8fdb62217b2f5a190eb6',
-      5,
-    );
-
-    function EligibleAndroidBannerScreen() {
-      mobileAds.useAndroidBottomBannerAd(true);
-      return null;
-    }
-
-    let renderer: import('react-test-renderer').ReactTestRenderer | null = null;
-
-    ReactTestRendererForTest.act(() => {
-      renderer = ReactTestRendererForTest.create(
-        ReactForTest.createElement(EligibleAndroidBannerScreen),
-      );
-    });
-
-    expect(mockAppodeal.show).not.toHaveBeenCalled();
-
-    mockAppodeal.isInitialized.mockReturnValue(true);
-    await ReactTestRendererForTest.act(async () => {
-      mockAppodealEventHandlers
-        .get('onAppodealInitialized')
-        ?.forEach(handler => handler());
-    });
-
-    expect(mockAppodeal.show).toHaveBeenCalledWith(8);
-    expect(mockAppodeal.show).toHaveBeenCalledTimes(1);
-
-    ReactTestRendererForTest.act(() => {
-      renderer?.unmount();
-    });
-  });
-
-  it('hides the Android bottom banner when the eligible screen unmounts', async () => {
-    mockStorage.set(
-      'adsState',
-      JSON.stringify({
-        favoriteSaveCount: 1,
-        hasSkippedFirstCustomWordAddAd: true,
-        itemClickCount: 2,
-        randomPracticeStartCount: 1,
-      }),
-    );
-    const mobileAds = await loadMobileAdsModule();
-    const ReactForTest = require('react');
-    const ReactTestRendererForTest = require('react-test-renderer');
-    mockAppodeal.show.mockClear();
-
-    function EligibleAndroidBannerScreen() {
-      mobileAds.useAndroidBottomBannerAd(true);
-      return null;
-    }
-
-    let renderer: import('react-test-renderer').ReactTestRenderer | null = null;
-
-    ReactTestRendererForTest.act(() => {
-      renderer = ReactTestRendererForTest.create(
-        ReactForTest.createElement(EligibleAndroidBannerScreen),
-      );
-    });
-
-    expect(mockAppodeal.show).toHaveBeenCalledWith(8);
-
-    ReactTestRendererForTest.act(() => {
-      renderer?.unmount();
-    });
-
-    expect(mockAppodeal.hide).toHaveBeenCalledWith(8);
-  });
-
-  it('does not duplicate Android bottom banner show requests for repeated eligible hooks', async () => {
-    mockStorage.set(
-      'adsState',
-      JSON.stringify({
-        favoriteSaveCount: 1,
-        hasSkippedFirstCustomWordAddAd: true,
-        itemClickCount: 2,
-        randomPracticeStartCount: 1,
-      }),
-    );
-    const mobileAds = await loadMobileAdsModule();
-    const ReactForTest = require('react');
-    const ReactTestRendererForTest = require('react-test-renderer');
-    mockAppodeal.show.mockClear();
-
-    function EligibleAndroidBannerScreen() {
-      mobileAds.useAndroidBottomBannerAd(true);
-      mobileAds.useAndroidBottomBannerAd(true);
-      return null;
-    }
-
-    let renderer: import('react-test-renderer').ReactTestRenderer | null = null;
-
-    ReactTestRendererForTest.act(() => {
-      renderer = ReactTestRendererForTest.create(
-        ReactForTest.createElement(EligibleAndroidBannerScreen),
-      );
-    });
-
-    expect(mockAppodeal.show).toHaveBeenCalledWith(8);
-    expect(mockAppodeal.show).toHaveBeenCalledTimes(1);
-
-    ReactTestRendererForTest.act(() => {
-      renderer?.unmount();
-    });
   });
 
   it('uses the temporary Appodeal interstitial debug test to initialize iOS without ads policy gates', async () => {

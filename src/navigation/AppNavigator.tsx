@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import {
   NavigationContainer,
   DefaultTheme as NavigationDefaultTheme,
@@ -11,10 +11,6 @@ import BootSplash from 'react-native-bootsplash';
 import BottomSheet from '../components/BottomSheet';
 import { Icon } from '../components/ui';
 import { AppStateProvider } from '../context/AppStateContext';
-import {
-  ANDROID_BOTTOM_BANNER_HEIGHT,
-  useIsAndroidBottomBannerVisible,
-} from '../features/ads/mobileAds';
 import { subscribeToPracticeReminderOpened } from '../features/notifications';
 import FavoritesScreen from '../screens/FavoritesScreen';
 import PracticeScreen from '../screens/PracticeScreen';
@@ -86,23 +82,11 @@ function getTabBarIcon(
   );
 }
 
-export function getAndroidBottomBannerTabBarOffset(
-  isBannerVisible: boolean,
-  platformOS = Platform.OS,
-) {
-  return platformOS === 'android' && isBannerVisible
-    ? ANDROID_BOTTOM_BANNER_HEIGHT
-    : 0;
-}
-
-function getScreenOptions(
-  {
-    route,
-  }: {
-    route: { name: keyof RootTabParamList };
-  },
-  androidBottomBannerTabBarOffset: number,
-) {
+function getScreenOptions({
+  route,
+}: {
+  route: { name: keyof RootTabParamList };
+}) {
   return {
     headerShown: false,
     sceneStyle: styles.scene,
@@ -119,21 +103,13 @@ function getScreenOptions(
     tabBarInactiveTintColor: theme.colors.mutedText,
     tabBarItemStyle: styles.tabBarItem,
     tabBarLabelStyle: styles.tabBarLabel,
-    tabBarStyle: [
-      styles.tabBar,
-      androidBottomBannerTabBarOffset > 0
-        ? { marginBottom: androidBottomBannerTabBarOffset }
-        : null,
-    ],
+    tabBarStyle: styles.tabBar,
   };
 }
 
 function AppNavigator() {
   const navigationRef = useNavigationContainerRef<RootTabParamList>();
   const routeNameRef = React.useRef<string | undefined>(undefined);
-  const isAndroidBannerVisible = useIsAndroidBottomBannerVisible();
-  const androidBottomBannerTabBarOffset =
-    getAndroidBottomBannerTabBarOffset(isAndroidBannerVisible);
 
   React.useEffect(
     () =>
@@ -170,12 +146,6 @@ function AppNavigator() {
     [],
   );
 
-  const screenOptions = React.useCallback(
-    (options: { route: { name: keyof RootTabParamList } }) =>
-      getScreenOptions(options, androidBottomBannerTabBarOffset),
-    [androidBottomBannerTabBarOffset],
-  );
-
   return (
     <AppStateProvider>
       <>
@@ -191,7 +161,7 @@ function AppNavigator() {
           <Tab.Navigator
             initialRouteName="Practice"
             screenListeners={screenListeners}
-            screenOptions={screenOptions}
+            screenOptions={getScreenOptions}
           >
             <Tab.Screen component={PracticeScreen} name="Practice" />
             <Tab.Screen component={FavoritesScreen} name="Favourites" />

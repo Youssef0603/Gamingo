@@ -53,11 +53,7 @@ const APPODEAL_AD_TYPES =
   AppodealAdType.INTERSTITIAL | AppodealAdType.BANNER;
 const APPODEAL_INTERSTITIAL_AD_TYPE = AppodealAdType.INTERSTITIAL;
 const APPODEAL_BANNER_AD_TYPE = AppodealAdType.BANNER;
-const APPODEAL_BOTTOM_BANNER_AD_TYPE = AppodealAdType.BANNER_BOTTOM;
 const INLINE_BANNER_PLACEMENT = 'inline_banner';
-export const ANDROID_BOTTOM_BANNER_HEIGHT = 50;
-export const ANDROID_BOTTOM_BANNER_RESERVED_HEIGHT =
-  ANDROID_BOTTOM_BANNER_HEIGHT + 16;
 const DEBUG_INTERSTITIAL_PLACEMENT = 'debug_appodeal_interstitial';
 const DEBUG_INTERSTITIAL_LISTENER_TIMEOUT_MS = 60 * 1000;
 const DEBUG_APPODEAL_LOG_PREFIX = '[AppodealDebug]';
@@ -100,14 +96,11 @@ let firstLaunchUsagePersistInterval: ReturnType<typeof setInterval> | null = nul
 let debugInterstitialListeners: AppodealEventSubscription[] | null = null;
 let debugInterstitialCleanupTimeout: ReturnType<typeof setTimeout> | null = null;
 let shouldShowDebugInterstitialWhenLoaded = false;
-let androidBottomBannerDesiredVisible = false;
-let androidBottomBannerVisible = false;
 let privacyChoicesRequirementStatus = AppodealPrivacyOptionsStatus.UNKNOWN;
 let privacyChoicesRefreshPromise: Promise<AppodealPrivacyChoicesRequirement> | null =
   null;
 
 const adAvailabilityListeners = new Set<() => void>();
-const androidBottomBannerVisibilityListeners = new Set<() => void>();
 const privacyChoicesRequirementListeners = new Set<() => void>();
 
 function trackAdLifecycleEvent(
@@ -159,19 +152,6 @@ function warnAppodealDebug(message: string, error?: unknown) {
   console.warn(`${DEBUG_APPODEAL_LOG_PREFIX} ${message}`, error);
 }
 
-function logAndroidBannerGlobalDebug(eventName: string, params?: unknown) {
-  if (!__DEV__ || Platform.OS !== 'android') {
-    return;
-  }
-
-  if (params === undefined) {
-    console.log(`Appodeal Android banner global: ${eventName}`);
-    return;
-  }
-
-  console.log(`Appodeal Android banner global: ${eventName}`, params);
-}
-
 function sanitizePersistedCount(value: unknown) {
   return typeof value === 'number' && Number.isFinite(value) && value >= 0
     ? Math.floor(value)
@@ -214,21 +194,6 @@ function notifyAdAvailabilityListeners() {
   adAvailabilityListeners.forEach(listener => {
     listener();
   });
-}
-
-function notifyAndroidBottomBannerVisibilityListeners() {
-  androidBottomBannerVisibilityListeners.forEach(listener => {
-    listener();
-  });
-}
-
-function setAndroidBottomBannerVisible(nextValue: boolean) {
-  if (androidBottomBannerVisible === nextValue) {
-    return;
-  }
-
-  androidBottomBannerVisible = nextValue;
-  notifyAndroidBottomBannerVisibilityListeners();
 }
 
 function notifyPrivacyChoicesRequirementListeners() {
@@ -722,97 +687,6 @@ function refreshAppodealInitialized() {
   return appodealInitialized;
 }
 
-function isAndroidBottomBannerReady() {
-  if (Platform.OS !== 'android' || !isAppodealAdsConfigured()) {
-    return false;
-  }
-
-  try {
-    const isInitialized =
-      appodealInitialized || Appodeal.isInitialized(APPODEAL_BANNER_AD_TYPE);
-
-    if (isInitialized) {
-      setAppodealInitialized(true);
-    }
-
-    return isInitialized;
-  } catch (error) {
-    warnAppodealDebug(
-      'Failed to read Android bottom banner initialized status.',
-      error,
-    );
-    return false;
-  }
-}
-
-function hideAndroidBottomBanner(preserveDesiredVisibility = false) {
-  if (Platform.OS !== 'android') {
-    return;
-  }
-
-  if (!preserveDesiredVisibility) {
-    androidBottomBannerDesiredVisible = false;
-  }
-
-  if (!androidBottomBannerVisible) {
-    return;
-  }
-
-  try {
-    Appodeal.hide(APPODEAL_BOTTOM_BANNER_AD_TYPE);
-    logAppodealDebug('Android bottom banner hide requested.');
-  } catch (error) {
-    warnAppodealDebug('Android bottom banner hide request failed.', error);
-  } finally {
-    setAndroidBottomBannerVisible(false);
-  }
-}
-
-function showAndroidBottomBanner() {
-  if (
-    Platform.OS !== 'android' ||
-    !androidBottomBannerDesiredVisible ||
-    androidBottomBannerVisible
-  ) {
-    return;
-  }
-
-  if (!isAndroidBottomBannerReady()) {
-    logAppodealDebug('Android bottom banner waiting for SDK initialization.');
-    return;
-  }
-
-  trackBannerLifecycleEvent(ANALYTICS_EVENTS.AD_LOAD_STARTED, {
-    [ANALYTICS_PARAMS.AD_RESULT]: 'loading',
-  });
-
-  try {
-    Appodeal.show(APPODEAL_BOTTOM_BANNER_AD_TYPE);
-    setAndroidBottomBannerVisible(true);
-    logAppodealDebug('Android bottom banner show requested.');
-  } catch (error) {
-    setAndroidBottomBannerVisible(false);
-    trackBannerLifecycleEvent(ANALYTICS_EVENTS.AD_FAILED, {
-      ...getErrorAnalyticsParams(error),
-      [ANALYTICS_PARAMS.AD_RESULT]: 'failed',
-    });
-    warnAppodealDebug('Android bottom banner show request failed.', error);
-  }
-}
-
-function syncAndroidBottomBannerVisibility() {
-  if (Platform.OS !== 'android') {
-    return;
-  }
-
-  if (androidBottomBannerDesiredVisible) {
-    showAndroidBottomBanner();
-    return;
-  }
-
-  hideAndroidBottomBanner();
-}
-
 function trackInterstitialSkipped(
   placement: string,
   reason: string,
@@ -845,7 +719,7 @@ function configureAppodealBeforeInitialization() {
   Appodeal.setTesting(__DEV__);
   Appodeal.setAutoCache(APPODEAL_INTERSTITIAL_AD_TYPE, true);
   Appodeal.setAutoCache(APPODEAL_BANNER_AD_TYPE, true);
-  Appodeal.setSmartBanners(Platform.OS === 'ios');
+  Appodeal.setSmartBanners(true);
 
   try {
     Appodeal.disableNetwork('admob', APPODEAL_AD_TYPES);
@@ -898,49 +772,10 @@ function attachAppodealListeners() {
   Appodeal.addEventListener(AppodealSdkEvents.INITIALIZED, () => {
     setAppodealInitialized(true);
     preloadInterstitialAd();
-    syncAndroidBottomBannerVisibility();
   });
 
-  if (Platform.OS === 'android') {
-    Appodeal.addEventListener(AppodealBannerEvents.LOADED, event => {
-      logAndroidBannerGlobalDebug('LOADED', event);
-      trackBannerLifecycleEvent(ANALYTICS_EVENTS.AD_LOADED, {
-        [ANALYTICS_PARAMS.AD_RESULT]: 'loaded',
-      });
-    });
-
-    Appodeal.addEventListener(AppodealBannerEvents.FAILED_TO_LOAD, error => {
-      setAndroidBottomBannerVisible(false);
-      logAndroidBannerGlobalDebug('FAILED_TO_LOAD', error);
-      trackBannerLifecycleEvent(ANALYTICS_EVENTS.AD_FAILED, {
-        ...getErrorAnalyticsParams(error),
-        [ANALYTICS_PARAMS.AD_RESULT]: 'failed',
-      });
-    });
-
-    Appodeal.addEventListener(AppodealBannerEvents.CLICKED, () => {
-      logAndroidBannerGlobalDebug('CLICKED');
-      trackBannerLifecycleEvent(ANALYTICS_EVENTS.AD_OPENED, {
-        [ANALYTICS_PARAMS.AD_RESULT]: 'opened',
-      });
-    });
-
-    Appodeal.addEventListener(AppodealBannerEvents.EXPIRED, () => {
-      setAndroidBottomBannerVisible(false);
-      logAndroidBannerGlobalDebug('EXPIRED');
-      trackBannerLifecycleEvent(ANALYTICS_EVENTS.AD_SKIPPED, {
-        [ANALYTICS_PARAMS.AD_GATE_REASON]: 'expired',
-        [ANALYTICS_PARAMS.AD_RESULT]: 'skipped',
-      });
-    });
-  }
-
   Appodeal.addEventListener(AppodealBannerEvents.SHOWN, () => {
-    if (Platform.OS === 'android') {
-      setAndroidBottomBannerVisible(true);
-    }
-
-    logAndroidBannerGlobalDebug('SHOWN');
+    logAppodealDebug('Banner shown.');
 
     trackBannerLifecycleEvent(ANALYTICS_EVENTS.AD_IMPRESSION_RECORDED, {
       [ANALYTICS_PARAMS.AD_RESULT]: 'impression',
@@ -987,7 +822,6 @@ function attachAppodealListeners() {
   Appodeal.addEventListener(AppodealInterstitialEvents.SHOWN, () => {
     interstitialLoaded = false;
     interstitialShowing = true;
-    hideAndroidBottomBanner(true);
     trackAdLifecycleEvent(
       ANALYTICS_EVENTS.AD_SHOWN,
       pendingInterstitialPlacement ?? 'unknown',
@@ -1008,7 +842,6 @@ function attachAppodealListeners() {
     });
     runPendingInterstitialAction();
     preloadInterstitialAd();
-    syncAndroidBottomBannerVisibility();
   });
 
   Appodeal.addEventListener(AppodealInterstitialEvents.CLICKED, () => {
@@ -1031,7 +864,6 @@ function attachAppodealListeners() {
     });
     runPendingInterstitialAction();
     preloadInterstitialAd();
-    syncAndroidBottomBannerVisibility();
   });
 }
 
@@ -1355,51 +1187,6 @@ export function useCanShowAds() {
   }, []);
 
   return canShowAds;
-}
-
-export function useAndroidBottomBannerAd(enabled: boolean) {
-  const canShowAds = useCanShowAds();
-
-  useEffect(() => {
-    if (Platform.OS !== 'android') {
-      return;
-    }
-
-    androidBottomBannerDesiredVisible = enabled && canShowAds;
-
-    if (androidBottomBannerDesiredVisible) {
-      showAndroidBottomBanner();
-    } else {
-      hideAndroidBottomBanner();
-    }
-
-    return () => {
-      hideAndroidBottomBanner();
-    };
-  }, [canShowAds, enabled]);
-}
-
-export function isAndroidBottomBannerVisible() {
-  return Platform.OS === 'android' && androidBottomBannerVisible;
-}
-
-export function useIsAndroidBottomBannerVisible() {
-  const [isVisible, setIsVisible] = useState(isAndroidBottomBannerVisible());
-
-  useEffect(() => {
-    const syncVisibility = () => {
-      setIsVisible(isAndroidBottomBannerVisible());
-    };
-
-    syncVisibility();
-    androidBottomBannerVisibilityListeners.add(syncVisibility);
-
-    return () => {
-      androidBottomBannerVisibilityListeners.delete(syncVisibility);
-    };
-  }, []);
-
-  return isVisible;
 }
 
 function cleanupDebugInterstitialListeners() {

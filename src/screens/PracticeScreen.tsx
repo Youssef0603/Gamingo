@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { useIsFocused } from '@react-navigation/native';
 import {
   Alert,
   Animated,
@@ -23,11 +22,9 @@ import { useAppState } from '../context/AppStateContext';
 import { categoryMetadata, categoryOrder } from '../data/categories';
 import InlineBannerAd from '../features/ads/InlineBannerAd';
 import {
-  ANDROID_BOTTOM_BANNER_RESERVED_HEIGHT,
   showAdBeforeRandomPractice,
   showAdOnItemClick,
   showAppodealPrivacyChoicesForm,
-  useAndroidBottomBannerAd,
   useShouldShowAppodealPrivacyChoices,
 } from '../features/ads/mobileAds';
 import { PracticeReminderPrompt } from '../features/notifications';
@@ -120,7 +117,6 @@ function FilterChip({ label, onLayout, selected, onPress }: FilterChipProps) {
 }
 
 function PracticeScreen() {
-  const isFocused = useIsFocused();
   const {
     acknowledgeToxicCategoryDisclosure,
     addCustomPhrase,
@@ -389,22 +385,6 @@ function PracticeScreen() {
       isLookupModalVisible ||
       randomPracticeSession,
   );
-  const androidBottomBannerEligibleItemCount =
-    selectedCategory === 'all'
-      ? sectionedPhraseCount
-      : shouldShowToxicListOverlay
-        ? 0
-        : filteredPhrases.length;
-  const shouldShowAndroidBottomBanner =
-    Platform.OS === 'android' &&
-    isFocused &&
-    androidBottomBannerEligibleItemCount > INLINE_BANNER_FREQUENCY &&
-    !activePhrase &&
-    !bottomSheetContent &&
-    !isLookupModalVisible &&
-    !randomPracticeSession;
-
-  useAndroidBottomBannerAd(shouldShowAndroidBottomBanner);
 
   useEffect(() => {
     if (!shouldShowToxicListOverlay || toxicDisclosureViewedRef.current) {
@@ -903,8 +883,15 @@ function PracticeScreen() {
   );
 
   const renderPhraseItem = (item: Phrase, index: number, totalCount: number) => {
+    // Android's Appodeal SDK has a single process-wide inline banner ad slot
+    // (unlike iOS, which loads an independent ad per mounted instance), so
+    // rendering one every INLINE_BANNER_FREQUENCY items leaves most of them
+    // blank as they compete for that one slot. Cap Android to a single,
+    // reliably-populated placement; iOS keeps its normal repeating cadence.
     const shouldShowBanner =
-      (index + 1) % INLINE_BANNER_FREQUENCY === 0 && index < totalCount - 1;
+      Platform.OS === 'android'
+        ? index === INLINE_BANNER_FREQUENCY - 1 && index < totalCount - 1
+        : (index + 1) % INLINE_BANNER_FREQUENCY === 0 && index < totalCount - 1;
 
     return (
       <View>
@@ -931,12 +918,7 @@ function PracticeScreen() {
       {selectedCategory === 'all' ? (
         <SectionList
           ref={sectionListRef}
-          contentContainerStyle={[
-            styles.content,
-            shouldShowAndroidBottomBanner
-              ? styles.androidBottomBannerContent
-              : null,
-          ]}
+          contentContainerStyle={styles.content}
           keyExtractor={item => item.id}
           ListEmptyComponent={emptyState}
           ListHeaderComponent={listHeader}
@@ -1000,12 +982,7 @@ function PracticeScreen() {
             <View style={styles.filteredListWrap}>
               <FlatList
                 ref={listRef}
-                contentContainerStyle={[
-                  styles.content,
-                  shouldShowAndroidBottomBanner
-                    ? styles.androidBottomBannerContent
-                    : null,
-                ]}
+                contentContainerStyle={styles.content}
                 data={filteredPhrases}
                 keyExtractor={item => item.id}
                 ListEmptyComponent={emptyState}
@@ -1097,9 +1074,6 @@ const styles = StyleSheet.create({
     paddingBottom: theme.spacing.xxl,
     paddingHorizontal: theme.spacing.lg,
     paddingTop: theme.spacing.lg,
-  },
-  androidBottomBannerContent: {
-    paddingBottom: theme.spacing.xxl + ANDROID_BOTTOM_BANNER_RESERVED_HEIGHT,
   },
   contentWithoutHeader: {
     paddingTop: 0,
