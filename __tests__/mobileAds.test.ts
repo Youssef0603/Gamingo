@@ -243,6 +243,7 @@ describe('mobileAds', () => {
   }
 
   it('keeps first-launch banner ads hidden after an app relaunch during grace', async () => {
+    mockPlatformOS = 'ios';
     const firstLaunchMobileAds = await loadMobileAdsModule();
 
     expect(firstLaunchMobileAds.getBannerAdsGateReason()).toBe('not_eligible');
@@ -341,7 +342,7 @@ describe('mobileAds', () => {
     const mobileAds = await loadMobileAdsModule();
 
     expect(mobileAds.isAppodealAdsConfigured()).toBe(true);
-    expect(mobileAds.getBannerAdsGateReason()).toBeNull();
+    expect(mobileAds.getBannerAdsGateReason()).toBe('platform_disabled');
     expect(
       mockAppTrackingTransparency.requestTrackingAuthorization,
     ).not.toHaveBeenCalled();

@@ -508,6 +508,15 @@ export function isAppodealAdsInitialized() {
 }
 
 export function getBannerAdsGateReason() {
+  // Banner ads are disabled on Android only: Appodeal's Android SDK backs
+  // every inline banner placement with a single shared, SDK-managed ad
+  // slot (unlike iOS, which loads an independent ad per placement), which
+  // makes reliable banner display there impractical. Interstitials are
+  // unaffected and keep working normally on both platforms.
+  if (Platform.OS === 'android') {
+    return 'platform_disabled';
+  }
+
   const adsPolicy = getAppAdsPolicy();
 
   if (
