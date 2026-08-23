@@ -342,13 +342,16 @@ describe('mobileAds', () => {
     const mobileAds = await loadMobileAdsModule();
 
     expect(mobileAds.isAppodealAdsConfigured()).toBe(true);
-    expect(mobileAds.getBannerAdsGateReason()).toBe('platform_disabled');
+    expect(mobileAds.getBannerAdsGateReason()).toBeNull();
     expect(
       mockAppTrackingTransparency.requestTrackingAuthorization,
     ).not.toHaveBeenCalled();
     expect(mockAppodeal.setLogLevel).toHaveBeenCalledWith('debug');
     expect(mockAppodeal.setTesting).toHaveBeenCalledWith(true);
+    expect(mockAppodeal.setAutoCache).toHaveBeenCalledWith(1, true);
+    expect(mockAppodeal.setAutoCache).toHaveBeenCalledWith(4, true);
     expect(mockAppodeal.setSmartBanners).toHaveBeenCalledWith(true);
+    expect(mockAppodeal.disableNetwork).not.toHaveBeenCalled();
     expect(mockAppodeal.initialize).toHaveBeenCalledWith(
       'ae83f5206ce5de67cc6de2662adc8fdb62217b2f5a190eb6',
       5,

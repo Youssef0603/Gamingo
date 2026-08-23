@@ -20,6 +20,14 @@
     android:usesCleartextTraffic="${usesCleartextTraffic}"
     android:supportsRtl="true"
     tools:replace="android:allowBackup">
+    <!-- Required by Google's UMP consent library used by Appodeal for
+         GDPR/CCPA consent management. Keep this as the valid Google Mobile
+         Ads app ID for com.laglingo.app and configure its UMP form in the
+         Google AdMob console. This metadata does not add the AdMob SDK or
+         make it an Appodeal mediation source by itself. -->
+    <meta-data
+      android:name="com.google.android.gms.ads.APPLICATION_ID"
+      android:value="ca-app-pub-2492542777972482~2875031229" />
     <activity
       android:name=".MainActivity"
       android:label="@string/app_name"

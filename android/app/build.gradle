@@ -141,7 +141,10 @@ android {
             if (hasReleaseSigning) {
                 signingConfig signingConfigs.release
             }
-            manifestPlaceholders = [usesCleartextTraffic: "false"]
+            // Keep the manifest placeholder aligned with debug. The generated
+            // release network-security configuration also permits cleartext
+            // traffic for mediated creative/tracking compatibility.
+            manifestPlaceholders = [usesCleartextTraffic: "true"]
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
@@ -163,6 +166,18 @@ gradle.taskGraph.whenReady { taskGraph ->
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
+
+    // Appodeal SDK 4.x uses one dependency per mediated network. These must
+    // match the networks enabled for Laglingo in the Appodeal dashboard:
+    // AppLovin, BidMachine, BigoAds, Mintegral, Vungle, and Unity Ads
+    // (interstitial only). Without an adapter in the APK, Appodeal cannot
+    // initialize or request that network, even when it is enabled remotely.
+    implementation("com.appodeal.ads.sdk.adapters:applovin:13.5.1.0")
+    implementation("com.appodeal.ads.sdk.adapters:bidmachine:3.7.1.0")
+    implementation("com.appodeal.ads.sdk.adapters:bigo_ads:5.6.2.0")
+    implementation("com.appodeal.ads.sdk.adapters:mintegral:17.1.61.0")
+    implementation("com.appodeal.ads.sdk.adapters:unity_ads:4.17.0.0")
+    implementation("com.appodeal.ads.sdk.adapters:vungle:7.6.1.0")
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")

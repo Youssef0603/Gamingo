@@ -46,15 +46,15 @@ export type AdsPolicy = {
 export const DEFAULT_ADS_POLICY: AdsPolicy = {
   version: 1,
   adsEnabled: true,
-  bannerEnabled: false,
+  bannerEnabled: true,
   interstitialsEnabled: true,
-  firstLaunchGracePeriodMs: 7 * 24 * 60 * 60 * 1000,
+  firstLaunchGracePeriodMs: 1,
   itemClick: {
-    enabled: false,
+    enabled: true,
     frequency: 5,
   },
   favoriteSave: {
-    enabled: false,
+    enabled: true,
     frequency: 3,
   },
   randomPractice: {

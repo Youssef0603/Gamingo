@@ -47,8 +47,11 @@ type PersistedAdsState = {
 };
 
 const FIRST_LAUNCH_USAGE_PERSIST_INTERVAL_MS = 30 * 1000;
+// Keep the requested formats identical on both mobile platforms. Appodeal's
+// initialization callback reports SDK initialization, not whether an ad has
+// filled, so a missing banner fill must never cause us to omit the banner
+// format or block the interstitial cache path.
 const APPODEAL_AD_TYPES =
-  // Appodeal combines requested ad formats with a numeric bitmask.
   // eslint-disable-next-line no-bitwise
   AppodealAdType.INTERSTITIAL | AppodealAdType.BANNER;
 const APPODEAL_INTERSTITIAL_AD_TYPE = AppodealAdType.INTERSTITIAL;
@@ -508,15 +511,6 @@ export function isAppodealAdsInitialized() {
 }
 
 export function getBannerAdsGateReason() {
-  // Banner ads are disabled on Android only: Appodeal's Android SDK backs
-  // every inline banner placement with a single shared, SDK-managed ad
-  // slot (unlike iOS, which loads an independent ad per placement), which
-  // makes reliable banner display there impractical. Interstitials are
-  // unaffected and keep working normally on both platforms.
-  if (Platform.OS === 'android') {
-    return 'platform_disabled';
-  }
-
   const adsPolicy = getAppAdsPolicy();
 
   if (
@@ -723,20 +717,18 @@ function getAppodealProviderGateReason() {
 function configureAppodealBeforeInitialization() {
   if (__DEV__) {
     Appodeal.setLogLevel(AppodealLogLevel.DEBUG);
+  } else if (Platform.OS === 'android') {
+    // Keep the SDK's production waterfall diagnostics in logcat while
+    // validating the Android release build. This does not enable test ads or
+    // alter serving; it exposes the precise no-fill/adapter/configuration
+    // reason emitted by Appodeal's real-demand request path.
+    Appodeal.setLogLevel(AppodealLogLevel.VERBOSE);
   }
 
   Appodeal.setTesting(__DEV__);
   Appodeal.setAutoCache(APPODEAL_INTERSTITIAL_AD_TYPE, true);
   Appodeal.setAutoCache(APPODEAL_BANNER_AD_TYPE, true);
   Appodeal.setSmartBanners(true);
-
-  try {
-    Appodeal.disableNetwork('admob', APPODEAL_AD_TYPES);
-  } catch (error) {
-    if (__DEV__) {
-      console.warn('Failed to disable Appodeal AdMob network', error);
-    }
-  }
 }
 
 async function initializeAppodealSdk(appKey: string) {

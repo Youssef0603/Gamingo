@@ -45,7 +45,7 @@ describe('adsPolicy', () => {
       }),
     ).toEqual({
       adsEnabled: false,
-      bannerEnabled: false,
+      bannerEnabled: true,
       customWordAdd: {
         enabled: true,
         skipFirstInterstitial: true,
