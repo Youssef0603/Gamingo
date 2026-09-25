@@ -1,8 +1,4 @@
 {
   "name": "Laglingo",
-  "displayName": "Laglingo",
-  "react-native-google-mobile-ads": {
-    "android_app_id": "ca-app-pub-2492542777972482~2875031229",
-    "ios_app_id": "ca-app-pub-2492542777972482~7388991302"
-  }
+  "displayName": "Laglingo"
 }

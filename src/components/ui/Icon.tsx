@@ -16,6 +16,7 @@ export type IconName =
   | 'play-circle'
   | 'play-skip-forward'
   | 'search'
+  | 'shield-checkmark'
   | 'volume-high';
 
 export type IconProps = {

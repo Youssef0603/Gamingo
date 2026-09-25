@@ -29,15 +29,30 @@ jest.mock('@react-native-async-storage/async-storage', () => ({
   ...mockAsyncStorage,
 }));
 jest.mock('../src/features/ads/mobileAds', () => ({
-  getBannerAdUnitId: jest.fn(() => null),
-  initializeGoogleMobileAds: jest.fn(() => Promise.resolve(null)),
+  debugShowAppodealInterstitial: jest.fn(),
+  getBannerAdsGateReason: jest.fn(() => 'not_eligible'),
+  initializeAppodealAds: jest.fn(() => Promise.resolve('ads_disabled')),
+  isAppodealAdsConfigured: jest.fn(() => false),
+  isAppodealAdsInitialized: jest.fn(() => false),
   trackFavoriteSaveAction: jest.fn(),
   useCanShowAds: jest.fn(() => false),
 }));
-jest.mock('react-native-google-mobile-ads', () => ({
-  BannerAd: () => null,
-  BannerAdSize: {
-    ANCHORED_ADAPTIVE_BANNER: 'ANCHORED_ADAPTIVE_BANNER',
+jest.mock('react-native-appodeal', () => ({
+  __esModule: true,
+  AppodealAdType: {
+    BANNER: 4,
+    INTERSTITIAL: 1,
+  },
+  AppodealLogLevel: {
+    DEBUG: 'debug',
+    NONE: 'none',
+    VERBOSE: 'verbose',
+  },
+  AppodealBanner: () => null,
+  default: {
+    addEventListener: jest.fn(() => ({
+      remove: jest.fn(),
+    })),
   },
 }));
 jest.mock('../src/services', () => ({

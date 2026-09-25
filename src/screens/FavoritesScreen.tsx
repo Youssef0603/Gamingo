@@ -6,6 +6,7 @@ import {
   FlatList,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -35,6 +36,17 @@ import type { Phrase } from '../types/phrase';
 
 const INLINE_BANNER_FREQUENCY = 10;
 const SCROLL_TO_TOP_BUTTON_THRESHOLD = 420;
+
+// Android's Appodeal SDK has a single process-wide inline banner ad slot
+// (unlike iOS, which loads an independent ad per mounted instance), so
+// rendering one every INLINE_BANNER_FREQUENCY items leaves most of them
+// blank as they compete for that one slot. Cap Android to a single,
+// reliably-populated placement; iOS keeps its normal repeating cadence.
+function shouldShowInlineBanner(index: number, totalCount: number) {
+  return Platform.OS === 'android'
+    ? index === INLINE_BANNER_FREQUENCY - 1 && index < totalCount - 1
+    : (index + 1) % INLINE_BANNER_FREQUENCY === 0 && index < totalCount - 1;
+}
 
 function FavoritesScreen() {
   const {
@@ -426,8 +438,7 @@ function FavoritesScreen() {
                 toggleFavorite(item.id, favoriteFilterLanguage)
               }
             />
-            {(index + 1) % INLINE_BANNER_FREQUENCY === 0 &&
-            index < filteredSavedPhrases.length - 1 ? (
+            {shouldShowInlineBanner(index, filteredSavedPhrases.length) ? (
               <InlineBannerAd />
             ) : null}
           </View>

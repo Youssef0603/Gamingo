@@ -16,6 +16,7 @@ import {
 
 import { Screen } from '../components/ui';
 import { useAppStateDebugSnapshot } from '../context/AppStateContext';
+import { debugShowAppodealInterstitial } from '../features/ads/mobileAds';
 import { scheduleDebugPracticeReminderNotification } from '../features/notifications';
 import {
   ANALYTICS_EVENTS,
@@ -151,7 +152,7 @@ function DebugSectionCard({
   );
 }
 
-function DebugScreen() {
+function DebugScreenContent() {
   const isFocused = useIsFocused();
   const appStateDebugSnapshot = useAppStateDebugSnapshot();
   const [asyncStorageSnapshot, setAsyncStorageSnapshot] = useState<
@@ -325,6 +326,23 @@ function DebugScreen() {
           </Pressable>
         </View>
 
+        {__DEV__ ? (
+          <View style={styles.section}>
+            <Pressable
+              accessibilityRole="button"
+              onPress={debugShowAppodealInterstitial}
+              style={({ pressed }) => [
+                styles.appodealTestButton,
+                pressed && styles.appodealTestButtonPressed,
+              ]}
+            >
+              <Text style={styles.appodealTestButtonText}>
+                Test Appodeal Interstitial
+              </Text>
+            </Pressable>
+          </View>
+        ) : null}
+
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
             <Text style={styles.sectionTitle}>Notifications</Text>
@@ -431,6 +449,12 @@ function DebugScreen() {
   );
 }
 
+function EmptyDebugScreen() {
+  return null;
+}
+
+const DebugScreen = __DEV__ ? DebugScreenContent : EmptyDebugScreen;
+
 const styles = StyleSheet.create({
   content: {
     paddingBottom: theme.spacing.xxl,
@@ -465,6 +489,21 @@ const styles = StyleSheet.create({
   refreshButtonText: {
     color: theme.colors.primary,
     fontSize: 14,
+    fontWeight: '700',
+  },
+  appodealTestButton: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.text,
+    borderRadius: theme.radius.md,
+    paddingHorizontal: theme.spacing.lg,
+    paddingVertical: theme.spacing.md,
+  },
+  appodealTestButtonPressed: {
+    opacity: 0.82,
+  },
+  appodealTestButtonText: {
+    color: theme.colors.card,
+    fontSize: 15,
     fontWeight: '700',
   },
   debugActionButton: {

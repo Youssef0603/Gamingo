@@ -7,6 +7,7 @@ import {
   LayoutChangeEvent,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  Platform,
   SectionList,
   ScrollView,
   StyleSheet,
@@ -23,6 +24,8 @@ import InlineBannerAd from '../features/ads/InlineBannerAd';
 import {
   showAdBeforeRandomPractice,
   showAdOnItemClick,
+  showAppodealPrivacyChoicesForm,
+  useShouldShowAppodealPrivacyChoices,
 } from '../features/ads/mobileAds';
 import { PracticeReminderPrompt } from '../features/notifications';
 import AddPhraseModal from '../features/phrases/AddPhraseModal';
@@ -152,6 +155,7 @@ function PracticeScreen() {
     Partial<Record<CategoryFilter, { width: number; x: number }>>
   >({});
   const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
+  const shouldShowPrivacyChoices = useShouldShowAppodealPrivacyChoices();
   const isScrollToTopButtonVisibleRef = useRef(false);
   const searchRevealAnimation = useRef(new Animated.Value(0)).current;
 
@@ -561,6 +565,10 @@ function PracticeScreen() {
     });
   };
 
+  const openPrivacyChoices = () => {
+    showAppodealPrivacyChoicesForm().catch(() => undefined);
+  };
+
   const confirmDeletePhrase = (phrase: Phrase) => {
     const { helperTranslation } = getPhraseDisplayTranslations(
       phrase,
@@ -654,16 +662,36 @@ function PracticeScreen() {
           <Text style={styles.title}>Practice</Text>
         </View>
 
-        <Pressable
-          onPress={() => setIsLookupModalVisible(true)}
-          style={({ pressed }) => [
-            styles.lookupToggle,
-            pressed && styles.lookupTogglePressed,
-          ]}
-        >
-          <Text style={styles.lookupPlus}>+</Text>
-          <Text style={styles.lookupToggleText}>Add</Text>
-        </Pressable>
+        <View style={styles.headingActions}>
+          {shouldShowPrivacyChoices ? (
+            <Pressable
+              accessibilityRole="button"
+              onPress={openPrivacyChoices}
+              style={({ pressed }) => [
+                styles.privacyChoicesButton,
+                pressed && styles.headerActionPressed,
+              ]}
+            >
+              <Icon
+                color={theme.colors.primary}
+                name="shield-checkmark"
+                size={16}
+              />
+              <Text style={styles.privacyChoicesText}>Privacy Choices</Text>
+            </Pressable>
+          ) : null}
+
+          <Pressable
+            onPress={() => setIsLookupModalVisible(true)}
+            style={({ pressed }) => [
+              styles.lookupToggle,
+              pressed && styles.headerActionPressed,
+            ]}
+          >
+            <Text style={styles.lookupPlus}>+</Text>
+            <Text style={styles.lookupToggleText}>Add</Text>
+          </Pressable>
+        </View>
       </View>
 
       <View style={styles.filterBlock}>
@@ -855,8 +883,15 @@ function PracticeScreen() {
   );
 
   const renderPhraseItem = (item: Phrase, index: number, totalCount: number) => {
+    // Android's Appodeal SDK has a single process-wide inline banner ad slot
+    // (unlike iOS, which loads an independent ad per mounted instance), so
+    // rendering one every INLINE_BANNER_FREQUENCY items leaves most of them
+    // blank as they compete for that one slot. Cap Android to a single,
+    // reliably-populated placement; iOS keeps its normal repeating cadence.
     const shouldShowBanner =
-      (index + 1) % INLINE_BANNER_FREQUENCY === 0 && index < totalCount - 1;
+      Platform.OS === 'android'
+        ? index === INLINE_BANNER_FREQUENCY - 1 && index < totalCount - 1
+        : (index + 1) % INLINE_BANNER_FREQUENCY === 0 && index < totalCount - 1;
 
     return (
       <View>
@@ -1056,6 +1091,14 @@ const styles = StyleSheet.create({
   heading: {
     flex: 1,
   },
+  headingActions: {
+    alignItems: 'flex-end',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: theme.spacing.sm,
+    justifyContent: 'flex-end',
+    maxWidth: '72%',
+  },
   title: {
     ...theme.typography.title,
     marginBottom: theme.spacing.xs,
@@ -1240,8 +1283,24 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 8,
   },
-  lookupTogglePressed: {
+  headerActionPressed: {
     transform: [{ scale: 0.97 }],
+  },
+  privacyChoicesButton: {
+    alignItems: 'center',
+    backgroundColor: theme.colors.card,
+    borderColor: withAlpha(theme.colors.primary, 0.22),
+    borderRadius: theme.radius.pill,
+    borderWidth: 1,
+    flexDirection: 'row',
+    gap: theme.spacing.xs,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+  },
+  privacyChoicesText: {
+    color: theme.colors.primary,
+    fontSize: 13,
+    fontWeight: '700',
   },
   lookupPlus: {
     color: theme.colors.primary,
